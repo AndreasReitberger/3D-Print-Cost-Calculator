@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Xceed.Wpf.Themes.Windows10</name>
+  </assembly>
+  <members>
+    <member name="T:Xceed.Wpf.Themes.Windows10.Licenser">
+      <summary>Used to license the themes.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.Themes.Windows10.Windows10ResourceDictionary">
+      <summary>Represents the Windows10 resource dictionary.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.Themes.Windows10.Windows10Resources">
+      <summary>Represents the resources containing the control styles available in the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Licenser.LicenseKey">
+      <summary>Gets or sets the license key.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.Themes.Windows10.Windows10ResourceDictionary.#ctor">
+      <summary>
+        <para>Initializes a new instance of the Windows10ResourceDictionary class.</para>
+      </summary>
+    </member>
+    <member name="M:Xceed.Wpf.Themes.Windows10.Windows10ResourceDictionary.UpdateResources">
+      <summary>Updates the resources.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10ResourceDictionary.LicenseKey">
+      <summary>Gets or sets the license key used to license the classes contained in the Xceed.Wpf.Themes.Windows10 assembly.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.ApplicationBackgroundBrush">
+      <summary>Gets the application background brush defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.ApplicationForegroundBrush">
+      <summary>Gets the application foreground brush defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.BorderBrush">
+      <summary>Gets the border brush defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.ButtonStyle">
+      <summary>Gets the button style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.CheckBoxStyle">
+      <summary>Gets the check box style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.ComboBoxItemStyle">
+      <summary>Gets the combo box item style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.ComboBoxStyle">
+      <summary>Gets the combo box style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.ContextMenuStyle">
+      <summary>Gets the context menu style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.ControlBackgroundBrush">
+      <summary>Gets the control background brush defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.ControlForegroundBrush">
+      <summary>Gets the control foreground brush defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.DataGridCellStyle">
+      <summary>
+        <para>Gets the DataGridCell style defined by the Windows10 theme.</para>
+      </summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.DataGridColumnHeaderStyle">
+      <summary>
+        <para>Gets the DataGridColumnHeader style defined by the Windows10 theme.</para>
+      </summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.DataGridRowHeaderStyle">
+      <summary>
+        <para>Gets the DataGridRowHeader style defined by the Windows10 theme.</para>
+      </summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.DataGridRowStyle">
+      <summary>
+        <para>Gets the DataGridRow style defined by the Windows10 theme.</para>
+      </summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.DataGridStyle">
+      <summary>
+        <para>Gets the DataGrid style defined by the Windows10 theme.</para>
+      </summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.ExpanderStyle">
+      <summary>Gets the expander style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.FontFamily">
+      <summary>Gets the font family defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.GridSplitterStyle">
+      <summary>Gets the grid splitter style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.GridViewColumnHeaderStyle">
+      <summary>Gets the grid view colum header style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.GroupBoxStyle">
+      <summary>Gets the group box style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.HighlightBackgroundBrush">
+      <summary>Gets the highlight background brush defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.HighlightForegroundBrush">
+      <summary>Gets the highlight foreground brush defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.LabelStyle">
+      <summary>Gets the label style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.ListBoxItemStyle">
+      <summary>Gets the list box item style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.ListBoxStyle">
+      <summary>Gets the list box style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.ListViewItemStyle">
+      <summary>Gets the list view item style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.ListViewStyle">
+      <summary>Gets the list view style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.MenuItemStyle">
+      <summary>Gets the menu item style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.MenuStyle">
+      <summary>Gets the menu style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.PageStyle">
+      <summary>Gets the page style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.PasswordBoxStyle">
+      <summary>Gets the password box style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.ProgressBarStyle">
+      <summary>Gets the progress bar style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.RadioButtonStyle">
+      <summary>Gets the radio button style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.RepeatButtonStyle">
+      <summary>Gets the repeat button style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.ResizeGripStyle">
+      <summary>Gets the resizer grip style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.RichTextBoxStyle">
+      <summary>Gets the rich text box style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.ScrollBarStyle">
+      <summary>Gets the scroll bar style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.ScrollViewerStyle">
+      <summary>Gets the scroll viewer style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.SliderStyle">
+      <summary>Gets the slider style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.StatusBarStyle">
+      <summary>Gets the status bar style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.TabControlStyle">
+      <summary>Gets the tab control style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.TabItemStyle">
+      <summary>Gets the tab item style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.TextBoxStyle">
+      <summary>Gets the text box style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.ToggleButtonStyle">
+      <summary>Gets the toggle button style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.ToolBarStyle">
+      <summary>Gets the tool bar style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.ToolTipStyle">
+      <summary>Gets the tool tip style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.TreeViewItemStyle">
+      <summary>Gets the tree view item style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.TreeViewStyle">
+      <summary>Gets the tree view style defined by the Windows10 theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Windows10.Windows10Resources.WindowStyle">
+      <summary>Gets the window style defined by the Windows10 theme.</summary>
+    </member>
+  </members>
+</doc>

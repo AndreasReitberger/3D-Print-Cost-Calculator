@@ -1,0 +1,218 @@
+﻿<?xml version="1.0"?>
+<!-- syntaxdefinition for Gcode by Andreas Reitberger -->
+<!-- Date:      2019-12-21 -->
+<!-- Version:   1.0.0 -->
+
+<SyntaxDefinition name="GCode Highlighting" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
+  <Color name="Comment" foreground="#74705D" />
+  <Color name="String" foreground="White" />
+  <Color name="Gcode" foreground="Orange" />
+  <Color name="X" foreground="Orange" />
+  <Color name="Y" foreground="Orange" />
+  <Color name="Z" foreground="Orange" />
+  <Color name="E" foreground="White" />
+  <Color name="GCodeCommands" foreground="#f92447" />
+  <Color name="MCodeCommands" foreground="#A6CE28" />
+  <Color name="TCodeCommands" foreground="Orange" />
+  <!-- This is the main ruleset. -->
+  <RuleSet>
+    <Span color="Comment" begin=";" />
+    <Span color="Comment" multiline="true" begin="/\*" end="\*/" />
+
+    <Span color="String">
+      <Begin>"</Begin>
+      <End>"</End>
+      <RuleSet>
+        <!-- nested span for escape sequences -->
+        <Span begin="\\" end="." />
+      </RuleSet>
+    </Span>
+
+    <Keywords color="GCodeCommands">
+      <Word>G0</Word>
+      <Word>G1</Word>
+      <Word>G4</Word>
+      <Word>G20</Word>
+      <Word>G21</Word>
+      <Word>G28</Word>
+      <Word>G80</Word>
+      <!-- G80: Mesh-based Z probe -->
+      <Word>G90</Word>
+      <Word>G91</Word>
+      <Word>G92</Word>
+    </Keywords>
+
+    <Keywords color="MCodeCommands">
+      <Word>M0</Word>
+      <Word>M17</Word>
+      <Word>M18</Word>
+      <Word>M20</Word>
+      <Word>M21</Word>
+      <Word>M22</Word>
+      <Word>M23</Word>
+      <Word>M24</Word>
+      <Word>M25</Word>
+      <Word>M26</Word>
+      <Word>M27</Word>
+      <Word>M28</Word>
+      <Word>M29</Word>
+      <Word>M40</Word>
+      <Word>M41</Word>
+      <Word>M42</Word>
+      <Word>M43</Word>
+      <Word>M72</Word>
+      <!-- M72: Play a tone or song -->
+      <Word>M73</Word>
+      <!-- M73: Set/Get build percentage -->
+      <Word>M80</Word>
+      <Word>M81</Word>
+      <Word>M83</Word>
+      <!-- M83: Set extruder to relative mode -->
+      <Word>M84</Word>
+      <!-- M84: Stop idle hold -->
+      <Word>M92</Word>
+      <Word>M101</Word>
+      <Word>M102</Word>
+      <Word>M103</Word>
+      <Word>M104</Word>
+      <Word>M105</Word>
+      <Word>M106</Word>
+      <Word>M107</Word>
+      <Word>M108</Word>
+      <Word>M109</Word>
+      <Word>M110</Word>
+      <Word>M111</Word>
+      <Word>M112</Word>
+      <Word>M113</Word>
+      <Word>M114</Word>
+      <Word>M115</Word>
+      <Word>M116</Word>
+      <Word>M117</Word>
+      <Word>M118</Word>
+      <Word>M119</Word>
+      <Word>M126</Word>
+      <Word>M127</Word>
+      <Word>M128</Word>
+      <Word>M129</Word>
+      <Word>M140</Word>
+      <Word>M141</Word>
+      <Word>M142</Word>
+      <Word>M143</Word>
+      <Word>M160</Word>
+      <Word>M190</Word>
+      <!-- M190: Wait for bed temperature to reach target temp -->
+      <Word>M201</Word>
+      <!-- M201: Set max printing acceleration -->
+      <Word>M202</Word>
+      <!-- M202: Set max travel acceleration -->
+      <Word>M203</Word>
+      <!-- M203: Set maximum feedrate -->
+      <Word>M204</Word>
+      <!-- M204: Set default acceleration -->
+      <Word>M205</Word>
+      <!-- M205: Advanced settings -->
+      <Word>M221</Word>
+      <!-- M221: Turn on AUX V1.0.5 -->
+      <Word>M226</Word>
+      <!-- M226: G-code Initiated Pause -->
+      <Word>M227</Word>
+      <!-- M227: Enable Automatic Reverse and Prime -->
+      <Word>M228</Word>
+      <!-- M228: Disable Automatic Reverse and Prime -->
+      <Word>M229</Word>
+      <!-- M229: Enable Automatic Reverse and Prime -->
+      <Word>M230</Word>
+      <Word>M240</Word>
+      <Word>M241</Word>
+      <Word>M245</Word>
+      <Word>M246</Word>
+      <Word>M300</Word>
+      <Word>M900</Word>
+      <!-- M900 Set Linear Advance Scaling Factors -->
+    </Keywords>
+
+    <Keywords color="TCodeCommands">
+      <Word>T</Word>
+      <!-- Select Extruder -->
+    </Keywords>
+
+    <Keywords fontWeight="bold" foreground="Blue">
+      <Word>if</Word>
+      <Word>else</Word>
+      <!-- ... -->
+    </Keywords>
+
+    <Keywords fontWeight="bold" fontStyle="italic" foreground="Red">
+      <Word>AvalonEdit</Word>
+    </Keywords>
+
+    <!-- X-Coords -->
+    <Rule foreground="White">
+      (([X])\d+.\d+)  # X125.00
+      |
+      (([X]-)\d+.\d+) # X-125.00
+    </Rule>
+
+    <!-- Y-Coords -->
+    <Rule foreground="White">
+      (([Y])\d+.\d+)  # Y125.00
+      |
+      (([Y]-)\d+.\d+) # Y-125.00
+    </Rule>
+
+    <!-- Z-Coords -->
+    <Rule foreground="White">
+      (([Z])\d*.\d+)  # Z125.00
+      |
+      (([Z]-)\d*.\d+) # Z-125.00
+    </Rule>
+
+    <!-- E-Coords -->
+    <Rule foreground="#E7DB6A">
+      (([E])\d+.\d+)  # E125.00
+    </Rule>
+
+    <!-- E-Coords (Retract) -->
+    <Rule foreground="#EE82EE">
+      (([E]-)\d+.\d+)  # E125.00
+    </Rule>
+
+    <!-- F-Coords -->
+    <Rule foreground="#FD9621">
+      (([F])\d+.\d+)  # F125
+    </Rule>
+
+    <!-- Parameters (for instance for M73) -->
+    <Rule foreground="#1E90FF">
+      (([Q|S])\d+)  	# M73 Q6 S101
+      |					# or
+      (([P|R])\d+) 		# M73 P6 R100
+      |					# or
+      (([K])\d+)		# M900 K45 ; Filament gcode
+      |					# or
+      (([W])|([W])\d+)	# G28 W ; home all without mesh bed level
+      |					# or
+      (([T])\d+)		# M204 P1250 R1250 T1250 ; sets acceleration (P, T) and retract acceleration (R), mm/sec^2
+    </Rule>
+
+    <!-- Parameters (Width Height Diameter) -->
+    <Rule foreground="#1E90FF">
+      (([K|W|D|H])\d+.\d+)  	# M900 K0.7 W0.4 H0.1 D1.75 ; Set K and WH/D ratio
+    </Rule>
+
+    <!-- Firmeware Parameter -->
+    <Rule foreground="#A6CE28">
+      (([U])\d+.\d+.\d+)  # M115 U3.7.1 ; tell printer latest fw version
+    </Rule>
+
+    <!-- Digits -->
+    <Rule foreground="DarkBlue">
+      \b0[xX][0-9a-fA-F]+  # hex number
+      |    \b
+      (    \d+(\.[0-9]+)?   #number with optional floating point
+      |    \.[0-9]+         #or just starting with floating point
+      )
+      ([eE][+-]?[0-9]+)? # optional exponent
+    </Rule>
+  </RuleSet>
+</SyntaxDefinition>

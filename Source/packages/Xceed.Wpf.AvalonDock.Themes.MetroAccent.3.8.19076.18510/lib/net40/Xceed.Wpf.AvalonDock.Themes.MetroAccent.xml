@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Xceed.Wpf.AvalonDock.Themes.MetroAccent</name>
+  </assembly>
+  <members>
+    <member name="T:Xceed.Wpf.AvalonDock.Themes.MetroAccentTheme">
+      <summary>Represents the Metro theme (with accent color support) for AvalonDock.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.AvalonDock.Themes.MetroAccent.AvalonDockMetroDarkThemeResourceDictionary">
+      <summary>Represents the Metro Dark resource dictionary.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.AvalonDock.Themes.MetroAccent.AvalonDockMetroLightThemeResourceDictionary">
+      <summary>Represents the Metro Light resource dictionary.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.AvalonDock.Themes.MetroAccent.AvalonDockMetroThemeResourceDictionaryBase">
+      <summary>
+        <br />
+      </summary>
+    </member>
+  </members>
+</doc>

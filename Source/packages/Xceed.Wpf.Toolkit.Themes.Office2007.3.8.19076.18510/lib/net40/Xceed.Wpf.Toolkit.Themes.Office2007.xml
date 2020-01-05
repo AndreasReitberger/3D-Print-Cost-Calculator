@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Xceed.Wpf.Toolkit.Themes.Office2007</name>
+  </assembly>
+  <members>
+    <member name="T:Xceed.Wpf.Toolkit.Themes.Office2007.Office2007BlackResourceDictionary">
+      <summary>Represents the Office 2007 Black resource dictionary.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.Toolkit.Themes.Office2007.Office2007BlueResourceDictionary">
+      <summary>Represents the Office 2007 Blue resource dictionary.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.Toolkit.Themes.Office2007.Office2007SilverResourceDictionary">
+      <summary>Represents the Office 2007 Silver resource dictionary.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.Toolkit.Themes.Office2007.Office2007BlackResourceDictionary.#ctor">
+      <summary>Initializes a new instance of the Office2007BlackResourceDictionary class.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.Toolkit.Themes.Office2007.Office2007BlueResourceDictionary.#ctor">
+      <summary>Initializes a new instance of the Office2007BlueResourceDictionary class.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.Toolkit.Themes.Office2007.Office2007SilverResourceDictionary.#ctor">
+      <summary>Initializes a new instance of the Office2007SilverResourceDictionary class.</summary>
+    </member>
+  </members>
+</doc>

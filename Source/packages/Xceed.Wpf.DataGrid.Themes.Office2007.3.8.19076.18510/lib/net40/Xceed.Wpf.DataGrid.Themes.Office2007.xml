@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Xceed.Wpf.DataGrid.Themes.Office2007</name>
+  </assembly>
+  <members>
+    <member name="T:Xceed.Wpf.DataGrid.Themes.Office2007BlackResourceDictionary">
+      <summary>Represents the Office 2007 Black resource dictionary.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.DataGrid.Themes.Office2007BlackTheme">
+      <summary>
+        <span style="width: 100%;" id="ContentItemType|Xceed.Wpf.DataGrid.ThemePack.1.v4.4~Xceed.Wpf.DataGrid.ThemePack.Office2007BlackTheme|SUMMARY" class="dxeditwrapper" contenteditable="true">Represents the black Office 2007 theme, which blends perfectly into any Office 2007-like application</span>
+      </summary>
+    </member>
+    <member name="T:Xceed.Wpf.DataGrid.Themes.Office2007BlueResourceDictionary">
+      <summary>Represents the Office 2007 Blue resource dictionary.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.DataGrid.Themes.Office2007BlueTheme">
+      <summary>
+        <span style="width: 100%;" id="ContentItemType|Xceed.Wpf.DataGrid.ThemePack.1.v4.4~Xceed.Wpf.DataGrid.ThemePack.Office2007BlackTheme|SUMMARY" class="dxeditwrapper" contenteditable="true">Represents the black Office 2007 theme, which blends perfectly into any Office 2007-like application</span>
+      </summary>
+    </member>
+    <member name="T:Xceed.Wpf.DataGrid.Themes.Office2007SilverResourceDictionary">
+      <summary>Represents the Office 2007 Silver resource dictionary.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.DataGrid.Themes.Office2007SilverTheme">
+      <summary>Represents the silver Office 2007 theme, which blends perfectly into any Office 2007-like application</summary>
+    </member>
+    <member name="M:Xceed.Wpf.DataGrid.Themes.Office2007BlackTheme.#ctor">
+      <summary>Initializes a new instance of the Office2007BlackTheme.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.DataGrid.Themes.Office2007BlueTheme.#ctor">
+      <summary>Initializes a new instance of the Office2007BlueTheme.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.DataGrid.Themes.Office2007SilverTheme.#ctor">
+      <summary>Initializes a new instance of the Office2007SilverTheme.</summary>
+    </member>
+  </members>
+</doc>

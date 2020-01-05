@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Xceed.Wpf.DataGrid.Themes.Metro</name>
+  </assembly>
+  <members>
+    <member name="T:Xceed.Wpf.DataGrid.Themes.Metro.MetroDarkThemeResourceDictionary">
+      <summary>Represents the Metro Dark resource dictionary.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.DataGrid.Themes.Metro.MetroLightThemeResourceDictionary">
+      <summary>Represents the Metro Light resource dictionary.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.DataGrid.Themes.Metro.MetroTheme">
+      <summary>Represents the Metro theme for the datagrid.</summary>
+    </member>
+  </members>
+</doc>

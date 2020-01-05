@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Xceed.Wpf.AvalonDock.Themes.Metro</name>
+  </assembly>
+  <members>
+    <member name="T:Xceed.Wpf.AvalonDock.Themes.MetroTheme">
+      <summary>Represents the Metro theme for AvalonDock without accent color support.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.AvalonDock.Themes.MetroTheme.#ctor">
+      <summary>Initializes a new instance of the MetroTheme class.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.AvalonDock.Themes.MetroTheme.GetResourceUri">
+      <summary>Returns the URI of the resource.</summary>
+      <returns>The URI of the resource.</returns>
+    </member>
+  </members>
+</doc>

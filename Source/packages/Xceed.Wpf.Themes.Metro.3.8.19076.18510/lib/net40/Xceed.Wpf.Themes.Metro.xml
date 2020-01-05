@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Xceed.Wpf.Themes.Metro</name>
+  </assembly>
+  <members>
+    <member name="T:Xceed.Wpf.Themes.Metro.MetroAccentColor">
+      <summary>Contains all the possible values for setting the Metro theme's accent color.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.Themes.Metro.MetroDarkThemeResourceDictionary">
+      <summary>Represents the Metro Dark resource dictionary.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.Themes.Metro.MetroLightThemeResourceDictionary">
+      <summary>Represents the Metro Light resource dictionary.</summary>
+    </member>
+  </members>
+</doc>

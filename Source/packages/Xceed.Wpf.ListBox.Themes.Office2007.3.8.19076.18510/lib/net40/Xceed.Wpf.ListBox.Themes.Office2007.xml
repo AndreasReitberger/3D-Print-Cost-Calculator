@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Xceed.Wpf.ListBox.Themes.Office2007</name>
+  </assembly>
+  <members>
+    <member name="T:Xceed.Wpf.ListBox.Themes.Office2007.Office2007BlackThemeResourceDictionary">
+      <summary>Represents the Office 2007 Black resource dictionary.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.ListBox.Themes.Office2007.Office2007BlueThemeResourceDictionary">
+      <summary>Represents the Office 2007 Blue resource dictionary</summary>
+    </member>
+    <member name="T:Xceed.Wpf.ListBox.Themes.Office2007.Office2007SilverThemeResourceDictionary">
+      <summary>Represents the Office 2007 Silver resource dictionary.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.ListBox.Themes.Office2007.Office2007BlackThemeResourceDictionary.#ctor">
+      <summary>Initializes a new instance of the Office2007BlackThemeResourceDictionary class.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.ListBox.Themes.Office2007.Office2007BlackThemeResourceDictionary.UpdateResources">
+      <summary>Updates the resources.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.ListBox.Themes.Office2007.Office2007BlueThemeResourceDictionary.#ctor">
+      <summary>Initializes a new instance of the Office2007BlueThemeResourceDictionary class.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.ListBox.Themes.Office2007.Office2007BlueThemeResourceDictionary.UpdateResources">
+      <summary>Updates the resources.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.ListBox.Themes.Office2007.Office2007SilverThemeResourceDictionary.#ctor">
+      <summary>Initializes a new instance of the Office2007SilverThemeResourceDictionary class.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.ListBox.Themes.Office2007.Office2007SilverThemeResourceDictionary.UpdateResources">
+      <summary>Updates the resources.</summary>
+    </member>
+  </members>
+</doc>

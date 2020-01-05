@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Xceed.Wpf.ListBox.Themes.LiveExplorer</name>
+  </assembly>
+  <members>
+    <member name="T:Xceed.Wpf.ListBox.Themes.LiveExplorer.LiveExplorerThemeResourceDictionary">
+      <summary>Represents the LiveExplorer resource dictionary.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.ListBox.Themes.LiveExplorer.LiveExplorerThemeResourceDictionary.#ctor">
+      <summary>Initializes a new instance of the LiveExplorerThemeResourceDictionary class.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.ListBox.Themes.LiveExplorer.LiveExplorerThemeResourceDictionary.UpdateResources">
+      <summary>Updates the resources.</summary>
+    </member>
+  </members>
+</doc>

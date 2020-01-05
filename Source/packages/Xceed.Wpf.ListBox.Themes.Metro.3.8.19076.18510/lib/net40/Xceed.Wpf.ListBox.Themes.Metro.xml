@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Xceed.Wpf.ListBox.Themes.Metro</name>
+  </assembly>
+  <members>
+    <member name="T:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor">
+      <summary>Accent color options for the Metro theme.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.Gold">
+      <summary>Gold accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.LightGreen">
+      <summary>Light Green accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.Blue">
+      <summary>Blue accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.MediumVioletRed">
+      <summary>Medium Violet Red accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.Brown">
+      <summary>Brown accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.DarkRed">
+      <summary>Dark Red accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.PaleVioletRed">
+      <summary>Pale Violet Red accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.DarkViolet">
+      <summary>Dark Violet accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.DarkSlateBlue">
+      <summary>Dark Slate Blue accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.RoyalBlue">
+      <summary>Royal Blue accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.Teal">
+      <summary>Teal accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.Green">
+      <summary>Green accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.Lime">
+      <summary>Lime accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.LightSalmon">
+      <summary>Light Salmon accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.Red">
+      <summary>Red accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.DeepPink">
+      <summary>Deep Pink accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.Purple">
+      <summary>Purple accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.DeepSkyBlue">
+      <summary>Deek Sky Blue accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.DarkTurquoise">
+      <summary>Dark Turquoise accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.Turquoise">
+      <summary>Turquoise accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.YellowGreen">
+      <summary>Yellow Green accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.DarkYellow">
+      <summary>Dark Yellow accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.Pink">
+      <summary>Pink accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.LightSeaGreen">
+      <summary>Light Sea Green accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.Orange">
+      <summary>Orange accent color.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.ListBox.Themes.Metro.MetroAccentColor.Custom">
+      <summary>Custom accent color.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.ListBox.Themes.Metro.MetroDarkThemeResourceDictionary">
+      <summary>Represents the Metro Dark resource dictionary.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.ListBox.Themes.Metro.MetroLightThemeResourceDictionary">
+      <summary>Represents the Metro Light resource dictionary.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.ListBox.Themes.Metro.MetroThemeResourceDictionaryBase">
+      <summary>Represents the Metro theme's base resource dictionary.</summary>
+    </member>
+  </members>
+</doc>

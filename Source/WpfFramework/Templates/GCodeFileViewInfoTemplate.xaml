@@ -1,0 +1,184 @@
+﻿<UserControl x:Class="WpfFramework.Templates.GCodeFileViewInfoTemplate"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:Models="clr-namespace:WpfFramework.Models.GCode"
+             xmlns:converters="clr-namespace:WpfFramework.Converters"
+             xmlns:localization="clr-namespace:WpfFramework.Resources.Localization"
+             
+             mc:Ignorable="d" 
+             d:DataContext="{d:DesignInstance Models:GCode}"
+             d:DesignHeight="100" d:DesignWidth="800">
+    <UserControl.Resources>
+        <converters:DecimalHoursToTimeSpanConverter x:Key="DecimalHoursToTimeSpanConverter" />
+        <!-- Rectangle -->
+        <Style TargetType="{x:Type Rectangle}" x:Key="RectangleTemplate">
+            <Setter Property="Fill" Value="{DynamicResource GrayBrush3}" />
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Path=IsMouseOver,RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}}" Value="True" >
+                    <Setter Property="Fill" Value="{DynamicResource GrayBrush5}" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=IsSelected,RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}}" Value="True" >
+                    <Setter Property="Fill" Value="{DynamicResource AccentColorBrush}" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <!-- Rectangle FDM -->
+        <Style TargetType="{x:Type Rectangle}" BasedOn="{StaticResource RectangleTemplate}" x:Key="RectangleFDM">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Printer.Type}" Value="FDM" >
+                    <Setter Property="Visibility" Value="Visible" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Printer.hasHeatbed}" Value="False" >
+                    <Setter Property="Visibility" Value="Hidden" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <!-- Label -->
+        <Style TargetType="{x:Type Label}" BasedOn="{StaticResource MetroLabel}" x:Key="LabelTemplate">
+            <Setter Property="Foreground" Value="{DynamicResource GrayBrush3}" />
+            <Setter Property="Margin" Value="0,0,10,0" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="FontWeight" Value="Normal" />
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Path=IsMouseOver,RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}}" Value="True" >
+                    <Setter Property="Foreground" Value="{DynamicResource GrayBrush5}" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=IsSelected,RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}}" Value="True" >
+                    <Setter Property="Foreground" Value="{DynamicResource AccentColorBrush}" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <!-- Label FDM -->
+        <Style TargetType="{x:Type Label}" BasedOn="{StaticResource LabelTemplate}" x:Key="LabelFDM">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Printer.Type}" Value="FDM" >
+                    <Setter Property="Visibility" Value="Visible" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Printer.hasHeatbed}" Value="False" >
+                    <Setter Property="Visibility" Value="Hidden" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <!-- TextBlock -->
+        <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource DefaultTextBlock}" x:Key="TextBlockTemplate">
+            <Setter Property="Foreground" Value="{DynamicResource GrayBrush3}" />
+            <Setter Property="Margin" Value="0,0,10,0" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="FontWeight" Value="Normal" />
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Path=IsMouseOver,RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}}" Value="True" >
+                    <Setter Property="Foreground" Value="{DynamicResource GrayBrush5}" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=IsSelected,RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}}" Value="True" >
+                    <Setter Property="Foreground" Value="{DynamicResource AccentColorBrush}" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <!-- TextBlock FDM-->
+        <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockTemplate}" x:Key="TextBlockFDM">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Printer.Type}" Value="FDM" >
+                    <Setter Property="Visibility" Value="Visible" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Printer.hasHeatbed}" Value="False" >
+                    <Setter Property="Visibility" Value="Hidden" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Printer Offline -->
+        <Style TargetType="{x:Type GroupBox}" BasedOn="{StaticResource MetroGroupBox}" x:Key="PrinterGroupBox">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Printer.Online}" Value="0" >
+                    <Setter Property="Background" Value="Red" />
+                    <Setter Property="Foreground" Value="White" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Printer.Online}" Value="1" >
+                    <Setter Property="Background" Value="LimeGreen" />
+                    <Setter Property="Foreground" Value="White" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!-- Checkbox -->
+        <!-- Icon -->
+        <Rectangle Grid.Column="0" Margin="10">
+
+            <Rectangle.OpacityMask>
+                <!-- ReSharper disable once Xaml.BindingWithContextNotResolved, can not bind to (networkManager:SettingsViewInfo.Icon) -->
+                <!-- <VisualBrush Stretch="Uniform" Visual="{Binding Icon}" /> -->
+                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=File}" />
+
+            </Rectangle.OpacityMask>
+            <Rectangle.Style>
+                <Style TargetType="{x:Type Rectangle}">
+                    <Setter Property="Fill" Value="{DynamicResource GrayBrush3}" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Path=IsMouseOver,RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}}" Value="True" >
+                            <Setter Property="Fill" Value="{DynamicResource GrayBrush5}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Path=IsSelected,RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}}" Value="True" >
+                            <Setter Property="Fill" Value="{DynamicResource AccentColorBrush}" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Rectangle.Style>
+        </Rectangle>
+        <!-- Name -->
+        <TextBlock Grid.Column="1" Text="{Binding FileName}" Margin="5,16,0,15" VerticalAlignment="Center" HorizontalAlignment="Left">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Foreground" Value="{DynamicResource GrayBrush3}" />
+                    <Setter Property="Margin" Value="0,0,10,0" />
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                    <Setter Property="FontSize" Value="14" />
+                    <Setter Property="FontWeight" Value="Bold" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Path=IsMouseOver,RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}}" Value="True" >
+                            <Setter Property="Foreground" Value="{DynamicResource GrayBrush5}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Path=IsSelected,RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}}" Value="True" >
+                            <Setter Property="Foreground" Value="{DynamicResource AccentColorBrush}" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+
+        <!-- Path -->
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding FilePath}" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.ColumnSpan="3">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Foreground" Value="{DynamicResource GrayBrush3}" />
+                    <Setter Property="Margin" Value="0,0,10,0" />
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                    <Setter Property="FontSize" Value="8" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Path=IsMouseOver,RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}}" Value="True" >
+                            <Setter Property="Foreground" Value="{DynamicResource GrayBrush5}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Path=IsSelected,RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}}" Value="True" >
+                            <Setter Property="Foreground" Value="{DynamicResource AccentColorBrush}" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+
+    </Grid>
+</UserControl>

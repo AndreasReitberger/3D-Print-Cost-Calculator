@@ -1,0 +1,1702 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfFramework.Views._3dPrinting"
+             
+             xmlns:CustomControls="clr-namespace:WpfFramework.Controls"
+             
+             xmlns:dialogs="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+             xmlns:h="http://helix-toolkit.org/wpf"
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+             xmlns:CSMSControls="clr-namespace:WpfFramework.Controls"
+             xmlns:viewModels="clr-namespace:WpfFramework.ViewModels._3dPrinting"
+             xmlns:converters="clr-namespace:WpfFramework.Converters"
+             xmlns:validators="clr-namespace:WpfFramework.Validators"
+             xmlns:templates="clr-namespace:WpfFramework.Templates"
+             xmlns:Models="clr-namespace:WpfFramework.Models"
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:cmd="http://www.galasoft.ch/mvvmlight"
+             xmlns:localization="clr-namespace:WpfFramework.Resources.Localization"
+             
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="WpfFramework.Views._3dPrinting._3dPrintingCalculationView"
+             
+             dialogs:DialogParticipation.Register="{Binding}"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1280"
+             d:DataContext="{d:DesignInstance {x:Type viewModels:_3dPrintingCalculationViewModel}}"
+             >
+    <UserControl.Resources>
+        <converters:ColorToStringConverter x:Key="ColorToStringConverter" />
+        <converters:StringToColorConverter x:Key="StringToColorConverter" />
+        <converters:IsObjectNullToBoolConverter x:Key="IsObjectNullToBoolConverter" />
+        <converters:MoreThanXSelectedConverter x:Key="MoreThanXSelectedConverter" />
+        <converters:IsMoreOrEqualThanConverter x:Key="IsMoreOrEqualThanConverter" />
+        <converters:DecimalHoursToTimeSpanConverter x:Key="DecimalHoursToTimeSpanConverter" />
+        <converters:BooleanToVisibilityCollapsedConverter x:Key="BooleanToVisibilityCollapsedConverter" />
+        <converters:BooleanToVisibilityCollapsedReverseConverter x:Key="BooleanToVisibilityCollapsedReverseConverter" />
+    </UserControl.Resources>
+    <Grid AllowDrop="True" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="119*"/>
+
+        </Grid.RowDefinitions>
+        <i:Interaction.Triggers>
+            <i:EventTrigger EventName="Drop">
+                <cmd:EventToCommand Command="{Binding OnDropStlFileCommand}" PassEventArgsToCommand="True"/>
+            </i:EventTrigger>
+        </i:Interaction.Triggers>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60*" MinWidth="550"/>
+            <ColumnDefinition Width="8"/>
+            <ColumnDefinition Width="40*" MinWidth="400"/>
+        </Grid.ColumnDefinitions>
+        <GridSplitter Grid.Column="1" Width="8" HorizontalAlignment="Stretch" Grid.RowSpan="2"/>
+        <Grid Grid.Column="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="120"/>
+            </Grid.RowDefinitions>
+            <TabControl Grid.RowSpan="2" Grid.Row="0" Style="{StaticResource DefaultTabControl}" SelectedIndex="{Binding SelectedInfoTab}">
+                <TabItem Header="{x:Static localization:Strings.Calculations}" VerticalAlignment="Bottom">
+                    <Grid >
+                        <DockPanel>
+                            <TextBlock Text="{x:Static localization:Strings.AccumulatedOffersInfo}" Style="{StaticResource HeaderTextBlock}"  Margin="5"
+                                       TextWrapping="WrapWithOverflow"
+                                       HorizontalAlignment="Center" VerticalAlignment="Center" DockPanel.Dock="Top"/>
+                            <!-- Open offer view -->
+
+
+                            <Grid DockPanel.Dock="Bottom" Margin="0,0,0,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <DockPanel Grid.Column="0">
+                                    <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                        <Rectangle.OpacityMask>
+                                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=PointOfSale}" />
+                                        </Rectangle.OpacityMask>
+                                    </Rectangle>
+                                    <!-- 
+                                    <TextBlock Text="{x:Static localization:Strings.AccumulatedPriceLabel}" 
+                                           HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,10" DockPanel.Dock="Left"/>
+                                    -->
+                                    <TextBlock Text="{Binding TotalPrice, StringFormat={}{0:C}}" Margin="5,10" DockPanel.Dock="Right" VerticalAlignment="Center"/>
+                                </DockPanel>
+                                <DockPanel Grid.Column="1">
+                                    <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                        <Rectangle.OpacityMask>
+                                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Clock}" />
+                                        </Rectangle.OpacityMask>
+                                    </Rectangle>
+                                    <!--
+                                    <TextBlock Text="{x:Static localization:Strings.AccumulatedPrintTimeLabel}" 
+                                           HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,10" DockPanel.Dock="Left"/>
+                                    -->
+                                    <TextBlock Text="{Binding TotalPrintTime, Converter={StaticResource DecimalHoursToTimeSpanConverter}}" Margin="5,10" DockPanel.Dock="Right" VerticalAlignment="Center"/>
+                                </DockPanel>
+                            </Grid>
+                            <ScrollViewer DockPanel.Dock="Top">
+                                <StackPanel>
+                                    <TextBox x:Name="TextBoxSearchOffers" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="10" Text="{Binding SearchOffer, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource SearchTextBox}" />
+                                    <CustomControls:MultiSelectListBox x:Name="lbOffers" Margin="4" Grid.Row="1" 
+                                         ItemsSource="{Binding CalculationViews}"
+                                         SelectedItem="{Binding SelectedCalculationView, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                         SelectedItemsList="{Binding SelectedCalculationsView, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                         SelectionMode="Multiple">
+                                        <i:Interaction.Triggers>
+                                            <i:EventTrigger EventName="SelectionChanged">
+                                                <i:InvokeCommandAction Command="{Binding SelectedCalculationsChangedCommand}" 
+                                                                       CommandParameter="{Binding Path=SelectedItem, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=CustomControls:MultiSelectListBox}}"/>
+                                            </i:EventTrigger>
+                                        </i:Interaction.Triggers>
+                                        <CustomControls:MultiSelectListBox.GroupStyle>
+                                            <GroupStyle>
+                                                <GroupStyle.ContainerStyle>
+                                                    <Style TargetType="{x:Type GroupItem}">
+                                                        <Setter Property="Template">
+                                                            <Setter.Value>
+                                                                <ControlTemplate>
+                                                                    <Expander IsExpanded="True" Style="{StaticResource DefaultExpander}">
+                                                                        <Expander.Header>
+                                                                            <TextBlock Text="{Binding (CollectionViewGroup.Name)}" Style="{StaticResource DefaultTextBlock}" Margin="0" Foreground="{DynamicResource GrayBrush3}"/>
+                                                                        </Expander.Header>
+                                                                        <ItemsPresenter />
+                                                                    </Expander>
+                                                                </ControlTemplate>
+                                                            </Setter.Value>
+                                                        </Setter>
+                                                    </Style>
+                                                </GroupStyle.ContainerStyle>
+                                            </GroupStyle>
+                                        </CustomControls:MultiSelectListBox.GroupStyle>
+                                        <CustomControls:MultiSelectListBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <templates:CalculationViewTemplate />
+                                            </DataTemplate>
+                                        </CustomControls:MultiSelectListBox.ItemTemplate>
+                                        <CustomControls:MultiSelectListBox.ItemContainerStyle>
+                                            <Style TargetType="{x:Type ListBoxItem}">
+                                                <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                                                <Setter Property="IsSelected" Value="{Binding Selected}"/>
+                                                <Setter Property="Template">
+                                                    <Setter.Value>
+                                                        <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                                            <Border Background="Transparent" BorderThickness="0">
+                                                                <Grid MinHeight="30">
+                                                                    <ContentPresenter />
+                                                                </Grid>
+                                                            </Border>
+                                                        </ControlTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Style>
+                                        </CustomControls:MultiSelectListBox.ItemContainerStyle>
+                                        <!-- BUGFIX This has to be set, to enable mouse wheel scrolling -->
+                                        <CustomControls:MultiSelectListBox.Template>
+                                            <ControlTemplate TargetType="{x:Type ItemsControl}">
+                                                <Border>
+                                                    <ItemsPresenter />
+                                                </Border>
+                                            </ControlTemplate>
+                                        </CustomControls:MultiSelectListBox.Template>
+                                        <CustomControls:MultiSelectListBox.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <VirtualizingStackPanel />
+                                            </ItemsPanelTemplate>
+                                        </CustomControls:MultiSelectListBox.ItemsPanel>
+                                    </CustomControls:MultiSelectListBox>
+                                </StackPanel>
+                            </ScrollViewer>
+
+                        </DockPanel>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="{x:Static localization:Strings.STLViewer}" VerticalAlignment="Bottom">
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition/>
+                            <RowDefinition Height="90"/>
+                        </Grid.RowDefinitions>
+
+                        <!-- 3d File Previewer -->
+                        <h:HelixViewport3D
+                            x:Name="view3d"
+                                       ZoomExtentsWhenLoaded="True" ZoomAroundMouseDownPoint="False" IsMoveEnabled="True" 
+                                       IsRotationEnabled="True" RotateAroundMouseDownPoint="True" ShowCameraInfo="{Binding ShowCameraInfo}"
+                                       IsZoomEnabled="True" ShowCoordinateSystem="True" ShowViewCube="True" ShowFieldOfView="True" ShowCameraTarget="True" Grid.Row="1"
+                            >
+                            <h:HelixViewport3D.Camera>
+                                <OrthographicCamera NearPlaneDistance="-1.7976931348623157E+8" FarPlaneDistance="1.7976931348623157E+8"
+                                        Position="-30,-30,24" 
+                                        LookDirection="70,70,-90"
+                                        UpDirection="0.5,0.5,0.75"
+                                        Width="250"
+                                    />
+                            </h:HelixViewport3D.Camera>
+                            <h:SunLight/>
+                            <ModelVisual3D x:Name="foo"  Content="{Binding Model}">
+                                <ModelVisual3D.Transform>
+                                    <RotateTransform3D >
+                                        <RotateTransform3D.Rotation>
+                                            <AxisAngleRotation3D x:Name="rotate" Axis="1 0 0" />
+                                        </RotateTransform3D.Rotation>
+                                    </RotateTransform3D>
+                                </ModelVisual3D.Transform>
+                            </ModelVisual3D>
+                            <!--
+            <h:GridLinesVisual3D Width="128" Length="128" MinorDistance="1" MajorDistance="1" Thickness="0.01"/>
+            -->
+                        </h:HelixViewport3D>
+                        <Label Grid.Row="0" Content="{x:Static localization:Strings.SetZoomFitPage}" VerticalContentAlignment="Center" MinHeight="36"/>
+                        <StackPanel Grid.Row="2">
+                            <CheckBox Content="{x:Static localization:Strings.ShowCameraInfo}" IsChecked="{Binding ShowCameraInfo}" Margin="5"/>
+
+                            <Button Margin="5,5,5,0" VerticalAlignment="Top" Height="35" DockPanel.Dock="Right"
+                                Style="{StaticResource ImageWithTextButton}" Command="{Binding ZoomToFitCommand}" CommandParameter="{Binding ElementName=view3d}" Grid.ColumnSpan="1"
+                                >
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                        <Rectangle.OpacityMask>
+                                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Magnify}" />
+                                        </Rectangle.OpacityMask>
+                                    </Rectangle>
+                                    <TextBlock Grid.Column="1" Text="{x:Static localization:Strings.SetZoomFitPage}" TextAlignment="Center" Margin="10,5" />
+                                </Grid>
+                            </Button>
+
+                        </StackPanel>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="{x:Static localization:Strings.GCodeInfo}">
+                    <Grid>
+                        <DockPanel>
+                            <DockPanel DockPanel.Dock="Top" >
+                                <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                    <Rectangle.OpacityMask>
+                                        <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=ProgressCheck}" />
+                                    </Rectangle.OpacityMask>
+                                </Rectangle>
+                                <Label Content="{x:Static localization:Strings.LabelCreatingGcodeLayerModel}" Margin="2" MinWidth="160" VerticalAlignment="Center"/>
+                                <TextBlock Width="92" DockPanel.Dock="Right" Text="{Binding ProgressLayerModel, StringFormat={}{0}%}" TextAlignment="Center" Margin="5" VerticalAlignment="Center"/>
+                                <Controls:MetroProgressBar Value="{Binding ProgressLayerModel}" Minimum="0" Maximum="100" Height="24" Margin="5"/>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top" >
+                                <CheckBox IsChecked="{Binding ShowGcodeInfos}" Style="{StaticResource ExpandCollapseToggleStyle}"/>
+                                <TextBlock Text="{x:Static localization:Strings.GcodeInfos}" Style="{StaticResource HeaderTextBlock}" Margin="5"/>
+                            </DockPanel>
+                            <!-- Gcode Infos -->
+                            <DockPanel DockPanel.Dock="Top"
+                                Visibility="{Binding ShowGcodeInfos, Converter={StaticResource BooleanToVisibilityCollapsedConverter}}">
+                                <!-- Slicer -->
+                                <DockPanel  DockPanel.Dock="Top">
+                                    <Label Content="{x:Static localization:Strings.LabelSlicer}" Margin="5" MinWidth="120"/>
+                                    <Rectangle DockPanel.Dock="Right" Width="24" Height="24" ToolTip="{x:Static localization:Strings.GcodeParserNote}" 
+                                        Style="{StaticResource WarnImageRectangle}" Margin="10,5">
+                                        <Rectangle.Resources>
+                                            <Style TargetType="{x:Type ToolTip}" BasedOn="{StaticResource WarnToolTip}" />
+                                        </Rectangle.Resources>
+                                    </Rectangle>
+                                    <TextBlock Text="{Binding Gcode.SlicerName, Mode=OneWay}" Style="{StaticResource AccentTextBlock}"  Margin="5" VerticalAlignment="Center"/>
+                                </DockPanel>
+                                <!-- Filament Type 
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label Content="{x:Static localization:Strings.LabelFilamentType}" Margin="5" MinWidth="120"/>
+                                    <TextBlock Text="{Binding Gcode.FilamentType, Mode=OneWay}" Style="{StaticResource AccentTextBlock}" Margin="5" VerticalAlignment="Center"/>
+                                </DockPanel>
+                                -->
+                                <!-- Filament Density 
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label Content="{x:Static localization:Strings.LabelFilamentDensity}" Margin="5" MinWidth="120"/>
+                                    <Rectangle DockPanel.Dock="Right" Width="24" Height="24" ToolTip="{x:Static localization:Strings.NoteGcodeInfoMissingDensity}" 
+                                        Style="{StaticResource WarnImageRectangle}" Margin="10,5">
+                                        <Rectangle.Resources>
+                                            <Style TargetType="{x:Type ToolTip}" BasedOn="{StaticResource WarnToolTip}" />
+                                        </Rectangle.Resources>
+                                    </Rectangle>
+                                    <TextBox Text="{Binding Gcode.FilamentDensity, StringFormat=F2, Mode=OneWay}" Style="{StaticResource DefaultTextBox}" Margin="5"/>
+                                </DockPanel>
+                                -->
+                                <!-- Volume -->
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label Content="{x:Static localization:Strings.LabelVolume}" Margin="5" DockPanel.Dock="Left" MinWidth="120"/>
+                                    <Label Content="[cm³]:" Margin="5" Width="48" DockPanel.Dock="Right"/>
+                                    <TextBlock Text="{Binding Gcode.ExtrudedFilamentVolume, Mode=OneWay}" Style="{StaticResource AccentTextBlock}" Margin="5" VerticalAlignment="Center"/>
+
+                                </DockPanel>
+                                <!-- Print Time -->
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label Content="{x:Static localization:Strings.LabelPrintingTime}" Margin="5" MinWidth="120"/>
+                                    <DockPanel>
+                                        <Label Content="{Binding Gcode.PrintTime, Converter={StaticResource DecimalHoursToTimeSpanConverter}}" DockPanel.Dock="Right" Margin="5" MinWidth="92"/>
+                                        <TextBlock Text="{Binding Duration, Mode=OneWay}" Style="{StaticResource AccentTextBlock}" Margin="5" VerticalAlignment="Center"/>
+                                    </DockPanel>
+                                </DockPanel>
+
+                            </DockPanel>
+
+                            <TabControl Style="{StaticResource DefaultTabControl}" DockPanel.Dock="Top">
+                                <TabItem Header="2D">
+                                    <DockPanel>
+                                        <ToolBarTray DockPanel.Dock="Top" Orientation="Horizontal">
+                                            <ToolBar Band="2" BandIndex="1">
+                                                <Button Margin="5" VerticalAlignment="Top" Width="42" Height="35" DockPanel.Dock="Bottom"
+                                            Style="{StaticResource ImageButton}" Command="{Binding ZoomToFitCommand}" CommandParameter="{Binding ElementName=view2dGcode}" Grid.ColumnSpan="1"
+                                            >
+                                                    <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="Auto" />
+                                                            <ColumnDefinition Width="*" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                                            <Rectangle.OpacityMask>
+                                                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Magnify}" />
+                                                            </Rectangle.OpacityMask>
+                                                        </Rectangle>
+                                                    </Grid>
+                                                </Button>
+
+                                                <!-- View from plate
+                                        <Button Margin="5,5,5,0" VerticalAlignment="Top" Width="42" Height="35" DockPanel.Dock="Bottom"
+                                            Style="{StaticResource ImageButton}" Command="{Binding ChangeCameraGridCommand}" CommandParameter="plate" Grid.ColumnSpan="1"
+                                            >
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                                    <Rectangle.OpacityMask>
+                                                        <VisualBrush Stretch="Uniform" Visual="{iconPacks:Entypo Kind=AlignBottom}" />
+                                                    </Rectangle.OpacityMask>
+                                                </Rectangle>
+                                            </Grid>
+                                        </Button>
+                                         -->
+                                                <!-- View Left 
+                                        <Button Margin="5,5,5,0" VerticalAlignment="Top" Width="42" Height="35" DockPanel.Dock="Bottom"
+                                            Style="{StaticResource ImageButton}" Command="{Binding ChangeCameraGridCommand}" CommandParameter="left" Grid.ColumnSpan="1"
+                                            >
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                                    <Rectangle.OpacityMask>
+                                                        <VisualBrush Stretch="Uniform" Visual="{iconPacks:FontAwesome Kind=AngleLeftSolid}" />
+                                                    </Rectangle.OpacityMask>
+                                                </Rectangle>
+                                            </Grid>
+                                        </Button>
+                                        -->
+                                                <!-- View Right 
+                                        <Button Margin="5,5,5,0" VerticalAlignment="Top" Width="42" Height="35" DockPanel.Dock="Bottom"
+                                            Style="{StaticResource ImageButton}" Command="{Binding ChangeCameraGridCommand}" CommandParameter="right" Grid.ColumnSpan="1"
+                                            >
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                                    <Rectangle.OpacityMask>
+                                                        <VisualBrush Stretch="Uniform" Visual="{iconPacks:FontAwesome Kind=AngleRightSolid}" />
+                                                    </Rectangle.OpacityMask>
+                                                </Rectangle>
+                                            </Grid>
+                                        </Button>
+                                        -->
+                                            </ToolBar>
+                                        </ToolBarTray>
+                                        <DockPanel DockPanel.Dock="Bottom">
+                                            <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                                <Rectangle.OpacityMask>
+                                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Layers}" />
+                                                </Rectangle.OpacityMask>
+                                            </Rectangle>
+                                            <Label Content="{Binding GcodeLayer}" Margin="2" MinWidth="40" VerticalAlignment="Center"/>
+                                            <Label Content="{Binding GcodeMaxLayer}" Margin="2" MinWidth="40" VerticalAlignment="Center" DockPanel.Dock="Right"/>
+                                            <Slider Value="{Binding GcodeLayer, UpdateSourceTrigger=PropertyChanged}" 
+                                                Minimum="0" Maximum="{Binding GcodeMaxLayer, UpdateSourceTrigger=PropertyChanged}"
+                                                Margin="5">
+                                                <i:Interaction.Triggers>
+                                                    <i:EventTrigger EventName="ValueChanged">
+                                                        <i:InvokeCommandAction Command="{Binding SelectedLayerChangedCommand}"/>
+                                                    </i:EventTrigger>
+                                                </i:Interaction.Triggers>
+                                            </Slider>
+                                        </DockPanel>
+                                        <h:HelixViewport3D DockPanel.Dock="Top" x:Name="view2dGcode"
+                                           ZoomExtentsWhenLoaded="True" ZoomAroundMouseDownPoint="False" IsMoveEnabled="True" 
+                                           IsRotationEnabled="True" RotateAroundMouseDownPoint="True" ShowCameraInfo="{Binding ShowCameraInfo}"
+                                           IsZoomEnabled="True" ShowCoordinateSystem="True" ShowViewCube="False" ShowFieldOfView="False" ShowCameraTarget="True"
+                                           DefaultCamera="{Binding GcodeCamera}">
+                                            <!-- 
+                                    <h:HelixViewport3D.DefaultCamera>                                    
+                                        <PerspectiveCamera x:Name="camera" 
+                                            Position="0,0,100" 
+                                            LookDirection="0,0,-100" 
+                                            UpDirection="0,1,0.5" 
+                                            FieldOfView="61" 
+                                            NearPlaneDistance="0.001">
+                                        </PerspectiveCamera>
+                                    
+                                    </h:HelixViewport3D.DefaultCamera>
+                                    -->
+                                            <h:SunLight/>
+                                            <h:PipeVisual3D x:Name="Tool3D" Diameter="1" Point1="0,0,0" Point2="0,0,5" Visible="False" >
+                                                <h:PipeVisual3D.Fill>
+                                                    <SolidColorBrush Color="Gray" Opacity="0.5"/>
+                                                </h:PipeVisual3D.Fill>
+                                            </h:PipeVisual3D>
+                                            <h:LinesVisual3D Points="{Binding GcodePoints}" Color="{Binding GcodeColor}" Thickness="{Binding GcodeThickness}"/>
+
+                                            <!--
+                                    <h:GridLinesVisual3D Thickness="0.1" Center="0,0,0" Fill="#FFDADADA" Width="1000" Length="1000" Visible="{Binding ShowGcodeGrid}"/>
+                                      -->   <!--
+                                            <ModelVisual3D x:Name="gcodeLayer"  Content="{Binding GCode2dModel}">
+                                                <ModelVisual3D.Transform>
+                                                    <RotateTransform3D >
+                                                        <RotateTransform3D.Rotation>
+                                                            <AxisAngleRotation3D x:Name="rotation" Axis="1 0 0" />
+                                                        </RotateTransform3D.Rotation>
+                                                    </RotateTransform3D>
+                                                </ModelVisual3D.Transform>
+                                            </ModelVisual3D>
+                                            -->
+                                            </h:HelixViewport3D>
+                                    </DockPanel>
+                                </TabItem>
+                                <TabItem Header="3D">
+                                    <DockPanel>
+                                        <TextBlock Text="Cooming soon" TextAlignment="Center" DockPanel.Dock="Top" Margin="10" Style="{StaticResource AccentTextBlock}"/>
+                                        <DockPanel Visibility="Collapsed" DockPanel.Dock="Bottom">
+                                        <ToolBarTray DockPanel.Dock="Top" Orientation="Horizontal">
+                                            <ToolBar Band="2" BandIndex="1">
+                                                <Button Margin="5" VerticalAlignment="Top" Width="42" Height="35" DockPanel.Dock="Bottom"
+                                            Style="{StaticResource ImageButton}" Command="{Binding ZoomToFitCommand}" CommandParameter="{Binding ElementName=view3dGcode}" Grid.ColumnSpan="1"
+                                            >
+                                                    <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="Auto" />
+                                                            <ColumnDefinition Width="*" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                                            <Rectangle.OpacityMask>
+                                                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Magnify}" />
+                                                            </Rectangle.OpacityMask>
+                                                        </Rectangle>
+                                                    </Grid>
+                                                </Button>
+
+                                                <!-- View from plate
+                                        <Button Margin="5,5,5,0" VerticalAlignment="Top" Width="42" Height="35" DockPanel.Dock="Bottom"
+                                            Style="{StaticResource ImageButton}" Command="{Binding ChangeCameraGridCommand}" CommandParameter="plate" Grid.ColumnSpan="1"
+                                            >
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                                    <Rectangle.OpacityMask>
+                                                        <VisualBrush Stretch="Uniform" Visual="{iconPacks:Entypo Kind=AlignBottom}" />
+                                                    </Rectangle.OpacityMask>
+                                                </Rectangle>
+                                            </Grid>
+                                        </Button>
+                                         -->
+                                                <!-- View Left 
+                                        <Button Margin="5,5,5,0" VerticalAlignment="Top" Width="42" Height="35" DockPanel.Dock="Bottom"
+                                            Style="{StaticResource ImageButton}" Command="{Binding ChangeCameraGridCommand}" CommandParameter="left" Grid.ColumnSpan="1"
+                                            >
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                                    <Rectangle.OpacityMask>
+                                                        <VisualBrush Stretch="Uniform" Visual="{iconPacks:FontAwesome Kind=AngleLeftSolid}" />
+                                                    </Rectangle.OpacityMask>
+                                                </Rectangle>
+                                            </Grid>
+                                        </Button>
+                                        -->
+                                                <!-- View Right 
+                                        <Button Margin="5,5,5,0" VerticalAlignment="Top" Width="42" Height="35" DockPanel.Dock="Bottom"
+                                            Style="{StaticResource ImageButton}" Command="{Binding ChangeCameraGridCommand}" CommandParameter="right" Grid.ColumnSpan="1"
+                                            >
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                                    <Rectangle.OpacityMask>
+                                                        <VisualBrush Stretch="Uniform" Visual="{iconPacks:FontAwesome Kind=AngleRightSolid}" />
+                                                    </Rectangle.OpacityMask>
+                                                </Rectangle>
+                                            </Grid>
+                                        </Button>
+                                        -->
+                                            </ToolBar>
+                                        </ToolBarTray>
+                                        <h:HelixViewport3D DockPanel.Dock="Top" x:Name="view3dGcode"
+                                           ZoomExtentsWhenLoaded="True" ZoomAroundMouseDownPoint="False" IsMoveEnabled="True" 
+                                           IsRotationEnabled="True" RotateAroundMouseDownPoint="True" ShowCameraInfo="{Binding ShowCameraInfo}"
+                                           IsZoomEnabled="True" ShowCoordinateSystem="True" ShowViewCube="True" ShowFieldOfView="False" ShowCameraTarget="True"
+                                           DefaultCamera="{Binding Gcode3dCamera}">
+                                            <h:SunLight/>
+                                            <h:PipeVisual3D x:Name="ToolGcode3D" Diameter="1" Point1="0,0,0" Point2="0,0,5" Visible="False" >
+                                                <h:PipeVisual3D.Fill>
+                                                    <SolidColorBrush Color="Gray" Opacity="0.5"/>
+                                                </h:PipeVisual3D.Fill>
+                                            </h:PipeVisual3D>
+                                            <ModelVisual3D x:Name="GcodeModel3d"  Content="{Binding GcodeModels}">
+                                                <ModelVisual3D.Transform>
+                                                    <RotateTransform3D >
+                                                        <RotateTransform3D.Rotation>
+                                                            <AxisAngleRotation3D x:Name="rotateGcode" Axis="1 0 0" />
+                                                        </RotateTransform3D.Rotation>
+                                                    </RotateTransform3D>
+                                                </ModelVisual3D.Transform>
+                                            </ModelVisual3D>
+                                            <!--
+                                            <h:LinesVisual3D Points="{Binding Gcode3dPoints}" Color="{Binding GcodeColor}" Thickness="{Binding GcodeThickness}"/>
+                                            -->
+                                            <!-- 
+                                            <ModelVisual3D x:Name="gcode3dmodel"  Content="{Binding GCode3dModel}">
+                                                <ModelVisual3D.Transform>
+                                                    <RotateTransform3D >
+                                                        <RotateTransform3D.Rotation>
+                                                            <AxisAngleRotation3D x:Name="rotateGcode3d" Axis="1 0 0" />
+                                                        </RotateTransform3D.Rotation>
+                                                    </RotateTransform3D>
+                                                </ModelVisual3D.Transform>
+                                            </ModelVisual3D>
+                                            -->
+                                            </h:HelixViewport3D>
+                                    </DockPanel>
+                                    </DockPanel>
+                                </TabItem>
+                            </TabControl>
+                        </DockPanel>
+                    </Grid>
+                </TabItem>
+
+            </TabControl>
+
+        </Grid>
+        <!-- Stl Viewer -->
+        <Grid Grid.Column="0" Grid.ColumnSpan="1" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="180"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="150"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <!-- Button for STL/Gcode file -->
+            <StackPanel Grid.RowSpan="2" Grid.ColumnSpan="5">
+
+                <DockPanel Grid.Column="1">
+                    <Button Margin="5" VerticalAlignment="Top" Height="35"
+                            DockPanel.Dock="Right"
+                            Style="{StaticResource ImageWithTextButton}" Command="{Binding ReadStlGcodeFileCommand}" CommandParameter="{Binding ElementName=view3d}"
+                        >
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=File}" />
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <TextBlock Grid.Column="1" Text="{x:Static localization:Strings.OpenGcodeorStlFile}" TextAlignment="Center" Margin="10,5" />
+                        </Grid>
+                    </Button>
+                    <DockPanel DockPanel.Dock="Left"
+                               Visibility="{Binding IsWorking, Converter={StaticResource BooleanToVisibilityCollapsedConverter}}"
+                               >
+                        <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                            <Rectangle.OpacityMask>
+                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=ProgressCheck}" />
+                            </Rectangle.OpacityMask>
+                        </Rectangle>
+                        <Label Content="{x:Static localization:Strings.LabelParsingGcode}" Margin="2" MinWidth="160" VerticalAlignment="Center"/>
+                        <TextBlock Width="92" DockPanel.Dock="Right" Text="{Binding Progress, StringFormat={}{0}%}" TextAlignment="Center" Margin="5" VerticalAlignment="Center"/>
+                        <Controls:MetroProgressBar Value="{Binding Progress}" Minimum="0" Maximum="100" Height="24" Margin="5"/>
+                    </DockPanel>
+                </DockPanel>
+                <!-- 
+                <DockPanel Grid.Column="1">
+                    <Button Margin="5,5,5,0" VerticalAlignment="Top" Height="35"
+                            DockPanel.Dock="Left"
+                            Style="{StaticResource ImageWithTextButton}" Command="{Binding ReadStlFileCommand}" CommandParameter="{Binding ElementName=view3d}"
+                        >
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Plus}" />
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <TextBlock Grid.Column="1" Text="{x:Static localization:Strings.OpenStlFile}" TextAlignment="Center" Margin="10,5" />
+                        </Grid>
+                    </Button>
+                    <Button Margin="5,5,5,0" VerticalAlignment="Top" Height="35"
+                            DockPanel.Dock="Right"
+                            Style="{StaticResource ImageWithTextButton}" Command="{Binding ReadGcodeFileCommand}" CommandParameter="{Binding ElementName=view3d}"
+                        >
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Plus}" />
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <TextBlock Grid.Column="1" Text="{x:Static localization:Strings.SelectOrDropGcodeFile}" TextAlignment="Center" Margin="10,5" />
+                        </Grid>
+                    </Button>
+                    <Label Content="{x:Static localization:Strings.Or}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </DockPanel>
+                -->
+                <!--
+                    <DockPanel>
+                        <Label Content="{x:Static localization:Strings.LabelSelectPrinter}" VerticalContentAlignment="Center" MinWidth="150"/>
+                        <Button Margin="5,5,5,0" VerticalAlignment="Top" Height="35" Grid.Column="1" DockPanel.Dock="Right"
+                                    Style="{StaticResource ImageWithTextButton}" Command="{Binding AddNewPrinterCommand}" Grid.ColumnSpan="1">
+                            <Button.Content>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                        <Rectangle.OpacityMask>
+                                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Plus}" />
+                                        </Rectangle.OpacityMask>
+                                    </Rectangle>
+                                    <TextBlock Grid.Column="1" Text="{x:Static localization:Strings.AddPrinter}" TextAlignment="Center" Margin="10,5" />
+                                </Grid>
+                            </Button.Content>
+                        </Button>
+                        <ComboBox x:Name="cbPrinter" SelectedItem="{Binding Printer}" ItemsSource="{Binding Printers}" Height="38" Margin="5">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="SelectionChanged">
+                                    <i:InvokeCommandAction Command="{Binding SelectedIPrinterChangedCommand}" 
+                                                                   CommandParameter="{Binding Path=SelectedItem, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ComboBox}}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </ComboBox>
+                    </DockPanel>
+                    -->
+            </StackPanel>
+
+            <!-- TabControl for diffrent information -->
+            <TabControl Style="{StaticResource DefaultTabControl}" Margin="5" Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="1">
+                <TabItem Header="{x:Static localization:Strings.General}">
+                    <ScrollViewer>
+                        <Grid>
+                            <StackPanel>
+                                <!-- Selected Gcode -->
+                                <DockPanel>
+                                    <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                        <Rectangle.OpacityMask>
+                                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=RenameBox}" />
+                                        </Rectangle.OpacityMask>
+                                    </Rectangle>
+                                    <Label Content="{x:Static localization:Strings.LabelNameMandatory}" Margin="2" MinWidth="160" VerticalAlignment="Center"/>
+                                    <Label Width="92" DockPanel.Dock="Right" Margin="5"/>
+                                    <TextBox x:Name="tbName"  Margin="5" Width="Auto" HorizontalAlignment="Stretch">
+                                        <TextBox.Text>
+                                            <Binding Path="Name" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                                <Binding.ValidationRules>
+                                                    <validators:EmptyValidator ValidatesOnTargetUpdated="True" />
+                                                </Binding.ValidationRules>
+                                            </Binding>
+                                        </TextBox.Text>
+                                    </TextBox>
+                                </DockPanel>
+
+                                <!-- Selected Gcode -->
+                                <DockPanel>
+                                    <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                        <Rectangle.OpacityMask>
+                                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=File}" />
+                                        </Rectangle.OpacityMask>
+                                    </Rectangle>
+                                    <Label Content="{x:Static localization:Strings.LabelGcode}" Margin="2" MinWidth="160" VerticalAlignment="Center"/>
+                                    <Button Margin="5,5,52,5" VerticalAlignment="Top" Height="35" Width="45"
+                                            DockPanel.Dock="Right"
+                                            Style="{StaticResource ImageButton}" 
+                                            Command="{Binding DeleteSelectedGcodeFileCommand}" 
+                                            CommandParameter="{Binding ElementName=cbGcode, Path=SelectedItem}"
+                                        >
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                                <Rectangle.OpacityMask>
+                                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Delete}" />
+                                                </Rectangle.OpacityMask>
+                                            </Rectangle>
+
+                                        </Grid>
+                                    </Button>
+                                    <ComboBox x:Name="cbGcode" SelectedItem="{Binding Gcode}" ItemsSource="{Binding Gcodes}" Height="38" Margin="5">
+                                        <i:Interaction.Triggers>
+                                            <i:EventTrigger EventName="SelectionChanged">
+                                                <i:InvokeCommandAction Command="{Binding SelectedGcodeChangedCommand}" 
+                                                                       CommandParameter="{Binding Path=SelectedItem, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ComboBox}}"/>
+                                            </i:EventTrigger>
+                                        </i:Interaction.Triggers>
+                                    </ComboBox>
+                                </DockPanel>
+                                <!-- Print Duration -->
+                                <DockPanel>
+                                    <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                        <Rectangle.OpacityMask>
+                                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Timelapse}" />
+                                        </Rectangle.OpacityMask>
+                                    </Rectangle>
+                                    <Label Content="{x:Static localization:Strings.LabelPrintDurationMandatory}" Margin="2" MinWidth="160" VerticalAlignment="Center"/>
+                                    <Label Content="{Binding Duration, Converter={StaticResource DecimalHoursToTimeSpanConverter}}" DockPanel.Dock="Right" Margin="5" MinWidth="92"/>
+                                    <Controls:NumericUpDown Margin="5" Minimum="0" HasDecimals="True" StringFormat="F2" HorizontalAlignment="Stretch" Width="Auto">
+                                        <Controls:NumericUpDown.Value>
+                                            <Binding Path="Duration" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                                <Binding.ValidationRules>
+                                                    <validators:GreaterThanZeroValidator ValidatesOnTargetUpdated="True"/>
+                                                </Binding.ValidationRules>
+                                            </Binding>
+                                        </Controls:NumericUpDown.Value>
+                                    </Controls:NumericUpDown>
+                                </DockPanel>
+                                <!-- Used Material -->
+                                <DockPanel>
+                                    <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                        <Rectangle.OpacityMask>
+                                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Cube}" />
+                                        </Rectangle.OpacityMask>
+                                    </Rectangle>
+                                    <Label Content="{x:Static localization:Strings.LabelVolumeMandatory}" Margin="2" MinWidth="160" VerticalAlignment="Center"/>
+                                    <Label Content="{x:Static localization:StaticStrings.cm_3}" DockPanel.Dock="Right" Margin="5" MinWidth="92"/>
+                                    <Controls:NumericUpDown Margin="5" Minimum="0" HasDecimals="True"  HorizontalAlignment="Stretch" Width="Auto">
+                                        <Controls:NumericUpDown.Value>
+                                            <Binding Path="Volume" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged" StringFormat="{}{N2}">
+                                                <Binding.ValidationRules>
+                                                    <validators:GreaterThanZeroValidator ValidatesOnTargetUpdated="True"/>
+                                                </Binding.ValidationRules>
+                                            </Binding>
+                                        </Controls:NumericUpDown.Value>
+                                    </Controls:NumericUpDown>
+                                </DockPanel>
+
+                                <!-- Energy Costs -->
+                                <StackPanel>
+                                    <!-- Checkbox + Note -->
+                                    <DockPanel>
+                                        <Rectangle DockPanel.Dock="Right" Width="24" Height="24" ToolTip="{x:Static localization:Strings.ApplyEnergyCostsNote}" 
+                                            Style="{StaticResource WarnImageRectangle}" Margin="10,5">
+                                            <Rectangle.Resources>
+                                                <Style TargetType="{x:Type ToolTip}" BasedOn="{StaticResource WarnToolTip}" />
+                                            </Rectangle.Resources>
+                                        </Rectangle>
+                                        <CheckBox x:Name="cbkApplyEnergyCosts" Content="{x:Static localization:Strings.ApplyEnergyCostsToCalculation}" IsChecked="{Binding ApplyEnergyCosts}" Margin="12,5,5,5" MinHeight="32"/>
+                                    </DockPanel>
+                                    <StackPanel IsEnabled="{Binding ApplyEnergyCosts}"
+                                                Visibility="{Binding ApplyEnergyCosts, Converter={StaticResource BooleanToVisibilityCollapsedConverter}}"
+                                                >
+                                        <!-- Energy costs -->
+                                        <DockPanel>
+                                            <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                                <Rectangle.OpacityMask>
+                                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=PowerPlug}" />
+                                                </Rectangle.OpacityMask>
+                                            </Rectangle>
+                                            <Label Content="{x:Static localization:Strings.LabelEnergyCostsMandatory}" Margin="2" MinWidth="160" VerticalAlignment="Center"/>
+                                            <Label Content="ct/kWh" DockPanel.Dock="Right" Margin="5" MinWidth="92"/>
+                                            <Controls:NumericUpDown StringFormat="C2" Minimum="0" HasDecimals="True" Margin="5" Width="Auto" HorizontalAlignment="Stretch"
+                                                                    ToolTip="{x:Static localization:Strings.TooltipEnergyCosts}"
+                                                                    >
+                                                <Controls:NumericUpDown.Value>
+                                                    <Binding Path="EnergyCosts" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                                        <Binding.ValidationRules>
+                                                            <validators:GreaterThanZeroValidator ValidatesOnTargetUpdated="True" />
+                                                        </Binding.ValidationRules>
+                                                    </Binding>
+                                                </Controls:NumericUpDown.Value>
+                                            </Controls:NumericUpDown>
+                                        </DockPanel>
+                                        <!-- Power Consumption slider -->
+                                        <DockPanel>
+                                            <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                                <Rectangle.OpacityMask>
+                                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=PowerSettings}" />
+                                                </Rectangle.OpacityMask>
+                                            </Rectangle>
+                                            <Label Content="{x:Static localization:Strings.LabelPowerLevel}" Margin="2" MinWidth="160" VerticalAlignment="Center"/>
+                                            <Label Content="{x:Static localization:StaticStrings.Percent}" Margin="5" DockPanel.Dock="Right" MinWidth="92"/>
+                                            <Controls:NumericUpDown Minimum="0" Maximum="100" HasDecimals="False" Margin="5" Width="Auto" HorizontalAlignment="Stretch"
+                                                                DockPanel.Dock="Right"
+                                                                MinWidth="100"
+                                                                >
+                                                <Controls:NumericUpDown.Value>
+                                                    <Binding Path="PowerLevel" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                                        <Binding.ValidationRules>
+                                                            <validators:GreaterThanZeroValidator ValidatesOnTargetUpdated="True" />
+                                                        </Binding.ValidationRules>
+                                                    </Binding>
+                                                </Controls:NumericUpDown.Value>
+                                            </Controls:NumericUpDown>
+                                            <Label Content="{x:Static localization:Strings.Or}" Margin="5" DockPanel.Dock="Right"/>
+                                            <Slider Value="{Binding PowerLevel}" Maximum="100" Minimum="0" Margin="5"
+                                                />
+                                        </DockPanel>
+                                    </StackPanel>
+                                </StackPanel>
+
+                                <!-- Tax rate -->
+                                <CheckBox x:Name="ckbApplyTaxes" Content="{x:Static localization:Strings.ApplyTaxRateToResult}" IsChecked="{Binding ApplyTaxRate}" Margin="12,5,5,5" MinHeight="32"
+                                          ToolTip="{x:Static localization:Strings.TooltipApplyTaxRate}"
+                                          />
+                                <DockPanel 
+                                    Visibility="{Binding ApplyTaxRate, Converter={StaticResource BooleanToVisibilityCollapsedConverter}}"
+                                    >
+                                    <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                        <Rectangle.OpacityMask>
+                                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Calculator}" />
+                                        </Rectangle.OpacityMask>
+                                    </Rectangle>
+                                    <Label Content="{x:Static localization:Strings.LabelTaxRate}" Margin="2" MinWidth="160" VerticalAlignment="Center"/>
+                                    <Label Content="%" DockPanel.Dock="Right" Margin="10,5,5,5" MinWidth="92"/>
+                                    <Controls:NumericUpDown x:Name="nudTaxRate" Minimum="0" HasDecimals="False" Margin="5" Width="Auto" HorizontalAlignment="Stretch"
+                                                            ToolTip="{x:Static localization:Strings.TooltipTaxRate}">
+                                        <Controls:NumericUpDown.Value>
+                                            <Binding Path="Taxrate" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                                <Binding.ValidationRules>
+                                                    <validators:GreaterThanZeroValidator ValidatesOnTargetUpdated="True" />
+                                                </Binding.ValidationRules>
+                                            </Binding>
+                                        </Controls:NumericUpDown.Value>
+                                        <Controls:NumericUpDown.Style>
+                                            <Style TargetType="{x:Type Controls:NumericUpDown}" BasedOn="{StaticResource DefaultNumericUpDown}">
+                                                <Setter Property="IsEnabled" Value="False" />
+                                                <Style.Triggers>
+                                                    <MultiDataTrigger>
+                                                        <MultiDataTrigger.Conditions>
+                                                            <Condition Binding="{Binding IsChecked, ElementName=ckbApplyTaxes}" Value="True" />
+                                                        </MultiDataTrigger.Conditions>
+                                                        <Setter Property="IsEnabled" Value="True" />
+                                                    </MultiDataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Controls:NumericUpDown.Style>
+                                    </Controls:NumericUpDown>
+
+                                </DockPanel>
+                                <!-- Margins -->
+                                <DockPanel>
+                                    <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                        <Rectangle.OpacityMask>
+                                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=ChartDonut}" />
+                                        </Rectangle.OpacityMask>
+                                    </Rectangle>
+                                    <Label Content="{x:Static localization:Strings.LabelMargin}" Margin="2" MinWidth="160" VerticalAlignment="Center"/>
+                                    <Label Content=" %" Margin="5" DockPanel.Dock="Right" MinWidth="92"/>
+                                    <Controls:NumericUpDown Minimum="0" Maximum="1000" HasDecimals="False" Margin="5" Width="Auto" HorizontalAlignment="Stretch"
+                                                            ToolTip="{x:Static localization:Strings.TooltipPieces}" DockPanel.Dock="Right"
+                                                            MinWidth="100"
+                                                            >
+                                        <Controls:NumericUpDown.Value>
+                                            <Binding Path="Margin" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                                <Binding.ValidationRules>
+                                                    <validators:GreaterThanZeroValidator ValidatesOnTargetUpdated="True" />
+                                                </Binding.ValidationRules>
+                                            </Binding>
+                                        </Controls:NumericUpDown.Value>
+                                    </Controls:NumericUpDown>
+                                    <Label Content="{x:Static localization:Strings.Or}" Margin="5" DockPanel.Dock="Right"/>
+                                    <Slider Value="{Binding Margin}" Maximum="1000" Minimum="0" Margin="5"
+                                            ToolTip="{x:Static localization:Strings.TooltipMargin}"
+                                            />
+                                </DockPanel>
+                                <!-- Fail Rate -->
+                                <DockPanel>
+                                    <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                        <Rectangle.OpacityMask>
+                                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=ProgressAlert}" />
+                                        </Rectangle.OpacityMask>
+                                    </Rectangle>
+                                    <Label Content="{x:Static localization:Strings.LabelFailRate}" Margin="2" MinWidth="160" VerticalAlignment="Center"/>
+                                    <Label Content=" %" Margin="5" DockPanel.Dock="Right" MinWidth="92"/>
+                                    <Controls:NumericUpDown Minimum="0" Maximum="1000" HasDecimals="False" Margin="5" Width="Auto" HorizontalAlignment="Stretch"
+                                                            ToolTip="{x:Static localization:Strings.TooltipFailRate}" DockPanel.Dock="Right"
+                                                            MinWidth="100"
+                                                            >
+                                        <Controls:NumericUpDown.Value>
+                                            <Binding Path="FailRate" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                                <Binding.ValidationRules>
+                                                    <validators:GreaterThanZeroValidator ValidatesOnTargetUpdated="True" />
+                                                </Binding.ValidationRules>
+                                            </Binding>
+                                        </Controls:NumericUpDown.Value>
+                                    </Controls:NumericUpDown>
+                                    <Label Content="{x:Static localization:Strings.Or}" Margin="5" DockPanel.Dock="Right"/>
+                                    <Slider Value="{Binding FailRate}" Maximum="100" Minimum="0" Margin="5"
+                                            ToolTip="{x:Static localization:Strings.TooltipFailRate}"
+                                            />
+                                </DockPanel>
+                                <!-- Pieces -->
+                                <DockPanel>
+                                    <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                        <Rectangle.OpacityMask>
+                                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=SortNumeric}" />
+                                        </Rectangle.OpacityMask>
+                                    </Rectangle>
+                                    <Label Content="{x:Static localization:Strings.LabelQuantityMandatory}" Margin="2" MinWidth="160" VerticalAlignment="Center"/>
+                                    <Label Content="{x:Static localization:Strings.LabelPieces}" DockPanel.Dock="Right" Margin="5" MinWidth="92"/>
+                                    <Controls:NumericUpDown Minimum="1" HasDecimals="False" Margin="5" Width="Auto" HorizontalAlignment="Stretch"
+                                                            ToolTip="{x:Static localization:Strings.TooltipPieces}"
+                                                            >
+                                        <Controls:NumericUpDown.Value>
+                                            <Binding Path="Pieces" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                                <Binding.ValidationRules>
+                                                    <validators:GreaterThanZeroValidator ValidatesOnTargetUpdated="True" />
+                                                </Binding.ValidationRules>
+                                            </Binding>
+                                        </Controls:NumericUpDown.Value>
+                                    </Controls:NumericUpDown>
+                                </DockPanel>
+
+                                <!-- Handling Fee -->
+                                <DockPanel>
+                                    <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                        <Rectangle.OpacityMask>
+                                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Worker}" />
+                                        </Rectangle.OpacityMask>
+                                    </Rectangle>
+                                    <Label Content="{x:Static localization:Strings.LabelHandlingFee}" Margin="2" MinWidth="160" VerticalAlignment="Center"/>
+                                    <Label Content="" DockPanel.Dock="Right" Margin="5" MinWidth="92"/>
+                                    <Controls:NumericUpDown Minimum="0" HasDecimals="True" StringFormat="C2" Margin="5" Width="Auto" HorizontalAlignment="Stretch"
+                                                            ToolTip="{x:Static localization:Strings.TooltipHandlingFee}"
+                                                            >
+                                        <Controls:NumericUpDown.Value>
+                                            <Binding Path="HandlingFee" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                                <Binding.ValidationRules>
+                                                </Binding.ValidationRules>
+                                            </Binding>
+                                        </Controls:NumericUpDown.Value>
+                                    </Controls:NumericUpDown>
+                                </DockPanel>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </TabItem>
+                <!-- Printers -->
+                <TabItem>
+                    <TabItem.Header>
+                        <!-- Header="{x:Static localization:Strings.Printers}" -->
+                        <Controls:Badged Badge="{Binding SelectedPrintersView.Count}" BadgePlacementMode="Right">
+                            <TextBlock Text="{x:Static localization:Strings.Printers}" Margin="0,0,20,0" FontSize="16"/>
+                        </Controls:Badged>
+                    </TabItem.Header>
+                    <ScrollViewer>
+                        <StackPanel>
+                            <TextBox x:Name="TextBoxSearchPrinter" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="10" Text="{Binding SearchPrinter, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource SearchTextBox}" />
+                            <CustomControls:MultiSelectListBox x:Name="lbPrinters" Margin="4" Grid.Row="1" 
+                                     ItemsSource="{Binding PrinterViews}" 
+                                     SelectedItem="{Binding SelectedPrinterView, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                     SelectedItemsList="{Binding SelectedPrintersView, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                     SelectionMode="Multiple">
+                                <CustomControls:MultiSelectListBox.GroupStyle>
+                                    <GroupStyle>
+                                        <GroupStyle.ContainerStyle>
+                                            <Style TargetType="{x:Type GroupItem}">
+                                                <Setter Property="Template">
+                                                    <Setter.Value>
+                                                        <ControlTemplate>
+                                                            <Expander IsExpanded="True" Style="{StaticResource DefaultExpander}">
+                                                                <Expander.Header>
+                                                                    <TextBlock Text="{Binding (CollectionViewGroup.Name)}" Style="{StaticResource DefaultTextBlock}" Margin="0" Foreground="{DynamicResource GrayBrush3}"/>
+                                                                </Expander.Header>
+                                                                <ItemsPresenter />
+                                                            </Expander>
+                                                        </ControlTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Style>
+                                        </GroupStyle.ContainerStyle>
+                                    </GroupStyle>
+                                </CustomControls:MultiSelectListBox.GroupStyle>
+                                <CustomControls:MultiSelectListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <templates:PrinterViewInfoTemplate />
+                                    </DataTemplate>
+                                </CustomControls:MultiSelectListBox.ItemTemplate>
+                                <CustomControls:MultiSelectListBox.ItemContainerStyle>
+                                    <Style TargetType="{x:Type ListBoxItem}">
+                                        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                                        <Setter Property="IsSelected" Value="{Binding Selected}"/>
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                                    <Border Background="Transparent" BorderThickness="0">
+                                                        <Grid MinHeight="30">
+                                                            <ContentPresenter />
+                                                        </Grid>
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </CustomControls:MultiSelectListBox.ItemContainerStyle>
+                                <!-- BUGFIX This has to be set, to enable mouse wheel scrolling -->
+                                <CustomControls:MultiSelectListBox.Template>
+                                    <ControlTemplate TargetType="{x:Type ItemsControl}">
+                                        <Border>
+                                            <ItemsPresenter />
+                                        </Border>
+                                    </ControlTemplate>
+                                </CustomControls:MultiSelectListBox.Template>
+                                <CustomControls:MultiSelectListBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <VirtualizingStackPanel />
+                                    </ItemsPanelTemplate>
+                                </CustomControls:MultiSelectListBox.ItemsPanel>
+                            </CustomControls:MultiSelectListBox>
+                        </StackPanel>
+                    </ScrollViewer>
+                </TabItem>
+                <!-- Materials -->
+                <TabItem>
+                    <TabItem.Header>
+                        <!-- Header="{x:Static localization:Strings.Materials}" -->
+                        <Controls:Badged Badge="{Binding SelectedMaterialsView.Count}" BadgePlacementMode="Right">
+                            <TextBlock Text="{x:Static localization:Strings.Materials}" Margin="0,0,20,0" FontSize="16"/>
+                        </Controls:Badged>
+                    </TabItem.Header>
+                    <ScrollViewer>
+                        <StackPanel>
+                            <TextBox x:Name="TextBoxSearchMaterial" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="10" Text="{Binding SearchMaterial, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource SearchTextBox}" />
+                            <CustomControls:MultiSelectListBox x:Name="lbMaterials" Margin="4" Grid.Row="1" 
+                                                               ItemsSource="{Binding MaterialViews}" 
+                                                               SelectedItem="{Binding SelectedMaterialView, UpdateSourceTrigger=PropertyChanged}" 
+                                                               SelectedItemsList="{Binding SelectedMaterialsView, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                                               SelectionMode="Multiple">
+                                <CustomControls:MultiSelectListBox.GroupStyle>
+                                    <GroupStyle>
+                                        <GroupStyle.ContainerStyle>
+                                            <Style TargetType="{x:Type GroupItem}">
+                                                <Setter Property="Template">
+                                                    <Setter.Value>
+                                                        <ControlTemplate>
+                                                            <Expander IsExpanded="True" Style="{StaticResource DefaultExpander}">
+                                                                <Expander.Header>
+                                                                    <TextBlock Text="{Binding (CollectionViewGroup.Name)}" Style="{StaticResource DefaultTextBlock}" Margin="0" Foreground="{DynamicResource GrayBrush3}"/>
+                                                                </Expander.Header>
+                                                                <ItemsPresenter />
+                                                            </Expander>
+                                                        </ControlTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Style>
+                                        </GroupStyle.ContainerStyle>
+
+                                    </GroupStyle>
+                                </CustomControls:MultiSelectListBox.GroupStyle>
+                                <CustomControls:MultiSelectListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <templates:MaterialViewInfoTemplate />
+                                    </DataTemplate>
+                                </CustomControls:MultiSelectListBox.ItemTemplate>
+                                <CustomControls:MultiSelectListBox.ItemContainerStyle>
+                                    <Style TargetType="{x:Type ListBoxItem}">
+                                        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                                        <Setter Property="IsSelected" Value="{Binding Selected}"/>
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                                    <Border Background="Transparent" BorderThickness="0">
+                                                        <Grid MinHeight="30">
+                                                            <ContentPresenter />
+                                                        </Grid>
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </CustomControls:MultiSelectListBox.ItemContainerStyle>
+                                <!-- BUGFIX This has to be set, to enable mouse wheel scrolling -->
+                                <CustomControls:MultiSelectListBox.Template>
+                                    <ControlTemplate TargetType="{x:Type ItemsControl}">
+                                        <Border>
+                                            <ItemsPresenter />
+                                        </Border>
+                                    </ControlTemplate>
+                                </CustomControls:MultiSelectListBox.Template>
+                                <CustomControls:MultiSelectListBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <VirtualizingStackPanel />
+                                    </ItemsPanelTemplate>
+                                </CustomControls:MultiSelectListBox.ItemsPanel>
+                            </CustomControls:MultiSelectListBox>
+                        </StackPanel>
+                    </ScrollViewer>
+                </TabItem>
+
+                <!-- 3d Files -->
+                <TabItem>
+                    <TabItem.Header>
+                        <!-- Header="{x:Static localization:Strings.Additional}" -->
+                        <Controls:Badged Badge="{Binding TotalFileCount}" BadgePlacementMode="Right">
+                            <TextBlock Text="{x:Static localization:Strings.Files}" Margin="0,0,20,0" FontSize="16"/>
+                        </Controls:Badged>
+                    </TabItem.Header>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="1">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50*" MinHeight="200"/>
+                                    <RowDefinition Height="8"/>
+                                    <RowDefinition Height="50*" MinHeight="200"/>
+                                </Grid.RowDefinitions>
+                                
+                                <!-- Grid Splitter -->
+                                <GridSplitter Grid.Row="1" Height="8" HorizontalAlignment="Stretch" Grid.ColumnSpan="3" Style="{StaticResource HorizontalSliderThumb}"/>
+                                <!-- Stl Files -->
+                                <Grid Grid.Column="0" Grid.Row="0">
+                                    <DockPanel>
+                                        <TextBlock Text="{x:Static localization:Strings.Stl}" Style="{StaticResource HeaderTextBlock}" 
+                                                   Margin="5"
+                                                   DockPanel.Dock="Top" TextAlignment="Center"/>
+
+                                        <DockPanel DockPanel.Dock="Bottom">
+                                            <!-- Button Slice Selection -->
+                                            <Button Margin="5" VerticalAlignment="Top" Height="38" Grid.Column="0"
+                                                Command="{Binding SliceSelectedStlFilesChildWindowCommand}" Grid.ColumnSpan="1" Grid.Row="2"
+                                                >
+                                                <Button.Content>
+                                                    <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="Auto" />
+                                                            <ColumnDefinition Width="*" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                                            <Rectangle.OpacityMask>
+                                                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=HexagonSlice1}" />
+                                                            </Rectangle.OpacityMask>
+                                                        </Rectangle>
+                                                        <Controls:Badged Grid.Column="1" Badge="{Binding ElementName=mslbStl, Path=SelectedItems.Count}" BadgePlacementMode="Right" Margin="5,5,25,5">
+                                                            <TextBlock Text="{x:Static localization:Strings.Slice}" TextAlignment="Center" Margin="0,0,20,0"/>
+                                                        </Controls:Badged>
+                                                    </Grid>
+                                                </Button.Content>
+                                                <Button.Style>
+                                                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource ImageButton}">
+                                                        <Setter Property="IsEnabled" Value="True" />
+                                                        <Style.Triggers>
+                                                            <MultiDataTrigger>
+                                                                <MultiDataTrigger.Conditions>
+                                                                    <Condition Binding="{Binding ElementName=mslbStl, Path=SelectedItems.Count}" Value="0" />
+                                                                </MultiDataTrigger.Conditions>
+                                                                <Setter Property="IsEnabled" Value="False" />
+                                                            </MultiDataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Button.Style>
+                                            </Button>
+                                        </DockPanel>
+                                        <DockPanel DockPanel.Dock="Top">
+                                            <!-- Delete Button -->
+                                            <Button Margin="5" VerticalAlignment="Top" Height="38" Width="45"
+                                                Command="{Binding DeleteSelectedStlFilesCommand}" 
+                                                HorizontalAlignment="Right" DockPanel.Dock="Right"
+                                                    ToolTip="{x:Static localization:Strings.ToolTip_DeleteFiles}"
+                                                >
+                                                <Button.Content>
+                                                    <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="Auto" />
+                                                            <ColumnDefinition Width="*" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                                            <Rectangle.OpacityMask>
+                                                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Delete}" />
+                                                            </Rectangle.OpacityMask>
+                                                        </Rectangle>
+                                                        <TextBlock Grid.Column="1" Text="" TextAlignment="Center" Margin="10,5" />
+                                                    </Grid>
+                                                </Button.Content>
+                                                <Button.Style>
+                                                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource ImageButton}">
+                                                        <Setter Property="IsEnabled" Value="True" />
+                                                        <Style.Triggers>
+                                                            <MultiDataTrigger>
+                                                                <MultiDataTrigger.Conditions>
+                                                                    <Condition Binding="{Binding ElementName=mslbStl, Path=SelectedItems.Count}" Value="0" />
+                                                                </MultiDataTrigger.Conditions>
+                                                                <Setter Property="IsEnabled" Value="False" />
+                                                            </MultiDataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Button.Style>
+                                            </Button>
+                                            <!-- Open Location Button -->
+                                            <Button Margin="5" VerticalAlignment="Top" Height="38" Width="45"
+                                                Command="{Binding OpenStlFileLocationCommand}" 
+                                                DockPanel.Dock="Right" ToolTip="{x:Static localization:Strings.ToolTip_OpenFolder}">
+                                                <Button.Content>
+                                                    <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="Auto" />
+                                                            <ColumnDefinition Width="*" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                                            <Rectangle.OpacityMask>
+                                                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Folder}" />
+                                                            </Rectangle.OpacityMask>
+                                                        </Rectangle>
+                                                    </Grid>
+                                                </Button.Content>
+                                                <Button.Style>
+                                                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource ImageButton}">
+                                                        <Setter Property="IsEnabled" Value="True" />
+                                                        <Style.Triggers>
+                                                            <MultiDataTrigger>
+                                                                <MultiDataTrigger.Conditions>
+                                                                    <Condition Binding="{Binding ElementName=mslbStl, Path=SelectedItems.Count}" Value="0" />
+                                                                </MultiDataTrigger.Conditions>
+                                                                <Setter Property="IsEnabled" Value="False" />
+                                                            </MultiDataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Button.Style>
+                                            </Button>
+                                            <!-- Search -->
+                                            <TextBox x:Name="TextBoxSearchStl" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="10" Text="{Binding SearchStlFiles, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource SearchTextBox}" />
+                                        </DockPanel>
+                                        <ScrollViewer>
+                                            <CustomControls:MultiSelectListBox x:Name="mslbStl" Style="{StaticResource HamburgerListBoxStyle}" DockPanel.Dock="Top" Margin="5"
+                                                 ItemsSource="{Binding StlFiles}" 
+                                                 SelectedItem="{Binding StlFile, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                                 SelectedItemsList="{Binding SelectedStlFiles, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                                 SelectionMode="Multiple"
+                                                 >
+                                            <!-- Resources -->
+                                            <CustomControls:MultiSelectListBox.Resources>
+                                                <!-- Context Menu -->
+                                                <ContextMenu x:Key="RowContextMenu" Opened="ContextMenu_Opened" MinWidth="150"
+                                                     DataContext="{Binding PlacementTarget.DataContext, RelativeSource={RelativeSource Self}}"
+                                                     >
+                                                    <MenuItem Header="{x:Static localization:Strings.Delete}" Command="{Binding DeletePrinterCommand}" 
+                                                        CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=SelectedItem}">
+                                                        <MenuItem.Icon>
+                                                            <Rectangle Width="16" Height="16" Fill="{DynamicResource BlackColorBrush}">
+                                                                <Rectangle.OpacityMask>
+                                                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Modern Kind=Delete}" />
+                                                                </Rectangle.OpacityMask>
+                                                            </Rectangle>
+                                                        </MenuItem.Icon>
+                                                    </MenuItem>
+                                                </ContextMenu>
+                                                <ContextMenu x:Key="MultiRowContextMenu" Opened="ContextMenu_Opened" MinWidth="150">
+                                                    <MenuItem Header="{x:Static localization:Strings.DeleteSelected}" Command="{Binding DeletePrintersCommand}" 
+                              CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=SelectedItems}">
+                                                        <MenuItem.Icon>
+                                                            <Rectangle Width="16" Height="16" Fill="{DynamicResource BlackColorBrush}">
+                                                                <Rectangle.OpacityMask>
+                                                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Delete}" />
+                                                                </Rectangle.OpacityMask>
+                                                            </Rectangle>
+                                                        </MenuItem.Icon>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Upload .gcode(s)" Command="{Binding UploadGcodeFilesCommand}" 
+                                                        CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=SelectedItem}">
+                                                        <MenuItem.Icon>
+                                                            <Rectangle Width="16" Height="16" Fill="{DynamicResource BlackColorBrush}">
+                                                                <Rectangle.OpacityMask>
+                                                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Modern Kind=Upload}" />
+                                                                </Rectangle.OpacityMask>
+                                                            </Rectangle>
+                                                        </MenuItem.Icon>
+                                                    </MenuItem>
+                                                </ContextMenu>
+                                            </CustomControls:MultiSelectListBox.Resources>
+
+                                            <CustomControls:MultiSelectListBox.ItemTemplate>
+                                                <DataTemplate>
+                                                    <templates:FileViewInfoTemplate>
+                                                        <!--
+                                                        <templates:FileViewInfoTemplate.ContextMenu>
+                                                            <ContextMenu>
+                                                                <MenuItem Header="delete"/>
+                                                                <MenuItem Header="Item 2"/>
+                                                            </ContextMenu>
+                                                        </templates:FileViewInfoTemplate.ContextMenu>
+                                                        -->
+                                                    </templates:FileViewInfoTemplate>
+                                                </DataTemplate>
+                                            </CustomControls:MultiSelectListBox.ItemTemplate>
+                                            <CustomControls:MultiSelectListBox.ItemContainerStyle>
+                                                <Style TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource MetroListBoxItem}">
+                                                    <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                                                    <Setter Property="IsSelected" Value="{Binding Selected}"/>
+                                                    <Setter Property="Template">
+                                                        <Setter.Value>
+                                                            <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                                                <Border Background="Transparent" BorderThickness="0">
+                                                                    <Grid MinHeight="30">
+                                                                        <ContentPresenter />
+                                                                    </Grid>
+                                                                </Border>
+
+                                                            </ControlTemplate>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                    <!--
+                                                    <Setter Property="ContextMenu" Value="{StaticResource MultiRowContextMenu}"/>
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding SelectedItems.Count, RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type CustomControls:MultiSelectListBox}}}" Value="1" >
+                                                            <Setter Property="ContextMenu" Value="{StaticResource RowContextMenu}"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                    -->
+                                                </Style>
+                                            </CustomControls:MultiSelectListBox.ItemContainerStyle>
+                                            <!-- BUGFIX This has to be set, to enable mouse wheel scrolling -->
+                                            <CustomControls:MultiSelectListBox.Template>
+                                                <ControlTemplate TargetType="{x:Type ItemsControl}">
+                                                    <Border>
+                                                        <ItemsPresenter />
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </CustomControls:MultiSelectListBox.Template>
+                                            <CustomControls:MultiSelectListBox.ItemsPanel>
+                                                <ItemsPanelTemplate>
+                                                    <VirtualizingStackPanel />
+                                                </ItemsPanelTemplate>
+                                            </CustomControls:MultiSelectListBox.ItemsPanel>
+                                        </CustomControls:MultiSelectListBox>
+                                        </ScrollViewer>
+                                    </DockPanel>
+                                </Grid>
+                                <!-- Gcode Files -->
+                                <Grid Grid.Row="2">
+                                    <DockPanel>
+                                        <TextBlock Text="{x:Static localization:Strings.GCode}" Style="{StaticResource HeaderTextBlock}" 
+                                                   Margin="5"
+                                                   DockPanel.Dock="Top" TextAlignment="Center"/>
+
+                                        <DockPanel DockPanel.Dock="Bottom">
+                                            <!-- Button Send Selection -->
+                                            <Button Margin="5" VerticalAlignment="Top" Height="38"
+                                                Command="{Binding SendGCodeFilesCommand}" DockPanel.Dock="Bottom"
+                                                >
+                                                <Button.Style>
+                                                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource ImageButton}">
+                                                        <Setter Property="IsEnabled" Value="False" />
+                                                        <Style.Triggers>
+                                                            <MultiDataTrigger>
+                                                                <MultiDataTrigger.Conditions>
+                                                                    <Condition Binding="{Binding ElementName=mslbGCode, Path=SelectedItems.Count, 
+                                                                        Converter={StaticResource IsMoreOrEqualThanConverter}, ConverterParameter=1}" Value="True" />
+                                                                    <Condition Binding="{Binding canSendGcode}" Value="True" />
+                                                                    <Condition Binding="{Binding isLicenseValid}" Value="True" />
+                                                                </MultiDataTrigger.Conditions>
+                                                                <Setter Property="IsEnabled" Value="True" />
+                                                            </MultiDataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Button.Style>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5"
+                                                       Visibility="{Binding isLicenseValid, Converter={StaticResource BooleanToVisibilityCollapsedConverter}}"
+                                                       >
+                                                        <Rectangle.OpacityMask>
+                                                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=UploadNetwork}" />
+                                                        </Rectangle.OpacityMask>
+                                                    </Rectangle>
+
+                                                    <Controls:Badged Grid.Column="1" Badge="{Binding ElementName=mslbGCode, Path=SelectedItems.Count}" BadgePlacementMode="Right" Margin="5,5,25,5">
+                                                        <TextBlock Text="{x:Static localization:Strings.SendGcodeToRepetierServerPro}" TextAlignment="Center" Margin="0,0,20,0"/>
+                                                    </Controls:Badged>
+                                                    <!-- Pro Only -->
+                                                    <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5"
+                                                       Visibility="{Binding isLicenseValid, Converter={StaticResource BooleanToVisibilityCollapsedReverseConverter}}"
+                                                       >
+                                                        <Rectangle.OpacityMask>
+                                                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Lock}" />
+                                                        </Rectangle.OpacityMask>
+                                                    </Rectangle>
+
+                                                </Grid>
+                                            </Button>
+                                        </DockPanel>
+                                        <DockPanel DockPanel.Dock="Top">
+                                            <!-- Delete Button -->
+                                            <Button Margin="5" VerticalAlignment="Top" Height="38" Width="45"
+                                                Command="{Binding DeleteSelectedGCodeFilesCommand}" 
+                                                HorizontalAlignment="Right" DockPanel.Dock="Right"
+                                                    ToolTip="{x:Static localization:Strings.ToolTip_DeleteFiles}"
+                                                >
+                                                <Button.Content>
+                                                    <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="Auto" />
+                                                            <ColumnDefinition Width="*" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                                            <Rectangle.OpacityMask>
+                                                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Delete}" />
+                                                            </Rectangle.OpacityMask>
+                                                        </Rectangle>
+                                                        <TextBlock Grid.Column="1" Text="" TextAlignment="Center" Margin="10,5" />
+                                                    </Grid>
+                                                </Button.Content>
+                                                <Button.Style>
+                                                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource ImageButton}">
+                                                        <Setter Property="IsEnabled" Value="True" />
+                                                        <Style.Triggers>
+                                                            <MultiDataTrigger>
+                                                                <MultiDataTrigger.Conditions>
+                                                                    <Condition Binding="{Binding ElementName=mslbGCode, Path=SelectedItems.Count}" Value="0" />
+                                                                </MultiDataTrigger.Conditions>
+                                                                <Setter Property="IsEnabled" Value="False" />
+                                                            </MultiDataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Button.Style>
+                                            </Button>
+                                            <!-- Open Location Button -->
+                                            <Button Margin="5" VerticalAlignment="Top" Height="38" Width="45"
+                                                Command="{Binding OpenGCodeFileLocationCommand}" 
+                                                DockPanel.Dock="Right" ToolTip="{x:Static localization:Strings.ToolTip_OpenFolder}">
+                                                <Button.Content>
+                                                    <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="Auto" />
+                                                            <ColumnDefinition Width="*" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                                            <Rectangle.OpacityMask>
+                                                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Folder}" />
+                                                            </Rectangle.OpacityMask>
+                                                        </Rectangle>
+                                                    </Grid>
+                                                </Button.Content>
+                                                <Button.Style>
+                                                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource ImageButton}">
+                                                        <Setter Property="IsEnabled" Value="True" />
+                                                        <Style.Triggers>
+                                                            <MultiDataTrigger>
+                                                                <MultiDataTrigger.Conditions>
+                                                                    <Condition Binding="{Binding ElementName=mslbGCode, Path=SelectedItems.Count}" Value="0" />
+                                                                </MultiDataTrigger.Conditions>
+                                                                <Setter Property="IsEnabled" Value="False" />
+                                                            </MultiDataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Button.Style>
+                                            </Button>
+                                            <!-- Open GCode Viewer Button -->
+                                            <!-- -->
+                                            <Button Margin="5" VerticalAlignment="Top" Height="38" Width="45"
+                                                Command="{Binding OpenGCodeViewerNewWindowCommand}" 
+                                                DockPanel.Dock="Right" ToolTip="{x:Static localization:Strings.ToolTip_OpenGCodeEditor}">
+                                                <Button.Content>
+                                                    <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="Auto" />
+                                                            <ColumnDefinition Width="*" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                                            <Rectangle.OpacityMask>
+                                                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Modern Kind=PageCode}" />
+                                                            </Rectangle.OpacityMask>
+                                                        </Rectangle>
+                                                    </Grid>
+                                                </Button.Content>
+                                                <Button.Style>
+                                                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource ImageButton}">
+                                                        <Setter Property="IsEnabled" Value="True" />
+                                                        <Style.Triggers>
+                                                            <MultiDataTrigger>
+                                                                <MultiDataTrigger.Conditions>
+                                                                    <Condition Binding="{Binding ElementName=mslbGCode, Path=SelectedItems.Count}" Value="0" />
+                                                                </MultiDataTrigger.Conditions>
+                                                                <Setter Property="IsEnabled" Value="False" />
+                                                            </MultiDataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Button.Style>
+                                            </Button>
+                                            
+                                            <!-- Search -->
+                                            <TextBox x:Name="TextBoxSearchGcode" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="10" Text="{Binding SearchGCodeFiles, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource SearchTextBox}" />
+                                        </DockPanel>
+                                        <ScrollViewer>
+                                            <CustomControls:MultiSelectListBox x:Name="mslbGCode" Style="{StaticResource HamburgerListBoxStyle}" DockPanel.Dock="Top" Margin="5"
+                                                 ItemsSource="{Binding Gcodes}" 
+                                                 SelectedItem="{Binding Gcode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                                 SelectedItemsList="{Binding SelectedGcodeFiles, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                                 SelectionMode="Multiple"
+                                                 >
+                                            <!-- Resources -->
+                                            <CustomControls:MultiSelectListBox.Resources>
+                                                <!-- Context Menu -->
+                                                <ContextMenu x:Key="RowContextMenu" Opened="ContextMenu_Opened" MinWidth="150"
+                                                     DataContext="{Binding PlacementTarget.DataContext, RelativeSource={RelativeSource Self}}"
+                                                     >
+                                                    <MenuItem Header="{x:Static localization:Strings.Delete}" Command="{Binding DeletePrinterCommand}" 
+                                                        CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=SelectedItem}">
+                                                        <MenuItem.Icon>
+                                                            <Rectangle Width="16" Height="16" Fill="{DynamicResource BlackColorBrush}">
+                                                                <Rectangle.OpacityMask>
+                                                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Modern Kind=Delete}" />
+                                                                </Rectangle.OpacityMask>
+                                                            </Rectangle>
+                                                        </MenuItem.Icon>
+                                                    </MenuItem>
+                                                </ContextMenu>
+                                                <ContextMenu x:Key="MultiRowContextMenu" Opened="ContextMenu_Opened" MinWidth="150">
+                                                    <MenuItem Header="{x:Static localization:Strings.DeleteSelected}" Command="{Binding DeletePrintersCommand}" 
+                                                        CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=SelectedItems}">
+                                                        <MenuItem.Icon>
+                                                            <Rectangle Width="16" Height="16" Fill="{DynamicResource BlackColorBrush}">
+                                                                <Rectangle.OpacityMask>
+                                                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Delete}" />
+                                                                </Rectangle.OpacityMask>
+                                                            </Rectangle>
+                                                        </MenuItem.Icon>
+                                                    </MenuItem>
+                                                    <MenuItem Header="Upload .gcode(s)" Command="{Binding UploadGcodeFilesCommand}" 
+                                                        CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=SelectedItem}">
+                                                        <MenuItem.Icon>
+                                                            <Rectangle Width="16" Height="16" Fill="{DynamicResource BlackColorBrush}">
+                                                                <Rectangle.OpacityMask>
+                                                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Modern Kind=Upload}" />
+                                                                </Rectangle.OpacityMask>
+                                                            </Rectangle>
+                                                        </MenuItem.Icon>
+                                                    </MenuItem>
+                                                </ContextMenu>
+                                            </CustomControls:MultiSelectListBox.Resources>
+
+                                            <CustomControls:MultiSelectListBox.ItemTemplate>
+                                                <DataTemplate>
+                                                    <templates:GCodeFileViewInfoTemplate>
+                                                        <!--
+                                                        <templates:FileViewInfoTemplate.ContextMenu>
+                                                            <ContextMenu>
+                                                                <MenuItem Header="delete"/>
+                                                                <MenuItem Header="Item 2"/>
+                                                            </ContextMenu>
+                                                        </templates:FileViewInfoTemplate.ContextMenu>
+                                                        -->
+                                                    </templates:GCodeFileViewInfoTemplate>
+                                                </DataTemplate>
+                                            </CustomControls:MultiSelectListBox.ItemTemplate>
+                                            <CustomControls:MultiSelectListBox.ItemContainerStyle>
+                                                <Style TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource MetroListBoxItem}">
+                                                    <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                                                    <Setter Property="IsSelected" Value="{Binding Selected}"/>
+                                                    <Setter Property="Template">
+                                                        <Setter.Value>
+                                                            <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                                                <Border Background="Transparent" BorderThickness="0">
+                                                                    <Grid MinHeight="30">
+                                                                        <ContentPresenter />
+                                                                    </Grid>
+                                                                </Border>
+
+                                                            </ControlTemplate>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                    <!--
+                                                    <Setter Property="ContextMenu" Value="{StaticResource MultiRowContextMenu}"/>
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding SelectedItems.Count, RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type CustomControls:MultiSelectListBox}}}" Value="1" >
+                                                            <Setter Property="ContextMenu" Value="{StaticResource RowContextMenu}"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                    -->
+                                                </Style>
+                                            </CustomControls:MultiSelectListBox.ItemContainerStyle>
+                                            <!-- BUGFIX This has to be set, to enable mouse wheel scrolling -->
+                                            <CustomControls:MultiSelectListBox.Template>
+                                                <ControlTemplate TargetType="{x:Type ItemsControl}">
+                                                    <Border>
+                                                        <ItemsPresenter />
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </CustomControls:MultiSelectListBox.Template>
+                                            <CustomControls:MultiSelectListBox.ItemsPanel>
+                                                <ItemsPanelTemplate>
+                                                    <VirtualizingStackPanel />
+                                                </ItemsPanelTemplate>
+                                            </CustomControls:MultiSelectListBox.ItemsPanel>
+                                        </CustomControls:MultiSelectListBox>
+                                        </ScrollViewer>
+                                    </DockPanel>
+                                </Grid>
+                            </Grid>
+
+                        </Grid>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+
+            <!-- Button Load -->
+            <!-- Button Save -->
+            <!-- Button Calculate -->
+            <Button Margin="5,10,5,0" VerticalAlignment="Top" Height="38"
+                        Command="{Binding CalculateCommand}" Grid.ColumnSpan="1" Grid.Row="2" Grid.Column="4"
+                        >
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource ImageButton}">
+                        <Setter Property="IsEnabled" Value="False" />
+                        <Style.Triggers>
+                            <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding Path=SelectedItems.Count, ElementName=lbPrinters, Converter={StaticResource IsMoreOrEqualThanConverter}, ConverterParameter=1}" Value="True" />
+                                    <Condition Binding="{Binding Path=SelectedItems.Count, ElementName=lbMaterials, Converter={StaticResource IsMoreOrEqualThanConverter}, ConverterParameter=1}" Value="True" />
+                                    <Condition Binding="{Binding ElementName=tbName, Path=(Validation.HasError)}" Value="False" />
+                                </MultiDataTrigger.Conditions>
+
+                                <Setter Property="IsEnabled" Value="True" />
+                            </MultiDataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Calculator}" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                    <TextBlock Grid.Column="1" Text="{x:Static localization:Strings.Calculate}" TextAlignment="Center" Margin="10,5" />
+                </Grid>
+            </Button>
+            <!-- Button Clear Form -->
+            <Button Margin="5,10,5,0" VerticalAlignment="Top" Height="38" Grid.Column="0"
+                    Command="{Binding ClearFormCommand}" Grid.ColumnSpan="1" Grid.Row="2"
+                    Style="{StaticResource ImageWithTextButton}"
+                        >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=NotificationClearAll}" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                    <TextBlock Grid.Column="1" Text="{x:Static localization:Strings.Clear}" TextAlignment="Center" Margin="10,5" />
+                </Grid>
+            </Button>
+
+        </Grid>
+    </Grid>
+</UserControl>

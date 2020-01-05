@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Xceed.Wpf.AvalonDock.Themes.VS2010</name>
+  </assembly>
+  <members>
+    <member name="T:Xceed.Wpf.AvalonDock.Themes.VS2010Theme">
+      <summary>Represents the VS2010 theme for AvalonDock.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.AvalonDock.Themes.VS2010Theme.#ctor">
+      <summary>Initializes a new instance of the VS2010Theme class.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.AvalonDock.Themes.VS2010Theme.GetResourceUri">
+      <summary>Returns the URI of the resource.</summary>
+    </member>
+  </members>
+</doc>

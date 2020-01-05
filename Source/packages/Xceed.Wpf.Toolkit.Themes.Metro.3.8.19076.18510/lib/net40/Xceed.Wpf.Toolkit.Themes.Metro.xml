@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Xceed.Wpf.Toolkit.Themes.Metro</name>
+  </assembly>
+  <members>
+    <member name="T:Xceed.Wpf.Toolkit.Themes.Metro.ToolkitMetroDarkThemeResourceDictionary">
+      <summary>Represents the Metro Dark resource dictionary.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.Toolkit.Themes.Metro.ToolkitMetroLightThemeResourceDictionary">
+      <summary>Represents the Metro Light resource dictionary.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.Toolkit.Themes.Metro.ToolkitMetroThemeResourceDictionaryBase">
+      <summary>Represents the Metro theme's base resource dictionary.</summary>
+    </member>
+  </members>
+</doc>

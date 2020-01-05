@@ -1,0 +1,282 @@
+﻿<UserControl x:Class="WpfFramework.Views.SlicerViews.SliceStlFilesDialog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:viewModels="clr-namespace:WpfFramework.ViewModels.Slicer"
+             xmlns:converters="clr-namespace:WpfFramework.Converters"
+             xmlns:validators="clr-namespace:WpfFramework.Validators"
+             xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:localization="clr-namespace:WpfFramework.Resources.Localization"
+             xmlns:dialogs="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             MinWidth="840" MinHeight="500"
+             dialogs:DialogParticipation.Register="{Binding}"
+             mc:Ignorable="d"  d:DataContext="{d:DesignInstance viewModels:SliceStlDialogViewModel}"
+             d:DesignHeight="900" d:DesignWidth="800">
+    <UserControl.Resources>
+        <converters:ColorToStringConverter x:Key="ColorToStringConverter" />
+        <converters:StringToColorConverter x:Key="StringToColorConverter" />
+        <converters:BooleanToVisibilityCollapsedConverter x:Key="BooleanToVisibilityCollapsedConverter" />
+        <converters:BooleanToVisibilityCollapsedReverseConverter x:Key="BooleanToVisibilityCollapsedReverseConverter" />
+        <converters:BooleanToValidInvalidConverter x:Key="BooleanToValidInvalidConverter" />
+        <converters:EnumDescriptionConverter x:Key="EnumDescriptionConverter" />
+        <converters:BooleanReverseConverter x:Key="BooleanReverseConverter" />
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="55"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="180"/>
+        </Grid.ColumnDefinitions>
+        <!--
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" Grid.ColumnSpan="2">
+        -->
+            <Grid Grid.ColumnSpan="2">
+                <DockPanel>
+                <!-- Files -->
+                <DockPanel DockPanel.Dock="Top">
+                    <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=File}" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                    <Controls:Badged Badge="{Binding StlFiles.Count}" BadgePlacementMode="Right" Margin="5,5,25,5" DockPanel.Dock="Right">
+                        <TextBlock Text="{x:Static localization:Strings.Files}" Margin="0,0,20,0" FontSize="16"/>
+                    </Controls:Badged>
+                    <Label Content="" VerticalAlignment="Center" MinWidth="200" Margin="5"/>
+
+                </DockPanel>
+
+                <!-- Slicer -->
+                <DockPanel DockPanel.Dock="Top">
+                    <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=HexagonSlice1}" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                    <Label Content="{x:Static localization:Strings.LabelSlicer}" VerticalAlignment="Center" MinWidth="200" Margin="5"/>
+                    <ComboBox x:Name="cbSlicer" ItemsSource="{Binding Slicers, Mode=OneWay}" SelectedItem="{Binding SlicerName}" Margin="5" Height="38"
+                              IsEnabled="{Binding IsWorking, Converter={StaticResource BooleanReverseConverter}, UpdateSourceTrigger=PropertyChanged}"
+                              >
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="SelectionChanged">
+                                <i:InvokeCommandAction Command="{Binding SelectedIPrinterChangedCommand}" 
+                                                                       CommandParameter="{Binding Path=SelectedItem, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ComboBox}}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </ComboBox>
+                </DockPanel>
+
+                <!-- Slicer Command -->
+                <DockPanel DockPanel.Dock="Top">
+                    <DockPanel.Style>
+                        <Style TargetType="{x:Type DockPanel}">
+                            <Setter Property="Visibility" Value="Collapsed" />
+                            <Style.Triggers>
+                                <MultiDataTrigger>
+                                    <MultiDataTrigger.Conditions>
+                                        <Condition Binding="{Binding SlicerName.Group}" Value="CLI"/>
+                                    </MultiDataTrigger.Conditions>
+                                    <Setter Property="Visibility" Value="Visible" />
+                                </MultiDataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DockPanel.Style>
+                    <DockPanel DockPanel.Dock="Top">
+                        <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                            <Rectangle.OpacityMask>
+                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:FontAwesome Kind=TerminalSolid}" />
+                            </Rectangle.OpacityMask>
+                        </Rectangle>
+                        <Label Content="{x:Static localization:Strings.LabelSlicerAdditionalCommands}" VerticalAlignment="Center" MinWidth="200" Margin="5"/>
+                        <Rectangle DockPanel.Dock="Right" Width="24" Height="24" ToolTip="{x:Static localization:Strings.SlicerCommandsNote}" 
+                                   Style="{StaticResource WarnImageRectangle}" Margin="10,5">
+                            <Rectangle.Resources>
+                                <Style TargetType="{x:Type ToolTip}" BasedOn="{StaticResource WarnToolTip}" />
+                            </Rectangle.Resources>
+                        </Rectangle>
+                        <TextBox x:Name="tbAdditionalCommand" Controls:TextBoxHelper.Watermark="{x:Static localization:Strings.CommandExportGcodeExample}" 
+                             Style="{StaticResource ConsoleTextBox}" Height="38"
+                             HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch"
+                             Margin="5"
+                             >
+                            <TextBox.Text>
+                                <Binding Path="SlicerCommand" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                    <Binding.ValidationRules>
+                                        <!-- <validators:EmptyValidator ValidatesOnTargetUpdated="True" /> -->
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox.Text>
+                        </TextBox>
+                    </DockPanel>
+                    <CheckBox IsChecked="{Binding ImportGcode}" Content="{x:Static localization:Strings.ImportGcodeAfterSlicingCLI}" Margin="5" DockPanel.Dock="Bottom"/>
+                    <TextBlock Text="{Binding ExecutionString}" Style="{StaticResource MessageTextBlock}" Margin="10" 
+                               TextAlignment="Center" TextWrapping="WrapWithOverflow" DockPanel.Dock="Bottom"
+                               />
+                </DockPanel>
+                <!-- Slicer GUI Options -->
+                <DockPanel DockPanel.Dock="Top">
+                    <DockPanel.Style>
+                        <Style TargetType="{x:Type DockPanel}">
+                            <Setter Property="Visibility" Value="Collapsed" />
+                            <Style.Triggers>
+                                <MultiDataTrigger>
+                                    <MultiDataTrigger.Conditions>
+                                        <Condition Binding="{Binding SlicerName.Group}" Value="GUI"/>
+                                    </MultiDataTrigger.Conditions>
+                                    <Setter Property="Visibility" Value="Visible" />
+                                </MultiDataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DockPanel.Style>
+                    <DockPanel DockPanel.Dock="Top">
+                        <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                            <Rectangle.OpacityMask>
+                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=CheckboxMultipleMarked}" />
+                            </Rectangle.OpacityMask>
+                        </Rectangle>
+                        <Label Content="{x:Static localization:Strings.OpenSlicerInstanceForEachFile}" VerticalAlignment="Center" MinWidth="200" Margin="5"/>
+                        <Rectangle DockPanel.Dock="Right" Width="24" Height="24" ToolTip="{x:Static localization:Strings.SlicerMultipleInstancesNote}" 
+                                   Style="{StaticResource WarnImageRectangle}" Margin="10,5">
+                            <Rectangle.Resources>
+                                <Style TargetType="{x:Type ToolTip}" BasedOn="{StaticResource WarnToolTip}" />
+                            </Rectangle.Resources>
+                        </Rectangle>
+                        <CheckBox x:Name="cbMultipleSlicer"
+                             Style="{StaticResource DefaultCheckBox}" Height="38" IsChecked="{Binding MultipleInstances}"
+                             HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch"
+                             Margin="5"
+                             >
+                            <TextBlock Text="{x:Static localization:Strings.OpenASlicerInstanceForEachFile}" Style="{StaticResource DefaultTextBlock}" />
+                        </CheckBox>
+                    </DockPanel>
+
+                </DockPanel>
+                
+                <DockPanel DockPanel.Dock="Top">
+                    <DockPanel DockPanel.Dock="Top" LastChildFill="True">
+                        <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                            <Rectangle.OpacityMask>
+                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:FontAwesome Kind=TerminalSolid}" />
+                            </Rectangle.OpacityMask>
+                        </Rectangle>
+                        <!-- Button Clear Form -->
+                        <Button Margin="5" VerticalAlignment="Top" Height="38" DockPanel.Dock="Right"
+                            Command="{Binding ClearConsoleCommand}"
+                            Style="{StaticResource ImageButton}"
+                            >
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                    <Rectangle.OpacityMask>
+                                        <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=NotificationClearAll}" />
+                                    </Rectangle.OpacityMask>
+                                </Rectangle>
+                                <TextBlock Grid.Column="1" Text="{x:Static localization:Strings.Clear}" TextAlignment="Center" Margin="10,5" />
+                            </Grid>
+                        </Button>
+                        <Label Content="{x:Static localization:Strings.LabelConsoleOutput}" VerticalAlignment="Center" MinWidth="200" Margin="5"/>
+                    </DockPanel>
+                    <DockPanel DockPanel.Dock="Bottom" Margin="10,0">
+                        <mah:ProgressRing Visibility="{Binding IsWorking, Converter={StaticResource BooleanToVisibilityCollapsedConverter}}" 
+                                          Height="{Binding ElementName=btnSlice, Path=ActualHeight}" Width="{Binding ElementName=btnSlice, Path=ActualHeight}" 
+                                          HorizontalAlignment="Left" IsActive="True" />
+                        </DockPanel>
+                    <TextBox x:Name="tbConsole" DockPanel.Dock="Top" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
+                             Style="{StaticResource ConsoleTextBox}" AcceptsReturn="True"
+                             Margin="5" Height="Auto"
+                             >
+                        <TextBox.Text>
+                            <Binding Path="Console" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                <Binding.ValidationRules>
+                                    <!-- <validators:EmptyValidator ValidatesOnTargetUpdated="True" /> -->
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
+                </DockPanel>
+            </DockPanel>
+            </Grid>
+        <!-- </ScrollViewer> -->
+        <!-- Slice Button -->
+        <DockPanel Margin="10,0" Grid.Row="1" Grid.ColumnSpan="1">
+            <mah:ProgressRing Visibility="{Binding IsWorking, Converter={StaticResource BooleanToVisibilityCollapsedConverter}}" 
+                                          Height="{Binding ElementName=btnSlice, Path=ActualHeight}" Width="{Binding ElementName=btnSlice, Path=ActualHeight}" 
+                                          HorizontalAlignment="Left" IsActive="True" DockPanel.Dock="Right" />
+            <Button x:Name="btnSlice" Margin="5,5,5,0" VerticalAlignment="Top" Height="42"
+                Command="{Binding SliceCommand}" Grid.Row="1" Grid.ColumnSpan="1"
+                >
+                <Button.Content>
+                    <Grid Margin="5,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5" HorizontalAlignment="Left">
+                            <Rectangle.OpacityMask>
+                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=HexagonSlice1}" />
+                            </Rectangle.OpacityMask>
+                        </Rectangle>
+                        <!-- Add Dialog -->
+                        <TextBlock Grid.Column="1" Text="{x:Static localization:Strings.Slice}" TextAlignment="Center" Margin="10,5"
+                               />
+                    </Grid>
+                </Button.Content>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource ImageButton}">
+                        <Setter Property="IsEnabled" Value="True" />
+                        <Style.Triggers>
+                            <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding ElementName=cbSlicer, Path=SelectedItem}" Value="{x:Null}"/>
+                                </MultiDataTrigger.Conditions>
+                                <Setter Property="IsEnabled" Value="False" />
+                            </MultiDataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </DockPanel>
+        
+        
+        <!-- Import Button -->
+        <Button x:Name="btnImport"  Margin="5,5,5,0" VerticalAlignment="Top" Height="42"
+                Command="{Binding SaveCommand}" Grid.Column="1" Grid.Row="1"
+                >
+            <Button.Content>
+                <Controls:Badged Badge="{Binding FilesForImport.Count}" BadgePlacementMode="Right" Margin="5,5,25,5" DockPanel.Dock="Right">
+                    <TextBlock Text="{x:Static localization:Strings.Import}" Margin="0,0,20,0" FontSize="16"/>
+                </Controls:Badged>
+            </Button.Content>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}" BasedOn="{StaticResource DefaultButton}">
+                    <Setter Property="IsEnabled" Value="True" />
+                    <Style.Triggers>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding FilesForImport.Count}" Value="0"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="IsEnabled" Value="False" />
+                        </MultiDataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <!-- Done Button -->
+        <Button x:Name="btnCancel" Content="{x:Static localization:Strings.Cancel}" Margin="5,5,5,0" VerticalAlignment="Top" Height="42"
+                Command="{Binding CancelCommand}" Grid.Column="2" Grid.Row="1"
+                />
+        <TextBlock Grid.Column="2" HorizontalAlignment="Center" Margin="9,15,8,0" TextWrapping="Wrap" Text="{x:Static localization:Strings.MarkedFiledsMandatory}" VerticalAlignment="Top"/>
+    </Grid>
+</UserControl>

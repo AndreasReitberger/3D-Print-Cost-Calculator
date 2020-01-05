@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Xceed.Wpf.Themes</name>
+  </assembly>
+  <members>
+    <member name="T:Xceed.Wpf.Themes.StyleUsageMode">
+      <summary>Value indicating whether styles will be applied implicitly or explicitly</summary>
+    </member>
+    <member name="F:Xceed.Wpf.Themes.StyleUsageMode.Implicit">
+      <summary>Styles will be applied implicitly (automatically).</summary>
+    </member>
+    <member name="F:Xceed.Wpf.Themes.StyleUsageMode.Explicit">
+      <summary>Styles will be applied explicitly. (Defined styles will not be overridden.)</summary>
+    </member>
+    <member name="T:Xceed.Wpf.Themes.ThemeResourceDictionary">
+      <summary>Represents a generic theme resource dictionary.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.Themes.ThemeResourceDictionary.UpdateResources">
+      <summary>Updates the resources.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.ThemeResourceDictionary.LicenseKey">
+      <summary>Gets or sets the license key used to license the classes contained in the Xceed.Wpf.Themes assembly.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.ThemeResourceDictionary.StyleUsageMode">
+      <summary>Gets or sets the mode that will be used by the theme resource dictionary.</summary>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Xceed.Wpf.Themes.Office2007</name>
+  </assembly>
+  <members>
+    <member name="T:Xceed.Wpf.Themes.Office2007.Licenser">
+      <summary>Used to license the themes.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.Themes.Office2007.Office2007BlackResourceDictionary">
+      <summary>Represents the Office 2007 Black resource dictionary.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.Themes.Office2007.Office2007BlackResources">
+      <summary>Represents the resources containing the control styles available in the Office 2007 Black theme.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.Themes.Office2007.Office2007BlueResourceDictionary">
+      <summary>Represents the Office 2007 Blue resource dictionary.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.Themes.Office2007.Office2007BlueResources">
+      <summary>Represents the resources containing the control styles available in the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.Themes.Office2007.Office2007SilverResourceDictionary">
+      <summary>Represents the Office 2007 Silver resource dictionary.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.Themes.Office2007.Office2007SilverResources">
+      <summary>Represents the resources containing the control styles available in the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Licenser.LicenseKey">
+      <summary>Gets or sets the license key.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.Themes.Office2007.Office2007BlackResourceDictionary.#ctor">
+      <summary>Initializes a new instance of the Office2007BlackResourceDictionary class.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.Themes.Office2007.Office2007BlackResourceDictionary.UpdateResources">
+      <summary>Updates the resources.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResourceDictionary.LicenseKey">
+      <summary>Gets or sets the license key used to license the classes contained in the Xceed.Wpf.Themes.Office2007 assembly.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.ApplicationBackgroundBrush">
+      <summary>Gets the application background brush defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.ApplicationForegroundBrush">
+      <summary>Gets the application foreground brush defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.ApplicationLightBackgroundBrush">
+      <summary>Gets the application light background brush defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.BorderBrush">
+      <summary>Gets the border brush defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.ButtonStyle">
+      <summary>Gets the button style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.CheckBoxStyle">
+      <summary>Gets the check box style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.ComboBoxItemStyle">
+      <summary>Gets the combo box item style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.ComboBoxStyle">
+      <summary>Gets the combo box style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.ContextMenuStyle">
+      <summary>Gets the context menu style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.ControlBackgroundBrush">
+      <summary>Gets the control background brush defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.ControlForegroundBrush">
+      <summary>Gets the control foreground brush defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.DataGridCellStyle">
+      <summary>
+        <para>Gets the DataGridCell style defined by the Office 2007 Black theme.</para>
+      </summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.DataGridColumnHeaderStyle">
+      <summary>
+        <para>Gets the DataGridColumnHeader style defined by the Office 2007 Black theme.</para>
+      </summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.DataGridRowHeaderStyle">
+      <summary>
+        <para>Gets the DataGridRowHeader style defined by the Office 2007 Black theme.</para>
+      </summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.DataGridRowStyle">
+      <summary>
+        <para>Gets the DataGridRow style defined by the Office 2007 Black theme.</para>
+      </summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.DataGridStyle">
+      <summary>
+        <para>Gets the DataGrid style defined by the Office 2007 Black theme.</para>
+      </summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.ExpanderStyle">
+      <summary>Gets the expander style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.FontFamily">
+      <summary>Gets the font family defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.GridSplitterStyle">
+      <summary>Gets the grid splitter style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.GridViewColumnHeaderStyle">
+      <summary>Gets the grid view colum header style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.GroupBoxStyle">
+      <summary>Gets the group box style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.HighlightBackgroundBrush">
+      <summary>Gets the highlight background brush defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.HighlightForegroundBrush">
+      <summary>Gets the highlight foreground brush defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.LabelStyle">
+      <summary>Gets the label style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.ListBoxItemStyle">
+      <summary>Gets the list box item style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.ListBoxStyle">
+      <summary>Gets the list box style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.ListViewItemStyle">
+      <summary>Gets the list view item style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.ListViewStyle">
+      <summary>Gets the list view style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.MenuItemStyle">
+      <summary>Gets the menu item style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.MenuStyle">
+      <summary>Gets the menu style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.PageStyle">
+      <summary>Gets the page style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.PasswordBoxStyle">
+      <summary>Gets the password box style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.ProgressBarStyle">
+      <summary>Gets the progress bar style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.RadioButtonStyle">
+      <summary>Gets the radio button style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.RepeatButtonStyle">
+      <summary>Gets the repeat button style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.ResizeGripStyle">
+      <summary>Gets the resizer grip style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.RichTextBoxStyle">
+      <summary>Gets the rich text box style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.ScrollBarStyle">
+      <summary>Gets the scroll bar style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.ScrollViewerStyle">
+      <summary>Gets the scroll viewer style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.SliderStyle">
+      <summary>Gets the slider style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.StatusBarStyle">
+      <summary>Gets the status bar style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.TabControlStyle">
+      <summary>Gets the tab control style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.TabItemStyle">
+      <summary>Gets the tab item style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.TextBoxStyle">
+      <summary>Gets the text box style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.ToggleButtonStyle">
+      <summary>Gets the toggle button style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.ToolBarStyle">
+      <summary>Gets the tool bar style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.ToolTipStyle">
+      <summary>Gets the tool tip style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.TreeViewItemStyle">
+      <summary>Gets the tree view item style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.TreeViewStyle">
+      <summary>Gets the tree view style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlackResources.WindowStyle">
+      <summary>Gets the window style defined by the Office 2007 Black theme.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.Themes.Office2007.Office2007BlueResourceDictionary.#ctor">
+      <summary>Initializes a new instance of the Office2007BlueResourceDictionary class.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.Themes.Office2007.Office2007BlueResourceDictionary.UpdateResources">
+      <summary>Updates the resources.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResourceDictionary.LicenseKey">
+      <summary>Gets or sets the license key used to license the classes contained in the Xceed.Wpf.Themes.Office2007 assembly.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.ApplicationBackgroundBrush">
+      <summary>Gets the application background brush defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.ApplicationForegroundBrush">
+      <summary>Gets the application foreground brush defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.BorderBrush">
+      <summary>Gets the border brush defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.ButtonStyle">
+      <summary>Gets the button style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.CheckBoxStyle">
+      <summary>Gets the check box style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.ComboBoxItemStyle">
+      <summary>Gets the combo box item style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.ComboBoxStyle">
+      <summary>Gets the combo box style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.ContextMenuStyle">
+      <summary>Gets the context menu style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.ControlBackgroundBrush">
+      <summary>Gets the control background brush defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.ControlForegroundBrush">
+      <summary>Gets the control foreground brush defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.DataGridCellStyle">
+      <summary>
+        <para>Gets the DataGridCell style defined by the Office 2007 Blue theme.</para>
+      </summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.DataGridColumnHeaderStyle">
+      <summary>
+        <para>Gets the DataGridColumnHeader style defined by the Office 2007 Blue theme.</para>
+      </summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.DataGridRowHeaderStyle">
+      <summary>
+        <para>Gets the DataGridRowHeader style defined by the Office 2007 Blue theme.</para>
+      </summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.DataGridRowStyle">
+      <summary>
+        <para>Gets the DataGridRow style defined by the Office 2007 Blue theme.</para>
+      </summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.DataGridStyle">
+      <summary>
+        <para>Gets the DataGrid style defined by the Office 2007 Blue theme.</para>
+      </summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.ExpanderStyle">
+      <summary>Gets the expander style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.FontFamily">
+      <summary>Gets the font family defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.GridSplitterStyle">
+      <summary>Gets the grid splitter style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.GridViewColumnHeaderStyle">
+      <summary>Gets the grid view header style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.GroupBoxStyle">
+      <summary>Gets the group box style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.HighlightBackgroundBrush">
+      <summary>Gets the highlight background style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.HighlightForegroundBrush">
+      <summary>Gets the highlight foreground style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.LabelStyle">
+      <summary>Gets the label style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.ListBoxItemStyle">
+      <summary>Gets the list box item style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.ListBoxStyle">
+      <summary>Gets the list box style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.ListViewItemStyle">
+      <summary>Gets the list view item style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.ListViewStyle">
+      <summary>Gets the list view style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.MenuItemStyle">
+      <summary>Gets the menu item style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.MenuStyle">
+      <summary>Gets the menu style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.PageStyle">
+      <summary>Gets the page style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.PasswordBoxStyle">
+      <summary>Gets the password box style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.ProgressBarStyle">
+      <summary>Gets the progress bar style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.RadioButtonStyle">
+      <summary>Gets the radio button style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.RepeatButtonStyle">
+      <summary>Gets the repeat button style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.ResizeGripStyle">
+      <summary>Gets the resize grip style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.RichTextBoxStyle">
+      <summary>Gets the rich text box style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.ScrollBarStyle">
+      <summary>Gets the scroll bar style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.ScrollViewerStyle">
+      <summary>Gets the scroll viewer style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.SliderStyle">
+      <summary>Gets the slider style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.StatusBarStyle">
+      <summary>Gets the status bar style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.TabControlStyle">
+      <summary>Gets the tab control style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.TabItemStyle">
+      <summary>Gets the tab item style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.TextBoxStyle">
+      <summary>Gets the text box style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.ToggleButtonStyle">
+      <summary>Gets the toggle button style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.ToolBarStyle">
+      <summary>Gets the tool bar style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.ToolTipStyle">
+      <summary>Gets the tool tip style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.TreeViewItemStyle">
+      <summary>Gets the tree view item style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.TreeViewStyle">
+      <summary>Gets the tree view style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007BlueResources.WindowStyle">
+      <summary>Gets the window style defined by the Office 2007 Blue theme.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.Themes.Office2007.Office2007SilverResourceDictionary.#ctor">
+      <summary>Initializes a new instance of the Office2007SilverResourceDictionary class.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.Themes.Office2007.Office2007SilverResourceDictionary.UpdateResources">
+      <summary>Updates the resources.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResourceDictionary.LicenseKey">
+      <summary>Gets or sets the license key used to license the classes contained in the Xceed.Wpf.Themes.Office2007 assembly.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.ApplicationBackgroundBrush">
+      <summary>Gets the application background brush defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.ApplicationForegroundBrush">
+      <summary>Gets the application foreground brush defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.BorderBrush">
+      <summary>Gets the border brush defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.ButtonStyle">
+      <summary>Gets the button style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.CheckBoxStyle">
+      <summary>Gets the check box style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.ComboBoxItemStyle">
+      <summary>Gets the combo box item style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.ComboBoxStyle">
+      <summary>Gets the combo box style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.ContextMenuStyle">
+      <summary>Gets the context menu style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.ControlBackgroundBrush">
+      <summary>Gets the control background brush defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.ControlForegroundBrush">
+      <summary>Gets the control foreground brush defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.DataGridCellStyle">
+      <summary>
+        <para>Gets the DataGridCell style defined by the Office 2007 Silver theme.</para>
+      </summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.DataGridColumnHeaderStyle">
+      <summary>
+        <para>Gets the DataGridColumnHeader style defined by the Office 2007 Silver theme.</para>
+      </summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.DataGridRowHeaderStyle">
+      <summary>
+        <para>Gets the DataGridRowHeader style defined by the Office 2007 Silver theme.</para>
+      </summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.DataGridRowStyle">
+      <summary>
+        <para>Gets the DataGridRow style defined by the Office 2007 Silver theme.</para>
+      </summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.DataGridStyle">
+      <summary>
+        <para>Gets the DataGrid style defined by the Office 2007 Silver theme.</para>
+      </summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.ExpanderStyle">
+      <summary>Gets the expander style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.FontFamily">
+      <summary>Gets the font family defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.GridSplitterStyle">
+      <summary>Gets the grid splitter style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.GridViewColumnHeaderStyle">
+      <summary>Gets the grid view column header style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.GroupBoxStyle">
+      <summary>Gets the group box style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.HighlightBackgroundBrush">
+      <summary>Gets the highlight background brush defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.HighlightForegroundBrush">
+      <summary>
+        <para>Gets the highlight foreground brush defined by the Office 2007 Silver theme.</para>
+      </summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.LabelStyle">
+      <summary>Gets the label style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.ListBoxItemStyle">
+      <summary>Gets the list box item style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.ListBoxStyle">
+      <summary>Gets the list box style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.ListViewItemStyle">
+      <summary>Gets the list view item style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.ListViewStyle">
+      <summary>Gets the list view style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.MenuItemStyle">
+      <summary>Gets the menu item style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.MenuStyle">
+      <summary>Gets the menu style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.PageStyle">
+      <summary>Gets the page style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.PasswordBoxStyle">
+      <summary>Gets the password box style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.ProgressBarStyle">
+      <summary>Gets the progress bar style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.RadioButtonStyle">
+      <summary>Gets the radio button style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.RepeatButtonStyle">
+      <summary>Gets the repeat button style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.ResizeGripStyle">
+      <summary>Gets the resize grip style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.RichTextBoxStyle">
+      <summary>Gets the rich text box style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.ScrollBarStyle">
+      <summary>Gets the scroll bar style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.ScrollViewerStyle">
+      <summary>Gets the scroll viewer style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.SliderStyle">
+      <summary>Gets the slider style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.StatusBarStyle">
+      <summary>Gets the status bar style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.TabControlStyle">
+      <summary>Gets the tab control style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.TabItemStyle">
+      <summary>Gets the tab item style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.TextBoxStyle">
+      <summary>Gets the text box style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.ToggleButtonStyle">
+      <summary>Gets the toggle button style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.ToolBarStyle">
+      <summary>Gets the tool bar style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.ToolTipStyle">
+      <summary>Gets the tool tip style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.TreeViewItemStyle">
+      <summary>Gets the tree view item style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.TreeViewStyle">
+      <summary>Gets the tree view style defined by the Office 2007 Silver theme.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.Themes.Office2007.Office2007SilverResources.WindowStyle">
+      <summary>Gets the window style defined by the Office 2007 Silver theme.</summary>
+    </member>
+  </members>
+</doc>

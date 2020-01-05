@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Xceed.Wpf.AvalonDock.Themes.Aero</name>
+  </assembly>
+  <members>
+    <member name="T:Xceed.Wpf.AvalonDock.Themes.AeroColors">
+      <summary>Defines the Aero colors.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.AvalonDock.Themes.AeroTheme">
+      <summary>Represents the Aero theme for AvalonDock.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.AvalonDock.Themes.AeroTheme.#ctor">
+      <summary>Initializes a new instance of the AeroTheme class.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.AvalonDock.Themes.AeroTheme.GetResourceUri">
+      <summary>Returns the URI of the resource.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.AvalonDock.Themes.Controls.SplineBorder">
+      <summary>Represents a spline border control.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.AvalonDock.Themes.Controls.SplineBorder.#ctor">
+      <summary>Initializes a new instance of the SplineBorder class.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.AvalonDock.Themes.Controls.SplineBorder.OnRender(System.Windows.Media.DrawingContext)">
+      <summary>Participates in rendering operations that are directed by the layout system.</summary>
+      <param name="drawingContext">A DrawingContext object that supplies the drawing instructions for a Control object. This context is provided to the layout system.</param>
+    </member>
+    <member name="P:Xceed.Wpf.AvalonDock.Themes.Controls.SplineBorder.BottomBorderMargin">
+      <summary>Gets or sets the bottom border margin.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.AvalonDock.Themes.Controls.SplineBorder.Fill">
+      <summary>Gets or sets the fill brush used in the SplineBorder..</summary>
+    </member>
+    <member name="P:Xceed.Wpf.AvalonDock.Themes.Controls.SplineBorder.Stroke">
+      <summary>Gets or sets the color of the outline of the SplineBorder.</summary>
+    </member>
+    <member name="P:Xceed.Wpf.AvalonDock.Themes.Controls.SplineBorder.Thickness">
+      <summary>Gets or sets the thickness of the outline of the SplineBorder.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.AvalonDock.Themes.Controls.SplineBorder.BottomBorderMarginProperty">
+      <summary>Identifies the BottomBorderMargin
+dependency property.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.AvalonDock.Themes.Controls.SplineBorder.FillProperty">
+      <summary>Identifies the Fill dependency property.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.AvalonDock.Themes.Controls.SplineBorder.StrokeProperty">
+      <summary>Identifies the Stroke dependency property.</summary>
+    </member>
+    <member name="F:Xceed.Wpf.AvalonDock.Themes.Controls.SplineBorder.ThicknessProperty">
+      <summary>Identifies the Thickness dependency property.</summary>
+    </member>
+  </members>
+</doc>

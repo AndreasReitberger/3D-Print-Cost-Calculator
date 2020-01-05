@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Xceed.Wpf.Toolkit.Themes.Windows10</name>
+  </assembly>
+  <members>
+    <member name="T:Xceed.Wpf.Toolkit.Themes.Windows10.Windows10ResourceDictionary">
+      <summary>Represents the Windows10 resource dictionary.</summary>
+    </member>
+  </members>
+</doc>

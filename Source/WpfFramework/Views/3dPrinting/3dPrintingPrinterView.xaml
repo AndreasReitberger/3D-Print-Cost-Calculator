@@ -1,0 +1,334 @@
+﻿<UserControl x:Class="WpfFramework.Views._3dPrinting._3dPrintingPrinterView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             
+             xmlns:CustomControls="clr-namespace:WpfFramework.Controls"
+             xmlns:dialogs="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:templates="clr-namespace:WpfFramework.Templates"
+             xmlns:viewModels="clr-namespace:WpfFramework.ViewModels._3dPrinting"
+             xmlns:localization="clr-namespace:WpfFramework.Resources.Localization"
+             
+             dialogs:DialogParticipation.Register="{Binding}"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             d:DataContext="{d:DesignInstance viewModels:_3dPrintingPrinterViewModel}"
+             >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="281*"/>
+            <ColumnDefinition Width="119*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="350*"/>
+            <RowDefinition Height="67*"/>
+        </Grid.RowDefinitions>
+        <TabControl Style="{StaticResource DefaultTabControl}" Margin="5" Grid.Row="1"  Grid.ColumnSpan="2">
+            <TabItem Header="{x:Static localization:Strings.CardView}">
+                <Grid>
+                    <DockPanel>
+                        <DockPanel DockPanel.Dock="Top">
+                            <!-- Delete Button -->
+                            <Button Margin="5" VerticalAlignment="Top" Height="38" Width="45"
+                                    Command="{Binding DeleteSelectedPrintersCommand}" 
+                                    HorizontalAlignment="Right" DockPanel.Dock="Right"
+                                    >
+                                <Button.Content>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                            <Rectangle.OpacityMask>
+                                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Delete}" />
+                                            </Rectangle.OpacityMask>
+                                        </Rectangle>
+                                        <TextBlock Grid.Column="1" Text="" TextAlignment="Center" Margin="10,5" />
+                                    </Grid>
+                                </Button.Content>
+                                <Button.Style>
+                                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource ImageButton}">
+                                        <Setter Property="IsEnabled" Value="True" />
+                                        <Style.Triggers>
+                                            <MultiDataTrigger>
+                                                <MultiDataTrigger.Conditions>
+                                                    <Condition Binding="{Binding ElementName=lbPrinters, Path=SelectedItems.Count}" Value="0" />
+                                                </MultiDataTrigger.Conditions>
+                                                <Setter Property="IsEnabled" Value="False" />
+                                            </MultiDataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                            <!-- Edit Button -->
+                            <Button Margin="5" VerticalAlignment="Top" Height="38" Width="45"
+                                    Command="{Binding EditSelectedPrinterCommand}" 
+                                    DockPanel.Dock="Right">
+                                <Button.Content>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                            <Rectangle.OpacityMask>
+                                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=CircleEditOutline}" />
+                                            </Rectangle.OpacityMask>
+                                        </Rectangle>
+                                    </Grid>
+                                </Button.Content>
+                                <Button.Style>
+                                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource ImageButton}">
+                                        <Setter Property="IsEnabled" Value="False" />
+                                        <Style.Triggers>
+                                            <MultiDataTrigger>
+                                                <MultiDataTrigger.Conditions>
+                                                    <Condition Binding="{Binding ElementName=lbPrinters, Path=SelectedItems.Count}" Value="1" />
+                                                </MultiDataTrigger.Conditions>
+                                                <Setter Property="IsEnabled" Value="True" />
+                                            </MultiDataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                            <!-- Add Button -->
+                            <Button Margin="5" VerticalAlignment="Top" Height="38" Width="45" DockPanel.Dock="Right"
+                                Style="{StaticResource ImageButton}" Command="{Binding AddNewPrinterCommand}"
+                                >
+                                <Button.Content>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                            <Rectangle.OpacityMask>
+                                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Plus}" />
+                                            </Rectangle.OpacityMask>
+                                        </Rectangle>
+                                    </Grid>
+                                </Button.Content>
+                            </Button>
+                            <!-- Add Button (new window) -->
+                            <Button Margin="5" VerticalAlignment="Top" Height="38" Width="45" DockPanel.Dock="Right"
+                                Style="{StaticResource ImageButton}" Command="{Binding AddNewPrinterChildWindowCommand}"
+                                >
+                                <Button.Content>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                            <Rectangle.OpacityMask>
+                                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=OpenInNew}" />
+                                            </Rectangle.OpacityMask>
+                                        </Rectangle>
+                                    </Grid>
+                                </Button.Content>
+                            </Button>
+                            <!-- Search -->
+                            <TextBox x:Name="TextBoxSearchPrinter" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="10" Text="{Binding SearchPrinter, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource SearchTextBox}" />
+                        </DockPanel>
+                        <ScrollViewer DockPanel.Dock="Top">
+                            <StackPanel>
+                                <CustomControls:MultiSelectListBox x:Name="lbPrinters" Margin="4" Grid.Row="1" 
+                                     ItemsSource="{Binding PrinterViews}" 
+                                     SelectedItem="{Binding SelectedPrinterView, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                     SelectedItemsList="{Binding SelectedPrintersView,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                     SelectionMode="Multiple">
+                                    <CustomControls:MultiSelectListBox.GroupStyle>
+                                        <GroupStyle>
+                                            <GroupStyle.ContainerStyle>
+                                                <Style TargetType="{x:Type GroupItem}">
+                                                    <Setter Property="Template">
+                                                        <Setter.Value>
+                                                            <ControlTemplate>
+                                                                <Expander IsExpanded="True" Style="{StaticResource DefaultExpander}">
+                                                                    <Expander.Header>
+                                                                        <TextBlock Text="{Binding (CollectionViewGroup.Name)}" Style="{StaticResource DefaultTextBlock}" Margin="0" Foreground="{DynamicResource GrayBrush3}"/>
+                                                                    </Expander.Header>
+                                                                    <ItemsPresenter />
+                                                                </Expander>
+                                                            </ControlTemplate>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                </Style>
+                                            </GroupStyle.ContainerStyle>
+                                        </GroupStyle>
+                                    </CustomControls:MultiSelectListBox.GroupStyle>
+                                    <CustomControls:MultiSelectListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <templates:PrinterViewInfoTemplate />
+                                        </DataTemplate>
+                                    </CustomControls:MultiSelectListBox.ItemTemplate>
+                                    <CustomControls:MultiSelectListBox.ItemContainerStyle>
+                                        <Style TargetType="{x:Type ListBoxItem}">
+                                            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                                            <Setter Property="IsSelected" Value="{Binding Selected}"/>
+                                            <Setter Property="Template">
+                                                <Setter.Value>
+                                                    <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                                        <Border Background="Transparent" BorderThickness="0">
+                                                            <Grid MinHeight="30">
+                                                                <ContentPresenter />
+                                                            </Grid>
+                                                        </Border>
+                                                    </ControlTemplate>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Style>
+                                    </CustomControls:MultiSelectListBox.ItemContainerStyle>
+                                    <!-- BUGFIX This has to be set, to enable mouse wheel scrolling -->
+                                    <CustomControls:MultiSelectListBox.Template>
+                                        <ControlTemplate TargetType="{x:Type ItemsControl}">
+                                            <Border>
+                                                <ItemsPresenter />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </CustomControls:MultiSelectListBox.Template>
+                                    <CustomControls:MultiSelectListBox.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <VirtualizingStackPanel />
+                                        </ItemsPanelTemplate>
+                                    </CustomControls:MultiSelectListBox.ItemsPanel>
+                                </CustomControls:MultiSelectListBox>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </DockPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Header="{x:Static localization:Strings.DatagridView}">
+                <Grid>
+                    <DataGrid ItemsSource="{Binding Printers}">
+                        <!-- Resources -->
+                        <DataGrid.Resources>
+                            <!-- Context Menu -->
+                            <ContextMenu x:Key="RowContextMenu" Opened="ContextMenu_Opened" MinWidth="150"
+                             DataContext="{Binding PlacementTarget.DataContext, RelativeSource={RelativeSource Self}}"
+                             >
+                                <MenuItem Header="{x:Static localization:Strings.Delete}" Command="{Binding DeletePrinterCommand}" 
+                              CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=SelectedItem}">
+                                    <MenuItem.Icon>
+                                        <Rectangle Width="16" Height="16" Fill="{DynamicResource BlackColorBrush}">
+                                            <Rectangle.OpacityMask>
+                                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Modern Kind=Delete}" />
+                                            </Rectangle.OpacityMask>
+                                        </Rectangle>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                            </ContextMenu>
+                            <ContextMenu x:Key="MultiRowContextMenu" Opened="ContextMenu_Opened" MinWidth="150">
+                                <MenuItem Header="{x:Static localization:Strings.DeleteSelected}" Command="{Binding DeletePrintersCommand}" 
+                              CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=SelectedItems}">
+                                    <MenuItem.Icon>
+                                        <Rectangle Width="16" Height="16" Fill="{DynamicResource BlackColorBrush}">
+                                            <Rectangle.OpacityMask>
+                                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Delete}" />
+                                            </Rectangle.OpacityMask>
+                                        </Rectangle>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                                <MenuItem Header="Upload .gcode(s)" Command="{Binding UploadGcodeFilesCommand}" 
+                              CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=SelectedItem}">
+                                    <MenuItem.Icon>
+                                        <Rectangle Width="16" Height="16" Fill="{DynamicResource BlackColorBrush}">
+                                            <Rectangle.OpacityMask>
+                                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Modern Kind=Upload}" />
+                                            </Rectangle.OpacityMask>
+                                        </Rectangle>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                            </ContextMenu>
+                        </DataGrid.Resources>
+                        <!-- RowStyle-->
+                        <DataGrid.RowStyle>
+                            <Style TargetType="{x:Type DataGridRow}" BasedOn="{StaticResource MetroDataGridRow}">
+                                <Setter Property="ContextMenu" Value="{StaticResource MultiRowContextMenu}"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding SelectedItems.Count, RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type DataGrid}}}" Value="1" >
+                                        <Setter Property="ContextMenu" Value="{StaticResource RowContextMenu}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.RowStyle>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="{x:Static localization:Strings.Type}" Binding="{Binding Type}"/>
+                            <DataGridTextColumn Header="{x:Static localization:Strings.Manufacturer}" Binding="{Binding Manufacturer}"/>
+                            <DataGridTextColumn Header="{x:Static localization:Strings.Model}" Binding="{Binding Model}"/>
+                            <!--
+                            <DataGridCheckBoxColumn ElementStyle="{DynamicResource MetroDataGridCheckBox}"
+                                        EditingElementStyle="{DynamicResource MetroDataGridCheckBox}"
+                                        Header="{x:Static localization:Strings.HasHeatbed}"
+                                        Binding="{Binding hasHeatbed}"
+                                        />
+                            <DataGridTextColumn Header="{x:Static localization:Strings.MaxTempHeatbed}" Binding="{Binding MaxHeatbedTemperature}"/>
+                            -->
+                            <Controls:DataGridNumericUpDownColumn Header="Price"
+                                                      Binding="{Binding Price}"
+                                                      StringFormat="C"
+                                                      Minimum="0" 
+                                                      IsReadOnly="True"/>
+                            <Controls:DataGridNumericUpDownColumn Header="{x:Static localization:Strings.MachineHourRate}"
+                                                      Binding="{Binding MachineHourRate}"
+                                                      StringFormat="C"
+                                                      Minimum="0" 
+                                                      IsReadOnly="True"/>
+                            <DataGridTextColumn Header="{x:Static localization:Strings.Vendor}" Binding="{Binding Supplier}"/>
+                            
+                            <DataGridTemplateColumn Header="Reorder">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                                        <Button Command="{Binding DataContext.ReorderPrinterCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}}" 
+                                    CommandParameter="{Binding ShopUri}" Margin="8" Style="{StaticResource ImageWithTextButton}">
+                                <Button.Content>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                                            <Rectangle.OpacityMask>
+                                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Shopping}" />
+                                            </Rectangle.OpacityMask>
+                                        </Rectangle>
+                                        <TextBlock Grid.Column="1" Text="{x:Static localization:Strings.Reorder}" TextAlignment="Center" Margin="10,5" />
+                                    </Grid>
+                                </Button.Content>
+                            </Button>
+
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+           
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        
+        <Button Margin="5,5,5,0" VerticalAlignment="Top" Height="35" Grid.Column="1"
+                Style="{StaticResource ImageWithTextButton}" Command="{Binding AddNewPrinterChildWindowCommand}" Grid.ColumnSpan="1"
+                >
+            <Button.Content>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Rectangle Width="20" Height="20" Fill="{DynamicResource GrayBrush3}" Margin="10,5,0,5">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Plus}" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                    <TextBlock Grid.Column="1" Text="{x:Static localization:Strings.NewPrinterAsNewWindow}" TextAlignment="Center" Margin="10,5" />
+                </Grid>
+            </Button.Content>
+        </Button>
+    </Grid>
+</UserControl>

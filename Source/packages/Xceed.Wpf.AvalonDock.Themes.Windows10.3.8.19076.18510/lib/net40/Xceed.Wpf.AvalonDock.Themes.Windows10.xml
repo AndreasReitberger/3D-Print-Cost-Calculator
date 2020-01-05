@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Xceed.Wpf.AvalonDock.Themes.Windows10</name>
+  </assembly>
+  <members>
+    <member name="T:Xceed.Wpf.AvalonDock.Themes.Windows10Theme">
+      <summary>Represents the Windows10 theme for AvalonDock.</summary>
+    </member>
+    <member name="T:Xceed.Wpf.AvalonDock.Themes.Windows10.Windows10ResourceDictionary">
+      <summary>Represents the Windows10 resource dictionary.</summary>
+    </member>
+  </members>
+</doc>

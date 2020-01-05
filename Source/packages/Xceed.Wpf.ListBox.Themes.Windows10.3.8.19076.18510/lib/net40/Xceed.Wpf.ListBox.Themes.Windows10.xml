@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Xceed.Wpf.ListBox.Themes.Windows10</name>
+  </assembly>
+  <members>
+    <member name="T:Xceed.Wpf.ListBox.Themes.Windows10.Windows10ThemeResourceDictionary">
+      <summary>Represents the Windows10 resource dictionary.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.ListBox.Themes.Windows10.Windows10ThemeResourceDictionary.#ctor">
+      <summary>Initializes a new instance of the Windows10ThemeResourceDictionary class.</summary>
+    </member>
+    <member name="M:Xceed.Wpf.ListBox.Themes.Windows10.Windows10ThemeResourceDictionary.UpdateResources">
+      <summary>Updates the resources.</summary>
+    </member>
+  </members>
+</doc>

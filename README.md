@@ -2,6 +2,10 @@
 This is a free software tool to calculate your costs for your next print job! 
 Just load your stl or gcode file directly into the calculator and start calculating!
 
+<img alt="3D Print Cost Calculator" src="https://andreas-reitberger.de/wp-content/uploads/2019/11/3dpcc_en_calc_result_view.png"/>
+
+<h2>Download latest version</2>
+You can download the latest version [here](https://shatter-box.com/download/3d-print-cost-calculator-2-0?wpdmdl=51061&masterkey=5d983187cab4d).
 
 <h2>Features</h2>
 

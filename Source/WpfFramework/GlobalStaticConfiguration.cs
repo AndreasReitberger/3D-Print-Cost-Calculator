@@ -32,19 +32,6 @@ namespace WpfFramework
         public static string supportEmail = "kontakt@andreas-reitberger.de";
         public static string documentationUri = "https://andreas-reitberger.de/kb/3d-druckkosten-kalkulator/";
 
-        // License
-        public static string licenseUriEnvato = "codecanyon.net";
-
-        public static string licenseUri = "andreas-reitberger.de";
-        public static string licenseProductName = "AR-3DDKKV2";
-
-        public static string goProUri = "https://andreas-reitberger.de/produkt-kategorie/3d-druckkosten-kalkulator/";
-
-        // Envato
-        public static string author_sales_enpoint_uri = $"https://api.envato.com/v3/market/author/sale";//$"https://api.envato.com/v3/market/buyer/purchase";
-        public static string ItemId = "22886235";
-        public static string accesstoken = "IMlyqC1mDVaprCxhl70ZANAJZtkIkQwz"; // "xYn434gnROSO3I6169kwUV7wlUrAOlx0"; //"etf7ESaYXhNsprPGlTxLcB0B1AsUZZ4z";
-
         // Materials
         public static ObservableCollection<_3dPrinterMaterialTypes> defaultMaterials = new ObservableCollection<_3dPrinterMaterialTypes>()
         {

@@ -23,8 +23,9 @@ Official:
 Community:
 - French
 
-<h2>Missing a feature?<h2>
-  Just let us know or add it directly here.
+<h2>Missing a feature?</h2>
+
+Just let us know or add it directly here.
 
 <h2>System requirements</h2>
 

@@ -1,0 +1,4027 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>Di</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Accent" xml:space="preserve">
+    <value>Accento</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AccumulatedOffers" xml:space="preserve">
+    <value>Offerte accumulate</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="AccumulatedOffersInfo" xml:space="preserve">
+    <value>Le offerte accumulate vengono sommate. Quindi puoi mettere insieme un'offerta da diversi calcoli.
+</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="AccumulatedPriceLabel" xml:space="preserve">
+    <value>Prezzo cumulativo:</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="AccumulatedPrintTimeLabel" xml:space="preserve">
+    <value>Tempo di stampa totale:</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="ActivateLicense" xml:space="preserve">
+    <value>Attivare licenza</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="ActivateLoggingForOctoPrint" xml:space="preserve">
+    <value>Attiva la registrazione per la connessione OctoPrint
+</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Aggiungere</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AddAndSaveSliceCommandToList" xml:space="preserve">
+    <value>Aggiungi il comando slicer all'elenco e salva</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="AddCategory" xml:space="preserve">
+    <value>Aggiungi categoria</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AddExcelTemplate" xml:space="preserve">
+    <value>Aggiungi modello Excel
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="AddExcelTemplateSettings" xml:space="preserve">
+    <value>Aggiungi impostazione per modello Excel
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Additional" xml:space="preserve">
+    <value>Inoltre</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AddLicense" xml:space="preserve">
+    <value>Aggiungi licenza</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AddMachineHourRate" xml:space="preserve">
+    <value>Aggiungi la tariffa oraria della macchina
+</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="AddManufacturer" xml:space="preserve">
+    <value>Aggiungi produttore</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AddMaterial" xml:space="preserve">
+    <value>Aggiungi materiale</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AddPrinter" xml:space="preserve">
+    <value>Aggiungi stampante</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AddSlicer" xml:space="preserve">
+    <value>Aggiungi Slicer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="AddSlicerCommand" xml:space="preserve">
+    <value>Aggiungi comando slicer</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="AddSupplier" xml:space="preserve">
+    <value>Aggiungi fornitore</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AddWorkstep" xml:space="preserve">
+    <value>Aggiungi fase di lavoro</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AddWorkstepCategory" xml:space="preserve">
+    <value>Aggiungi la categoria del passaggio di lavoro</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Administrator" xml:space="preserve">
+    <value>Amministratore</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="AdvancedView" xml:space="preserve">
+    <value>Vista estesa</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Agreed" xml:space="preserve">
+    <value>Concordato</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AgreeToEULA" xml:space="preserve">
+    <value>Sono d'accordo</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AllAxis" xml:space="preserve">
+    <value>Tutti gli assi</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="AllInformationPerMonth" xml:space="preserve">
+    <value>Calcola come un mese</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AlwaysShowIconInTray" xml:space="preserve">
+    <value>Mostra sempre l'icona nel tray</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Lotto</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="And" xml:space="preserve">
+    <value>E</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="ApplicationIsRestartedAfterwards" xml:space="preserve">
+    <value>L'applicazione viene quindi riavviata</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="ApplyEnergyCostsNote" xml:space="preserve">
+    <value>Questo vale per i costi energetici calcolati dal tempo di stampa, il consumo energetico della stampante e il prezzo dell'energia specificato. Se hai già calcolato e assegnato una tariffa oraria della macchina, non devi calcolare i costi energetici in quanto questi sono già presi in considerazione nel calcolo della tariffa oraria della macchina!
+</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="ApplyEnergyCostsToCalculation" xml:space="preserve">
+    <value>Applicare i costi energetici per il calcolo?
+</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="ApplyTaxRateToResult" xml:space="preserve">
+    <value>Vuoi aggiungere un'aliquota fiscale al tuo calcolo?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AppName3dPrintCostCalculator" xml:space="preserve">
+    <value>Calcolatore dei costi di stampa 3D</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AppName3dPrinterMaterialOverview" xml:space="preserve">
+    <value>Materiali per stampanti 3D</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AppName3dPrinterOverview" xml:space="preserve">
+    <value>Stampante 3D</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AppName3dPrinterWorkstep" xml:space="preserve">
+    <value>Fasi di lavoro aggiuntive</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AppNameEventLog" xml:space="preserve">
+    <value>Registratore di eventi</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="AppNameMachineHourRateCalculator" xml:space="preserve">
+    <value>Calcolatore di tasso Macchina ore</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AppNameMassSearchAndReplace" xml:space="preserve">
+    <value>Ricerca di massa e sostituzione</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AppNameNotFound" xml:space="preserve">
+    <value>Questa app non esiste!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AppNameOctoPrintDashboard" xml:space="preserve">
+    <value>OctoPrint</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="AppNameRepetierServerProDashboard" xml:space="preserve">
+    <value>Repetier Server Pro Dashboard</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="AppNameSubversionServer" xml:space="preserve">
+    <value>SVN</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>Sei sicuro</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="AssignMachineHourRateCalculation" xml:space="preserve">
+    <value>Assegna la tariffa oraria della macchina</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AssignMHR" xml:space="preserve">
+    <value>Assegna la tariffa oraria della macchina</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AssignSelectedMHR" xml:space="preserve">
+    <value>Assegna la tariffa oraria della macchina selezionata</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AtLeastOneApplicationMustBeVisible" xml:space="preserve">
+    <value>Almeno un'applicazione deve essere visibile!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AutoconnectOnStart" xml:space="preserve">
+    <value>Connetti automaticamente all'avvio del server</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Indietro</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="BJ" xml:space="preserve">
+    <value>BJ (Binder Jetting) ®</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="BrowseGcodeFiles" xml:space="preserve">
+    <value>Seleziona i file GCode ...</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="BuildVolume" xml:space="preserve">
+    <value>Spazio di installazione</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Calculate" xml:space="preserve">
+    <value>Calcolare</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="CalculationFailrate" xml:space="preserve">
+    <value>Calcolo - tasso di errore</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationList" xml:space="preserve">
+    <value>Calcoli - elenco</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationMargin" xml:space="preserve">
+    <value>Calcolo - profitto</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationMaterial" xml:space="preserve">
+    <value>Calcolo - materiale</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPriceEnergy" xml:space="preserve">
+    <value>Calcolo - costi energetici</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPriceHandling" xml:space="preserve">
+    <value>Calcolo - costi di gestione</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPriceMaterial" xml:space="preserve">
+    <value>Calcolo - costi materiali</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPricePrinter" xml:space="preserve">
+    <value>Calcolo - costi di stampa</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPriceTax" xml:space="preserve">
+    <value>Calcolo - tasse</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPriceTotal" xml:space="preserve">
+    <value>Calcolo - importo totale</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPriceWorksteps" xml:space="preserve">
+    <value>Calcolo - costi per fasi di lavoro</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPrinter" xml:space="preserve">
+    <value>Calcolo - stampante</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPrintTime" xml:space="preserve">
+    <value>Calcolo - durata della stampa</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationQuantity" xml:space="preserve">
+    <value>Calcolo - numero di pezzi</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationResult" xml:space="preserve">
+    <value>Risultato(i) di calcolo</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Calculations" xml:space="preserve">
+    <value>Calcoli</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="CalculationType" xml:space="preserve">
+    <value>Tipo di calcolo</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Abortire</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="CardView" xml:space="preserve">
+    <value>Mostra come mappa</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Categoria</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="CDLP" xml:space="preserve">
+    <value>cDLP (continuous Digital Light Processing)®</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Chamber" xml:space="preserve">
+    <value>Camera di riscaldamento</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Cambiare</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="CheckForUpdates" xml:space="preserve">
+    <value>Controlla aggiornamenti</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="CheckForUpdatesAtStartup" xml:space="preserve">
+    <value>Verifica aggiornamenti all'avvio?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="CheckLicense" xml:space="preserve">
+    <value>Controlla la licenza</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Svuotare</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="ClearEventList" xml:space="preserve">
+    <value>Eventi vuoti</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="ClearFilter" xml:space="preserve">
+    <value>Svuotare il filtro</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="CLI" xml:space="preserve">
+    <value>CLI (Command Line Interface)</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Finire</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Closed" xml:space="preserve">
+    <value>Chiuso</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Colore</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Column" xml:space="preserve">
+    <value>Colonna</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Command" xml:space="preserve">
+    <value>Comando</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="CommandExportGcodeExample" xml:space="preserve">
+    <value>-export-gcode...</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Community" xml:space="preserve">
+    <value>Comunità</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>Nome dell'azienda</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="ConfirmClose" xml:space="preserve">
+    <value>Conferma Finire</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Connected" xml:space="preserve">
+    <value>Collegato</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="Connecting" xml:space="preserve">
+    <value>Collega</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="ConnectingToPrinterDots" xml:space="preserve">
+    <value>Connetti stampante ...</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="ConnectionInformation" xml:space="preserve">
+    <value>Informazioni sulla connessione</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="ConnectionSettings" xml:space="preserve">
+    <value>Impostazioni di connessione</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="ConnectPrinter" xml:space="preserve">
+    <value>Collega la stampante</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continuare</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="ControlIsDisabledDuringPrint" xml:space="preserve">
+    <value>Il controllo della stampante è disattivato finché è in esecuzione una stampa!</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="CoordinatesExcelTemplate" xml:space="preserve">
+    <value>Coordinate d'inizio le per il modello di Excel</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CopyEventInformationToClipboard" xml:space="preserve">
+    <value>Copia negli appunti</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="CreateCopies" xml:space="preserve">
+    <value>Redigere una copia</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="CredentialWithThisNameAlreadyExists" xml:space="preserve">
+    <value>I dati di accesso con questo nome esistono già!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Cura" xml:space="preserve">
+    <value>Ultimaker Cura</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="CurrentConnection" xml:space="preserve">
+    <value>Connessione corrente</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="CurrentPrint" xml:space="preserve">
+    <value>Processo di stampa corrente</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Custom" xml:space="preserve">
+    <value>personalizzato</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="CustomerAddressCity" xml:space="preserve">
+    <value>Cliente - indirizzo - città
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CustomerAddressNumber" xml:space="preserve">
+    <value>Cliente - indirizzo - numero civico</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CustomerAddressStreet" xml:space="preserve">
+    <value>Cliente - indirizzo - via</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CustomerCountry" xml:space="preserve">
+    <value>Cliente - paese</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CustomerFirstName" xml:space="preserve">
+    <value>Cliente - nome</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CustomerId" xml:space="preserve">
+    <value>Cliente - numero cliente</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CustomerLastName" xml:space="preserve">
+    <value>Cliente - cognome</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DatagridView" xml:space="preserve">
+    <value>Mostra come DataGrid</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DeactivateLicense" xml:space="preserve">
+    <value>Disattivare la licenza</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Declined" xml:space="preserve">
+    <value>Respinto</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>Standard</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DefaultExcelOfferExporterTemplate" xml:space="preserve">
+    <value>Modello di offerta di Excel</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DefaultExcelSingleCalculationTemplate" xml:space="preserve">
+    <value>Foglio di calcolo Excel</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DefaultPrintServer" xml:space="preserve">
+    <value>Server di stampa standard</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="DefaultSelectionInfo" xml:space="preserve">
+    <value>
+Gli elementi selezionati qui vengono attivati ​​per impostazione predefinita all'avvio di un nuovo calcolo.</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DefaultSettings" xml:space="preserve">
+    <value>Impostazioni standard
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Elimina</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DeleteAll" xml:space="preserve">
+    <value>Elimina tutto</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DeleteLicense" xml:space="preserve">
+    <value>Elimina licenza</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DeleteLicenseMessage" xml:space="preserve">
+    <value>Sei assolutamente sicuro di voler rimuovere la licenza dall'installazione corrente? Dovrai quindi riattivare questa installazione per continuare a utilizzare le funzioni Pro. Continuare?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DeleteLicenses" xml:space="preserve">
+    <value>Elimina le licenze</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DeleteMessage" xml:space="preserve">
+    <value>Elimina messaggio
+</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DeleteSelected" xml:space="preserve">
+    <value>Elimina la selezione</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Density" xml:space="preserve">
+    <value>Densità</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descrizione</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogCalculationSaveSuccessContent" xml:space="preserve">
+    <value>Il calcolo è stato salvato correttamente.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogCalculationSaveSuccessHeadline" xml:space="preserve">
+    <value>Salva con successo</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogCancelPrintConent" xml:space="preserve">
+    <value>Vuoi annullare il set di stampa corrente? Questo non può essere annullato e la tua pressione è persa!</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogCancelPrintHeadline" xml:space="preserve">
+    <value>Annulla la stampa</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogCommandCannotBeEmptyOrMissingTheFilepathTagContent" xml:space="preserve">
+    <value>Il comando non può essere vuoto e il percorso del file non deve mancare. Aggiungi almeno l'espressione "[percorso file]". Controlla il tuo comando e riprova.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogCommandCannotBeEmptyOrMissingTheFilepathTagHeadline" xml:space="preserve">
+    <value>Comando vuoto o non valido</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogConfirmCloseContent" xml:space="preserve">
+    <value>Sei sicuro di voler chiudere l'applicazione adesso?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogConfirmCloseHeadline" xml:space="preserve">
+    <value>Chiudi applicazione</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogConnectionFailedFormatContent" xml:space="preserve">
+    <value>La connessione alla stampante '{0}' non è riuscita o si è verificato il timeout. Verificare che la stampante sia accesa e collegata correttamente al server.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogConnectionFailedHeadline" xml:space="preserve">
+    <value>Connessione fallita</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogDeleteCalculationContent" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare questo calcolo dall'elenco?</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogDeleteCalculationHeadline" xml:space="preserve">
+    <value>Elimina il calcolo</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogDeleteContent" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare la selezione? Questo non può essere annullato!
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogDeleteExportTemplateFormatContent" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare il modello di esportazione '{0}'? Questo non può essere annullato!</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogDeleteExportTemplateHeadline" xml:space="preserve">
+    <value>Elimina modello di esportazione</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogDeleteHeadline" xml:space="preserve">
+    <value>Elimina</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogDeleteLicenseFailedContent" xml:space="preserve">
+    <value>La tua licenza non può essere rimossa. Riprova o contatta l'assistenza.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteLicenseFailedHeadline" xml:space="preserve">
+    <value>Rimozione della licenza non riuscita</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteMachineHourRateContent" xml:space="preserve">
+    <value>Vuoi eliminare il calcolo della "tariffa oraria macchina" selezionata? Questo non può essere annullato!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogDeleteMachineHourRateHeadline" xml:space="preserve">
+    <value>Elimina la tariffa oraria della macchina</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogDeleteManufacturerFormatedContent" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare il produttore selezionato '{0}'? Questo non può essere annullato!
+</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="DialogDeleteManufacturerHeadline" xml:space="preserve">
+    <value>Elimina produttore
+</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="DialogDeleteMaterialContent" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare questo materiale? Questo non può essere annullato.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteMaterialHeadline" xml:space="preserve">
+    <value>Elimina questo materiale?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeletePrinterContent" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare questa stampante? Questo non può essere annullato.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeletePrinterHeadline" xml:space="preserve">
+    <value>Elimina questa stampante?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedCalculationsContent" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare i calcoli selezionati? Questo non può essere annullato!
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedCalculationsHeadline" xml:space="preserve">
+    <value>Elimina i calcoli selezionati
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedFilesContent" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare i file selezionati?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedFilesHeadline" xml:space="preserve">
+    <value>Elimina i file selezionati</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedMaterialsContent" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare i materiali selezionati? Questo non può essere annullato!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedMaterialsHeadline" xml:space="preserve">
+    <value>Elimina i materiali selezionati</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedMHRsContent" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare le tariffe orarie della macchina selezionata? Questo non può essere annullato.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedMHRsHeadline" xml:space="preserve">
+    <value>Elimina le tariffe orarie della macchina selezionate?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedPrintersContent" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare le stampanti selezionate? Questo non può essere annullato!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedPrintersHeadline" xml:space="preserve">
+    <value>Elimina le stampanti selezionate</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedWorkstepsContent" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare le fasi di lavoro selezionate? Questo non può essere annullato</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedWorkstepsHeadline" xml:space="preserve">
+    <value>Elimina i passaggi di lavoro selezionati</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectionFormatedContent" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare l'oggetto selezionato '{0}'? Questo non può essere annullato!</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectionFormatedHeadline" xml:space="preserve">
+    <value>Elimina l'oggetto selezionato {0}</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="DialogDeleteSlicerFormatedContent" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare il Slicer '{0}' dall'elenco?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogDeleteSlicerHeadline" xml:space="preserve">
+    <value>Elimina Slicer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogDeleteSlicersContent" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare il Slicer selezionato dall'elenco?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogDeleteSlicersHeadline" xml:space="preserve">
+    <value>Elimina Slicer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogDeleteSupplierFormatedContent" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare il fornitore selezionato '{0}'? Questo non può essere annullato!</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="DialogDeleteSupplierHeadline" xml:space="preserve">
+    <value>Elimina fornitore
+</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="DialogDeleteWorkstepContent" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare questo passaggio di lavoro? Questo non può essere annullato.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteWorkstepHeadline" xml:space="preserve">
+    <value>Elimina questo passaggio di lavoro?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDownloadWebCamVersionContent" xml:space="preserve">
+    <value>La funzione WebCam aggiunge circa 130 MB di dati allo strumento. Ecco perché abbiamo deciso di realizzare due versioni. Quindi, se si desidera utilizzare la funzione WebCam, scaricare la versione dal basso.
+</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DialogDownloadWebCamVersionHeadline" xml:space="preserve">
+    <value>Scarica un'altra versione
+</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DialogEnterNewFolderNameContent" xml:space="preserve">
+    <value>Immettere il nome per la nuova cartella di seguito.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogEnterNewFolderNameHeadline" xml:space="preserve">
+    <value>Nuova cartella</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogErrorWhileExportingContent" xml:space="preserve">
+    <value>
+Si è verificato un errore durante l'elaborazione dei dati per l'esportazione. Riprova o contatta il nostro supporto.</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogErrorWhileExportingHeadline" xml:space="preserve">
+    <value>Esportazione non riuscita</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogExceptionFormatedContent" xml:space="preserve">
+    <value>Sfortunatamente, si è verificato un errore imprevisto durante questa azione. Ulteriori dettagli: \ n {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogExceptionHeadline" xml:space="preserve">
+    <value>Si è verificato un errore imprevisto</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogExportToFileSucceededForamtedContent" xml:space="preserve">
+    <value>I dati sono stati esportati correttamente in "{0}".</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogExportToFileSucceededHeadline" xml:space="preserve">
+    <value>Dati esportati correttamente</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogFileLoadedContent" xml:space="preserve">
+    <value>l file è stato caricato correttamente. I parametri sono stati impostati nella maschera di calcolo.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogFileLoadedHeadline" xml:space="preserve">
+    <value>File caricato correttamente</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogFilesToImportFormatedContent" xml:space="preserve">
+    <value>I file ({0}) sono pronti per essere importati. Vuoi iniziare l'importazione ora?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogFilesToImportHeadline" xml:space="preserve">
+    <value>File pronti per essere importati</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogFileTypeNotSupportedFormatedContent" xml:space="preserve">
+    <value>Il tipo di file '{0}' del file '{1}' non è supportato!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogFileTypeNotSupportedHeadline" xml:space="preserve">
+    <value>Tipo di file non supportato</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogFolderNameCannotBeEmptyContent" xml:space="preserve">
+    <value>Il nome della cartella non può essere vuoto.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogFolderNameCannotBeEmptyHeadline" xml:space="preserve">
+    <value>Nome cartella non valido</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogGcodeCannotBeSentFormatContent" xml:space="preserve">
+    <value>Il Gcode attualmente selezionato '{0}' non può essere inviato perché si tratta solo di un'analisi OctoPrint Gcode e il file è già sul server.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogGcodeCannotBeSentHeadline" xml:space="preserve">
+    <value>Gcode non può essere inviato</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogGcodeFileSentFailedFormatedContent" xml:space="preserve">
+    <value>Il file GCode '{0}' non può essere inviato a Repetier Server Pro! Controlla le impostazioni di Repetier Server Pro e riprova. Se l'errore persiste, contattare l'assistenza.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogGcodeFileSentFailedHeadline" xml:space="preserve">
+    <value>Invio del GCode non riuscito</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogGcodeFileSentSuccessfullyFormatedContent" xml:space="preserve">
+    <value>l file GCode '{0}' è stato inviato con successo a Repetier Server Pro!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogGcodeFileSentSuccessfullyHeadline" xml:space="preserve">
+    <value>GCode inviato correttamente</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogGcodeReadErrorFormatedContent" xml:space="preserve">
+    <value>Si è verificato un errore imprevisto durante la lettura del file gcode. Se l'errore persiste, contatta il nostro supporto e inviaci il tuo file gcode a "{0}"</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="DialogGcodeReadErrorHeadline" xml:space="preserve">
+    <value>Errore durante la lettura del file Gcode</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="DialogGcodeSlicerInvalidContentFormated" xml:space="preserve">
+    <value>Sembra che il file sia un file gcode valido, tuttavia l'affettatrice che stai utilizzando non è ancora supportata. Per supportarlo, ti preghiamo di inviarci un file gcode per la convalida a {0}</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogGcodeSlicerInvalidHeadline" xml:space="preserve">
+    <value>Slicer non supportato</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogGoProContent" xml:space="preserve">
+    <value>Ti reindirizzeremo al nostro negozio ... Grazie per aver considerato un aggiornamento!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogGoProHeadline" xml:space="preserve">
+    <value>Ottieni subito la versione pro!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogImportedSlicedGcodeFilesContent" xml:space="preserve">
+    <value>Vuoi selezionare i file Gcode che hai appena generato per l'importazione?
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogImportedSlicedGcodeFilesHeadline" xml:space="preserve">
+    <value>Importare file gcode?
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogInvalidFileTypeSelectedFormatContent" xml:space="preserve">
+    <value>Hai selezionato un tipo di file non valido '{0}'. Seleziona un solo file con le seguenti estensioni: {1}</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogInvalidFileTypeSelectedHeadline" xml:space="preserve">
+    <value>Tipo di file non valido selezionato</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogLicenseActivationFailedContent" xml:space="preserve">
+    <value>La chiave di licenza non è valida o il server di attivazione non è in linea. In caso di problemi con l'attivazione della licenza, si prega di contattare il nostro supporto!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseActivationFailedHeadline" xml:space="preserve">
+    <value>Attivazione della licenza non riuscita</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseActivationSucceededContent" xml:space="preserve">
+    <value>La chiave di licenza è valida e attivata per questa istanza.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseActivationSucceededHeadline" xml:space="preserve">
+    <value>Attivazione della licenza riuscita</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseCheckFailedContent" xml:space="preserve">
+    <value>La chiave di licenza è disattivata o scaduta! Le funzioni Pro sono disattivate per questa installazione.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseCheckFailedHeadline" xml:space="preserve">
+    <value>Controllo della licenza non riuscito</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseCheckSucceededContent" xml:space="preserve">
+    <value>La chiave di licenza è valida e attiva per questa installazione.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseCheckSucceededHeadline" xml:space="preserve">
+    <value>Controllo della licenza riuscito</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseDeactivatedRemoteConfirm" xml:space="preserve">
+    <value>Si, attivare adesso</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseDeactivatedRemoteContent" xml:space="preserve">
+    <value>La tua licenza è stata disattivata dal tuo account. Vuoi riattivarlo ora?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseDeactivatedRemoteDecline" xml:space="preserve">
+    <value>No, inserisci una nuova licenza</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseDeactivatedRemoteHeadline" xml:space="preserve">
+    <value>Licenza disabilitata da lontano</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseFormatInvalidFormatedContent" xml:space="preserve">
+    <value>
+Il formato della licenza fornito non è valido! Inserisci una licenza da {0} o un codice di acquisto da {1}!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseFormatInvalidHeadline" xml:space="preserve">
+    <value>Formato della licenza non valido</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLoadCalculationFailedContent" xml:space="preserve">
+    <value>
+Purtroppo il caricamento del file di calcolo selezionato non è riuscito. Riprova o contatta il nostro supporto per ulteriore assistenza!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLoadCalculationFailedHeadline" xml:space="preserve">
+    <value>Caricamento fallito</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogMHRSavedSuccessfullyContent" xml:space="preserve">
+    <value>La tariffa oraria della macchina è stata salvata correttamente. Ora puoi selezionarlo per le tue stampanti.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogMHRSavedSuccessfullyHeadline" xml:space="preserve">
+    <value>La tariffa oraria della macchina è stata salvata correttamente.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogNoFileSelectedContent" xml:space="preserve">
+    <value>Seleziona prima un file!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogNoFileSelectedHeadline" xml:space="preserve">
+    <value>Nessun file selezionato</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogOctoPrintServerNotConfiguredContent" xml:space="preserve">
+    <value>Sembra che tu non abbia ancora inserito alcuna informazione per il tuo server OctoPrint. Vai alla pagina delle impostazioni e fai questo.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogOctoPrintServerNotConfiguredHeadline" xml:space="preserve">
+    <value>Il server OctoPrint non è configurato</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogOctoPrintServerOfflineContent" xml:space="preserve">
+    <value>Sembra che le tue impostazioni siano valide per il tuo server OctoPrint, ma il server non risponde. Controlla se il tuo server è in esecuzione e se l'indirizzo IP inserito è corretto!</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogOctoPrintServerOfflineHeadline" xml:space="preserve">
+    <value>OctoPrint-Server non è in linea</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogOpenExternalUriFormatedContent" xml:space="preserve">
+    <value>Questo aprirà il link esterno '{0}'. Non abbiamo alcuna influenza sul contenuto di questo sito Web. Continuare?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogOpenExternalUriHeadline" xml:space="preserve">
+    <value>Apri link esterno</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogOpenMultipleFileLocationsContent" xml:space="preserve">
+    <value>Stai per aprire più posizioni dei file. Vuoi continuare?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogOpenMultipleFileLocationsHeadline" xml:space="preserve">
+    <value>Apri più posizioni dei file</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogOverwriteExistingSettingsFormatedContent" xml:space="preserve">
+    <value>Sembra che esista già un file di impostazioni nel percorso di destinazione scelto su "{0}". Come vuoi andare avanti</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogOverwriteExistingSettingsHeadline" xml:space="preserve">
+    <value>Sovrascrivi le impostazioni trovate?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogOverwriteSlicerCommandOrSaveAsNewFormatedContent" xml:space="preserve">
+    <value>Vuoi sovrascrivere il comando slicer attualmente selezionato '{0}'?</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogOverwriteSlicerCommandOrSaveAsNewHeadline" xml:space="preserve">
+    <value>Sovrascrivi il comando slicer?</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogPausePrintContent" xml:space="preserve">
+    <value>Sei sicuro di voler mettere in pausa la stampa attuale? Nota che questa azione non dovrebbe essere eseguita incustodita!</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogPausePrintHeadline" xml:space="preserve">
+    <value>Metti in pausa la stampa</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogRemoteControlPrintersFormatContent" xml:space="preserve">
+    <value>Benvenuto nel centro di controllo {0}. Verificare sempre che la stampante sia gratuita e pronta per l'uso quando si inizia a stampare in remoto. Inoltre, quando si sposta l'asse della stampante, tenere presente che ciò può essere fatto senza danneggiare la stampante. Noi e il nostro software non siamo responsabili per danni causati da controllo incustodito!</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogRemoteControlPrintersHeadline" xml:space="preserve">
+    <value>Nota importante per l'uso (leggere attentamente)</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogRemoveSelectedFilesFromListContent" xml:space="preserve">
+    <value>Sei sicuro di voler rimuovere i file selezionati?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogRemoveSelectedFilesFromListHeadline" xml:space="preserve">
+    <value>Rimuovi i file selezionati</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogRepetierCreateNewGroupContent" xml:space="preserve">
+    <value>Inserisci il nome del gruppo:</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DialogRepetierCreateNewGroupHeadline" xml:space="preserve">
+    <value>Crea un nuovo gruppo</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DialogRepetierDeleteMessageContent" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare il messaggio?</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DialogRepetierDeleteMessageHeadline" xml:space="preserve">
+    <value>Elimina messaggio
+</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DialogRepetierDeleteModelsContent" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare i modelli selezionati dal server? Questo non può essere annullato!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierDeleteModelsHeadline" xml:space="preserve">
+    <value>Elimina i modelli selezionati</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierPrintModelFormatedContent" xml:space="preserve">
+    <value>Vuoi iniziare a stampare il modello '{0}'? Assicurarsi che la stampante sia pronta e pulita!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierPrintModelHeadline" xml:space="preserve">
+    <value>Inizia a stampare per il modello</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierServerProNotConfiguredContent" xml:space="preserve">
+    <value>Sembra che Repetier Server Pro non sia ancora stato configurato. Visitate la pagina delle impostazioni per farlo ora.</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierServerProNotConfiguredHeadline" xml:space="preserve">
+    <value>Repetier Server Pro non è configurato</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierServerProOfflineContent" xml:space="preserve">
+    <value>Sembra che Repetier Server Pro sia configurato correttamente, ma il server non risponde. Verifica se il tuo server è acceso e l'indirizzo IP inserito è corretto!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierServerProOfflineHeadline" xml:space="preserve">
+    <value>Repetier Server Pro non è in linea</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierServerRestartContent" xml:space="preserve">
+    <value>Sei sicuro di voler riavviare Repetier Server Pro ora? Assicurarsi che non vi siano lavori di stampa attivi!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierServerRestartHeadline" xml:space="preserve">
+    <value>Riavvia Repetier Server Pro</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierServerShutdownContent" xml:space="preserve">
+    <value>Sei sicuro di voler spegnere Repetier Server Pro adesso? Assicurarsi che non vi siano lavori di stampa attivi!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierServerShutdownHeadline" xml:space="preserve">
+    <value>Chiudi Repetier Server Pro</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRestartRequiredContent" xml:space="preserve">
+    <value>La modifica delle impostazioni richiede il riavvio dell'applicazione. Riavvia ora?</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="DialogRestartRequiredHeadline" xml:space="preserve">
+    <value>Riavvio richiesto</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="DialogResumePrintContent" xml:space="preserve">
+    <value>Sei sicuro di voler continuare con la stampa corrente? Nota che questa azione non dovrebbe essere eseguita incustodita!</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogResumePrintHeadline" xml:space="preserve">
+    <value>Continua stampa</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogRunCalculationFirstContent" xml:space="preserve">
+    <value>Per salvare il calcolo, fare prima clic sul pulsante "Calcola" o carica un calcolo esistente.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogRunCalculationFirstHeadline" xml:space="preserve">
+    <value>Keine Kalkulation geladen oder ausgeführt</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogSaveCalculationFailedContent" xml:space="preserve">
+    <value>Sfortunatamente, il salvataggio del file di calcolo non è riuscito. Riprova o contatta il nostro supporto per ulteriore assistenza!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogSaveCalculationFailedHeadline" xml:space="preserve">
+    <value>Salvataggio fallito</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogSaveMachineHourRateContent" xml:space="preserve">
+    <value>Sei sicuro di voler salvare l'attuale calcolo della tariffa oraria della macchina per questa stampante? Ciò sovrascriverà la tariffa oraria della macchina originale per la stampante selezionata. Continuare?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogSaveMachineHourRateHeadline" xml:space="preserve">
+    <value>Salva l'attuale calcolo della tariffa oraria della macchina?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogSettingsResetSucceededContent" xml:space="preserve">
+    <value>
+Le impostazioni sono state ripristinate correttamente.</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogSettingsResetSucceededHeadline" xml:space="preserve">
+    <value>Le impostazioni sono state ripristinate correttamente</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogSlicerApplicationNotFoundFormatedContent" xml:space="preserve">
+    <value>Lo Slicer non è stato trovato in '{1}'. Controlla se questo slicer è ancora installato sul tuo computer.</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogSlicerApplicationNotFoundHeadline" xml:space="preserve">
+    <value>Slicer non trovato</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogSlicerCommandAlreadyExistsFormatContent" xml:space="preserve">
+    <value>Il comando slicer con il testo di esecuzione '{0}' esiste già con il nome '{0}'. Nulla è stato salvato.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogSlicerCommandAlreadyExistsHeadline" xml:space="preserve">
+    <value>Il comando affettatrice esiste già</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogSlicerCommandSavedFormatContent" xml:space="preserve">
+    <value>Il comando slicer '{0}' è stato salvato correttamente nell'elenco dei comandi.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogSlicerCommandSavedHeadline" xml:space="preserve">
+    <value>Comando affettatrice salvato</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Disconnected" xml:space="preserve">
+    <value>Diviso</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DisconnectPrinter" xml:space="preserve">
+    <value>Scollegare la stampante</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DLP" xml:space="preserve">
+    <value>DLP (Digital Ligh Processing)®</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DMLS" xml:space="preserve">
+    <value>DMLS (Direct Metal Laser Sintering)®</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>Documentazione</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DOD" xml:space="preserve">
+    <value>DOD (Drop on Demand)®</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Donate" xml:space="preserve">
+    <value>Donare</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DonateViaPayPal" xml:space="preserve">
+    <value>Dona tramite PayPal</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Pronto</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Scaricare
+</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DragAndDropFileHere" xml:space="preserve">
+    <value>Trascina i file qui ...</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="Duplicate" xml:space="preserve">
+    <value>Dublicare</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Durata</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="EBAM" xml:space="preserve">
+    <value>EBAM (Electron-Beam Additve Manufacturing)®</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="EBM" xml:space="preserve">
+    <value>EBM (Electro Beam Melting)®</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Modifica</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="EditManufacturer" xml:space="preserve">
+    <value>Modifica produttore</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="EditMaterial" xml:space="preserve">
+    <value>Modifica materiale</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="EditMHR" xml:space="preserve">
+    <value>Modifica la tariffa oraria della macchina</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="EditPrinter" xml:space="preserve">
+    <value>Modifica stampante</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="EditSlicer" xml:space="preserve">
+    <value>Modifica Slicer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="EditSlicerCommand" xml:space="preserve">
+    <value>Modifica comando slicer</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="EditSupplier" xml:space="preserve">
+    <value>Modifica fornitore</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="EditWorkstep" xml:space="preserve">
+    <value>Modifica fase di lavoro</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="EnableGlobalLogging" xml:space="preserve">
+    <value>
+Abilita registrazione eventi globale (consigliata)</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="EnableTransparency" xml:space="preserve">
+    <value>Attiva la trasparenza</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Energy" xml:space="preserve">
+    <value>Energia</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="EnergyCosts" xml:space="preserve">
+    <value>Costi energetici</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="EnhancedControl" xml:space="preserve">
+    <value>Controllo esteso</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="EnterANameForTheSlicerCommand" xml:space="preserve">
+    <value>Inserisci un nome per il comando slicer per identificarlo in seguito.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="EnterLocationDots" xml:space="preserve">
+    <value>Inserisci il percorso ...</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="EnterValidIPAddress" xml:space="preserve">
+    <value>Inserisci un indirizzo IP valido!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="EnterValidOctoPrintApiKey" xml:space="preserve">
+    <value>Inserisci una chiave API OctoPrint valida!
+</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="EnterValidRepetierApiKey" xml:space="preserve">
+    <value>Inserisci una chiave API valida per Repetier Server Pro!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="EnterValidUri" xml:space="preserve">
+    <value>Inserisci un URL valido che inizi con 'http: //' o 'https: //'!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="EnterValueGreaterThanFormated" xml:space="preserve">
+    <value>Inserisci un valore maggiore di '{0}'!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Errore</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="ErrorCheckingApiGithubComVerifyYourNetworkConnection" xml:space="preserve">
+    <value>Si è verificato un errore durante la connessione all'API Github. Controlla la tua connessione Internet.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="EstimatedPrintTime" xml:space="preserve">
+    <value>Tempo di stampa stimato</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="EULA" xml:space="preserve">
+    <value>Contratto di licenza con l'utente finale (EULA)</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="EventAddedItemFormated" xml:space="preserve">
+    <value>Oggetto aggiunto: {0}
+</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventApplicationStartup" xml:space="preserve">
+    <value>Applicazione avviata</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventCalculationDoneFormated" xml:space="preserve">
+    <value>Calcolo completato {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventCalculationLoadedFormated" xml:space="preserve">
+    <value>Calcolo {0} aperto da {1}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventCalculationLoadFailedFormated" xml:space="preserve">
+    <value>Impossibile caricare il file di calcolo da {0}. Il parser XML ha restituito un oggetto vuoto.</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventCalculationSavedFormated" xml:space="preserve">
+    <value>Calcolo {0} salvato in {1}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventCouldNotReadFileInformation" xml:space="preserve">
+    <value>Impossibile leggere le informazioni sul file per "{0}"</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventDeletedItemFormated" xml:space="preserve">
+    <value>Oggetto eliminato: {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventDetails" xml:space="preserve">
+    <value>Dettagli dell'evento</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventEditedItemFormated" xml:space="preserve">
+    <value>Oggetto elaborato: {0} =&gt; {1}
+</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventExceptionOccurredFormated" xml:space="preserve">
+    <value>Si è verificata un'eccezione con la destinazione '{0}' e il seguente messaggio: {1}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventFetchLicensePathFormated" xml:space="preserve">
+    <value>Percorso di salvataggio della licenza caricato in '{0}' caricato</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventFileLoadedForamated" xml:space="preserve">
+    <value>File "{0}" caricato</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventFormCleared" xml:space="preserve">
+    <value>Forma svuotata</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventGcodeFailedToSentToRepetierServerPro" xml:space="preserve">
+    <value>GCode non può essere inviato a Repetier Server Pro: {0} / {1}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventGcodeSentToRepetierServerPro" xml:space="preserve">
+    <value>GCode inviato a Repetier Server Pro: {0} / {1}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventLicenseAddFormated" xml:space="preserve">
+    <value>Licenza "{0}" aggiunta correttamente</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventLicenseCheckMessageFormated" xml:space="preserve">
+    <value>Controllo della licenza eseguito =&gt; Messaggio restituito: {0}</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventLicenseLastCheckValidFormated" xml:space="preserve">
+    <value>Die letzte Lizenzprüfung war gültig, keine Lizenzprüfung ausgeführt: Zuletzt geprüft am {0}</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventLicenseRemovedFormated" xml:space="preserve">
+    <value>Licenza '{0}' rimossa con successo</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventLicenseSavedSuccessfullyAtFormated" xml:space="preserve">
+    <value>Licenza salvata correttamente sotto '{0}'</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventMachineHourRateAssignedFormated" xml:space="preserve">
+    <value>La tariffa oraria della macchina '{0}' è stata assegnata a: {1}
+</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventOpenFolderFormated" xml:space="preserve">
+    <value>Cartella aperta: {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventOpenUri" xml:space="preserve">
+    <value>URL esterno aperto: {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventOSIncompatibleWithNewVersionFormatedEvent" xml:space="preserve">
+    <value>La versione '{0}' del tuo sistema operativo non è compatibile con l'ultimo aggiornamento!</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventRepetierServerProInit" xml:space="preserve">
+    <value>Repetier Server Pro inizializzato: {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventUncatchedRepetierEventFormated" xml:space="preserve">
+    <value>Ricevi un evento di ripetizione imprevisto tramite WebSocket: {0}
+</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="EventUnknownGcodeFoundFormated" xml:space="preserve">
+    <value>GCode sconosciuto rilevato durante la lettura del file: {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventUnknownPrintServerFormated" xml:space="preserve">
+    <value>Server di stampa sconosciuto selezionato per caricare un file Gcode: {0}</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="EventUnknownSlicerFormated" xml:space="preserve">
+    <value>Affettatrice sconosciuta per GCode utilizzata: {0}
+</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventUpdateErrorFormated" xml:space="preserve">
+    <value>Errore durante il controllo degli aggiornamenti: {0}</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventUserIsAdministratorFormated" xml:space="preserve">
+    <value>L'utente "{0}" è un amministratore</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventViewInitFormated" xml:space="preserve">
+    <value>Vista inizializzata: {0}
+</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventWebSocketClosedFormated" xml:space="preserve">
+    <value>Il WebSocket è stato chiuso durante il tentativo di inviare una richiesta: {0}</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="EventWebSocketMessageReceivedFormated" xml:space="preserve">
+    <value>Messaggio ricevuto dal web socket: {0}</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="EventWebSocketOnCloseFormated" xml:space="preserve">
+    <value>
+La connessione al WebSocket {0} è stata chiusa dal server.</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="EventWebSocketOnErrorFormated" xml:space="preserve">
+    <value>Si è verificato un errore durante la connessione a WebSocket {0}: {1}</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="EventWebSocketOnOpenFormated" xml:space="preserve">
+    <value>WebSocket connesso correttamente a {0}</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="EventWebSocketSendCommandFormated" xml:space="preserve">
+    <value>Comando inviato a WebSocket: {0}</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="Everything" xml:space="preserve">
+    <value>Tutti</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="ExcelTemplateCoordinates" xml:space="preserve">
+    <value>Coordinate per il modello Excel</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="ExcelTemplateCoordinatesNotes" xml:space="preserve">
+    <value>È possibile assegnare proprietà dal nostro oggetto di calcolo alle coordinate nel modello di Excel. L'esportatore quindi scrive i dati corrispondenti nel file modello Excel fornito.</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="ExecuteCommand" xml:space="preserve">
+    <value>Eseguire l'ordine</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Esportazione</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="ExportAsPdf" xml:space="preserve">
+    <value>Esporta come file PDF
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="ExportExcel" xml:space="preserve">
+    <value>Esporta come file Excel</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="ExportPdf" xml:space="preserve">
+    <value>Esporta come file pdf
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Extruder" xml:space="preserve">
+    <value>Estrusore</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="FDM" xml:space="preserve">
+    <value>FDM (Fused Deposition Modeling)®</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="FieldCannotBeEmpty" xml:space="preserve">
+    <value>Questo campo non deve essere vuoto</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="Filament" xml:space="preserve">
+    <value>Filamento</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="FileAction" xml:space="preserve">
+    <value>Azione sul file</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="FileActionDelete" xml:space="preserve">
+    <value>Cancellare</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="FileActionSetActive" xml:space="preserve">
+    <value>Imposta attivamente</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="FileDoesNotExistsFormated" xml:space="preserve">
+    <value>Il file '{0}' non esiste nel percorso specificato!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="FileExtensionFormatedInvalid" xml:space="preserve">
+    <value>Il file deve terminare con '{0}'!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>Nome di file</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="FileNameDoesNotMatchRegexPatternFormated" xml:space="preserve">
+    <value>Il nome del file '{0}' non corrisponde al modello regex: '{1}'</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="FIlePathIsInvalid" xml:space="preserve">
+    <value>
+Il file non esiste o l'estensione del file non è valida!</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Files" xml:space="preserve">
+    <value>File</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="FileType" xml:space="preserve">
+    <value>Tipo di file</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="FilterApplicationFile" xml:space="preserve">
+    <value>Applicazione (*.exe) | *.exe
+</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="FinalRecomendedPrice" xml:space="preserve">
+    <value>Consiglio sul prezzo finale:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="FixCosts" xml:space="preserve">
+    <value>Costi fissi</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="FlashForge" xml:space="preserve">
+    <value>FlashForge</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Flow" xml:space="preserve">
+    <value>Flusso</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="FolderDoesNotExist" xml:space="preserve">
+    <value>La cartella non esiste
+</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="GCode" xml:space="preserve">
+    <value>GCode</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="GcodeCodeLineEditor" xml:space="preserve">
+    <value>Editor GCode</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="GCodeInfo" xml:space="preserve">
+    <value>GCode Info</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="GcodeInfos" xml:space="preserve">
+    <value>Informazioni Gcode</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="GcodeLines" xml:space="preserve">
+    <value>Linee GCode</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="GcodeParser" xml:space="preserve">
+    <value>GCode parser</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="GcodeParserKnownSlicersNote" xml:space="preserve">
+    <value>
+Se questa opzione è attivata, il parser controlla innanzitutto se lo slicer utilizzato è noto e analizza se i valori richiesti sono specificati come commenti nel file gcode. Ciò aumenta la velocità e la precisione.</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="GcodeParserNote" xml:space="preserve">
+    <value>Se hai importato un file GCode e trovi informazioni mancanti qui, ti preghiamo di inviarci il tuo file GCode. Aggiorneremo di conseguenza il nostro parser.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="GcodeParserPreferCommentValuesFromKnownSlicers" xml:space="preserve">
+    <value>Preferisci i valori annotati nei commenti di affettatrici famose?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>Generalmente</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="GitHub" xml:space="preserve">
+    <value>GitHub</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="GoOneDirectoryBack" xml:space="preserve">
+    <value>Una directory indietro</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="GoPro" xml:space="preserve">
+    <value>Ottieni subito la versione pro</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="GoToOctoPrintInBrowser" xml:space="preserve">
+    <value>Apri OctoPrint</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="GoToRepetierServerProInBrowser" xml:space="preserve">
+    <value>Apri Repetier Server Pro</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="GoToSettings" xml:space="preserve">
+    <value>Apri le impostazioni</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="GUI" xml:space="preserve">
+    <value>GUI (Interfaccia utente grafica)</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="HasHeatbed" xml:space="preserve">
+    <value>Ha una basa riscaldata?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="HeaderFixCostsPerYear" xml:space="preserve">
+    <value>Costi fissi / anno</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="HeaderPriceConsistsOf" xml:space="preserve">
+    <value>- il prezzo è composto da -</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="HeaderPrintTimeConsistsOf" xml:space="preserve">
+    <value>Il tempo di stampa è composto da</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="HeaderVariableCostsPerYear" xml:space="preserve">
+    <value>Costi / anno variabili</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Heatbed" xml:space="preserve">
+    <value>Letto riscaldatore</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="HelpMessage_DefaultPrintServer" xml:space="preserve">
+    <value>Il server di stampa selezionato qui è impostato come predefinito per l'invio del codice G.</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="HelpTranslate" xml:space="preserve">
+    <value>Aiuta a tradurre questo strumento?</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="HiddenApplications" xml:space="preserve">
+    <value>Applicazioni nascoste</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Hide" xml:space="preserve">
+    <value>Nascondere</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="HomeAxis" xml:space="preserve">
+    <value>Assi nella posizione iniziale</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="HourRate" xml:space="preserve">
+    <value>Tariffa oraria
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="ideaMaker" xml:space="preserve">
+    <value>ideaMaker</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>Importazione</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="ImportGcodeAfterSlicingCLI" xml:space="preserve">
+    <value>Importa automaticamente Gcode dopo lo slicing (solo CLI)</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="IncludeFilePathAutomaticallyAtEndOfCommand" xml:space="preserve">
+    <value>Inserire il percorso del file '[percorso file]' automaticamente alla fine del comando</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Informazioni</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="InfoPrivacyPolicy" xml:space="preserve">
+    <value>La tua privacy è importante per noi! Pertanto, non raccogliamo o condividiamo nessuna delle tue informazioni preziose! Lo strumento funziona completamente offline. Solo se sei un utente professionista l'applicazione controlla la tua licenza di tanto in tanto.</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="InterestRate" xml:space="preserve">
+    <value>Tasso d'interesse</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Invalid" xml:space="preserve">
+    <value>Invalido</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="IsCaseSensitiv" xml:space="preserve">
+    <value>Nota maiuscole e minuscole!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="IsCheckingLicenseState" xml:space="preserve">
+    <value>Controlla lo stato della licenza ....</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Kind" xml:space="preserve">
+    <value>Tipo</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="KISSlicer" xml:space="preserve">
+    <value>KISSlicer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="KnownSlicersForCommentRead" xml:space="preserve">
+    <value>Slicer famose per la lettura di commenti</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelAdditional" xml:space="preserve">
+    <value>Inoltre:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelAdditionalCosts" xml:space="preserve">
+    <value>Eventuali costi aggiuntivi:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelAdditionalWorkstepCosts" xml:space="preserve">
+    <value>Passaggi aggiuntivi:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelAPIKeyRepetierMandatory" xml:space="preserve">
+    <value>La tua chiave API *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelApiVersion" xml:space="preserve">
+    <value>Versione API:</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelBaudrate" xml:space="preserve">
+    <value>Baud rate:</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelBuildVolume" xml:space="preserve">
+    <value>Spazio:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelCalcDepreciation" xml:space="preserve">
+    <value>Ammortamento calcolato:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelCalculationTimebaseMandatory" xml:space="preserve">
+    <value>Base di calcolo per il tempo:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelColor" xml:space="preserve">
+    <value>Colore:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelConsoleOutput" xml:space="preserve">
+    <value>Uscita console:</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelCreatingGcodeLayerModel" xml:space="preserve">
+    <value>Crea modello layer GCode:</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="LabelCurrentPath" xml:space="preserve">
+    <value>Percorso del file corrente:</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelCustomAmount" xml:space="preserve">
+    <value>Inserisci il tuo importo per il tuo suggerimento!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelDateOfEULAAgreement" xml:space="preserve">
+    <value>Data di approvazione:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelDebitorNumber" xml:space="preserve">
+    <value>Numero di conto:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelDefaultMaterialsForCalculation" xml:space="preserve">
+    <value>Materiale\i standard  per i calcoli:</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelDefaultPrintersForCalculation" xml:space="preserve">
+    <value>Stampante standard per calcoli:</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelDefaultWorkstepsForCalculation" xml:space="preserve">
+    <value>Passaggi standard per i calcoli:
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelDensityMandatory" xml:space="preserve">
+    <value>Densità: *</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelDonationInfo" xml:space="preserve">
+    <value>La tua donazione verrà elaborata successivamente tramite PayPal. Verrai reindirizzato al nostro sito Web PayPal.me quando fai clic sul pulsante "Dona tramite PayPal".</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelDonationThankYou" xml:space="preserve">
+    <value>Grazie per aver scelto una donazione! Lo apprezziamo davvero!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelDownloadSourceCode" xml:space="preserve">
+    <value>Scarica il codice sorgente:
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelDownloadUri" xml:space="preserve">
+    <value>Scarica URL:</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelEnableLoggingRepetierServerPro" xml:space="preserve">
+    <value>
+Attiva la registrazione per la connessione di Repetier Server Pro</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="LabelEnableSecureConnectionRepetierServerPro" xml:space="preserve">
+    <value>Attiva connessione crittografata (SSL)</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="LabelEnergy" xml:space="preserve">
+    <value>Energia:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelEnergyCosts" xml:space="preserve">
+    <value>Spese d'energia:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelEnergyCostsMandatory" xml:space="preserve">
+    <value>Spese d'energia*:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelExcelColumnMandatory" xml:space="preserve">
+    <value>Colonna: *</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelExcelRowMandatory" xml:space="preserve">
+    <value>Linea: *
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelFailRate" xml:space="preserve">
+    <value>Tasso di errore:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelFilamentDensity" xml:space="preserve">
+    <value>Densità Filamento:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelFilamentType" xml:space="preserve">
+    <value>Tipo Filamento</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelFilamentUsedLength" xml:space="preserve">
+    <value>Filamento richiesto:
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelFileName" xml:space="preserve">
+    <value>Nome file:</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="LabelFixedPrice" xml:space="preserve">
+    <value>Tariffa oraria fissa della macchina:
+</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LabelFolder" xml:space="preserve">
+    <value>Cartella:</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelGcode" xml:space="preserve">
+    <value>Gcode:</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="LabelGuidReadOnly" xml:space="preserve">
+    <value>GUID (sola lettura):</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelHandlingFee" xml:space="preserve">
+    <value>Pacchetto di azione:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelHasHeatbed" xml:space="preserve">
+    <value>Ha un letto riscaldato:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelHeatbed" xml:space="preserve">
+    <value>Letto riscaldatore</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelHeatbedTemp" xml:space="preserve">
+    <value>Temperatura del letto del riscaldatore:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelHeatbedTempMandatory" xml:space="preserve">
+    <value>Temp. letto riscaldatore</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelHours" xml:space="preserve">
+    <value>Ore:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelIncludedTax" xml:space="preserve">
+    <value>Tasse incluse:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelInterestMandatory" xml:space="preserve">
+    <value>Interessi *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelInterval" xml:space="preserve">
+    <value>Intervallo:</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelIPAdressMandatory" xml:space="preserve">
+    <value>Indirizzo IP *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelIsAvtiveMandatory" xml:space="preserve">
+    <value>È attivo *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelIsManufacturerActive" xml:space="preserve">
+    <value>Il produttore viene rilasciato per gli ordini</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelIsSupplierActive" xml:space="preserve">
+    <value>Il fornitore viene rilasciato per gli ordini</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelIsSupplierActiveMandatory" xml:space="preserve">
+    <value>È attivo *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelLocation" xml:space="preserve">
+    <value>posizione:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelLocationCosts" xml:space="preserve">
+    <value>Costi del sito:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelMachineCosts" xml:space="preserve">
+    <value>Costi della macchina:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelMachineHourRate" xml:space="preserve">
+    <value>Tariffa oraria de la macchina</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelMachineHoursMandatory" xml:space="preserve">
+    <value>Ore macchina: *
+</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LabelMachineHoursPerMonthMandatory" xml:space="preserve">
+    <value>Ore macchina al mese *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelMachineHoursPerYearMandatory" xml:space="preserve">
+    <value>Ore macchina all'anno *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelMainenanceAndRepair" xml:space="preserve">
+    <value>Costi di manutenzione e riparazione:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelMaintenance" xml:space="preserve">
+    <value>Manutenzione:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelManufacturer" xml:space="preserve">
+    <value>Produttore:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelManufacturerNameMandatory" xml:space="preserve">
+    <value>Nome del produttore *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelMargin" xml:space="preserve">
+    <value>Profitto:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelMaterialCosts" xml:space="preserve">
+    <value>I costi dei materiali:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelMaterialKindMandatory" xml:space="preserve">
+    <value>Tipo materiale*:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelMaterialTypeMandatory" xml:space="preserve">
+    <value>Tipo materiale*:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelMaxPowerConsumption" xml:space="preserve">
+    <value>Max. Potenza:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelMaxPowerConsumptionMandatory" xml:space="preserve">
+    <value>Max. Potenza *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelNameMandatory" xml:space="preserve">
+    <value>Nome *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelNozzle" xml:space="preserve">
+    <value>ugello:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelNozzleTemp" xml:space="preserve">
+    <value>Temperatura ugello:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelOccurredAtFormated" xml:space="preserve">
+    <value>A: {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="LabelOrUsePreDefinedAmoutns" xml:space="preserve">
+    <value>oppure scegli tra le quantità preimpostate di seguito.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelOutputFileFormatMandatory" xml:space="preserve">
+    <value>File di output regex: *</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelPackageMandatory" xml:space="preserve">
+    <value>Pacchetto *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelPackageSize" xml:space="preserve">
+    <value>Contenuto della confezione:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelParsingGcode" xml:space="preserve">
+    <value>Analizza GCode:</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelPieces" xml:space="preserve">
+    <value>Lotto</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelPingCounter" xml:space="preserve">
+    <value>Contatore ping:</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelPort" xml:space="preserve">
+    <value>Interfaccia:</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelPowerLevel" xml:space="preserve">
+    <value>Livello di potenza:</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelPreDefinedAmounts" xml:space="preserve">
+    <value>Quantità preimpostate</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelPrice" xml:space="preserve">
+    <value>Prezzo:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelPriceMandatory" xml:space="preserve">
+    <value>Prezzo *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelPriceWithoutTax" xml:space="preserve">
+    <value>Senza tasse:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelPrintDurationMandatory" xml:space="preserve">
+    <value>Tempo di stampa *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelPrinterModelMandatory" xml:space="preserve">
+    <value>Modello stampante *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelPrinterNameMandatory" xml:space="preserve">
+    <value>Nome della stampante *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelPrinterProfile" xml:space="preserve">
+    <value>Profilo della stampante:</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelPrinterSlug" xml:space="preserve">
+    <value>Modulo del titolo della stampante:</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="LabelPrinterState" xml:space="preserve">
+    <value>Stato della stampante:</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelPrinterTypeMandatory" xml:space="preserve">
+    <value>Tipo di stampante *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelPrintingTime" xml:space="preserve">
+    <value>Tempo di stampa stimato:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelProgress" xml:space="preserve">
+    <value>Progresso:</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="LabelProjectNameMandatory" xml:space="preserve">
+    <value>Nome del progetto: *</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LabelPropertyMandatory" xml:space="preserve">
+    <value>Caratteristica: *
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelQuantity" xml:space="preserve">
+    <value>Quantità:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelQuantityMandatory" xml:space="preserve">
+    <value>Quantità *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelRepetierServerAddressMandatory" xml:space="preserve">
+    <value>Indirizzo IP / nome dominio: *
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelReplacemenCostsManadatory" xml:space="preserve">
+    <value>Costi di sostituzione *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelReplaceWith" xml:space="preserve">
+    <value>Sostituisci con:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelSearchFor" xml:space="preserve">
+    <value>Cerca:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelSelectCurrentCalculationMandatory" xml:space="preserve">
+    <value>Scegli il calcolo *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelSelectCurrentMaterialMandatory" xml:space="preserve">
+    <value>Scegli il materiale *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelSelectCurrentPrinterMandatory" xml:space="preserve">
+    <value>Scegli la stampante *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelSelectedFiles" xml:space="preserve">
+    <value>File selezionati:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelSelectFromList" xml:space="preserve">
+    <value>Scegli dalla lista:</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LabelSelectMaterialMandatory" xml:space="preserve">
+    <value>Scegli il materiale *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelSelectPrinter" xml:space="preserve">
+    <value>Scegli la tua stampante:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelSelectPrinterFromList" xml:space="preserve">
+    <value>Seleziona la stampante dall'elenco
+</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LabelSelectTheSettingsYouWantToReset" xml:space="preserve">
+    <value>Scegli le impostazioni che desideri ripristinare:</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelSerialPort" xml:space="preserve">
+    <value>Interfaccia seriale:</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelShopUri" xml:space="preserve">
+    <value>Link al negozio:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelSingleFailPrintDuration" xml:space="preserve">
+    <value>Assenteismo individuale:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelSinglePrintDuration" xml:space="preserve">
+    <value>Singolo tempo di stampa:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelSKU" xml:space="preserve">
+    <value>Numero articolo:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelSlicer" xml:space="preserve">
+    <value>Slicer:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelSlicerAdditionalCommands" xml:space="preserve">
+    <value>Comandi aggiuntivi:</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelSlicerNameMandatory" xml:space="preserve">
+    <value>MNome Slicer:*</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelSlicerPathMandatory" xml:space="preserve">
+    <value>Percorso di installazione dello Slicer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelSlicerUsageTypeMandatory" xml:space="preserve">
+    <value>Tipo di utilizzo: *</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelStl" xml:space="preserve">
+    <value>STL:</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="LabelStoredEventsAmountMandatory" xml:space="preserve">
+    <value>Numero di eventi salvati: *</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="LabelSupplierNameMandatory" xml:space="preserve">
+    <value>Nome fornitore *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelTargetModelGroupMandatory" xml:space="preserve">
+    <value>Gruppo di modelli *:
+</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="LabelTaxRate" xml:space="preserve">
+    <value>Aliquota fiscale:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelTemeratureMandatory" xml:space="preserve">
+    <value>Temperatura *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelUpdateIntervalInSecondsMandatory" xml:space="preserve">
+    <value>Intervallo di aggiornamento (sec.): *</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelUsedAmountOfMaterial" xml:space="preserve">
+    <value>Quantità di materiale richiesto *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelUsefulLifeYearsMandatory" xml:space="preserve">
+    <value>Vita utile in anni *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelUseSavedCommands" xml:space="preserve">
+    <value>Usa comando salvato:</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelVendor" xml:space="preserve">
+    <value>Venditore:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelVolume" xml:space="preserve">
+    <value>Volume:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelVolumeMandatory" xml:space="preserve">
+    <value>Volume *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelWebCam" xml:space="preserve">
+    <value>WebCam:</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="LabelWebSocket" xml:space="preserve">
+    <value>WebSocket:</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="LabelWorksheetMandatory" xml:space="preserve">
+    <value>Cartella di lavoro: *
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelWorkstepCalculationTypeMandatory" xml:space="preserve">
+    <value>Tipo di calcolo *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelWorkstepCategoryMandatory" xml:space="preserve">
+    <value>Categoria della fase di lavoro *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelWorkstepCategoryNameMandatory" xml:space="preserve">
+    <value>Nome categoria *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelWorkstepDuration" xml:space="preserve">
+    <value>Durata (solo all'ora):</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelWorkstepDurationMandatory" xml:space="preserve">
+    <value>Durata della fase di lavoro *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelWorkstepDurationUnit" xml:space="preserve">
+    <value>Ora / e</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelWorkstepNameMandatory" xml:space="preserve">
+    <value>Nome della fase di lavoro *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelWorkstepPriceMandatory" xml:space="preserve">
+    <value>Prezzo per la fase di lavoro *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelWorkstepTypeMandatory" xml:space="preserve">
+    <value>Tipo della fase di lavoro *:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabeTemplateFileMandatory" xml:space="preserve">
+    <value>File modello Excel: *
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Lingua</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LastLicenseCheck" xml:space="preserve">
+    <value>Ultimo controllo della licenza:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Layer" xml:space="preserve">
+    <value>Strato</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Layers" xml:space="preserve">
+    <value>Strati</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="LegalNoteOctoprint" xml:space="preserve">
+    <value>Questo non è un software ufficiale di Octoprint o in alcun modo associato a Octoprint o Gina Häußge. Contiene solo l'API OctoPrint per interagire con il server OctoPrint.
+</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LegalNoteRepetierServerPro" xml:space="preserve">
+    <value>Questo non è un software ufficiale da Repetier Server o collegato in alcun modo con Repetier Server o il suo proprietario. Contiene solo l'API di riposo del server Repetier per interagire con il server.</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LENS" xml:space="preserve">
+    <value>LENS (Laser Engineered Net Shaping)®</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Libraries" xml:space="preserve">
+    <value>Librerie</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LibraryUrl" xml:space="preserve">
+    <value>URL della libreria</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="License" xml:space="preserve">
+    <value>Licenza</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LicenseFormatInvalid" xml:space="preserve">
+    <value>Il formato della licenza inserita non è valido</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="LicenseFormatValid" xml:space="preserve">
+    <value>Il formato della licenza inserita è valido</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="LicenseServerOffline" xml:space="preserve">
+    <value>Server di licenza offline o irraggiungibile</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="LicenseState" xml:space="preserve">
+    <value>Stato della licenza:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>Lista</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>Aprire</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LoadFromManufacturer" xml:space="preserve">
+    <value>Carica dal creatore</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LoadFromSupplier" xml:space="preserve">
+    <value>Caricare dal fornitore</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LoadGcodeAnalysisFromServer" xml:space="preserve">
+    <value>Carica l'analisi Gcode dal server</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LoadInformationFromPrinter" xml:space="preserve">
+    <value>Carica dalla stampante
+</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LoadPrinterList" xml:space="preserve">
+    <value>Carica l'elenco delle stampanti</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Percorso</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LocationCosts" xml:space="preserve">
+    <value>Costi di localizzazione</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="MachineHourRate" xml:space="preserve">
+    <value>Tariffa oraria della macchina</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="MachineHours" xml:space="preserve">
+    <value>Ore di macchina</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="MaintainanceAndRepairCosts" xml:space="preserve">
+    <value>Costi di assistenza e manutenzione</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Makerbot" xml:space="preserve">
+    <value>Makerbot</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Manufacturer" xml:space="preserve">
+    <value>Fabbricante</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="ManufacturerIsInvalidForPurchase" xml:space="preserve">
+    <value>Il produttore è bloccato
+</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="ManufacturerIsValidForPurchase" xml:space="preserve">
+    <value>Il produttore è rilasciato
+</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="Manufacturers" xml:space="preserve">
+    <value>Fabbricante</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="MarkedFiledsMandatory" xml:space="preserve">
+    <value>Tutti i campi contrassegnati con '*' sono obbligatori.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="MasterPassword" xml:space="preserve">
+    <value>Password principale</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Material" xml:space="preserve">
+    <value>Materiale</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="MaterialIsSealed" xml:space="preserve">
+    <value>Il materiale è chiuso
+</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="Materials" xml:space="preserve">
+    <value>Materiali</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="MaxTempHeatbed" xml:space="preserve">
+    <value>Max. Temp. Letto di riscaldamento</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menu</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Messaggio</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Messages" xml:space="preserve">
+    <value>Messagi</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="MinimizeInsteadOfTerminating" xml:space="preserve">
+    <value>Riduci al minimo quando chiudi invece di uscire</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="MinimizeToTrayInsteadOfTaskbar" xml:space="preserve">
+    <value>Riduci a icona nel Tray anziché nella barra delle attività</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Misc" xml:space="preserve">
+    <value>Miscellanea/Miscellaneo</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="MJ" xml:space="preserve">
+    <value>MJ (Material Jetting)®</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="MJF" xml:space="preserve">
+    <value>MJF (Multi Jet Fusion)®</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Model" xml:space="preserve">
+    <value>Modello</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="MoveAndRestart" xml:space="preserve">
+    <value>Sposta e riavvia</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="MultipleInstances" xml:space="preserve">
+    <value>Istanze multiple</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="MyCalculation" xml:space="preserve">
+    <value>Il mio calcolo</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nome</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>Nuovo</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="NewCategory" xml:space="preserve">
+    <value>Nuova categoria</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="NewExcelExporterSettings" xml:space="preserve">
+    <value>Nuova impostazione per il modello Excel
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="NewExcelExporterTemplate" xml:space="preserve">
+    <value>Nuovo modello di Excel
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="NewMachineHourRate" xml:space="preserve">
+    <value>Nuova tariffa oraria della macchina
+</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="NewManufacturer" xml:space="preserve">
+    <value>Nuovo produttore</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="NewMaterial" xml:space="preserve">
+    <value>Nuovo materiale</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="NewMaterialAsNewWindow" xml:space="preserve">
+    <value>Nuovo materiale (nuova finestra)</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="NewPrinter" xml:space="preserve">
+    <value>Nuova stampante</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="NewPrinterAsNewWindow" xml:space="preserve">
+    <value>Nuova stampante (nuova finestra)</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="NewSupplier" xml:space="preserve">
+    <value>Nuovo fornitore</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="NewTab" xml:space="preserve">
+    <value>Nuova scheda</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="NewWorkstepAsNewWindow" xml:space="preserve">
+    <value>Nuovo passaggio (nuova finestra)</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="NoFilesOrFolderInThisDirectoryFound" xml:space="preserve">
+    <value>Nessun file o cartella trovato in questa directory / posizione di archiviazione.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="NoGcodeSelectedDots" xml:space="preserve">
+    <value>Nessun GCode selezionato ...</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="NoLicenseActivatedYet" xml:space="preserve">
+    <value>Nessuna licenza specificata per questa installazione. Fai clic sul pulsante in basso per attivare subito la tua versione pro!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="NoMessagesAvailable" xml:space="preserve">
+    <value>Nessuna notizia disponibile</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>Nessun</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="NoPrintPrintActive" xml:space="preserve">
+    <value>Nessun lavoro di stampa attivo</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="NoSaveAsNew" xml:space="preserve">
+    <value>No, salva come nuovo</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="NotChanged" xml:space="preserve">
+    <value>Non è cambiato</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="NotePingCounter" xml:space="preserve">
+    <value>Per mantenere aperta la connessione a WebSocket, è necessario inviare un comando ping al server Repetier. Il valore visualizzato mostra i comandi ping inviati.</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="NoteRepetierServerPrinterName" xml:space="preserve">
+    <value>Immettere il nome come appare nella dashboard. Lo strumento sostituisce automaticamente gli spazi con un carattere di sottolineatura.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Note_OctoPrintShowFunctions" xml:space="preserve">
+    <value>Se si desidera nascondere tutte le funzioni relative a OctoPrint nel software, è sufficiente rimuovere il segno di spunta nella casella di controllo.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Note_OutputFileFormat" xml:space="preserve">
+    <value>A dipendenza del slicer utilizzato, è possibile aggiungere un prefisso o suffisso al nome del file STL. Qui puoi specificare il formato in modo che lo strumento possa trovare e importare il file Gcode in un secondo momento.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Note_UpdateInterval" xml:space="preserve">
+    <value>Questo è l'intervallo di tempo in secondi in cui lo strumento recupera le informazioni più recenti dal server di stampa.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="NoUpdateAvailable" xml:space="preserve">
+    <value>Nessun aggiornamento è attualmente disponibile.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Nozzle" xml:space="preserve">
+    <value>ugello</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="NPJ" xml:space="preserve">
+    <value>NPJ (NanoParticle Jetting)®</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="OctoPrint" xml:space="preserve">
+    <value>OctoPrint</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="OctoPrintServerIsOffline" xml:space="preserve">
+    <value>Il tuo server OctoPrint sembra essere offline. Controlla il tuo server e prova a riconnetterti di seguito.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="OctoPrintServerOfflineWithoutReconnect" xml:space="preserve">
+    <value>Il tuo server OctoPrint sembra essere offline. Controlla il tuo server e riprova.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="OctoPrintServerProIsNotConfigured" xml:space="preserve">
+    <value>Sembra che il tuo server OctoPrint non sia configurato nelle tue impostazioni. Vai alla pagina delle impostazioni e imposta prima il tuo server!</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Off" xml:space="preserve">
+    <value>Spento</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Offer" xml:space="preserve">
+    <value>Offerta</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="OfferId" xml:space="preserve">
+    <value>Numero dell'offerta
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="OfferIdLabel" xml:space="preserve">
+    <value>Numero dell'offerta:
+</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Official" xml:space="preserve">
+    <value>Ufficialmente</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="Offline" xml:space="preserve">
+    <value>Offline</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="OfflineLicenseInvalid" xml:space="preserve">
+    <value>Il server delle licenze non è in linea o non si è connessi a Internet. Sfortunatamente, il tuo ultimo controllo della licenza è stato troppo tempo fa. La versione Pro è temporaneamente inattiva fino a quando non sei di nuovo online o il nostro server non funziona di nuovo.</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="OfflineLicenseValid" xml:space="preserve">
+    <value>Il server delle licenze non è in linea o non si è connessi a Internet. Tuttavia, l'ultimo controllo della licenza è ancora valido. Puoi continuare a utilizzare la versione Pro.</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="On" xml:space="preserve">
+    <value>Acceso</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Online" xml:space="preserve">
+    <value>On-line</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="OnlyNumbersAreAllowed" xml:space="preserve">
+    <value>Sono ammessi solo numeri!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="OpenASlicerInstanceForEachFile" xml:space="preserve">
+    <value>Sì, apri una nuova istanza per ogni file</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="OpenCalculationViewOnFileLoaded" xml:space="preserve">
+    <value>Aprire la vista del risultato del calcolo quando viene caricato un calcolo</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="OpenFile" xml:space="preserve">
+    <value>Apri il file</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="OpenFolder" xml:space="preserve">
+    <value>Apri cartella</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="OpenGcodeFromOctoPrint" xml:space="preserve">
+    <value>Apri Gcode da OctoPrint</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="OpenGcodeorStlFile" xml:space="preserve">
+    <value>Apri STL o Gcode
+</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="OpenInSlicer" xml:space="preserve">
+    <value>Apri in slicer</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="OpenLicense" xml:space="preserve">
+    <value>Apri licenza</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="OpenLocation" xml:space="preserve">
+    <value>Aprire percorso</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="OpenMessage" xml:space="preserve">
+    <value>Messaggio aperto</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="OpenProject" xml:space="preserve">
+    <value>Apri progetto</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="OpenSettingsLocation" xml:space="preserve">
+    <value>Apri la cartella delle impostazioni</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="OpenSlicerInstanceForEachFile" xml:space="preserve">
+    <value>Apri slicer per ogni file individualmente?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="OpenStlFile" xml:space="preserve">
+    <value>Scegli o trascina il file .stl</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="OpenWebCam" xml:space="preserve">
+    <value>Apri WebCam</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="OpenWebsite" xml:space="preserve">
+    <value>Apri il sito web</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Operational" xml:space="preserve">
+    <value>Pronto</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>O</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>Sovrascrittura</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="OverwriteCurrencySymbol" xml:space="preserve">
+    <value>Sovrascrivi il simbolo di valuta</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="PackageSize" xml:space="preserve">
+    <value>Contenuto della confezione:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="PasswordRepeat" xml:space="preserve">
+    <value>Conferma password</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="PasswordsDoNotMatch" xml:space="preserve">
+    <value>Le password non corrispondono!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>Pausa</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="PercentageProgressOf" xml:space="preserve">
+    <value>Completato {0} del {1}%</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="PerHour" xml:space="preserve">
+    <value>All'ora</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="PerJob" xml:space="preserve">
+    <value>Per ordine</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="PerMonth" xml:space="preserve">
+    <value>/ Mese</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="PerPiece" xml:space="preserve">
+    <value>Per pezzo</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="PerYear" xml:space="preserve">
+    <value>/ Anno</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="PleaseAddValidExcelColumnString" xml:space="preserve">
+    <value>Inserisci una colonna Excel valida!
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Portable" xml:space="preserve">
+    <value>Portabile</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Post" xml:space="preserve">
+    <value>Rifinitura</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Powder" xml:space="preserve">
+    <value>Polvere
+</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="Pre" xml:space="preserve">
+    <value>Pre-elaborazione</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="PrepareSlicing" xml:space="preserve">
+    <value>Prepara la funzione Slicer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Prezzo</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="PricePer" xml:space="preserve">
+    <value>Prezzo per
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Stampare</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Printer" xml:space="preserve">
+    <value>Stampante</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="PrinterHasHeatbed" xml:space="preserve">
+    <value>La stampante ha un letto riscaldato</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Printers" xml:space="preserve">
+    <value>Stampante 3D</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Printing" xml:space="preserve">
+    <value>Stampa</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="PrintOffer" xml:space="preserve">
+    <value>Offerta di stampa
+</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="PrivacyCheckNoAnalytics" xml:space="preserve">
+    <value>Non utilizziamo software di analisi per tracciare il tuo comportamento!</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="PrivacyCheckNoDataCollection" xml:space="preserve">
+    <value>Non raccogliamo i tuoi dati, mai!</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>Nome del prodotto</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="ProgramExecutionDirectoryNotFound" xml:space="preserve">
+    <value>Elenco di esecuzione del programma non trovata durante il tentativo di creare il percorso della directory della licenza!
+</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="ProOnly" xml:space="preserve">
+    <value>Bloccata - funzione pro</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="ProOnlyFunction" xml:space="preserve">
+    <value>Questa è una funzione professionale. Esegui ora l'upgrade alla versione Pro per sbloccare questa funzione!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="ProvidedInformationArePerYear" xml:space="preserve">
+    <value>Le informazioni fornite sono all'anno</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="PrusaSlicer" xml:space="preserve">
+    <value>PrusaSlicer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Reconnect" xml:space="preserve">
+    <value>Connettiti di nuovo</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="RemainingContent" xml:space="preserve">
+    <value>Contenuto rimanente
+</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="Reorder" xml:space="preserve">
+    <value>Riordino</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Repeat" xml:space="preserve">
+    <value>ripetere</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="RepetierServerPro" xml:space="preserve">
+    <value>Repetier Server Pro</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="RepetierServerProConnectionNote" xml:space="preserve">
+    <value>È possibile immettere l'indirizzo IP "x.x.x.x" o il nome di dominio (FQDN) "repetier-server.local" per stabilire una connessione.
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="RepetierServerProIsNotConfigured" xml:space="preserve">
+    <value>Repetier Server Pro non sembra essere ancora configurato nelle impostazioni. Vai alla pagina delle impostazioni e imposta prima il tuo server!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="RepetierServerProIsOffline" xml:space="preserve">
+    <value>Repetier Server Pro sembra essere offline. Controlla il tuo server e prova a riconnetterti di seguito.</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="RepetierServerProIsOfflineOrNotConfigured" xml:space="preserve">
+    <value>Sembra che Repetier Server Pro sia offline o non configurato correttamente nelle impostazioni.</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="ReplacementCosts" xml:space="preserve">
+    <value>Valore di sostituzione</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Rimandare</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="ResetLicensesMessage" xml:space="preserve">
+    <value>Reimposta licenza?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Resin" xml:space="preserve">
+    <value>Resina</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="Resources" xml:space="preserve">
+    <value>Risorse</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Restart" xml:space="preserve">
+    <value>Nuovo inizio</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="RestartLater" xml:space="preserve">
+    <value>Riavvio più tardi ...</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="RestartNow" xml:space="preserve">
+    <value>Riavvia ora!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="RestartTheApplicationSoThatAllChangesAreApplied" xml:space="preserve">
+    <value>L'applicazione deve essere riavviata in modo che la nuova lingua possa essere impostata e aggiornata!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="RestartTheApplicationToChangeTheLanguage" xml:space="preserve">
+    <value>Riavvia l'applicazione per cambiare la lingua in quella selezionata!</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Resume" xml:space="preserve">
+    <value>Continua</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Row" xml:space="preserve">
+    <value>Fila</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="RunChecker" xml:space="preserve">
+    <value>Inizia il controllo preliminare</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="RunSearchAndReplace" xml:space="preserve">
+    <value>Inizia la ricerca e la sostituzione</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="RunSlicer" xml:space="preserve">
+    <value>Partire Slicer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Salva</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SaveCalculation" xml:space="preserve">
+    <value>Salva calcolo</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SaveChanges" xml:space="preserve">
+    <value>Salva le modifiche</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SaveConnectionInformation" xml:space="preserve">
+    <value>Salva le impostazioni di connessione</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="SaveSettingsInApplicationFolder" xml:space="preserve">
+    <value>Salva le impostazioni nella cartella dell'applicazione</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Cerca</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SearchDots" xml:space="preserve">
+    <value>...</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SearchedApplicationNotFound" xml:space="preserve">
+    <value>Impossibile trovare l'applicazione che stavi cercando</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SearchedLanguageNotFound" xml:space="preserve">
+    <value>La lingua che stavi cercando non è stata trovata</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SearchedSettingsNotFound" xml:space="preserve">
+    <value>Impostazione cercata non trovata</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SectionIsBeta" xml:space="preserve">
+    <value>Questa sezione è in stato beta, il che significa che potrebbe contenere errori e attualmente non è completamente funzionante. In caso di problemi, si prega di contattare il nostro team di supporto.</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="SectionLocked" xml:space="preserve">
+    <value>Questa sezione è attualmente bloccata e sarà disponibile in una versione futura.</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="SelectedGcode" xml:space="preserve">
+    <value>Gcode selezionato</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="SelectedSettingsAreReset" xml:space="preserve">
+    <value>Le impostazioni selezionate vengono ripristinate</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SelectFiles" xml:space="preserve">
+    <value>Scegli file</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SelectFolder" xml:space="preserve">
+    <value>Scegli le cartelle</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SelectGcodeFile" xml:space="preserve">
+    <value>Scegli un file .gcode ...</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SelectOrDropGcodeFile" xml:space="preserve">
+    <value>Scegli o trascina il file .gcode</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SelectPrinterToStartOctoPrintDashboard" xml:space="preserve">
+    <value>Scegli una stampante per avviare la dashboard di OctoPrint</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="SelectPrinterToStartRepetierDashboard" xml:space="preserve">
+    <value>Selezionare la stampante per avviare il dashboard del server Reptier</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="SelectSlicerAppPath" xml:space="preserve">
+    <value>Scegli il percorso di installazione dello Slicer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SelectYourDefaultPrintServer" xml:space="preserve">
+    <value>Scegli il tuo server di stampa predefinito di seguito.</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="SendGcode" xml:space="preserve">
+    <value>Invia gcode</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="SendGcodeToRepetierServerPro" xml:space="preserve">
+    <value>Invia al tuo Repetier Server Pro</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SendTestFile" xml:space="preserve">
+    <value>Invia file di prova</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SendToSlicer" xml:space="preserve">
+    <value>Invia a Slicer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SetFlow" xml:space="preserve">
+    <value>Impostare il flusso</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="SetMasterPassword" xml:space="preserve">
+    <value>Imposta la password principale</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SetSpeed" xml:space="preserve">
+    <value>Imposta la velocità</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="SetTemperature" xml:space="preserve">
+    <value>Impostare la temperatura</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Impostazioni</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SettingsEventLogger" xml:space="preserve">
+    <value>Registratore di eventi</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="SettingsEventLoggerImportantNote" xml:space="preserve">
+    <value>Il registratore di eventi ci aiuta a eseguire il debug degli errori nella nostra applicazione. Tutte le informazioni raccolte vengono archiviate localmente sul computer finché l'applicazione è in esecuzione. Nessuna informazione viene inviata da nessuna parte. Se hai riscontrato un errore, ti preghiamo di inviarci le informazioni dall'evento di errore insieme a una descrizione dettagliata dell'errore.</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="SettingsFileNotFoundOrCorrupted" xml:space="preserve">
+    <value>Il file delle impostazioni non è stato trovato o è danneggiato</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SettingsGroupApps" xml:space="preserve">
+    <value>Impostazioni dell'app</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SettingsGroupDebug" xml:space="preserve">
+    <value>Debug</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="SettingsGroupExporter" xml:space="preserve">
+    <value>Esportator</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="SettingsGroupGeneral" xml:space="preserve">
+    <value>Impostazioni generali</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SettingsGroupLicense" xml:space="preserve">
+    <value>Licenza</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SettingsGroupNotFound" xml:space="preserve">
+    <value>Questo gruppo non esiste</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SettingsGroupPrivacyPolicy" xml:space="preserve">
+    <value>Vita privata</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="SettingsNameAppearance" xml:space="preserve">
+    <value>Apparenza</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SettingsNameAppSettings" xml:space="preserve">
+    <value>Impostazioni dell'app
+</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SettingsNameCalculation" xml:space="preserve">
+    <value>Calcoli</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="SettingsNameEULA" xml:space="preserve">
+    <value>EULA</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SettingsNameExcelExporter" xml:space="preserve">
+    <value>Esportatore di Excel</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="SettingsNameGcode" xml:space="preserve">
+    <value>GCode</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SettingsNameGeneral" xml:space="preserve">
+    <value>Generalmente</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SettingsNameImportExport" xml:space="preserve">
+    <value>Importa ed esport</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SettingsNameLanguage" xml:space="preserve">
+    <value>Lingua</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SettingsNameLicense" xml:space="preserve">
+    <value>Llicenza</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SettingsNameNotFound" xml:space="preserve">
+    <value>Questa pagina delle impostazioni non esiste!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SettingsNameOctoPrint" xml:space="preserve">
+    <value>OctoPrint</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="SettingsNamePrinter" xml:space="preserve">
+    <value>Stampante 3D
+</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="SettingsNameRepetierServer" xml:space="preserve">
+    <value>Repetier Server Pro</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SettingsNameSlicer" xml:space="preserve">
+    <value>Slicer</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SettingsNameUpdate" xml:space="preserve">
+    <value>Aggiornare</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SettingsNameWindow" xml:space="preserve">
+    <value>Finestra</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SettingsPrivacyPolicy" xml:space="preserve">
+    <value>Protezione dei dati</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="SettingsReseted" xml:space="preserve">
+    <value>Le impostazioni sono state ripristinate!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SetZoomFitPage" xml:space="preserve">
+    <value>Zoom per adattarsi a la pagina</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>Mostra</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="ShowCameraInfo" xml:space="preserve">
+    <value>Mostra le informazioni sulla fotocamera?</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="ShowEULA" xml:space="preserve">
+    <value>Mostra EULA</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="ShowFollowingApplicationOnStartup" xml:space="preserve">
+    <value>Mostra la seguente applicazione all'avvio del software</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="ShowLocalLicenses" xml:space="preserve">
+    <value>Mostra i file di licenza locali</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="ShowOctoPrintFeaturesInTool" xml:space="preserve">
+    <value>Mostra le funzioni OctoPrint nel software</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Shutdown" xml:space="preserve">
+    <value>Spegni</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="Simplify3D" xml:space="preserve">
+    <value>Simplify3D ®</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Single" xml:space="preserve">
+    <value>Individualmente</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Skeinforge" xml:space="preserve">
+    <value>Skeinforge</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SkipAndUsePersonalVersion" xml:space="preserve">
+    <value>Salta, userò la versione gratuita</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SKU" xml:space="preserve">
+    <value>Numero dell'articolo</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SLA" xml:space="preserve">
+    <value>SLA (Stereolithography)®</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Slic3r" xml:space="preserve">
+    <value>Slic3r PE</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Slice" xml:space="preserve">
+    <value>Slice</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Slicer" xml:space="preserve">
+    <value>Slicer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SlicerCommands" xml:space="preserve">
+    <value>Comandi slicer</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="SlicerCommandsNote" xml:space="preserve">
+    <value>Se non viene fornito alcun comando, viene aperta solo la GUI dello slicer e vengono caricati i file STL. Controllare i comandi per il proprio slicer preferito nella documentazione del slicer (se supportato).</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SlicerMultipleInstancesNote" xml:space="preserve">
+    <value>Se si attiva questa opzione, viene aperto un slicer per ciascun file. Altrimenti tutti i file vengono aperti nello stesso slicer.</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Slicers" xml:space="preserve">
+    <value>Slicers</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="SLM" xml:space="preserve">
+    <value>SLM (Selective Laser Melting)®</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Slogan" xml:space="preserve">
+    <value>Un'applicazione software per calcolare il prezzo più accurato per il tuo prossimo lavoro di stampa!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SLS" xml:space="preserve">
+    <value>SLS (Selective Laser Sintering)®</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Snapmakerjs" xml:space="preserve">
+    <value>Snapmakerjs</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Speed" xml:space="preserve">
+    <value>Velocità</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="StartupApplication" xml:space="preserve">
+    <value>Applicazione start</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Stl" xml:space="preserve">
+    <value>Stl</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="STLViewer" xml:space="preserve">
+    <value>Visualizzatore STL</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="SupplierIsInvalidForPurchase" xml:space="preserve">
+    <value>Il fornitore è bloccato
+</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="SupplierIsValidForPurchase" xml:space="preserve">
+    <value>Il fornitore è rilasciato
+</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="Suppliers" xml:space="preserve">
+    <value>Fornitori</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="TabHeaderCalculate" xml:space="preserve">
+    <value>Calcola</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="TabHeaderCalculations" xml:space="preserve">
+    <value>Calcoli</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Temperature" xml:space="preserve">
+    <value>Temperatura</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="TemplateTargetMandatory" xml:space="preserve">
+    <value>Obiettivo: *
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>tema</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="TheSettingsLocationIsNotAffected" xml:space="preserve">
+    <value>La posizione delle impostazioni non è interessata</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Timestamp" xml:space="preserve">
+    <value>Timbro tempo</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="TooltipApiKeyRepetier" xml:space="preserve">
+    <value>La chiave API ...</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="TooltipApplyTaxRate" xml:space="preserve">
+    <value>Selezionare questa opzione per attivare l'aliquota fiscale</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="TooltipCreateCopies" xml:space="preserve">
+    <value>Se selezionato, il risultato viene scritto in un nuovo file. Gli originali rimangono inalterati</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="ToolTipDeleteAllSelectedCalculations" xml:space="preserve">
+    <value>Elimina tutti i calcoli selezionati
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="TooltipEnergyCosts" xml:space="preserve">
+    <value>Il prezzo per un kW / h in centesimi.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="TooltipFailRate" xml:space="preserve">
+    <value>Utilizzare questo dispositivo di scorrimento per il tasso di errore</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="TooltipHandlingFee" xml:space="preserve">
+    <value>Questa tassa è calcolata per pezzo</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="TooltipIPAdressRepetier" xml:space="preserve">
+    <value>L'indirizzo IP del tuo server Repetier ...</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="TooltipIPAdressRepetierOrFQDN" xml:space="preserve">
+    <value>Indirizzo IP o nome dominio ...
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="TooltipMargin" xml:space="preserve">
+    <value>Usa questo cursore per indicare il tuo profitto</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="TooltipMHRProvidedInformationTimeBase" xml:space="preserve">
+    <value>Scegli quando fornire informazioni all'anno</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="TooltipPieces" xml:space="preserve">
+    <value>Il numero di stampe per l'ordine</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="TooltipPrinterNameRepetier" xml:space="preserve">
+    <value>Il nome della stampante</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="ToolTipSelectAllCalculations" xml:space="preserve">
+    <value>Seleziona / deseleziona tutti i calcoli
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="TooltipSingleFailTime" xml:space="preserve">
+    <value>Tempo aggiuntivo calcolato per il tasso di errore impostato</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="TooltipTaxRate" xml:space="preserve">
+    <value>L'aliquota fiscale da applicare</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="TooltipTextToReplaceWith" xml:space="preserve">
+    <value>Inserisci il testo per sostituire quello che stai cercando ...</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="TooltipTextToSearchFor" xml:space="preserve">
+    <value>Inserisci il testo di ricerca ...</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="TooltipWorkstepDuration" xml:space="preserve">
+    <value>La durata della fase di lavoro</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="TooltipWorkstepPrice" xml:space="preserve">
+    <value>Calcolo in base al tipo di calcolo desiderato.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="ToolTip_DeleteFiles" xml:space="preserve">
+    <value>Elimina file</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="ToolTip_FixedValueForMachineHourRate" xml:space="preserve">
+    <value>Se questa opzione è attivata, è possibile inserire un valore fisso per la tariffa oraria della macchina, ad es. B. se hai già calcolato la tariffa oraria della macchina in un altro strumento / foglio Excel.
+</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="ToolTip_LoadGcodeAnalysisFromOctoPrint" xml:space="preserve">
+    <value>Carica l'analisi Gcode da OctoPrint</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="ToolTip_New" xml:space="preserve">
+    <value>Nuovo</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="ToolTip_OpenFolder" xml:space="preserve">
+    <value>Apri cartelle</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="ToolTip_OpenGCodeEditor" xml:space="preserve">
+    <value>Apri GCode Editor</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="ToolTip_Reload" xml:space="preserve">
+    <value>Ricarica</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="ToolTip_StartPrint" xml:space="preserve">
+    <value>Stampa questo modello</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="ToolTip_TimebaseMachineHourRate" xml:space="preserve">
+    <value>Seleziona questa casella se desideri fornire tutte le informazioni all'anno. Altrimenti, tutte le informazioni inserite vengono moltiplicate per 12.
+</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="ToolTip_TranslateProjectUrl" xml:space="preserve">
+    <value>Aiuta a tradurre questo strumento nella tua lingua!</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="Transparency" xml:space="preserve">
+    <value>Trasparenza</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Tray" xml:space="preserve">
+    <value>Tray</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Tipo</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Understood" xml:space="preserve">
+    <value>Capito</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="UnderstoodAndDontShowAgain" xml:space="preserve">
+    <value>Capito, non mostrare più</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Unit" xml:space="preserve">
+    <value>Unità</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="UnitGram" xml:space="preserve">
+    <value>g</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="UnitKilogram" xml:space="preserve">
+    <value>kg</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="UnitLiter" xml:space="preserve">
+    <value>l</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="UnitMililiter" xml:space="preserve">
+    <value>ml</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Sconosciuto</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Aggiornamento</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="UploadFiles" xml:space="preserve">
+    <value>Carica file</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="UploadingFileFromFilesFormated" xml:space="preserve">
+    <value>Carica {0} di {1} file:
+</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="UseFixedValueForMachineHourRate" xml:space="preserve">
+    <value>Utilizzare un valore fisso per la tariffa oraria della macchina?
+</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="UserAgreedToEULA" xml:space="preserve">
+    <value>L'utente ha accettato il Contratto di licenza con l'utente finale (EULA)</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="UserAgreedToEULAFormated" xml:space="preserve">
+    <value>L'utente ha accettato il Contratto di licenza con l'utente finale (EULA) il {0}</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Nome utente</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="UseSelectedGcode" xml:space="preserve">
+    <value>Usa Gcode selezionato</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="UseSelectedManufacturer" xml:space="preserve">
+    <value>Usa produttori selezionati</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="UseSelectedPrinter" xml:space="preserve">
+    <value>Usa la stampante selezionata</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="UseSelectedSupplier" xml:space="preserve">
+    <value>Usa fornitori selezionati</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="UstId" xml:space="preserve">
+    <value>UstId.</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Valid" xml:space="preserve">
+    <value>Valido</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="ValidatorSelectionIsMandatory" xml:space="preserve">
+    <value>Seleziona un elemento!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="ValidNumberFrom10Till100" xml:space="preserve">
+    <value>Inserisci un numero valido tra 10 e 100!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="ValueCannotBeEmpty" xml:space="preserve">
+    <value>Il valore non può essere vuoto!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="ValueTypeUnknown" xml:space="preserve">
+    <value>Il tipo di valore è sconosciuto!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="VariableCosts" xml:space="preserve">
+    <value>Costi variabili</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="VariableProgressOf" xml:space="preserve">
+    <value>{0} di {1} {2} completato</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Vendor" xml:space="preserve">
+    <value>Venditore</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Versione</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="VersionxxIsAvailable" xml:space="preserve">
+    <value>È disponibile una versione più recente {0}!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="View3dInstructions" xml:space="preserve">
+    <value>Utilizzare il pulsante destro del mouse per ruotare l'oggetto e quello sinistro per spostarlo.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="ViewOffer" xml:space="preserve">
+    <value>Vedi l'offerta</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="ViewOnline" xml:space="preserve">
+    <value>Guarda online</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="VisibleApplications" xml:space="preserve">
+    <value>Applicazioni visibili</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="VisibleApplicationsInTheBar" xml:space="preserve">
+    <value>Visibile nella barra dell'applicazione</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Voxelizer2" xml:space="preserve">
+    <value>Voxelizer 2</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Avvertimento</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="WarningMessage_SettingsGeneralAppearanceTransparency" xml:space="preserve">
+    <value>Alcune schede grafiche / driver hanno problemi a massimizzare l'applicazione quando la trasparenza è abilitata. L'attivazione o la disattivazione di questa funzione richiede il riavvio dell'applicazione.</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Warning_SecureConnection" xml:space="preserve">
+    <value>Scegli questa opzione solo se la tua connessione è crittografata (https://). In caso contrario, ciò può causare problemi di connessione!</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="Watermark_OctoPrintApiKey" xml:space="preserve">
+    <value>Inserisci la tua chiave API ...
+</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="Watermark_OutputFileFormat" xml:space="preserve">
+    <value>([filename])+([A-Za-z0-9-_.])+(.gcode|.gco|.gc)$</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="WebCam" xml:space="preserve">
+    <value>WebCam</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="Window" xml:space="preserve">
+    <value>Finestra</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="WokrstepCalculationNote" xml:space="preserve">
+    <value>A seconda del tipo di calcolo scelto, il prezzo viene calcolato per pezzo, per ordine o per il tempo specificato.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Worksteps" xml:space="preserve">
+    <value>Fasi di lavoro</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="WriteDataToTemplateFile" xml:space="preserve">
+    <value>Scrivi i dati nel file modello?</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="WriteDataToTemplateFileNote" xml:space="preserve">
+    <value>Se lo attivi, l'esportatore apre il modello Excel definito e scrive le informazioni dalla colonna e dalla riga specificate nel file.</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="WrongPassword" xml:space="preserve">
+    <value>Password errata</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="WrongPasswordDecryptionFailedMessage" xml:space="preserve">
+    <value>La decrittografia non è riuscita a causa di una password errata.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="XAxis" xml:space="preserve">
+    <value>Asse X.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="YAxis" xml:space="preserve">
+    <value>Asse Y.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Years" xml:space="preserve">
+    <value>Anni</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="YesOverwrite" xml:space="preserve">
+    <value>Sì, sovrascrivi</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="YourLicenseInformation" xml:space="preserve">
+    <value>Le informazioni sulla tua licenza</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="YourOctoPrintDashboard" xml:space="preserve">
+    <value>La dashboard di OctoPrint</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="YourPrivacyMatters" xml:space="preserve">
+    <value>La tua privacy è importante per noi!</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="YourRepetierServerDashboard" xml:space="preserve">
+    <value>La dashboard di Repetier Server Pro</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="YourSystemOSIsIncompatibleWithTheLatestRelease" xml:space="preserve">
+    <value>Il tuo sistema operativo non è compatibile con l'ultima versione.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="ZAxis" xml:space="preserve">
+    <value>Asse Z.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+</root>

@@ -1,0 +1,4140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>Über</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Accent" xml:space="preserve">
+    <value>Akzent</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Hinzufügen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AddManufacturer" xml:space="preserve">
+    <value>Hersteller hinzufügen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AddMaterial" xml:space="preserve">
+    <value>Material hinzufügen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AddPrinter" xml:space="preserve">
+    <value>Drucker hinzufügen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AddSupplier" xml:space="preserve">
+    <value>Lieferant hinzufügen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AssignMachineHourRateCalculation" xml:space="preserve">
+    <value>Maschinenstundensatzberechnung zuweisen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Zurück</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Calculate" xml:space="preserve">
+    <value>Berechnen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Abbrechen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Leeren</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="CreateCopies" xml:space="preserve">
+    <value>Kopien erstellen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="HeaderFixCostsPerYear" xml:space="preserve">
+    <value>Fixkosten / Jahr</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="HeaderVariableCostsPerYear" xml:space="preserve">
+    <value>Variable Kosten / Jahr</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="IsCaseSensitiv" xml:space="preserve">
+    <value>Groß- und Kleinschreibung beachten!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelAdditionalCosts" xml:space="preserve">
+    <value>Beliebige zusätzliche Kosten:</value>
+  </data>
+  <data name="LabelCalcDepreciation" xml:space="preserve">
+    <value>Berechnete Abschreibung:</value>
+  </data>
+  <data name="LabelDebitorNumber" xml:space="preserve">
+    <value>Debitorennummer:</value>
+  </data>
+  <data name="LabelEnergyCosts" xml:space="preserve">
+    <value>Energiekosten:</value>
+  </data>
+  <data name="LabelHasHeatbed" xml:space="preserve">
+    <value>Hat ein Heizbett:</value>
+  </data>
+  <data name="LabelHeatbed" xml:space="preserve">
+    <value>Heizbett:</value>
+  </data>
+  <data name="LabelHeatbedTempMandatory" xml:space="preserve">
+    <value>Heizbett-Temp.*:</value>
+  </data>
+  <data name="LabelInterestMandatory" xml:space="preserve">
+    <value>Zinsen*:</value>
+  </data>
+  <data name="LabelIsAvtiveMandatory" xml:space="preserve">
+    <value>Ist aktiv*:</value>
+  </data>
+  <data name="LabelIsManufacturerActive" xml:space="preserve">
+    <value>Der Hersteller ist für Bestellungen freigegeben</value>
+  </data>
+  <data name="LabelIsSupplierActive" xml:space="preserve">
+    <value>Der Lieferant ist für Bestellungen freigegeben</value>
+  </data>
+  <data name="LabelIsSupplierActiveMandatory" xml:space="preserve">
+    <value>Ist aktiv*:</value>
+  </data>
+  <data name="LabelLocationCosts" xml:space="preserve">
+    <value>Standort-Kosten:</value>
+  </data>
+  <data name="LabelMachineHourRate" xml:space="preserve">
+    <value>Maschinenstundensatz:</value>
+  </data>
+  <data name="LabelMachineHoursPerYearMandatory" xml:space="preserve">
+    <value>Maschinenstunden pro Jahr*:</value>
+  </data>
+  <data name="LabelMainenanceAndRepair" xml:space="preserve">
+    <value>Wartungs- &amp; Reparaturkosten:</value>
+  </data>
+  <data name="LabelManufacturer" xml:space="preserve">
+    <value>Hersteller:</value>
+  </data>
+  <data name="LabelManufacturerNameMandatory" xml:space="preserve">
+    <value>Name des Herstellers*:</value>
+  </data>
+  <data name="LabelMaterialKindMandatory" xml:space="preserve">
+    <value>Materialart*:</value>
+  </data>
+  <data name="LabelMaterialTypeMandatory" xml:space="preserve">
+    <value>Materialtyp*:</value>
+  </data>
+  <data name="LabelNozzle" xml:space="preserve">
+    <value>Düse:</value>
+  </data>
+  <data name="LabelPackageMandatory" xml:space="preserve">
+    <value>Paket*:</value>
+  </data>
+  <data name="LabelPackageSize" xml:space="preserve">
+    <value>Paketinhalt:</value>
+  </data>
+  <data name="LabelPriceMandatory" xml:space="preserve">
+    <value>Preis*:</value>
+  </data>
+  <data name="LabelPrinterModelMandatory" xml:space="preserve">
+    <value>Druckermodell*:</value>
+  </data>
+  <data name="LabelPrinterTypeMandatory" xml:space="preserve">
+    <value>Druckertyp*:</value>
+  </data>
+  <data name="LabelReplacemenCostsManadatory" xml:space="preserve">
+    <value>Wiederanschaffungskosten*:</value>
+  </data>
+  <data name="LabelReplaceWith" xml:space="preserve">
+    <value>Ersetzen mit:</value>
+  </data>
+  <data name="LabelSearchFor" xml:space="preserve">
+    <value>Suche nach:</value>
+  </data>
+  <data name="LabelSelectedFiles" xml:space="preserve">
+    <value>Ausgewählte Datei(en):</value>
+  </data>
+  <data name="LabelSelectPrinter" xml:space="preserve">
+    <value>Wähle deinen Drucker:</value>
+  </data>
+  <data name="LabelShopUri" xml:space="preserve">
+    <value>Shop-Link:</value>
+  </data>
+  <data name="LabelSupplierNameMandatory" xml:space="preserve">
+    <value>Name des Lieferanten*:</value>
+  </data>
+  <data name="LabelTemeratureMandatory" xml:space="preserve">
+    <value>Temperatur*:</value>
+  </data>
+  <data name="LabelUsefulLifeYearsMandatory" xml:space="preserve">
+    <value>Nutzungsdauer in Jahren*:</value>
+  </data>
+  <data name="LabelVendor" xml:space="preserve">
+    <value>Verkäufer:</value>
+  </data>
+  <data name="MarkedFiledsMandatory" xml:space="preserve">
+    <value>Alle Felder markiert mit '*' sind Pflichtfelder.</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>Neu</value>
+  </data>
+  <data name="Reorder" xml:space="preserve">
+    <value>Nachbestellen</value>
+  </data>
+  <data name="RunChecker" xml:space="preserve">
+    <value>Vorabprüfung starten</value>
+  </data>
+  <data name="RunSearchAndReplace" xml:space="preserve">
+    <value>Suchen und Ersetzen starten</value>
+  </data>
+  <data name="SaveCalculation" xml:space="preserve">
+    <value>Kalkulation speichern</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Suche</value>
+  </data>
+  <data name="SearchDots" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="SearchedApplicationNotFound" xml:space="preserve">
+    <value>Die gesuchte Applikation konnte nicht gefunden werden</value>
+  </data>
+  <data name="SelectFiles" xml:space="preserve">
+    <value>Wähle Datei(en)</value>
+  </data>
+  <data name="SelectFolder" xml:space="preserve">
+    <value>Wähle Ordner</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="TabHeaderCalculate" xml:space="preserve">
+    <value>Kalkuliere</value>
+  </data>
+  <data name="TabHeaderCalculations" xml:space="preserve">
+    <value>Kalkulationen</value>
+  </data>
+  <data name="TooltipCreateCopies" xml:space="preserve">
+    <value>Wenna ausgewählt, wird das Ergebnis in eine neue Dateien geschrieben. Originale bleiben unberührt</value>
+  </data>
+  <data name="TooltipTextToReplaceWith" xml:space="preserve">
+    <value>Gib den Text ein mit dem der gesuchte ersetzt werden soll...</value>
+  </data>
+  <data name="TooltipTextToSearchFor" xml:space="preserve">
+    <value>Gib deinen Suchtext an...</value>
+  </data>
+  <data name="Years" xml:space="preserve">
+    <value>Jahre</value>
+  </data>
+  <data name="ClearFilter" xml:space="preserve">
+    <value>Filter leeren</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Sprache</value>
+  </data>
+  <data name="RestartTheApplicationSoThatAllChangesAreApplied" xml:space="preserve">
+    <value>Damit die neue Sprache gesetzt und aktualisiert werden kann muss die Anwendung neu gestartet werden!</value>
+  </data>
+  <data name="SearchedLanguageNotFound" xml:space="preserve">
+    <value>Die gesuchte Sprache konnte nicht gefunden werden</value>
+  </data>
+  <data name="CheckForUpdates" xml:space="preserve">
+    <value>Auf Updates prüfen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Beschreibung</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="ErrorCheckingApiGithubComVerifyYourNetworkConnection" xml:space="preserve">
+    <value>Es gab einen Fehler mit der Verbindung zu der Github API. Bitte prüfe deine Internetverbindung.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="GitHub" xml:space="preserve">
+    <value>GitHub</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Libraries" xml:space="preserve">
+    <value>Bibliotheken</value>
+  </data>
+  <data name="LibraryUrl" xml:space="preserve">
+    <value>URL zur Bibliothek</value>
+  </data>
+  <data name="License" xml:space="preserve">
+    <value>Lizenz</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NoUpdateAvailable" xml:space="preserve">
+    <value>Aktuell ist kein Update verfügbar.</value>
+  </data>
+  <data name="OpenLicense" xml:space="preserve">
+    <value>Lizenz öffnen</value>
+  </data>
+  <data name="OpenProject" xml:space="preserve">
+    <value>Projekt öffnen</value>
+  </data>
+  <data name="OpenWebsite" xml:space="preserve">
+    <value>Website öffnen</value>
+  </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>Produktname</value>
+  </data>
+  <data name="Resources" xml:space="preserve">
+    <value>Ressourcen</value>
+  </data>
+  <data name="ShowLocalLicenses" xml:space="preserve">
+    <value>Zeige lokale Lizenzadateien</value>
+  </data>
+  <data name="Slogan" xml:space="preserve">
+    <value>Eine Software-Anwendung zum Berechnen des genausten Preises für deinen nächsten Druckauftrag!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="VersionxxIsAvailable" xml:space="preserve">
+    <value>Eine neuere Version {0} ist verfügbar!</value>
+  </data>
+  <data name="YourSystemOSIsIncompatibleWithTheLatestRelease" xml:space="preserve">
+    <value>Dein Betriebssystem ist mit der neusten Version nicht kompatibel.</value>
+  </data>
+  <data name="OpenStlFile" xml:space="preserve">
+    <value>Wähle oder ziehe .stl Datei</value>
+  </data>
+  <data name="SetZoomFitPage" xml:space="preserve">
+    <value>Zoomen, um an die Seite anzupassen</value>
+  </data>
+  <data name="View3dInstructions" xml:space="preserve">
+    <value>Bitte verwende die rechte Maustauste um das Objekt zu drehehn und die linke um es zu bewegen.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Additional" xml:space="preserve">
+    <value>Zusätzlich</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="ApplyTaxRateToResult" xml:space="preserve">
+    <value>Möchtest du einen Steuersatz zu deiner Berechnung hinzufügen?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>Allgemein</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelEnergyCostsMandatory" xml:space="preserve">
+    <value>Energiekosten*:</value>
+  </data>
+  <data name="LabelTaxRate" xml:space="preserve">
+    <value>Steuersatz:</value>
+  </data>
+  <data name="Materials" xml:space="preserve">
+    <value>Materialien</value>
+  </data>
+  <data name="Printers" xml:space="preserve">
+    <value>3D Drucker</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Schließen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Löschen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DonateViaPayPal" xml:space="preserve">
+    <value>Via PayPal spenden</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelCustomAmount" xml:space="preserve">
+    <value>Bitte gib einen eigenen Betrag für dein Trinkgeld ein!</value>
+  </data>
+  <data name="LabelDonationInfo" xml:space="preserve">
+    <value>Deine Spende wird später über PayPal abgewickelt. Du wrist zu unserer PayPal.me-Website weitergeleitet, wenn du auf den Button "Via PayPal spenden" klickst.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelDonationThankYou" xml:space="preserve">
+    <value>Vielen Dank, dass Sie sich für eine Spende entschieden haben! Wir schätzen das sehr!</value>
+  </data>
+  <data name="LabelOrUsePreDefinedAmoutns" xml:space="preserve">
+    <value>oder wähle aus den voreingestellten Mengen unten.</value>
+  </data>
+  <data name="LabelPreDefinedAmounts" xml:space="preserve">
+    <value>Voreingestelte Mengen</value>
+  </data>
+  <data name="LabelSelectMaterialMandatory" xml:space="preserve">
+    <value>Wähle das Material*:</value>
+  </data>
+  <data name="LabelNameMandatory" xml:space="preserve">
+    <value>Name*:</value>
+  </data>
+  <data name="LabelSKU" xml:space="preserve">
+    <value>Artikelnummer:</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value> oder </value>
+  </data>
+  <data name="SelectOrDropGcodeFile" xml:space="preserve">
+    <value>Wähle oder ziehe .gcode Datei</value>
+  </data>
+  <data name="And" xml:space="preserve">
+    <value>und</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AppName3dPrintCostCalculator" xml:space="preserve">
+    <value>3D Druckkosten-Kalkulator</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AppName3dPrinterMaterialOverview" xml:space="preserve">
+    <value>3D Drucker Materialien</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AppName3dPrinterOverview" xml:space="preserve">
+    <value>3D Drucker</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AppNameMachineHourRateCalculator" xml:space="preserve">
+    <value>Maschinenstundensatz-Kalkulator</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AppNameMassSearchAndReplace" xml:space="preserve">
+    <value>Mass Search &amp; Replace</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AppNameNotFound" xml:space="preserve">
+    <value>Diese App exisitiert nicht!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AppNameSubversionServer" xml:space="preserve">
+    <value>SVN</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="GcodeParserNote" xml:space="preserve">
+    <value>Wenn du eine GCode-Datei importiert hast, und hier fehlende Informationen vorfindest, sende uns bitte deine GCode-Datei zu. Wir werden unseren Parser dementsprechend aktualisieren.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelFilamentDensity" xml:space="preserve">
+    <value>Filament-Dichte:</value>
+  </data>
+  <data name="LabelFilamentType" xml:space="preserve">
+    <value>Filament-Typ:</value>
+  </data>
+  <data name="LabelPrintingTime" xml:space="preserve">
+    <value>Gesch. Druckzeit:</value>
+  </data>
+  <data name="LabelSlicer" xml:space="preserve">
+    <value>Slicer:</value>
+  </data>
+  <data name="LabelVolume" xml:space="preserve">
+    <value>Volumen:</value>
+  </data>
+  <data name="SettingsGroupApps" xml:space="preserve">
+    <value>App-Einstellungen</value>
+  </data>
+  <data name="SettingsGroupGeneral" xml:space="preserve">
+    <value>Allgemeine Einstellungen</value>
+  </data>
+  <data name="SettingsGroupNotFound" xml:space="preserve">
+    <value>Diese Gruppe existiert nicht</value>
+  </data>
+  <data name="SettingsNameAppearance" xml:space="preserve">
+    <value>Aussehen</value>
+  </data>
+  <data name="SettingsNameGeneral" xml:space="preserve">
+    <value>Allgemein</value>
+  </data>
+  <data name="SettingsNameLanguage" xml:space="preserve">
+    <value>Sprache</value>
+  </data>
+  <data name="SettingsNameNotFound" xml:space="preserve">
+    <value>Diese Einstellungsseite existiert nicht!</value>
+  </data>
+  <data name="SettingsNameRepetierServer" xml:space="preserve">
+    <value>Repetier Server Pro</value>
+  </data>
+  <data name="SettingsNameSlicer" xml:space="preserve">
+    <value>Slicer</value>
+  </data>
+  <data name="SettingsNameWindow" xml:space="preserve">
+    <value>Fenster</value>
+  </data>
+  <data name="LabelColor" xml:space="preserve">
+    <value>Farbe:</value>
+  </data>
+  <data name="LabelDensityMandatory" xml:space="preserve">
+    <value>Dichte:*</value>
+  </data>
+  <data name="LabelFailRate" xml:space="preserve">
+    <value>Fehlerrate:</value>
+  </data>
+  <data name="LabelMargin" xml:space="preserve">
+    <value>Gewinn:</value>
+  </data>
+  <data name="LabelPieces" xml:space="preserve">
+    <value>Menge</value>
+  </data>
+  <data name="TooltipApplyTaxRate" xml:space="preserve">
+    <value>Wähle dies um den Steuersatz zu aktivieren</value>
+  </data>
+  <data name="TooltipEnergyCosts" xml:space="preserve">
+    <value>Der Preis für eine kW/h in Cents.</value>
+  </data>
+  <data name="TooltipFailRate" xml:space="preserve">
+    <value>Nutze diesen Schieberegler für die Fehlerrate</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="TooltipMargin" xml:space="preserve">
+    <value>Nutze diesen Schieberegler um deinen Gewinn anzugeben</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="TooltipPieces" xml:space="preserve">
+    <value>Die Anzahl der Ausdrucke für den Auftrag</value>
+  </data>
+  <data name="TooltipTaxRate" xml:space="preserve">
+    <value>Der Steuersatz, der angewandt werden soll</value>
+  </data>
+  <data name="AddCategory" xml:space="preserve">
+    <value>Kategorie hinzufügen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AddWorkstep" xml:space="preserve">
+    <value>Arbeitsschritt hinzufügen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Menge</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AppName3dPrinterWorkstep" xml:space="preserve">
+    <value>Zusätzliche Arbeitsschritte</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="BJ" xml:space="preserve">
+    <value>BJ (Binder Jetting)®</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="CalculationType" xml:space="preserve">
+    <value>Kalkulationstyp</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Kategorie</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="CDLP" xml:space="preserve">
+    <value>cDLP (continuous Digital Light Processing)®</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DLP" xml:space="preserve">
+    <value>DLP (Digital Ligh Processing)®</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DMLS" xml:space="preserve">
+    <value>DMLS (Direct Metal Laser Sintering)®</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DOD" xml:space="preserve">
+    <value>DOD (Drop on Demand)®</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Dauer</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="EBAM" xml:space="preserve">
+    <value>EBAM (Electron-Beam Additve Manufacturing)®</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="EBM" xml:space="preserve">
+    <value>EBM (Electro Beam Melting)®</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="FDM" xml:space="preserve">
+    <value>FDM (Fused Deposition Modeling)®</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelWorkstepCalculationTypeMandatory" xml:space="preserve">
+    <value>Kalkulationstyp*:</value>
+  </data>
+  <data name="LabelWorkstepDurationMandatory" xml:space="preserve">
+    <value>Dauer für den Arbeitsschritt*:</value>
+  </data>
+  <data name="LabelWorkstepNameMandatory" xml:space="preserve">
+    <value>Arbeitsschritt-Name*:</value>
+  </data>
+  <data name="LabelWorkstepPriceMandatory" xml:space="preserve">
+    <value>Preis für den Arbeitsschritt*:</value>
+  </data>
+  <data name="LabelWorkstepTypeMandatory" xml:space="preserve">
+    <value>Typ des Arbeitsschrittes*:</value>
+  </data>
+  <data name="LENS" xml:space="preserve">
+    <value>LENS (Laser Engineered Net Shaping)®</value>
+  </data>
+  <data name="Misc" xml:space="preserve">
+    <value>Sonstiges</value>
+  </data>
+  <data name="MJ" xml:space="preserve">
+    <value>MJ (Material Jetting)®</value>
+  </data>
+  <data name="MJF" xml:space="preserve">
+    <value>MJF (Multi Jet Fusion)®</value>
+  </data>
+  <data name="NewCategory" xml:space="preserve">
+    <value>Neue Kategorie</value>
+  </data>
+  <data name="NPJ" xml:space="preserve">
+    <value>NPJ (NanoParticle Jetting)®</value>
+  </data>
+  <data name="Post" xml:space="preserve">
+    <value>Nachbearbeitung</value>
+  </data>
+  <data name="Pre" xml:space="preserve">
+    <value>Vorverarbeitung</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Preis</value>
+  </data>
+  <data name="SLA" xml:space="preserve">
+    <value>SLA (Stereolithography)®</value>
+  </data>
+  <data name="SLM" xml:space="preserve">
+    <value>SLM (Selective Laser Melting)®</value>
+  </data>
+  <data name="SLS" xml:space="preserve">
+    <value>SLS (Selective Laser Sintering)®</value>
+  </data>
+  <data name="TooltipWorkstepPrice" xml:space="preserve">
+    <value>Berechnung abhängig des gew. Kalkulationstypen.</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="WokrstepCalculationNote" xml:space="preserve">
+    <value>Abhängig von dem Kalkulationstyp, den du auswählst wird der Preis entweder pro Stück, pro Auftrag oder für die angegebene Zeit berechnet.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AddWorkstepCategory" xml:space="preserve">
+    <value>Arbeitsschritt-Kategorie hinzufügen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteMaterialContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du dieses Material löschen möchtest? Dies kann nicht rückgängig gemacht werden.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteMaterialHeadline" xml:space="preserve">
+    <value>Dieses Material löschen?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeletePrinterContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du dieses Drucker löschen möchtest? Dies kann nicht rückgängig gemacht werden.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeletePrinterHeadline" xml:space="preserve">
+    <value>Diesen Drucker löschen?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteWorkstepContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du dieses Arbeitsschritt löschen möchtest? Dies kann nicht rückgängig gemacht werden.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteWorkstepHeadline" xml:space="preserve">
+    <value>Diesen Arbeitsschritt löschen?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelQuantityMandatory" xml:space="preserve">
+    <value>Menge*:</value>
+  </data>
+  <data name="LabelWorkstepCategoryMandatory" xml:space="preserve">
+    <value>Arbeitsschritt-Kategorie*:</value>
+  </data>
+  <data name="LabelWorkstepCategoryNameMandatory" xml:space="preserve">
+    <value>Name der Kategorie*:</value>
+  </data>
+  <data name="LabelWorkstepDuration" xml:space="preserve">
+    <value>Dauer (nur bei pro_Stunde):</value>
+  </data>
+  <data name="LabelWorkstepDurationUnit" xml:space="preserve">
+    <value>Stunde(n)</value>
+  </data>
+  <data name="TooltipWorkstepDuration" xml:space="preserve">
+    <value>Die Dauer des Arbeitsschrittes</value>
+  </data>
+  <data name="ValidatorSelectionIsMandatory" xml:space="preserve">
+    <value>Bitte wähle ein Element aus!</value>
+  </data>
+  <data name="CardView" xml:space="preserve">
+    <value>Als Karte anzeigen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Farbe</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DatagridView" xml:space="preserve">
+    <value>Als DataGrid anzeigen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DeleteAll" xml:space="preserve">
+    <value>Alle löschen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DeleteSelected" xml:space="preserve">
+    <value>Auswahl löschen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Density" xml:space="preserve">
+    <value>Dichte</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="HasHeatbed" xml:space="preserve">
+    <value>Hat ein Heizbett?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Heatbed" xml:space="preserve">
+    <value>Heizbett</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Kind" xml:space="preserve">
+    <value>Art</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelBuildVolume" xml:space="preserve">
+    <value>Bauraum:</value>
+  </data>
+  <data name="LabelHeatbedTemp" xml:space="preserve">
+    <value>Heizbett-Temperatur:</value>
+  </data>
+  <data name="LabelNozzleTemp" xml:space="preserve">
+    <value>Düsen-Temperatur:</value>
+  </data>
+  <data name="LabelPrice" xml:space="preserve">
+    <value>Preis:</value>
+  </data>
+  <data name="MachineHourRate" xml:space="preserve">
+    <value>Maschinenstundensatz</value>
+  </data>
+  <data name="Manufacturer" xml:space="preserve">
+    <value>Hersteller</value>
+  </data>
+  <data name="MaxTempHeatbed" xml:space="preserve">
+    <value>Max. Heizbett-Temp.</value>
+  </data>
+  <data name="Model" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="Nozzle" xml:space="preserve">
+    <value>Düse</value>
+  </data>
+  <data name="PackageSize" xml:space="preserve">
+    <value>Paketinhalt</value>
+  </data>
+  <data name="PrinterHasHeatbed" xml:space="preserve">
+    <value>Drucker hat ein Heizbett</value>
+  </data>
+  <data name="SKU" xml:space="preserve">
+    <value>Artikelnummer</value>
+  </data>
+  <data name="Unit" xml:space="preserve">
+    <value>Einheit</value>
+  </data>
+  <data name="Vendor" xml:space="preserve">
+    <value>Verkäufer</value>
+  </data>
+  <data name="BuildVolume" xml:space="preserve">
+    <value>Bauraum</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogSaveMachineHourRateContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du die aktuelle Maschinenstundensatz-Berechnung für diesen Drucker speichern möchtest? Dies wird den ursprünglichen Maschinenstundensatz für den gewählten Drucker überschreiben. Fortfahren?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogSaveMachineHourRateHeadline" xml:space="preserve">
+    <value>Aktuelle Maschinenstundensatz-Berechnung speichern?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelAdditional" xml:space="preserve">
+    <value>Zusätzlich:</value>
+  </data>
+  <data name="LabelEnergy" xml:space="preserve">
+    <value>Energie:</value>
+  </data>
+  <data name="LabelHours" xml:space="preserve">
+    <value>Stunden:</value>
+  </data>
+  <data name="LabelLocation" xml:space="preserve">
+    <value>Standort:</value>
+  </data>
+  <data name="LabelMaintenance" xml:space="preserve">
+    <value>Wartung:</value>
+  </data>
+  <data name="NewPrinter" xml:space="preserve">
+    <value>Neuer Drucker</value>
+  </data>
+  <data name="PerYear" xml:space="preserve">
+    <value>/ Jahr</value>
+  </data>
+  <data name="AssignMHR" xml:space="preserve">
+    <value>Maschinenstundensatz zuweisen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AssignSelectedMHR" xml:space="preserve">
+    <value>Ausgewählten Maschinenstundensatz zuweisen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="NewManufacturer" xml:space="preserve">
+    <value>Neuer Hersteller</value>
+  </data>
+  <data name="LabelHandlingFee" xml:space="preserve">
+    <value>Handlungspauschale:</value>
+  </data>
+  <data name="NewMaterial" xml:space="preserve">
+    <value>Neues Material</value>
+  </data>
+  <data name="NewSupplier" xml:space="preserve">
+    <value>Neuer Lieferant</value>
+  </data>
+  <data name="TooltipHandlingFee" xml:space="preserve">
+    <value>Diese Gebühr wird pro Stück berechnet</value>
+  </data>
+  <data name="AllInformationPerMonth" xml:space="preserve">
+    <value>Berechne als pro Monat</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="FixCosts" xml:space="preserve">
+    <value>Fixkosten</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelPrintDurationMandatory" xml:space="preserve">
+    <value>Druckdauer*:</value>
+  </data>
+  <data name="PerMonth" xml:space="preserve">
+    <value>/ Monat</value>
+  </data>
+  <data name="ProvidedInformationArePerYear" xml:space="preserve">
+    <value>Die angegebenen Informationen sind pro Jahr</value>
+  </data>
+  <data name="TooltipMHRProvidedInformationTimeBase" xml:space="preserve">
+    <value>Wähle, wenn angegebene Informationen pro Jahr sind</value>
+  </data>
+  <data name="VariableCosts" xml:space="preserve">
+    <value>Variable Kosten</value>
+  </data>
+  <data name="CalculationResult" xml:space="preserve">
+    <value>Berechnungsergebnis(se)</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="FinalRecomendedPrice" xml:space="preserve">
+    <value>Finale Preisempfehlung:</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelMaxPowerConsumptionMandatory" xml:space="preserve">
+    <value>Max. Leistung*:</value>
+  </data>
+  <data name="LabelSelectCurrentCalculationMandatory" xml:space="preserve">
+    <value>Wähle die Kalkulation*:</value>
+  </data>
+  <data name="LabelSelectCurrentMaterialMandatory" xml:space="preserve">
+    <value>Wähle das Material*:</value>
+  </data>
+  <data name="LabelSelectCurrentPrinterMandatory" xml:space="preserve">
+    <value>Wähle den Drucker*:</value>
+  </data>
+  <data name="LabelUsedAmountOfMaterial" xml:space="preserve">
+    <value>Menge an benötigten Material*:</value>
+  </data>
+  <data name="LabelIncludedTax" xml:space="preserve">
+    <value>Beinhaltete Steuern:</value>
+  </data>
+  <data name="LabelPriceWithoutTax" xml:space="preserve">
+    <value>Ohne Steuern:</value>
+  </data>
+  <data name="EstimatedPrintTime" xml:space="preserve">
+    <value>Geschätzte Druckzeit</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="HeaderPriceConsistsOf" xml:space="preserve">
+    <value>- Preis besteht aus -</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelMaterialCosts" xml:space="preserve">
+    <value>Materialkosten:</value>
+  </data>
+  <data name="LabelMaxPowerConsumption" xml:space="preserve">
+    <value>Max. Leistung:</value>
+  </data>
+  <data name="LabelVolumeMandatory" xml:space="preserve">
+    <value>Volumen*:</value>
+  </data>
+  <data name="DialogFileLoadedContent" xml:space="preserve">
+    <value>Die Datei wurde erfolgreich geladen. Die Parameter wurden in der Kalkulations-Maske gesetzt.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogFileLoadedHeadline" xml:space="preserve">
+    <value>Datei erfolgreich geladen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelMachineCosts" xml:space="preserve">
+    <value>Maschinen-Kosten:</value>
+  </data>
+  <data name="DialogGcodeSlicerInvalidContentFormated" xml:space="preserve">
+    <value>Es scheint, als dass es sich um eine gültige GCode-Datei handelt, jedoch dein Slicer noch nicht unterstützt wird. Um eine Unterstützung hinzuzufügen, sende bitte deine GCode-Datei an {0}</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogGcodeSlicerInvalidHeadline" xml:space="preserve">
+    <value>Nicht unterstützter Slicer</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="HeaderPrintTimeConsistsOf" xml:space="preserve">
+    <value>Druckzeit besteht aus</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelAdditionalWorkstepCosts" xml:space="preserve">
+    <value>Zusätzliche Arbeitsschritte:</value>
+  </data>
+  <data name="LabelQuantity" xml:space="preserve">
+    <value>Menge:</value>
+  </data>
+  <data name="LabelSingleFailPrintDuration" xml:space="preserve">
+    <value>Einzel-Fehlzeit:</value>
+  </data>
+  <data name="LabelSinglePrintDuration" xml:space="preserve">
+    <value>Einzel-Druckzeit:</value>
+  </data>
+  <data name="TooltipSingleFailTime" xml:space="preserve">
+    <value>Berechnete Zusatszeit für gesetzte Fehlerrate</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogCalculationSaveSuccessContent" xml:space="preserve">
+    <value>Die Kalkulation wurde erfolgreich gespeichert.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogCalculationSaveSuccessHeadline" xml:space="preserve">
+    <value>Speichern erfolgreich</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogRunCalculationFirstContent" xml:space="preserve">
+    <value>Um die Kalkulation speichern zu können, klicke zuerst auf dein "Berechnen"-Button oder lade eine vorhandene Kalkulation.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogRunCalculationFirstHeadline" xml:space="preserve">
+    <value>Keine Kalkulation geladen oder ausgeführt</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>Öffnen</value>
+  </data>
+  <data name="DialogConfirmCloseContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du die Applikation jetzt schließen möchtest?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogConfirmCloseHeadline" xml:space="preserve">
+    <value>Applikation schließen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogOpenExternalUriFormatedContent" xml:space="preserve">
+    <value>Dies wird den externen Link '{0}' öffnen. Wir haben keinen Einfluss auf den Inhalt dieser Website. Fortfahren?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogOpenExternalUriHeadline" xml:space="preserve">
+    <value>Öffne externen Link</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelGuidReadOnly" xml:space="preserve">
+    <value>GUID (nur lesen):</value>
+  </data>
+  <data name="ActivateLicense" xml:space="preserve">
+    <value>Lizenz aktivieren</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AddLicense" xml:space="preserve">
+    <value>Lizenz hinzufügen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AlwaysShowIconInTray" xml:space="preserve">
+    <value>Icon immer im Tray anzeigen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AtLeastOneApplicationMustBeVisible" xml:space="preserve">
+    <value>Es muss mindestens eine Applikation sichtbar sein!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Calculations" xml:space="preserve">
+    <value>Kalkulationen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="ConfirmClose" xml:space="preserve">
+    <value>Beenden bestätigen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="CredentialWithThisNameAlreadyExists" xml:space="preserve">
+    <value>Zugangsdaten mit diesem Namen existieren bereits!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="HiddenApplications" xml:space="preserve">
+    <value>Versteckte Applikationen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Hide" xml:space="preserve">
+    <value>Verstecken</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="MinimizeInsteadOfTerminating" xml:space="preserve">
+    <value>Beim Schließen minimieren statt zu beenden</value>
+  </data>
+  <data name="MinimizeToTrayInsteadOfTaskbar" xml:space="preserve">
+    <value>In Tray minimieren anstatt in die Taskleiste</value>
+  </data>
+  <data name="MultipleInstances" xml:space="preserve">
+    <value>Mehrere Instanzen</value>
+  </data>
+  <data name="NotChanged" xml:space="preserve">
+    <value>Nicht geändert</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="OpenCalculationViewOnFileLoaded" xml:space="preserve">
+    <value>Öffne die Kalkulations-Ergebnis-Ansicht, wenn eine Kalkulation geladen wird</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Passwort</value>
+  </data>
+  <data name="PasswordRepeat" xml:space="preserve">
+    <value>Passwort bestätigen</value>
+  </data>
+  <data name="PasswordsDoNotMatch" xml:space="preserve">
+    <value>Passwörter stimmen nicht überein!</value>
+  </data>
+  <data name="Repeat" xml:space="preserve">
+    <value>Wiederholen</value>
+  </data>
+  <data name="SettingsFileNotFoundOrCorrupted" xml:space="preserve">
+    <value>Die  Einstellungsdatei konnte nicht gefunden werden oder ist beschädigt</value>
+  </data>
+  <data name="SettingsReseted" xml:space="preserve">
+    <value>Einstellungen wurden zurückgesetzt!</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>Zeige</value>
+  </data>
+  <data name="ShowFollowingApplicationOnStartup" xml:space="preserve">
+    <value>Zeige folgende Applikation beim Start der Software</value>
+  </data>
+  <data name="SkipAndUsePersonalVersion" xml:space="preserve">
+    <value>Überspringen, ich werde die kostenlose Version verwenden</value>
+  </data>
+  <data name="StartupApplication" xml:space="preserve">
+    <value>Start-Applikation</value>
+  </data>
+  <data name="Tray" xml:space="preserve">
+    <value>Tray</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Benutzername</value>
+  </data>
+  <data name="VisibleApplications" xml:space="preserve">
+    <value>Sichtbare Applikationen</value>
+  </data>
+  <data name="VisibleApplicationsInTheBar" xml:space="preserve">
+    <value>Sichtbar in der Applikationsleiste</value>
+  </data>
+  <data name="Window" xml:space="preserve">
+    <value>Fenster</value>
+  </data>
+  <data name="DeactivateLicense" xml:space="preserve">
+    <value>Lizenz deaktivieren</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DeleteLicense" xml:space="preserve">
+    <value>Lizenz löschen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DeleteLicenseMessage" xml:space="preserve">
+    <value>Bist du dir absolut sicher, dass du die Lizenz von der aktuellen Installation entfernen möchtest? Du musst diese Installation dann neu aktivieren um die Pro-Funktionen weiter nutzen zu können. Fortfahren?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DeleteLicenses" xml:space="preserve">
+    <value>Lizenzen löschen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteLicenseFailedContent" xml:space="preserve">
+    <value>Deine Lizenz konnte nicht entfernt werden. Bitte versuche es erneut oder kontaktiere den Support.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteLicenseFailedHeadline" xml:space="preserve">
+    <value>Entfernung der Lizenz fehlgeschlagen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseActivationFailedContent" xml:space="preserve">
+    <value>Dein Lizenzschlüssel ist entweder ungültig oder der Aktivierungs-Server ist offline. Wenn du Probleme beim Aktivieren deiner Lizenz hast, kontaktiere bitte unseren Support!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseActivationFailedHeadline" xml:space="preserve">
+    <value>Lizenz-Aktivierung fehlgeschlagen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseActivationSucceededContent" xml:space="preserve">
+    <value>Dein Lizenzschlüssel ist gültig und wurde für diese Installation aktiviert.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseActivationSucceededHeadline" xml:space="preserve">
+    <value>Lizenz-Aktivierung erfolgreich</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseFormatInvalidFormatedContent" xml:space="preserve">
+    <value>Das Format der Lizenz ist ungültig! Bitte gib einen gültige Lizenzschlüssel von {0} oder einen Bestellcode von {1} ein!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseFormatInvalidHeadline" xml:space="preserve">
+    <value>Lizenz-Format ungültig</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="GoPro" xml:space="preserve">
+    <value>Jetzt Pro-Version holen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Invalid" xml:space="preserve">
+    <value>Ungültig</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LastLicenseCheck" xml:space="preserve">
+    <value>Letzte Lizenzprüfung:</value>
+  </data>
+  <data name="LicenseState" xml:space="preserve">
+    <value>Lizenzstatus:</value>
+  </data>
+  <data name="MasterPassword" xml:space="preserve">
+    <value>Master-Passwort</value>
+  </data>
+  <data name="NoLicenseActivatedYet" xml:space="preserve">
+    <value>Keine Lizenz für diese Installation angegeben. Bitte klicke auf den Button unten um deine Pro-Version jetzt zu aktivieren!</value>
+  </data>
+  <data name="ProOnlyFunction" xml:space="preserve">
+    <value>Dies ist eine Pro-Funktion. Upgrade jetzt auf die Pro-Version um diese Funktion freizuschalten!</value>
+  </data>
+  <data name="ResetLicensesMessage" xml:space="preserve">
+    <value>Lizenz zurücksetzen?</value>
+  </data>
+  <data name="SearchedSettingsNotFound" xml:space="preserve">
+    <value>Gesuchte Einstellung nicht gefunden</value>
+  </data>
+  <data name="SetMasterPassword" xml:space="preserve">
+    <value>Setze das Master-Passwort</value>
+  </data>
+  <data name="SettingsGroupLicense" xml:space="preserve">
+    <value>Lizenz</value>
+  </data>
+  <data name="SettingsNameLicense" xml:space="preserve">
+    <value>Lizenz</value>
+  </data>
+  <data name="Valid" xml:space="preserve">
+    <value>Gültig</value>
+  </data>
+  <data name="WrongPassword" xml:space="preserve">
+    <value>Falsches Passwort</value>
+  </data>
+  <data name="WrongPasswordDecryptionFailedMessage" xml:space="preserve">
+    <value>Die Entschlüsselung ist auf Grund eines falschen Passwortes fehlgeschlagen.</value>
+  </data>
+  <data name="YourLicenseInformation" xml:space="preserve">
+    <value>Deine Lizenz-Informationen</value>
+  </data>
+  <data name="DialogGcodeFileSentFailedFormatedContent" xml:space="preserve">
+    <value>Die GCode-Datei '{0}' konnte nicht an den Repetier Server Pro gesendet werden! Bitte prüfe deine Einstellungen für den Repetier Server Pro und versuche es erneut. Sollte der Fehler bestehen, kontaktiere den Support.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogGcodeFileSentFailedHeadline" xml:space="preserve">
+    <value>Senden des GCodes fehlgeschlagen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogGcodeFileSentSuccessfullyFormatedContent" xml:space="preserve">
+    <value>Die GCode-Datei '{0}' wurde erfolgreich an den Repetier Server Pro gesendet!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogGcodeFileSentSuccessfullyHeadline" xml:space="preserve">
+    <value>GCode erfolgreich gesendet</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogGoProContent" xml:space="preserve">
+    <value>Wir werden dich zu unserem Shop weiterleiten... Vielen Dank, dass du über ein Upgrade nachdenkst!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogGoProHeadline" xml:space="preserve">
+    <value>Jetzt Pro-Version holen!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="EnterValidIPAddress" xml:space="preserve">
+    <value>Gib eine gültige IP-Adresse ein!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="EnterValidRepetierApiKey" xml:space="preserve">
+    <value>Gib einen gültigen Repetier Server Pro API Schlüssel ein!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelAPIKeyRepetierMandatory" xml:space="preserve">
+    <value>Dein API-Schlüssel*:</value>
+  </data>
+  <data name="LabelIPAdressMandatory" xml:space="preserve">
+    <value>IP-Adresse*:</value>
+  </data>
+  <data name="LabelPrinterNameMandatory" xml:space="preserve">
+    <value>Druckername*:</value>
+  </data>
+  <data name="NoteRepetierServerPrinterName" xml:space="preserve">
+    <value>Gib den Namen so an, wie er dir im Dashboard angezeigt wird. Das Tool ersetzt automatisch Leerzeichen mit einem Unterstrich.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SelectGcodeFile" xml:space="preserve">
+    <value>Wähle eine .gcode Datei...</value>
+  </data>
+  <data name="SendGcodeToRepetierServerPro" xml:space="preserve">
+    <value>An Repetier Server Pro senden</value>
+  </data>
+  <data name="SendTestFile" xml:space="preserve">
+    <value>Sende Test-Datei</value>
+  </data>
+  <data name="TooltipApiKeyRepetier" xml:space="preserve">
+    <value>Der API-Schlüssel...</value>
+  </data>
+  <data name="TooltipIPAdressRepetier" xml:space="preserve">
+    <value>Die IP-Adresse deines Repetier Server...</value>
+  </data>
+  <data name="TooltipPrinterNameRepetier" xml:space="preserve">
+    <value>Der Drucker-Name</value>
+  </data>
+  <data name="ProOnly" xml:space="preserve">
+    <value>Gesperrt - Pro-Funktion</value>
+  </data>
+  <data name="DialogLicenseDeactivatedRemoteConfirm" xml:space="preserve">
+    <value>Ja, jetzt aktivieren</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseDeactivatedRemoteContent" xml:space="preserve">
+    <value>Deine Lizenz wurde in deinem Konto deaktiviert. Möchtest du diese wieder reaktivieren für diese Installation?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseDeactivatedRemoteDecline" xml:space="preserve">
+    <value>Nein, neue Lizenz eingeben</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseDeactivatedRemoteHeadline" xml:space="preserve">
+    <value>Lizenz aus der Ferne deaktiviert</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>Dokumentation</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Agreed" xml:space="preserve">
+    <value>Zugestimmt</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AgreeToEULA" xml:space="preserve">
+    <value>Ich stimme zu</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Declined" xml:space="preserve">
+    <value>Abgelehnt</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="EULA" xml:space="preserve">
+    <value>Endbenutzer-Lizenzvereinbarung (EULA)</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelDateOfEULAAgreement" xml:space="preserve">
+    <value>Datum der Zustimmung:</value>
+  </data>
+  <data name="SettingsNameEULA" xml:space="preserve">
+    <value>EULA</value>
+  </data>
+  <data name="ShowEULA" xml:space="preserve">
+    <value>Zeige EULA</value>
+  </data>
+  <data name="UserAgreedToEULA" xml:space="preserve">
+    <value>Der Benutzer hat der Endbenutzer-Lizenzvereinbarung (EULA) zugestimmt</value>
+  </data>
+  <data name="UserAgreedToEULAFormated" xml:space="preserve">
+    <value>Der Benutzer hat der Endbenutzer-Lizenzvereinbarung (EULA) am {0} zugestimmt</value>
+  </data>
+  <data name="ViewOnline" xml:space="preserve">
+    <value>Online anschauen</value>
+  </data>
+  <data name="DialogLoadCalculationFailedContent" xml:space="preserve">
+    <value>Leider ist das Laden deiner ausgewählten Kalkulations-Datei fehlgeschlagen. Bitte versuche es erneut oder kontaktiere unseren Support für weitere Unterstützung!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLoadCalculationFailedHeadline" xml:space="preserve">
+    <value>Laden fehlgeschlagen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogSaveCalculationFailedContent" xml:space="preserve">
+    <value>Leider ist das Speichern deiner Kalkulations-Datei fehlgeschlagen. Bitte versuche es erneut oder kontaktiere unseren Support für weitere Unterstützung!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogSaveCalculationFailedHeadline" xml:space="preserve">
+    <value>Speichern fehlgeschlagen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Bearbeiten</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="CheckLicense" xml:space="preserve">
+    <value>Lizenz überprüfen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="EditPrinter" xml:space="preserve">
+    <value>Drucker bearbeiten</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="SaveChanges" xml:space="preserve">
+    <value>Änderungen speichern</value>
+  </data>
+  <data name="DialogDeleteSelectedMaterialsContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du die/das ausgewählte(n) Material löschen möchtest? Dies kann nicht rückgängig gemacht werden!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedMaterialsHeadline" xml:space="preserve">
+    <value>Ausgewählte(s) Material löschen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedPrintersContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du den/die ausgewählte(n) Drucker löschen möchtest? Dies kann nicht rückgängig gemacht werden!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedPrintersHeadline" xml:space="preserve">
+    <value>Ausgewählte(n) Drucker löschen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedWorkstepsContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du den/die ausgewählte(n) Arbeitsschritt(e) löschen möchtest? Dies kann nicht rückgängig gemacht werden!</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedWorkstepsHeadline" xml:space="preserve">
+    <value>Ausgewählte(n) Arbeitsschritt(e) löschen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="EditMaterial" xml:space="preserve">
+    <value>Material bearbeiten</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="EditWorkstep" xml:space="preserve">
+    <value>Arbeitsschritt bearbeiten</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedMHRsContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du die/den ausgewählte(n) Maschinenstundensatz/-sätze löschen möchtest? Dies kann nicht rückgängig gemacht werden.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedMHRsHeadline" xml:space="preserve">
+    <value>Ausgewählte(n) Maschinenstundensatz/-sätze löschen?</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogMHRSavedSuccessfullyContent" xml:space="preserve">
+    <value>Der Maschinenstundensatz wurde erfolgreich gespeichert. Du kannst diesen nun für deine Drucker auswählen.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogMHRSavedSuccessfullyHeadline" xml:space="preserve">
+    <value>Maschinenstundensatz erfolgreich gespeichert</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="EditMHR" xml:space="preserve">
+    <value>Maschinenstundensatz bearbeiten</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LabelCalculationTimebaseMandatory" xml:space="preserve">
+    <value>Berechungs-Zeitbasis*:</value>
+  </data>
+  <data name="LabelMachineHoursPerMonthMandatory" xml:space="preserve">
+    <value>Maschinenstunden pro Monat*:</value>
+  </data>
+  <data name="DialogLicenseCheckFailedContent" xml:space="preserve">
+    <value>Dein Lizenzschlüssel ist deaktiviert oder abgelaufen! Die Pro-Funktionen werden deaktiviert für diese Installation.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseCheckFailedHeadline" xml:space="preserve">
+    <value>Lizenz-Prüfung fehlgeschlagen</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseCheckSucceededContent" xml:space="preserve">
+    <value>Dein Lizenzschlüssel ist gültig und aktiv für diese Installation.</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogLicenseCheckSucceededHeadline" xml:space="preserve">
+    <value>Lizenz-Prüfung erfolgreich</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="EnergyCosts" xml:space="preserve">
+    <value>Energiekosten</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="InterestRate" xml:space="preserve">
+    <value>Zinssatz</value>
+    <comment>0.0.1-beta</comment>
+  </data>
+  <data name="LocationCosts" xml:space="preserve">
+    <value>Standortkosten</value>
+  </data>
+  <data name="MachineHours" xml:space="preserve">
+    <value>Maschinenstunden</value>
+  </data>
+  <data name="MaintainanceAndRepairCosts" xml:space="preserve">
+    <value>Wartungs- &amp; Instandhaltungskosten</value>
+  </data>
+  <data name="ReplacementCosts" xml:space="preserve">
+    <value>Wiederbeschaffungswert</value>
+  </data>
+  <data name="DialogGcodeReadErrorFormatedContent" xml:space="preserve">
+    <value>Beim Lesen deiner Gcode-Datei ist ein unerwarteter Fehler aufgetreten. Wenn der Fehler weiterhin besteht, wende dich an unseren Support und sende uns deine Gcode-Datei an '{0}'</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="DialogGcodeReadErrorHeadline" xml:space="preserve">
+    <value>Fehler beim Lesen der Gcode-Datei</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="DialogRestartRequiredContent" xml:space="preserve">
+    <value>Die Änderung an den Einstellungen erforder einen Neustart der Anwendung. Jetzt neustarten?</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="DialogRestartRequiredHeadline" xml:space="preserve">
+    <value>Neustart erforderlich</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="EnterValidUri" xml:space="preserve">
+    <value>Gib einen gültigen URL an, der mit 'http://' oder 'https://' beginnt!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="EnterValueGreaterThanFormated" xml:space="preserve">
+    <value>Bitte gib einen Wert größer als '{0}' ein!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="FieldCannotBeEmpty" xml:space="preserve">
+    <value>Dieses Feld darf nicht leer sein!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="FileDoesNotExistsFormated" xml:space="preserve">
+    <value>Die Datei '{0}' existiert nicht unter dem angegebenen Pfad!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="FileExtensionFormatedInvalid" xml:space="preserve">
+    <value>Die Datei muss mit '{0}' enden!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="OnlyNumbersAreAllowed" xml:space="preserve">
+    <value>Nur Zahlen sind erlaubt!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="RestartLater" xml:space="preserve">
+    <value>Ich starte später neu...</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="RestartNow" xml:space="preserve">
+    <value>Jetzt neustarten!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="ShowCameraInfo" xml:space="preserve">
+    <value>Zeige Kamerainfos an?</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Unbekannt</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="ValidNumberFrom10Till100" xml:space="preserve">
+    <value>Gib eine gültige Zahl zwischen 10 und 100 ein!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="ValueCannotBeEmpty" xml:space="preserve">
+    <value>Wert darf nicht leer sein!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="ValueTypeUnknown" xml:space="preserve">
+    <value>Wertetyp ist unbekannt!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="Administrator" xml:space="preserve">
+    <value>Administrator</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="LicenseServerOffline" xml:space="preserve">
+    <value>Lizenz-Server offline oder nicht erreichbar</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="OfflineLicenseInvalid" xml:space="preserve">
+    <value>Der Lizenz-Server ist offline oder du bist nicht mit dem Internet verbunden. Leider ist deine letzte Lizenzprüfung zu lange her. Die Pro-Version wird temporär heruntergesetzt, bis du wieder online bist oder unser Server wieder funktioniert.</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="OfflineLicenseValid" xml:space="preserve">
+    <value>Der Lizenz-Server ist offline oder du bist nicht mit dem Internet verbunden. Jedoch ist deine letzte Lizenzprüfung noch gültig. Du kannst die Pro-Version weiter verwenden.</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="AccumulatedOffers" xml:space="preserve">
+    <value>Kumulierte Angebote</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="AccumulatedOffersInfo" xml:space="preserve">
+    <value>Die kumulierten Angebote werden zusammengerechnet. So kannst du ein Angebot aus mehreren Kalkulationen zusammenstellen.</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="AccumulatedPriceLabel" xml:space="preserve">
+    <value>Kumulierter Price:</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="AccumulatedPrintTimeLabel" xml:space="preserve">
+    <value>Gesamte Druckzeit:</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="AppNameEventLog" xml:space="preserve">
+    <value>Ereignis-Logger</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="AppNameRepetierServerProDashboard" xml:space="preserve">
+    <value>Repetier Server Pro Dashboard</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Chamber" xml:space="preserve">
+    <value>Heizkammer</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="ClearEventList" xml:space="preserve">
+    <value>Events leeren</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="CopyEventInformationToClipboard" xml:space="preserve">
+    <value>In Zwischenablage kopieren</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="CurrentPrint" xml:space="preserve">
+    <value>Aktueller Druck</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogDeleteCalculationContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du diese Kalkulation aus der Liste löschen möchtest?</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogDeleteCalculationHeadline" xml:space="preserve">
+    <value>Kalkulation löschen</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogDeleteMachineHourRateContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du die ausgewählte "Machinenstundensatz"-Berechnung löschen möchtest? Dies kann nicht rückgängig gemacht werden!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogDeleteMachineHourRateHeadline" xml:space="preserve">
+    <value>Maschinenstundensatz löschen</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogExceptionFormatedContent" xml:space="preserve">
+    <value>Leider ist ein unerwarteter Fehler während dieser Aktion aufgetreten. Weitere Details: \n{0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogExceptionHeadline" xml:space="preserve">
+    <value>Ein unerwarteter Fehler ist aufgetreten</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogFileTypeNotSupportedFormatedContent" xml:space="preserve">
+    <value>Der Dateityp '{0}' der Datei '{1}' wird nicht unterstützt!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogFileTypeNotSupportedHeadline" xml:space="preserve">
+    <value>Dateityp nicht unterstützt</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogNoFileSelectedContent" xml:space="preserve">
+    <value>Bitte wähle zuerst eine Datei aus!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogNoFileSelectedHeadline" xml:space="preserve">
+    <value>Keine Datei ausgewählt</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierDeleteModelsContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du die ausgewählten Modelle vom Server löschen möchtest? Dies kann nicht rückgängig gemacht werden!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierDeleteModelsHeadline" xml:space="preserve">
+    <value>Ausgewählte Modelle löschen</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierPrintModelFormatedContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du den Druck des Models '{0}' starten möchtest? Vergewissere dich davor, ob dein Drucker bereit und sauber ist!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierPrintModelHeadline" xml:space="preserve">
+    <value>Druck für Model starten</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierServerProNotConfiguredContent" xml:space="preserve">
+    <value>Es scheint als ob dein Repetier Server Pro noch nicht eingerichtet wurde. Bitte besuche die Einstellungsseite um dies jetzt zu tun.</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierServerProNotConfiguredHeadline" xml:space="preserve">
+    <value>Repetier Server Pro ist nicht konfiguriert</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierServerProOfflineContent" xml:space="preserve">
+    <value>Es scheint als ob dein Repetier Server Pro richtig konfiguriert ist, jedoch antwortet der Server nicht. Bitte prüfe ob dein Server eingeschaltet ist und deine eingegebene IP-Adresse die richtige ist!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierServerProOfflineHeadline" xml:space="preserve">
+    <value>Repetier Server Pro ist offline</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierServerRestartContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du deinen Repetier Server Pro jetzt neustarten möchtest? Vergewissere dich, dass keine aktiven Druckaufträge vorhanden sind!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierServerRestartHeadline" xml:space="preserve">
+    <value>Repetier Server Pro neustraten</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierServerShutdownContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du deinen Repetier Server Pro jetzt herunterfahren möchtest? Vergewissere dich, dass keine aktiven Druckaufträge vorhanden sind!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierServerShutdownHeadline" xml:space="preserve">
+    <value>Repetier Server Pro herunterfahren</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Donate" xml:space="preserve">
+    <value>Spenden</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EnableTransparency" xml:space="preserve">
+    <value>Transparenz aktivieren</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventAddedItemFormated" xml:space="preserve">
+    <value>Objekt hinzugefügt: {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventApplicationStartup" xml:space="preserve">
+    <value>Applikation gestartet</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventCalculationDoneFormated" xml:space="preserve">
+    <value>Kalkulation abgeschlossen {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventCalculationLoadedFormated" xml:space="preserve">
+    <value>Kalkulation {0} geöffnet von {1}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventCalculationLoadFailedFormated" xml:space="preserve">
+    <value>Die Kalkulations-Datei konnte nicht von {0} geladen werden. Der XML-Parser hat ein leeres Objekt zurückgegeben.</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventCalculationSavedFormated" xml:space="preserve">
+    <value>Kalkulation {0} gespeichert in {1}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventCouldNotReadFileInformation" xml:space="preserve">
+    <value>Dateiinformationen für '{0}' konnten nicht gelesen werden</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventDeletedItemFormated" xml:space="preserve">
+    <value>Objekt gelöscht: {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventDetails" xml:space="preserve">
+    <value>Event-Details</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventEditedItemFormated" xml:space="preserve">
+    <value>Objekt bearbeitet: {0} =&gt; {1}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventExceptionOccurredFormated" xml:space="preserve">
+    <value>Eine Ausnahme ist aufgetreten mit dem Ziel '{0}' und folgender Nachricht: {1}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventFileLoadedForamated" xml:space="preserve">
+    <value>Datei '{0}' geladen</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventFormCleared" xml:space="preserve">
+    <value>Formular geleert</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventGcodeFailedToSentToRepetierServerPro" xml:space="preserve">
+    <value>GCode konnte nicht an Repetier Server Pro gesendet werden: {0} / {1}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventGcodeSentToRepetierServerPro" xml:space="preserve">
+    <value>GCode an Repetier Server Pro gesendet: {0} / {1}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventMachineHourRateAssignedFormated" xml:space="preserve">
+    <value>Der Maschinenstundensatz '{0}' wurde zugeordnet zu: {1}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventOpenFolderFormated" xml:space="preserve">
+    <value>Ordner geöffnet: {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventOpenUri" xml:space="preserve">
+    <value>Externer URL geöffnet: {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventRepetierServerProInit" xml:space="preserve">
+    <value>Repetier Server Pro initialisiert: {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventUnknownGcodeFoundFormated" xml:space="preserve">
+    <value>Unbekannter GCode beim Lesen der Datei entdeckt: {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventUnknownSlicerFormated" xml:space="preserve">
+    <value>Unbekannter Slicer für den verwendeten GCode: {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventViewInitFormated" xml:space="preserve">
+    <value>Ansicht initialisiert: {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Extruder" xml:space="preserve">
+    <value>Extruder</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="FileAction" xml:space="preserve">
+    <value>Datei-Aktion</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="FileActionDelete" xml:space="preserve">
+    <value>Löschen</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="FileActionSetActive" xml:space="preserve">
+    <value>Aktiv setzen</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>Dateiname</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Files" xml:space="preserve">
+    <value>Dateien</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="FileType" xml:space="preserve">
+    <value>Dateityp</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Flow" xml:space="preserve">
+    <value>Fluss</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="GCodeInfo" xml:space="preserve">
+    <value>GCode Info</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="GoToRepetierServerProInBrowser" xml:space="preserve">
+    <value>Repetier Server Pro öffnen</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="LabelFileName" xml:space="preserve">
+    <value>Dateiname:</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="LabelGcode" xml:space="preserve">
+    <value>Gcode:</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="LabelOccurredAtFormated" xml:space="preserve">
+    <value>Um: {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="LabelProgress" xml:space="preserve">
+    <value>Fortschritt:</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="LabelStl" xml:space="preserve">
+    <value>STL:</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Layer" xml:space="preserve">
+    <value>Schicht</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Layers" xml:space="preserve">
+    <value>Schichten</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="LoadPrinterList" xml:space="preserve">
+    <value>Druckerliste laden</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menü</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Nachricht</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="NoPrintPrintActive" xml:space="preserve">
+    <value>Kein aktiver Druckauftrag</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Off" xml:space="preserve">
+    <value>Aus</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Offer" xml:space="preserve">
+    <value>Angebot</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="OfferIdLabel" xml:space="preserve">
+    <value>Angebotsnummer:</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Offline" xml:space="preserve">
+    <value>Offline</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="On" xml:space="preserve">
+    <value>Ein</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Online" xml:space="preserve">
+    <value>Online</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="OpenGcodeorStlFile" xml:space="preserve">
+    <value>Öffne STL oder Gcode</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="PercentageProgressOf" xml:space="preserve">
+    <value>{0} von {1} % abgeschlossen</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="PrintOffer" xml:space="preserve">
+    <value>Angebot drucken</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="ProgramExecutionDirectoryNotFound" xml:space="preserve">
+    <value>Programmausführungsverzeichnis nicht gefunden, während versucht wird, den Pfad zum Lizenzverzeichnis zu erstellen!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Reconnect" xml:space="preserve">
+    <value>Erneut verbinden</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="RepetierServerProIsNotConfigured" xml:space="preserve">
+    <value>Dein Repetier Server Pro scheint noch nicht in deinen Einstellungen konfiguriert zu sein. Bitte gehe zu der Einstellungsseite und richte deinen Server zuerst ein!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="RepetierServerProIsOffline" xml:space="preserve">
+    <value>Dein Repetier Server Pro scheint offline zu sein. Bitte prüfe deinen Server und versuche dich unten erneut zu verbinden.</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="RepetierServerProIsOfflineOrNotConfigured" xml:space="preserve">
+    <value>Es scheint als ob dein Repetier Server Pro entweder offline oder nicht richtig konfiguriert ist in deinen Einstellungen.</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="SetFlow" xml:space="preserve">
+    <value>Setze Fluss</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="SetSpeed" xml:space="preserve">
+    <value>Setze Geschwindigkeit</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="SetTemperature" xml:space="preserve">
+    <value>Setze Temperatur</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Speed" xml:space="preserve">
+    <value>Geschwindigkeit</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="STLViewer" xml:space="preserve">
+    <value>STL Viewer</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Temperature" xml:space="preserve">
+    <value>Temperatur</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Theme</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Timestamp" xml:space="preserve">
+    <value>Zeitstempel</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Transparency" xml:space="preserve">
+    <value>Transparenz</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="VariableProgressOf" xml:space="preserve">
+    <value>{0} von {1} {2} abgeschlossen</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="ViewOffer" xml:space="preserve">
+    <value>Angebot ansehen</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="WarningMessage_SettingsGeneralAppearanceTransparency" xml:space="preserve">
+    <value>Einige Grafikkarten / Treiber haben Probleme, die Anwendung zu maximieren, wenn Transparenz aktiviert ist. Das Aktivieren oder Deaktivieren dieser Funktion erfordert einen Neustart der Anwendung.</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="YourRepetierServerDashboard" xml:space="preserve">
+    <value>Dein Repetier Server Pro Dashboard</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventFetchLicensePathFormated" xml:space="preserve">
+    <value>Pfad zum Speichern der Lizenz geladen unter '{0}' geladen</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventLicenseAddFormated" xml:space="preserve">
+    <value>Lizenz '{0}' erfolgreich hinzugefügt</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventLicenseCheckMessageFormated" xml:space="preserve">
+    <value>Lizenzprüfung ausgeführt =&gt; Zurückgegebene Nachricht: {0}</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventLicenseLastCheckValidFormated" xml:space="preserve">
+    <value>Die letzte Lizenzprüfung war gültig, keine Lizenzprüfung ausgeführt: Zuletzt geprüft am {0}</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventLicenseRemovedFormated" xml:space="preserve">
+    <value>Lizenz '{0}' erfolgreich entfernt</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventLicenseSavedSuccessfullyAtFormated" xml:space="preserve">
+    <value>Lizenz erfolgreich gespeichert unter '{0}'</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventOSIncompatibleWithNewVersionFormatedEvent" xml:space="preserve">
+    <value>Die Version '{0}' deines Betriebssystemes ist nicht mit dem neusten Update kompatibel!</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventUpdateErrorFormated" xml:space="preserve">
+    <value>Fehler beim Suchen nach Updates: {0}</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventUserIsAdministratorFormated" xml:space="preserve">
+    <value>Benutzer '{0}' ist Administrator</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="Filament" xml:space="preserve">
+    <value>Filament</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="LicenseFormatInvalid" xml:space="preserve">
+    <value>Das Format der eingegebenen Lizenz ist ungültig</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="LicenseFormatValid" xml:space="preserve">
+    <value>Das Format der eingegebenen Lizenz ist gültig</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="NewMaterialAsNewWindow" xml:space="preserve">
+    <value>Neues Material (neues Fenster)</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="NewPrinterAsNewWindow" xml:space="preserve">
+    <value>Neuer Drucker (neues Fenster)</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="NewWorkstepAsNewWindow" xml:space="preserve">
+    <value>Neuer Arbeitsschritt (neues Fenster)</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="PerHour" xml:space="preserve">
+    <value>Pro Stunde</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="PerJob" xml:space="preserve">
+    <value>Pro Auftrag</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="PerPiece" xml:space="preserve">
+    <value>Pro Stück</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="Powder" xml:space="preserve">
+    <value>Pulver</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="Resin" xml:space="preserve">
+    <value>Resin</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="UnitGram" xml:space="preserve">
+    <value>g</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="UnitKilogram" xml:space="preserve">
+    <value>kg</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="UnitLiter" xml:space="preserve">
+    <value>l</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="UnitMililiter" xml:space="preserve">
+    <value>ml</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EnableGlobalLogging" xml:space="preserve">
+    <value>Aktiviere globales Event-Logging (empfohlen)</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="EventWebSocketClosedFormated" xml:space="preserve">
+    <value>Der WebSocket war geschlossen während versucht wurde eine Anfrage zu senden: {0}</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="EventWebSocketMessageReceivedFormated" xml:space="preserve">
+    <value>Nachricht vom Websocket erhalten: {0}</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="EventWebSocketOnCloseFormated" xml:space="preserve">
+    <value>Die Verbindung zum WebSocket {0} wurde vom Server geschlossen.</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="EventWebSocketOnErrorFormated" xml:space="preserve">
+    <value>Beim Verbinden zum WebSocket {0} ist ein Fehler aufgetreten: {1}</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="EventWebSocketOnOpenFormated" xml:space="preserve">
+    <value>WebSocket erfolgreich verbunden mit {0}</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="EventWebSocketSendCommandFormated" xml:space="preserve">
+    <value>Kommando an WebSocket gesendet: {0}</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="InfoPrivacyPolicy" xml:space="preserve">
+    <value>Deine Privatsphäre ist uns wichtig! Daher sammeln und teilen wir keine deiner wertvollen Informationen! Das Tool arbeitet komplett offline. Nur wenn du ein Pro-Benutzer bist, überprüft die Anwendung deine Lizenz gelegentlich.</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="LabelEnableLoggingRepetierServerPro" xml:space="preserve">
+    <value>Aktiviere Logging für die Repetier Server Pro Verbindung</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="LabelPrinterSlug" xml:space="preserve">
+    <value>Drucker-Titelform:</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="LabelStoredEventsAmountMandatory" xml:space="preserve">
+    <value>Anzahl gespeicherter Events:*</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="OpenSettingsLocation" xml:space="preserve">
+    <value>Einstellungsordner öffnen</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="OverwriteCurrencySymbol" xml:space="preserve">
+    <value>Währungssymbol überschreiben</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="PrivacyCheckNoAnalytics" xml:space="preserve">
+    <value>Wir nutzen keine Analyse-Software um dein Verhalten zu tracken!</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="PrivacyCheckNoDataCollection" xml:space="preserve">
+    <value>Wir sammeln keine deiner Daten, niemals!</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="Restart" xml:space="preserve">
+    <value>Neustart</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="SettingsEventLogger" xml:space="preserve">
+    <value>Event-Logger</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="SettingsEventLoggerImportantNote" xml:space="preserve">
+    <value>Der Event-Logger hilft uns beim Debuggen von Fehlern in unserer Anwendung. Alle gesammelten Informationen werden nur lokal auf deinem Computer gespeichert, solange die Anwendung ausgeführt wird. Es werden keine Informationen irgendwohin gesendet. Wenn du auf einen Fehler gestoßen bist, sende uns bitte die Informationen aus dem Fehlerereignis zusammen mit einer detaillierten Fehlerbeschreibung.</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="SettingsGroupDebug" xml:space="preserve">
+    <value>Debug</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="SettingsGroupPrivacyPolicy" xml:space="preserve">
+    <value>Privatsphäre</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="SettingsPrivacyPolicy" xml:space="preserve">
+    <value>Datenschutz</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="Shutdown" xml:space="preserve">
+    <value>Herunterfahren</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="YourPrivacyMatters" xml:space="preserve">
+    <value>Deine Privatsphäre ist uns wichtig!</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="AddSlicer" xml:space="preserve">
+    <value>Slicer hinzufügen</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="ApplicationIsRestartedAfterwards" xml:space="preserve">
+    <value>Anwendung wird danach neugestartet</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="ApplyEnergyCostsNote" xml:space="preserve">
+    <value>Dies gilt für die aus der Druckdauer, dem Stromverbrauch deines Druckers und dem angegebenen Energiepreis berechneten Energiekosten. Wenn du bereits einen Maschinenstundensatz berechnet und zugewiesen hast, musst du die Energiekosten nicht zusätzlich berechnen, da diese bereits in der Maschinenstundensatzberechnung berücksichtigt werden!</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="ApplyEnergyCostsToCalculation" xml:space="preserve">
+    <value>Energiekosten für Berechnung anwenden?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>Bist du dir sicher?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Ändern</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="CheckForUpdatesAtStartup" xml:space="preserve">
+    <value>Beim Starten auf Updates prüfen?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="CLI" xml:space="preserve">
+    <value>CLI (Command Line Interface)</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Command" xml:space="preserve">
+    <value>Befehl</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="CommandExportGcodeExample" xml:space="preserve">
+    <value>-export-gcode...</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Fortfahren</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Cura" xml:space="preserve">
+    <value>Ultimaker Cura</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Custom" xml:space="preserve">
+    <value>Benutzerdefiniert</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>Standard</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedFilesContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du die ausgewählten Dateien löschen möchtest?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedFilesHeadline" xml:space="preserve">
+    <value>Gewählte Dateien löschen</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogDeleteSlicerFormatedContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du den Slicer '{0}' aus der Liste löschen möchtest?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogDeleteSlicerHeadline" xml:space="preserve">
+    <value>Slicer löschen</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogDeleteSlicersContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du die ausgewählten Slicers aus der Liste löschen möchtest?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogDeleteSlicersHeadline" xml:space="preserve">
+    <value>Slicers löschen</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogFilesToImportFormatedContent" xml:space="preserve">
+    <value>Dateien({0}) sind bereit zum Importieren. Möchtest du den Import jetzt starten?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogFilesToImportHeadline" xml:space="preserve">
+    <value>Dateien fertig zum Importieren</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogOpenMultipleFileLocationsContent" xml:space="preserve">
+    <value>Du bist davor mehrere Dateispeicherorte zu öffnen. Möchtest du fortfahren?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogOpenMultipleFileLocationsHeadline" xml:space="preserve">
+    <value>Öffne multiple Dateispeicherorte</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogOverwriteExistingSettingsFormatedContent" xml:space="preserve">
+    <value>Es scheint, dass in deinem ausgewählten Zielpfad auf "{0}" bereits eine Einstellungsdatei vorhanden ist. Wie willst du weitermachen?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogOverwriteExistingSettingsHeadline" xml:space="preserve">
+    <value>Gefundene Einstellungen überschreiben?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogRemoveSelectedFilesFromListContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du die ausgewählten Dateien entfernen möchtest?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogRemoveSelectedFilesFromListHeadline" xml:space="preserve">
+    <value>Gewählte Dateien entfernen</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogSettingsResetSucceededContent" xml:space="preserve">
+    <value>Die Einstellungen wurden erfolgreich zurückgesetzt.</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogSettingsResetSucceededHeadline" xml:space="preserve">
+    <value>Einstellungen erfolgreich zurückgesetzt</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogSlicerApplicationNotFoundFormatedContent" xml:space="preserve">
+    <value>Der Slicer '{0}' konnte unter '{1}' nicht gefunden werden. Bitte prüfe ob dieser Slicer noch auf deinem Computer installiert ist.</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogSlicerApplicationNotFoundHeadline" xml:space="preserve">
+    <value>Slicer nicht gefunden</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Fertig</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="EditSlicer" xml:space="preserve">
+    <value>Slicer bearbeiten</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="EnterLocationDots" xml:space="preserve">
+    <value>Pfad eingeben...</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Fehler</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Everything" xml:space="preserve">
+    <value>Alle</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Exportieren</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="FilterApplicationFile" xml:space="preserve">
+    <value>Applikation (*.exe)|*.exe</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="FlashForge" xml:space="preserve">
+    <value>FlashForge</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="FolderDoesNotExist" xml:space="preserve">
+    <value>Ordner existiert nicht</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="GCode" xml:space="preserve">
+    <value>GCode</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="GcodeInfos" xml:space="preserve">
+    <value>Gcode-Infos</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="GcodeLines" xml:space="preserve">
+    <value>GCode-Zeilen</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="GcodeParser" xml:space="preserve">
+    <value>GCode-Parser</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="GcodeParserKnownSlicersNote" xml:space="preserve">
+    <value>Wenn diese Option aktiviert ist, prüft der Parser zuerst, ob der verwendete Slicer bekannt ist, und analysiert, ob die erforderlichen Werte in der Gcode-Datei als Kommentar angegeben sind. Dies erhöht die Geschwindigkeit und Genauigkeit.</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="GcodeParserPreferCommentValuesFromKnownSlicers" xml:space="preserve">
+    <value>Bevorzuge Werte, welche in den Kommentaren notiert sind von bekannten Slicers?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="GoToSettings" xml:space="preserve">
+    <value>Einstellungen öffnen</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="GUI" xml:space="preserve">
+    <value>GUI (Grafische Benutzeroberfläche)</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="ideaMaker" xml:space="preserve">
+    <value>ideaMaker</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>Importieren</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="ImportGcodeAfterSlicingCLI" xml:space="preserve">
+    <value>Gcode automatisch nach dem Slicen automatisch importieren (nur CLI)</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Info</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="KISSlicer" xml:space="preserve">
+    <value>KISSlicer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="KnownSlicersForCommentRead" xml:space="preserve">
+    <value>Bekannte Slicers für das Kommentar-Auslesen</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelConsoleOutput" xml:space="preserve">
+    <value>Konsolenausgabe:</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelDownloadUri" xml:space="preserve">
+    <value>Download-URL:</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelParsingGcode" xml:space="preserve">
+    <value>Analysiere GCode:</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelPowerLevel" xml:space="preserve">
+    <value>Leistungslevel:</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelSelectTheSettingsYouWantToReset" xml:space="preserve">
+    <value>Wähle die Einstellungen, welche du zurücksetzen möchtest:</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelSlicerAdditionalCommands" xml:space="preserve">
+    <value>Zusätzlich Befehle:</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelSlicerNameMandatory" xml:space="preserve">
+    <value>Slicer-Name:*</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelSlicerPathMandatory" xml:space="preserve">
+    <value>Slicer-Installationspfad:*</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelSlicerUsageTypeMandatory" xml:space="preserve">
+    <value>Verwendungstyp:*</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Pfad</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Makerbot" xml:space="preserve">
+    <value>Makerbot</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="MoveAndRestart" xml:space="preserve">
+    <value>Verschieben und Neustarten</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="NewTab" xml:space="preserve">
+    <value>Neuer Tab</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>Keine</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="OpenASlicerInstanceForEachFile" xml:space="preserve">
+    <value>Ja, öffne eine neue Instanz für jede Datei</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="OpenLocation" xml:space="preserve">
+    <value>Pfad öffnen</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="OpenSlicerInstanceForEachFile" xml:space="preserve">
+    <value>Slicer für jede Datei einzeln öffnen?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>Überschreiben</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Portable" xml:space="preserve">
+    <value>Portable</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="PrepareSlicing" xml:space="preserve">
+    <value>Slicen vorbereiten</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="PrusaSlicer" xml:space="preserve">
+    <value>PrusaSlicer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Zurücksetzen</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="RunSlicer" xml:space="preserve">
+    <value>Slicer starten</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SaveSettingsInApplicationFolder" xml:space="preserve">
+    <value>Einstellungen im Applikations-Ordner speichern</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SelectedSettingsAreReset" xml:space="preserve">
+    <value>Ausgewählte Einstellungen sind zurückgesetzt</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SelectSlicerAppPath" xml:space="preserve">
+    <value>Wähle den Slicer-Installationspfad...</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SendToSlicer" xml:space="preserve">
+    <value>An Slicer senden</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SettingsNameAppSettings" xml:space="preserve">
+    <value>App-Einstellungen</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SettingsNameGcode" xml:space="preserve">
+    <value>GCode</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SettingsNameImportExport" xml:space="preserve">
+    <value>Importieren &amp; Exportieren</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SettingsNameUpdate" xml:space="preserve">
+    <value>Aktualisieren</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Simplify3D" xml:space="preserve">
+    <value>Simplify3D ®</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Skeinforge" xml:space="preserve">
+    <value>Skeinforge</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Slic3r" xml:space="preserve">
+    <value>Slic3r PE</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Slice" xml:space="preserve">
+    <value>Slice</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Slicer" xml:space="preserve">
+    <value>Slicer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SlicerCommandsNote" xml:space="preserve">
+    <value>Wenn keine Befehle übergeben werden, wird nur die GUI des Slicers geöffnet und die STL-Datei (en) werden geladen. Bitte überprüfe die Befehle für deinen bevorzugten Slicer in der Slicer-Dokumentation (falls unterstützt).</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SlicerMultipleInstancesNote" xml:space="preserve">
+    <value>Wenn du diese Option aktivierst, wird für jede Datei ein Slicer geöffnet. Andernfalls werden alle Dateien im selben Slicer geöffnet.</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Snapmakerjs" xml:space="preserve">
+    <value>Snapmakerjs</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Stl" xml:space="preserve">
+    <value>Stl</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="TheSettingsLocationIsNotAffected" xml:space="preserve">
+    <value>Der Einstellungs-Speicherort ist nicht betroffen</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warnung</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="BrowseGcodeFiles" xml:space="preserve">
+    <value>GCode-Dateien auswählen...</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="Community" xml:space="preserve">
+    <value>Community</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="Connected" xml:space="preserve">
+    <value>Verbunden</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="CurrentConnection" xml:space="preserve">
+    <value>Aktuelle Verbindung</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DeleteMessage" xml:space="preserve">
+    <value>Nachricht löschen</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DialogRepetierCreateNewGroupContent" xml:space="preserve">
+    <value>Bitte gib den Namen der Gruppe ein:</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DialogRepetierCreateNewGroupHeadline" xml:space="preserve">
+    <value>Neue Gruppe erstellen</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DialogRepetierDeleteMessageContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du die Nachricht löschen möchtest?</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DialogRepetierDeleteMessageHeadline" xml:space="preserve">
+    <value>Narchicht löschen</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="Disconnected" xml:space="preserve">
+    <value>Getrennt</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DragAndDropFileHere" xml:space="preserve">
+    <value>Dateien hier hereinziehen...</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="EventUncatchedRepetierEventFormated" xml:space="preserve">
+    <value>Unerwartetes Repetier Event über den WebSocket erhalten: {0}</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="GcodeCodeLineEditor" xml:space="preserve">
+    <value>GCode-Editor</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="HelpTranslate" xml:space="preserve">
+    <value>Helfen dieses Tool zu übersetzen?</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="LabelCreatingGcodeLayerModel" xml:space="preserve">
+    <value>Erstelle GCode-Schichtenmodell:</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="LabelEnableSecureConnectionRepetierServerPro" xml:space="preserve">
+    <value>Aktiviere verschlüsselte Verbindung (SSL)</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="LabelTargetModelGroupMandatory" xml:space="preserve">
+    <value>Modell-Gruppe*:</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="LabelWebCam" xml:space="preserve">
+    <value>WebCam:</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="LabelWebSocket" xml:space="preserve">
+    <value>WebSocket:</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="Messages" xml:space="preserve">
+    <value>Nachrichten</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="NoMessagesAvailable" xml:space="preserve">
+    <value>Keine Nachrichten verfügbar</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="Official" xml:space="preserve">
+    <value>Offiziell</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="OpenMessage" xml:space="preserve">
+    <value>Nachricht öffnen</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="OpenWebCam" xml:space="preserve">
+    <value>WebCam öffnen</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="ToolTip_DeleteFiles" xml:space="preserve">
+    <value>Lösche Datei(en)</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="ToolTip_New" xml:space="preserve">
+    <value>Neu</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="ToolTip_OpenFolder" xml:space="preserve">
+    <value>Öffne Ordner</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="ToolTip_OpenGCodeEditor" xml:space="preserve">
+    <value>Öffne GCode-Editor</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="ToolTip_Reload" xml:space="preserve">
+    <value>Neu laden</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="ToolTip_StartPrint" xml:space="preserve">
+    <value>Dieses Modell drucken</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="ToolTip_TranslateProjectUrl" xml:space="preserve">
+    <value>Hilf dieses Tool in deine Sprache zu übersetzen!</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="UploadFiles" xml:space="preserve">
+    <value>Datei(en) hochladen</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="UploadingFileFromFilesFormated" xml:space="preserve">
+    <value>Lade {0} von {1} Dateien hoch:</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="Warning_SecureConnection" xml:space="preserve">
+    <value>Wähle diese Option nur, wenn deine Verbindung verschlüsselt ist (https://). Ansonsten kann dies zu Verbindungsproblemen führen!</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="WebCam" xml:space="preserve">
+    <value>WebCam</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DialogDownloadWebCamVersionContent" xml:space="preserve">
+    <value>Die WebCam-Funktion fügt ca. 130 MB an Daten zum Tool hinzu. Deswegen haben wir uns entschieden, zwei Versionen zu machen. Wenn du also die WebCam-Funktion nutzen möchtest, lade bitte die Version von unten herunter.</value>
+    <comment>0.0.8_1-beta</comment>
+  </data>
+  <data name="DialogDownloadWebCamVersionHeadline" xml:space="preserve">
+    <value>Andere Version herunterladen</value>
+    <comment>0.0.8_1-beta</comment>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Herunterladen</value>
+    <comment>0.0.8_1-beta</comment>
+  </data>
+  <data name="AddExcelTemplate" xml:space="preserve">
+    <value>Excel-Vorlage hinzufügen</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="AddExcelTemplateSettings" xml:space="preserve">
+    <value>Einstellung für Excel-Vorlage hinzufügen</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="AdvancedView" xml:space="preserve">
+    <value>Erweiterte Ansicht</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationFailrate" xml:space="preserve">
+    <value>Kalkulation - Fehlerrate</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationList" xml:space="preserve">
+    <value>Kalkulationen - Liste</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationMargin" xml:space="preserve">
+    <value>Kalkulation - Gewinn</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationMaterial" xml:space="preserve">
+    <value>Kalkulation - Material</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPriceEnergy" xml:space="preserve">
+    <value>Kalkulation - Energiekosten</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPriceHandling" xml:space="preserve">
+    <value>Kalkulation - Handhabungskosten</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPriceMaterial" xml:space="preserve">
+    <value>Kalkulation - Materialkosten</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPricePrinter" xml:space="preserve">
+    <value>Kalkulation - Druckkosten</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPriceTax" xml:space="preserve">
+    <value>Kalkulation - Steuern</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPriceTotal" xml:space="preserve">
+    <value>Kalkulation - Gesamtbetrag</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPriceWorksteps" xml:space="preserve">
+    <value>Kalkulation - Kosten für Arbeitsschritte</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPrinter" xml:space="preserve">
+    <value>Kalkulation - Drucker</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPrintTime" xml:space="preserve">
+    <value>Kalkulation - Druckdauer</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationQuantity" xml:space="preserve">
+    <value>Kalkulation - Stückzahl</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Column" xml:space="preserve">
+    <value>Spalte</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>Firmenname</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CoordinatesExcelTemplate" xml:space="preserve">
+    <value>Startkoordinaten für die Excel-Vorlage</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CustomerAddressCity" xml:space="preserve">
+    <value>Kunde - Adresse - Stadt</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CustomerAddressNumber" xml:space="preserve">
+    <value>Kunde - Adresse - Hausnummer</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CustomerAddressStreet" xml:space="preserve">
+    <value>Kunde - Adresse - Straße</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CustomerCountry" xml:space="preserve">
+    <value>Kunde - Land</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CustomerFirstName" xml:space="preserve">
+    <value>Kunde - Vorname</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CustomerId" xml:space="preserve">
+    <value>Kunde - Kundennummer</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CustomerLastName" xml:space="preserve">
+    <value>Kunde - Nachname</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DefaultExcelOfferExporterTemplate" xml:space="preserve">
+    <value>Excel-Angebotsvorlage</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DefaultExcelSingleCalculationTemplate" xml:space="preserve">
+    <value>Excel-Kalkulationsvorlage</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DefaultSelectionInfo" xml:space="preserve">
+    <value>Die hier ausgewählten Elemente werden standardmäßig aktiviert, wenn eine neue Kalkulation gestartet wird.</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DefaultSettings" xml:space="preserve">
+    <value>Standard-Einstellungen</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogDeleteContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du deine Auswahl löschen möchtest? Dies kann nicht rückgängig gemacht werden!</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogDeleteExportTemplateFormatContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du die Export-Vorlage '{0}' löschen möchtest? Dies kann nicht rückgängig gemacht werden!</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogDeleteExportTemplateHeadline" xml:space="preserve">
+    <value>Export-Vorlage löschen</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogDeleteHeadline" xml:space="preserve">
+    <value>Löschen</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedCalculationsContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du die ausgewählten Kalkulationen löschen möchtest? Dies kann nicht rückgängig gemacht werden!</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedCalculationsHeadline" xml:space="preserve">
+    <value>Gewählte Kalkulationen löschen</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogErrorWhileExportingContent" xml:space="preserve">
+    <value>Es ist ein Fehler beim Verarbeiten der Daten für den Export aufgetreten. Bitte versuche es erneut oder kontaktiere unseren Support.</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogErrorWhileExportingHeadline" xml:space="preserve">
+    <value>Fehler beim Exportieren</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogExportToFileSucceededForamtedContent" xml:space="preserve">
+    <value>Die Daten wurden erfolfreich in '{0}' exportiert.</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogExportToFileSucceededHeadline" xml:space="preserve">
+    <value>Daten erfolgreich exportiert</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogImportedSlicedGcodeFilesContent" xml:space="preserve">
+    <value>Möchtest du die eben generierten Gcode-Dateien für den Import auswählen?</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogImportedSlicedGcodeFilesHeadline" xml:space="preserve">
+    <value>Gcode-Dateien importieren?</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Duplicate" xml:space="preserve">
+    <value>Duplizieren</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Energy" xml:space="preserve">
+    <value>Energie</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="ExcelTemplateCoordinates" xml:space="preserve">
+    <value>Koordinaten für Excel-Vorlage</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="ExcelTemplateCoordinatesNotes" xml:space="preserve">
+    <value>Du kannst den Koordinaten in deiner Excel-Vorlage Eigenschaften aus unserem Kalkulationsobjekt zuweisen. Der Exporter schreibt dann die entsprechenden Daten in die bereitgestellte Excel-Vorlagendatei.</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="ExportAsPdf" xml:space="preserve">
+    <value>Als PDF-Datei exportieren</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="ExportExcel" xml:space="preserve">
+    <value>Als Excel-Datei exportieren</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="ExportPdf" xml:space="preserve">
+    <value>Als Pdf-Datei exportieren</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="FIlePathIsInvalid" xml:space="preserve">
+    <value>Die Datei existiert nicht oder die Dateierweiterung ist ungültig!</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="HourRate" xml:space="preserve">
+    <value>Stundensatz</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="IsCheckingLicenseState" xml:space="preserve">
+    <value>Prüfe Lizenzstatus....</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelDefaultMaterialsForCalculation" xml:space="preserve">
+    <value>Standard-Material(ien) für Kalkulationen:</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelDefaultPrintersForCalculation" xml:space="preserve">
+    <value>Standard-Drucker für Kalkulationen:</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelDownloadSourceCode" xml:space="preserve">
+    <value>Quellcode herunterladen:</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelExcelColumnMandatory" xml:space="preserve">
+    <value>Spalte:*</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelExcelRowMandatory" xml:space="preserve">
+    <value>Zeile:*</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelFilamentUsedLength" xml:space="preserve">
+    <value>Benötigtes Filament:</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelInterval" xml:space="preserve">
+    <value>Intervall:</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelPingCounter" xml:space="preserve">
+    <value>Ping-Zähler:</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelPropertyMandatory" xml:space="preserve">
+    <value>Eigenschaft:*</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelRepetierServerAddressMandatory" xml:space="preserve">
+    <value>IP-Adresse / Domänename:*</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelWorksheetMandatory" xml:space="preserve">
+    <value>Arbeitsmappe:*</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabeTemplateFileMandatory" xml:space="preserve">
+    <value>Excel-Vorlage-Datei:*</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>Liste</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Material" xml:space="preserve">
+    <value>Material</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="MyCalculation" xml:space="preserve">
+    <value>Meine Kalkulation</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="NewExcelExporterSettings" xml:space="preserve">
+    <value>Neue Einstellung für Excel-Vorlage</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="NewExcelExporterTemplate" xml:space="preserve">
+    <value>Neue Excel-Vorlage</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="NotePingCounter" xml:space="preserve">
+    <value>Um die Verbindung zum WebSocket offen zu halten muss ein Ping-Befehle an den Repetier Server gesendet werden. Der angezeigte Wert zeigt die gesendeten Ping-Befehle.</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="OfferId" xml:space="preserve">
+    <value>Angebotsnummer</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="OpenFile" xml:space="preserve">
+    <value>Datei öffnen</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="OpenFolder" xml:space="preserve">
+    <value>Ordner öffnen</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="PleaseAddValidExcelColumnString" xml:space="preserve">
+    <value>Bitte gib eine gültige Excel-Spalte an!</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="PricePer" xml:space="preserve">
+    <value>Preis pro</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Printer" xml:space="preserve">
+    <value>Drucker</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="RepetierServerProConnectionNote" xml:space="preserve">
+    <value>Du kannst entweder die IP-Address 'x.x.x.x' oder den Domänenanmen (FQDN) 'repetier-server.local' angeben um eine Verbindung aufzubauen.</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Row" xml:space="preserve">
+    <value>Zeile</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="SelectPrinterToStartRepetierDashboard" xml:space="preserve">
+    <value>Drucker auswählen um das Reptier Server Dashboard zu starten</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="SettingsGroupExporter" xml:space="preserve">
+    <value>Exporter</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="SettingsNameCalculation" xml:space="preserve">
+    <value>Kalkulationen</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="SettingsNameExcelExporter" xml:space="preserve">
+    <value>Excel Exporter</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Single" xml:space="preserve">
+    <value>Einzeln</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="TemplateTargetMandatory" xml:space="preserve">
+    <value>Ziel:*</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="ToolTipDeleteAllSelectedCalculations" xml:space="preserve">
+    <value>Alle ausgewählten Kalkulationen löschen</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="TooltipIPAdressRepetierOrFQDN" xml:space="preserve">
+    <value>IP-Adresse oder Domänename...</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="ToolTipSelectAllCalculations" xml:space="preserve">
+    <value>Alle Kalkulationen aus- / abwählen</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="UseSelectedPrinter" xml:space="preserve">
+    <value>Ausgewählten Drucker verwenden</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="UstId" xml:space="preserve">
+    <value>UstId.</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Voxelizer2" xml:space="preserve">
+    <value>Voxelizer 2</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Worksteps" xml:space="preserve">
+    <value>Arbeitsschritte</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="WriteDataToTemplateFile" xml:space="preserve">
+    <value>Daten in Template-Datei schreiben?</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="WriteDataToTemplateFileNote" xml:space="preserve">
+    <value>Wenn du dies aktivierst, öffnet der Exporter die definierte Excel-Vorlage und schreibt die Informationen ab der angegebenen Spalte und Zeile in die Datei.</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelDefaultWorkstepsForCalculation" xml:space="preserve">
+    <value>Standard-Arbeitsschritte für Kalkulationen:</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="ActivateLoggingForOctoPrint" xml:space="preserve">
+    <value>Aktiviere Logging für die OctoPrint Verbindung</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="AddMachineHourRate" xml:space="preserve">
+    <value>Maschinenstundensatz hinzufügen</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="DefaultPrintServer" xml:space="preserve">
+    <value>Standard-Druckserver</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="DialogDeleteManufacturerFormatedContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du den ausgewählen Hersteller '{0}' löschen möchtest? Dies kann nicht rückgängig gemacht werden!</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="DialogDeleteManufacturerHeadline" xml:space="preserve">
+    <value>Hersteller löschen</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectionFormatedContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du das ausgewählte Objekt '{0}' löschen möchtest? Dies kann nicht rückgängig gemacht werden!</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectionFormatedHeadline" xml:space="preserve">
+    <value>Lösche gewähltes Objekt {0}</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="DialogDeleteSupplierFormatedContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du den ausgewählen Lieferanten '{0}' löschen möchtest? Dies kann nicht rückgängig gemacht werden!</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="DialogDeleteSupplierHeadline" xml:space="preserve">
+    <value>Lieferant löschen</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="EditManufacturer" xml:space="preserve">
+    <value>Hersteller bearbeiten</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="EditSupplier" xml:space="preserve">
+    <value>Lieferant bearbeiten</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="EnterValidOctoPrintApiKey" xml:space="preserve">
+    <value>Bitte gib einen gültigen OctoPrint-API-Schlüssel ein!</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="HelpMessage_DefaultPrintServer" xml:space="preserve">
+    <value>Der hier ausgewählte Druckserver wird als Standard für das Senden deines G-Codes festgelegt.</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LabelFixedPrice" xml:space="preserve">
+    <value>Fester Maschinenstundensatz:</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LabelMachineHoursMandatory" xml:space="preserve">
+    <value>Maschinenstunden:*</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LabelProjectNameMandatory" xml:space="preserve">
+    <value>Projektname:*</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LabelSelectFromList" xml:space="preserve">
+    <value>Von Liste wählen:</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LabelSelectPrinterFromList" xml:space="preserve">
+    <value>Drucker aus Liste wählen</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LegalNoteOctoprint" xml:space="preserve">
+    <value>Dies ist keine offizielle Software von Octoprint oder in irgendeiner Weise mit Octoprint oder Gina Häußge verbunden. Es enthält lediglich die OctoPrint-API, um mit deinem OctoPrint-Server zu interagieren.</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LegalNoteRepetierServerPro" xml:space="preserve">
+    <value>Dies ist keine offizielle Software von Repetier Server oder in irgendeiner Weise mit Repetier Server oder seinem Besitzer verbunden. Es enthält lediglich die Repetier Server Rest-API, um mit deinem Server zu interagieren.</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LoadFromManufacturer" xml:space="preserve">
+    <value>Von Hersteller laden</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LoadFromSupplier" xml:space="preserve">
+    <value>Von Lieferant laden</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LoadInformationFromPrinter" xml:space="preserve">
+    <value>Von Drucker laden</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="ManufacturerIsInvalidForPurchase" xml:space="preserve">
+    <value>Hersteller ist gesppert</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="ManufacturerIsValidForPurchase" xml:space="preserve">
+    <value>Hersteller ist freigegeben</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="Manufacturers" xml:space="preserve">
+    <value>Hersteller</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="MaterialIsSealed" xml:space="preserve">
+    <value>Material ist verschlossen</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="NewMachineHourRate" xml:space="preserve">
+    <value>Neuer Maschinenstundensatz</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="OctoPrint" xml:space="preserve">
+    <value>OctoPrint</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="RemainingContent" xml:space="preserve">
+    <value>Verbleibender Inhalt</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="RepetierServerPro" xml:space="preserve">
+    <value>Repetier Server Pro</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="SectionIsBeta" xml:space="preserve">
+    <value>Dieser Abschnitt befindet sich im Beta-Status, was bedeutet, dass er Fehler aufweisen kann und derzeit nicht vollständig funktioniert. Wenn du Probleme feststellst, wenden dich bitte an unser Support-Team.</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="SectionLocked" xml:space="preserve">
+    <value>Dieser Abschnitt ist derzeit gesperrt und wird in einer zukünftigen Version verfügbar sein.</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="SelectYourDefaultPrintServer" xml:space="preserve">
+    <value>Wähle deinen Standard-Druckserver unten.</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="SettingsNameOctoPrint" xml:space="preserve">
+    <value>OctoPrint</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="SettingsNamePrinter" xml:space="preserve">
+    <value>3D Drucker</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="SupplierIsInvalidForPurchase" xml:space="preserve">
+    <value>Lieferant ist gesppert</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="SupplierIsValidForPurchase" xml:space="preserve">
+    <value>Lieferant ist freigegeben</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="Suppliers" xml:space="preserve">
+    <value>Lieferanten</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="ToolTip_FixedValueForMachineHourRate" xml:space="preserve">
+    <value>Wenn diese Option aktiviert ist, kannst du einen festen Wert für deinen Maschinenstundensatz eingeben, z. B. wenn du deinen Maschinenstundensatz bereits in einem anderen Tool / Excel-Blatt berechnet hast.</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="ToolTip_TimebaseMachineHourRate" xml:space="preserve">
+    <value>Aktiviere dieses Kontrollkästchen, wenn du alle Informationen pro Jahr bereitstellen möchtest. Andernfalls werden alle eingegebenen Informationen mit 12 multipliziert.</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="UseFixedValueForMachineHourRate" xml:space="preserve">
+    <value>Einen festen Wert für den Maschinenstundensatz verwenden?</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="UseSelectedManufacturer" xml:space="preserve">
+    <value>Ausgewählten Hersteller verwenden</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="UseSelectedSupplier" xml:space="preserve">
+    <value>Ausgewählten Lieferanten verwenden</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="Watermark_OctoPrintApiKey" xml:space="preserve">
+    <value>Gib deinen API-Schlüssel ein...</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="AddAndSaveSliceCommandToList" xml:space="preserve">
+    <value>Füge Slicer-Befehl zur Liste hinzu und speichere</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="AddSlicerCommand" xml:space="preserve">
+    <value>Slicer-Befehl hinzufügen</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="AllAxis" xml:space="preserve">
+    <value>Alle Achsen</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="AppNameOctoPrintDashboard" xml:space="preserve">
+    <value>OctoPrint</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="AutoconnectOnStart" xml:space="preserve">
+    <value>Automatisch bei Serverstart verbinden</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Closed" xml:space="preserve">
+    <value>Geschlossen</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Connecting" xml:space="preserve">
+    <value>Verbindet</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="ConnectingToPrinterDots" xml:space="preserve">
+    <value>Verbinde Drucker...</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="ConnectionInformation" xml:space="preserve">
+    <value>Verbindungsinformation</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="ConnectionSettings" xml:space="preserve">
+    <value>Verbindungseinstellungen</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="ConnectPrinter" xml:space="preserve">
+    <value>Drucker verbinden</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="ControlIsDisabledDuringPrint" xml:space="preserve">
+    <value>Die Drucker-Steuerung ist solange deaktiviert, wie ein Druck läuft!</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogCancelPrintConent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du den aktuellen Druck abbrechen möchtset? Dies kann nicht rückgängig gemacht werden und dein Druck ist verloren!</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogCancelPrintHeadline" xml:space="preserve">
+    <value>Druck abbrechen</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogCommandCannotBeEmptyOrMissingTheFilepathTagContent" xml:space="preserve">
+    <value>Der Befehl darf nicht leer sein und der Dateipfad darf nicht fehlen. Füge mindestens den '[filepath]'-Ausdruck hinzu. Bitte prüfe deinen Befehl und versuche es erneut.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogCommandCannotBeEmptyOrMissingTheFilepathTagHeadline" xml:space="preserve">
+    <value>Befehl leer oder ungültig</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogConnectionFailedFormatContent" xml:space="preserve">
+    <value>Die Verbindung zum Drucker '{0}' ist fehlgeschlagen oder es ist eine Zeitüberschreitung aufgetreten. Bitte überprüfe, ob dein Drucker eingeschaltet und mit dem Server korrekt verbunden ist.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogConnectionFailedHeadline" xml:space="preserve">
+    <value>Verbindung fehlgeschlagen</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogEnterNewFolderNameContent" xml:space="preserve">
+    <value>Gib unten den Namen für den neuen Ordner ein.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogEnterNewFolderNameHeadline" xml:space="preserve">
+    <value>Neuer Ordner</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogFolderNameCannotBeEmptyContent" xml:space="preserve">
+    <value>Der Ordnername darf nicht leer sein.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogFolderNameCannotBeEmptyHeadline" xml:space="preserve">
+    <value>Ungültiger Ordnername</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogGcodeCannotBeSentFormatContent" xml:space="preserve">
+    <value>Der aktuell ausgewählte Gcode '{0}' kann nicht gesendet werden, da dies nur eine OctoPrint-Gcode-Analyse ist und sich die Datei bereits auf dem Server befindet.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogGcodeCannotBeSentHeadline" xml:space="preserve">
+    <value>Gcode kann nicht gesendet werden</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogInvalidFileTypeSelectedFormatContent" xml:space="preserve">
+    <value>Du hast einen ungültigen Dateityp '{0}' ausgewählt. Bitte wähle nur eine Datei mit folgenden Dateierweiterungen aus: {1}</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogInvalidFileTypeSelectedHeadline" xml:space="preserve">
+    <value>Ungültiger Dateityp ausgewählt</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogOctoPrintServerNotConfiguredContent" xml:space="preserve">
+    <value>Anscheinend hast du noch keine Informationen für deinen OctoPrint-Server eingegeben. Bitte gehe zur Einstellungsseite und tu dies.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogOctoPrintServerNotConfiguredHeadline" xml:space="preserve">
+    <value>OctoPrint-Server ist nicht konfiguriert</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogOctoPrintServerOfflineContent" xml:space="preserve">
+    <value>Es scheint, dass deine Einstellungen für deinen OctoPrint-Server gültig sind, der Server reagiert jedoch nicht. Bitte überprüfe, ob dein Server läuft und ob die eingegebene IP-Adresse korrekt ist!</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogOctoPrintServerOfflineHeadline" xml:space="preserve">
+    <value>OctoPrint-Server ist offline</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogOverwriteSlicerCommandOrSaveAsNewFormatedContent" xml:space="preserve">
+    <value>Möchtest du den aktuell ausgewählten Slicer-Befehl '{0}' überschreiben?</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogOverwriteSlicerCommandOrSaveAsNewHeadline" xml:space="preserve">
+    <value>Slicer-Befehl überschreiben?</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogPausePrintContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du den aktuellen Druck pausieren möchtest? Beachte, dass diese Aktion nicht unbeaufsichtigt erfolgen sollte!</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogPausePrintHeadline" xml:space="preserve">
+    <value>Druck pausieren</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogRemoteControlPrintersFormatContent" xml:space="preserve">
+    <value>Willkommen im {0} Kontrollzentrum. Bitte überprüfe immer, ob dein Drucker frei und einsatzbereit ist, wenn du Druckaufträge aus der Ferne startest. Beachte auch, wenn du deine Druckerachse bewegst, dass dies ohne Beschädigung des Druckers möglich ist. Wir und unsere Software haften nicht für Schäden, die durch unbeaufsichtigte Kontrolle verursacht werden!</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogRemoteControlPrintersHeadline" xml:space="preserve">
+    <value>Wichtiger Verwendungshinweis (sorgfältig lesen)</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogResumePrintContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du den aktuellen Druck fortfahren möchtest? Beachte, dass diese Aktion nicht unbeaufsichtigt erfolgen sollte!</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogResumePrintHeadline" xml:space="preserve">
+    <value>Druck fortfahren</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogSlicerCommandAlreadyExistsFormatContent" xml:space="preserve">
+    <value>Der Slicer-Befehl mit dem Ausführungstext '{0}' existiert bereits mit dem Namen '{0}'. Es wurde nichts gespeichert.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogSlicerCommandAlreadyExistsHeadline" xml:space="preserve">
+    <value>Slicer-Befehl existiert bereits</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogSlicerCommandSavedFormatContent" xml:space="preserve">
+    <value>Der Slicer-Befehl '{0}' wurde erfolgreich in deiner Befehlsliste gespeichert.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogSlicerCommandSavedHeadline" xml:space="preserve">
+    <value>Slicer-Befehl gespeichert</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DisconnectPrinter" xml:space="preserve">
+    <value>Drucker trennen</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="EditSlicerCommand" xml:space="preserve">
+    <value>Slicer-Befehl bearbeiten</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="EnhancedControl" xml:space="preserve">
+    <value>Erweiterte Kontrolle</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="EnterANameForTheSlicerCommand" xml:space="preserve">
+    <value>Bitte gib einen Namen für deinen Slicer-Befehl ein, um diesen später zu identifizieren.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="EventUnknownPrintServerFormated" xml:space="preserve">
+    <value>Unbekannter Druckserver zum Hochladen einer Gcode-Datei ausgewählt: {0}</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="ExecuteCommand" xml:space="preserve">
+    <value>Befehl ausführen</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="FileNameDoesNotMatchRegexPatternFormated" xml:space="preserve">
+    <value>Der Dateiname '{0}' stimmt nicht mit dem Regex-Muster überein: '{1}'</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="GoOneDirectoryBack" xml:space="preserve">
+    <value>Ein Verzeichnis zurück</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="GoToOctoPrintInBrowser" xml:space="preserve">
+    <value>OctoPrint öffnen</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="HomeAxis" xml:space="preserve">
+    <value>Achesn in Ausgangsposition</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="IncludeFilePathAutomaticallyAtEndOfCommand" xml:space="preserve">
+    <value>Füge den Dateipfad '[filepath]' automatisch am Ende des Befehles ein</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelApiVersion" xml:space="preserve">
+    <value>API-Version:</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelBaudrate" xml:space="preserve">
+    <value>Baudrate:</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelCurrentPath" xml:space="preserve">
+    <value>Aktueller Pfad:</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelFolder" xml:space="preserve">
+    <value>Ordner:</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelOutputFileFormatMandatory" xml:space="preserve">
+    <value>Regex für Ausgabedatei:*</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelPort" xml:space="preserve">
+    <value>Schnittstelle:</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelPrinterProfile" xml:space="preserve">
+    <value>Drucker-Profil:</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelPrinterState" xml:space="preserve">
+    <value>Printerstatus:</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelSerialPort" xml:space="preserve">
+    <value>Serielle Schnittstelle:</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelUpdateIntervalInSecondsMandatory" xml:space="preserve">
+    <value>Aktualisierungsinterval (Sek.):*</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelUseSavedCommands" xml:space="preserve">
+    <value>Verwende gespeicherten Befehl:</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LoadGcodeAnalysisFromServer" xml:space="preserve">
+    <value>Lade Gcode-Analyse vom Server</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="NoFilesOrFolderInThisDirectoryFound" xml:space="preserve">
+    <value>In diesem Verzeichnis / Speicherort wurden keine Dateien oder Ordner gefunden.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="NoGcodeSelectedDots" xml:space="preserve">
+    <value>Kein GCode gewählt...</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="NoSaveAsNew" xml:space="preserve">
+    <value>Nein, als Neuen speichern</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Note_OctoPrintShowFunctions" xml:space="preserve">
+    <value>Wenn du alle für OctoPrint relevanten Funktionen in der Software ausblenden möchtest, entferne einfach den Haken im Kontrollkästchen.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Note_OutputFileFormat" xml:space="preserve">
+    <value>Abhängig vom verwendeten Slicer kann es sein, dass dem Namen der STL-Datei ein Präfix oder Suffix hinzugefügt wird. Hier kannst du das Format angeben, damit das Tool die Gcode-Datei später finden und importieren kann.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Note_UpdateInterval" xml:space="preserve">
+    <value>Dies ist das Zeitintervall in Sekunden, in dem das Tool die aktuellen Informationen von deinem Druckserver abruft.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="OctoPrintServerIsOffline" xml:space="preserve">
+    <value>Dein OctoPrint-Server scheint offline zu sein. Bitte überprüfe deinen Server und versuche unten, die Verbindung wiederherzustellen.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="OctoPrintServerOfflineWithoutReconnect" xml:space="preserve">
+    <value>Dein OctoPrint-Server scheint offline zu sein. Bitte überprüfe deinen Server und versuche es erneut.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="OctoPrintServerProIsNotConfigured" xml:space="preserve">
+    <value>Es scheint, dass dein OctoPrint-Server in deinen Einstellungen nicht konfiguriert ist. Bitte gehe zur Einstellungsseite und richte zuerst deinen Server ein!</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="OpenGcodeFromOctoPrint" xml:space="preserve">
+    <value>Öffne Gcode von OctoPrint</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="OpenInSlicer" xml:space="preserve">
+    <value>In Slicer öffnen</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Operational" xml:space="preserve">
+    <value>Bereit</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>Pause</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Drucken</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Printing" xml:space="preserve">
+    <value>Druckt</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="RestartTheApplicationToChangeTheLanguage" xml:space="preserve">
+    <value>Starte die Anwendung neu um die Sprache auf die ausgewählte zu ändern!</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Resume" xml:space="preserve">
+    <value>Weiter</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="SaveConnectionInformation" xml:space="preserve">
+    <value>Verbindungseinstellungen speichern</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="SelectedGcode" xml:space="preserve">
+    <value>Gewählter Gcode</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="SelectPrinterToStartOctoPrintDashboard" xml:space="preserve">
+    <value>Wähle einen Drucker um das OctoPrint-Dashboard zu starten</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="SendGcode" xml:space="preserve">
+    <value>Gcode senden</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="ShowOctoPrintFeaturesInTool" xml:space="preserve">
+    <value>Zeige OctoPrint-Funktionen in der Software</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="SlicerCommands" xml:space="preserve">
+    <value>Slicer-Befehle</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Slicers" xml:space="preserve">
+    <value>Slicers</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="ToolTip_LoadGcodeAnalysisFromOctoPrint" xml:space="preserve">
+    <value>Lade Gcode-Analyse von OctoPrint</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Understood" xml:space="preserve">
+    <value>Verstanden</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="UnderstoodAndDontShowAgain" xml:space="preserve">
+    <value>Verstanden, nicht mehr anzeigen</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="UseSelectedGcode" xml:space="preserve">
+    <value>Verwende ausgewählten Gcode</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Watermark_OutputFileFormat" xml:space="preserve">
+    <value>([filename])+([A-Za-z0-9-_.])+(.gcode|.gco|.gc)$</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="XAxis" xml:space="preserve">
+    <value>X-Achse</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="YAxis" xml:space="preserve">
+    <value>Y-Achse</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="YesOverwrite" xml:space="preserve">
+    <value>Ja, überschreiben</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="YourOctoPrintDashboard" xml:space="preserve">
+    <value>Dein OctoPrint-Dashboard</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="ZAxis" xml:space="preserve">
+    <value>Z-Achse</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogNoPrinterProfileFoundContent" xml:space="preserve">
+    <value>Das Tool konnte keine Druckerprofile auf deinem OctoPrint-Server finden. Bitte überprüfe, ob du mindestens ein Druckerprofil erstellt hast, indem du OctoPrint in deinem Browser öffnest. Bitte wende dich an unseren Support, wenn der Fehler weiterhin besteht.</value>
+    <comment>0.1.2-RC</comment>
+  </data>
+  <data name="DialogNoPrinterProfileFoundHeadline" xml:space="preserve">
+    <value>Kein Druckerprofil gefunden</value>
+    <comment>0.1.2-RC</comment>
+  </data>
+  <data name="DialogUpdateMachineHourRateToPrintersFormatedContent" xml:space="preserve">
+    <value>Dieser Maschinenstundensatz '{0}' ist mit mindestens einen Drucker verlinkt. Möchtest du die verlinkten Stundensätze ebenfalls aktualisieren?</value>
+    <comment>0.1.2-RC</comment>
+  </data>
+  <data name="DialogUpdateMachineHourRateToPrintersHeadline" xml:space="preserve">
+    <value>Verlinkte Drucker aktualisieren</value>
+    <comment>0.1.2-RC</comment>
+  </data>
+  <data name="LabelFilamentWeight" xml:space="preserve">
+    <value>Filamentgewicht:</value>
+    <comment>0.1.2-RC</comment>
+  </data>
+  <data name="LoadingFilesFromServerDots" xml:space="preserve">
+    <value>Lade Dateien vom Server...</value>
+    <comment>0.1.2-RC</comment>
+  </data>
+  <data name="AddCustomAddition" xml:space="preserve">
+    <value>Benutzerdefinierten Zuschlag hinzufügen</value>
+    <comment>1.1.3-beta</comment>
+  </data>
+  <data name="ApplyCustomAdditionsToResult" xml:space="preserve">
+    <value>Möchtest du benutzerdefinierte Zuschläge zu deiner Kalkulation hinzufügen?</value>
+    <comment>1.1.3-beta</comment>
+  </data>
+  <data name="CurrencySymbol" xml:space="preserve">
+    <value>Währungssymbol</value>
+    <comment>1.1.3-beta</comment>
+  </data>
+  <data name="EventCurrencySymbolNotFoundFormated" xml:space="preserve">
+    <value>Das Währungssymbol '{0}' kann keiner verfügbaren Sprachkultur zugeordnet werden.</value>
+    <comment>1.1.3-beta</comment>
+  </data>
+  <data name="HelpMessage_CustomAdditionsWithSameOrder" xml:space="preserve">
+    <value>Benutzerdefinierte Zuschläge mit der gleichen Reihenfolge werden aufsummiert. Dann wird die resultierende Rate auf den Kalkulationspreis angewendet. Zum Beispiel, wenn du einen Zuschlag von 30% und einen mit 10% hast. Beide haben die Reihenfolge '0', dann werden 40% auf den Preis aufgerechnet.</value>
+    <comment>1.1.3-beta</comment>
+  </data>
+  <data name="HelpMessage_OverwriteCurrencySymbol" xml:space="preserve">
+    <value>Dies überschreibt das Standard-Währungssymbol deiner gewählten Sprache mit der Sprache, welche du unten wählst.</value>
+    <comment>1.1.3-beta</comment>
+  </data>
+  <data name="HelpMessage_OverwriteNumberFormat" xml:space="preserve">
+    <value>Wenn du diese Option wählst, dann wir die komplette Nummerformatierung überschrieben. Das beinhaltet die Nummerformatierung, das Datumsformat usw.</value>
+    <comment>1.1.3-beta</comment>
+  </data>
+  <data name="HintFeatureDisabledInThisRelease" xml:space="preserve">
+    <value>Diese Funktion ist aktuell deaktiviert und wird in einem späteren Update zur Verfügung stehen.</value>
+    <comment>1.1.3-beta</comment>
+  </data>
+  <data name="HintUseAndHoldCtrlToMarkMore" xml:space="preserve">
+    <value>* Halte die 'Strg'-Taste gedrückt und klicke auf die Elemente in der Liste um mehrere auszuwählen.</value>
+    <comment>1.1.3-beta</comment>
+  </data>
+  <data name="LabelCalculationTyepMandatory" xml:space="preserve">
+    <value>Verrechnungstyp:*</value>
+    <comment>1.1.3-beta</comment>
+  </data>
+  <data name="LabelCustomAdditions" xml:space="preserve">
+    <value>Wähle eine oder mehrere benutzerdefinierte Zuschläge, welche dem Preis später aufgerechnet werden.</value>
+    <comment>1.1.3-beta</comment>
+  </data>
+  <data name="LabelExampleCurrency" xml:space="preserve">
+    <value>Beispiel Währung:</value>
+    <comment>1.1.3-beta</comment>
+  </data>
+  <data name="LabelExampleDateTime" xml:space="preserve">
+    <value>Beispiel Datum:</value>
+    <comment>1.1.3-beta</comment>
+  </data>
+  <data name="LabelExamples" xml:space="preserve">
+    <value>Beispiele:</value>
+    <comment>1.1.3-beta</comment>
+  </data>
+  <data name="LabelOrderIdMandatory" xml:space="preserve">
+    <value>Reihenfolge:*</value>
+    <comment>1.1.3-beta</comment>
+  </data>
+  <data name="LabelPercentageMandatory" xml:space="preserve">
+    <value>Prozentsatz:*</value>
+    <comment>1.1.3-beta</comment>
+  </data>
+  <data name="LabelSpecifiyNewCurrencySymbol" xml:space="preserve">
+    <value>Eigenes Währungssymbol angeben</value>
+    <comment>1.1.3-beta</comment>
+  </data>
+  <data name="NewCustomAddition" xml:space="preserve">
+    <value>Neuer benutzerdefinierter Zuschlag</value>
+    <comment>1.1.3-beta</comment>
+  </data>
+  <data name="NoteCustomAddition" xml:space="preserve">
+    <value>Du kannst hier benutzerdefinierte Zuschläge definieren. Diese werden später zu deinem finalen Preis hinzugefügt.</value>
+    <comment>1.1.3-beta</comment>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>Reihenfolge</value>
+    <comment>1.1.3-beta</comment>
+  </data>
+  <data name="OverwriteCompleteNumberFormats" xml:space="preserve">
+    <value>Das komplette Nummerformat mit der ausgewählten Lokalisierung überschreiben?</value>
+    <comment>1.1.3-beta</comment>
+  </data>
+  <data name="OverwriteDefaultCurrencySymbol" xml:space="preserve">
+    <value>Standard-Währungssymbol der gesetzten Sprache überschreiben?</value>
+    <comment>1.1.3-beta</comment>
+  </data>
+  <data name="Percent" xml:space="preserve">
+    <value>Prozent</value>
+    <comment>1.1.3-beta</comment>
+  </data>
+  <data name="TooltipCustomAddition" xml:space="preserve">
+    <value>Dies wird zu dem Preis hinzugefügt</value>
+    <comment>1.1.3-beta</comment>
+  </data>
+  <data name="AddAttribute" xml:space="preserve">
+    <value>Eigenschaft hinzufügen</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="AdditionalMaterialAttributes" xml:space="preserve">
+    <value>Zusätzliche Materialeigenschaften</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="Additons" xml:space="preserve">
+    <value>Zusätze</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="AddServer" xml:space="preserve">
+    <value>Server hinzufügen</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="ApplyManualPrintInformation" xml:space="preserve">
+    <value>Manuelle Druck-Informationen anwenden</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="Attribute" xml:space="preserve">
+    <value>Eigenschaft</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="Attributes" xml:space="preserve">
+    <value>Eigenschaften</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="DialogAddNewAttributeContent" xml:space="preserve">
+    <value>Bitte gib den Namen für die neue Eigenschaft unten an.</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="DialogAddNewAttributeHeadline" xml:space="preserve">
+    <value>Neue Eigenschaft hinzufügen</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="DialogSlicerPrinterConfigIsMissingContent" xml:space="preserve">
+    <value>Der Parser benötigt mindestens eine Slicer-Druckerkonfiguration um die Druckzeit genau berechnen zu könenn. Bitte gehe zu den Einstellungen und lege eine Konfiguration an.</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="DialogSlicerPrinterConfigIsMissingHeadline" xml:space="preserve">
+    <value>Slicer-Druckerkonfiguration fehlt</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="DownloadAsApp" xml:space="preserve">
+    <value>Jetzt als App herunterladen!</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="DurationCuring" xml:space="preserve">
+    <value>Dauer (Aushärten)</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="DurationDrying" xml:space="preserve">
+    <value>Dauer (Trocknen)</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="EditServer" xml:space="preserve">
+    <value>Server bearbeiten</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="EnableDarkTheme" xml:space="preserve">
+    <value>Dark-Theme aktivieren</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="EventEnteredValueWasInvalidFormated" xml:space="preserve">
+    <value>Der eingegebene Wert '{0}' ist ungültig.</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="EventGcodeFileParseSucceededFormated" xml:space="preserve">
+    <value>Der Gcode '{0}' wurde erfolgreich in '{1}' analysiert.</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="EventSettingsBackupSucceededFormated" xml:space="preserve">
+    <value>Die Sicherung für die Einstellungs-Datei wurde erfolgreich erstellt unter '{0}'</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="EventSettingsFileNotFoundAtFormated" xml:space="preserve">
+    <value>Die Einstellungs-Datei konnte nicht gefunden werden in '{0}'</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="FilamentDiameter" xml:space="preserve">
+    <value>Filamentdurchmesser</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="GcodeParserPrintTimeCalculation" xml:space="preserve">
+    <value>Druckzeitberechnung</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="HelpTextNewGcodeSelectionMethod" xml:space="preserve">
+    <value>Durch die Mehrfach-Datei-Unterstützung für eine Kalkulation kannst du nun mehrerer Gcode-Dateien auswählen. Wenn du keinen Gcode hast, kannst du die Informationen manuell mit dem Button links hinzufügen.</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="IsLoadingFilesDots" xml:space="preserve">
+    <value>Lädt Dateien...</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="LabelAttributeMandatory" xml:space="preserve">
+    <value>Eigenschaft:*</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="LabelFileNameMandatory" xml:space="preserve">
+    <value>Dateiname:*</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="LabelGcodeOrPrintInformation" xml:space="preserve">
+    <value>Gcode- / Druckinformationen:</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="LabelPortMandatory" xml:space="preserve">
+    <value>Port:*</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="LabelRecommendedPrice" xml:space="preserve">
+    <value>Empfohlener Preis:</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="LabelSelectedCaculation" xml:space="preserve">
+    <value>Gewählte Kalkulation:</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="LabelServerMandatory" xml:space="preserve">
+    <value>Server:*</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="LabelSubTotal" xml:space="preserve">
+    <value>Zwischensumme:</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="LabelValueMandatory" xml:space="preserve">
+    <value>Wert:*</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="LoadIntoCalculator" xml:space="preserve">
+    <value>In Kalkulator laden</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="ManualPrintJobInformation" xml:space="preserve">
+    <value>Manuelle Druck-Informationen</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="MaxAccelerationE" xml:space="preserve">
+    <value>Max. Beschleunigung Extruder:</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="MaxAccelerationEWhileExtruding" xml:space="preserve">
+    <value>Max. Beschleunigung Extruder (beim Extrudieren):</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="MaxAccelerationEWhileRetracting" xml:space="preserve">
+    <value>Max. Beschleunigung Extruder (beim Zurückziehen):</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="MaxAccelerationXandY" xml:space="preserve">
+    <value>Max. Beschleunigung X und Y:</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="MaxAccelerationZ" xml:space="preserve">
+    <value>Max. Beschleunigung Z:</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="NewServer" xml:space="preserve">
+    <value>Neuer Server</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="NoFileAddedPleaseAddOneFirst" xml:space="preserve">
+    <value>Es wurde noch keine Datei für diese Kalkulation hinzugefügt. Bitte wähle eine oder gib die Informationen manuell ein.</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="NoServersCreatedInSettingsYetDots" xml:space="preserve">
+    <value>Es wurden noch keine Server in den Einstellungen angelegt...</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="Note_ReloadCalculationsOnRestart" xml:space="preserve">
+    <value>Wenn diese Option aktiviert ist, dann lädt das Tool die Kalkulationen von der letzten Sitzung automatisch beim Start.</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="Note_SlicerPrinterConfiguration" xml:space="preserve">
+    <value>Bitte fülle alle Werte so genau wie möglich aus. Diese sind entscheident bei der Berechnung der Druckzeit von deinem Gcode.</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="NoWorkstepsAddedToThisCalculationDots" xml:space="preserve">
+    <value>Keine Arbeitsschritte für diese Kalkulation hinzugefügt...</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="OpenInBrowser" xml:space="preserve">
+    <value>In Browser öffnen</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="Overview" xml:space="preserve">
+    <value>Übersicht</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="ParseGcodes" xml:space="preserve">
+    <value>Gcode(s) analysieren</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="ParseMultipleGcodes" xml:space="preserve">
+    <value>Mehere Gcodes analysieren</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="PrinterControlDisabledDueToPrinterIsOfflineOrDisconnectedDots" xml:space="preserve">
+    <value>Das Steuer-Panel ist deaktiviert, da der Drucker entweder offline ode nicht angeschlossen ist...</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="PrintTime" xml:space="preserve">
+    <value>Druckzeit</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Anzahl</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="Rates" xml:space="preserve">
+    <value>Raten</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Aktualisieren</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="RememberCalculationsTillNextStartup" xml:space="preserve">
+    <value>Kalkulationen bis nächsten Start merken</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="SelectAServerToStartTheDashboard" xml:space="preserve">
+    <value>Wähle einen Server um das Dashboard zu starten</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="SelectGcodeFiles" xml:space="preserve">
+    <value>Wähle Gcode-Dateien...</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="ServerApiKey" xml:space="preserve">
+    <value>API-Schlüssel</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="ServerIsConnectingDots" xml:space="preserve">
+    <value>Server verbindet sich...</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="ServerIsOffline" xml:space="preserve">
+    <value>Server ist offline</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="ServerIsOnline" xml:space="preserve">
+    <value>Server ist online</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="Servers" xml:space="preserve">
+    <value>Servers</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="ShowCalculationResultWhenSelectedCalculationChanged" xml:space="preserve">
+    <value>Zeige Berechnungsergebnis bei Wechsel der Kalkulation?</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="SlicerPrinterConfigurationNameLabel" xml:space="preserve">
+    <value>Drucker-Konfigurationsname:</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="TemperatureDrying" xml:space="preserve">
+    <value>Temperatur (Trocknen)</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="TemperatureHeatedBed" xml:space="preserve">
+    <value>Temperatur (Heizbett)</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="TemperatureNozzle" xml:space="preserve">
+    <value>Temperatur (Düse)</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="UseSelectedServer" xml:space="preserve">
+    <value>Gewählten Server verwenden</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Wert</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="Volume" xml:space="preserve">
+    <value>Volumen</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="AddManuelPrintFileInformation" xml:space="preserve">
+    <value>Manuell Druckinformationen hinzufügen</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="ApplyVolume" xml:space="preserve">
+    <value>Volumen anwenden</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="ApplyWeight" xml:space="preserve">
+    <value>Gewicht anwenden</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="CalculateVolume" xml:space="preserve">
+    <value>Volumen ausrechnen</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="CalculateWeight" xml:space="preserve">
+    <value>Gewicht berechnen</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="LabelMaterialMandatory" xml:space="preserve">
+    <value>Material:*</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="LabelWeightMandatory" xml:space="preserve">
+    <value>Gewicht:*</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="UseVolumeInsteadOfWeightForCalculation" xml:space="preserve">
+    <value>Verwende das Volumen anstatt des Gewichtes für die Kalkulation?</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="Weight" xml:space="preserve">
+    <value>Gewicht</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="LabelPrintTimeCorrectionValue" xml:space="preserve">
+    <value>Druckzeit-Korrekturfaktor:</value>
+    <comment>1.1.5-beta</comment>
+  </data>
+</root>

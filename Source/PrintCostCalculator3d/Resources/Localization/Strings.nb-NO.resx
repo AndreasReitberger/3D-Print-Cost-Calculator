@@ -1,0 +1,3144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>Om</value>
+  </data>
+  <data name="Accent" xml:space="preserve">
+    <value>Aksent</value>
+  </data>
+  <data name="AccumulatedOffers" xml:space="preserve">
+    <value>Akkumulerte tilbud</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="AccumulatedOffersInfo" xml:space="preserve">
+    <value>Akkumulerte tilbud summeres samlet. Så du kan bygge ett tilbud fra flere beregninger.</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="AccumulatedPriceLabel" xml:space="preserve">
+    <value>Akkumulert pris:</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="AccumulatedPrintTimeLabel" xml:space="preserve">
+    <value>Akkumulert varighet:</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="ActivateLicense" xml:space="preserve">
+    <value>Aktiver lisens</value>
+  </data>
+  <data name="ActivateLoggingForOctoPrint" xml:space="preserve">
+    <value>Aktiver logging for OctoPrint-tilkoblingen</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Legg til</value>
+  </data>
+  <data name="AddCategory" xml:space="preserve">
+    <value>Legg til kategori</value>
+  </data>
+  <data name="AddExcelTemplate" xml:space="preserve">
+    <value>Legg til Excel-mal</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="AddExcelTemplateSettings" xml:space="preserve">
+    <value>Legg til Excel-malinnstillinger</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Additional" xml:space="preserve">
+    <value>Ytterligere</value>
+  </data>
+  <data name="AddLicense" xml:space="preserve">
+    <value>Legg til lisens</value>
+  </data>
+  <data name="AddMachineHourRate" xml:space="preserve">
+    <value>Legg til maskinens timepris</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="AddManufacturer" xml:space="preserve">
+    <value>Legg til produsent</value>
+  </data>
+  <data name="AddMaterial" xml:space="preserve">
+    <value>Legg til materiale</value>
+  </data>
+  <data name="AddPrinter" xml:space="preserve">
+    <value>Legg til skriver</value>
+  </data>
+  <data name="AddSlicer" xml:space="preserve">
+    <value>Legg til slicert</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="AddSupplier" xml:space="preserve">
+    <value>Legg til leverandør</value>
+  </data>
+  <data name="AddWorkstep" xml:space="preserve">
+    <value>Legg til arbeidssteg</value>
+  </data>
+  <data name="AddWorkstepCategory" xml:space="preserve">
+    <value>Legg til arbeidssteg-kategori</value>
+  </data>
+  <data name="Administrator" xml:space="preserve">
+    <value>Administrator</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="AdvancedView" xml:space="preserve">
+    <value>Avansert visning</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Agreed" xml:space="preserve">
+    <value>Avtalt</value>
+  </data>
+  <data name="AgreeToEULA" xml:space="preserve">
+    <value>Jeg er enig</value>
+  </data>
+  <data name="AllInformationPerMonth" xml:space="preserve">
+    <value>Kalkuler som per måned:</value>
+  </data>
+  <data name="AlwaysShowIconInTray" xml:space="preserve">
+    <value>Vis alltid ikonet i systemtray</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Beløp</value>
+  </data>
+  <data name="And" xml:space="preserve">
+    <value>og</value>
+  </data>
+  <data name="ApplicationIsRestartedAfterwards" xml:space="preserve">
+    <value>Søknaden startes på nytt etterpå</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="ApplyEnergyCostsNote" xml:space="preserve">
+    <value>Dette gjelder energikostnadene beregnet etter utskriftsvarighet, skriverens strømforbruk og den angitte energiprisen. Hvis du allerede har beregnet og tildelt en maskintidstakst, er det ikke nødvendig å beregne energikostnadene i tillegg på grunn av at de allerede er dekket i maskinens timeprisberegning!</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="ApplyEnergyCostsToCalculation" xml:space="preserve">
+    <value>Legge til energikostnader på beregningen?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="ApplyTaxRateToResult" xml:space="preserve">
+    <value>Ønsker du å legge en skattesats til din beregnede pris?</value>
+  </data>
+  <data name="AppName3dPrintCostCalculator" xml:space="preserve">
+    <value>3D Print Cost Calculator</value>
+  </data>
+  <data name="AppName3dPrinterMaterialOverview" xml:space="preserve">
+    <value>3D-skrivermaterialer</value>
+  </data>
+  <data name="AppName3dPrinterOverview" xml:space="preserve">
+    <value>3D-skrivere</value>
+  </data>
+  <data name="AppName3dPrinterWorkstep" xml:space="preserve">
+    <value>Ytterligere arbeidssteg</value>
+  </data>
+  <data name="AppNameEventLog" xml:space="preserve">
+    <value>Hendelsesloggen</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="AppNameMachineHourRateCalculator" xml:space="preserve">
+    <value>Maskinens timekalkulator</value>
+  </data>
+  <data name="AppNameMassSearchAndReplace" xml:space="preserve">
+    <value>Massesøk og erstatt</value>
+  </data>
+  <data name="AppNameNotFound" xml:space="preserve">
+    <value>Denne appen eksisterer ikke!</value>
+  </data>
+  <data name="AppNameRepetierServerProDashboard" xml:space="preserve">
+    <value>Repetier Server Pro Dashboard</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="AppNameSubversionServer" xml:space="preserve">
+    <value>SVN</value>
+  </data>
+  <data name="AreYouSure" xml:space="preserve">
+    <value>Er du sikker?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="AssignMachineHourRateCalculation" xml:space="preserve">
+    <value>Tildel maskin-timespris</value>
+  </data>
+  <data name="AssignMHR" xml:space="preserve">
+    <value>Tildel maskinens timepris</value>
+  </data>
+  <data name="AssignSelectedMHR" xml:space="preserve">
+    <value>Tildel valgt maskinhastighet</value>
+  </data>
+  <data name="AtLeastOneApplicationMustBeVisible" xml:space="preserve">
+    <value>Minst én applikasjon må være synlig</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Tilbake</value>
+  </data>
+  <data name="BJ" xml:space="preserve">
+    <value>BJ (Binder Jetting) ®</value>
+  </data>
+  <data name="BrowseGcodeFiles" xml:space="preserve">
+    <value>Bla gjennom Gcode-filer ...</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="BuildVolume" xml:space="preserve">
+    <value>Byggevolum</value>
+  </data>
+  <data name="Calculate" xml:space="preserve">
+    <value>Kalkuler</value>
+  </data>
+  <data name="CalculationFailrate" xml:space="preserve">
+    <value>Beregning - Feilrate</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationList" xml:space="preserve">
+    <value>Beregninger - Liste</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationMargin" xml:space="preserve">
+    <value>Beregning - Margin</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationMaterial" xml:space="preserve">
+    <value>Beregning - Materiale</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPriceEnergy" xml:space="preserve">
+    <value>Beregning - Energikostnader</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPriceHandling" xml:space="preserve">
+    <value>Beregning - Håndtering</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPriceMaterial" xml:space="preserve">
+    <value>Beregning - Materialkostnader</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPricePrinter" xml:space="preserve">
+    <value>Beregning - Skriverkostnader</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPriceTax" xml:space="preserve">
+    <value>Beregning - Skatt</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPriceTotal" xml:space="preserve">
+    <value>Beregning - Totalt</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPriceWorksteps" xml:space="preserve">
+    <value>Beregning - Arbeidsstegskostnader</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPrinter" xml:space="preserve">
+    <value>Beregning - Skriver</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationPrintTime" xml:space="preserve">
+    <value>Beregning - Utskriftstid</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationQuantity" xml:space="preserve">
+    <value>Beregning - Mengde</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CalculationResult" xml:space="preserve">
+    <value>Beregningsresultat(er)</value>
+  </data>
+  <data name="Calculations" xml:space="preserve">
+    <value>beregninger</value>
+  </data>
+  <data name="CalculationType" xml:space="preserve">
+    <value>Beregningstype</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Avbryt</value>
+  </data>
+  <data name="CardView" xml:space="preserve">
+    <value>Vis som kort</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Kategori</value>
+  </data>
+  <data name="CDLP" xml:space="preserve">
+    <value>cDLP (kontinuerlig digital lysbehandling) ®</value>
+  </data>
+  <data name="Chamber" xml:space="preserve">
+    <value>Kammer</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Endring</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="CheckForUpdates" xml:space="preserve">
+    <value>Se etter oppdateringer</value>
+  </data>
+  <data name="CheckForUpdatesAtStartup" xml:space="preserve">
+    <value>Ser du etter oppdateringer ved oppstart?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="CheckLicense" xml:space="preserve">
+    <value>Sjekk lisensen</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Klar</value>
+  </data>
+  <data name="ClearEventList" xml:space="preserve">
+    <value>Tydelige hendelser</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="ClearFilter" xml:space="preserve">
+    <value>Fjern filter</value>
+  </data>
+  <data name="CLI" xml:space="preserve">
+    <value>CLI (kommandolinjegrensesnitt)</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Lukk</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Farge</value>
+  </data>
+  <data name="Column" xml:space="preserve">
+    <value>Kolonne</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Command" xml:space="preserve">
+    <value>Kommando</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="CommandExportGcodeExample" xml:space="preserve">
+    <value>eksport-gcode ...</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Community" xml:space="preserve">
+    <value>Samfunnet</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>Selskapsnavn</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="ConfirmClose" xml:space="preserve">
+    <value>Bekreft ved avslutning</value>
+  </data>
+  <data name="Connected" xml:space="preserve">
+    <value>Tilkoblet</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Fortsette</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="CoordinatesExcelTemplate" xml:space="preserve">
+    <value>Start koordinater for Excel-malen</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CopyEventInformationToClipboard" xml:space="preserve">
+    <value>Kopiere til utklippstavle</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="CreateCopies" xml:space="preserve">
+    <value>Lag kopier</value>
+  </data>
+  <data name="CredentialWithThisNameAlreadyExists" xml:space="preserve">
+    <value>Dette navnet eksisterer allerede</value>
+  </data>
+  <data name="Cura" xml:space="preserve">
+    <value>Ultimaker Cura</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="CurrentConnection" xml:space="preserve">
+    <value>Nåværende tilkobling</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="CurrentPrint" xml:space="preserve">
+    <value>Gjeldende print</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Custom" xml:space="preserve">
+    <value>Tilpasset</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="CustomerAddressCity" xml:space="preserve">
+    <value>Kunde - adresse - by</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CustomerAddressNumber" xml:space="preserve">
+    <value>Kunde - adresse - nummer</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CustomerAddressStreet" xml:space="preserve">
+    <value>Kunde - adresse - gate</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CustomerCountry" xml:space="preserve">
+    <value>Kunde - land</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CustomerFirstName" xml:space="preserve">
+    <value>Kunde - Fornavn</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CustomerId" xml:space="preserve">
+    <value>Kunde ID</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="CustomerLastName" xml:space="preserve">
+    <value>Kunde - Etternavn</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DatagridView" xml:space="preserve">
+    <value>Vis som Datagrid</value>
+  </data>
+  <data name="DeactivateLicense" xml:space="preserve">
+    <value>Deaktiver lisensen</value>
+  </data>
+  <data name="Declined" xml:space="preserve">
+    <value>avvist</value>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>Standard</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DefaultExcelOfferExporterTemplate" xml:space="preserve">
+    <value>Excel estimatmal</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DefaultExcelSingleCalculationTemplate" xml:space="preserve">
+    <value>Enkel beregningsmal for Excel</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DefaultPrintServer" xml:space="preserve">
+    <value>Standard printserver</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="DefaultSelectionInfo" xml:space="preserve">
+    <value>Elementene som er valgt her, blir sjekket som standard når du starter en ny beregning.</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DefaultSettings" xml:space="preserve">
+    <value>Standard instillinger</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Slett</value>
+  </data>
+  <data name="DeleteAll" xml:space="preserve">
+    <value>Slette alle</value>
+  </data>
+  <data name="DeleteLicense" xml:space="preserve">
+    <value>Slett lisens</value>
+  </data>
+  <data name="DeleteLicenseMessage" xml:space="preserve">
+    <value>Er du helt sikker på at du vil fjerne gjeldende lisens fra denne forekomsten? Du må aktivere den på nytt for å få Pro-funksjonene tilbake. Fortsette?</value>
+  </data>
+  <data name="DeleteLicenses" xml:space="preserve">
+    <value>Slett lisenser</value>
+  </data>
+  <data name="DeleteMessage" xml:space="preserve">
+    <value>Slett melding</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DeleteSelected" xml:space="preserve">
+    <value>Slett valg</value>
+  </data>
+  <data name="Density" xml:space="preserve">
+    <value>tetthet</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Beskrivelse</value>
+  </data>
+  <data name="DialogCalculationSaveSuccessContent" xml:space="preserve">
+    <value>Beregningen ble lagret.</value>
+  </data>
+  <data name="DialogCalculationSaveSuccessHeadline" xml:space="preserve">
+    <value>Lagring lyktes</value>
+  </data>
+  <data name="DialogConfirmCloseContent" xml:space="preserve">
+    <value>Er du sikker på at du vil lukke søknaden nå?</value>
+  </data>
+  <data name="DialogConfirmCloseHeadline" xml:space="preserve">
+    <value>Lukk søknaden</value>
+  </data>
+  <data name="DialogDeleteCalculationContent" xml:space="preserve">
+    <value>Er du sikker på at du vil slette denne beregningen fra listen?</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogDeleteCalculationHeadline" xml:space="preserve">
+    <value>Slett beregning</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogDeleteContent" xml:space="preserve">
+    <value>Er du sikker på at du vil slette valget? Dette kan ikke angres!</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogDeleteExportTemplateFormatContent" xml:space="preserve">
+    <value>Er du sikker på at du vil slette eksportmalen '{0}'? Dette kan ikke angres!</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogDeleteExportTemplateHeadline" xml:space="preserve">
+    <value>Slett eksportmal</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogDeleteHeadline" xml:space="preserve">
+    <value>Slett</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogDeleteLicenseFailedContent" xml:space="preserve">
+    <value>Lisensen din kunne ikke fjernes. Vennligst prøv igjen eller kontakt supporten vår.</value>
+  </data>
+  <data name="DialogDeleteLicenseFailedHeadline" xml:space="preserve">
+    <value>Lisensfjerning mislyktes</value>
+  </data>
+  <data name="DialogDeleteMachineHourRateContent" xml:space="preserve">
+    <value>Er du sikker på at du vil slette valgt timetakstberegning? Dette kan ikke angres!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogDeleteMachineHourRateHeadline" xml:space="preserve">
+    <value>Slett maskinens timepris</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogDeleteManufacturerFormatedContent" xml:space="preserve">
+    <value>Er du sikker på at du vil slette produsenten '{0}'? Dette kan ikke angres!</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="DialogDeleteManufacturerHeadline" xml:space="preserve">
+    <value>Slett produsenten</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="DialogDeleteMaterialContent" xml:space="preserve">
+    <value>Er du sikker på at du vil slette dette materialet? Dette kan ikke angres!</value>
+  </data>
+  <data name="DialogDeleteMaterialHeadline" xml:space="preserve">
+    <value>Vil du slette dette materialet?</value>
+  </data>
+  <data name="DialogDeletePrinterContent" xml:space="preserve">
+    <value>Er du sikker på at du vil slette denne skriveren? Dette kan ikke angres!</value>
+  </data>
+  <data name="DialogDeletePrinterHeadline" xml:space="preserve">
+    <value>Vil du slette denne skriveren?</value>
+  </data>
+  <data name="DialogDeleteSelectedCalculationsContent" xml:space="preserve">
+    <value>Er du sikker på at du vil slette de valgte beregningene fra listen? Dette kan ikke angres!</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedCalculationsHeadline" xml:space="preserve">
+    <value>Slett valgte beregninger</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedFilesContent" xml:space="preserve">
+    <value>Er du sikker på at du vil slette de valgte filene?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedFilesHeadline" xml:space="preserve">
+    <value>Slett valgte filer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectedMaterialsContent" xml:space="preserve">
+    <value>Er du sikker på at du vil slette de valgte materialene? Dette kan ikke angres!</value>
+  </data>
+  <data name="DialogDeleteSelectedMaterialsHeadline" xml:space="preserve">
+    <value>Slett valgt materiale</value>
+  </data>
+  <data name="DialogDeleteSelectedMHRsContent" xml:space="preserve">
+    <value>Er du sikker på at du vil slette de valgte maskin-timesprisene? Dette kan ikke angres!</value>
+  </data>
+  <data name="DialogDeleteSelectedMHRsHeadline" xml:space="preserve">
+    <value>Slett valgte maskin-timespris(er)</value>
+  </data>
+  <data name="DialogDeleteSelectedPrintersContent" xml:space="preserve">
+    <value>Er du sikker på at du vil slette de valgte skriveren(e)? Dette kan ikke angres!</value>
+  </data>
+  <data name="DialogDeleteSelectedPrintersHeadline" xml:space="preserve">
+    <value>Slett valgte skriver(er)</value>
+  </data>
+  <data name="DialogDeleteSelectedWorkstepsContent" xml:space="preserve">
+    <value>Er du sikker på at du vil slette de valgte arbeidsstegene? Dette kan ikke angres!</value>
+  </data>
+  <data name="DialogDeleteSelectedWorkstepsHeadline" xml:space="preserve">
+    <value>Slett valgte arbeidssteg</value>
+  </data>
+  <data name="DialogDeleteSelectionFormatedContent" xml:space="preserve">
+    <value>Er du sikker på at du vil slette den valgte {0}? Dette kan ikke angres!</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="DialogDeleteSelectionFormatedHeadline" xml:space="preserve">
+    <value>Slett valgt {0}</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="DialogDeleteSlicerFormatedContent" xml:space="preserve">
+    <value>Er du sikker på at du vil slette sclieren {0} 'fra listen over slicerr?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogDeleteSlicerHeadline" xml:space="preserve">
+    <value>Slett slicers</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogDeleteSlicersContent" xml:space="preserve">
+    <value>Er du sikker på at du vil slette de utvalgte slicerene fra listen over slicere?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogDeleteSlicersHeadline" xml:space="preserve">
+    <value>Slett slicere</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogDeleteSupplierFormatedContent" xml:space="preserve">
+    <value>Er du sikker på at du vil slette leverandøren '{0}'? Dette kan ikke angres!</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="DialogDeleteSupplierHeadline" xml:space="preserve">
+    <value>Slett leverandør</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="DialogDeleteWorkstepContent" xml:space="preserve">
+    <value>Er du sikker på at du vil slette dette arbeidssteget? Dette kan ikke angres!</value>
+  </data>
+  <data name="DialogDeleteWorkstepHeadline" xml:space="preserve">
+    <value>Vil du slette dette arbeidssteget?</value>
+  </data>
+  <data name="DialogDownloadWebCamVersionContent" xml:space="preserve">
+    <value>WebCam-funksjonen legger til rundt 130 MB data til prosjektet. Dette er grunnen til at vi bestemte oss for å lage to versjoner av det. Så hvis du vil bruke WebCam løsningen, kan du laste ned WebCam-versjonen nedenfor.</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DialogDownloadWebCamVersionHeadline" xml:space="preserve">
+    <value>Last ned annen versjon</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DialogErrorWhileExportingContent" xml:space="preserve">
+    <value>Det oppstod en feil under behandlingen av dataene for eksporten. Vennligst prøv igjen eller kontakt supporten vår.</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogErrorWhileExportingHeadline" xml:space="preserve">
+    <value>Det oppsto en feil under eksporten</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogExceptionFormatedContent" xml:space="preserve">
+    <value>Dessverre har det skjedd en uventet feil under utførelsen av denne handlingen. Ytterligere detaljer: \ n {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogExceptionHeadline" xml:space="preserve">
+    <value>En uventet feil oppstod</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogExportToFileSucceededForamtedContent" xml:space="preserve">
+    <value>Dataene er eksportert til '{0}'.</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogExportToFileSucceededHeadline" xml:space="preserve">
+    <value>Data eksportert</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogFileLoadedContent" xml:space="preserve">
+    <value>Filen ble lastet. Parameteren ble satt til beregningsskjemaet.</value>
+  </data>
+  <data name="DialogFileLoadedHeadline" xml:space="preserve">
+    <value>Filen lastet inn</value>
+  </data>
+  <data name="DialogFilesToImportFormatedContent" xml:space="preserve">
+    <value>Filer ({0}) er klare til å importeres. Vil du starte importen nå?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogFilesToImportHeadline" xml:space="preserve">
+    <value>Filer klare for import</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogFileTypeNotSupportedFormatedContent" xml:space="preserve">
+    <value>Filtypen '{0}' fra filen '{1}' støttes ikke!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogFileTypeNotSupportedHeadline" xml:space="preserve">
+    <value>Filtype støttes ikke</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogGcodeFileSentFailedFormatedContent" xml:space="preserve">
+    <value>Gcode-filen '{0}' kunne ikke sendes til Repetier Server Pro! Vennligst sjekk innstillingene for Repetier Server Pro og prøv igjen eller kontakt supporten vår.</value>
+  </data>
+  <data name="DialogGcodeFileSentFailedHeadline" xml:space="preserve">
+    <value>Sending av Gcode mislyktes</value>
+  </data>
+  <data name="DialogGcodeFileSentSuccessfullyFormatedContent" xml:space="preserve">
+    <value>Gcode-filen '{0}' ble sendt til Repetier Server Pro!</value>
+  </data>
+  <data name="DialogGcodeFileSentSuccessfullyHeadline" xml:space="preserve">
+    <value>Gcode ble sendt</value>
+  </data>
+  <data name="DialogGcodeReadErrorFormatedContent" xml:space="preserve">
+    <value>Det har oppstått en uventet feil under lesing av gcode-filen. Hvis feilen vedvarer, vennligst kontakt vår support og send gcode-filen til '{0}'</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="DialogGcodeReadErrorHeadline" xml:space="preserve">
+    <value>Feil under lesing av gcode-fil</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="DialogGcodeSlicerInvalidContentFormated" xml:space="preserve">
+    <value>Det ser ut til at filen er en gyldig gcode-fil, men sliceren du bruker er ikke støttet ennå. Send oss ​​en gcode-fil for validering til {0} for å få den støttet</value>
+  </data>
+  <data name="DialogGcodeSlicerInvalidHeadline" xml:space="preserve">
+    <value>Ikke støttet skiver</value>
+  </data>
+  <data name="DialogGoProContent" xml:space="preserve">
+    <value>Vi vil lede deg tilbake til butikken vår ... Takk for at du vurderer en oppgradering!</value>
+  </data>
+  <data name="DialogGoProHeadline" xml:space="preserve">
+    <value>Gå for Pro nå!</value>
+  </data>
+  <data name="DialogImportedSlicedGcodeFilesContent" xml:space="preserve">
+    <value>Vil du velge de genererte gcode-filene nå for import?</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogImportedSlicedGcodeFilesHeadline" xml:space="preserve">
+    <value>Vil du importere gcode-filer?</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogLicenseActivationFailedContent" xml:space="preserve">
+    <value>Lisensnøkkelen din er enten ugyldig, eller aktiveringsserveren er ikke frakoblet. Hvis du har problemer med å aktivere lisensen din, vennligst kontakt vår support!</value>
+  </data>
+  <data name="DialogLicenseActivationFailedHeadline" xml:space="preserve">
+    <value>Lisensaktivering mislyktes</value>
+  </data>
+  <data name="DialogLicenseActivationSucceededContent" xml:space="preserve">
+    <value>Lisensnøkkelen din er gyldig og aktivert for denne forekomsten.</value>
+  </data>
+  <data name="DialogLicenseActivationSucceededHeadline" xml:space="preserve">
+    <value>Lisensen ble aktivert</value>
+  </data>
+  <data name="DialogLicenseCheckFailedContent" xml:space="preserve">
+    <value>Lisensnøkkelen din er deaktivert eller utløpt for denne forekomsten. Pro-funksjoner blir deaktivert.</value>
+  </data>
+  <data name="DialogLicenseCheckFailedHeadline" xml:space="preserve">
+    <value>Lisenssjekk mislyktes</value>
+  </data>
+  <data name="DialogLicenseCheckSucceededContent" xml:space="preserve">
+    <value>Lisensnøkkelen din er gyldig og aktiv for denne forekomsten.</value>
+  </data>
+  <data name="DialogLicenseCheckSucceededHeadline" xml:space="preserve">
+    <value>Lisenssjekken lyktes</value>
+  </data>
+  <data name="DialogLicenseDeactivatedRemoteConfirm" xml:space="preserve">
+    <value>Ja, aktiver nå</value>
+  </data>
+  <data name="DialogLicenseDeactivatedRemoteContent" xml:space="preserve">
+    <value>Lisensen din ble deaktivert fra kontoen din. Vil du aktivere det nå?</value>
+  </data>
+  <data name="DialogLicenseDeactivatedRemoteDecline" xml:space="preserve">
+    <value>Nei, skriv inn ny lisens</value>
+  </data>
+  <data name="DialogLicenseDeactivatedRemoteHeadline" xml:space="preserve">
+    <value>Lisensen deaktiveres eksternt</value>
+  </data>
+  <data name="DialogLicenseFormatInvalidFormatedContent" xml:space="preserve">
+    <value>Det angitte lisensformatet er ugyldig! Enten oppgi en lisens fra {0} eller en kjøpskode fra {1}!</value>
+  </data>
+  <data name="DialogLicenseFormatInvalidHeadline" xml:space="preserve">
+    <value>Ugyldig lisensformat</value>
+  </data>
+  <data name="DialogLoadCalculationFailedContent" xml:space="preserve">
+    <value>Dessverre mislyktes lastingen av den valgte beregningsfilen. Vennligst prøv igjen eller kontakt vår support for ytterligere hjelp!</value>
+  </data>
+  <data name="DialogLoadCalculationFailedHeadline" xml:space="preserve">
+    <value>Lastingen mislyktes</value>
+  </data>
+  <data name="DialogMHRSavedSuccessfullyContent" xml:space="preserve">
+    <value>Machine-Hour-Rating ble lagret. Du kan nå tilordne det til skriverne dine.</value>
+  </data>
+  <data name="DialogMHRSavedSuccessfullyHeadline" xml:space="preserve">
+    <value>Maskin-time-vurdering lagret</value>
+  </data>
+  <data name="DialogNoFileSelectedContent" xml:space="preserve">
+    <value>Velg først en fil!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogNoFileSelectedHeadline" xml:space="preserve">
+    <value>Ingen fil valgt</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogOpenExternalUriFormatedContent" xml:space="preserve">
+    <value>Dette vil åpne den eksterne lenken '{0}'. Vi kan ikke påvirke innholdet som leveres på den eksterne siden. Fortsette?</value>
+  </data>
+  <data name="DialogOpenExternalUriHeadline" xml:space="preserve">
+    <value>Åpne ekstern lenke</value>
+  </data>
+  <data name="DialogOpenMultipleFileLocationsContent" xml:space="preserve">
+    <value>Du er i ferd med å åpne flere filplasseringer. Vil du fortsette?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogOpenMultipleFileLocationsHeadline" xml:space="preserve">
+    <value>Åpne flere filplasseringer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogOverwriteExistingSettingsFormatedContent" xml:space="preserve">
+    <value>Det ser ut til at noen innstillingsfiler allerede eksisterer på den valgte målstien på '{0}'. Hvordan vil du fortsette?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogOverwriteExistingSettingsHeadline" xml:space="preserve">
+    <value>Overskrive funnede innstillinger?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogRemoveSelectedFilesFromListContent" xml:space="preserve">
+    <value>Er du sikker på at du vil fjerne de valgte filene fra listen?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogRemoveSelectedFilesFromListHeadline" xml:space="preserve">
+    <value>Fjern valgte filer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogRepetierCreateNewGroupContent" xml:space="preserve">
+    <value>Skriv inn det nye gruppenavnet:</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DialogRepetierCreateNewGroupHeadline" xml:space="preserve">
+    <value>Opprett ny gruppe</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DialogRepetierDeleteMessageContent" xml:space="preserve">
+    <value>Er du sikker på at du vil slette denne meldingen?</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DialogRepetierDeleteMessageHeadline" xml:space="preserve">
+    <value>Slett melding</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DialogRepetierDeleteModelsContent" xml:space="preserve">
+    <value>Er du sikker på at du vil slette de valgte modellene fra serveren? Dette kan ikke angres!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierDeleteModelsHeadline" xml:space="preserve">
+    <value>Slett valgte modeller</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierPrintModelFormatedContent" xml:space="preserve">
+    <value>Er du sikker på at du vil starte utskriften for modellen '{0}'? Forsikre deg om at skriveren er klar og ren før du fortsetter!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierPrintModelHeadline" xml:space="preserve">
+    <value>Begynn å skrive ut modellen</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierServerProNotConfiguredContent" xml:space="preserve">
+    <value>Det ser ut til at du ikke har lagt inn noe informasjon for Repetier Server Pro ennå. Gå til innstillingssiden og gjør det.</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierServerProNotConfiguredHeadline" xml:space="preserve">
+    <value>Repetier Server Pro er ikke konfigurert</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierServerProOfflineContent" xml:space="preserve">
+    <value>Det ser ut til at innstillingene dine for Repetier Server Pro er gyldige, men serveren svarer ikke. Kontroller om serveren din kjører, og om den angitte IP-adressen er nøyaktig!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierServerProOfflineHeadline" xml:space="preserve">
+    <value>Repetier Server Pro er offline</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierServerRestartContent" xml:space="preserve">
+    <value>Er du sikker på at du vil starte Repetier Server Pro på nytt nå? Forsikre deg om at ingen utskrifter kjører!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierServerRestartHeadline" xml:space="preserve">
+    <value>Start Repetier Server Pro på nytt</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierServerShutdownContent" xml:space="preserve">
+    <value>Er du sikker på at du vil slå av Repetier Server Pro nå? Forsikre deg om at ingen utskrifter kjører!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRepetierServerShutdownHeadline" xml:space="preserve">
+    <value>Skru av Repetier Server Pro</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DialogRestartRequiredContent" xml:space="preserve">
+    <value>Innstillingsendringen krever en omstart av applikasjonen. Vil du starte på nytt nå?</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="DialogRestartRequiredHeadline" xml:space="preserve">
+    <value>Start på nytt</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="DialogRunCalculationFirstContent" xml:space="preserve">
+    <value>For å lagre beregningen, klikk først på "Beregn" -knappen eller last inn en eksisterende beregning.</value>
+  </data>
+  <data name="DialogRunCalculationFirstHeadline" xml:space="preserve">
+    <value>Ingen beregninger lastet eller utført</value>
+  </data>
+  <data name="DialogSaveCalculationFailedContent" xml:space="preserve">
+    <value>Dessverre mislyktes lagringen av beregningsfilen. Vennligst prøv igjen eller kontakt vår support for ytterligere hjelp!</value>
+  </data>
+  <data name="DialogSaveCalculationFailedHeadline" xml:space="preserve">
+    <value>Lagring mislyktes</value>
+  </data>
+  <data name="DialogSaveMachineHourRateContent" xml:space="preserve">
+    <value>Er du sikker på at du vil lagre gjeldende maskintidberegning for denne skriveren? Dette vil overstyre den opprinnelige MHR for denne skriveren. Fortsette?</value>
+  </data>
+  <data name="DialogSaveMachineHourRateHeadline" xml:space="preserve">
+    <value>Lagre gjeldende beregning av maskinens timepris?</value>
+  </data>
+  <data name="DialogSettingsResetSucceededContent" xml:space="preserve">
+    <value>Innstillingene er tilbakestilt til standard.</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogSettingsResetSucceededHeadline" xml:space="preserve">
+    <value>Innstillingene tilbakestilles vellykket!</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogSlicerApplicationNotFoundFormatedContent" xml:space="preserve">
+    <value>Slicer '{0}' ble ikke funnet på '{1}'. Kontroller om sliceren fortsatt er installert på systemet ditt.</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="DialogSlicerApplicationNotFoundHeadline" xml:space="preserve">
+    <value>Slicerr ikke funnet</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Disconnected" xml:space="preserve">
+    <value>Disconnected</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DLP" xml:space="preserve">
+    <value>DLP (Digital Ligh Processing) ®</value>
+  </data>
+  <data name="DMLS" xml:space="preserve">
+    <value>DMLS (Direct Metal Laser Sintering) ®</value>
+  </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>dokumentasjon</value>
+  </data>
+  <data name="DOD" xml:space="preserve">
+    <value>DOD (Drop on Demand) ®</value>
+  </data>
+  <data name="Donate" xml:space="preserve">
+    <value>Donere</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="DonateViaPayPal" xml:space="preserve">
+    <value>Doner via PayPal</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Ferdig</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Last ned
+</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DragAndDropFileHere" xml:space="preserve">
+    <value>Dra og slipp filen hit ...</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="Duplicate" xml:space="preserve">
+    <value>Dupliser</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Varighet</value>
+  </data>
+  <data name="EBAM" xml:space="preserve">
+    <value>EBAM (Electron-Beam Additive Manufacturing) ®</value>
+  </data>
+  <data name="EBM" xml:space="preserve">
+    <value>EBM (Electro Beam Melting) ®</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Redigere</value>
+  </data>
+  <data name="EditManufacturer" xml:space="preserve">
+    <value>Rediger produsent</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="EditMaterial" xml:space="preserve">
+    <value>Rediger materiale</value>
+  </data>
+  <data name="EditMHR" xml:space="preserve">
+    <value>Rediger maskin-timepris</value>
+  </data>
+  <data name="EditPrinter" xml:space="preserve">
+    <value>Rediger skriver</value>
+  </data>
+  <data name="EditSlicer" xml:space="preserve">
+    <value>Rediger slicer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="EditSupplier" xml:space="preserve">
+    <value>Rediger leverandør</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="EditWorkstep" xml:space="preserve">
+    <value>Rediger arbeidssteg</value>
+  </data>
+  <data name="EnableGlobalLogging" xml:space="preserve">
+    <value>Aktiver global hendelseslogging (anbefalt)</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="EnableTransparency" xml:space="preserve">
+    <value>Aktiver transparent</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Energy" xml:space="preserve">
+    <value>Energi</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="EnergyCosts" xml:space="preserve">
+    <value>Energikostnader</value>
+  </data>
+  <data name="EnterLocationDots" xml:space="preserve">
+    <value>Angi plassering ...</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="EnterValidIPAddress" xml:space="preserve">
+    <value>Skriv inn en gyldig formatert IP-adresse!</value>
+  </data>
+  <data name="EnterValidOctoPrintApiKey" xml:space="preserve">
+    <value>Angi en gyldig OctoPrint API-nøkkel!</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="EnterValidRepetierApiKey" xml:space="preserve">
+    <value>Skriv inn en gyldig formatert Repetier Server Pro API-nøkkel!</value>
+  </data>
+  <data name="EnterValidUri" xml:space="preserve">
+    <value>Skriv inn en gyldig URL som begynner med 'http://' eller 'https://'</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="EnterValueGreaterThanFormated" xml:space="preserve">
+    <value>Skriv inn en verdi større enn '{0}'!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Feil</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="ErrorCheckingApiGithubComVerifyYourNetworkConnection" xml:space="preserve">
+    <value>Det oppsto en feil ved kontakt med Github API. Vennligst sjekk internettforbindelsen din.</value>
+  </data>
+  <data name="EstimatedPrintTime" xml:space="preserve">
+    <value>Estimert utskriftstid</value>
+  </data>
+  <data name="EULA" xml:space="preserve">
+    <value>Sluttbrukerlisensavtale (EULA)</value>
+  </data>
+  <data name="EventAddedItemFormated" xml:space="preserve">
+    <value>Varen lagt til: {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventApplicationStartup" xml:space="preserve">
+    <value>Søknaden startet</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventCalculationDoneFormated" xml:space="preserve">
+    <value>Beregning utført {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventCalculationLoadedFormated" xml:space="preserve">
+    <value>Beregning {0} lastet fra {1}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventCalculationLoadFailedFormated" xml:space="preserve">
+    <value>Beregningsfilen kunne ikke lastes fra {0}. XML-parseren returnerte et tomt objekt.</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventCalculationSavedFormated" xml:space="preserve">
+    <value>Beregning {0} lagret kl {1}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventCouldNotReadFileInformation" xml:space="preserve">
+    <value>Kunne ikke lese filinformasjon for '{0}'</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventDeletedItemFormated" xml:space="preserve">
+    <value>Varen ble slettet: {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventDetails" xml:space="preserve">
+    <value>Hendelsesdetaljer</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventEditedItemFormated" xml:space="preserve">
+    <value>Element redigert: {0} =&gt; {1}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventExceptionOccurredFormated" xml:space="preserve">
+    <value>Et unntak har skjedd på målet '{0}' med følgende melding: {1}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventFetchLicensePathFormated" xml:space="preserve">
+    <value>Hentet bane for lagring av lisens på '{0}'</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventFileLoadedForamated" xml:space="preserve">
+    <value>Filen {0} er lastet</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventFormCleared" xml:space="preserve">
+    <value>Skjema fjernet</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventGcodeFailedToSentToRepetierServerPro" xml:space="preserve">
+    <value>GCode kunne ikke sendes til Repetier Server Pro: {0} / {1}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventGcodeSentToRepetierServerPro" xml:space="preserve">
+    <value>GCode sendt til Repetier Server Pro: {0} / {1}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventLicenseAddFormated" xml:space="preserve">
+    <value>Lisensen '{0}' er lagt til</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventLicenseCheckMessageFormated" xml:space="preserve">
+    <value>Utført lisenskontroll =&gt; Melding returnert: {0}</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventLicenseLastCheckValidFormated" xml:space="preserve">
+    <value>Den siste lisenskontrollen var gyldig, ingen lisenskontroll utført: Siste kontroll på {0}</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventLicenseRemovedFormated" xml:space="preserve">
+    <value>Lisensen '{0}' ble fjernet</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventLicenseSavedSuccessfullyAtFormated" xml:space="preserve">
+    <value>Lisensen er lagret på '{0}'</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventMachineHourRateAssignedFormated" xml:space="preserve">
+    <value>Maskin-timeprisen '{0}' ble tildelt: {1}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventOpenFolderFormated" xml:space="preserve">
+    <value>Mappen ble åpnet: {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventOpenUri" xml:space="preserve">
+    <value>Ekstern URL åpnet: {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventOSIncompatibleWithNewVersionFormatedEvent" xml:space="preserve">
+    <value>Versjonen '{0}' av operativsystemet ditt er uforenlig med den siste oppdateringen!</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventRepetierServerProInit" xml:space="preserve">
+    <value>Repetier Server Pro init: {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventUncatchedRepetierEventFormated" xml:space="preserve">
+    <value>Uventet repetisjonshendelse er mottatt fra WebSocket: {0}</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="EventUnknownGcodeFoundFormated" xml:space="preserve">
+    <value>Ukjent Gcode funnet mens du leste filen: {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventUnknownSlicerFormated" xml:space="preserve">
+    <value>Ukjent skive for den oppgitte gkoden: {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventUpdateErrorFormated" xml:space="preserve">
+    <value>Feil under søking etter oppdateringer: {0}</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventUserIsAdministratorFormated" xml:space="preserve">
+    <value>Brukeren {0} er administrator</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="EventViewInitFormated" xml:space="preserve">
+    <value>Vis init: {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventWebSocketClosedFormated" xml:space="preserve">
+    <value>WebSocket ble lukket mens du prøvde å sende forespørselen: {0}</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="EventWebSocketMessageReceivedFormated" xml:space="preserve">
+    <value>Melding mottatt fra WebSocket: {0}</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="EventWebSocketOnCloseFormated" xml:space="preserve">
+    <value>Tilkoblingen til WebSocket {0} ble lukket av serveren.</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="EventWebSocketOnErrorFormated" xml:space="preserve">
+    <value>Det oppstod en feil under forsøk på å koble til Websocket på {0}: {1}</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="EventWebSocketOnOpenFormated" xml:space="preserve">
+    <value>WebSocket koblet til {0}</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="EventWebSocketSendCommandFormated" xml:space="preserve">
+    <value>Kommando send til WebSocket: {0}</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="Everything" xml:space="preserve">
+    <value>Alt</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="ExcelTemplateCoordinates" xml:space="preserve">
+    <value>Excel-mal koordinater</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="ExcelTemplateCoordinatesNotes" xml:space="preserve">
+    <value>Du kan tilordne egenskaper fra vårt beregningsobjekt til koordinater på Excel-malen. Eksportøren vil skrive de tilsvarende dataene til den medfølgende Excel-malfilen da.</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Eksporter</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="ExportAsPdf" xml:space="preserve">
+    <value>Eksporter som pdf-fil</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="ExportExcel" xml:space="preserve">
+    <value>Eksporter til Excel</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="ExportPdf" xml:space="preserve">
+    <value>Eksporter til Pdf</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Extruder" xml:space="preserve">
+    <value>Extruder</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="FDM" xml:space="preserve">
+    <value>FDM (Fused Deposition Modelling) ®</value>
+  </data>
+  <data name="FieldCannotBeEmpty" xml:space="preserve">
+    <value>Dette feltet kan ikke være tomt</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="Filament" xml:space="preserve">
+    <value>Filament</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="FileAction" xml:space="preserve">
+    <value>Filhandling</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="FileActionDelete" xml:space="preserve">
+    <value>Slett</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="FileActionSetActive" xml:space="preserve">
+    <value>Sett aktiv</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="FileDoesNotExistsFormated" xml:space="preserve">
+    <value>Filen '{0}' eksisterer ikke på det valgte stedet!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="FileExtensionFormatedInvalid" xml:space="preserve">
+    <value>Bruk bare filer med utvidelsen '{0}'!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>Filnavn</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="FIlePathIsInvalid" xml:space="preserve">
+    <value>Filen eksisterer ikke, eller filtypen er ikke gyldig!</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Files" xml:space="preserve">
+    <value>Filer</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="FileType" xml:space="preserve">
+    <value>Filtype</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="FilterApplicationFile" xml:space="preserve">
+    <value>Application (* .exe) | * .exe</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="FinalRecomendedPrice" xml:space="preserve">
+    <value>Endelig anbefalt</value>
+  </data>
+  <data name="FixCosts" xml:space="preserve">
+    <value>Fix kostnader</value>
+  </data>
+  <data name="FlashForge" xml:space="preserve">
+    <value>FlashForge</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Flow" xml:space="preserve">
+    <value>Flow
+</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="FolderDoesNotExist" xml:space="preserve">
+    <value>Mappen eksisterer ikke</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="GCode" xml:space="preserve">
+    <value>GCode</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="GcodeCodeLineEditor" xml:space="preserve">
+    <value>Gcode Editor</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="GCodeInfo" xml:space="preserve">
+    <value>GCode Info</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="GcodeInfos" xml:space="preserve">
+    <value>Informasjon om Gcode</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="GcodeLines" xml:space="preserve">
+    <value>GCode-linjer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="GcodeParser" xml:space="preserve">
+    <value>Gcode Parser</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="GcodeParserKnownSlicersNote" xml:space="preserve">
+    <value>Hvis dette alternativet er merket av, vil parseren først sjekke om den brukte slicer er kjent og analysere om de nødvendige verdiene er angitt som kommentar i gcode-filen. Dette vil øke hastigheten og nøyaktigheten.</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="GcodeParserNote" xml:space="preserve">
+    <value>Hvis du importerer en gcode-fil og informasjon mangler her, kan du sende oss din gcode-fil så oppdaterer vi analysøren.</value>
+  </data>
+  <data name="GcodeParserPreferCommentValuesFromKnownSlicers" xml:space="preserve">
+    <value>Foretrekker verdier notert i kommentarer fra kjente slicere?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>Generell</value>
+  </data>
+  <data name="GitHub" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
+  <data name="GoPro" xml:space="preserve">
+    <value>Gå for Pro nå!</value>
+  </data>
+  <data name="GoToRepetierServerProInBrowser" xml:space="preserve">
+    <value>Åpne Repetier Server Pro</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="GoToSettings" xml:space="preserve">
+    <value>Gå til Innstillinger</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="GUI" xml:space="preserve">
+    <value>GUI (grafisk brukergrensesnitt)</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="HasHeatbed" xml:space="preserve">
+    <value>Har printeren heated bed?</value>
+  </data>
+  <data name="HeaderFixCostsPerYear" xml:space="preserve">
+    <value>Faste kostnader / år</value>
+  </data>
+  <data name="HeaderPriceConsistsOf" xml:space="preserve">
+    <value>- Prisen består av -</value>
+  </data>
+  <data name="HeaderPrintTimeConsistsOf" xml:space="preserve">
+    <value>Utskrifttiden består av</value>
+  </data>
+  <data name="HeaderVariableCostsPerYear" xml:space="preserve">
+    <value>Variable kostnader / år</value>
+  </data>
+  <data name="Heatbed" xml:space="preserve">
+    <value>Heatbed</value>
+  </data>
+  <data name="HelpMessage_DefaultPrintServer" xml:space="preserve">
+    <value>Den valgte printserveren her vil bli satt som standard for sending av gcode.</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="HelpTranslate" xml:space="preserve">
+    <value>Hjelper du å oversette dette verktøyet?</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="HiddenApplications" xml:space="preserve">
+    <value>Skjulte applikasjoner</value>
+  </data>
+  <data name="Hide" xml:space="preserve">
+    <value>Gjem</value>
+  </data>
+  <data name="HourRate" xml:space="preserve">
+    <value>Timepris</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="ideaMaker" xml:space="preserve">
+    <value>ideaMaker</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>Importer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="ImportGcodeAfterSlicingCLI" xml:space="preserve">
+    <value>Importer gcode direkte etter slicer (bare CLI)</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Info</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="InfoPrivacyPolicy" xml:space="preserve">
+    <value>Vi bryr oss om ditt privatliv! Derfor samler vi ikke og deler noen av dine dyrebare opplysninger i det hele tatt! Verktøyet fungerer helt offline. Bare hvis du er en proff bruker, sjekker applikasjonen lisensen din anledningsvis.</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="InterestRate" xml:space="preserve">
+    <value>Rentesats</value>
+  </data>
+  <data name="Invalid" xml:space="preserve">
+    <value>Ugyldig</value>
+  </data>
+  <data name="IsCaseSensitiv" xml:space="preserve">
+    <value>Sensitiv for store og små bokstaver</value>
+  </data>
+  <data name="IsCheckingLicenseState" xml:space="preserve">
+    <value>Kontrollerer lisensstatus ...</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Kind" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="KISSlicer" xml:space="preserve">
+    <value>KISSlicer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="KnownSlicersForCommentRead" xml:space="preserve">
+    <value>Kjente slicere for kommentar lest</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelAdditional" xml:space="preserve">
+    <value>Ytterligere:</value>
+  </data>
+  <data name="LabelAdditionalCosts" xml:space="preserve">
+    <value>Eventuelle ekstra kostnader:</value>
+  </data>
+  <data name="LabelAdditionalWorkstepCosts" xml:space="preserve">
+    <value>Flere arbeidssteg:</value>
+  </data>
+  <data name="LabelAPIKeyRepetierMandatory" xml:space="preserve">
+    <value>API-nøkkelen din *:</value>
+  </data>
+  <data name="LabelBuildVolume" xml:space="preserve">
+    <value>Byggevolum:</value>
+  </data>
+  <data name="LabelCalcDepreciation" xml:space="preserve">
+    <value>Beregnet avskrivning:</value>
+  </data>
+  <data name="LabelCalculationTimebaseMandatory" xml:space="preserve">
+    <value>Beregning timebase *:</value>
+  </data>
+  <data name="LabelColor" xml:space="preserve">
+    <value>Farge:</value>
+  </data>
+  <data name="LabelConsoleOutput" xml:space="preserve">
+    <value>Konsollutgang:</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelCreatingGcodeLayerModel" xml:space="preserve">
+    <value>Opprett gcode lagmodell:</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="LabelCustomAmount" xml:space="preserve">
+    <value>Angi et tilpasset beløp for tipset ditt!</value>
+  </data>
+  <data name="LabelDateOfEULAAgreement" xml:space="preserve">
+    <value>Dato for avtale:</value>
+  </data>
+  <data name="LabelDebitorNumber" xml:space="preserve">
+    <value>Debitornummer:</value>
+  </data>
+  <data name="LabelDefaultMaterialsForCalculation" xml:space="preserve">
+    <value>Standardmateriale for beregninger:</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelDefaultPrintersForCalculation" xml:space="preserve">
+    <value>Standardskriver (er) for beregninger:</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelDefaultWorkstepsForCalculation" xml:space="preserve">
+    <value>Standard arbeidssteg for beregninger:</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelDensityMandatory" xml:space="preserve">
+    <value>Tetthet: *</value>
+  </data>
+  <data name="LabelDonationInfo" xml:space="preserve">
+    <value>Donasjonen blir håndtert av PayPal senere. Du blir omdirigert til PayPal.me hvis du klikker på 'Doner med PayPal' -knappen.</value>
+  </data>
+  <data name="LabelDonationThankYou" xml:space="preserve">
+    <value>Takk for at du vurderer en donasjon! Det er høyt verdsatt.</value>
+  </data>
+  <data name="LabelDownloadSourceCode" xml:space="preserve">
+    <value>Last ned kildekode:</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelDownloadUri" xml:space="preserve">
+    <value>Last ned URL:</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelEnableLoggingRepetierServerPro" xml:space="preserve">
+    <value>Aktiver logging for Repetier Server Pro-tilkobling</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="LabelEnableSecureConnectionRepetierServerPro" xml:space="preserve">
+    <value>Aktiver sikker tilkobling (SSL)</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="LabelEnergy" xml:space="preserve">
+    <value>Energi:</value>
+  </data>
+  <data name="LabelEnergyCosts" xml:space="preserve">
+    <value>Energikostnader:</value>
+  </data>
+  <data name="LabelEnergyCostsMandatory" xml:space="preserve">
+    <value>Energikostnader *:</value>
+  </data>
+  <data name="LabelExcelColumnMandatory" xml:space="preserve">
+    <value>Kolonne:*</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelExcelRowMandatory" xml:space="preserve">
+    <value>Rad:*</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelFailRate" xml:space="preserve">
+    <value>Feil-Rate:</value>
+  </data>
+  <data name="LabelFilamentDensity" xml:space="preserve">
+    <value>Filamenttetthet:</value>
+  </data>
+  <data name="LabelFilamentType" xml:space="preserve">
+    <value>Filamenttype:</value>
+  </data>
+  <data name="LabelFilamentUsedLength" xml:space="preserve">
+    <value>Filament brukt:
+</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelFileName" xml:space="preserve">
+    <value>Filnavn:</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="LabelFixedPrice" xml:space="preserve">
+    <value>Fast maskintime rate:</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LabelGcode" xml:space="preserve">
+    <value>Gcode:</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="LabelGuidReadOnly" xml:space="preserve">
+    <value>GUID (skrivebeskyttet):</value>
+  </data>
+  <data name="LabelHandlingFee" xml:space="preserve">
+    <value>Ekspedisjonsgebyr:</value>
+  </data>
+  <data name="LabelHasHeatbed" xml:space="preserve">
+    <value>Har printeren heated bed:</value>
+  </data>
+  <data name="LabelHeatbed" xml:space="preserve">
+    <value>Heatbed:</value>
+  </data>
+  <data name="LabelHeatbedTemp" xml:space="preserve">
+    <value>Heatbed temperatur:</value>
+  </data>
+  <data name="LabelHeatbedTempMandatory" xml:space="preserve">
+    <value>Heatbed temp. *:</value>
+  </data>
+  <data name="LabelHours" xml:space="preserve">
+    <value>timer:</value>
+  </data>
+  <data name="LabelIncludedTax" xml:space="preserve">
+    <value>Inkludert skatt:</value>
+  </data>
+  <data name="LabelInterestMandatory" xml:space="preserve">
+    <value>Renter*:</value>
+  </data>
+  <data name="LabelInterval" xml:space="preserve">
+    <value>intervall:</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelIPAdressMandatory" xml:space="preserve">
+    <value>IP adresse*:</value>
+  </data>
+  <data name="LabelIsAvtiveMandatory" xml:space="preserve">
+    <value>Er aktiv*:</value>
+  </data>
+  <data name="LabelIsManufacturerActive" xml:space="preserve">
+    <value>Produsenten er aktiv for kjøp</value>
+  </data>
+  <data name="LabelIsSupplierActive" xml:space="preserve">
+    <value>Leverandøren er aktiv for kjøp</value>
+  </data>
+  <data name="LabelIsSupplierActiveMandatory" xml:space="preserve">
+    <value>Er aktiv*:</value>
+  </data>
+  <data name="LabelLocation" xml:space="preserve">
+    <value>Lokasjon:</value>
+  </data>
+  <data name="LabelLocationCosts" xml:space="preserve">
+    <value>Lokasjonskostnader:</value>
+  </data>
+  <data name="LabelMachineCosts" xml:space="preserve">
+    <value>Maskin kostnad:</value>
+  </data>
+  <data name="LabelMachineHourRate" xml:space="preserve">
+    <value>Maskin-time pris:</value>
+  </data>
+  <data name="LabelMachineHoursMandatory" xml:space="preserve">
+    <value>Maskinens timer: *</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LabelMachineHoursPerMonthMandatory" xml:space="preserve">
+    <value>Maskin-timer per måned *:</value>
+  </data>
+  <data name="LabelMachineHoursPerYearMandatory" xml:space="preserve">
+    <value>Maskin-timer per år *:</value>
+  </data>
+  <data name="LabelMainenanceAndRepair" xml:space="preserve">
+    <value>Vedlikehold og reparasjonskostnader:</value>
+  </data>
+  <data name="LabelMaintenance" xml:space="preserve">
+    <value>Vedlikehold:</value>
+  </data>
+  <data name="LabelManufacturer" xml:space="preserve">
+    <value>Produsent:</value>
+  </data>
+  <data name="LabelManufacturerNameMandatory" xml:space="preserve">
+    <value>Navn på produsent *:</value>
+  </data>
+  <data name="LabelMargin" xml:space="preserve">
+    <value>Margin:</value>
+  </data>
+  <data name="LabelMaterialCosts" xml:space="preserve">
+    <value>Materiale kostnader:</value>
+  </data>
+  <data name="LabelMaterialKindMandatory" xml:space="preserve">
+    <value>Materiell type *:</value>
+  </data>
+  <data name="LabelMaterialTypeMandatory" xml:space="preserve">
+    <value>Material type *:</value>
+  </data>
+  <data name="LabelMaxPowerConsumption" xml:space="preserve">
+    <value>Maks. strømforbruk:</value>
+  </data>
+  <data name="LabelMaxPowerConsumptionMandatory" xml:space="preserve">
+    <value>Maks. strømforbruk*:</value>
+  </data>
+  <data name="LabelNameMandatory" xml:space="preserve">
+    <value>Navn*:</value>
+  </data>
+  <data name="LabelNozzle" xml:space="preserve">
+    <value>Munnstykke:</value>
+  </data>
+  <data name="LabelNozzleTemp" xml:space="preserve">
+    <value>Dyse temperatur:</value>
+  </data>
+  <data name="LabelOccurredAtFormated" xml:space="preserve">
+    <value>Kl: {0}</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="LabelOrUsePreDefinedAmoutns" xml:space="preserve">
+    <value>eller bruk en av de forhåndsdefinerte beløpene nedenfor.</value>
+  </data>
+  <data name="LabelPackageMandatory" xml:space="preserve">
+    <value>Pakke*:</value>
+  </data>
+  <data name="LabelPackageSize" xml:space="preserve">
+    <value>Pakkestørrelse:</value>
+  </data>
+  <data name="LabelParsingGcode" xml:space="preserve">
+    <value>Analyser gcode:</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelPieces" xml:space="preserve">
+    <value>Mengde</value>
+  </data>
+  <data name="LabelPingCounter" xml:space="preserve">
+    <value>Ping-teller:</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelPowerLevel" xml:space="preserve">
+    <value>Energinivå:</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelPreDefinedAmounts" xml:space="preserve">
+    <value>Forhåndsdefinerte beløp</value>
+  </data>
+  <data name="LabelPrice" xml:space="preserve">
+    <value>Pris:</value>
+  </data>
+  <data name="LabelPriceMandatory" xml:space="preserve">
+    <value>Pris*:</value>
+  </data>
+  <data name="LabelPriceWithoutTax" xml:space="preserve">
+    <value>Uten skatt:</value>
+  </data>
+  <data name="LabelPrintDurationMandatory" xml:space="preserve">
+    <value>Utskriftsvarighet *:</value>
+  </data>
+  <data name="LabelPrinterModelMandatory" xml:space="preserve">
+    <value>Skrivermodell *:</value>
+  </data>
+  <data name="LabelPrinterNameMandatory" xml:space="preserve">
+    <value>Skrivernavn *:</value>
+  </data>
+  <data name="LabelPrinterSlug" xml:space="preserve">
+    <value>Skriver Slug:</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="LabelPrinterTypeMandatory" xml:space="preserve">
+    <value>Skrivertype *:</value>
+  </data>
+  <data name="LabelPrintingTime" xml:space="preserve">
+    <value>Est. utskriftstid:</value>
+  </data>
+  <data name="LabelProgress" xml:space="preserve">
+    <value>Framgang:</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="LabelProjectNameMandatory" xml:space="preserve">
+    <value>Prosjektnavn:*</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LabelPropertyMandatory" xml:space="preserve">
+    <value>Eiendom:*</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelQuantity" xml:space="preserve">
+    <value>Mengde:</value>
+  </data>
+  <data name="LabelQuantityMandatory" xml:space="preserve">
+    <value>Mengde*:</value>
+  </data>
+  <data name="LabelRepetierServerAddressMandatory" xml:space="preserve">
+    <value>IP-adresse / domene: *</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelReplacemenCostsManadatory" xml:space="preserve">
+    <value>Erstatningskostnader *:</value>
+  </data>
+  <data name="LabelReplaceWith" xml:space="preserve">
+    <value>Erstatt med:</value>
+  </data>
+  <data name="LabelSearchFor" xml:space="preserve">
+    <value>Søk etter:</value>
+  </data>
+  <data name="LabelSelectCurrentCalculationMandatory" xml:space="preserve">
+    <value>Velg beregningen *:</value>
+  </data>
+  <data name="LabelSelectCurrentMaterialMandatory" xml:space="preserve">
+    <value>Velg materiale *:</value>
+  </data>
+  <data name="LabelSelectCurrentPrinterMandatory" xml:space="preserve">
+    <value>Velg skriver *:</value>
+  </data>
+  <data name="LabelSelectedFiles" xml:space="preserve">
+    <value>Valgte fil (er):</value>
+  </data>
+  <data name="LabelSelectFromList" xml:space="preserve">
+    <value>Velg fra listen:</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LabelSelectMaterialMandatory" xml:space="preserve">
+    <value>Velg materiale *:</value>
+  </data>
+  <data name="LabelSelectPrinter" xml:space="preserve">
+    <value>Velg skriver:</value>
+  </data>
+  <data name="LabelSelectPrinterFromList" xml:space="preserve">
+    <value>Velg skriver fra listen:</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LabelSelectTheSettingsYouWantToReset" xml:space="preserve">
+    <value>Velg innstillingene du vil tilbakestille:</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelShopUri" xml:space="preserve">
+    <value>Handle Uri:</value>
+  </data>
+  <data name="LabelSingleFailPrintDuration" xml:space="preserve">
+    <value>Enkelt mislykket tid:</value>
+  </data>
+  <data name="LabelSinglePrintDuration" xml:space="preserve">
+    <value>Enkelt utskriftstid:</value>
+  </data>
+  <data name="LabelSKU" xml:space="preserve">
+    <value>SKU:</value>
+  </data>
+  <data name="LabelSlicer" xml:space="preserve">
+    <value>Slicer:</value>
+  </data>
+  <data name="LabelSlicerAdditionalCommands" xml:space="preserve">
+    <value>Flere kommandoer:</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelSlicerNameMandatory" xml:space="preserve">
+    <value>Slicernavn: *</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelSlicerPathMandatory" xml:space="preserve">
+    <value>Slicerbane: *</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelSlicerUsageTypeMandatory" xml:space="preserve">
+    <value>Brukstype: *</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelStl" xml:space="preserve">
+    <value>STL:</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="LabelStoredEventsAmountMandatory" xml:space="preserve">
+    <value>Antall lagrede hendelser: *</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="LabelSupplierNameMandatory" xml:space="preserve">
+    <value>Leverandør navn *:</value>
+  </data>
+  <data name="LabelTargetModelGroupMandatory" xml:space="preserve">
+    <value>Modellgruppe *:</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="LabelTaxRate" xml:space="preserve">
+    <value>Skattesats:</value>
+  </data>
+  <data name="LabelTemeratureMandatory" xml:space="preserve">
+    <value>Temperatur*:</value>
+  </data>
+  <data name="LabelUsedAmountOfMaterial" xml:space="preserve">
+    <value>Brukt mengde materiale *:</value>
+  </data>
+  <data name="LabelUsefulLifeYearsMandatory" xml:space="preserve">
+    <value>Printerliv i år *:</value>
+  </data>
+  <data name="LabelVendor" xml:space="preserve">
+    <value>Leverandør:</value>
+  </data>
+  <data name="LabelVolume" xml:space="preserve">
+    <value>Volum:</value>
+  </data>
+  <data name="LabelVolumeMandatory" xml:space="preserve">
+    <value>Volum*:</value>
+  </data>
+  <data name="LabelWebCam" xml:space="preserve">
+    <value>Webkamera:</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="LabelWebSocket" xml:space="preserve">
+    <value>WebSocket:</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="LabelWorksheetMandatory" xml:space="preserve">
+    <value>Regneark: *</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="LabelWorkstepCalculationTypeMandatory" xml:space="preserve">
+    <value>Beregningstype *:</value>
+  </data>
+  <data name="LabelWorkstepCategoryMandatory" xml:space="preserve">
+    <value>Arbeidssteg-kategori *:</value>
+  </data>
+  <data name="LabelWorkstepCategoryNameMandatory" xml:space="preserve">
+    <value>Navnet på kategorien *:</value>
+  </data>
+  <data name="LabelWorkstepDuration" xml:space="preserve">
+    <value>Varighet (bare per time):</value>
+  </data>
+  <data name="LabelWorkstepDurationMandatory" xml:space="preserve">
+    <value>Varighet for dette arbeidssteget *:</value>
+  </data>
+  <data name="LabelWorkstepDurationUnit" xml:space="preserve">
+    <value>Time (r)</value>
+  </data>
+  <data name="LabelWorkstepNameMandatory" xml:space="preserve">
+    <value>Arbeidsstedsnavn *:</value>
+  </data>
+  <data name="LabelWorkstepPriceMandatory" xml:space="preserve">
+    <value>Pris for arbeidssteget *:</value>
+  </data>
+  <data name="LabelWorkstepTypeMandatory" xml:space="preserve">
+    <value>Arbeidssteg type *:</value>
+  </data>
+  <data name="LabeTemplateFileMandatory" xml:space="preserve">
+    <value>Excel malfil: *</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Språk</value>
+  </data>
+  <data name="LastLicenseCheck" xml:space="preserve">
+    <value>Siste lisenskontroll:</value>
+  </data>
+  <data name="Layer" xml:space="preserve">
+    <value>Lag</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Layers" xml:space="preserve">
+    <value>lag</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="LegalNoteOctoprint" xml:space="preserve">
+    <value>Dette er ikke en offisiell programvare fra Octoprint eller assosiert med Octoprint eller Gina Häußge. Det inkluderer bare OctoPrint API for å samhandle med OctoPrint-serveren.</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LegalNoteRepetierServerPro" xml:space="preserve">
+    <value>Dette er ikke en offisiell programvare fra Repetier Server eller assosiert i allikevel med Repetier Server eller dens eier. Det inkluderer bare Repetier Server Rest-API for å samhandle med serveren din.</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LENS" xml:space="preserve">
+    <value>LENS (Laser Engineered Net Shaping) ®</value>
+  </data>
+  <data name="Libraries" xml:space="preserve">
+    <value>biblioteker</value>
+  </data>
+  <data name="LibraryUrl" xml:space="preserve">
+    <value>URL til bibliotek</value>
+  </data>
+  <data name="License" xml:space="preserve">
+    <value>Tillatelse</value>
+  </data>
+  <data name="LicenseFormatInvalid" xml:space="preserve">
+    <value>Lisensformatet for den angitte nøkkelen er ugyldig</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="LicenseFormatValid" xml:space="preserve">
+    <value>Lisensformatet til den angitte nøkkelen er gyldig</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="LicenseServerOffline" xml:space="preserve">
+    <value>Lisensserver offline eller utilgjengelig</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="LicenseState" xml:space="preserve">
+    <value>Lisensstatus:</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>Liste</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>Laste</value>
+  </data>
+  <data name="LoadFromManufacturer" xml:space="preserve">
+    <value>Last fra produsenten</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LoadFromSupplier" xml:space="preserve">
+    <value>Last fra leverandør</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LoadInformationFromPrinter" xml:space="preserve">
+    <value>Last inn fra skriveren</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LoadPrinterList" xml:space="preserve">
+    <value>Last inn skriverliste</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>plassering</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LocationCosts" xml:space="preserve">
+    <value>Plasseringskostnader</value>
+  </data>
+  <data name="MachineHourRate" xml:space="preserve">
+    <value>Maskinens timepris</value>
+  </data>
+  <data name="MachineHours" xml:space="preserve">
+    <value>Maskintimer</value>
+  </data>
+  <data name="MaintainanceAndRepairCosts" xml:space="preserve">
+    <value>Vedlikehold og reparasjonskostnader</value>
+  </data>
+  <data name="Makerbot" xml:space="preserve">
+    <value>MakerBot</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Manufacturer" xml:space="preserve">
+    <value>Produsent</value>
+  </data>
+  <data name="ManufacturerIsInvalidForPurchase" xml:space="preserve">
+    <value>Produsenten er låst</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="ManufacturerIsValidForPurchase" xml:space="preserve">
+    <value>Produsenten blir åpnet</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="Manufacturers" xml:space="preserve">
+    <value>Produsenter</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="MarkedFiledsMandatory" xml:space="preserve">
+    <value>Alle felt merket med '*' er obligatoriske.</value>
+  </data>
+  <data name="MasterPassword" xml:space="preserve">
+    <value>Master passord</value>
+  </data>
+  <data name="Material" xml:space="preserve">
+    <value>Materiale</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="MaterialIsSealed" xml:space="preserve">
+    <value>Materiale er forseglet</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="Materials" xml:space="preserve">
+    <value>materialer</value>
+  </data>
+  <data name="MaxTempHeatbed" xml:space="preserve">
+    <value>Maks. Hodeseng temp.</value>
+  </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Meny</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Beskjed</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Messages" xml:space="preserve">
+    <value>Meldinger</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="MinimizeInsteadOfTerminating" xml:space="preserve">
+    <value>På nært hold minimerer du i stedet for å avslutte</value>
+  </data>
+  <data name="MinimizeToTrayInsteadOfTaskbar" xml:space="preserve">
+    <value>Minimer til skuff i stedet for oppgavelinjen</value>
+  </data>
+  <data name="Misc" xml:space="preserve">
+    <value>Diverse</value>
+  </data>
+  <data name="MJ" xml:space="preserve">
+    <value>MJ (Material Jetting) ®</value>
+  </data>
+  <data name="MJF" xml:space="preserve">
+    <value>MJF (Multi Jet Fusion) ®</value>
+  </data>
+  <data name="Model" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MoveAndRestart" xml:space="preserve">
+    <value>Flytt og start på nytt</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="MultipleInstances" xml:space="preserve">
+    <value>Flere forekomster</value>
+  </data>
+  <data name="MyCalculation" xml:space="preserve">
+    <value>Min beregning</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Navn</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>Ny</value>
+  </data>
+  <data name="NewCategory" xml:space="preserve">
+    <value>Ny kategori</value>
+  </data>
+  <data name="NewExcelExporterSettings" xml:space="preserve">
+    <value>Nye Excel-eksportørinnstillinger</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="NewExcelExporterTemplate" xml:space="preserve">
+    <value>Ny Excel-mal</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="NewMachineHourRate" xml:space="preserve">
+    <value>Ny maskintime rate</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="NewManufacturer" xml:space="preserve">
+    <value>Ny produsent</value>
+  </data>
+  <data name="NewMaterial" xml:space="preserve">
+    <value>Nytt materiale</value>
+  </data>
+  <data name="NewMaterialAsNewWindow" xml:space="preserve">
+    <value>Nytt materiale (nytt vindu)</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="NewPrinter" xml:space="preserve">
+    <value>Ny skriver</value>
+  </data>
+  <data name="NewPrinterAsNewWindow" xml:space="preserve">
+    <value>Ny skriver (nytt vindu)</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="NewSupplier" xml:space="preserve">
+    <value>Ny leverandør</value>
+  </data>
+  <data name="NewTab" xml:space="preserve">
+    <value>Ny fane</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="NewWorkstepAsNewWindow" xml:space="preserve">
+    <value>Nytt arbeidssteg (nytt vindu)</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="NoLicenseActivatedYet" xml:space="preserve">
+    <value>Det er ikke satt noen lisens for denne forekomsten. Klikk på knappen nedenfor for å aktivere pro-versjonen din nå!</value>
+  </data>
+  <data name="NoMessagesAvailable" xml:space="preserve">
+    <value>Ingen meldinger er tilgjengelige</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>Ingen</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="NoPrintPrintActive" xml:space="preserve">
+    <value>Ingen utskriftsjobb aktiv ...</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="NotChanged" xml:space="preserve">
+    <value>Ikke endret</value>
+  </data>
+  <data name="NotePingCounter" xml:space="preserve">
+    <value>For å holde WebSocket-tilkoblingen i live må en ping-kommando sendes til Repetier Server. Verdien viser mengden send ping-kommandoer så langt.</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="NoteRepetierServerPrinterName" xml:space="preserve">
+    <value>Oppgi navnet slik det er vist på dashbordet. Verktøyet vil automatisk erstatte hvitfeltene med understrekinger.</value>
+  </data>
+  <data name="NoUpdateAvailable" xml:space="preserve">
+    <value>Ingen oppdatering er tilgjengelig for øyeblikket</value>
+  </data>
+  <data name="Nozzle" xml:space="preserve">
+    <value>dyse</value>
+  </data>
+  <data name="NPJ" xml:space="preserve">
+    <value>NPJ (NanoParticle Jetting) ®</value>
+  </data>
+  <data name="OctoPrint" xml:space="preserve">
+    <value>OctoPrint</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="Off" xml:space="preserve">
+    <value>Av</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Offer" xml:space="preserve">
+    <value>Tilbud</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="OfferId" xml:space="preserve">
+    <value>Tilbuds-id</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="OfferIdLabel" xml:space="preserve">
+    <value>Tilbuds-id:</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Official" xml:space="preserve">
+    <value>Offisielt</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="Offline" xml:space="preserve">
+    <value>Offline</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="OfflineLicenseInvalid" xml:space="preserve">
+    <value>Lisensserveren er frakoblet, eller du er ikke koblet til internett. Dessverre er lisensen din siste lisens sjekk ikke gyldig lenger. Pro-versjonen blir nedgradert til serveren er tilbake online eller du er koblet til Internett igjen.</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="OfflineLicenseValid" xml:space="preserve">
+    <value>Lisensserveren er frakoblet, eller du er ikke koblet til internett. Imidlertid er lisensens siste lisenskontroll fortsatt gyldig. Du kan fortsette med Pro-versjonen.</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="On" xml:space="preserve">
+    <value>På</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Online" xml:space="preserve">
+    <value>Online
+</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="OnlyNumbersAreAllowed" xml:space="preserve">
+    <value>Bare tall er tillatt!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="OpenASlicerInstanceForEachFile" xml:space="preserve">
+    <value>Ja, åpne en forekomst for hver fil</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="OpenCalculationViewOnFileLoaded" xml:space="preserve">
+    <value>Åpne beregningsresultatvisningen etter at en beregning ble lastet inn</value>
+  </data>
+  <data name="OpenFile" xml:space="preserve">
+    <value>Åpen fil</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="OpenFolder" xml:space="preserve">
+    <value>Åpne mappen</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="OpenGcodeorStlFile" xml:space="preserve">
+    <value>Åpne STL eller Gcode</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="OpenLicense" xml:space="preserve">
+    <value>Åpen lisens</value>
+  </data>
+  <data name="OpenLocation" xml:space="preserve">
+    <value>Åpen beliggenhet</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="OpenMessage" xml:space="preserve">
+    <value>Åpne melding</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="OpenProject" xml:space="preserve">
+    <value>Åpent prosjekt</value>
+  </data>
+  <data name="OpenSettingsLocation" xml:space="preserve">
+    <value>Åpne Innstillinger-mappen</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="OpenSlicerInstanceForEachFile" xml:space="preserve">
+    <value>Åpne skiver for hver fil individuelt?</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="OpenStlFile" xml:space="preserve">
+    <value>Velg eller slipp .stl-fil</value>
+  </data>
+  <data name="OpenWebCam" xml:space="preserve">
+    <value>Åpne webkamera</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="OpenWebsite" xml:space="preserve">
+    <value>Åpne nettsted</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>eller</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>Overskriv</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="OverwriteCurrencySymbol" xml:space="preserve">
+    <value>Overskriv valutasymbol</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="PackageSize" xml:space="preserve">
+    <value>pakkestørrelse</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Passord</value>
+  </data>
+  <data name="PasswordRepeat" xml:space="preserve">
+    <value>Gjenta passord</value>
+  </data>
+  <data name="PasswordsDoNotMatch" xml:space="preserve">
+    <value>Passordene er ikke like!</value>
+  </data>
+  <data name="PercentageProgressOf" xml:space="preserve">
+    <value>{0} fra {1}% fullført</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="PerHour" xml:space="preserve">
+    <value>Per time</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="PerJob" xml:space="preserve">
+    <value>Per jobb</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="PerMonth" xml:space="preserve">
+    <value>/ Måned</value>
+  </data>
+  <data name="PerPiece" xml:space="preserve">
+    <value>Per stykk</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="PerYear" xml:space="preserve">
+    <value>/ År</value>
+  </data>
+  <data name="PleaseAddValidExcelColumnString" xml:space="preserve">
+    <value>Oppgi en gyldig Excel-kolonne!</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Portable" xml:space="preserve">
+    <value>Bærbar</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Post" xml:space="preserve">
+    <value>Post-prosessering</value>
+  </data>
+  <data name="Powder" xml:space="preserve">
+    <value>Pulver</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="Pre" xml:space="preserve">
+    <value>Pre-Processing</value>
+  </data>
+  <data name="PrepareSlicing" xml:space="preserve">
+    <value>Forbered slicer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Pris</value>
+  </data>
+  <data name="PricePer" xml:space="preserve">
+    <value>Pris pr</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Printer" xml:space="preserve">
+    <value>Skriver</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="PrinterHasHeatbed" xml:space="preserve">
+    <value>Skriveren har en varmeseng</value>
+  </data>
+  <data name="Printers" xml:space="preserve">
+    <value>3D-skrivere</value>
+  </data>
+  <data name="PrintOffer" xml:space="preserve">
+    <value>Skriv ut tilbud</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="PrivacyCheckNoAnalytics" xml:space="preserve">
+    <value>Vi bruker ikke analyseprogramvare for å spore din oppførsel!</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="PrivacyCheckNoDataCollection" xml:space="preserve">
+    <value>Vi samler ikke inn noen av dine data, aldri!</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>Produktnavn</value>
+  </data>
+  <data name="ProgramExecutionDirectoryNotFound" xml:space="preserve">
+    <value>Programkjøringskatalogen ble ikke funnet, mens du prøver å bygge banen til lisenskatalogen!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="ProOnly" xml:space="preserve">
+    <value>Låst - Pro-funksjon</value>
+  </data>
+  <data name="ProOnlyFunction" xml:space="preserve">
+    <value>Dette er en pro-eneste funksjon. Oppgrader til pro-versjonen nå for å låse opp denne funksjonen!</value>
+  </data>
+  <data name="ProvidedInformationArePerYear" xml:space="preserve">
+    <value>Den oppgitte informasjonen er per år</value>
+  </data>
+  <data name="PrusaSlicer" xml:space="preserve">
+    <value>PrusaSlicer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Reconnect" xml:space="preserve">
+    <value>Koble til på nytt</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="RemainingContent" xml:space="preserve">
+    <value>Gjenværende innhold</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="Reorder" xml:space="preserve">
+    <value>Omgjøre</value>
+  </data>
+  <data name="Repeat" xml:space="preserve">
+    <value>Gjenta</value>
+  </data>
+  <data name="RepetierServerPro" xml:space="preserve">
+    <value>Repetier Server Pro</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="RepetierServerProConnectionNote" xml:space="preserve">
+    <value>Du kan enten oppgi IP-adressen 'x.x.x.x' eller FQDN (fullt kvalifisert domenenavn) 'repetier-server.local' for å koble til serveren.</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="RepetierServerProIsNotConfigured" xml:space="preserve">
+    <value>Det ser ut til at Repetier Server Pro ikke er konfigurert i innstillingene dine. Gå til innstillingssiden og konfigurer serveren først!</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="RepetierServerProIsOffline" xml:space="preserve">
+    <value>Repetier Server Pro ser ut til å være frakoblet. Kontroller serveren din og prøv å koble til igjen nedenfor.</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="RepetierServerProIsOfflineOrNotConfigured" xml:space="preserve">
+    <value>Det ser ut til at enten Repetier Server Pro er frakoblet eller ikke konfigurert korrekt. Sjekk i innstillingene dine.</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="ReplacementCosts" xml:space="preserve">
+    <value>Erstatningskostnader</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Nullstille</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="ResetLicensesMessage" xml:space="preserve">
+    <value>Tilbakestille lisensen?</value>
+  </data>
+  <data name="Resin" xml:space="preserve">
+    <value>Harpiks</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="Resources" xml:space="preserve">
+    <value>ressurser</value>
+  </data>
+  <data name="Restart" xml:space="preserve">
+    <value>Omstart</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="RestartLater" xml:space="preserve">
+    <value>Jeg starter på nytt senere ...</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="RestartNow" xml:space="preserve">
+    <value>Start på nytt nå!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="RestartTheApplicationSoThatAllChangesAreApplied" xml:space="preserve">
+    <value>For å oppdatere språket, må applikasjonen startes på nytt.</value>
+  </data>
+  <data name="Row" xml:space="preserve">
+    <value>Rad</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="RunChecker" xml:space="preserve">
+    <value>Kjør sjekker</value>
+  </data>
+  <data name="RunSearchAndReplace" xml:space="preserve">
+    <value>Kjør Søk og erstatt</value>
+  </data>
+  <data name="RunSlicer" xml:space="preserve">
+    <value>Start slicer
+</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Lagre</value>
+  </data>
+  <data name="SaveCalculation" xml:space="preserve">
+    <value>Lagre beregning</value>
+  </data>
+  <data name="SaveChanges" xml:space="preserve">
+    <value>Lagre endringer</value>
+  </data>
+  <data name="SaveSettingsInApplicationFolder" xml:space="preserve">
+    <value>Lagre innstillinger i applikasjonsmappen</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Søk</value>
+  </data>
+  <data name="SearchDots" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="SearchedApplicationNotFound" xml:space="preserve">
+    <value>Søkte applikasjoner ble ikke funnet</value>
+  </data>
+  <data name="SearchedLanguageNotFound" xml:space="preserve">
+    <value>Det søkte språket ble ikke funnet</value>
+  </data>
+  <data name="SearchedSettingsNotFound" xml:space="preserve">
+    <value>Søkeinnstillinger ble ikke funnet</value>
+  </data>
+  <data name="SectionIsBeta" xml:space="preserve">
+    <value>Denne delen er i betatilstand, noe som betyr at den kan ha feil og ikke fungerer fullt ut for øyeblikket. Hvis du finner noen problemer, kan du kontakte supportteamet vårt.</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="SectionLocked" xml:space="preserve">
+    <value>Denne delen er for øyeblikket låst og vil være tilgjengelig i en fremtidig utgave.</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="SelectedSettingsAreReset" xml:space="preserve">
+    <value>Valgte innstillinger tilbakestilles</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SelectFiles" xml:space="preserve">
+    <value>Velg fil (er)</value>
+  </data>
+  <data name="SelectFolder" xml:space="preserve">
+    <value>Velg mappe (r)</value>
+  </data>
+  <data name="SelectGcodeFile" xml:space="preserve">
+    <value>Velg en .gcode-fil ...</value>
+  </data>
+  <data name="SelectOrDropGcodeFile" xml:space="preserve">
+    <value>Velg eller slipp .gcode-fil</value>
+  </data>
+  <data name="SelectPrinterToStartRepetierDashboard" xml:space="preserve">
+    <value>Velg en skriver for å starte Repetier Server-oversikten</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="SelectSlicerAppPath" xml:space="preserve">
+    <value>Velg applikasjonsvei for slicer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SelectYourDefaultPrintServer" xml:space="preserve">
+    <value>Velg din printserver</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="SendGcodeToRepetierServerPro" xml:space="preserve">
+    <value>Send til Repetier Server Pro</value>
+  </data>
+  <data name="SendTestFile" xml:space="preserve">
+    <value>Send testfil</value>
+  </data>
+  <data name="SendToSlicer" xml:space="preserve">
+    <value>Send til slicer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SetFlow" xml:space="preserve">
+    <value>Still inn flyt</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="SetMasterPassword" xml:space="preserve">
+    <value>Angi hovedpassordet</value>
+  </data>
+  <data name="SetSpeed" xml:space="preserve">
+    <value>Still hastighet</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="SetTemperature" xml:space="preserve">
+    <value>Still inn temperatur</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>innstillinger</value>
+  </data>
+  <data name="SettingsEventLogger" xml:space="preserve">
+    <value>Event Logger</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="SettingsEventLoggerImportantNote" xml:space="preserve">
+    <value>Hendelsesloggeren hjelper oss med feilsøkingsfeil i applikasjonen vår. All samlet informasjon lagres bare lokalt på datamaskinen din, så lenge applikasjonen kjører. Ingen informasjon vil bli sendt et sted. Hvis du får feil, kan du sende oss informasjonen fra feilhendelsen sammen med en detaljert feilbeskrivelse.</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="SettingsFileNotFoundOrCorrupted" xml:space="preserve">
+    <value>Innstillingsfilen ble ikke funnet eller ble ødelagt.</value>
+  </data>
+  <data name="SettingsGroupApps" xml:space="preserve">
+    <value>Appinnstillinger</value>
+  </data>
+  <data name="SettingsGroupDebug" xml:space="preserve">
+    <value>Debug</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="SettingsGroupExporter" xml:space="preserve">
+    <value>Eksporter</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="SettingsGroupGeneral" xml:space="preserve">
+    <value>Generelle innstillinger</value>
+  </data>
+  <data name="SettingsGroupLicense" xml:space="preserve">
+    <value>Tillatelse</value>
+  </data>
+  <data name="SettingsGroupNotFound" xml:space="preserve">
+    <value>Denne gruppen eksisterer ikke!</value>
+  </data>
+  <data name="SettingsGroupPrivacyPolicy" xml:space="preserve">
+    <value>Personvern</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="SettingsNameAppearance" xml:space="preserve">
+    <value>Utseende</value>
+  </data>
+  <data name="SettingsNameAppSettings" xml:space="preserve">
+    <value>Appinnstillinger</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SettingsNameCalculation" xml:space="preserve">
+    <value>beregninger</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="SettingsNameEULA" xml:space="preserve">
+    <value>EULA</value>
+  </data>
+  <data name="SettingsNameExcelExporter" xml:space="preserve">
+    <value>Eksporter til Excel</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="SettingsNameGcode" xml:space="preserve">
+    <value>Gcode</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SettingsNameGeneral" xml:space="preserve">
+    <value>Generell</value>
+  </data>
+  <data name="SettingsNameImportExport" xml:space="preserve">
+    <value>Import &amp; Eksport</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SettingsNameLanguage" xml:space="preserve">
+    <value>Språk</value>
+  </data>
+  <data name="SettingsNameLicense" xml:space="preserve">
+    <value>Tillatelse</value>
+  </data>
+  <data name="SettingsNameNotFound" xml:space="preserve">
+    <value>Denne innstillingssiden eksisterer ikke!</value>
+  </data>
+  <data name="SettingsNameOctoPrint" xml:space="preserve">
+    <value>OctoPrint</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="SettingsNamePrinter" xml:space="preserve">
+    <value>3D-skriver</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="SettingsNameRepetierServer" xml:space="preserve">
+    <value>Repetier Server Pro</value>
+  </data>
+  <data name="SettingsNameSlicer" xml:space="preserve">
+    <value>slicer</value>
+  </data>
+  <data name="SettingsNameUpdate" xml:space="preserve">
+    <value>Oppdater</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SettingsNameWindow" xml:space="preserve">
+    <value>Vindu</value>
+  </data>
+  <data name="SettingsPrivacyPolicy" xml:space="preserve">
+    <value>Personvernpolicy</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="SettingsReseted" xml:space="preserve">
+    <value>Innstillingene er tilbakestilt</value>
+  </data>
+  <data name="SetZoomFitPage" xml:space="preserve">
+    <value>Zoom til side</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>Forestilling</value>
+  </data>
+  <data name="ShowCameraInfo" xml:space="preserve">
+    <value>Vis kamerainfo?</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="ShowEULA" xml:space="preserve">
+    <value>Vis EULA</value>
+  </data>
+  <data name="ShowFollowingApplicationOnStartup" xml:space="preserve">
+    <value>Vis følgende program ved oppstart</value>
+  </data>
+  <data name="ShowLocalLicenses" xml:space="preserve">
+    <value>Vis lokale lisenser</value>
+  </data>
+  <data name="Shutdown" xml:space="preserve">
+    <value>Skru av</value>
+    <comment>0.0.5-beta</comment>
+  </data>
+  <data name="Simplify3D" xml:space="preserve">
+    <value>Forenkle3D ®</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Single" xml:space="preserve">
+    <value>Enkelt</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Skeinforge" xml:space="preserve">
+    <value>Skeinforge</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SkipAndUsePersonalVersion" xml:space="preserve">
+    <value>Hopp over, jeg vil bruke den personlige versjonen</value>
+  </data>
+  <data name="SKU" xml:space="preserve">
+    <value>SKU</value>
+  </data>
+  <data name="SLA" xml:space="preserve">
+    <value>SLA (stereolitografi) ®</value>
+  </data>
+  <data name="Slic3r" xml:space="preserve">
+    <value>Slic3r PE</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Slice" xml:space="preserve">
+    <value>Slicer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Slicer" xml:space="preserve">
+    <value>Slicer</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SlicerCommandsNote" xml:space="preserve">
+    <value>Hvis ingen kommandoer er oversendt, åpnes bare GUI for slicerenog stl-filen (e) lastes inn. Vennligst sjekk kommandoene for den foretrukne sliceren på dokumentet (hvis de støttes).</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SlicerMultipleInstancesNote" xml:space="preserve">
+    <value>Hvis du merker av for dette alternativet, vil det bli åpnet en slicer for hver fil. Ellers vil alle filene åpnes i den samme sliceren.</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SLM" xml:space="preserve">
+    <value>SLM (Selective Laser Melting) ®</value>
+  </data>
+  <data name="Slogan" xml:space="preserve">
+    <value>Et programvareverktøy for å beregne den mest nøyaktige prisen for din neste 3D-utskriftsjobb!</value>
+  </data>
+  <data name="SLS" xml:space="preserve">
+    <value>SLS (Selective Laser Sintering) ®</value>
+  </data>
+  <data name="Snapmakerjs" xml:space="preserve">
+    <value>Snapmakerjs</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Speed" xml:space="preserve">
+    <value>Hastighet</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="StartupApplication" xml:space="preserve">
+    <value>Oppstartsapplikasjon</value>
+  </data>
+  <data name="Stl" xml:space="preserve">
+    <value>Stl
+</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="STLViewer" xml:space="preserve">
+    <value>STL Viser</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SupplierIsInvalidForPurchase" xml:space="preserve">
+    <value>Leverandør er låst</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="SupplierIsValidForPurchase" xml:space="preserve">
+    <value>Leverandør blir åpnet</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="Suppliers" xml:space="preserve">
+    <value>Leverandører</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="TabHeaderCalculate" xml:space="preserve">
+    <value>Regne ut</value>
+  </data>
+  <data name="TabHeaderCalculations" xml:space="preserve">
+    <value>beregninger</value>
+  </data>
+  <data name="Temperature" xml:space="preserve">
+    <value>Temperatur</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="TemplateTargetMandatory" xml:space="preserve">
+    <value>Mål:*</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Tema</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="TheSettingsLocationIsNotAffected" xml:space="preserve">
+    <value>Innstillingsstedet påvirkes ikke</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="Timestamp" xml:space="preserve">
+    <value>Tidsstempel</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="TooltipApiKeyRepetier" xml:space="preserve">
+    <value>Api-tasten ...</value>
+  </data>
+  <data name="TooltipApplyTaxRate" xml:space="preserve">
+    <value>Merk av for å bruke en avgiftssats.</value>
+  </data>
+  <data name="TooltipCreateCopies" xml:space="preserve">
+    <value>Hvis det er merket av, blir resultatene skrevet i nye filer. Originaler forblir urørt.</value>
+  </data>
+  <data name="ToolTipDeleteAllSelectedCalculations" xml:space="preserve">
+    <value>Slett alle valgte beregninger</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="TooltipEnergyCosts" xml:space="preserve">
+    <value>Kostnadene for en kW / h i cent.</value>
+  </data>
+  <data name="TooltipFailRate" xml:space="preserve">
+    <value>Bruk denne glidebryteren for å angi en beregnet feilhastighet.</value>
+  </data>
+  <data name="TooltipHandlingFee" xml:space="preserve">
+    <value>Denne avgiften vil bli brukt for hver brikke</value>
+  </data>
+  <data name="TooltipIPAdressRepetier" xml:space="preserve">
+    <value>IP-adressen til repeteringsserveren din ...</value>
+  </data>
+  <data name="TooltipIPAdressRepetierOrFQDN" xml:space="preserve">
+    <value>IP-adresse eller domenenavn ...</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="TooltipMargin" xml:space="preserve">
+    <value>Bruk denne glidebryteren for å angi ønsket margin.</value>
+  </data>
+  <data name="TooltipMHRProvidedInformationTimeBase" xml:space="preserve">
+    <value>Merk av om informasjonen er per år</value>
+  </data>
+  <data name="TooltipPieces" xml:space="preserve">
+    <value>Brikkene til denne utskriftsjobben.</value>
+  </data>
+  <data name="TooltipPrinterNameRepetier" xml:space="preserve">
+    <value>Navnet på skriveren ...</value>
+  </data>
+  <data name="ToolTipSelectAllCalculations" xml:space="preserve">
+    <value>Velg / avvelg alle beregninger</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="TooltipSingleFailTime" xml:space="preserve">
+    <value>Beregnet tilleggstid avhengig av innstilt feilhastighet</value>
+  </data>
+  <data name="TooltipTaxRate" xml:space="preserve">
+    <value>Skattesatsen som skal brukes.</value>
+  </data>
+  <data name="TooltipTextToReplaceWith" xml:space="preserve">
+    <value>Skriv inn teksten du vil erstatte resultatene med ...</value>
+  </data>
+  <data name="TooltipTextToSearchFor" xml:space="preserve">
+    <value>Skriv inn teksten du vil søke etter ...</value>
+  </data>
+  <data name="TooltipWorkstepDuration" xml:space="preserve">
+    <value>Varigheten for dette arbeidssteget.</value>
+  </data>
+  <data name="TooltipWorkstepPrice" xml:space="preserve">
+    <value>Brukes avhengig av valgt beregning. type</value>
+  </data>
+  <data name="ToolTip_DeleteFiles" xml:space="preserve">
+    <value>Slett filer)</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="ToolTip_FixedValueForMachineHourRate" xml:space="preserve">
+    <value>Hvis dette er merket av, kan du for eksempel legge inn en fast verdi for maskinens timepris, hvis du allerede har beregnet maskinens timepris i et annet verktøy / excelark.</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="ToolTip_New" xml:space="preserve">
+    <value>Ny</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="ToolTip_OpenFolder" xml:space="preserve">
+    <value>Åpne mappen</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="ToolTip_OpenGCodeEditor" xml:space="preserve">
+    <value>Åpne gcode editor</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="ToolTip_Reload" xml:space="preserve">
+    <value>Reload</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="ToolTip_StartPrint" xml:space="preserve">
+    <value>Begynn å skrive ut denne modellen</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="ToolTip_TimebaseMachineHourRate" xml:space="preserve">
+    <value>Merk av for dette krysset hvis du vil oppgi all informasjon per år. Ellers blir all angitt informasjon multiplisert med 12.</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="ToolTip_TranslateProjectUrl" xml:space="preserve">
+    <value>Hjelp med å oversette dette verktøyet til språket ditt!</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="Transparency" xml:space="preserve">
+    <value>Transparent</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Tray" xml:space="preserve">
+    <value>Brett</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Unit" xml:space="preserve">
+    <value>Enhet</value>
+  </data>
+  <data name="UnitGram" xml:space="preserve">
+    <value>g</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="UnitKilogram" xml:space="preserve">
+    <value>kg</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="UnitLiter" xml:space="preserve">
+    <value>l</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="UnitMililiter" xml:space="preserve">
+    <value>ml</value>
+    <comment>0.0.4-beta</comment>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Ukjent</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Oppdater</value>
+  </data>
+  <data name="UploadFiles" xml:space="preserve">
+    <value>Last opp filer)</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="UploadingFileFromFilesFormated" xml:space="preserve">
+    <value>Laster opp {0} fra {1} filer:</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="UseFixedValueForMachineHourRate" xml:space="preserve">
+    <value>Bruker du en fast verdi for maskinens timesats?</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="UserAgreedToEULA" xml:space="preserve">
+    <value>Brukeren har samtykket til lisensavtalen for sluttbrukere (EULA)</value>
+  </data>
+  <data name="UserAgreedToEULAFormated" xml:space="preserve">
+    <value>Brukeren har samtykket til sluttbrukerlisensavtalen (EULA) den {0}</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Brukernavn</value>
+  </data>
+  <data name="UseSelectedManufacturer" xml:space="preserve">
+    <value>Bruk valgt produsent</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="UseSelectedPrinter" xml:space="preserve">
+    <value>Bruk valgt skriver</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="UseSelectedSupplier" xml:space="preserve">
+    <value>Bruk valgt leverandør</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="UstId" xml:space="preserve">
+    <value>UstId</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Valid" xml:space="preserve">
+    <value>Gyldig</value>
+  </data>
+  <data name="ValidatorSelectionIsMandatory" xml:space="preserve">
+    <value>Velg først en vare!</value>
+  </data>
+  <data name="ValidNumberFrom10Till100" xml:space="preserve">
+    <value>Vennligst skriv inn en verdi mellom 10 og 100!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="ValueCannotBeEmpty" xml:space="preserve">
+    <value>Verdien kan ikke være tom!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="ValueTypeUnknown" xml:space="preserve">
+    <value>Verditypen er ukjent!</value>
+    <comment>0.0.2-beta</comment>
+  </data>
+  <data name="VariableCosts" xml:space="preserve">
+    <value>Variable kostnader</value>
+  </data>
+  <data name="VariableProgressOf" xml:space="preserve">
+    <value>{0} fra {1} {2} fullført</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Vendor" xml:space="preserve">
+    <value>Leverandør</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Versjon</value>
+  </data>
+  <data name="VersionxxIsAvailable" xml:space="preserve">
+    <value>En nyere versjon {0} er tilgjengelig!</value>
+  </data>
+  <data name="View3dInstructions" xml:space="preserve">
+    <value>Bruk høyre museknapp for å rotere, og musehjulet for å bevege objektet.</value>
+  </data>
+  <data name="ViewOffer" xml:space="preserve">
+    <value>Se tilbud</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="ViewOnline" xml:space="preserve">
+    <value>Se på nettet</value>
+  </data>
+  <data name="VisibleApplications" xml:space="preserve">
+    <value>Synlige applikasjoner</value>
+  </data>
+  <data name="VisibleApplicationsInTheBar" xml:space="preserve">
+    <value>Synlige applikasjoner i baren</value>
+  </data>
+  <data name="Voxelizer2" xml:space="preserve">
+    <value>Voxelizer 2</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Advarsel</value>
+    <comment>0.0.7-beta</comment>
+  </data>
+  <data name="WarningMessage_SettingsGeneralAppearanceTransparency" xml:space="preserve">
+    <value>Noen grafikkort / drivere har problemer med å maksimere applikasjonen når transparent er aktivert. Aktivering eller deaktivering av denne funksjonen krever en omstart av applikasjonen.</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="Warning_SecureConnection" xml:space="preserve">
+    <value>Sjekk bare dette alternativet hvis adressen din er sikker (https: //). Ellers kan dette føre til tilkoblingsproblemer!</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="Watermark_OctoPrintApiKey" xml:space="preserve">
+    <value>Skriv inn API-nøkkelen din ...</value>
+    <comment>0.1.0-beta</comment>
+  </data>
+  <data name="WebCam" xml:space="preserve">
+    <value>Webkamera</value>
+    <comment>0.0.8-beta</comment>
+  </data>
+  <data name="Window" xml:space="preserve">
+    <value>Vindu</value>
+  </data>
+  <data name="WokrstepCalculationNote" xml:space="preserve">
+    <value>Avhengig av hvilken beregningstype du velger, vil prisen enten beregnes en gang per brikke, en gang per jobb eller for den gitte tiden.</value>
+  </data>
+  <data name="Worksteps" xml:space="preserve">
+    <value>Worksteps</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="WriteDataToTemplateFile" xml:space="preserve">
+    <value>Skrive data til malfil?</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="WriteDataToTemplateFileNote" xml:space="preserve">
+    <value>Hvis du aktiverer dette, vil eksporten åpne den definerte Excel-malen og skrive informasjonen til filen fra den angitte kolonnen og raden.</value>
+    <comment>0.0.9-beta</comment>
+  </data>
+  <data name="WrongPassword" xml:space="preserve">
+    <value>Feil passord</value>
+  </data>
+  <data name="WrongPasswordDecryptionFailedMessage" xml:space="preserve">
+    <value>Dekrypteringen mislyktes på grunn av et galt passord.</value>
+  </data>
+  <data name="Years" xml:space="preserve">
+    <value>år</value>
+  </data>
+  <data name="YourLicenseInformation" xml:space="preserve">
+    <value>Din lisensinformasjon</value>
+  </data>
+  <data name="YourPrivacyMatters" xml:space="preserve">
+    <value>Personvernet ditt betyr noe!</value>
+    <comment>0.0.6-beta</comment>
+  </data>
+  <data name="YourRepetierServerDashboard" xml:space="preserve">
+    <value>Ditt Repetier Server Pro Dashboard</value>
+    <comment>0.0.3-beta</comment>
+  </data>
+  <data name="YourSystemOSIsIncompatibleWithTheLatestRelease" xml:space="preserve">
+    <value>Systemoperativsystemet ditt er ikke kompatibelt med den nyeste versjonen!</value>
+  </data>
+</root>

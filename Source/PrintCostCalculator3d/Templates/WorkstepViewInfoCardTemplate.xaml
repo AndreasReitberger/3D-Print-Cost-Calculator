@@ -1,0 +1,251 @@
+﻿<UserControl x:Class="PrintCostCalculator3d.Templates.WorkstepViewInfoCardTemplate"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             
+             xmlns:local="clr-namespace:PrintCostCalculator3d.Templates"
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+             xmlns:CSMSControls="clr-namespace:PrintCostCalculator3d.Controls"
+             xmlns:Models="clr-namespace:PrintCostCalculator3d.Models._3dprinting"
+             xmlns:converters="clr-namespace:PrintCostCalculator3d.Converters"
+             xmlns:validators="clr-namespace:PrintCostCalculator3d.Validators"
+             xmlns:localization="clr-namespace:PrintCostCalculator3d.Resources.Localization"
+             
+             Width="300"
+             mc:Ignorable="d" 
+             d:DataContext="{d:DesignInstance Models:_3dPrinterWorkstep}"
+             d:DesignHeight="400" d:DesignWidth="450">
+    <UserControl.Resources>
+        <converters:TimeSpanToDecimalHoursConverter x:Key="TimeSpanToDecimalHoursConverter" />
+    </UserControl.Resources>
+    <Border BorderThickness="2" CornerRadius="10">
+        <Border.Style>
+            <Style TargetType="{x:Type Border}">
+                <Setter Property="BorderBrush" Value="{DynamicResource MahApps.Brushes.Gray10}" />
+            </Style>
+        </Border.Style>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header + Menu -->
+            <Border Grid.ColumnSpan="3" Background="{DynamicResource MahApps.Brushes.Gray10}" CornerRadius="10,10,0,0">
+                <DockPanel>
+                    <Border DockPanel.Dock="Right" >
+                        <Menu HorizontalAlignment="Right" VerticalAlignment="Center" FlowDirection="RightToLeft" Background="{DynamicResource MahApps.Brushes.Gray10}">
+                            <MenuItem Style="{StaticResource MahApps.Styles.MenuItem}" VerticalAlignment="Center" HorizontalAlignment="Right" 
+                                      Padding="0"
+                                      Background="{DynamicResource MahApps.Brushes.Gray10}">
+                                <MenuItem.Icon>
+                                    <Rectangle Width="16" Height="16" Fill="{DynamicResource MahApps.Brushes.ThemeForeground}">
+                                        <Rectangle.OpacityMask>
+                                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=DotsVertical}" />
+                                        </Rectangle.OpacityMask>
+                                    </Rectangle>
+                                </MenuItem.Icon>
+                                <!-- Edit -->
+                                <MenuItem Header="{x:Static localization:Strings.Edit}" Style="{StaticResource MahApps.Styles.MenuItem}"
+                                          Command="{Binding DataContext.EditWorkstepCommand, 
+                                          RelativeSource={RelativeSource FindAncestor, AncestorLevel=2, AncestorType={x:Type UserControl}}}" 
+                                          CommandParameter="{Binding Workstep}"
+                                    >
+                                    <MenuItem.Icon>
+                                        <Rectangle Width="16" Height="16" Fill="{DynamicResource MahApps.Brushes.ThemeForeground}">
+                                            <Rectangle.OpacityMask>
+                                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=CircleEditOutline}" />
+                                            </Rectangle.OpacityMask>
+                                        </Rectangle>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+
+                                <!-- Duplicate -->
+                                <MenuItem Header="{x:Static localization:Strings.Duplicate}" Style="{StaticResource MahApps.Styles.MenuItem}"
+                                  Command="{Binding DataContext.DuplicateWorkstepCommand, RelativeSource={RelativeSource FindAncestor, AncestorLevel=2, 
+                                                AncestorType={x:Type UserControl}}}" 
+                                  CommandParameter="{Binding Workstep}" 
+                                  >
+                                    <MenuItem.Icon>
+                                        <Rectangle Width="16" Height="16" Fill="{DynamicResource MahApps.Brushes.ThemeForeground}">
+                                            <Rectangle.OpacityMask>
+                                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=ContentDuplicate}" />
+                                            </Rectangle.OpacityMask>
+                                        </Rectangle>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+
+                                <!-- Delete -->
+                                <MenuItem Header="{x:Static localization:Strings.Delete}" Style="{StaticResource MahApps.Styles.MenuItem}"
+                                  Command="{Binding DataContext.DeleteWorkstepCommand, RelativeSource={RelativeSource FindAncestor, 
+                                                AncestorLevel=2, AncestorType={x:Type UserControl}}}" 
+                                  CommandParameter="{Binding Workstep}" 
+                                  >
+                                    <MenuItem.Icon>
+                                        <Rectangle Width="16" Height="16" Fill="{DynamicResource MahApps.Brushes.ThemeForeground}">
+                                            <Rectangle.OpacityMask>
+                                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Delete}" />
+                                            </Rectangle.OpacityMask>
+                                        </Rectangle>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                            </MenuItem>
+                        </Menu>
+                    </Border>
+                    <!-- Name -->
+                    <TextBlock Grid.Column="1" Grid.ColumnSpan="1" Text="{Binding Name}" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Foreground" Value="{DynamicResource MahApps.Brushes.Gray3}" />
+                                <Setter Property="Margin" Value="0,0,10,0" />
+                                <Setter Property="VerticalAlignment" Value="Center" />
+                                <Setter Property="FontSize" Value="12" />
+                                <Setter Property="FontWeight" Value="Bold" />
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Path=IsMouseOver,RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}}" Value="True" >
+                                        <Setter Property="Foreground" Value="{DynamicResource MahApps.Brushes.Gray5}" />
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Path=IsSelected,RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}}" Value="True" >
+                                        <Setter Property="Foreground" Value="{DynamicResource MahApps.Brushes.Accent}" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </DockPanel>
+            </Border>
+
+            <!-- Hour Rate -->
+            <Border Grid.Row="2" Grid.ColumnSpan="3" Background="{DynamicResource MahApps.Brushes.Gray10}" CornerRadius="0,0,10,10">
+                <StackPanel >
+                    <!-- Label -->
+                    <TextBlock Text="{x:Static localization:Strings.HourRate}" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Foreground" Value="{DynamicResource MahApps.Brushes.ThemeForeground}" />
+                                <Setter Property="Margin" Value="0,0,10,0" />
+                                <Setter Property="VerticalAlignment" Value="Center" />
+                                <Setter Property="FontSize" Value="12" />
+                                <Setter Property="FontWeight" Value="Bold" />
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                    <!-- Houre Rate -->
+                    <TextBlock Text="{Binding Workstep.Price, StringFormat={}{0:C2}}" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Foreground" Value="{DynamicResource MahApps.Brushes.AccentBase}" />
+                                <Setter Property="Margin" Value="0,0,10,0" />
+                                <Setter Property="VerticalAlignment" Value="Center" />
+                                <Setter Property="FontSize" Value="18" />
+                                <Setter Property="FontWeight" Value="Bold" />
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </StackPanel>
+            </Border>
+
+            <!-- Details -->
+            <DockPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Margin="10,4">
+                <Grid DockPanel.Dock="Top">
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="4"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="4"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <!-- Category -->
+                    <StackPanel Grid.Column="2" Grid.Row="0">
+                        <Rectangle Width="16" Height="16"
+                                   Style="{StaticResource RectangleItemTemplate}" Margin="10,5">
+                            <Rectangle.OpacityMask>
+                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:MaterialDesign Kind=PlayForWork}" />
+                            </Rectangle.OpacityMask>
+                        </Rectangle>
+                        <TextBlock Text="{Binding Workstep.Category}" Margin="5" HorizontalAlignment="Center" 
+                                   Style="{StaticResource TextBlockItemTemplate}"/>
+                    </StackPanel>
+
+                    <!-- Calculation Type -->
+                    <StackPanel Grid.Column="0" Grid.Row="0">
+                        <Rectangle Width="16" Height="16"
+                                   Style="{StaticResource RectangleItemTemplate}" Margin="10,5">
+                            <Rectangle.OpacityMask>
+                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Calculator}" />
+                            </Rectangle.OpacityMask>
+                        </Rectangle>
+                        <TextBlock Text="{Binding Workstep.CalculationType}" 
+                                   Grid.Column="0" Grid.Row="1"
+                                   Margin="5,2" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                   Style="{StaticResource TextBlockItemTemplate}">
+                        </TextBlock>
+                    </StackPanel>
+
+                    <!-- Duration -->
+                    <DockPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="5">
+                        <DockPanel.Style>
+                            <Style TargetType="{x:Type DockPanel}">
+                                <Setter Property="Visibility" Value="Collapsed" />
+                                <Style.Triggers>
+                                    <MultiDataTrigger>
+                                        <MultiDataTrigger.Conditions>
+                                            <Condition Binding="{Binding Workstep.CalculationType}" Value="PerHour" />
+                                        </MultiDataTrigger.Conditions>
+                                        <Setter Property="Visibility" Value="Visible" />
+                                    </MultiDataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DockPanel.Style>
+                        <Label Content="{x:Static localization:Strings.LabelWorkstepDuration}" DockPanel.Dock="Top" 
+                               HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+
+                        <DockPanel DockPanel.Dock="Bottom">
+                            <Label Content="{x:Static localization:Strings.LabelWorkstepDurationUnit}" DockPanel.Dock="Right" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+                            <!-- Mahapps 1.6 HasDecimals="True" -->
+                            <Controls:NumericUpDown Minimum="0" Margin="5"
+                                                DockPanel.Dock="Left"
+                                                HorizontalAlignment="Stretch" Width="Auto"
+                                                Value="{Binding Workstep.Duration, UpdateSourceTrigger=PropertyChanged}"
+                                                ToolTip="{x:Static localization:Strings.TooltipWorkstepDuration}">
+                                <Controls:NumericUpDown.Style>
+                                    <Style TargetType="{x:Type Controls:NumericUpDown}" BasedOn="{StaticResource DefaultNumericUpDown}">
+                                        <Setter Property="IsEnabled" Value="False" />
+                                        <Style.Triggers>
+                                            <MultiDataTrigger>
+                                                <MultiDataTrigger.Conditions>
+                                                    <Condition Binding="{Binding Workstep.CalculationType}" Value="PerHour" />
+                                                </MultiDataTrigger.Conditions>
+                                                <Setter Property="IsEnabled" Value="True" />
+                                            </MultiDataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Controls:NumericUpDown.Style>
+                            </Controls:NumericUpDown>
+                        </DockPanel>
+
+                    </DockPanel>
+                </Grid>
+            </DockPanel>
+
+
+            <!-- Checkbox -->
+            <CheckBox Grid.Column="0" Grid.Row="0" Content="" IsEnabled="False"
+            IsChecked="{Binding Selected}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+    </Border>
+</UserControl>

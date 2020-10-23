@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="PrintCostCalculator3d.Views.LoginView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             
+             xmlns:local="clr-namespace:PrintCostCalculator3d.Views"
+             
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid x:Name="root" HorizontalAlignment="Center" VerticalAlignment="Center" Width="350" Height="350">
+        <Border BorderThickness="1" BorderBrush="LightGray" Padding="10">
+        <StackPanel>
+            <iconPacks:PackIconMaterialDesign Width="64" Height="64" Kind="Computer" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                              Foreground="LightGray"/>
+            <Separator Height="2"/>
+                <TextBox x:Name="tbUsername" Controls:TextBoxHelper.Watermark="Benutzername..." Margin="0,10,0,0" Style="{StaticResource DefaultTextBox}"/>
+            <PasswordBox x:Name="pbPassword"  Margin="0,10,0,10" Style="{StaticResource DefaultPasswordBox}"/>
+            <CheckBox x:Name="ckbRememberMe" IsChecked="True" Content="An mich erinnern?"/>
+            <DockPanel Margin="0,10,0,10">
+                <Button x:Name="btnLogin" Content="Anmelden" Width="auto" Style="{StaticResource LoginButton}"/>
+                <TextBlock Width="24"/>
+                <Button x:Name="btnLostPassword" Content="Passwort vergessen?" Width="auto" Style="{StaticResource DefaultButton}"/>
+            </DockPanel>
+            <Separator Height="2"/>
+            <Button x:Name="btnCreateAccount" Content="Account erstellen" Margin="0,10" Style="{StaticResource DefaultButton}"/>
+        </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

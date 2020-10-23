@@ -1,0 +1,251 @@
+﻿<UserControl x:Class="PrintCostCalculator3d.Views._3dPrinting._3dPrintingMaterialView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                    
+             xmlns:viewModels="clr-namespace:PrintCostCalculator3d.ViewModels._3dPrinting"
+             xmlns:localization="clr-namespace:PrintCostCalculator3d.Resources.Localization"
+             xmlns:CustomControls="clr-namespace:PrintCostCalculator3d.Controls"
+             xmlns:templates="clr-namespace:PrintCostCalculator3d.Templates"
+             
+             xmlns:dialogs="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+
+             dialogs:DialogParticipation.Register="{Binding}"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             d:DataContext="{d:DesignInstance viewModels:_3dPrintingMaterialViewModel}"
+             >
+    <Grid>
+        <TabControl Style="{StaticResource DefaultTabControl}" Margin="5">
+            <TabItem Header="{x:Static localization:Strings.Materials}">
+                <Grid>
+                    <DockPanel>
+                        <DockPanel DockPanel.Dock="Top">
+                            <!-- Delete Button -->
+                            <Button Margin="5" VerticalAlignment="Top" Height="38" Width="45"
+                                    Command="{Binding DeleteSelectedMaterialsCommand}"
+                                    HorizontalAlignment="Right" DockPanel.Dock="Right"
+                                    >
+                                <Button.Content>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5">
+                                            <Rectangle.OpacityMask>
+                                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Delete}" />
+                                            </Rectangle.OpacityMask>
+                                        </Rectangle>
+                                        <TextBlock Grid.Column="1" Text="" TextAlignment="Center" Margin="10,5" />
+                                    </Grid>
+                                </Button.Content>
+                                <Button.Style>
+                                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource ImageButton}">
+                                        <Setter Property="IsEnabled" Value="True" />
+                                        <Style.Triggers>
+                                            <MultiDataTrigger>
+                                                <MultiDataTrigger.Conditions>
+                                                    <Condition Binding="{Binding ElementName=lbMaterials, Path=SelectedItems.Count}" Value="0" />
+                                                </MultiDataTrigger.Conditions>
+                                                <Setter Property="IsEnabled" Value="False" />
+                                            </MultiDataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                            <!-- Edit Button -->
+                            <Button Margin="5" VerticalAlignment="Top" Height="38" Width="45"
+                                    Command="{Binding EditSelectedMaterialCommand}"
+                                    DockPanel.Dock="Right">
+                                <Button.Content>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5">
+                                            <Rectangle.OpacityMask>
+                                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=CircleEditOutline}" />
+                                            </Rectangle.OpacityMask>
+                                        </Rectangle>
+                                    </Grid>
+                                </Button.Content>
+                                <Button.Style>
+                                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource ImageButton}">
+                                        <Setter Property="IsEnabled" Value="False" />
+                                        <Style.Triggers>
+                                            <MultiDataTrigger>
+                                                <MultiDataTrigger.Conditions>
+                                                    <Condition Binding="{Binding ElementName=lbMaterials, Path=SelectedItems.Count}" Value="1" />
+                                                </MultiDataTrigger.Conditions>
+                                                <Setter Property="IsEnabled" Value="True" />
+                                            </MultiDataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                            <!-- Add Button -->
+                            <Button Margin="5" VerticalAlignment="Top" Height="38" Width="45" DockPanel.Dock="Right"
+                                Style="{StaticResource ImageButton}" Command="{Binding AddNewMaterialCommand}"
+                                >
+                                <Button.Content>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5">
+                                            <Rectangle.OpacityMask>
+                                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Plus}" />
+                                            </Rectangle.OpacityMask>
+                                        </Rectangle>
+                                    </Grid>
+                                </Button.Content>
+                            </Button>
+                            <!-- Add Button (new window) -->
+                            <Button Margin="5" VerticalAlignment="Top" Height="38" Width="45" DockPanel.Dock="Right"
+                                Style="{StaticResource ImageButton}" Command="{Binding AddNewMaterialChildWindowCommand}"
+                                >
+                                <Button.Content>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5">
+                                            <Rectangle.OpacityMask>
+                                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=OpenInNew}" />
+                                            </Rectangle.OpacityMask>
+                                        </Rectangle>
+                                    </Grid>
+                                </Button.Content>
+                            </Button>
+                            <TextBox x:Name="TextBoxSearchMaterial" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="10" Text="{Binding SearchMaterial, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource SearchTextBox}" />
+                        </DockPanel>
+                        <ScrollViewer DockPanel.Dock="Top">
+                            <StackPanel>
+                                <CustomControls:MultiSelectListBox x:Name="lbMaterials" Margin="4" Grid.Row="1" 
+                                                               ItemsSource="{Binding MaterialViews}" 
+                                                               SelectedItem="{Binding SelectedMaterialView, UpdateSourceTrigger=PropertyChanged}" 
+                                                               SelectedItemsList="{Binding SelectedMaterialsView, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                                               SelectionMode="Multiple">
+
+                                    <CustomControls:MultiSelectListBox.GroupStyle>
+                                        <GroupStyle>
+                                            <GroupStyle.ContainerStyle>
+                                                <Style TargetType="{x:Type GroupItem}">
+                                                    <Setter Property="Template">
+                                                        <Setter.Value>
+                                                            <ControlTemplate>
+                                                                <Expander IsExpanded="True" Style="{StaticResource DefaultExpander}">
+                                                                    <Expander.Header>
+                                                                        <TextBlock Text="{Binding (CollectionViewGroup.Name)}" Style="{StaticResource DefaultTextBlock}" Margin="0" Foreground="{DynamicResource MahApps.Brushes.Gray3}"/>
+                                                                    </Expander.Header>
+                                                                    <ItemsPresenter />
+                                                                </Expander>
+                                                            </ControlTemplate>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                </Style>
+                                            </GroupStyle.ContainerStyle>
+
+                                        </GroupStyle>
+                                    </CustomControls:MultiSelectListBox.GroupStyle>
+                                    <CustomControls:MultiSelectListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <templates:MaterialViewInfoCardTemplate />
+                                        </DataTemplate>
+                                    </CustomControls:MultiSelectListBox.ItemTemplate>
+                                    <CustomControls:MultiSelectListBox.ItemContainerStyle>
+                                        <Style TargetType="{x:Type ListBoxItem}">
+                                            <Setter Property="Padding" Value="0"/>
+                                            <Setter Property="Margin" Value="6"/>
+                                            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                                            <Setter Property="IsSelected" Value="{Binding Selected}"/>
+                                            <Setter Property="Template">
+                                                <Setter.Value>
+                                                    <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                                        <Border Background="Transparent" BorderThickness="0">
+                                                            <Grid MinHeight="30">
+                                                                <ContentPresenter />
+                                                            </Grid>
+                                                        </Border>
+                                                    </ControlTemplate>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Style>
+                                    </CustomControls:MultiSelectListBox.ItemContainerStyle>
+                                    <!-- BUGFIX This has to be set, to enable mouse wheel scrolling -->
+                                    <CustomControls:MultiSelectListBox.Template>
+                                        <ControlTemplate TargetType="{x:Type ItemsControl}">
+                                            <Border>
+                                                <ItemsPresenter />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </CustomControls:MultiSelectListBox.Template>
+                                    <CustomControls:MultiSelectListBox.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel />
+                                            <!--<VirtualizingStackPanel />-->
+                                        </ItemsPanelTemplate>
+                                    </CustomControls:MultiSelectListBox.ItemsPanel>
+                                </CustomControls:MultiSelectListBox>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </DockPanel>
+                </Grid>
+            </TabItem>
+            <!--
+            <TabItem Header="{x:Static localization:Strings.DatagridView}">
+                <Grid>
+                    <DataGrid Margin="5" ItemsSource="{Binding Materials}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="{x:Static localization:Strings.Name}" Binding="{Binding Name}"/>
+                            <DataGridTextColumn Header="{x:Static localization:Strings.SKU}" Binding="{Binding SKU}"/>
+                            <DataGridTextColumn Header="{x:Static localization:Strings.Kind}" Binding="{Binding TypeOfMaterial.Kind}"/>
+                            <DataGridTextColumn Header="{x:Static localization:Strings.Type}" Binding="{Binding TypeOfMaterial.Material}"/>
+                            <Controls:DataGridNumericUpDownColumn Header="{x:Static localization:Strings.Price}"
+                                                      Binding="{Binding UnitPrice}"
+                                                      StringFormat="C"
+                                                      Minimum="0" 
+                                                      IsReadOnly="True"/>
+                            <DataGridTextColumn Header="{x:Static localization:Strings.PackageSize}" Binding="{Binding PackageSize}"/>
+                            <DataGridTextColumn Header="{x:Static localization:Strings.Unit}" Binding="{Binding Unit}"/>
+                            <DataGridTextColumn Header="{x:Static localization:Strings.Manufacturer}" Binding="{Binding Manufacturer}"/>
+                            <DataGridTextColumn Header="{x:Static localization:Strings.Vendor}" Binding="{Binding Supplier}"/>
+
+                            <DataGridTemplateColumn Header="{x:Static localization:Strings.Reorder}">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Command="{Binding DataContext.ReorderMaterialCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}}" 
+                                    CommandParameter="{Binding LinkToReorder}" Margin="8" Style="{StaticResource ImageWithTextButton}">
+                                            <Button.Content>
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="Auto" />
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5">
+                                                        <Rectangle.OpacityMask>
+                                                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Shopping}" />
+                                                        </Rectangle.OpacityMask>
+                                                    </Rectangle>
+                                                    <TextBlock Grid.Column="1" Text="{x:Static localization:Strings.Reorder}" TextAlignment="Center" Margin="10,5" />
+                                                </Grid>
+                                            </Button.Content>
+                                        </Button>
+
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            -->
+        </TabControl>
+    </Grid>
+</UserControl>

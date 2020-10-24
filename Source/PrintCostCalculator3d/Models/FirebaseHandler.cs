@@ -25,8 +25,8 @@ namespace PrintCostCalculator3d.Models
         */
 
         #region Variablse
-        string authKey = "8R9Eac6MeET453bPR7UkPLxQbZNcIlaRDEGnYDFC";
-        string baseUri = "https://d-print-cost-calculator-app.firebaseio.com";
+        string authKey = "";
+        string baseUri = "";
         #endregion
 
         #region Constructor

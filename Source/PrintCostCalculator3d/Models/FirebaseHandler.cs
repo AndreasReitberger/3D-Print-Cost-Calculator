@@ -12,17 +12,6 @@ namespace PrintCostCalculator3d.Models
 {
     public class FirebaseHandler
     {
-        /*
-         * var firebaseConfig = {
-            apiKey: "AIzaSyClcBzbn7i4O4ki4AwQNL4XxOEgQJFtXD8",
-            authDomain: "d-print-cost-calculator-app.firebaseapp.com",
-            databaseURL: "https://d-print-cost-calculator-app.firebaseio.com",
-            projectId: "d-print-cost-calculator-app",
-            storageBucket: "d-print-cost-calculator-app.appspot.com",
-            messagingSenderId: "1054673104364",
-            appId: "1:1054673104364:web:90a88c873e37920561e4c9"
-          };
-        */
 
         #region Variablse
         string authKey = "";

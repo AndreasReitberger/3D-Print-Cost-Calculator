@@ -560,7 +560,6 @@
     <Compile Include="Models\Events\CalculationsChangedEventArgs.cs" />
     <Compile Include="Models\Exporter\CalculationFile.cs" />
     <Compile Include="Models\Exporter\ExporterTemplate.cs" />
-    <Compile Include="Models\FirebaseHandler.cs" />
     <Compile Include="Models\GcodeFile.cs" />
     <Compile Include="Models\GCode\GcodeChannelWorker.cs" />
     <Compile Include="Models\GCode\GcodeModelBuilder.cs" />
@@ -596,7 +595,6 @@
     <Compile Include="Models\SyntaxHighlighting\PaneViewModel.cs" />
     <Compile Include="Models\Update\UpdateAvailableArgs.cs" />
     <Compile Include="Models\Update\Updater.cs" />
-    <Compile Include="Models\WooCommerce\WooCommerceSoftwareLicenseAction.cs" />
     <Compile Include="Models\_File.cs" />
     <Compile Include="PrinterViewInfo.cs" />
     <Compile Include="PrinterViewManager.cs" />

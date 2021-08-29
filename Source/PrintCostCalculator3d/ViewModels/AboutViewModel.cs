@@ -1,27 +1,40 @@
-﻿using PrintCostCalculator3d.Models.Documentation;
+﻿using MahApps.Metro.Controls.Dialogs;
+using PrintCostCalculator3d.Models.Documentation;
 using PrintCostCalculator3d.Models.Settings;
 using PrintCostCalculator3d.Models.Update;
 using PrintCostCalculator3d.Resources.Localization;
 using PrintCostCalculator3d.Utilities;
-using MahApps.Metro.Controls.Dialogs;
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows.Input;
-using log4net;
 
 namespace PrintCostCalculator3d.ViewModels
 {
     public class AboutViewModel : ViewModelBase
     {
         #region Variables
-        private readonly IDialogCoordinator _dialogCoordinator;
-        private static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        readonly IDialogCoordinator _dialogCoordinator;
 
         public string Version => $"{Strings.Version} {AssemblyManager.Current.Version}";
 
-        private bool _isUpdateCheckRunning;
+        bool _useNewUpdateManager;
+        public bool UseNewUpdateManager
+        {
+            get => _useNewUpdateManager;
+            set
+            {
+                if (value == _useNewUpdateManager)
+                    return;
+
+                _useNewUpdateManager = value;
+                OnPropertyChanged();
+            }
+        }
+
+        bool _isUpdateCheckRunning;
         public bool IsUpdateCheckRunning
         {
             get => _isUpdateCheckRunning;
@@ -36,7 +49,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _updateAvailable;
+        bool _updateAvailable;
         public bool UpdateAvailable
         {
             get => _updateAvailable;
@@ -50,7 +63,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private string _updateText;
+        string _updateText;
         public string UpdateText
         {
             get => _updateText;
@@ -64,7 +77,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _showUpdaterMessage;
+        bool _showUpdaterMessage;
         public bool ShowUpdaterMessage
         {
             get => _showUpdaterMessage;
@@ -78,7 +91,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private string _updaterMessage;
+        string _updaterMessage;
         public string UpdaterMessage
         {
             get => _updaterMessage;
@@ -94,7 +107,7 @@ namespace PrintCostCalculator3d.ViewModels
 
         public ICollectionView LibrariesView { get; }
 
-        private LibraryInfo _selectedLibraryInfo;
+        LibraryInfo _selectedLibraryInfo;
         public LibraryInfo SelectedLibraryInfo
         {
             get => _selectedLibraryInfo;
@@ -110,8 +123,8 @@ namespace PrintCostCalculator3d.ViewModels
 
         public ICollectionView ResourcesView { get; }
 
-        private ResourceInfo _selectedResourceInfo;
-        //private object _dialogCoordinator;
+        ResourceInfo _selectedResourceInfo;
+        //object _dialogCoordinator;
 
         public ResourceInfo SelectedResourceInfo
         {
@@ -136,6 +149,12 @@ namespace PrintCostCalculator3d.ViewModels
             ResourcesView = CollectionViewSource.GetDefaultView(ResourceManager.List);
             ResourcesView.SortDescriptions.Add(new SortDescription(nameof(ResourceInfo.Resource), ListSortDirection.Ascending));
 
+            IsLicenseValid = false;
+
+            IsLoading = true;
+            LoadSettings();
+            IsLoading = false;
+
             logger.Info(string.Format(Strings.EventViewInitFormated, this.GetType().Name));
         }
         public AboutViewModel(IDialogCoordinator dialogCoordinator)
@@ -146,26 +165,37 @@ namespace PrintCostCalculator3d.ViewModels
             ResourcesView = CollectionViewSource.GetDefaultView(ResourceManager.List);
             ResourcesView.SortDescriptions.Add(new SortDescription(nameof(ResourceInfo.Resource), ListSortDirection.Ascending));
 
-            this._dialogCoordinator = dialogCoordinator;
+            _dialogCoordinator = dialogCoordinator;
+
+            IsLicenseValid = false;
+
+            IsLoading = true;
+            LoadSettings();
+            IsLoading = false;
 
             logger.Info(string.Format(Strings.EventViewInitFormated, this.GetType().Name));
+        }
+
+        void LoadSettings()
+        {
+            UseNewUpdateManager = SettingsManager.Current.Update_UseNewUpdater;
         }
         #endregion
 
         #region Commands & Actions
         public ICommand CheckForUpdatesCommand
         {
-            get { return new RelayCommand(p => CheckForUpdatesAction()); }
+            get { return new RelayCommand(async(p) => await CheckForUpdatesAction()); }
         }
 
-        private void CheckForUpdatesAction()
+        async Task CheckForUpdatesAction()
         {
-            CheckForUpdates();
+            await CheckForUpdates();
         }
 
         public ICommand OpenWebsiteCommand => new RelayCommand(OpenWebsiteAction);
 
-        private static void OpenWebsiteAction(object url)
+        static void OpenWebsiteAction(object url)
         {
             try
             {
@@ -183,44 +213,14 @@ namespace PrintCostCalculator3d.ViewModels
             get { return new RelayCommand(p => OpenLicenseFolderAction()); }
         }
 
-        private void OpenLicenseFolderAction()
+        void OpenLicenseFolderAction()
         {
             OpenLicenseFolder();
-        }
-        public ICommand DonateCommand
-        {
-            get { return new RelayCommand(p => DonateAction()); }
-        }
-        private async void DonateAction()
-        {
-            try
-            {
-                var _dialog = new CustomDialog() { Title = Strings.Donate };
-                var DonationDialogViewModel = new DonateDialogViewModel(async instance =>
-                {
-                    await _dialogCoordinator.HideMetroDialogAsync(this, _dialog);
-                //do something afterwards
-            }, instance =>
-            {
-                _dialogCoordinator.HideMetroDialogAsync(this, _dialog);
-            }
-                );
-
-                _dialog.Content = new Views.DonateDialogView()
-                {
-                    DataContext = DonationDialogViewModel
-                };
-                await _dialogCoordinator.ShowMetroDialogAsync(this, _dialog);
-            }
-            catch (Exception exc)
-            {
-                logger.Error(string.Format(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message));
-            }
         }
         #endregion
 
         #region Methods
-        private void CheckForUpdates()
+        async Task CheckForUpdates()
         {
             UpdateAvailable = false;
             ShowUpdaterMessage = false;
@@ -228,13 +228,12 @@ namespace PrintCostCalculator3d.ViewModels
             IsUpdateCheckRunning = true;
 
             var updater = new Updater();
-
             updater.UpdateAvailable += Updater_UpdateAvailable;
             updater.NoUpdateAvailable += Updater_NoUpdateAvailable;
             updater.ClientIncompatibleWithNewVersion += Updater_ClientIncompatibleWithNewVersion; ;
             updater.Error += Updater_Error;
-
             updater.Check();
+            
         }
 
         public void OpenLicenseFolder()
@@ -251,7 +250,7 @@ namespace PrintCostCalculator3d.ViewModels
         #endregion
 
         #region Events
-        private void Updater_UpdateAvailable(object sender, UpdateAvailableArgs e)
+        void Updater_UpdateAvailable(object sender, UpdateAvailableArgs e)
         {
             UpdateText = string.Format(Strings.VersionxxIsAvailable, e.Version);
 
@@ -259,7 +258,7 @@ namespace PrintCostCalculator3d.ViewModels
             UpdateAvailable = true;
         }
 
-        private void Updater_NoUpdateAvailable(object sender, EventArgs e)
+        void Updater_NoUpdateAvailable(object sender, EventArgs e)
         {
             UpdaterMessage = Strings.NoUpdateAvailable;
 
@@ -267,7 +266,7 @@ namespace PrintCostCalculator3d.ViewModels
             ShowUpdaterMessage = true;
         }
 
-        private void Updater_ClientIncompatibleWithNewVersion(object sender, EventArgs e)
+        void Updater_ClientIncompatibleWithNewVersion(object sender, EventArgs e)
         {
             UpdaterMessage = Strings.YourSystemOSIsIncompatibleWithTheLatestRelease;
 
@@ -275,7 +274,7 @@ namespace PrintCostCalculator3d.ViewModels
             ShowUpdaterMessage = true;
         }
 
-        private void Updater_Error(object sender, EventArgs e)
+        void Updater_Error(object sender, EventArgs e)
         {
             UpdaterMessage = Strings.ErrorCheckingApiGithubComVerifyYourNetworkConnection;
 

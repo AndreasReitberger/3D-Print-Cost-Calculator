@@ -15,7 +15,7 @@ namespace PrintCostCalculator3d
 
             foreach (ApplicationName name in Enum.GetValues(typeof(ApplicationName)))
             {
-                if (name != ApplicationName.None)
+                if (name != ApplicationName.None && name != ApplicationName._3dPrintingCalcualtion)
                     list.Add(new ApplicationViewInfo(name));
             }
 
@@ -26,13 +26,14 @@ namespace PrintCostCalculator3d
         {
             switch (name)
             {
+                case ApplicationName.Dashboard:
+                    return Resources.Localization.Strings.AppNameDashboard;
                 case ApplicationName._3dPrintingMaterial:
                     return Resources.Localization.Strings.AppName3dPrinterMaterialOverview;
                 case ApplicationName._3dPrintingPrinter:
                     return Resources.Localization.Strings.AppName3dPrinterOverview;
                 case ApplicationName._3dPrintingCalcualtion:
                     return Resources.Localization.Strings.AppName3dPrintCostCalculator;
-                
                 case ApplicationName.EventLog:
                     return Resources.Localization.Strings.AppNameEventLog;
                 default:
@@ -46,6 +47,9 @@ namespace PrintCostCalculator3d
 
             switch (name)
             {
+                case ApplicationName.Dashboard:
+                    canvas.Children.Add(new PackIconMaterial { Kind = PackIconMaterialKind.ViewDashboardOutline });
+                    break;
                 case ApplicationName._3dPrintingMaterial:
                     canvas.Children.Add(new PackIconModern { Kind = PackIconModernKind.Box });
                     break;

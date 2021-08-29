@@ -21,7 +21,7 @@ namespace PrintCostCalculator3d.Views
     /// </summary>
     public partial class SettingsCalculationView : UserControl
     {
-        private readonly SettingsCalculationsViewModel _viewModel = new SettingsCalculationsViewModel();
+        readonly SettingsCalculationsViewModel _viewModel = new SettingsCalculationsViewModel();
         public SettingsCalculationView()
         {
             InitializeComponent();

@@ -5,13 +5,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
-             xmlns:Models="clr-namespace:PrintCostCalculator3d.Models.GCode"
-             xmlns:converters="clr-namespace:PrintCostCalculator3d.Converters"
-             xmlns:localization="clr-namespace:PrintCostCalculator3d.Resources.Localization"
+             xmlns:GcodeParser="clr-namespace:AndreasReitberger.Models;assembly=GcodeParserSharp"
              xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
              
              mc:Ignorable="d" 
-             d:DataContext="{d:DesignInstance Models:GCode}"
+             d:DataContext="{d:DesignInstance GcodeParser:Gcode}"
              d:DesignHeight="120" d:DesignWidth="800">
     <!-- Container -->
     <Grid>

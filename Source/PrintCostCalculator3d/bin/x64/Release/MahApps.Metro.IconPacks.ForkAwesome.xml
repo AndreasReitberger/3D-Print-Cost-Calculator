@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MahApps.Metro.IconPacks.ForkAwesome</name>
+    </assembly>
+    <members>
+        <member name="T:MahApps.Metro.IconPacks.PackIconForkAwesome">
+            <summary>
+            The Fork Awesome font is licensed under the SIL OFL 1.1 (<see><cref>http://scripts.sil.org/OFL</cref></see>). Fork Awesome is a fork based of off Font Awesome 4.7.0 by Dave Gandy.
+            More info on licenses at <see><cref>https://forkawesome.github.io</cref></see>. Contributions, corrections and requests can be made on GitHub <see><cref>https://github.com/ForkAwesome/Fork-Awesome</cref></see>.
+            </summary>
+        </member>
+        <member name="P:MahApps.Metro.IconPacks.PackIconForkAwesome.Kind">
+            <summary>
+            Gets or sets the icon to display.
+            </summary>
+        </member>
+        <member name="T:MahApps.Metro.IconPacks.PackIconForkAwesomeDataFactory">
+            ******************************************
+            This code is auto generated. Do not amend.
+            ******************************************
+        </member>
+        <member name="M:MahApps.Metro.IconPacks.ForkAwesomeImageExtension.GetPathData(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:MahApps.Metro.IconPacks.ForkAwesomeImageExtension.GetScaleTransform(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="T:MahApps.Metro.IconPacks.PackIconForkAwesomeKind">
+            ******************************************
+            This code is auto generated. Do not amend.
+            ******************************************
+            <summary>
+            List of available icons for use with <see cref="T:MahApps.Metro.IconPacks.PackIconForkAwesome" />.
+            </summary>
+            <remarks>
+            The Fork Awesome font is licensed under the SIL OFL 1.1 (<see><cref>http://scripts.sil.org/OFL</cref></see>). Fork Awesome is a fork based of off Font Awesome 4.7.0 by Dave Gandy.
+            More info on licenses at <see><cref>https://forkawesome.github.io</cref></see>. Contributions, corrections and requests can be made on GitHub <see><cref>https://github.com/ForkAwesome/Fork-Awesome</cref></see>.
+            </remarks>
+        </member>
+        <member name="M:MahApps.Metro.IconPacks.Converter.PackIconForkAwesomeKindToImageConverter.GetPathData(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:MahApps.Metro.IconPacks.Converter.PackIconForkAwesomeKindToImageConverter.GetScaleTransform(System.Object)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

@@ -1,23 +1,20 @@
 ﻿using MahApps.Metro.Controls.Dialogs;
+using PrintCostCalculator3d.Models;
+using PrintCostCalculator3d.Resources.Localization;
+using PrintCostCalculator3d.Utilities;
 using System;
 using System.Collections.ObjectModel;
-using PrintCostCalculator3d.Models;
-using PrintCostCalculator3d.Utilities;
-using log4net;
-using System.Windows.Input;
-using PrintCostCalculator3d.Resources.Localization;
-using System.Windows.Threading;
 using System.Windows;
+using System.Windows.Input;
+using System.Windows.Threading;
 
 namespace PrintCostCalculator3d.ViewModels
 {
     public class LogWatcherViewModel : ViewModelBase
     {
         #region Variables
-        private readonly IDialogCoordinator _dialogCoordinator;
-        private Logger Logger = Logger.Instance;
-
-        ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        readonly IDialogCoordinator _dialogCoordinator;
+        Logger Logger = Logger.Instance;
         public virtual Dispatcher DispatcherObject { get; protected set; }
 
         #endregion
@@ -25,7 +22,7 @@ namespace PrintCostCalculator3d.ViewModels
         #region Properties
 
         #region Events
-        private Event _selectedEvent;
+        Event _selectedEvent;
         public Event SelectedEvent
         {
             get => _selectedEvent;
@@ -52,6 +49,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
         #endregion
+        
         #endregion
 
         #region Constructor
@@ -62,7 +60,7 @@ namespace PrintCostCalculator3d.ViewModels
 
         }
 
-        private void Events_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        void Events_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
 
         }
@@ -76,7 +74,7 @@ namespace PrintCostCalculator3d.ViewModels
             get => new RelayCommand(p => ClearFormAction());
 
         }
-        private void ClearFormAction()
+        void ClearFormAction()
         {
             try
             {
@@ -95,7 +93,7 @@ namespace PrintCostCalculator3d.ViewModels
             get => new RelayCommand(p => CopyToClipboardAction());
 
         }
-        private void CopyToClipboardAction()
+        void CopyToClipboardAction()
         {
             try
             {
@@ -116,7 +114,7 @@ namespace PrintCostCalculator3d.ViewModels
 
         #region Methods
 
-        public async void OnViewVisible()
+        public void OnViewVisible()
         {
 
         }

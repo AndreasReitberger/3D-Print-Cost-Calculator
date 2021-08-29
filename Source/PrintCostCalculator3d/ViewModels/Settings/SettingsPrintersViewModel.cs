@@ -1,48 +1,44 @@
-﻿using log4net;
+﻿using AndreasReitberger.Models;
 using MahApps.Metro.Controls.Dialogs;
 using MahApps.Metro.IconPacks;
 using MahApps.Metro.SimpleChildWindow;
+using PrintCostCalculator3d.Models.Settings;
+using PrintCostCalculator3d.Resources.Localization;
+using PrintCostCalculator3d.Utilities;
+using PrintCostCalculator3d.ViewModels._3dPrinting;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Media;
-using PrintCostCalculator3d.Models.Settings;
-using PrintCostCalculator3d.Resources.Localization;
-using PrintCostCalculator3d.Utilities;
-using PrintCostCalculator3d.ViewModels._3dPrinting;
-using AndreasReitberger.Models;
 
 namespace PrintCostCalculator3d.ViewModels
 {
     class SettingsPrintersViewModel : ViewModelBase
     {
         #region Variables
-        private readonly IDialogCoordinator _dialogCoordinator;
-        private static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        private readonly bool _isLoading;
+        readonly IDialogCoordinator _dialogCoordinator;
         #endregion
 
         #region Properties
 
         #region Manufacturer
-        private ObservableCollection<Manufacturer> _manufacturers = new ObservableCollection<Manufacturer>();
+        ObservableCollection<Manufacturer> _manufacturers = new ObservableCollection<Manufacturer>();
         public ObservableCollection<Manufacturer> Manufacturers
         {
             get => _manufacturers;
-            private set
+            set
             {
                 if (value == _manufacturers)
                     return;
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.Manufacturers = value;
 
                 _manufacturers = value;
@@ -50,7 +46,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private Manufacturer _SelectedManufacturer;
+        Manufacturer _SelectedManufacturer;
         public Manufacturer SelectedManufacturer
         {
             get => _SelectedManufacturer;
@@ -64,7 +60,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private IList _SelectedManufacturers = new ArrayList();
+        IList _SelectedManufacturers = new ArrayList();
         public IList SelectedManufacturers
         {
             get => _SelectedManufacturers;
@@ -73,7 +69,7 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _SelectedManufacturers)
                     return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                 {
 
                 }
@@ -86,7 +82,7 @@ namespace PrintCostCalculator3d.ViewModels
         public ICollectionView ManufacturerViews
         {
             get => _ManufacturerViews;
-            private set
+            set
             {
                 if (_ManufacturerViews != value)
                 {
@@ -95,20 +91,20 @@ namespace PrintCostCalculator3d.ViewModels
                 }
             }
         }
-        private ICollectionView _ManufacturerViews;
+        ICollectionView _ManufacturerViews;
 
         #endregion
 
         #region Suppliers
-        private ObservableCollection<Supplier> _suppliers = new ObservableCollection<Supplier>();
+        ObservableCollection<Supplier> _suppliers = new ObservableCollection<Supplier>();
         public ObservableCollection<Supplier> Suppliers
         {
             get => _suppliers;
-            private set
+            set
             {
                 if (value == _suppliers)
                     return;
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.Suppliers = value;
 
                 _suppliers = value;
@@ -116,7 +112,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private Supplier _SelectedSupplier;
+        Supplier _SelectedSupplier;
         public Supplier SelectedSupplier
         {
             get => _SelectedSupplier;
@@ -130,7 +126,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private IList _SelectedSuppliers = new ArrayList();
+        IList _SelectedSuppliers = new ArrayList();
         public IList SelectedSuppliers
         {
             get => _SelectedSuppliers;
@@ -139,7 +135,7 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _SelectedSuppliers)
                     return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                 {
 
                 }
@@ -152,7 +148,7 @@ namespace PrintCostCalculator3d.ViewModels
         public ICollectionView SupplierViews
         {
             get => _SupplierViews;
-            private set
+            set
             {
                 if (_SupplierViews != value)
                 {
@@ -161,10 +157,10 @@ namespace PrintCostCalculator3d.ViewModels
                 }
             }
         }
-        private ICollectionView _SupplierViews;
+        ICollectionView _SupplierViews;
         #endregion
 
-        private bool _restartRequired;
+        bool _restartRequired;
         public bool RestartRequired
         {
             get => _restartRequired;
@@ -180,7 +176,7 @@ namespace PrintCostCalculator3d.ViewModels
         #endregion   
 
         #region Search
-        private string _searchManufacturer = string.Empty;
+        string _searchManufacturer = string.Empty;
         public string SearchManufacturer
         {
             get => _searchManufacturer;
@@ -190,6 +186,7 @@ namespace PrintCostCalculator3d.ViewModels
                 {
                     _searchManufacturer = value;
 
+                    if (ManufacturerViews == null) return;
                     ManufacturerViews.Refresh();
 
                     ICollectionView view = CollectionViewSource.GetDefaultView(ManufacturerViews);
@@ -210,7 +207,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private string _searchSupplier = string.Empty;
+        string _searchSupplier = string.Empty;
         public string SearchSupplier
         {
             get => _searchSupplier;
@@ -219,6 +216,8 @@ namespace PrintCostCalculator3d.ViewModels
                 if (_searchSupplier != value)
                 {
                     _searchSupplier = value;
+
+                    if (SupplierViews == null) return;
 
                     SupplierViews.Refresh();
 
@@ -244,74 +243,76 @@ namespace PrintCostCalculator3d.ViewModels
         #region Constructor, LoadSettings
         public SettingsPrintersViewModel()
         {
-            _isLoading = true;
-
+            IsLoading = true;
             LoadSettings();
-
-            _isLoading = false;
+            IsLoading = false;
         }
         public SettingsPrintersViewModel(IDialogCoordinator instance)
         {
             _dialogCoordinator = instance;
-            _isLoading = true;
-
+            IsLoading = true;
             LoadSettings();
-
-            _isLoading = false;
+            IsLoading = false;
         }
 
-        private void LoadSettings()
+        void LoadSettings()
         {
             Manufacturers = SettingsManager.Current.Manufacturers;
-            createManufacturerViewInfos();
+            CreateManufacturerViewInfos();
 
             Suppliers = SettingsManager.Current.Suppliers;
-            createSupplierViewInfos();
+            CreateSupplierViewInfos();
 
             Manufacturers.CollectionChanged += Manufacturers_CollectionChanged;
             Suppliers.CollectionChanged += Suppliers_CollectionChanged;
         }
 
-        private void Suppliers_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        void Suppliers_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
             OnPropertyChanged(nameof(Suppliers));
-            createSupplierViewInfos();
+            CreateSupplierViewInfos();
             SettingsManager.Save();
         }
 
-        private void Manufacturers_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        void Manufacturers_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
             OnPropertyChanged(nameof(Manufacturers));
-            createManufacturerViewInfos();
+            CreateManufacturerViewInfos();
             SettingsManager.Save();
         }
         #endregion
 
         #region Methods
-        private void createManufacturerViewInfos()
+        void CreateManufacturerViewInfos()
         {
-            Canvas c = new Canvas();
-            c.Children.Add(new PackIconMaterial { Kind = PackIconMaterialKind.Factory });
-            ManufacturerViews = new CollectionViewSource
+            Application.Current.Dispatcher.Invoke(() =>
             {
-                Source = Manufacturers.ToList()
-            }.View;
-            ManufacturerViews.SortDescriptions.Add(new SortDescription(nameof(Manufacturer.Name), ListSortDirection.Ascending));
-            ManufacturerViews.GroupDescriptions.Add(new PropertyGroupDescription(nameof(Manufacturer.isActive)));
+                Canvas c = new Canvas();
+                c.Children.Add(new PackIconMaterial { Kind = PackIconMaterialKind.Factory });
+                ManufacturerViews = new CollectionViewSource
+                {
+                    Source = Manufacturers.ToList()
+                }.View;
+                ManufacturerViews.SortDescriptions.Add(new SortDescription(nameof(Manufacturer.Name), ListSortDirection.Ascending));
+                ManufacturerViews.GroupDescriptions.Add(new PropertyGroupDescription(nameof(Manufacturer.isActive)));
+            });
         }
-        private void createSupplierViewInfos()
+        void CreateSupplierViewInfos()
         {
-            Canvas c = new Canvas();
-            c.Children.Add(new PackIconMaterial { Kind = PackIconMaterialKind.Store });
-            SupplierViews = new CollectionViewSource
+            Application.Current.Dispatcher.Invoke(() =>
             {
-                Source = Suppliers.ToList()
-            }.View;
-            SupplierViews.SortDescriptions.Add(new SortDescription(nameof(Supplier.Name), ListSortDirection.Ascending));
-            SupplierViews.GroupDescriptions.Add(new PropertyGroupDescription(nameof(Supplier.isActive)));
+                Canvas c = new Canvas();
+                c.Children.Add(new PackIconMaterial { Kind = PackIconMaterialKind.Store });
+                SupplierViews = new CollectionViewSource
+                {
+                    Source = Suppliers.ToList()
+                }.View;
+                SupplierViews.SortDescriptions.Add(new SortDescription(nameof(Supplier.Name), ListSortDirection.Ascending));
+                SupplierViews.GroupDescriptions.Add(new PropertyGroupDescription(nameof(Supplier.isActive)));
+            });
         }
 
-        private Manufacturer getManufacturerFromInstance(NewManufacturerViewModel instance)
+        Manufacturer GetManufacturerFromInstance(NewManufacturerViewModel instance)
         {
             Manufacturer temp = new Manufacturer();
             try
@@ -332,7 +333,7 @@ namespace PrintCostCalculator3d.ViewModels
             return temp;
         }
         
-        private Supplier getSupplierFromInstance(NewSupplierViewModel instance)
+        Supplier GetSupplierFromInstance(NewSupplierViewModel instance)
         {
             Supplier temp = new Supplier();
             try
@@ -361,7 +362,7 @@ namespace PrintCostCalculator3d.ViewModels
         {
             get { return new RelayCommand(p => AddNewManufacturerAction()); }
         }
-        private async void AddNewManufacturerAction()
+        async void AddNewManufacturerAction()
         {
             try
             {
@@ -369,7 +370,7 @@ namespace PrintCostCalculator3d.ViewModels
                 var newViewModel = new NewManufacturerViewModel(async instance =>
                 {
                     await _dialogCoordinator.HideMetroDialogAsync(this, _dialog);
-                    Manufacturers.Add(getManufacturerFromInstance(instance));
+                    Manufacturers.Add(GetManufacturerFromInstance(instance));
                     
                     logger.Info(string.Format(Strings.EventAddedItemFormated, Manufacturers[Manufacturers.Count - 1].Name));
                 }, instance =>
@@ -397,14 +398,13 @@ namespace PrintCostCalculator3d.ViewModels
 
         public ICommand AddNewManufacturerChildWindowCommand
         {
-            get { return new RelayCommand(p => AddNewManufacturerChildWindowAction()); }
+            get { return new RelayCommand(async(p) => await AddNewManufacturerChildWindowAction()); }
         }
-        private async void AddNewManufacturerChildWindowAction()
+        async Task AddNewManufacturerChildWindowAction()
         {
             try
             {
-
-                var _childWindow = new ChildWindow()
+                ChildWindow _childWindow = new()
                 {
                     Title = Strings.NewManufacturer,
                     AllowMove = true,
@@ -414,17 +414,17 @@ namespace PrintCostCalculator3d.ViewModels
                     OverlayBrush = new SolidColorBrush() { Opacity = 0.7, Color = (Color)Application.Current.Resources["Gray2"] },
                     Padding = new Thickness(50),
                 };
-                var newViewModel = new NewManufacturerViewModel(async instance =>
+                NewManufacturerViewModel newViewModel = new(instance =>
                 {
-                    _childWindow.Close();
-                    Manufacturers.Add(getManufacturerFromInstance(instance));
+                    _ = _childWindow.Close();
+                    Manufacturers.Add(GetManufacturerFromInstance(instance));
                    
                     logger.Info(string.Format(Strings.EventAddedItemFormated, Manufacturers[Manufacturers.Count - 1].Name));
                 }, instance =>
                 {
                     _childWindow.Close();
                 },
-                    this._dialogCoordinator
+                    _dialogCoordinator
                 );
 
                 _childWindow.Content = new Views._3dPrinting.NewManufacturerDialog()
@@ -436,7 +436,7 @@ namespace PrintCostCalculator3d.ViewModels
             catch (Exception exc)
             {
                 logger.Error(string.Format(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message));
-                await _dialogCoordinator.ShowMessageAsync(this,
+                _ = await _dialogCoordinator.ShowMessageAsync(this,
                         Strings.DialogExceptionHeadline,
                         string.Format(Strings.DialogExceptionFormatedContent, exc.Message)
                         );
@@ -445,13 +445,13 @@ namespace PrintCostCalculator3d.ViewModels
 
         public ICommand DeleteSelectedManufacturersCommand
         {
-            get => new RelayCommand(p => DeleteSelectedManufacturersAction());
+            get => new RelayCommand(async(p) => await DeleteSelectedManufacturersAction());
         }
-        private async void DeleteSelectedManufacturersAction()
+        async Task DeleteSelectedManufacturersAction()
         {
             try
             {
-                var res = await _dialogCoordinator.ShowMessageAsync(this,
+                MessageDialogResult res = await _dialogCoordinator.ShowMessageAsync(this,
                        string.Format(Strings.DialogDeleteSelectionFormatedHeadline, Strings.Manufacturers),
                        string.Format(Strings.DialogDeleteSelectionFormatedContent, Strings.Manufacturers),
                        MessageDialogStyle.AffirmativeAndNegative
@@ -463,7 +463,7 @@ namespace PrintCostCalculator3d.ViewModels
                     IList collection = new ArrayList(SelectedManufacturers);
                     for (int i = 0; i < collection.Count; i++)
                     {
-                        var obj = collection[i] as Manufacturer;
+                        Manufacturer obj = collection[i] as Manufacturer;
                         if (obj == null)
                             continue;
                         logger.Info(string.Format(Strings.EventDeletedItemFormated, obj.Name));
@@ -481,19 +481,19 @@ namespace PrintCostCalculator3d.ViewModels
 
         public ICommand EditSelectedManufacturerCommand
         {
-            get => new RelayCommand(p => EditSelectedManufacturerAction());
+            get => new RelayCommand(async(p) => await EditSelectedManufacturerAction());
         }
-        private async void EditSelectedManufacturerAction()
+        async Task EditSelectedManufacturerAction()
         {
             try
             {
-                var selection = SelectedManufacturer;
-                var _dialog = new CustomDialog() { Title = Strings.EditManufacturer };
-                var newViewModel = new NewManufacturerViewModel(async instance =>
+                Manufacturer selection = SelectedManufacturer;
+                CustomDialog _dialog = new() { Title = Strings.EditManufacturer };
+                NewManufacturerViewModel newViewModel = new (async instance =>
                 {
                     await _dialogCoordinator.HideMetroDialogAsync(this, _dialog);
                     Manufacturers.Remove(selection);
-                    Manufacturers.Add(getManufacturerFromInstance(instance));
+                    Manufacturers.Add(GetManufacturerFromInstance(instance));
 
                     logger.Info(string.Format(Strings.EventAddedItemFormated, selection, Manufacturers[Manufacturers.Count - 1].Name));
                 }, instance =>
@@ -525,7 +525,7 @@ namespace PrintCostCalculator3d.ViewModels
         {
             get => new RelayCommand(p => DeleteManufacturerAction(p));
         }
-        private async void DeleteManufacturerAction(object p)
+        async void DeleteManufacturerAction(object p)
         {
             try
             {
@@ -554,14 +554,13 @@ namespace PrintCostCalculator3d.ViewModels
         {
             get => new RelayCommand(p => DuplicateManufacturerAction(p));
         }
-        private async void DuplicateManufacturerAction(object p)
+        void DuplicateManufacturerAction(object p)
         {
             try
             {
-                Manufacturer manufacturer = p as Manufacturer;
-                if (manufacturer != null)
+                if (p is Manufacturer manufacturer)
                 {
-                    var duplicates = Manufacturers.Where(mat => mat.Name.StartsWith(manufacturer.Name.Split('_')[0]));
+                    IEnumerable<Manufacturer> duplicates = Manufacturers.Where(mat => mat.Name.StartsWith(manufacturer.Name.Split('_')[0]));
 
                     Manufacturer newManufacturer = (Manufacturer)manufacturer.Clone();
                     newManufacturer.Id = Guid.NewGuid();
@@ -580,30 +579,29 @@ namespace PrintCostCalculator3d.ViewModels
 
         public ICommand EditManufacturerCommand
         {
-            get => new RelayCommand(p => EditManufacturerAction(p));
+            get => new RelayCommand(async(p) => await EditManufacturerAction(p));
         }
-        private async void EditManufacturerAction(object material)
+        async Task EditManufacturerAction(object material)
         {
             try
             {
-                var selectedManufacturer = material as Manufacturer;
-                if (selectedManufacturer == null)
+                if (material is not Manufacturer selectedManufacturer)
                 {
                     return;
                 }
-                var _dialog = new CustomDialog() { Title = Strings.EditManufacturer };
-                var newViewModel = new NewManufacturerViewModel(async instance =>
+                CustomDialog _dialog = new() { Title = Strings.EditManufacturer };
+                NewManufacturerViewModel newViewModel = new(async instance =>
                 {
                     await _dialogCoordinator.HideMetroDialogAsync(this, _dialog);
                     Manufacturers.Remove(selectedManufacturer);
-                    Manufacturers.Add(getManufacturerFromInstance(instance));
+                    Manufacturers.Add(GetManufacturerFromInstance(instance));
 
                     logger.Info(string.Format(Strings.EventEditedItemFormated, selectedManufacturer, Manufacturers[Manufacturers.Count - 1]));
                 }, instance =>
                 {
                     _dialogCoordinator.HideMetroDialogAsync(this, _dialog);
                 },
-                    this._dialogCoordinator,
+                    _dialogCoordinator,
                     selectedManufacturer
                 );
 
@@ -630,7 +628,7 @@ namespace PrintCostCalculator3d.ViewModels
         {
             get { return new RelayCommand(p => AddNewSupplierAction()); }
         }
-        private async void AddNewSupplierAction()
+        async void AddNewSupplierAction()
         {
             try
             {
@@ -638,7 +636,7 @@ namespace PrintCostCalculator3d.ViewModels
                 var newViewModel = new NewSupplierViewModel(async instance =>
                 {
                     await _dialogCoordinator.HideMetroDialogAsync(this, _dialog);
-                    Suppliers.Add(getSupplierFromInstance(instance));
+                    Suppliers.Add(GetSupplierFromInstance(instance));
 
                     logger.Info(string.Format(Strings.EventAddedItemFormated, Suppliers[Suppliers.Count - 1].Name));
                 }, instance =>
@@ -668,12 +666,11 @@ namespace PrintCostCalculator3d.ViewModels
         {
             get { return new RelayCommand(p => AddNewSupplierChildWindowAction()); }
         }
-        private async void AddNewSupplierChildWindowAction()
+        async void AddNewSupplierChildWindowAction()
         {
             try
             {
-
-                var _childWindow = new ChildWindow()
+                ChildWindow _childWindow = new()
                 {
                     Title = Strings.NewSupplier,
                     AllowMove = true,
@@ -683,17 +680,17 @@ namespace PrintCostCalculator3d.ViewModels
                     OverlayBrush = new SolidColorBrush() { Opacity = 0.7, Color = (Color)Application.Current.Resources["Gray2"] },
                     Padding = new Thickness(50),
                 };
-                var newViewModel = new NewSupplierViewModel(async instance =>
+                NewSupplierViewModel newViewModel = new(instance =>
                 {
-                    _childWindow.Close();
-                    Suppliers.Add(getSupplierFromInstance(instance));
+                    _ = _childWindow.Close();
+                    Suppliers.Add(GetSupplierFromInstance(instance));
 
                     logger.Info(string.Format(Strings.EventAddedItemFormated, Suppliers[Suppliers.Count - 1].Name));
                 }, instance =>
                 {
                     _childWindow.Close();
                 },
-                    this._dialogCoordinator
+                    _dialogCoordinator
                 );
 
                 _childWindow.Content = new Views._3dPrinting.NewSupplierDialog()
@@ -705,7 +702,7 @@ namespace PrintCostCalculator3d.ViewModels
             catch (Exception exc)
             {
                 logger.Error(string.Format(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message));
-                await _dialogCoordinator.ShowMessageAsync(this,
+                _ = await _dialogCoordinator.ShowMessageAsync(this,
                         Strings.DialogExceptionHeadline,
                         string.Format(Strings.DialogExceptionFormatedContent, exc.Message)
                         );
@@ -716,11 +713,11 @@ namespace PrintCostCalculator3d.ViewModels
         {
             get => new RelayCommand(p => DeleteSelectedSuppliersAction());
         }
-        private async void DeleteSelectedSuppliersAction()
+        async void DeleteSelectedSuppliersAction()
         {
             try
             {
-                var res = await _dialogCoordinator.ShowMessageAsync(this,
+                MessageDialogResult res = await _dialogCoordinator.ShowMessageAsync(this,
                        string.Format(Strings.DialogDeleteSelectionFormatedHeadline, Strings.Suppliers),
                        string.Format(Strings.DialogDeleteSelectionFormatedContent, Strings.Suppliers),
                        MessageDialogStyle.AffirmativeAndNegative
@@ -732,7 +729,7 @@ namespace PrintCostCalculator3d.ViewModels
                     IList collection = new ArrayList(SelectedSuppliers);
                     for (int i = 0; i < collection.Count; i++)
                     {
-                        var obj = collection[i] as Supplier;
+                        Supplier obj = collection[i] as Supplier;
                         if (obj == null)
                             continue;
                         logger.Info(string.Format(Strings.EventDeletedItemFormated, obj.Name));
@@ -750,19 +747,19 @@ namespace PrintCostCalculator3d.ViewModels
 
         public ICommand EditSelectedSupplierCommand
         {
-            get => new RelayCommand(p => EditSelectedSupplierAction());
+            get => new RelayCommand(async(p) => await EditSelectedSupplierAction());
         }
-        private async void EditSelectedSupplierAction()
+        async Task EditSelectedSupplierAction()
         {
             try
             {
-                var selection = SelectedSupplier;
-                var _dialog = new CustomDialog() { Title = Strings.EditSupplier };
-                var newViewModel = new NewSupplierViewModel(async instance =>
+                Supplier selection = SelectedSupplier;
+                CustomDialog _dialog = new() { Title = Strings.EditSupplier };
+                NewSupplierViewModel newViewModel = new(async instance =>
                 {
                     await _dialogCoordinator.HideMetroDialogAsync(this, _dialog);
                     Suppliers.Remove(selection);
-                    Suppliers.Add(getSupplierFromInstance(instance));
+                    Suppliers.Add(GetSupplierFromInstance(instance));
 
                     logger.Info(string.Format(Strings.EventAddedItemFormated, selection, Suppliers[Suppliers.Count - 1].Name));
                 }, instance =>
@@ -782,7 +779,7 @@ namespace PrintCostCalculator3d.ViewModels
             catch (Exception exc)
             {
                 logger.Error(string.Format(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message));
-                await _dialogCoordinator.ShowMessageAsync(this,
+                _ = await _dialogCoordinator.ShowMessageAsync(this,
                     Strings.DialogExceptionHeadline,
                     string.Format(Strings.DialogExceptionFormatedContent, exc.Message)
                     );
@@ -792,17 +789,16 @@ namespace PrintCostCalculator3d.ViewModels
         // Template commands
         public ICommand DeleteSupplierCommand
         {
-            get => new RelayCommand(p => DeleteSupplierAction(p));
+            get => new RelayCommand(async(p) => await DeleteSupplierAction(p));
         }
-        private async void DeleteSupplierAction(object p)
+        async Task DeleteSupplierAction(object p)
         {
             try
             {
-                Supplier supplier = p as Supplier;
-                if (supplier != null)
+                if (p is Supplier supplier)
                 {
-                    var res = await _dialogCoordinator.ShowMessageAsync(this,
-                        Strings.DialogDeleteSupplierHeadline, 
+                    MessageDialogResult res = await _dialogCoordinator.ShowMessageAsync(this,
+                        Strings.DialogDeleteSupplierHeadline,
                         string.Format(Strings.DialogDeleteSupplierFormatedContent, supplier.Name),
                         MessageDialogStyle.AffirmativeAndNegative
                         );
@@ -823,14 +819,13 @@ namespace PrintCostCalculator3d.ViewModels
         {
             get => new RelayCommand(p => DuplicateSupplierAction(p));
         }
-        private async void DuplicateSupplierAction(object p)
+        void DuplicateSupplierAction(object p)
         {
             try
             {
-                Supplier supplier = p as Supplier;
-                if (supplier != null)
+                if (p is Supplier supplier)
                 {
-                    var duplicates = Suppliers.Where(mat => mat.Name.StartsWith(supplier.Name.Split('_')[0]));
+                    IEnumerable<Supplier> duplicates = Suppliers.Where(mat => mat.Name.StartsWith(supplier.Name.Split('_')[0]));
 
                     Supplier newSupplier = (Supplier)supplier.Clone();
                     newSupplier.Id = Guid.NewGuid();
@@ -851,7 +846,7 @@ namespace PrintCostCalculator3d.ViewModels
         {
             get => new RelayCommand(p => EditSupplierAction(p));
         }
-        private async void EditSupplierAction(object supplier)
+        async void EditSupplierAction(object supplier)
         {
             try
             {
@@ -865,7 +860,7 @@ namespace PrintCostCalculator3d.ViewModels
                 {
                     await _dialogCoordinator.HideMetroDialogAsync(this, _dialog);
                     Suppliers.Remove(selectedSupplier);
-                    Suppliers.Add(getSupplierFromInstance(instance));
+                    Suppliers.Add(GetSupplierFromInstance(instance));
 
                     logger.Info(string.Format(Strings.EventEditedItemFormated, selectedSupplier, Manufacturers[Manufacturers.Count - 1]));
                 }, instance =>
@@ -899,7 +894,7 @@ namespace PrintCostCalculator3d.ViewModels
             get { return new RelayCommand(p => VisibleToHideApplicationAction()); }
         }
 
-        private void VisibleToHideApplicationAction()
+        void VisibleToHideApplicationAction()
         {
 
         }

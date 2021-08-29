@@ -49,7 +49,7 @@ namespace PrintCostCalculator3d.Models.Documentation
         #region ICommands & Actions
         public static ICommand OpenDocumentationCommand => new RelayCommand(OpenDocumentationAction);
 
-        private static void OpenDocumentationAction(object documentationIdentifier)
+        static void OpenDocumentationAction(object documentationIdentifier)
         {
             if (documentationIdentifier != null)
                 OpenDocumentation((DocumentationIdentifier)documentationIdentifier);
@@ -62,8 +62,6 @@ namespace PrintCostCalculator3d.Models.Documentation
 
                 case ApplicationName.None:
                     return DocumentationIdentifier.Default;
-                case ApplicationName._3dPrintingCalcualtion:
-                    return DocumentationIdentifier._3dPrintCostCalculation;
                 case ApplicationName._3dPrintingPrinter:
                     return DocumentationIdentifier._3dPrinters;
                 case ApplicationName._3dPrintingMaterial:

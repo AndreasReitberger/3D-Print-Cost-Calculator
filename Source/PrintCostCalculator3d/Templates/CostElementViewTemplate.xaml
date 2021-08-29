@@ -6,10 +6,15 @@
              
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
              xmlns:Models="clr-namespace:PrintCostCalculator3d.Models"
-
+             xmlns:converters="clr-namespace:PrintCostCalculator3d.Converters"
+             
              mc:Ignorable="d" 
              d:DataContext="{d:DesignInstance Models:Stl}"
              d:DesignHeight="100" d:DesignWidth="800">
+    <UserControl.Resources>
+        <converters:CostElementLocalizedNameConverter x:Key="CostElementLocalizedNameConverter"/>
+    </UserControl.Resources>
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50" />
@@ -29,7 +34,7 @@
             </Rectangle.OpacityMask>
         </Rectangle>
         <!-- Name -->
-        <TextBlock Grid.Column="1" Text="{Binding Name}" Margin="5,16,0,15" VerticalAlignment="Center" HorizontalAlignment="Left">
+        <TextBlock Grid.Column="1" Text="{Binding Name, Converter={StaticResource CostElementLocalizedNameConverter}}" Margin="5,16,0,15" VerticalAlignment="Center" HorizontalAlignment="Left">
             <TextBlock.Style>
                 <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockItemTemplate}">
                     <Setter Property="Margin" Value="0,0,10,0" />

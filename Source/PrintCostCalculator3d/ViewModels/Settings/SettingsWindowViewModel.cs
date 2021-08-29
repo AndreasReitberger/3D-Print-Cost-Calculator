@@ -10,10 +10,10 @@ namespace PrintCostCalculator3d.ViewModels
 {
     class SettingsWindowViewModel : ViewModelBase
     {
-        #region Variables
-        private readonly bool _isLoading;
+        #region Properties
+        //readonly bool _isLoading;
 
-        private bool _minimizeInsteadOfTerminating;
+        bool _minimizeInsteadOfTerminating;
         public bool MinimizeInsteadOfTerminating
         {
             get => _minimizeInsteadOfTerminating;
@@ -22,7 +22,7 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _minimizeInsteadOfTerminating)
                     return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.Window_MinimizeInsteadOfTerminating = value;
 
                 _minimizeInsteadOfTerminating = value;
@@ -30,7 +30,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _minimizeToTrayInsteadOfTaskbar;
+        bool _minimizeToTrayInsteadOfTaskbar;
         public bool MinimizeToTrayInsteadOfTaskbar
         {
             get => _minimizeToTrayInsteadOfTaskbar;
@@ -39,7 +39,7 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _minimizeToTrayInsteadOfTaskbar)
                     return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.Window_MinimizeToTrayInsteadOfTaskbar = value;
 
                 _minimizeToTrayInsteadOfTaskbar = value;
@@ -47,7 +47,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _confirmClose;
+        bool _confirmClose;
         public bool ConfirmClose
         {
             get => _confirmClose;
@@ -56,7 +56,7 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _confirmClose)
                     return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.Window_ConfirmClose = value;
 
                 OnPropertyChanged();
@@ -64,7 +64,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _multipleInstances = GlobalStaticConfiguration.Window_AllowMultipleInstances;
+        bool _multipleInstances = GlobalStaticConfiguration.Window_AllowMultipleInstances;
         public bool MultipleInstances
         {
             get => _multipleInstances;
@@ -73,7 +73,7 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _multipleInstances)
                     return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.Window_MultipleInstances = value;
                 
                 OnPropertyChanged();
@@ -81,7 +81,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _alwaysShowIconInTray;
+        bool _alwaysShowIconInTray;
         public bool AlwaysShowIconInTray
         {
             get => _alwaysShowIconInTray;
@@ -90,7 +90,7 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _alwaysShowIconInTray)
                     return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.TrayIcon_AlwaysShowIcon = value;
 
                 _alwaysShowIconInTray = value;
@@ -102,14 +102,12 @@ namespace PrintCostCalculator3d.ViewModels
         #region Constructor, LoadSettings
         public SettingsWindowViewModel()
         {
-            _isLoading = true;
-
+            IsLoading = true;
             LoadSettings();
-
-            _isLoading = false;
+            IsLoading = false;
         }
 
-        private void LoadSettings()
+        void LoadSettings()
         {
             AlwaysShowIconInTray = SettingsManager.Current.TrayIcon_AlwaysShowIcon;
             MinimizeInsteadOfTerminating = SettingsManager.Current.Window_MinimizeInsteadOfTerminating;

@@ -16,9 +16,9 @@ namespace PrintCostCalculator3d.ViewModels
     public class SettingsAppearanceViewModel : ViewModelBase
     {
         #region Variables
-        private readonly bool _isLoading;
+        //readonly bool _isLoading;
 
-        private bool _darkThemes = false;
+        bool _darkThemes = false;
         public bool DarkThemes
         {
             get => _darkThemes;
@@ -31,11 +31,11 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private ObservableCollection<Theme> _themes = new ObservableCollection<Theme>();
+        ObservableCollection<Theme> _themes = new ObservableCollection<Theme>();
         public ObservableCollection<Theme> Themes
         {
             get => _themes;
-            private set
+            set
             {
                 if (_themes.Equals(value)) return;
                 _themes = value;
@@ -43,7 +43,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private Theme _appThemeSelectedItem;
+        Theme _appThemeSelectedItem;
         public Theme AppThemeSelectedItem
         {
             get => _appThemeSelectedItem;
@@ -52,7 +52,7 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _appThemeSelectedItem)
                     return;
 
-                if (!_isLoading && value != null)
+                if (!IsLoading && value != null)
                 {
                     AppearanceManager.ChangeAppTheme(value.Name);
                     SettingsManager.Current.Appearance_AppTheme = value.Name;
@@ -64,7 +64,7 @@ namespace PrintCostCalculator3d.ViewModels
         }
         /*
          * Mahapps 1.6
-        private Accent _accentSelectedItem;
+        Accent _accentSelectedItem;
         public Accent AccentSelectedItem
         {
             get => _accentSelectedItem;
@@ -73,7 +73,7 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _accentSelectedItem)
                     return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                 {
 
                     AppearanceManager.ChangeAccent(value.Name);
@@ -85,7 +85,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
         */
-        private bool _enableTransparency;
+        bool _enableTransparency;
         public bool EnableTransparency
         {
             get => _enableTransparency;
@@ -94,7 +94,7 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _enableTransparency)
                     return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.Appearance_EnableTransparency = value;
 
                 _enableTransparency = value;
@@ -102,7 +102,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private int _opacity;
+        int _opacity;
         public int Opacity
         {
             get => _opacity;
@@ -111,7 +111,7 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _opacity)
                     return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.Appearance_Opacity = (double)value / 100;
 
                 _opacity = value;
@@ -123,16 +123,14 @@ namespace PrintCostCalculator3d.ViewModels
         #region Constructor, LoadSettings
         public SettingsAppearanceViewModel()
         {
-            _isLoading = true;
-
+            IsLoading = true;
             LoadSettings();
-
-            _isLoading = false;
+            IsLoading = false;
             // Load themes
             Themes = new ObservableCollection<Theme>(ThemeManager.Current.Themes.Where(theme => theme.BaseColorScheme == (DarkThemes ? "Dark" : "Light")));
         }
 
-        private void LoadSettings()
+        void LoadSettings()
         {
             AppThemeSelectedItem = ThemeManager.Current.DetectTheme();
             if (AppThemeSelectedItem != null)
@@ -151,7 +149,7 @@ namespace PrintCostCalculator3d.ViewModels
         #endregion
 
         #region Methods
-        private void UpdateTheme()
+        void UpdateTheme()
         {
             var current = AppThemeSelectedItem;
             Themes = new ObservableCollection<Theme>(ThemeManager.Current.Themes.Where(theme => theme.BaseColorScheme == (_darkThemes ? "Dark" : "Light")));

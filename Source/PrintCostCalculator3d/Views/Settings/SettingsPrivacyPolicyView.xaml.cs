@@ -9,7 +9,7 @@ namespace PrintCostCalculator3d.Views
     /// </summary>
     public partial class SettingsPrivacyPolicyView : UserControl
     {
-        private readonly SettingsPrivacyPolicyViewModel _viewModel = new SettingsPrivacyPolicyViewModel(DialogCoordinator.Instance);
+        readonly SettingsPrivacyPolicyViewModel _viewModel = new SettingsPrivacyPolicyViewModel(DialogCoordinator.Instance);
         public SettingsPrivacyPolicyView()
         {
             InitializeComponent();

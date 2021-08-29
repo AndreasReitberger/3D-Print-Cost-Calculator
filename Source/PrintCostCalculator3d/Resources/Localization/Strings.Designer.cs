@@ -520,11 +520,29 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Apply enhanced margin calculation settings ähnelt.
+        /// </summary>
+        public static string ApplyEnhancedMarginCalculationSettings {
+            get {
+                return ResourceManager.GetString("ApplyEnhancedMarginCalculationSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Apply manual print job infos ähnelt.
         /// </summary>
         public static string ApplyManualPrintInformation {
             get {
                 return ResourceManager.GetString("ApplyManualPrintInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Apply procedure specific additions? ähnelt.
+        /// </summary>
+        public static string ApplyProcedureSpecificAdditions {
+            get {
+                return ResourceManager.GetString("ApplyProcedureSpecificAdditions", resourceCulture);
             }
         }
         
@@ -592,6 +610,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Dashboard ähnelt.
+        /// </summary>
+        public static string AppNameDashboard {
+            get {
+                return ResourceManager.GetString("AppNameDashboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Event Log ähnelt.
         /// </summary>
         public static string AppNameEventLog {
@@ -642,15 +669,6 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string AppNameRepetierServerProDashboard {
             get {
                 return ResourceManager.GetString("AppNameRepetierServerProDashboard", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die SVN ähnelt.
-        /// </summary>
-        public static string AppNameSubversionServer {
-            get {
-                return ResourceManager.GetString("AppNameSubversionServer", resourceCulture);
             }
         }
         
@@ -1177,6 +1195,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Calculator ähnelt.
+        /// </summary>
+        public static string Calculator {
+            get {
+                return ResourceManager.GetString("Calculator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Cambodia ähnelt.
         /// </summary>
         public static string Cambodia {
@@ -1573,6 +1600,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Copy ähnelt.
+        /// </summary>
+        public static string Copy {
+            get {
+                return ResourceManager.GetString("Copy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Copy to clipboard ähnelt.
         /// </summary>
         public static string CopyEventInformationToClipboard {
@@ -1600,11 +1636,20 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Create Copies ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die CraftWare ähnelt.
         /// </summary>
-        public static string CreateCopies {
+        public static string CraftWare {
             get {
-                return ResourceManager.GetString("CreateCopies", resourceCulture);
+                return ResourceManager.GetString("CraftWare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Create a new calculation when clicking the calculate button? ähnelt.
+        /// </summary>
+        public static string CreateNewCalculationWhenClickingCalculateButton {
+            get {
+                return ResourceManager.GetString("CreateNewCalculationWhenClickingCalculateButton", resourceCulture);
             }
         }
         
@@ -1641,6 +1686,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string Cura {
             get {
                 return ResourceManager.GetString("Cura", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Curing costs ähnelt.
+        /// </summary>
+        public static string CuringCosts {
+            get {
+                return ResourceManager.GetString("CuringCosts", resourceCulture);
             }
         }
         
@@ -1740,6 +1794,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string CustomerLastName {
             get {
                 return ResourceManager.GetString("CustomerLastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Cut ähnelt.
+        /// </summary>
+        public static string Cut {
+            get {
+                return ResourceManager.GetString("Cut", resourceCulture);
             }
         }
         
@@ -1929,6 +1992,24 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string Description {
             get {
                 return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The action you performed is not allowed or supported here. ähnelt.
+        /// </summary>
+        public static string DialogActionNotAllowedHereContent {
+            get {
+                return ResourceManager.GetString("DialogActionNotAllowedHereContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Action not allowed here ähnelt.
+        /// </summary>
+        public static string DialogActionNotAllowedHereHeadline {
+            get {
+                return ResourceManager.GetString("DialogActionNotAllowedHereHeadline", resourceCulture);
             }
         }
         
@@ -3013,6 +3094,24 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die You selected procedure specific additions for the material family &apos;{0}&apos;, however you have not selected a printer and / or a material specified with this material family. Please select a matching printer / material or deactivate the procedure specific additions in the &apos;Procedure&apos; tab. ähnelt.
+        /// </summary>
+        public static string DialogProcedureSpecificCalculationIsMissingDataFormatedContent {
+            get {
+                return ResourceManager.GetString("DialogProcedureSpecificCalculationIsMissingDataFormatedContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Procedure specific additions are missing data ähnelt.
+        /// </summary>
+        public static string DialogProcedureSpecificCalculationIsMissingDataHeadline {
+            get {
+                return ResourceManager.GetString("DialogProcedureSpecificCalculationIsMissingDataHeadline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Welcome to the {0} control panel! Please, always check that your printer is free and ready to use if you start prints remotely. Also be aware, if you move your printer axis that this can be done without damaging the printer. We and our software are not responsible for any damage caused by unattended control! ähnelt.
         /// </summary>
         public static string DialogRemoteControlPrintersFormatContent {
@@ -3369,6 +3468,24 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string DialogSlicerPrinterConfigIsMissingHeadline {
             get {
                 return ResourceManager.GetString("DialogSlicerPrinterConfigIsMissingHeadline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The stl file &apos;{0}&apos; is too big or has to many details to be displayed in the viewer. This is a limitation of the used thirdparty library. ähnelt.
+        /// </summary>
+        public static string DialogStlFileFaildToBeDisplayedFormatedContent {
+            get {
+                return ResourceManager.GetString("DialogStlFileFaildToBeDisplayedFormatedContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Stl file has to many details ähnelt.
+        /// </summary>
+        public static string DialogStlFileFailedToBeDisplayedHeadline {
+            get {
+                return ResourceManager.GetString("DialogStlFileFailedToBeDisplayedHeadline", resourceCulture);
             }
         }
         
@@ -3760,6 +3877,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Enhanced margin calculation settings ähnelt.
+        /// </summary>
+        public static string EnhancedMarginCalculationSettings {
+            get {
+                return ResourceManager.GetString("EnhancedMarginCalculationSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Please enter a name for your slicer command to identify it later. ähnelt.
         /// </summary>
         public static string EnterANameForTheSlicerCommand {
@@ -4111,6 +4237,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die OctoPrint server init: {0} ähnelt.
+        /// </summary>
+        public static string EventOctoPrintServerInit {
+            get {
+                return ResourceManager.GetString("EventOctoPrintServerInit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Folder opened: {0} ähnelt.
         /// </summary>
         public static string EventOpenFolderFormated {
@@ -4309,6 +4444,42 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Exclude from margin calculation ähnelt.
+        /// </summary>
+        public static string ExcludeFromMarginCalculation {
+            get {
+                return ResourceManager.GetString("ExcludeFromMarginCalculation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Exclude material costs from margin calculation? ähnelt.
+        /// </summary>
+        public static string ExcludeMaterialCostsFromMarginCalculation {
+            get {
+                return ResourceManager.GetString("ExcludeMaterialCostsFromMarginCalculation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Exclude printer costs from margin calculation? ähnelt.
+        /// </summary>
+        public static string ExcludePrinterCostsFromMarginCalculation {
+            get {
+                return ResourceManager.GetString("ExcludePrinterCostsFromMarginCalculation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Exclude worksteps from margin calculation? ähnelt.
+        /// </summary>
+        public static string ExcludeWorkstepsFromMarginCalculation {
+            get {
+                return ResourceManager.GetString("ExcludeWorkstepsFromMarginCalculation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Execute command ähnelt.
         /// </summary>
         public static string ExecuteCommand {
@@ -4332,6 +4503,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string ExportAsPdf {
             get {
                 return ResourceManager.GetString("ExportAsPdf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Export... ähnelt.
+        /// </summary>
+        public static string ExportDots {
+            get {
+                return ResourceManager.GetString("ExportDots", resourceCulture);
             }
         }
         
@@ -4507,11 +4687,38 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Fill ähnelt.
+        /// </summary>
+        public static string Fill {
+            get {
+                return ResourceManager.GetString("Fill", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Application (*.exe)|*.exe ähnelt.
         /// </summary>
         public static string FilterApplicationFile {
             get {
                 return ResourceManager.GetString("FilterApplicationFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Filter costs ähnelt.
+        /// </summary>
+        public static string FilterCosts {
+            get {
+                return ResourceManager.GetString("FilterCosts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Filters ähnelt.
+        /// </summary>
+        public static string Filters {
+            get {
+                return ResourceManager.GetString("Filters", resourceCulture);
             }
         }
         
@@ -4566,6 +4773,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string FolderDoesNotExist {
             get {
                 return ResourceManager.GetString("FolderDoesNotExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The file format &apos;{0}&apos; is deprecated! ähnelt.
+        /// </summary>
+        public static string FormatNotSupportedAnyMore {
+            get {
+                return ResourceManager.GetString("FormatNotSupportedAnyMore", resourceCulture);
             }
         }
         
@@ -4714,6 +4930,24 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Gcodes ähnelt.
+        /// </summary>
+        public static string Gcodes {
+            get {
+                return ResourceManager.GetString("Gcodes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Gcode Viewer ähnelt.
+        /// </summary>
+        public static string GcodeViewer {
+            get {
+                return ResourceManager.GetString("GcodeViewer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die General ähnelt.
         /// </summary>
         public static string General {
@@ -4764,6 +4998,24 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string GitHub {
             get {
                 return ResourceManager.GetString("GitHub", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Glove costs ähnelt.
+        /// </summary>
+        public static string GloveCosts {
+            get {
+                return ResourceManager.GetString("GloveCosts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Gloves ähnelt.
+        /// </summary>
+        public static string Gloves {
+            get {
+                return ResourceManager.GetString("Gloves", resourceCulture);
             }
         }
         
@@ -4917,6 +5169,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string Haiti {
             get {
                 return ResourceManager.GetString("Haiti", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Handling fee ähnelt.
+        /// </summary>
+        public static string HandlingFee {
+            get {
+                return ResourceManager.GetString("HandlingFee", resourceCulture);
             }
         }
         
@@ -5146,6 +5407,24 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Include alpha versions? ähnelt.
+        /// </summary>
+        public static string IncludeAlphaVersions {
+            get {
+                return ResourceManager.GetString("IncludeAlphaVersions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Included beta versions? ähnelt.
+        /// </summary>
+        public static string IncludeBetaVersions {
+            get {
+                return ResourceManager.GetString("IncludeBetaVersions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Include file path &apos;[filepath]&apos; automatically at end of command ähnelt.
         /// </summary>
         public static string IncludeFilePathAutomaticallyAtEndOfCommand {
@@ -5182,11 +5461,38 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die This factor is needed if you add liter / milliliter instead of g or kg. The tool needs to know how much liter a kg has. For instance your powder is 2kg and the volume in liter is 4l, enter 2 (1kg = 2l) ähnelt.
+        /// </summary>
+        public static string InfoFactorToCalculateWeightOutOfLiterOrMililiter {
+            get {
+                return ResourceManager.GetString("InfoFactorToCalculateWeightOutOfLiterOrMililiter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die This takes the powder needed for refreshing, additionally to the powder needed for the object to print, into account. Add the minimum needed powder for the print job. The tool will calculate the refreshed material like: (min. powder in printer - powder for object) * refresh rate set for the material used. ähnelt.
+        /// </summary>
+        public static string InfoPowderRefreshing {
+            get {
+                return ResourceManager.GetString("InfoPowderRefreshing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die We care about your privacy! Therefore we do not collect and share any of your precious information at all! The tool works completely offline. Only, if you are a pro user, the application checks your license ocassionally. ähnelt.
         /// </summary>
         public static string InfoPrivacyPolicy {
             get {
                 return ResourceManager.GetString("InfoPrivacyPolicy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Some procedures have specific methods needed to be taken into account for the calculation. For instance in SLS there is a material refreshing. In this section you can set those special additions (if available). ähnelt.
+        /// </summary>
+        public static string InfoProcedureSpecificAdditions {
+            get {
+                return ResourceManager.GetString("InfoProcedureSpecificAdditions", resourceCulture);
             }
         }
         
@@ -5443,6 +5749,24 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Filters in package: ähnelt.
+        /// </summary>
+        public static string LabelAmountOfFiltersInPackage {
+            get {
+                return ResourceManager.GetString("LabelAmountOfFiltersInPackage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Gloves in package: ähnelt.
+        /// </summary>
+        public static string LabelAmountOfGlovesInPackage {
+            get {
+                return ResourceManager.GetString("LabelAmountOfGlovesInPackage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Your API key*: ähnelt.
         /// </summary>
         public static string LabelAPIKeyRepetierMandatory {
@@ -5497,6 +5821,24 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Price per glove: ähnelt.
+        /// </summary>
+        public static string LabelCalculatedPricePerGlove {
+            get {
+                return ResourceManager.GetString("LabelCalculatedPricePerGlove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Price per liter: ähnelt.
+        /// </summary>
+        public static string LabelCalculatedPricePerLiterIsopropanol {
+            get {
+                return ResourceManager.GetString("LabelCalculatedPricePerLiterIsopropanol", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Calculation timebase*: ähnelt.
         /// </summary>
         public static string LabelCalculationTimebaseMandatory {
@@ -5524,6 +5866,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Content in container: ähnelt.
+        /// </summary>
+        public static string LabelConentOfIsopropanolInContainer {
+            get {
+                return ResourceManager.GetString("LabelConentOfIsopropanolInContainer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Console output: ähnelt.
         /// </summary>
         public static string LabelConsoleOutput {
@@ -5533,11 +5884,29 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Container price ähnelt.
+        /// </summary>
+        public static string LabelContainerPrice {
+            get {
+                return ResourceManager.GetString("LabelContainerPrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Creating gcode layer model: ähnelt.
         /// </summary>
         public static string LabelCreatingGcodeLayerModel {
             get {
                 return ResourceManager.GetString("LabelCreatingGcodeLayerModel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Curing duration: ähnelt.
+        /// </summary>
+        public static string LabelCuringDuration {
+            get {
+                return ResourceManager.GetString("LabelCuringDuration", resourceCulture);
             }
         }
         
@@ -5749,6 +6118,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Factor liter to kg:* ähnelt.
+        /// </summary>
+        public static string LabelFactorLiterToKgMandatory {
+            get {
+                return ResourceManager.GetString("LabelFactorLiterToKgMandatory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Fail-Rate: ähnelt.
         /// </summary>
         public static string LabelFailRate {
@@ -5812,6 +6190,24 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Price of filter package: ähnelt.
+        /// </summary>
+        public static string LabelFiltersPackagePrice {
+            get {
+                return ResourceManager.GetString("LabelFiltersPackagePrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Filters per job: ähnelt.
+        /// </summary>
+        public static string LabelFiltersPerJob {
+            get {
+                return ResourceManager.GetString("LabelFiltersPerJob", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Fixed machine hour rate: ähnelt.
         /// </summary>
         public static string LabelFixedPrice {
@@ -5844,6 +6240,24 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string LabelGcodeOrPrintInformation {
             get {
                 return ResourceManager.GetString("LabelGcodeOrPrintInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Price of gloves package: ähnelt.
+        /// </summary>
+        public static string LabelGlovesPackagePrice {
+            get {
+                return ResourceManager.GetString("LabelGlovesPackagePrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Gloves needed per job: ähnelt.
+        /// </summary>
+        public static string LabelGlovesPerJob {
+            get {
+                return ResourceManager.GetString("LabelGlovesPerJob", resourceCulture);
             }
         }
         
@@ -5961,6 +6375,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string LabelIsManufacturerActive {
             get {
                 return ResourceManager.GetString("LabelIsManufacturerActive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Prive of isopropanol container: ähnelt.
+        /// </summary>
+        public static string LabelIsopropanolContainerPrice {
+            get {
+                return ResourceManager.GetString("LabelIsopropanolContainerPrice", resourceCulture);
             }
         }
         
@@ -6145,6 +6568,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Powder in build area:* ähnelt.
+        /// </summary>
+        public static string LabelMinPowderInBuildAreaMandatory {
+            get {
+                return ResourceManager.GetString("LabelMinPowderInBuildAreaMandatory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Name*: ähnelt.
         /// </summary>
         public static string LabelNameMandatory {
@@ -6213,6 +6645,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string LabelPackageMandatory {
             get {
                 return ResourceManager.GetString("LabelPackageMandatory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Package price: ähnelt.
+        /// </summary>
+        public static string LabelPackagePrice {
+            get {
+                return ResourceManager.GetString("LabelPackagePrice", resourceCulture);
             }
         }
         
@@ -6312,6 +6753,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string LabelPriceMandatory {
             get {
                 return ResourceManager.GetString("LabelPriceMandatory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Price per minute: ähnelt.
+        /// </summary>
+        public static string LabelPricePerMinute {
+            get {
+                return ResourceManager.GetString("LabelPricePerMinute", resourceCulture);
             }
         }
         
@@ -6451,6 +6901,24 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Refreshed material: ähnelt.
+        /// </summary>
+        public static string LabelRefreshedMaterial {
+            get {
+                return ResourceManager.GetString("LabelRefreshedMaterial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Refresh rate:* ähnelt.
+        /// </summary>
+        public static string LabelRefreshRateMandatory {
+            get {
+                return ResourceManager.GetString("LabelRefreshRateMandatory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die IP address / domain:* ähnelt.
         /// </summary>
         public static string LabelRepetierServerAddressMandatory {
@@ -6465,24 +6933,6 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string LabelReplacemenCostsManadatory {
             get {
                 return ResourceManager.GetString("LabelReplacemenCostsManadatory", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Replace with: ähnelt.
-        /// </summary>
-        public static string LabelReplaceWith {
-            get {
-                return ResourceManager.GetString("LabelReplaceWith", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Search for: ähnelt.
-        /// </summary>
-        public static string LabelSearchFor {
-            get {
-                return ResourceManager.GetString("LabelSearchFor", resourceCulture);
             }
         }
         
@@ -6532,6 +6982,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Select file(s) from the list ähnelt.
+        /// </summary>
+        public static string LabelSelectFilesFromList {
+            get {
+                return ResourceManager.GetString("LabelSelectFilesFromList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Select from list: ähnelt.
         /// </summary>
         public static string LabelSelectFromList {
@@ -6564,6 +7023,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string LabelSelectPrinterFromList {
             get {
                 return ResourceManager.GetString("LabelSelectPrinterFromList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Select procedure: ähnelt.
+        /// </summary>
+        public static string LabelSelectTargetProcedure {
+            get {
+                return ResourceManager.GetString("LabelSelectTargetProcedure", resourceCulture);
             }
         }
         
@@ -6766,6 +7234,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Used isopropanol: ähnelt.
+        /// </summary>
+        public static string LabelUsedIsopropanol {
+            get {
+                return ResourceManager.GetString("LabelUsedIsopropanol", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Useful Life in years*: ähnelt.
         /// </summary>
         public static string LabelUsefulLifeYearsMandatory {
@@ -6816,6 +7293,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string LabelVolumeMandatory {
             get {
                 return ResourceManager.GetString("LabelVolumeMandatory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Wear factor per print job: ähnelt.
+        /// </summary>
+        public static string LabelWearFactorPerPrintJob {
+            get {
+                return ResourceManager.GetString("LabelWearFactorPerPrintJob", resourceCulture);
             }
         }
         
@@ -7144,6 +7630,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Liter ähnelt.
+        /// </summary>
+        public static string Liter {
+            get {
+                return ResourceManager.GetString("Liter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Lithuania ähnelt.
         /// </summary>
         public static string Lithuania {
@@ -7405,6 +7900,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Margin ähnelt.
+        /// </summary>
+        public static string Margin {
+            get {
+                return ResourceManager.GetString("Margin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die All fields marked with &apos;*&apos; are mandatory. ähnelt.
         /// </summary>
         public static string MarkedFiledsMandatory {
@@ -7446,6 +7950,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string Material {
             get {
                 return ResourceManager.GetString("Material", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Material costs ähnelt.
+        /// </summary>
+        public static string MaterialCosts {
+            get {
+                return ResourceManager.GetString("MaterialCosts", resourceCulture);
             }
         }
         
@@ -7585,6 +8098,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Milliliter ähnelt.
+        /// </summary>
+        public static string Milliliter {
+            get {
+                return ResourceManager.GetString("Milliliter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die On close, minimize instead of terminating ähnelt.
         /// </summary>
         public static string MinimizeInsteadOfTerminating {
@@ -7635,6 +8157,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string Model {
             get {
                 return ResourceManager.GetString("Model", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Model viewers ähnelt.
+        /// </summary>
+        public static string ModelViewers {
+            get {
+                return ResourceManager.GetString("ModelViewers", resourceCulture);
             }
         }
         
@@ -7963,6 +8494,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die No special additions available for this procedure... ähnelt.
+        /// </summary>
+        public static string NoAdditionsAvailableYetForThisProcedureDots {
+            get {
+                return ResourceManager.GetString("NoAdditionsAvailableYetForThisProcedureDots", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die No file has been added to this calculation yet. Either select a gcode file from your computer or add the information manually. ähnelt.
         /// </summary>
         public static string NoFileAddedPleaseAddOneFirst {
@@ -8157,6 +8697,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string Nozzle {
             get {
                 return ResourceManager.GetString("Nozzle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Nozzle (Wear) ähnelt.
+        /// </summary>
+        public static string NozzleWearCosts {
+            get {
+                return ResourceManager.GetString("NozzleWearCosts", resourceCulture);
             }
         }
         
@@ -8611,6 +9160,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Paste ähnelt.
+        /// </summary>
+        public static string Paste {
+            get {
+                return ResourceManager.GetString("Paste", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Pause ähnelt.
         /// </summary>
         public static string Pause {
@@ -8800,6 +9358,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Print costs ähnelt.
+        /// </summary>
+        public static string PrintCosts {
+            get {
+                return ResourceManager.GetString("PrintCosts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Printer ähnelt.
         /// </summary>
         public static string Printer {
@@ -8854,6 +9421,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Print sheet (Wear) ähnelt.
+        /// </summary>
+        public static string PrintSheetWearCosts {
+            get {
+                return ResourceManager.GetString("PrintSheetWearCosts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Print time ähnelt.
         /// </summary>
         public static string PrintTime {
@@ -8877,6 +9453,33 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string PrivacyCheckNoDataCollection {
             get {
                 return ResourceManager.GetString("PrivacyCheckNoDataCollection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Procedure ähnelt.
+        /// </summary>
+        public static string Procedure {
+            get {
+                return ResourceManager.GetString("Procedure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Procedures ähnelt.
+        /// </summary>
+        public static string Procedures {
+            get {
+                return ResourceManager.GetString("Procedures", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Procedure specific ähnelt.
+        /// </summary>
+        public static string ProcedureSpecific {
+            get {
+                return ResourceManager.GetString("ProcedureSpecific", resourceCulture);
             }
         }
         
@@ -8985,6 +9588,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string Refresh {
             get {
                 return ResourceManager.GetString("Refresh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The refresh rate will be taken from the corresponding material, if specified. ähnelt.
+        /// </summary>
+        public static string RefreshRateIsTakenFromMaterial {
+            get {
+                return ResourceManager.GetString("RefreshRateIsTakenFromMaterial", resourceCulture);
             }
         }
         
@@ -9187,29 +9799,20 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Rotate 3d model arrount mouse down point? ähnelt.
+        /// </summary>
+        public static string Rotate3dModelAroundMouseDownPoint {
+            get {
+                return ResourceManager.GetString("Rotate3dModelAroundMouseDownPoint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Row ähnelt.
         /// </summary>
         public static string Row {
             get {
                 return ResourceManager.GetString("Row", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Run Checker ähnelt.
-        /// </summary>
-        public static string RunChecker {
-            get {
-                return ResourceManager.GetString("RunChecker", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Run Search and Replace ähnelt.
-        /// </summary>
-        public static string RunSearchAndReplace {
-            get {
-                return ResourceManager.GetString("RunSearchAndReplace", resourceCulture);
             }
         }
         
@@ -9484,6 +10087,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Select gcode to get started... ähnelt.
+        /// </summary>
+        public static string SelectGcodesToGetStartedDots {
+            get {
+                return ResourceManager.GetString("SelectGcodesToGetStartedDots", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Select or drop .gcode file ähnelt.
         /// </summary>
         public static string SelectOrDropGcodeFile {
@@ -9516,6 +10128,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string SelectSlicerAppPath {
             get {
                 return ResourceManager.GetString("SelectSlicerAppPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Select tab content ähnelt.
+        /// </summary>
+        public static string SelectTabContent {
+            get {
+                return ResourceManager.GetString("SelectTabContent", resourceCulture);
             }
         }
         
@@ -10141,6 +10762,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Slicer config ähnelt.
+        /// </summary>
+        public static string SlicerConfig {
+            get {
+                return ResourceManager.GetString("SlicerConfig", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die If you check this option, a slicer will be opened for each file. Otherwise all files will be opened in the same slicer. ähnelt.
         /// </summary>
         public static string SlicerMultipleInstancesNote {
@@ -10312,15 +10942,6 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
-        /// </summary>
-        public static string String1 {
-            get {
-                return ResourceManager.GetString("String1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Sudan ähnelt.
         /// </summary>
         public static string Sudan {
@@ -10402,6 +11023,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Tab content ähnelt.
+        /// </summary>
+        public static string TabContent {
+            get {
+                return ResourceManager.GetString("TabContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Calculate ähnelt.
         /// </summary>
         public static string TabHeaderCalculate {
@@ -10438,11 +11068,83 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Take the costs for curing into account? ähnelt.
+        /// </summary>
+        public static string TakeCuringCostsIntoAccount {
+            get {
+                return ResourceManager.GetString("TakeCuringCostsIntoAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Take the costs for filter (resin, isporpanol) into accont? ähnelt.
+        /// </summary>
+        public static string TakeFilterCostIntoAccount {
+            get {
+                return ResourceManager.GetString("TakeFilterCostIntoAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Take the costs of the gloves into account? ähnelt.
+        /// </summary>
+        public static string TakeGlovesCostIntoAccount {
+            get {
+                return ResourceManager.GetString("TakeGlovesCostIntoAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Take the costs of the nozzle wear into account? ähnelt.
+        /// </summary>
+        public static string TakeNozzleWearCoststIntoAccount {
+            get {
+                return ResourceManager.GetString("TakeNozzleWearCoststIntoAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Take the costs of the print sheet wear into account? ähnelt.
+        /// </summary>
+        public static string TakePrintSheetWearCostsIntoAccount {
+            get {
+                return ResourceManager.GetString("TakePrintSheetWearCostsIntoAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Take refreshing into account? ähnelt.
+        /// </summary>
+        public static string TakeRefreshIntoAccount {
+            get {
+                return ResourceManager.GetString("TakeRefreshIntoAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Take the costs for washing into account? ähnelt.
+        /// </summary>
+        public static string TakeWashingIntoAccount {
+            get {
+                return ResourceManager.GetString("TakeWashingIntoAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Tanzania ähnelt.
         /// </summary>
         public static string Tanzania {
             get {
                 return ResourceManager.GetString("Tanzania", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Tax ähnelt.
+        /// </summary>
+        public static string Tax {
+            get {
+                return ResourceManager.GetString("Tax", resourceCulture);
             }
         }
         
@@ -10546,11 +11248,38 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Add gcode from list ähnelt.
+        /// </summary>
+        public static string ToolTip_AddGcodeFromList {
+            get {
+                return ResourceManager.GetString("ToolTip_AddGcodeFromList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Add selection to calculation ähnelt.
+        /// </summary>
+        public static string ToolTip_AddSelectedGcodesToCalculation {
+            get {
+                return ResourceManager.GetString("ToolTip_AddSelectedGcodesToCalculation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Delete file(s) ähnelt.
         /// </summary>
         public static string ToolTip_DeleteFiles {
             get {
                 return ResourceManager.GetString("ToolTip_DeleteFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Enter the min. powder needed here (liter) ähnelt.
+        /// </summary>
+        public static string ToolTip_EnterMinimumPowderNeededInBuildArea {
+            get {
+                return ResourceManager.GetString("ToolTip_EnterMinimumPowderNeededInBuildArea", resourceCulture);
             }
         }
         
@@ -10641,6 +11370,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string TooltipApiKeyRepetier {
             get {
                 return ResourceManager.GetString("TooltipApiKeyRepetier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Here you can adjust the margin calculation and exclude parts from it. ähnelt.
+        /// </summary>
+        public static string TooltipApplyEnhancedMarginCalculationSettings {
+            get {
+                return ResourceManager.GetString("TooltipApplyEnhancedMarginCalculationSettings", resourceCulture);
             }
         }
         
@@ -10821,6 +11559,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string TooltipWorkstepPrice {
             get {
                 return ResourceManager.GetString("TooltipWorkstepPrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Total ähnelt.
+        /// </summary>
+        public static string Total {
+            get {
+                return ResourceManager.GetString("Total", resourceCulture);
             }
         }
         
@@ -11068,6 +11815,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Use new update manager? ähnelt.
+        /// </summary>
+        public static string UseNewUpdateManager {
+            get {
+                return ResourceManager.GetString("UseNewUpdateManager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die The user has agreed to the End User License Agreement (EULA) ähnelt.
         /// </summary>
         public static string UserAgreedToEULA {
@@ -11136,6 +11892,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string UseSelectedSupplier {
             get {
                 return ResourceManager.GetString("UseSelectedSupplier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Use selection ähnelt.
+        /// </summary>
+        public static string UseSelection {
+            get {
+                return ResourceManager.GetString("UseSelection", resourceCulture);
             }
         }
         
@@ -11401,6 +12166,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Washing costs ähnelt.
+        /// </summary>
+        public static string WashingCosts {
+            get {
+                return ResourceManager.GetString("WashingCosts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Enter your api key... ähnelt.
         /// </summary>
         public static string Watermark_OctoPrintApiKey {
@@ -11433,6 +12207,15 @@ namespace PrintCostCalculator3d.Resources.Localization {
         public static string Weight {
             get {
                 return ResourceManager.GetString("Weight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Weight in gramm ähnelt.
+        /// </summary>
+        public static string WeightInGramm {
+            get {
+                return ResourceManager.GetString("WeightInGramm", resourceCulture);
             }
         }
         

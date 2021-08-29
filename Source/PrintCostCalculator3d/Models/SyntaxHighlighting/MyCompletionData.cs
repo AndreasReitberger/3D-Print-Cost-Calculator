@@ -38,7 +38,7 @@ namespace PrintCostCalculator3d.Models.SyntaxHighlighting
 			get { return null; }
 		}
 
-		public string Text { get; private set; }
+		public string Text { get; set; }
 
 		// Use this property if you want to show a fancy UIElement in the drop down list.
 		public object Content

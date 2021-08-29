@@ -8,12 +8,17 @@
              xmlns:viewModels="clr-namespace:PrintCostCalculator3d.ViewModels"
              xmlns:localization="clr-namespace:PrintCostCalculator3d.Resources.Localization"
              xmlns:mahAppsControls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-
+             xmlns:converters="clr-namespace:PrintCostCalculator3d.Converters"
+             
              dialogs:DialogParticipation.Register="{Binding}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              d:DataContext="{d:DesignInstance viewModels:SettingsUpdateViewModel}"
              >
+    <UserControl.Resources>
+        <converters:BooleanToVisibilityCollapsedConverter x:Key="BooleanToVisibilityCollapsedConverter" />
+        <converters:BooleanToVisibilityCollapsedReverseConverter x:Key="BooleanToVisibilityCollapsedReverseConverter" />
+    </UserControl.Resources>
     <StackPanel>
         <TextBlock Style="{StaticResource HeaderTextBlock}" Text="{x:Static localization:Strings.Update}" />
         <mahAppsControls:ToggleSwitch 
@@ -21,5 +26,29 @@
             OnContent="{x:Static localization:Strings.On}"
             OffContent="{x:Static localization:Strings.Off}"
             IsOn="{Binding CheckForUpdatesAtStartup}" Margin="0,0,0,10"/>
+        
+        <!-- New Updater, disbaled for now -->
+        <StackPanel
+            Visibility="Collapsed">
+            <mahAppsControls:ToggleSwitch 
+                Header="{x:Static localization:Strings.UseNewUpdateManager}" 
+                OnContent="{x:Static localization:Strings.On}"
+                OffContent="{x:Static localization:Strings.Off}"
+                IsOn="{Binding UseNewUpdater}" Margin="0,0,0,10"/>
+            <StackPanel
+                Visibility="{Binding UseNewUpdater, Converter={StaticResource BooleanToVisibilityCollapsedConverter}}"
+                >
+                <mahAppsControls:ToggleSwitch 
+                    Header="{x:Static localization:Strings.IncludeBetaVersions}" 
+                    OnContent="{x:Static localization:Strings.On}"
+                    OffContent="{x:Static localization:Strings.Off}"
+                    IsOn="{Binding IncludeBetaVersions}" Margin="0,0,0,10"/>
+                <mahAppsControls:ToggleSwitch 
+                    Header="{x:Static localization:Strings.IncludeAlphaVersions}" 
+                    OnContent="{x:Static localization:Strings.On}"
+                    OffContent="{x:Static localization:Strings.Off}"
+                    IsOn="{Binding IncludeAlphaVersions}" Margin="0,0,0,10"/>
+            </StackPanel>
+        </StackPanel>
     </StackPanel>
 </UserControl>

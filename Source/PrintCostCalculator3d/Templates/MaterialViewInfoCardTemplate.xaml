@@ -5,12 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
-             xmlns:Models="clr-namespace:PrintCostCalculator3d.Models._3dprinting"
-             xmlns:converters="clr-namespace:PrintCostCalculator3d.Converters"
+             xmlns:Models="clr-namespace:AndreasReitberger.Models;assembly=3dPrintCalculatorLibrary"
              xmlns:localization="clr-namespace:PrintCostCalculator3d.Resources.Localization"
+             
              Width="325"
              mc:Ignorable="d" 
-             d:DataContext="{d:DesignInstance Models:_3dPrinterMaterial}"
+             d:DataContext="{d:DesignInstance Models:Material3d}"
              d:DesignHeight="250" d:DesignWidth="400">
     
     <Border BorderThickness="2" CornerRadius="10">

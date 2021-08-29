@@ -1,18 +1,14 @@
-﻿using log4net;
+﻿using AndreasReitberger.Models;
 using MahApps.Metro.Controls.Dialogs;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
 using PrintCostCalculator3d.Models.Exporter;
 using PrintCostCalculator3d.Models.Settings;
 using PrintCostCalculator3d.Utilities;
-using AndreasReitberger.Models;
+using System;
+using System.Collections;
+using System.Collections.ObjectModel;
+using System.IO;
+using System.Linq;
+using System.Windows.Input;
 
 namespace PrintCostCalculator3d.ViewModels
 {
@@ -20,14 +16,11 @@ namespace PrintCostCalculator3d.ViewModels
     class ExportCalculationViewModel : ViewModelBase
     {
         #region Variables
-        private readonly bool _isLoading;
-        private readonly IDialogCoordinator _dialogCoordinator;
-        private static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-
+        readonly IDialogCoordinator _dialogCoordinator;
         #endregion
 
         #region Properties
-        private ObservableCollection<Calculation3d> _calculations = new ObservableCollection<Calculation3d>();
+        ObservableCollection<Calculation3d> _calculations = new ObservableCollection<Calculation3d>();
         public ObservableCollection<Calculation3d> Calculations
         {
             get => _calculations;
@@ -40,7 +33,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private ExporterTarget _target;
+        ExporterTarget _target;
         public ExporterTarget Target
         {
             get => _target;
@@ -53,7 +46,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private ObservableCollection<ExporterTemplate> _templates = new ObservableCollection<ExporterTemplate>();
+        ObservableCollection<ExporterTemplate> _templates = new ObservableCollection<ExporterTemplate>();
         public ObservableCollection<ExporterTemplate> Templates
         {
             get => _templates;
@@ -66,7 +59,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private ExporterTemplate _selectedTemplate;
+        ExporterTemplate _selectedTemplate;
         public ExporterTemplate SelectedTemplate
         {
             get => _selectedTemplate;
@@ -79,7 +72,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
         
-        private IList _selectedTemplates = new ArrayList();
+        IList _selectedTemplates = new ArrayList();
         public IList SelectedTemplates
         {
             get => _selectedTemplates;
@@ -92,7 +85,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private string _exportPath;
+        string _exportPath;
         public string ExportPath
         {
             get => _exportPath;
@@ -100,7 +93,7 @@ namespace PrintCostCalculator3d.ViewModels
             {
                 if (_exportPath == value)
                     return;
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.ExporterExcel_LastExportPath = value;
                 _exportPath = value;
                 OnPropertyChanged();
@@ -108,7 +101,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _exportAsPdf = false;
+        bool _exportAsPdf = false;
         public bool ExportAsPdf
         {
             get => _exportAsPdf;
@@ -116,7 +109,7 @@ namespace PrintCostCalculator3d.ViewModels
             {
                 if (_exportAsPdf == value)
                     return;
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.ExporterExcel_LastExportAsPdf = value;
                 _exportAsPdf = value;
                 OnPropertyChanged();
@@ -130,9 +123,11 @@ namespace PrintCostCalculator3d.ViewModels
         public ExportCalculationViewModel(Action<ExportCalculationViewModel> saveCommand, Action<ExportCalculationViewModel> cancelHandler, 
             ObservableCollection<Calculation3d> Calculations, ExporterTarget Target)
         {
-            _isLoading = true;
+            IsLoading = true;
             LoadSettings();
-            _isLoading = false;
+            IsLoading = false;
+
+            IsLicenseValid = false;
 
             SaveCommand = new RelayCommand(p => saveCommand(this));
             CancelCommand = new RelayCommand(p => cancelHandler(this));
@@ -148,9 +143,11 @@ namespace PrintCostCalculator3d.ViewModels
         public ExportCalculationViewModel(Action<ExportCalculationViewModel> saveCommand, Action<ExportCalculationViewModel> cancelHandler, 
             ObservableCollection<Calculation3d> Calculations, ExporterTarget Target, IDialogCoordinator dialogCoordinator)
         {
-            _isLoading = true;
+            IsLoading = true;
             LoadSettings();
-            _isLoading = false;
+            IsLoading = false;
+
+            IsLicenseValid = false;
 
             SaveCommand = new RelayCommand(p => saveCommand(this));
             CancelCommand = new RelayCommand(p => cancelHandler(this));
@@ -160,10 +157,10 @@ namespace PrintCostCalculator3d.ViewModels
             // Filter templates
             Templates = SettingsManager.Current.ExporterExcel_Templates;
             Templates = new ObservableCollection<ExporterTemplate>(Templates.Where(template => template.ExporterTarget == Target).ToList());
-            this._dialogCoordinator = dialogCoordinator;
+            _dialogCoordinator = dialogCoordinator;
         }
 
-        private void LoadSettings()
+        void LoadSettings()
         {
             ExportPath = SettingsManager.Current.ExporterExcel_LastExportPath;
             ExportAsPdf = SettingsManager.Current.ExporterExcel_LastExportAsPdf;
@@ -179,7 +176,7 @@ namespace PrintCostCalculator3d.ViewModels
         {
             get { return new RelayCommand(p => BrowseFileAction()); }
         }
-        private void BrowseFileAction()
+        void BrowseFileAction()
         {
             var dialog = new System.Windows.Forms.SaveFileDialog();
 
@@ -199,7 +196,7 @@ namespace PrintCostCalculator3d.ViewModels
             get { return new RelayCommand(p => BrowseFolderAction()); }
         }
 
-        private void BrowseFolderAction()
+        void BrowseFolderAction()
         {
             var dialog = new System.Windows.Forms.FolderBrowserDialog();
 

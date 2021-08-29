@@ -153,6 +153,10 @@
     <value>Ajouter la commande " Slicer " à la liste et sauvegarder</value>
     <comment>0.1.1-beta</comment>
   </data>
+  <data name="AddAttribute" xml:space="preserve">
+    <value>Ajouter un attribut</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="AddCategory" xml:space="preserve">
     <value>Ajouter une catégorie</value>
   </data>
@@ -171,12 +175,24 @@
   <data name="Additional" xml:space="preserve">
     <value>Supplémentaire</value>
   </data>
+  <data name="AdditionalMaterialAttributes" xml:space="preserve">
+    <value>Attributs matériels supplémentaires</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="Additons" xml:space="preserve">
+    <value>Additions</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="AddLicense" xml:space="preserve">
     <value>Ajouter une licence</value>
   </data>
   <data name="AddMachineHourRate" xml:space="preserve">
     <value>Ajouter le taux horaire de la machine</value>
     <comment>0.1.0-beta</comment>
+  </data>
+  <data name="AddManuelPrintFileInformation" xml:space="preserve">
+    <value>Ajouter des informations sur le fichier manuel</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="AddManufacturer" xml:space="preserve">
     <value>Ajouter un fabricant</value>
@@ -186,6 +202,10 @@
   </data>
   <data name="AddPrinter" xml:space="preserve">
     <value>Ajouter une imprimante</value>
+  </data>
+  <data name="AddServer" xml:space="preserve">
+    <value>Ajouter un serveur</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="AddSlicer" xml:space="preserve">
     <value>Ajouter un slicer</value>
@@ -250,8 +270,28 @@
     <value>Appliquer les coûts énergétiques au calcul ?</value>
     <comment>0.0.7-beta</comment>
   </data>
+  <data name="ApplyEnhancedMarginCalculationSettings" xml:space="preserve">
+    <value>Appliquer les paramètres améliorés de calcul de la marge</value>
+    <comment>v1.2.3</comment>
+  </data>
+  <data name="ApplyManualPrintInformation" xml:space="preserve">
+    <value>Appliquer les informations d'impression manuelle</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="ApplyProcedureSpecificAdditions" xml:space="preserve">
+    <value>Appliquer les ajouts spécifiques à la procédure ?</value>
+    <comment>1.1.7-beta</comment>
+  </data>
   <data name="ApplyTaxRateToResult" xml:space="preserve">
     <value>Voulez-vous ajouter un taux de taxe à votre prix calculé ?</value>
+  </data>
+  <data name="ApplyVolume" xml:space="preserve">
+    <value>Appliquer le volume</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="ApplyWeight" xml:space="preserve">
+    <value>Appliquer le poids</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="AppName3dPrintCostCalculator" xml:space="preserve">
     <value>Calculateur des coûts d'impression 3D</value>
@@ -264,6 +304,10 @@
   </data>
   <data name="AppName3dPrinterWorkstep" xml:space="preserve">
     <value>Étapes de travail supplémentaires</value>
+  </data>
+  <data name="AppNameDashboard" xml:space="preserve">
+    <value>Tableau de bord</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="AppNameEventLog" xml:space="preserve">
     <value>Journal des événements</value>
@@ -305,6 +349,14 @@
   <data name="AtLeastOneApplicationMustBeVisible" xml:space="preserve">
     <value>Au moins une application doit être visible</value>
   </data>
+  <data name="Attribute" xml:space="preserve">
+    <value>Attribut</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="Attributes" xml:space="preserve">
+    <value>Attributs</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="AutoconnectOnStart" xml:space="preserve">
     <value>Connexion automatique au démarrage du serveur</value>
     <comment>0.1.1-beta</comment>
@@ -324,6 +376,14 @@
   </data>
   <data name="Calculate" xml:space="preserve">
     <value>Calculer</value>
+  </data>
+  <data name="CalculateVolume" xml:space="preserve">
+    <value>Calculer le volume</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="CalculateWeight" xml:space="preserve">
+    <value>Calculer le poids</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="CalculationFailrate" xml:space="preserve">
     <value>Calcul - Taux d'échec</value>
@@ -389,6 +449,10 @@
   </data>
   <data name="CalculationType" xml:space="preserve">
     <value>Type de calcul</value>
+  </data>
+  <data name="Calculator" xml:space="preserve">
+    <value>Calculateur</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Annuler</value>
@@ -503,12 +567,24 @@
     <value>Coordonnées de départ pour le modèle Excel</value>
     <comment>0.0.9-beta</comment>
   </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Copier</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="CopyEventInformationToClipboard" xml:space="preserve">
     <value>Copier dans le presse-papiers</value>
     <comment>0.0.3-beta</comment>
   </data>
+  <data name="CraftWare" xml:space="preserve">
+    <value>CraftWare</value>
+    <comment>1.1.7-beta</comment>
+  </data>
   <data name="CreateCopies" xml:space="preserve">
     <value>Créer des copies</value>
+  </data>
+  <data name="CreateNewCalculationWhenClickingCalculateButton" xml:space="preserve">
+    <value>Créer un nouveau calcul en cliquant sur le bouton "calculer" ?</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="CredentialWithThisNameAlreadyExists" xml:space="preserve">
     <value>L'identifiant avec ce nom existe déjà</value>
@@ -516,6 +592,10 @@
   <data name="Cura" xml:space="preserve">
     <value>Ultimaker Cura</value>
     <comment>0.0.7-beta</comment>
+  </data>
+  <data name="CuringCosts" xml:space="preserve">
+    <value>Coûts de la polymérisation</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="CurrencySymbol" xml:space="preserve">
     <value>Symbole de la monnaie</value>
@@ -560,6 +640,10 @@
   <data name="CustomerLastName" xml:space="preserve">
     <value>Client - Nom de famille</value>
     <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Cut" xml:space="preserve">
+    <value>Couper</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="DatagridView" xml:space="preserve">
     <value>Afficher comme grille de données</value>
@@ -621,6 +705,22 @@
   </data>
   <data name="Description" xml:space="preserve">
     <value>Description</value>
+  </data>
+  <data name="DialogActionNotAllowedHereContent" xml:space="preserve">
+    <value>L'action que vous avez effectuée n'est pas autorisée ou prise en charge ici.</value>
+    <comment>v1.2.1</comment>
+  </data>
+  <data name="DialogActionNotAllowedHereHeadline" xml:space="preserve">
+    <value>Action non autorisée ici</value>
+    <comment>v1.2.1</comment>
+  </data>
+  <data name="DialogAddNewAttributeContent" xml:space="preserve">
+    <value>Veuillez saisir le nom du nouvel attribut ci-dessous.</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="DialogAddNewAttributeHeadline" xml:space="preserve">
+    <value>Ajouter un nouvel attribut</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="DialogCalculationSaveSuccessContent" xml:space="preserve">
     <value>Le calcul a été sauvegardé avec succès.</value>
@@ -1044,6 +1144,14 @@
     <value>Mettre l'impression en pause</value>
     <comment>0.1.1-beta</comment>
   </data>
+  <data name="DialogProcedureSpecificCalculationIsMissingDataFormatedContent" xml:space="preserve">
+    <value>Vous avez sélectionné des ajouts spécifiques à la procédure pour la famille de matériaux "{0}", mais vous n'avez pas sélectionné une imprimante et/ou un matériau spécifié dans cette famille de matériaux. Veuillez sélectionner une imprimante / un matériau correspondant ou désactiver les ajouts spécifiques à la procédure dans l'onglet "Procédure".</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="DialogProcedureSpecificCalculationIsMissingDataHeadline" xml:space="preserve">
+    <value>Les ajouts spécifiques à la procédure sont des données manquantes</value>
+    <comment>1.1.7-beta</comment>
+  </data>
   <data name="DialogRemoteControlPrintersFormatContent" xml:space="preserve">
     <value>Bienvenue dans le panneau de contrôle {0} ! Veuillez toujours vérifier que votre imprimante est libre et prête à l'emploi si vous lancez des impressions à distance. Sachez également que si vous déplacez l'axe de votre imprimante, cela peut être fait sans l'endommager. Nous et notre logiciel ne sommes pas responsables des dommages causés par un contrôle non surveillé !</value>
     <comment>0.1.1-beta</comment>
@@ -1190,6 +1298,22 @@
     <value>Commande du slicer enregistrée</value>
     <comment>0.1.1-beta</comment>
   </data>
+  <data name="DialogSlicerPrinterConfigIsMissingContent" xml:space="preserve">
+    <value>L'analyseur a besoin d'au moins une configuration d'imprimante pour calculer le temps d'impression avec précision. Veuillez d'abord aller dans l'onglet "Paramètres" et créer votre configuration d'imprimante.</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="DialogSlicerPrinterConfigIsMissingHeadline" xml:space="preserve">
+    <value>Il manque la configuration de l'imprimante du slicer.</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="DialogStlFileFaildToBeDisplayedFormatedContent" xml:space="preserve">
+    <value>Le fichier stl "{0}" est trop gros ou contient trop de détails pour être affiché dans la visionneuse. Il s'agit d'une limitation de la bibliothèque tierce utilisée.</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="DialogStlFileFailedToBeDisplayedHeadline" xml:space="preserve">
+    <value>Le fichier Stl a trop de détails</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="DialogUpdateMachineHourRateToPrintersFormatedContent" xml:space="preserve">
     <value>Ce taux horaire de machine "{0}" est lié à au moins une imprimante. Souhaitez-vous mettre à jour le taux horaire de la machine liée à la nouvelle imprimante ?</value>
     <comment>0.1.2-RC</comment>
@@ -1233,6 +1357,10 @@
     <value>Télécharger</value>
     <comment>0.0.8-beta</comment>
   </data>
+  <data name="DownloadAsApp" xml:space="preserve">
+    <value>Télécharger maintenant comme application mobile !</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="DragAndDropFileHere" xml:space="preserve">
     <value>Glissez et déposez le fichier ici...</value>
     <comment>0.0.8-beta</comment>
@@ -1243,6 +1371,14 @@
   </data>
   <data name="Duration" xml:space="preserve">
     <value>Durée</value>
+  </data>
+  <data name="DurationCuring" xml:space="preserve">
+    <value>Durée (durcissement)</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="DurationDrying" xml:space="preserve">
+    <value>Durée (Séchage)</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="EBAM" xml:space="preserve">
     <value>EBAM (Electron-Beam Additve Manufacturing)® (fabrication d'additfs par faisceaux d'électrons)</value>
@@ -1266,6 +1402,10 @@
   <data name="EditPrinter" xml:space="preserve">
     <value>Modifier l'imprimante</value>
   </data>
+  <data name="EditServer" xml:space="preserve">
+    <value>Modifier le serveur</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="EditSlicer" xml:space="preserve">
     <value>Modifier le trancheur</value>
     <comment>0.0.7-beta</comment>
@@ -1280,6 +1420,10 @@
   </data>
   <data name="EditWorkstep" xml:space="preserve">
     <value>Modifier l'étape de travail</value>
+  </data>
+  <data name="EnableDarkTheme" xml:space="preserve">
+    <value>Activer le thème sombre</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="EnableGlobalLogging" xml:space="preserve">
     <value>Activer l'enregistrement complet des événements (recommandé)</value>
@@ -1299,6 +1443,10 @@
   <data name="EnhancedControl" xml:space="preserve">
     <value>Contrôle renforcé</value>
     <comment>0.1.1-beta</comment>
+  </data>
+  <data name="EnhancedMarginCalculationSettings" xml:space="preserve">
+    <value>Paramètres de calcul de la marge améliorés</value>
+    <comment>v1.2.3</comment>
   </data>
   <data name="EnterANameForTheSlicerCommand" xml:space="preserve">
     <value>Veuillez entrer un nom pour votre commande de slicer afin de l'identifier plus tard.</value>
@@ -1383,6 +1531,10 @@
     <value>Point édité : {0} =&gt; {1}</value>
     <comment>0.0.3-beta</comment>
   </data>
+  <data name="EventEnteredValueWasInvalidFormated" xml:space="preserve">
+    <value>La valeur saisie "{0}" n'était pas valide.</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="EventExceptionOccurredFormated" xml:space="preserve">
     <value>Une exception s'est produite à la cible'{0}' avec le message suivant : {1}</value>
     <comment>0.0.3-beta</comment>
@@ -1402,6 +1554,10 @@
   <data name="EventGcodeFailedToSentToRepetierServerPro" xml:space="preserve">
     <value>GCode n'a pas pu être envoyé à Repetier Server Pro : {0} / {1}.</value>
     <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventGcodeFileParseSucceededFormated" xml:space="preserve">
+    <value>Le gcode "{0}" a été analysé avec succès dans "{1}".</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="EventGcodeSentToRepetierServerPro" xml:space="preserve">
     <value>GCode envoyé à Repetier Server Pro : {0} / {1}.</value>
@@ -1431,6 +1587,10 @@
     <value>Le taux horaire de la machine'{0}' a été assigné à : {1}</value>
     <comment>0.0.3-beta</comment>
   </data>
+  <data name="EventOctoPrintServerInit" xml:space="preserve">
+    <value>Serveur OctoPrint init : {0}</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="EventOpenFolderFormated" xml:space="preserve">
     <value>Dossier ouvert : {0}</value>
     <comment>0.0.3-beta</comment>
@@ -1446,6 +1606,14 @@
   <data name="EventRepetierServerProInit" xml:space="preserve">
     <value>Repetier Server Pro init : {0}</value>
     <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventSettingsBackupSucceededFormated" xml:space="preserve">
+    <value>La sauvegarde du fichier de paramètres a été créée avec succès à '{0}'.</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="EventSettingsFileNotFoundAtFormated" xml:space="preserve">
+    <value>Le fichier de paramètres n'a pas pu être trouvé à '{0}' !</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="EventUncatchedRepetierEventFormated" xml:space="preserve">
     <value>Un événement Repetier non prévu a été reçu du WebSocket : {0}</value>
@@ -1511,6 +1679,22 @@
     <value>Vous pouvez assigner les propriétés de notre objet de calcul aux coordonnées de votre modèle Excel. L'exportateur inscrira alors les données correspondantes dans le fichier modèle Excel fourni.</value>
     <comment>0.0.9-beta</comment>
   </data>
+  <data name="ExcludeFromMarginCalculation" xml:space="preserve">
+    <value>Exclure du calcul de la marge</value>
+    <comment>v1.2.3</comment>
+  </data>
+  <data name="ExcludeMaterialCostsFromMarginCalculation" xml:space="preserve">
+    <value>Exclure les coûts des matériaux du calcul de la marge ?</value>
+    <comment>v1.2.3</comment>
+  </data>
+  <data name="ExcludePrinterCostsFromMarginCalculation" xml:space="preserve">
+    <value>Exclure les coûts d'impression du calcul de la marge ?</value>
+    <comment>v1.2.3</comment>
+  </data>
+  <data name="ExcludeWorkstepsFromMarginCalculation" xml:space="preserve">
+    <value>Exclure les étapes du travail du calcul de la marge ?</value>
+    <comment>v1.2.3</comment>
+  </data>
   <data name="ExecuteCommand" xml:space="preserve">
     <value>Exécution de la commande</value>
     <comment>0.1.1-beta</comment>
@@ -1522,6 +1706,10 @@
   <data name="ExportAsPdf" xml:space="preserve">
     <value>Exporter au format pdf</value>
     <comment>0.0.9-beta</comment>
+  </data>
+  <data name="ExportDots" xml:space="preserve">
+    <value>Exporter...</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="ExportExcel" xml:space="preserve">
     <value>Exportation vers Excel</value>
@@ -1545,6 +1733,10 @@
   <data name="Filament" xml:space="preserve">
     <value>Filament</value>
     <comment>0.0.4-beta</comment>
+  </data>
+  <data name="FilamentDiameter" xml:space="preserve">
+    <value>Diamètre du filament</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="FileAction" xml:space="preserve">
     <value>Fichier Action</value>
@@ -1586,9 +1778,21 @@
     <value>Type de fichier</value>
     <comment>0.0.3-beta</comment>
   </data>
+  <data name="Fill" xml:space="preserve">
+    <value>Remplir</value>
+    <comment>1.1.7-beta</comment>
+  </data>
   <data name="FilterApplicationFile" xml:space="preserve">
     <value>Application (*.exe)|*.exe</value>
     <comment>0.0.7-beta</comment>
+  </data>
+  <data name="FilterCosts" xml:space="preserve">
+    <value>Coûts de filtrage</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Filters" xml:space="preserve">
+    <value>Filtres</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="FinalRecomendedPrice" xml:space="preserve">
     <value>Prix final recommandé :</value>
@@ -1643,11 +1847,31 @@
     <value>Préférer les valeurs notées dans les commentaires des slicers connus ?</value>
     <comment>0.0.7-beta</comment>
   </data>
+  <data name="GcodeParserPrintTimeCalculation" xml:space="preserve">
+    <value>Calcul du temps d'impression</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="Gcodes" xml:space="preserve">
+    <value>Gcodes</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="GcodeViewer" xml:space="preserve">
+    <value>Visualisation des codes G</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="General" xml:space="preserve">
     <value>Général</value>
   </data>
   <data name="GitHub" xml:space="preserve">
     <value>GitHub</value>
+  </data>
+  <data name="GloveCosts" xml:space="preserve">
+    <value>Coût des gants</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Gloves" xml:space="preserve">
+    <value>Gants</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="GoOneDirectoryBack" xml:space="preserve">
     <value>Revenir au répertoire précédent</value>
@@ -1671,6 +1895,10 @@
   <data name="GUI" xml:space="preserve">
     <value>Interface graphique utilisateur (GUI)</value>
     <comment>0.0.7-beta</comment>
+  </data>
+  <data name="HandlingFee" xml:space="preserve">
+    <value>Frais de traitement</value>
+    <comment>1.1.7-beta</comment>
   </data>
   <data name="HasHeatbed" xml:space="preserve">
     <value>A un lit chauffant ?</value>
@@ -1705,6 +1933,10 @@
   <data name="HelpMessage_OverwriteNumberFormat" xml:space="preserve">
     <value>Si vous sélectionnez cette option, le format des nombres entiers sera écrasé. Cela inclut le formatage des chiffres, le format des dates, etc.</value>
     <comment>1.1.3-beta</comment>
+  </data>
+  <data name="HelpTextNewGcodeSelectionMethod" xml:space="preserve">
+    <value>Grâce à la prise en charge de plusieurs fichiers, vous pouvez désormais ajouter plusieurs gcodes à votre calcul. Si vous n'avez pas de gcode, il vous suffit d'ajouter les informations d'impression manuellement en utilisant le bouton de gauche.</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="HelpTranslate" xml:space="preserve">
     <value>Aide pour traduire cet outil ?</value>
@@ -1744,6 +1976,14 @@
     <value>Importation du gcode directement après le tranchage (CLI uniquement)</value>
     <comment>0.0.7-beta</comment>
   </data>
+  <data name="IncludeAlphaVersions" xml:space="preserve">
+    <value>Inclure les versions alpha ?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="IncludeBetaVersions" xml:space="preserve">
+    <value>Inclure des versions bêta ?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="IncludeFilePathAutomaticallyAtEndOfCommand" xml:space="preserve">
     <value>Inclure le chemin d'accès au fichier '[filepath]' automatiquement à la fin de la commande</value>
     <comment>0.1.1-beta</comment>
@@ -1752,9 +1992,21 @@
     <value>Info</value>
     <comment>0.0.7-beta</comment>
   </data>
+  <data name="InfoFactorToCalculateWeightOutOfLiterOrMililiter" xml:space="preserve">
+    <value>Ce facteur est nécessaire si vous ajoutez un litre/millilitre au lieu de g ou kg. L'outil doit savoir combien de litres contient un kg. Par exemple, votre poudre est de 2kg et le volume en litre est de 4l, entrez 2 (1kg = 2l)</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="InfoPowderRefreshing" xml:space="preserve">
+    <value>Ceci prend en compte la poudre nécessaire pour le rafraîchissement, en plus de la poudre nécessaire pour l'objet à imprimer. Ajoutez le minimum de poudre nécessaire pour le travail d'impression. L'outil calculera le matériau rafraîchi comme : (poudre min. dans l'imprimante - poudre pour l'objet) * taux de rafraîchissement défini pour le matériau utilisé.</value>
+    <comment>1.1.7-beta</comment>
+  </data>
   <data name="InfoPrivacyPolicy" xml:space="preserve">
     <value>Nous nous soucions de votre vie privée ! Par conséquent, nous ne recueillons ni ne partageons aucune de vos précieuses informations ! L'outil fonctionne complètement hors ligne. Seulement, si vous êtes un utilisateur pro, l'application vérifie votre licence occasionnellement.</value>
     <comment>0.0.6-beta</comment>
+  </data>
+  <data name="InfoProcedureSpecificAdditions" xml:space="preserve">
+    <value>Certaines procédures ont des méthodes spécifiques dont il faut tenir compte pour le calcul. Par exemple, dans SLS, il y a un rafraîchissement de la matière. Dans cette section, vous pouvez définir ces ajouts spéciaux (si disponibles).</value>
+    <comment>1.1.7-beta</comment>
   </data>
   <data name="InterestRate" xml:space="preserve">
     <value>Taux d'intérêt</value>
@@ -1768,6 +2020,10 @@
   <data name="IsCheckingLicenseState" xml:space="preserve">
     <value>Vérification de l'état de la licence...</value>
     <comment>0.0.9-beta</comment>
+  </data>
+  <data name="IsLoadingFilesDots" xml:space="preserve">
+    <value>Charge les fichiers...</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="Kind" xml:space="preserve">
     <value>Gentil</value>
@@ -1789,12 +2045,24 @@
   <data name="LabelAdditionalWorkstepCosts" xml:space="preserve">
     <value>Étapes de travail supplémentaires :</value>
   </data>
+  <data name="LabelAmountOfFiltersInPackage" xml:space="preserve">
+    <value>Filtres dans l'emballage :</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelAmountOfGlovesInPackage" xml:space="preserve">
+    <value>Gants dans le paquet :</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="LabelAPIKeyRepetierMandatory" xml:space="preserve">
     <value>Votre clé API* :</value>
   </data>
   <data name="LabelApiVersion" xml:space="preserve">
     <value>Version API :</value>
     <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelAttributeMandatory" xml:space="preserve">
+    <value>Attribut :*</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="LabelBaudrate" xml:space="preserve">
     <value>Baudrate :</value>
@@ -1806,6 +2074,14 @@
   <data name="LabelCalcDepreciation" xml:space="preserve">
     <value>Amortissement calculé :</value>
   </data>
+  <data name="LabelCalculatedPricePerGlove" xml:space="preserve">
+    <value>Prix par gant :</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelCalculatedPricePerLiterIsopropanol" xml:space="preserve">
+    <value>Prix par litre :</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="LabelCalculationTimebaseMandatory" xml:space="preserve">
     <value>Base de temps de calcul* :</value>
   </data>
@@ -1816,13 +2092,25 @@
   <data name="LabelColor" xml:space="preserve">
     <value>Couleur :</value>
   </data>
+  <data name="LabelConentOfIsopropanolInContainer" xml:space="preserve">
+    <value>Contenu du récipient :</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="LabelConsoleOutput" xml:space="preserve">
     <value>Sortie console :</value>
     <comment>0.0.7-beta</comment>
   </data>
+  <data name="LabelContainerPrice" xml:space="preserve">
+    <value>Prix du conteneur</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="LabelCreatingGcodeLayerModel" xml:space="preserve">
     <value>Création d'un modèle de calque gcode :</value>
     <comment>0.0.8-beta</comment>
+  </data>
+  <data name="LabelCuringDuration" xml:space="preserve">
+    <value>Durée de la polymérisation :</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="LabelCurrentPath" xml:space="preserve">
     <value>Chemin d'accès actuel :</value>
@@ -1907,6 +2195,10 @@
     <value>Rangée:*</value>
     <comment>0.0.9-beta</comment>
   </data>
+  <data name="LabelFactorLiterToKgMandatory" xml:space="preserve">
+    <value>Facteur litre à kg:*</value>
+    <comment>1.1.7-beta</comment>
+  </data>
   <data name="LabelFailRate" xml:space="preserve">
     <value>Taux de d'échec :</value>
   </data>
@@ -1928,6 +2220,18 @@
     <value>Nom de fichier :</value>
     <comment>0.0.3-beta</comment>
   </data>
+  <data name="LabelFileNameMandatory" xml:space="preserve">
+    <value>Nom du fichier :*</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="LabelFiltersPackagePrice" xml:space="preserve">
+    <value>Prix du paquet de filtres :</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelFiltersPerJob" xml:space="preserve">
+    <value>Filtres par emploi :</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="LabelFixedPrice" xml:space="preserve">
     <value>Taux d'heures machine fixe :</value>
     <comment>0.1.0-beta</comment>
@@ -1939,6 +2243,18 @@
   <data name="LabelGcode" xml:space="preserve">
     <value>Gcode :</value>
     <comment>0.0.3-beta</comment>
+  </data>
+  <data name="LabelGcodeOrPrintInformation" xml:space="preserve">
+    <value>Gcode / informations d'impression :</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="LabelGlovesPackagePrice" xml:space="preserve">
+    <value>Prix du paquet de gants :</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelGlovesPerJob" xml:space="preserve">
+    <value>Gants nécessaires par travail :</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="LabelGuidReadOnly" xml:space="preserve">
     <value>GUID (lecture seule) :</value>
@@ -1979,6 +2295,10 @@
   </data>
   <data name="LabelIsManufacturerActive" xml:space="preserve">
     <value>Le fabricant est actif pour les achats</value>
+  </data>
+  <data name="LabelIsopropanolContainerPrice" xml:space="preserve">
+    <value>Prix du récipient d'isopropanol :</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="LabelIsSupplierActive" xml:space="preserve">
     <value>Le fournisseur est actif pour les achats</value>
@@ -2029,6 +2349,10 @@
   <data name="LabelMaterialKindMandatory" xml:space="preserve">
     <value>Type de matériau* :</value>
   </data>
+  <data name="LabelMaterialMandatory" xml:space="preserve">
+    <value>Matériel :*</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="LabelMaterialTypeMandatory" xml:space="preserve">
     <value>Type d'article* :</value>
   </data>
@@ -2037,6 +2361,10 @@
   </data>
   <data name="LabelMaxPowerConsumptionMandatory" xml:space="preserve">
     <value>Consommation d'énergie maximale* :</value>
+  </data>
+  <data name="LabelMinPowderInBuildAreaMandatory" xml:space="preserve">
+    <value>Poudre dans la zone de construction:*</value>
+    <comment>1.1.7-beta</comment>
   </data>
   <data name="LabelNameMandatory" xml:space="preserve">
     <value>Nom* :</value>
@@ -2065,6 +2393,10 @@
   <data name="LabelPackageMandatory" xml:space="preserve">
     <value>Forfait* :</value>
   </data>
+  <data name="LabelPackagePrice" xml:space="preserve">
+    <value>Prix du paquet :</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="LabelPackageSize" xml:space="preserve">
     <value>Taille de l'emballage :</value>
   </data>
@@ -2087,6 +2419,10 @@
     <value>Port :</value>
     <comment>0.1.1-beta</comment>
   </data>
+  <data name="LabelPortMandatory" xml:space="preserve">
+    <value>Port:*</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="LabelPowerLevel" xml:space="preserve">
     <value>Niveau de puissance :</value>
     <comment>0.0.7-beta</comment>
@@ -2099,6 +2435,10 @@
   </data>
   <data name="LabelPriceMandatory" xml:space="preserve">
     <value>Prix* :</value>
+  </data>
+  <data name="LabelPricePerMinute" xml:space="preserve">
+    <value>Prix par minute :</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="LabelPriceWithoutTax" xml:space="preserve">
     <value>Hors taxes :</value>
@@ -2130,6 +2470,10 @@
   <data name="LabelPrintingTime" xml:space="preserve">
     <value>Temps d'impression estimé :</value>
   </data>
+  <data name="LabelPrintTimeCorrectionValue" xml:space="preserve">
+    <value>Facteur de correction du temps d'impression :</value>
+    <comment>1.1.5-beta</comment>
+  </data>
   <data name="LabelProgress" xml:space="preserve">
     <value>Progression :</value>
     <comment>0.0.3-beta</comment>
@@ -2147,6 +2491,18 @@
   </data>
   <data name="LabelQuantityMandatory" xml:space="preserve">
     <value>Quantité* :</value>
+  </data>
+  <data name="LabelRecommendedPrice" xml:space="preserve">
+    <value>Prix recommandé :</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="LabelRefreshedMaterial" xml:space="preserve">
+    <value>Matériel actualisé :</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="LabelRefreshRateMandatory" xml:space="preserve">
+    <value>Taux de rafraîchissement :*</value>
+    <comment>1.1.7-beta</comment>
   </data>
   <data name="LabelRepetierServerAddressMandatory" xml:space="preserve">
     <value>Adresse IP / domaine:*</value>
@@ -2170,8 +2526,16 @@
   <data name="LabelSelectCurrentPrinterMandatory" xml:space="preserve">
     <value>Sélectionnez l'imprimante* :</value>
   </data>
+  <data name="LabelSelectedCaculation" xml:space="preserve">
+    <value>Calcul sélectionné :</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="LabelSelectedFiles" xml:space="preserve">
     <value>Fichier(s) sélectionné(s) :</value>
+  </data>
+  <data name="LabelSelectFilesFromList" xml:space="preserve">
+    <value>Sélectionnez le(s) fichier(s) dans la liste</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="LabelSelectFromList" xml:space="preserve">
     <value>Choisissez dans la liste :</value>
@@ -2187,6 +2551,10 @@
     <value>Sélectionnez l'imprimante dans la liste :</value>
     <comment>0.1.0-beta</comment>
   </data>
+  <data name="LabelSelectTargetProcedure" xml:space="preserve">
+    <value>Sélectionner la procédure :</value>
+    <comment>1.1.7-beta</comment>
+  </data>
   <data name="LabelSelectTheSettingsYouWantToReset" xml:space="preserve">
     <value>Sélectionnez les paramètres à réinitialiser :</value>
     <comment>0.0.7-beta</comment>
@@ -2194,6 +2562,10 @@
   <data name="LabelSerialPort" xml:space="preserve">
     <value>Port série :</value>
     <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelServerMandatory" xml:space="preserve">
+    <value>Serveur :*</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="LabelShopUri" xml:space="preserve">
     <value>Lien vers la boutique :</value>
@@ -2238,6 +2610,10 @@
     <value>Nombre d'événements enregistrés:*</value>
     <comment>0.0.6-beta</comment>
   </data>
+  <data name="LabelSubTotal" xml:space="preserve">
+    <value>Sous-total :</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="LabelSupplierNameMandatory" xml:space="preserve">
     <value>Nom du fournisseur* :</value>
   </data>
@@ -2258,12 +2634,20 @@
   <data name="LabelUsedAmountOfMaterial" xml:space="preserve">
     <value>Quantité de matière utilisée* :</value>
   </data>
+  <data name="LabelUsedIsopropanol" xml:space="preserve">
+    <value>Isopropanol utilisé :</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="LabelUsefulLifeYearsMandatory" xml:space="preserve">
     <value>Durée de vie utile en années* :</value>
   </data>
   <data name="LabelUseSavedCommands" xml:space="preserve">
     <value>Utilisez la commande sauvegardée :</value>
     <comment>0.1.1-beta</comment>
+  </data>
+  <data name="LabelValueMandatory" xml:space="preserve">
+    <value>Valeur:*</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="LabelVendor" xml:space="preserve">
     <value>Vendeur :</value>
@@ -2274,6 +2658,10 @@
   <data name="LabelVolumeMandatory" xml:space="preserve">
     <value>Volume* :</value>
   </data>
+  <data name="LabelWearFactorPerPrintJob" xml:space="preserve">
+    <value>Facteur d'usure par travail d'impression :</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="LabelWebCam" xml:space="preserve">
     <value>WebCam :</value>
     <comment>0.0.8-beta</comment>
@@ -2281,6 +2669,10 @@
   <data name="LabelWebSocket" xml:space="preserve">
     <value>WebSocket :</value>
     <comment>0.0.8-beta</comment>
+  </data>
+  <data name="LabelWeightMandatory" xml:space="preserve">
+    <value>Poids:*</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="LabelWorksheetMandatory" xml:space="preserve">
     <value>Feuille de travail:*</value>
@@ -2370,6 +2762,10 @@
     <value>Liste</value>
     <comment>0.0.9-beta</comment>
   </data>
+  <data name="Liter" xml:space="preserve">
+    <value>Litre</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="Load" xml:space="preserve">
     <value>Charge</value>
   </data>
@@ -2392,6 +2788,10 @@
   <data name="LoadingFilesFromServerDots" xml:space="preserve">
     <value>Chargement de fichiers depuis le serveur...</value>
     <comment>0.1.2-RC</comment>
+  </data>
+  <data name="LoadIntoCalculator" xml:space="preserve">
+    <value>Charger dans la calculatrice</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="LoadPrinterList" xml:space="preserve">
     <value>Charger la liste des imprimantes</value>
@@ -2417,6 +2817,10 @@
     <value>Makerbot</value>
     <comment>0.0.7-beta</comment>
   </data>
+  <data name="ManualPrintJobInformation" xml:space="preserve">
+    <value>Informations sur les travaux d'impression manuelle</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="Manufacturer" xml:space="preserve">
     <value>Fabricant</value>
   </data>
@@ -2432,6 +2836,10 @@
     <value>Fabricants</value>
     <comment>0.1.0-beta</comment>
   </data>
+  <data name="Margin" xml:space="preserve">
+    <value>Marge</value>
+    <comment>1.1.7-beta</comment>
+  </data>
   <data name="MarkedFiledsMandatory" xml:space="preserve">
     <value>Tous les champs marqués d'un '*' sont obligatoires.</value>
   </data>
@@ -2442,12 +2850,36 @@
     <value>Matériel</value>
     <comment>0.0.9-beta</comment>
   </data>
+  <data name="MaterialCosts" xml:space="preserve">
+    <value>Coûts de matériel</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="MaterialIsSealed" xml:space="preserve">
     <value>Le matériel est scellé</value>
     <comment>0.1.0-beta</comment>
   </data>
   <data name="Materials" xml:space="preserve">
     <value>Matériaux</value>
+  </data>
+  <data name="MaxAccelerationE" xml:space="preserve">
+    <value>Accélération max. de l'extrudeur :</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="MaxAccelerationEWhileExtruding" xml:space="preserve">
+    <value>Accélération max. de l'extrudeur (pendant l'extrusion) :</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="MaxAccelerationEWhileRetracting" xml:space="preserve">
+    <value>Accélération max. de l'extrudeur (pendant la rétraction) :</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="MaxAccelerationXandY" xml:space="preserve">
+    <value>Accélération max. X et Y :</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="MaxAccelerationZ" xml:space="preserve">
+    <value>Accélération max. Z :</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="MaxTempHeatbed" xml:space="preserve">
     <value>Température max du lit chauffant</value>
@@ -2463,6 +2895,10 @@
   <data name="Messages" xml:space="preserve">
     <value>Messages</value>
     <comment>0.0.8-beta</comment>
+  </data>
+  <data name="Milliliter" xml:space="preserve">
+    <value>Milliliter</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="MinimizeInsteadOfTerminating" xml:space="preserve">
     <value>A la fermeture, réduire au lieu de fermer.</value>
@@ -2481,6 +2917,10 @@
   </data>
   <data name="Model" xml:space="preserve">
     <value />
+  </data>
+  <data name="ModelViewers" xml:space="preserve">
+    <value>Visualisation des modèles</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="MoveAndRestart" xml:space="preserve">
     <value>Déplacer et redémarrer</value>
@@ -2535,6 +2975,10 @@
     <value>Nouvelle imprimante (nouvelle fenêtre)</value>
     <comment>0.0.4-beta</comment>
   </data>
+  <data name="NewServer" xml:space="preserve">
+    <value>Nouveau serveur</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="NewSupplier" xml:space="preserve">
     <value>Nouveau fournisseur</value>
   </data>
@@ -2545,6 +2989,14 @@
   <data name="NewWorkstepAsNewWindow" xml:space="preserve">
     <value>Nouvelle étape (nouvelle fenêtre)</value>
     <comment>0.0.4-beta</comment>
+  </data>
+  <data name="NoAdditionsAvailableYetForThisProcedureDots" xml:space="preserve">
+    <value>Aucun ajout spécial disponible pour cette procédure pour le moment...</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="NoFileAddedPleaseAddOneFirst" xml:space="preserve">
+    <value>Aucun fichier n'a encore été ajouté à ce calcul. Sélectionnez un fichier gcode sur votre ordinateur ou ajoutez les informations manuellement.</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="NoFilesOrFolderInThisDirectoryFound" xml:space="preserve">
     <value>Aucun fichier ou dossier n'a été trouvé dans ce répertoire / emplacement.</value>
@@ -2573,6 +3025,10 @@
     <value>Non, enregistrer comme nouveau</value>
     <comment>0.1.1-beta</comment>
   </data>
+  <data name="NoServersCreatedInSettingsYetDots" xml:space="preserve">
+    <value>Aucun serveur n'a encore été créé dans les paramètres...</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="NotChanged" xml:space="preserve">
     <value>Non modifié</value>
   </data>
@@ -2595,6 +3051,14 @@
     <value>Selon le slicer utilisé, il se peut qu'un préfixe ou un suffixe soit ajouté au nom du fichier stl. Vous pouvez spécifier le format ici, afin que l'outil puisse trouver et importer le fichier gcode plus tard.</value>
     <comment>0.1.1-beta</comment>
   </data>
+  <data name="Note_ReloadCalculationsOnRestart" xml:space="preserve">
+    <value>Si cette option est activée, l'outil rechargera automatiquement les calculs de la dernière session.</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="Note_SlicerPrinterConfiguration" xml:space="preserve">
+    <value>Veuillez remplir ces valeurs aussi précisément que possible. Ces valeurs sont importantes pour calculer le temps d'impression à partir de votre gcode.</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="Note_UpdateInterval" xml:space="preserve">
     <value>Il s'agit de l'intervalle de temps en secondes pendant lequel l'outil va chercher les informations actuelles sur votre serveur d'impression.</value>
     <comment>0.1.1-beta</comment>
@@ -2602,8 +3066,16 @@
   <data name="NoUpdateAvailable" xml:space="preserve">
     <value>Aucune mise à jour n'est disponible pour le moment</value>
   </data>
+  <data name="NoWorkstepsAddedToThisCalculationDots" xml:space="preserve">
+    <value>Aucune étape n'a été ajoutée pour ce calcul...</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="Nozzle" xml:space="preserve">
     <value>Buse</value>
+  </data>
+  <data name="NozzleWearCosts" xml:space="preserve">
+    <value>Buse (usure)</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="NPJ" xml:space="preserve">
     <value>NPJ (NanoParticle Jetting)® (jet de nanoparticules)</value>
@@ -2694,6 +3166,10 @@
     <value>Ouvrir STL ou Gcode</value>
     <comment>0.0.3-beta</comment>
   </data>
+  <data name="OpenInBrowser" xml:space="preserve">
+    <value>Ouvrir dans le navigateur</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="OpenInSlicer" xml:space="preserve">
     <value>Ouvert dans le slicer</value>
     <comment>0.1.1-beta</comment>
@@ -2741,6 +3217,10 @@
     <value>Ordre</value>
     <comment>1.1.3-beta</comment>
   </data>
+  <data name="Overview" xml:space="preserve">
+    <value>Vue d'ensemble</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="Overwrite" xml:space="preserve">
     <value>Écraser</value>
     <comment>0.0.7-beta</comment>
@@ -2760,6 +3240,14 @@
   <data name="PackageSize" xml:space="preserve">
     <value>Taille de l'emballage</value>
   </data>
+  <data name="ParseGcodes" xml:space="preserve">
+    <value>Analyse du/des gcode(s)</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="ParseMultipleGcodes" xml:space="preserve">
+    <value>Analyser plusieurs gcodes</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Mot de passe</value>
   </data>
@@ -2768,6 +3256,10 @@
   </data>
   <data name="PasswordsDoNotMatch" xml:space="preserve">
     <value>Les mots de passe ne correspondent pas !</value>
+  </data>
+  <data name="Paste" xml:space="preserve">
+    <value>Coller</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="Pause" xml:space="preserve">
     <value>Pause</value>
@@ -2832,9 +3324,17 @@
     <value>Imprimer</value>
     <comment>0.1.1-beta</comment>
   </data>
+  <data name="PrintCosts" xml:space="preserve">
+    <value>Frais d'impression</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="Printer" xml:space="preserve">
     <value>Imprimante</value>
     <comment>0.0.9-beta</comment>
+  </data>
+  <data name="PrinterControlDisabledDueToPrinterIsOfflineOrDisconnectedDots" xml:space="preserve">
+    <value>Le panneau de contrôle est désactivé parce que l'imprimante est hors ligne ou déconnectée...</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="PrinterHasHeatbed" xml:space="preserve">
     <value>L'imprimante est équipée d'un lit chauffant</value>
@@ -2850,6 +3350,14 @@
     <value>Imprimer l'offre</value>
     <comment>0.0.3-beta</comment>
   </data>
+  <data name="PrintSheetWearCosts" xml:space="preserve">
+    <value>Feuille d'impression (Usure)</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="PrintTime" xml:space="preserve">
+    <value>Temps d'impression</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="PrivacyCheckNoAnalytics" xml:space="preserve">
     <value>Nous n'utilisons aucun logiciel d'analyse pour suivre votre comportement !</value>
     <comment>0.0.6-beta</comment>
@@ -2857,6 +3365,18 @@
   <data name="PrivacyCheckNoDataCollection" xml:space="preserve">
     <value>Nous ne collectons aucune de vos données, jamais !</value>
     <comment>0.0.6-beta</comment>
+  </data>
+  <data name="Procedure" xml:space="preserve">
+    <value>Procédure</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="Procedures" xml:space="preserve">
+    <value>Procédures</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="ProcedureSpecific" xml:space="preserve">
+    <value>Procédure spécifique</value>
+    <comment>1.1.7-beta</comment>
   </data>
   <data name="ProductName" xml:space="preserve">
     <value>Nom du produit</value>
@@ -2878,13 +3398,33 @@
     <value>PrusaSlicer</value>
     <comment>0.0.7-beta</comment>
   </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Quantité</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="Rates" xml:space="preserve">
+    <value>Tarifs</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="Reconnect" xml:space="preserve">
     <value>Reconnectez-vous</value>
     <comment>0.0.3-beta</comment>
   </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Rafraîchir</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="RefreshRateIsTakenFromMaterial" xml:space="preserve">
+    <value>Le taux de rafraîchissement sera pris dans le matériel correspondant, si cela est spécifié.</value>
+    <comment>1.1.7-beta</comment>
+  </data>
   <data name="RemainingContent" xml:space="preserve">
     <value>Contenu restant</value>
     <comment>0.1.0-beta</comment>
+  </data>
+  <data name="RememberCalculationsTillNextStartup" xml:space="preserve">
+    <value>Se souvenir des calculs jusqu'au prochain démarrage</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="Reorder" xml:space="preserve">
     <value>Réorganiser</value>
@@ -2952,6 +3492,10 @@
     <value>Reprendre</value>
     <comment>0.1.1-beta</comment>
   </data>
+  <data name="Rotate3dModelAroundMouseDownPoint" xml:space="preserve">
+    <value>Faire pivoter le modèle 3d en bas de la souris ?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="Row" xml:space="preserve">
     <value>Rangée</value>
     <comment>0.0.9-beta</comment>
@@ -3006,6 +3550,10 @@
     <value>Cette section est actuellement verrouillée et sera disponible dans une prochaine version.</value>
     <comment>0.1.0-beta</comment>
   </data>
+  <data name="SelectAServerToStartTheDashboard" xml:space="preserve">
+    <value>Sélectionnez d'abord un serveur afin de lancer le tableau de bord</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="SelectedGcode" xml:space="preserve">
     <value>Gcode sélectionné</value>
     <comment>0.1.1-beta</comment>
@@ -3023,6 +3571,14 @@
   <data name="SelectGcodeFile" xml:space="preserve">
     <value>Sélectionnez le fichier .gcode.....</value>
   </data>
+  <data name="SelectGcodeFiles" xml:space="preserve">
+    <value>Sélectionner les fichiers gcode...</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="SelectGcodesToGetStartedDots" xml:space="preserve">
+    <value>Sélectionnez gcode pour commencer...</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="SelectOrDropGcodeFile" xml:space="preserve">
     <value>Sélectionnez ou déposez le fichier .gcode</value>
   </data>
@@ -3037,6 +3593,10 @@
   <data name="SelectSlicerAppPath" xml:space="preserve">
     <value>Sélectionner le chemin d'application du slicer.....</value>
     <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SelectTabContent" xml:space="preserve">
+    <value>Sélectionner le contenu de l'onglet</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="SelectYourDefaultPrintServer" xml:space="preserve">
     <value>Sélectionnez le serveur d'impression par défaut ci-dessous.</value>
@@ -3056,9 +3616,33 @@
     <value>Envoyer vers le slicer</value>
     <comment>0.0.7-beta</comment>
   </data>
+  <data name="ServerApiKey" xml:space="preserve">
+    <value>Clé API</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="ServerIsConnectingDots" xml:space="preserve">
+    <value>Le serveur se connecte...</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="ServerIsOffline" xml:space="preserve">
+    <value>Le serveur est hors ligne</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="ServerIsOnline" xml:space="preserve">
+    <value>Le serveur est en ligne</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="Servers" xml:space="preserve">
+    <value>Serveurs</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="SetFlow" xml:space="preserve">
     <value>Régler le débit</value>
     <comment>0.0.3-beta</comment>
+  </data>
+  <data name="SetLoadedCalculationAutomaticallyAsSelected" xml:space="preserve">
+    <value>Définir automatiquement les calculs chargés comme sélectionnés ?</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="SetMasterPassword" xml:space="preserve">
     <value>Définir le mot de passe principal</value>
@@ -3181,6 +3765,10 @@
   <data name="Show" xml:space="preserve">
     <value>Montrer</value>
   </data>
+  <data name="ShowCalculationResultWhenSelectedCalculationChanged" xml:space="preserve">
+    <value>Afficher le résultat du calcul sur le calcul modifié ?</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="ShowCameraInfo" xml:space="preserve">
     <value>Afficher les informations sur l'appareil photo ?</value>
     <comment>0.0.2-beta</comment>
@@ -3243,9 +3831,17 @@
     <value>Si aucune commande n'est passée, seule l'interface graphique du slicer sera ouverte et le ou les fichiers stl seront chargés. Veuillez vérifier les commandes de votre slicer préféré dans la documentation du slicer (si supporté).</value>
     <comment>0.0.7-beta</comment>
   </data>
+  <data name="SlicerConfig" xml:space="preserve">
+    <value>Configuration du slicer</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="SlicerMultipleInstancesNote" xml:space="preserve">
     <value>Si vous cochez cette option, un slicer sera ouvert pour chaque fichier. Sinon, tous les fichiers seront ouverts dans le même slicer.</value>
     <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SlicerPrinterConfigurationNameLabel" xml:space="preserve">
+    <value>Nom de la configuration de l'imprimante :</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="Slicers" xml:space="preserve">
     <value>Slicers</value>
@@ -3291,15 +3887,63 @@
     <value>Fournisseurs</value>
     <comment>0.1.0-beta</comment>
   </data>
+  <data name="TabContent" xml:space="preserve">
+    <value>Contenu de l'onglet</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="TabHeaderCalculate" xml:space="preserve">
     <value>Calculer</value>
   </data>
   <data name="TabHeaderCalculations" xml:space="preserve">
     <value>Calculs</value>
   </data>
+  <data name="TakeCuringCostsIntoAccount" xml:space="preserve">
+    <value>Tenir compte des coûts de la polymérisation ?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="TakeFilterCostIntoAccount" xml:space="preserve">
+    <value>Prenez en compte le coût des filtres (résine, isporpanol) dans le calcul de ?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="TakeGlovesCostIntoAccount" xml:space="preserve">
+    <value>Prendre en compte le coût des gants ?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="TakeNozzleWearCoststIntoAccount" xml:space="preserve">
+    <value>Prendre en compte les coûts de l'usure des buses ?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="TakePrintSheetWearCostsIntoAccount" xml:space="preserve">
+    <value>Prendre en compte les coûts de l'usure des plaques d'impression ?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="TakeRefreshIntoAccount" xml:space="preserve">
+    <value>Prendre en compte le rafraîchissement ?</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="TakeWashingIntoAccount" xml:space="preserve">
+    <value>Tenir compte des coûts de lavage ?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Tax" xml:space="preserve">
+    <value>Taxes</value>
+    <comment>1.1.7-beta</comment>
+  </data>
   <data name="Temperature" xml:space="preserve">
     <value>Température</value>
     <comment>0.0.3-beta</comment>
+  </data>
+  <data name="TemperatureDrying" xml:space="preserve">
+    <value>Température (Séchage)</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="TemperatureHeatedBed" xml:space="preserve">
+    <value>Température (Lit chauffant)</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="TemperatureNozzle" xml:space="preserve">
+    <value>Température (Buse)</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="TemplateTargetMandatory" xml:space="preserve">
     <value>Cible:*</value>
@@ -3319,6 +3963,10 @@
   </data>
   <data name="TooltipApiKeyRepetier" xml:space="preserve">
     <value>La clé api....</value>
+  </data>
+  <data name="TooltipApplyEnhancedMarginCalculationSettings" xml:space="preserve">
+    <value>Vous pouvez ici ajuster le calcul de la marge et en exclure certaines parties.</value>
+    <comment>v1.2.3</comment>
   </data>
   <data name="TooltipApplyTaxRate" xml:space="preserve">
     <value>Cochez cette case pour appliquer un taux de TVA.</value>
@@ -3384,9 +4032,21 @@
   <data name="TooltipWorkstepPrice" xml:space="preserve">
     <value>Appliqué en fonction du type de calcul sélectionné</value>
   </data>
+  <data name="ToolTip_AddGcodeFromList" xml:space="preserve">
+    <value>Ajouter le gcode de la liste</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="ToolTip_AddSelectedGcodesToCalculation" xml:space="preserve">
+    <value>Ajouter une sélection au calcul</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="ToolTip_DeleteFiles" xml:space="preserve">
     <value>Supprimer le(s) fichier(s)</value>
     <comment>0.0.8-beta</comment>
+  </data>
+  <data name="ToolTip_EnterMinimumPowderNeededInBuildArea" xml:space="preserve">
+    <value>Entrez ici la quantité min. de poudre nécessaire (litre)</value>
+    <comment>1.1.7-beta</comment>
   </data>
   <data name="ToolTip_FixedValueForMachineHourRate" xml:space="preserve">
     <value>Si cette option est cochée, vous pouvez saisir une valeur fixe pour votre taux d'heures machine, par exemple, si vous avez déjà calculé votre taux d'heures machine dans un autre outil / feuille Excel.</value>
@@ -3423,6 +4083,10 @@
   <data name="ToolTip_TranslateProjectUrl" xml:space="preserve">
     <value>Aidez-nous à traduire cet outil dans votre langue !</value>
     <comment>0.0.8-beta</comment>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="Transparency" xml:space="preserve">
     <value>Transparence</value>
@@ -3480,6 +4144,10 @@
     <value>Utiliser une valeur fixe pour le taux horaire de la machine ?</value>
     <comment>0.1.0-beta</comment>
   </data>
+  <data name="UseNewUpdateManager" xml:space="preserve">
+    <value>Utiliser le nouveau gestionnaire de mise à jour ?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="UserAgreedToEULA" xml:space="preserve">
     <value>L'utilisateur a accepté le Contrat de licence d'utilisateur final (CLUF).</value>
   </data>
@@ -3501,9 +4169,21 @@
     <value>Utiliser l'imprimante sélectionnée</value>
     <comment>0.0.9-beta</comment>
   </data>
+  <data name="UseSelectedServer" xml:space="preserve">
+    <value>Utiliser le serveur sélectionné</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="UseSelectedSupplier" xml:space="preserve">
     <value>Utiliser le fournisseur sélectionné</value>
     <comment>0.1.0-beta</comment>
+  </data>
+  <data name="UseSelection" xml:space="preserve">
+    <value>Utiliser la sélection</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="UseVolumeInsteadOfWeightForCalculation" xml:space="preserve">
+    <value>Utiliser le volume au lieu du poids pour le calcul ?</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="UstId" xml:space="preserve">
     <value>UstId</value>
@@ -3518,6 +4198,10 @@
   <data name="ValidNumberFrom10Till100" xml:space="preserve">
     <value>Veuillez entrer une valeur entre 10 et 100 !</value>
     <comment>0.0.2-beta</comment>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Valeur</value>
+    <comment>1.1.4-beta</comment>
   </data>
   <data name="ValueCannotBeEmpty" xml:space="preserve">
     <value>La valeur ne peut pas être vide !</value>
@@ -3559,6 +4243,10 @@
   <data name="VisibleApplicationsInTheBar" xml:space="preserve">
     <value>Applications visibles dans la barre des tâches</value>
   </data>
+  <data name="Volume" xml:space="preserve">
+    <value>Volume</value>
+    <comment>1.1.4-beta</comment>
+  </data>
   <data name="Voxelizer2" xml:space="preserve">
     <value>Voxelizer 2</value>
     <comment>0.0.9-beta</comment>
@@ -3575,6 +4263,10 @@
     <value>Ne cochez cette option que si votre adresse est sécurisée (https://). Sinon, cela peut entraîner des problèmes de connexion !</value>
     <comment>0.0.8-beta</comment>
   </data>
+  <data name="WashingCosts" xml:space="preserve">
+    <value>Frais de nettoyage</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="Watermark_OctoPrintApiKey" xml:space="preserve">
     <value>Entrez votre clé api...</value>
     <comment>0.1.0-beta</comment>
@@ -3586,6 +4278,14 @@
   <data name="WebCam" xml:space="preserve">
     <value>WebCam</value>
     <comment>0.0.8-beta</comment>
+  </data>
+  <data name="Weight" xml:space="preserve">
+    <value>Poids</value>
+    <comment>1.1.4-beta</comment>
+  </data>
+  <data name="WeightInGramm" xml:space="preserve">
+    <value>Poids en grammes</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="Window" xml:space="preserve">
     <value>Fenêtre</value>

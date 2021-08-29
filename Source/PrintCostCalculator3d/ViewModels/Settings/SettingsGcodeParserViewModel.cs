@@ -1,26 +1,24 @@
-﻿using MahApps.Metro.Controls.Dialogs;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Threading.Tasks;
-using System.Windows.Input;
+﻿using AndreasReitberger.Models;
+using MahApps.Metro.Controls.Dialogs;
 using PrintCostCalculator3d.Models.Settings;
-using PrintCostCalculator3d.Models.Slicer;
+using PrintCostCalculator3d.Resources.Localization;
 using PrintCostCalculator3d.Utilities;
 using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Windows.Input;
 
 namespace PrintCostCalculator3d.ViewModels
 {
     class SettingsGcodeParserViewModel : ViewModelBase
     {
         #region Variables
-        private readonly IDialogCoordinator _dialogCoordinator;
-        private readonly bool _isLoading;
+        //readonly IDialogCoordinator _dialogCoordinator;
+        //readonly bool _isLoading;
         #endregion
 
         #region Properties
-        
-
-        private bool _PreferValuesInCommentsFromKnownSlicers;
+        bool _PreferValuesInCommentsFromKnownSlicers;
         public bool PreferValuesInCommentsFromKnownSlicers
         {
             get => _PreferValuesInCommentsFromKnownSlicers;
@@ -28,7 +26,7 @@ namespace PrintCostCalculator3d.ViewModels
             {
                 if (value == _PreferValuesInCommentsFromKnownSlicers)
                     return;
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.GcodeParser_PreferValuesInCommentsFromKnownSlicers = value;
 
                 _PreferValuesInCommentsFromKnownSlicers = value;
@@ -36,7 +34,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private int _backgroundJobInterval;
+        int _backgroundJobInterval;
         public int BackgroundJobInterval
         {
             get => _backgroundJobInterval;
@@ -45,7 +43,7 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _backgroundJobInterval)
                     return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.General_BackgroundJobInterval = value;
 
                 _backgroundJobInterval = value;
@@ -53,7 +51,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private SlicerPrinterConfiguration _printerConfig;
+        SlicerPrinterConfiguration _printerConfig;
         public SlicerPrinterConfiguration PrinterConfig
         {
             get => _printerConfig;
@@ -61,29 +59,34 @@ namespace PrintCostCalculator3d.ViewModels
             {
                 if (value == _printerConfig)
                     return;
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.GcodeParser_PrinterConfig = value;
                 _printerConfig = value;
                 OnPropertyChanged();
             }
         }
 
-        private ObservableCollection<SlicerPrinterConfiguration> _printerConfigs;
+        ObservableCollection<SlicerPrinterConfiguration> _printerConfigs = new();
         public ObservableCollection<SlicerPrinterConfiguration> PrinterConfigs
         {
             get => _printerConfigs;
             set
             {
                 if (value == _printerConfigs)
+                {
                     return;
-                if (!_isLoading)
+                }
+                if (!IsLoading)
+                {
                     SettingsManager.Current.GcodeParser_PrinterConfigs = value;
+                }
+
                 _printerConfigs = value;
                 OnPropertyChanged();
             }
         }
         
-        private string _name = "";
+        string _name = "";
         public string Name
         {
             get => _name;
@@ -95,8 +98,8 @@ namespace PrintCostCalculator3d.ViewModels
                 OnPropertyChanged();
             }
         }
-        private float _aMax_xy = 1000;
-        public float AMax_xy
+        double _aMax_xy = 1000;
+        public double AMax_xy
         {
             get => _aMax_xy;
             set
@@ -108,8 +111,8 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private float _aMax_z = 1000;
-        public float AMax_z
+        double _aMax_z = 1000;
+        public double AMax_z
         {
             get => _aMax_z;
             set
@@ -121,8 +124,8 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private float _aMax_e = 5000;
-        public float AMax_e
+        double _aMax_e = 5000;
+        public double AMax_e
         {
             get => _aMax_e;
             set
@@ -134,8 +137,8 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private float _aMax_eExtrude = 1250;
-        public float AMax_eExtrude
+        double _aMax_eExtrude = 1250;
+        public double AMax_eExtrude
         {
             get => _aMax_eExtrude;
             set
@@ -147,8 +150,8 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private float _aMax_eRetract = 1250;
-        public float AMax_eRetract
+        double _aMax_eRetract = 1250;
+        public double AMax_eRetract
         {
             get => _aMax_eRetract;
             set
@@ -160,8 +163,8 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private float _printDurationCorrection = 1;
-        public float PrintDurationCorrection
+        double _printDurationCorrection = 1;
+        public double PrintDurationCorrection
         {
             get => _printDurationCorrection;
             set
@@ -182,25 +185,21 @@ namespace PrintCostCalculator3d.ViewModels
         #region Constructor, LoadSettings
         public SettingsGcodeParserViewModel()
         {
-            _isLoading = true;
-
+            IsLoading = true;
             LoadSettings();
-
-
-            _isLoading = false;
+            IsLoading = false;
         }
         public SettingsGcodeParserViewModel(IDialogCoordinator instance)
         {
-            _dialogCoordinator = instance;
-            _isLoading = true;
+            _ = instance;
 
+            IsLoading = true;
             LoadSettings();
-
-            _isLoading = false;
+            IsLoading = false;
         }
 
 
-        private void LoadSettings()
+        void LoadSettings()
         {
             PreferValuesInCommentsFromKnownSlicers = SettingsManager.Current.GcodeParser_PreferValuesInCommentsFromKnownSlicers;
             PrinterConfigs = SettingsManager.Current.GcodeParser_PrinterConfigs;
@@ -212,15 +211,14 @@ namespace PrintCostCalculator3d.ViewModels
         #region ICommands & Actions
         public ICommand SelectedPrinterConfigChangedCommand
         {
-            get { return new RelayCommand(async(p) => await SelectedPrinterConfigChangedAction(p)); }
+            get { return new RelayCommand((p) => SelectedPrinterConfigChangedAction(p)); }
         }
 
-        private async Task SelectedPrinterConfigChangedAction(object parameter)
+        void SelectedPrinterConfigChangedAction(object parameter)
         {
             try
             {
-                SlicerPrinterConfiguration config = parameter as SlicerPrinterConfiguration;
-                if(config != null)
+                if (parameter is SlicerPrinterConfiguration config)
                 {
                     Name = config.PrinterName;
                     PrintDurationCorrection = config.PrintDurationCorrection;
@@ -233,27 +231,24 @@ namespace PrintCostCalculator3d.ViewModels
             }
             catch(Exception exc)
             {
-
+                logger.Error(string.Format(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message));
             }
         }
         public ICommand DeleteCommand
         {
-            get { return new RelayCommand(async(p) => await DeleteAction()); }
+            get { return new RelayCommand((p) => DeleteAction()); }
         }
 
-        private async Task DeleteAction()
+        void DeleteAction()
         {
-            PrinterConfigs.Remove(PrinterConfig);
-            if (PrinterConfigs.Count > 0)
-                PrinterConfig = PrinterConfigs[0];
-            else
-                PrinterConfig = null;
+            _ = PrinterConfigs.Remove(PrinterConfig);
+            PrinterConfig = PrinterConfigs.Count > 0 ? PrinterConfigs[0] : null;
         }
         public ICommand AddCommand
         {
-            get { return new RelayCommand(async(p) => await AddAction()); }
+            get { return new RelayCommand((p) => AddAction(), p => AddCommand_CanExecute()); }
         }
-        private bool AddCommand_CanExecute()
+        bool AddCommand_CanExecute()
         {
             bool execute =
                 AMax_z > 0 &&
@@ -263,7 +258,7 @@ namespace PrintCostCalculator3d.ViewModels
                 AMax_eRetract > 0;
             return execute;
         }
-        private async Task AddAction()
+        void AddAction()
         {
             PrinterConfig = new SlicerPrinterConfiguration()
             {

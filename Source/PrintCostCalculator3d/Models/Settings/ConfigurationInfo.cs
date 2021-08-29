@@ -21,7 +21,7 @@ namespace PrintCostCalculator3d.Models.Settings
         public bool IsTransparencyEnabled { get; set; }
         public bool ShowSettingsResetNoteOnStartup { get; set; }
 
-        private bool _isDialogOpen;
+        bool _isDialogOpen;
         public bool FixAirspace
         {
             get => _isDialogOpen;

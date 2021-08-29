@@ -10,10 +10,10 @@ namespace PrintCostCalculator3d.Models.Settings
 {
     public static class AppearanceManager
     {
-        private static readonly string ThemesFilePath = Path.Combine(ConfigurationManager.Current.ExecutionPath, "Themes");
+        static readonly string ThemesFilePath = Path.Combine(ConfigurationManager.Current.ExecutionPath, "Themes");
 
-        private const string CostomThemeFileExtension = @".Theme.xaml";
-        private const string CostomAccentFileExtension = @".Accent.xaml";
+        const string CostomThemeFileExtension = @".Theme.xaml";
+        const string CostomAccentFileExtension = @".Accent.xaml";
 
         public static MetroDialogSettings MetroDialog = new MetroDialogSettings();
 

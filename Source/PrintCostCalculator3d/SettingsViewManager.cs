@@ -14,7 +14,6 @@ namespace PrintCostCalculator3d
             new SettingsViewInfo(SettingsViewName.Appearance, new PackIconMaterial { Kind = PackIconMaterialKind.Palette }, Group.General),
             new SettingsViewInfo(SettingsViewName.Language, new PackIconMaterial { Kind = PackIconMaterialKind.Translate }, Group.General),
             new SettingsViewInfo(SettingsViewName.Update, new PackIconMaterial { Kind = PackIconMaterialKind.Download }, Group.General),
-            //new SettingsViewInfo(Name.ImportExport, new PackIconMaterial { Kind = PackIconMaterialKind.Import }, Group.General),
             new SettingsViewInfo(SettingsViewName.Calculation, new PackIconMaterial { Kind = PackIconMaterialKind.Calculator }, Group.General),
             new SettingsViewInfo(SettingsViewName.Printer, new PackIconMaterial { Kind = PackIconMaterialKind.Printer3d }, Group.General),
             new SettingsViewInfo(SettingsViewName.Settings, new PackIconMaterialLight { Kind = PackIconMaterialLightKind.Cog }, Group.General),
@@ -23,8 +22,6 @@ namespace PrintCostCalculator3d
             new SettingsViewInfo(SettingsViewName.Slicer,new PackIconModern{ Kind = PackIconModernKind.Slice }, Group.Applications),
             new SettingsViewInfo(SettingsViewName.Gcode,new PackIconModern{ Kind = PackIconModernKind.PageCode }, Group.Applications),
 
-            // Exporter
-            new SettingsViewInfo(SettingsViewName.ExcelExporter,new PackIconModern{ Kind = PackIconModernKind.OfficeExcel }, Group.Exporter),
 
             // License
             new SettingsViewInfo(SettingsViewName.EULA,new PackIconMaterial{ Kind = PackIconMaterialKind.AccountCheckOutline }, Group.License),
@@ -46,8 +43,7 @@ namespace PrintCostCalculator3d
                     return Resources.Localization.Strings.SettingsNameWindow;
                 case SettingsViewName.Appearance:
                     return Resources.Localization.Strings.SettingsNameAppearance;
-                case SettingsViewName.ExcelExporter:
-                    return Resources.Localization.Strings.SettingsNameExcelExporter;
+                
                 case SettingsViewName.Language:
                     return Resources.Localization.Strings.SettingsNameLanguage;
                 case SettingsViewName.Update:

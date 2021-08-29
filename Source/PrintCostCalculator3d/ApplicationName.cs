@@ -2,8 +2,9 @@
 {
     public enum ApplicationName
     {
-        None,     
-        _3dPrintingCalcualtion,
+        None,
+        Dashboard,
+        _3dPrintingCalcualtion, // Replaced by dashboard
         _3dPrintingPrinter,
         _3dPrintingMaterial,
         EventLog

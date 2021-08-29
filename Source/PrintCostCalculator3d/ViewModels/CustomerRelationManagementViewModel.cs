@@ -1,42 +1,31 @@
-﻿using log4net;
-using MahApps.Metro.Controls.Dialogs;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
+﻿using MahApps.Metro.Controls.Dialogs;
 using PrintCostCalculator3d.Models;
 using PrintCostCalculator3d.Models.Settings;
 using PrintCostCalculator3d.Resources.Localization;
 using PrintCostCalculator3d.Utilities;
+using System;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Windows.Input;
 
 namespace PrintCostCalculator3d.ViewModels
 {
     public class CustomerRelationManagementViewModel : ViewModelBase
     {
         #region Variables
-        private readonly IDialogCoordinator _dialogCoordinator;
-        private static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        private readonly bool _isLoading;
+        readonly IDialogCoordinator _dialogCoordinator;
         #endregion
 
         #region Properties
-        public bool isLicenseValid
-        {
-            get => false;
-        }
 
-        private ObservableCollection<Customer> _customers = new ObservableCollection<Customer>();
+        ObservableCollection<Customer> _customers = new ObservableCollection<Customer>();
         public ObservableCollection<Customer> Customers
         {
             get => _customers;
             set
             {
                 if (_customers == value) return;
-                if(!_isLoading)
+                if(!IsLoading)
                 {
 
                 }
@@ -47,7 +36,6 @@ namespace PrintCostCalculator3d.ViewModels
 
         #endregion
 
-
         #region Constructor
         public CustomerRelationManagementViewModel(IDialogCoordinator instance)
         {
@@ -56,14 +44,13 @@ namespace PrintCostCalculator3d.ViewModels
         }
         #endregion
 
-
         #region ICommand & Actions
 
         public ICommand GoProCommand
         {
             get => new RelayCommand(p => GoProAction());
         }
-        private async void GoProAction()
+        async void GoProAction()
         {
             try
             {
@@ -93,7 +80,7 @@ namespace PrintCostCalculator3d.ViewModels
         #region Methods
         public void OnViewVisible()
         {
-            OnPropertyChanged(nameof(isLicenseValid));
+            OnPropertyChanged(nameof(IsLicenseValid));
         }
 
         public void OnViewHide()

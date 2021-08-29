@@ -11,7 +11,7 @@ namespace PrintCostCalculator3d.Validators
 {
     public class GreaterThanZeroValidator : ValidationRule
     {
-        private bool _allowZero = false;
+        bool _allowZero = false;
         public bool AllowZero
         {   
             get => _allowZero; 

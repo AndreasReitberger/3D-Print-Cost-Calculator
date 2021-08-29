@@ -10,9 +10,9 @@ namespace PrintCostCalculator3d.Utilities
     {
         #region Fields 
 
-        private readonly Action<object> _execute;
+        readonly Action<object> _execute;
 
-        private readonly Predicate<object> _canExecute;
+        readonly Predicate<object> _canExecute;
         #endregion
 
         #region Constructors 

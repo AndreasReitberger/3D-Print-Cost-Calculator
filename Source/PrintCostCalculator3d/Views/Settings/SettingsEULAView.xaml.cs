@@ -22,7 +22,7 @@ namespace PrintCostCalculator3d.Views
     /// </summary>
     public partial class SettingsEULAView : UserControl
     {
-        private readonly SettingsEULAViewModel _viewModel = new SettingsEULAViewModel(DialogCoordinator.Instance);
+        readonly SettingsEULAViewModel _viewModel = new SettingsEULAViewModel(DialogCoordinator.Instance);
         public SettingsEULAView()
         {
             InitializeComponent();

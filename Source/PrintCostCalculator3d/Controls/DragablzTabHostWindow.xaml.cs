@@ -24,10 +24,10 @@ namespace PrintCostCalculator3d.Controls
 
         #region Variables
         public IInterTabClient InterTabClient { get; }
-        private readonly string _applicationName;
-        //private readonly ApplicationName _applicationName;
+        readonly string _applicationName;
+        //readonly ApplicationName _applicationName;
 
-        private string _applicationTitle;
+        string _applicationTitle;
         public string ApplicationTitle
         {
             get => _applicationTitle;
@@ -41,7 +41,7 @@ namespace PrintCostCalculator3d.Controls
             }
         }
 
-        private bool _isPuTTYControl;
+        bool _isPuTTYControl;
         public bool IsPuTTYControl
         {
             get => _isPuTTYControl;
@@ -89,7 +89,7 @@ namespace PrintCostCalculator3d.Controls
         #region ICommand & Actions
         public ItemActionCallback CloseItemCommand => CloseItemAction;
 
-        private void CloseItemAction(ItemActionCallbackArgs<TabablzControl> args)
+        void CloseItemAction(ItemActionCallbackArgs<TabablzControl> args)
         {
             // Switch between application identifiert...
             /*
@@ -139,21 +139,21 @@ namespace PrintCostCalculator3d.Controls
         #endregion
 
         #region Events
-        private void SettingsManager_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        void SettingsManager_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
         }
         #endregion
 
         #region Window helper
         // Move the window when the user hold the title...
-        private void HeaderBorder_MouseDown(object sender, MouseButtonEventArgs e)
+        void HeaderBorder_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
                 DragMove();
         }
         #endregion
 
-        private void MetroWindow_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        void MetroWindow_Loaded(object sender, System.Windows.RoutedEventArgs e)
         {
             foreach (var item in TabsContainer.Items)
             {

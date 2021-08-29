@@ -1,29 +1,23 @@
-﻿using log4net;
-using MahApps.Metro.Controls.Dialogs;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
+﻿using MahApps.Metro.Controls.Dialogs;
 using PrintCostCalculator3d.Models.Settings;
 using PrintCostCalculator3d.Models.Slicer;
 using PrintCostCalculator3d.Resources.Localization;
 using PrintCostCalculator3d.Utilities;
+using System;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Windows.Input;
 
 namespace PrintCostCalculator3d.ViewModels.Slicer
 {
     class NewSlicerCommandDialogViewModel : ViewModelBase
     {
         #region Variables
-        private readonly IDialogCoordinator _dialogCoordinator;
-        private static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        private readonly bool _isLoading;
+        readonly IDialogCoordinator _dialogCoordinator;
         #endregion
 
         #region Properties
-        private bool _isEdit;
+        bool _isEdit;
         public bool IsEdit
         {
             get => _isEdit;
@@ -37,7 +31,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             }
         }
 
-        private Models.Slicer.Slicer _slicerName;
+        Models.Slicer.Slicer _slicerName;
         public Models.Slicer.Slicer SlicerName
         {
             get => _slicerName;
@@ -45,7 +39,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             {
                 if (_slicerName == value) return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.Slicer_LastUsed = value;
 
                 _slicerName = value;
@@ -55,7 +49,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             }
         }
 
-        private string _name = string.Empty;
+        string _name = string.Empty;
         public string Name
         {
             get => _name;
@@ -69,7 +63,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             }
         }
 
-        private bool _autoAddFilePath = true;
+        bool _autoAddFilePath = true;
         public bool AutoAddFilePath
         {
             get => _autoAddFilePath;
@@ -82,7 +76,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
                 
             }
         }
-        private string _slicerCommand = string.Empty;
+        string _slicerCommand = string.Empty;
         public string SlicerCommand
         {
             get => _slicerCommand;
@@ -96,7 +90,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             }
         }
 
-        private string _outputFileFormat = "([filename])+([A-Za-z0-9-_.])+(.gcode|.gco|.gc)$";
+        string _outputFileFormat = "([filename])+([A-Za-z0-9-_.])+(.gcode|.gco|.gc)$";
         public string OutputFileFormat
         {
             get => _outputFileFormat;
@@ -112,7 +106,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
         #endregion
 
         #region Slicers
-        private ObservableCollection<Models.Slicer.Slicer> _slicers = new ObservableCollection<Models.Slicer.Slicer>();
+        ObservableCollection<Models.Slicer.Slicer> _slicers = new ObservableCollection<Models.Slicer.Slicer>();
         public ObservableCollection<Models.Slicer.Slicer> Slicers
         {
             get => _slicers;
@@ -135,11 +129,14 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
 
             SaveCommand = new RelayCommand(p => saveCommand(this));
             CancelCommand = new RelayCommand(p => cancelHandler(this));
+
+            IsLicenseValid = false;
+
             try
             {
-                _isLoading = true;
+                IsLoading = true;
                 LoadSettings();
-                _isLoading = false;
+                IsLoading = false;
 
                 IsEdit = cmd != null;
                 try
@@ -176,15 +173,18 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             SlicerCommand cmd = null
             )
         {
-            this._dialogCoordinator = dialogCoordinator;
+            _dialogCoordinator = dialogCoordinator;
 
             SaveCommand = new RelayCommand(p => saveCommand(this));
             CancelCommand = new RelayCommand(p => cancelHandler(this));
+
+            IsLicenseValid = false;
+
             try
             {
-                _isLoading = true;
+                IsLoading = true;
                 LoadSettings();
-                _isLoading = false;
+                IsLoading = false;
 
                 IsEdit = cmd != null;
                 try
@@ -214,7 +214,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
         }
 
 
-        private void LoadSettings()
+        void LoadSettings()
         {
             Slicers = SettingsManager.Current.Slicers;
             if (Slicers.Count > 0)
@@ -244,10 +244,6 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
         #endregion
 
         #region Methods
-
-        #endregion
-
-        #region Events
 
         #endregion
 

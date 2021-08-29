@@ -1,0 +1,945 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HelixToolkit.Wpf.SharpDX.Assimp</name>
+    </assembly>
+    <members>
+        <member name="T:HelixToolkit.Wpf.SharpDX.Assimp.MaterialType">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.MaterialType.Auto">
+            <summary>
+                Automatic determine material type
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.MaterialType.BlinnPhong">
+            <summary>
+                The blinn phong
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.MaterialType.PBR">
+            <summary>
+                The PBR
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.MaterialType.Diffuse">
+            <summary>
+                The diffuse
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.MaterialType.VertexColor">
+            <summary>
+                The vertex color
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.MaterialType.Normal">
+            <summary>
+                The normal
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.MaterialType.Position">
+            <summary>
+                The position
+            </summary>
+        </member>
+        <member name="T:HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration.AssimpPostProcessSteps">
+            <summary>
+                The default post process steps for Assimp Importer. <see cref="F:Assimp.PostProcessSteps.FlipUVs" /> must be used for
+                DirectX texture sampling
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration.AssimpPropertyConfig">
+            <summary>
+                The assimp property configuration
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration.CullMode">
+            <summary>
+                The cull mode
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration.EnableParallelProcessing">
+            <summary>
+                The enable parallel processing, such as converting Assimp meshes into HelixToolkit meshes
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration.ExternalContext">
+            <summary>
+                The external context. Can be use to do more customized configuration for Assimp Importer
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration.ForceCullMode">
+            <summary>
+                Force cull mode for all imported meshes. Otherwise automatically set cull mode according to the materials.
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration.IgnoreEmissiveColor">
+            <summary>
+            Ignores emissive color during importing.
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration.IgnoreAmbientColor">
+            <summary>
+            Ignores the ambient color during importing.
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration.ImportMaterialType">
+            <summary>
+                Force to use material type. Default is Auto
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration.ImportAnimations">
+            <summary>
+            Import animations
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration.CreateSkeletonForBoneSkinningMesh">
+            <summary>
+            The create skeleton mesh for bone skinning
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration.SkeletonMaterial">
+            <summary>
+            The skeleton material
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration.SkeletonEffects">
+            <summary>
+            The skeleton effects such as xray effects
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration.SkeletonSizeScale">
+            <summary>
+            The skeleton size scale
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration.AddsPostEffectForSkeleton">
+            <summary>
+            The adds post effect for skeleton
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration.FlipWindingOrder">
+            <summary>
+            The flip triangle winding order during import
+            </summary>
+        </member>
+        <member name="P:HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration.Logger">
+            <summary>
+            Gets or sets the logger.
+            </summary>
+            <value>
+            The logger.
+            </value>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration.GlobalScale">
+            <summary>
+            The global scale for model
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration.TickesPerSecond">
+            <summary>
+            The tickes per second. Only used when file does not contains tickes per second for animation.
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration.IsSourceMatrixColumnMajor">
+            <summary>
+            Indicate if source model transform matrix column major. Note: Most of software exported model defaults to be column major in transform matrix
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration.BuildOctree">
+            <summary>
+            The build octree automatically during loading.
+            </summary>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration"/> class.
+            </summary>
+        </member>
+        <member name="T:HelixToolkit.Wpf.SharpDX.Assimp.ExportConfiguration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ExportConfiguration.PostProcessing">
+            <summary>
+            The post processing
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ExportConfiguration.AssimpPropertyConfig">
+            <summary>
+                The assimp property configuration
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ExportConfiguration.EnableParallelProcessing">
+            <summary>
+                The enable parallel processing, such as converting Assimp meshes into HelixToolkit meshes
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ExportConfiguration.ExternalContext">
+            <summary>
+                The external context. Can be use to do more customized configuration for Assimp Importer
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ExportConfiguration.GlobalScale">
+            <summary>
+            The global scale for model
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ExportConfiguration.TickesPerSecond">
+            <summary>
+            The tickes per second. Only used when file does not contains tickes per second for animation.
+            </summary>
+        </member>
+        <member name="P:HelixToolkit.Wpf.SharpDX.Assimp.ExportConfiguration.Logger">
+            <summary>
+            Gets or sets the logger.
+            </summary>
+            <value>
+            The logger.
+            </value>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ExportConfiguration.FlipWindingOrder">
+            <summary>
+            The flip triangle winding order during import
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.ExportConfiguration.ToSourceMatrixColumnMajor">
+            <summary>
+            Convert transform matrix to column major. Note: Most of software exported model defaults to be column major in transform matrix
+            </summary>
+        </member>
+        <member name="T:HelixToolkit.Wpf.SharpDX.Assimp.ErrorCode">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.SupportedFormats">
+            <summary>
+                Gets the supported formats.
+            </summary>
+            <value>
+                The supported formats.
+            </value>
+        </member>
+        <member name="P:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.SupportedFormatsString">
+            <summary>
+                Gets the supported formats string.
+            </summary>
+            <value>
+                The supported formats string.
+            </value>
+        </member>
+        <member name="P:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.Configuration">
+            <summary>
+            Gets or sets the configuration.
+            </summary>
+            <value>
+            The configuration.
+            </value>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.ExportToFile(System.String,HelixToolkit.Wpf.SharpDX.Assimp.HelixToolkitScene,System.String)">
+            <summary>
+            Exports to file.
+            </summary>
+            <param name="filePath">The file path.</param>
+            <param name="scene">The scene.</param>
+            <param name="formatId">The format identifier. <see cref="P:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.SupportedFormats"/></param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.ExportToFile(System.String,HelixToolkit.Wpf.SharpDX.Model.Scene.SceneNode,System.String)">
+            <summary>
+            Exports to file.
+            </summary>
+            <param name="filePath">The file path.</param>
+            <param name="root">The root.</param>
+            <param name="formatId">The format identifier. <see cref="P:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.SupportedFormats"/></param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.ExportToBlob(HelixToolkit.Wpf.SharpDX.Model.Scene.SceneNode,System.String,Assimp.ExportDataBlob@)">
+            <summary>
+            Exports to BLOB.
+            </summary>
+            <param name="root">The root.</param>
+            <param name="formatId">The format identifier.</param>
+            <param name="blob">The BLOB.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.ToAssimpScene(HelixToolkit.Wpf.SharpDX.Model.Scene.SceneNode,Assimp.Scene@)">
+            <summary>
+            Convert a HelixToolkit scene graph to the assimp scene.
+            </summary>
+            <param name="root">The HelixToolkit scene graph root node.</param>
+            <param name="assimpScene">The assimp scene.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.Log``1(HelixToolkit.Logger.LogLevel,``0,System.String,System.Int32)">
+            <summary>
+            Logs the specified level.
+            </summary>
+            <typeparam name="Type">The type of the ype.</typeparam>
+            <param name="level">The level.</param>
+            <param name="msg">The MSG.</param>
+            <param name="caller">The caller.</param>
+            <param name="sourceLineNumber">The source line number.</param>
+        </member>
+        <member name="T:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.HelixInternalScene">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.HelixInternalScene.Animations">
+            <summary>
+            The animations
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.HelixInternalScene.AssimpScene">
+            <summary>
+            The assimp scene
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.HelixInternalScene.Materials">
+            <summary>
+                The materials
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.HelixInternalScene.Meshes">
+            <summary>
+                The meshes
+            </summary>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.GetMaterialFromNode(HelixToolkit.Wpf.SharpDX.Model.Scene.SceneNode,HelixToolkit.Wpf.SharpDX.Model.MaterialCore@)">
+            <summary>
+            Gets the material from node. Currently only supports <see cref="T:HelixToolkit.Wpf.SharpDX.Model.Scene.MaterialGeometryNode"/>
+            </summary>
+            <param name="node">The node.</param>
+            <param name="material">The material.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.AddProperties(HelixToolkit.Wpf.SharpDX.Model.PhongMaterialCore,Assimp.Material)">
+            <summary>
+            Adds the properties.
+            </summary>
+            <param name="phong">The phong.</param>
+            <param name="assimpMaterial">The assimp material.</param>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.AddProperties(HelixToolkit.Wpf.SharpDX.Model.PBRMaterialCore,Assimp.Material)">
+            <summary>
+            Adds the properties.
+            </summary>
+            <param name="pbr">The PBR.</param>
+            <param name="assimpMaterial">The assimp material.</param>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.AddProperties(HelixToolkit.Wpf.SharpDX.Model.DiffuseMaterialCore,Assimp.Material)">
+            <summary>
+            Adds the properties.
+            </summary>
+            <param name="diffuse">The diffuse.</param>
+            <param name="assimpMaterial">The assimp material.</param>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.OnCreateAssimpMaterial(HelixToolkit.Wpf.SharpDX.Model.MaterialCore)">
+            <summary>
+            Called when [create assimp material].
+            </summary>
+            <param name="material">The material.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.GetGeometryFromNode(HelixToolkit.Wpf.SharpDX.Model.Scene.SceneNode,HelixToolkit.Wpf.SharpDX.Geometry3D@)">
+            <summary>
+            Gets the geometry from node. Currently only supports <see cref="T:HelixToolkit.Wpf.SharpDX.Model.Scene.GeometryNode"/>
+            </summary>
+            <param name="node">The node.</param>
+            <param name="geometry">The geometry.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.OnCreateMeshInfo(HelixToolkit.Wpf.SharpDX.Model.Scene.GeometryNode)">
+            <summary>
+            Creates the mesh information. Since Assimp requires each mesh has one material only.
+            Geometry has to be duplicated if they are using different material
+            </summary>
+            <param name="geoNode">The geo node.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.OnCreateAssimpMesh(HelixToolkit.Wpf.SharpDX.Assimp.Exporter.MeshInfo)">
+            <summary>
+            Called when [create assimp mesh] from <see cref="T:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.MeshInfo"/>.
+            </summary>
+            <param name="info">The information.</param>
+            <returns></returns>
+        </member>
+        <member name="T:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.MeshInfo">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.MeshInfo.AssimpMesh">
+            <summary>
+                The Assimp mesh
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.MeshInfo.MaterialMeshKey">
+            <summary>
+            The material mesh key
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.MeshInfo.Mesh">
+            <summary>
+                The Helix mesh
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.MeshInfo.MeshIndex">
+            <summary>
+            The mesh index
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.MeshInfo.MaterialIndex">
+            <summary>
+            The material index
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.MeshInfo.Name">
+            <summary>
+            The name
+            </summary>
+        </member>
+        <member name="P:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.MeshInfo.Bones">
+            <summary>
+            The bones if have
+            </summary>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.MeshInfo.#ctor(System.UInt64,HelixToolkit.Wpf.SharpDX.Geometry3D,System.String,System.Int32,System.Int32,HelixToolkit.Wpf.SharpDX.Animations.Bone[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:HelixToolkit.Wpf.SharpDX.Assimp.Exporter.MeshInfo"/> class.
+            </summary>
+            <param name="materialMeshKey">The material mesh key.</param>
+            <param name="mesh">The mesh.</param>
+            <param name="name">The name.</param>
+            <param name="meshIndex">Index of the mesh.</param>
+            <param name="materialIndex">Index of the material.</param>
+            <param name="bones">The bones.</param>
+        </member>
+        <member name="T:HelixToolkit.Wpf.SharpDX.Assimp.Extensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Extensions.ToSharpDXMatrix(Assimp.Matrix4x4,System.Boolean)">
+            <summary>
+            To the sharp dx matrix. Already transposed after this function
+            </summary>
+            <param name="m">The m.</param>
+            <param name="isColumnMajor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Extensions.ToAssimpMatrix(SharpDX.Matrix,System.Boolean)">
+            <summary>
+            To the assimp matrix. Already transposed after this function
+            </summary>
+            <param name="m">The m.</param>
+            <param name="toColumnMajor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Extensions.ToSharpDXVector3(Assimp.Vector3D)">
+            <summary>
+            To the sharp dx vector3.
+            </summary>
+            <param name="v">The v.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Extensions.ToAssimpVector3D(SharpDX.Vector3)">
+            <summary>
+            To the assimp vector3d.
+            </summary>
+            <param name="v">The v.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Extensions.ToSharpDXVector2(Assimp.Vector2D)">
+            <summary>
+            To the sharp dx vector2.
+            </summary>
+            <param name="v">The v.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Extensions.ToAssimpVector2D(SharpDX.Vector2)">
+            <summary>
+            To the assimp vector2d.
+            </summary>
+            <param name="v">The v.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Extensions.ToAssimpVector3D(SharpDX.Vector2)">
+            <summary>
+            To the assimp vector3d.
+            </summary>
+            <param name="v">The v.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Extensions.ToSharpDXVector2(Assimp.Vector3D)">
+            <summary>
+            To the sharp dx vector2.
+            </summary>
+            <param name="v">The v.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Extensions.ToSharpDXColor4(Assimp.Color4D)">
+            <summary>
+            To the sharp dx color4.
+            </summary>
+            <param name="v">The v.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Extensions.ToAssimpColor4D(SharpDX.Color4,System.Single)">
+            <summary>
+            To the assimp color4d.
+            </summary>
+            <param name="v">The v.</param>
+            <param name="alpha"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Extensions.ToSharpDXQuaternion(Assimp.Quaternion)">
+            <summary>
+            To the sharp dx quaternion.
+            </summary>
+            <param name="q">The q.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Extensions.ToAssimpQuaternion(SharpDX.Quaternion)">
+            <summary>
+            To the assimp quaternion.
+            </summary>
+            <param name="q">The q.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Extensions.ToHelixUVTransform(Assimp.UVTransform)">
+            <summary>
+            To the Helix UVTransform.
+            </summary>
+            <param name="transform">The transform.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Extensions.ToHelixMetadataType(Assimp.MetaDataType)">
+            <summary>
+            To the type of the helix metadata.
+            </summary>
+            <param name="type">The type.</param>
+            <returns></returns>
+            <exception cref="T:System.NotSupportedException">Type {type} is not supported.</exception>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Extensions.ToAssimpMetadataType(HelixToolkit.Wpf.SharpDX.Model.MetaDataType)">
+            <summary>
+            To the type of the assimp metadata.
+            </summary>
+            <param name="type">The type.</param>
+            <returns></returns>
+            <exception cref="T:System.NotSupportedException">Type {type} is not supported.</exception>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Extensions.ToHelixMetadata(Assimp.Metadata)">
+            <summary>
+            To the helix metadata.
+            </summary>
+            <param name="m">The m.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Extensions.ToAssimpMetadata(HelixToolkit.Wpf.SharpDX.Model.Metadata)">
+            <summary>
+            To the assimp metadata.
+            </summary>
+            <param name="m">The m.</param>
+            <returns></returns>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.GLTFMatKeys.AI_MATKEY_GLTF_BASECOLOR_FACTOR">
+            <summary>
+                The ai matkey GLTF basecolor factor for PBR material
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.GLTFMatKeys.AI_MATKEY_GLTF_METALLIC_FACTOR">
+            <summary>
+                The ai matkey GLTF metallic factor for PBR material
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.GLTFMatKeys.AI_MATKEY_GLTF_METALLICROUGHNESSAO_TEXTURE">
+            <summary>
+                The ai matkey GLTF metallic, roughness, ambient occlusion texture
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.GLTFMatKeys.AI_MATKEY_GLTF_ROUGHNESS_FACTOR">
+            <summary>
+                The ai matkey GLTF roughness factor for PBR material
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.GLTFMatKeys.AI_MATKEY_GLTF_PBRSPECULARGLOSSINESS">
+            <summary>
+            The ai matkey GLTF pbrspecularglossiness
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.GLTFMatKeys.AI_MATKEY_GLTF_PBRSPECULARGLOSSINESS_GLOSSINESS_FACTOR">
+            <summary>
+            The ai matkey GLTF pbrspecularglossiness glossiness factor
+            </summary>
+        </member>
+        <member name="T:HelixToolkit.Wpf.SharpDX.Assimp.HelixToolkitScene">
+            <summary>
+            Scene for importer output
+            </summary>
+        </member>
+        <member name="P:HelixToolkit.Wpf.SharpDX.Assimp.HelixToolkitScene.Root">
+            <summary>
+            Gets or sets the root.
+            </summary>
+            <value>
+            The root.
+            </value>
+        </member>
+        <member name="P:HelixToolkit.Wpf.SharpDX.Assimp.HelixToolkitScene.Animations">
+            <summary>
+            Gets or sets the animations.
+            </summary>
+            <value>
+            The animations.
+            </value>
+        </member>
+        <member name="P:HelixToolkit.Wpf.SharpDX.Assimp.HelixToolkitScene.HasAnimation">
+            <summary>
+            Gets a value indicating whether this instance has animation.
+            </summary>
+            <value>
+              <c>true</c> if this instance has animation; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.HelixToolkitScene.#ctor(HelixToolkit.Wpf.SharpDX.Model.Scene.SceneNode)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HelixToolkit.Wpf.SharpDX.Assimp.HelixToolkitScene"/> class.
+            </summary>
+            <param name="root">The root.</param>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.HelixToolkitScene.#ctor(HelixToolkit.Wpf.SharpDX.Model.Scene.SceneNode,System.Collections.Generic.IList{HelixToolkit.Wpf.SharpDX.Animations.Animation})">
+            <summary>
+            Initializes a new instance of the <see cref="T:HelixToolkit.Wpf.SharpDX.Assimp.HelixToolkitScene"/> class.
+            </summary>
+            <param name="root">The root.</param>
+            <param name="animations">The animations.</param>
+        </member>
+        <member name="T:HelixToolkit.Wpf.SharpDX.Assimp.Importer">
+            <summary>
+            </summary>
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HelixToolkit.Wpf.SharpDX.Assimp.Importer.SupportedFormats">
+            <summary>
+                Gets the supported formats.
+            </summary>
+            <value>
+                The supported formats.
+            </value>
+        </member>
+        <member name="P:HelixToolkit.Wpf.SharpDX.Assimp.Importer.SupportedFormatsString">
+            <summary>
+                Gets the supported formats string.
+            </summary>
+            <value>
+                The supported formats string.
+            </value>
+        </member>
+        <member name="P:HelixToolkit.Wpf.SharpDX.Assimp.Importer.Configuration">
+            <summary>
+                Gets or sets the configuration.
+            </summary>
+            <value>
+                The configuration.
+            </value>
+        </member>
+        <member name="P:HelixToolkit.Wpf.SharpDX.Assimp.Importer.SceneNodes">
+            <summary>
+                Gets all the loaded scene nodes order by preorder traverse.
+            </summary>
+            <value>
+                The scene nodes.
+            </value>
+        </member>
+        <member name="P:HelixToolkit.Wpf.SharpDX.Assimp.Importer.Animations">
+            <summary>
+            Gets the animations.
+            </summary>
+            <value>
+            The animations.
+            </value>
+        </member>
+        <member name="P:HelixToolkit.Wpf.SharpDX.Assimp.Importer.ErrorCode">
+            <summary>
+            Gets or sets the error code.
+            </summary>
+            <value>
+            The error code.
+            </value>
+        </member>
+        <member name="P:HelixToolkit.Wpf.SharpDX.Assimp.Importer.Logger">
+            <summary>
+            Gets the logger.
+            </summary>
+            <value>
+            The logger.
+            </value>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Importer.Load(System.String,HelixToolkit.Wpf.SharpDX.Assimp.ImporterConfiguration)">
+            <summary>
+                Loads the model specified file path.
+            </summary>
+            <param name="filePath">The file path.</param>
+            <param name="config">The configuration.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Importer.Load(System.String,System.Boolean,Assimp.PostProcessSteps,Assimp.Configs.PropertyConfig[])">
+            <summary>
+                Loads the model specified file path.
+            </summary>
+            <param name="filePath">The file path.</param>
+            <param name="parallelLoad">if set to <c>true</c> [parallel load].</param>
+            <param name="postprocessSteps">The postprocess steps.</param>
+            <param name="configs">The configs.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Importer.Load(System.String)">
+            <summary>
+                Loads the model specified file path.
+            </summary>
+            <param name="filePath">The file path.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Importer.Load(System.String,HelixToolkit.Wpf.SharpDX.Assimp.HelixToolkitScene@)">
+            <summary>
+                Loads the model by specified file path.
+            </summary>
+            <param name="filePath">The file path.</param>
+            <param name="scene">The loaded scene.</param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Importer.ToHelixToolkitScene(Assimp.Scene,HelixToolkit.Wpf.SharpDX.Assimp.HelixToolkitScene@)">
+            <summary>
+            Converts HelixToolkit Scene directly from assimp scene. User is responsible for providing the assimp scene.
+            </summary>
+            <param name="assimpScene">The assimp scene.</param>
+            <param name="helixScene">The helix scene.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Importer.Load(System.IO.Stream,System.String,System.String,HelixToolkit.Wpf.SharpDX.Assimp.HelixToolkitScene@,HelixToolkit.Wpf.SharpDX.ITexturePathResolver)">
+            <summary>
+            Loads the specified file stream. User must provider custom texture loader to load texture files.
+            </summary>
+            <param name="fileStream">The file stream.</param>
+            <param name="filePath">The filePath. Used to load texture.</param>
+            <param name="formatHint">The format hint.</param>
+            <param name="texturePathResolver">The custom texture path resolver</param>
+            <param name="scene">The scene.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Importer.Load(Assimp.Scene,System.String,HelixToolkit.Wpf.SharpDX.Assimp.HelixToolkitScene@,HelixToolkit.Wpf.SharpDX.ITexturePathResolver)">
+            <summary>
+            Convert the assimp scene to Helix Scene.
+            </summary>
+            <param name="assimpScene">The assimp scene.</param>
+            <param name="filePath">The filePath of the model. It is used for texture loading</param>
+            <param name="texturePathResolver">Custom texture path resolver</param>
+            <param name="scene">The scene.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Importer.Clear">
+            <summary>
+            Clears this instance.
+            </summary>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Importer.ProcessSceneNodes(HelixToolkit.Wpf.SharpDX.Model.Scene.SceneNode)">
+            <summary>
+            Processes the scene nodes.
+            </summary>
+            <param name="root">The root.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Importer.Log``1(HelixToolkit.Logger.LogLevel,``0,System.String,System.Int32)">
+            <summary>
+            Logs the specified level.
+            </summary>
+            <typeparam name="Type">The type of the ype.</typeparam>
+            <param name="level">The level.</param>
+            <param name="msg">The MSG.</param>
+            <param name="caller">The caller.</param>
+            <param name="sourceLineNumber">The source line number.</param>
+        </member>
+        <member name="T:HelixToolkit.Wpf.SharpDX.Assimp.Importer.HelixInternalScene">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.Importer.HelixInternalScene.Animations">
+            <summary>
+            The animations
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.Importer.HelixInternalScene.AssimpScene">
+            <summary>
+            The assimp scene
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.Importer.HelixInternalScene.Materials">
+            <summary>
+                The materials
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.Importer.HelixInternalScene.Meshes">
+            <summary>
+                The meshes
+            </summary>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Importer.ProcessNodeAnimation(Assimp.NodeAnimationChannel,System.Double,HelixToolkit.Wpf.SharpDX.FastList{HelixToolkit.Wpf.SharpDX.Animations.Keyframe}@)">
+            <summary>
+            Processes the node animation.
+            </summary>
+            <param name="channel">The channel.</param>
+            <param name="ticksPerSecond">The ticks per second.</param>
+            <param name="list">The list.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Importer.OnCreateHxMeshNode(HelixToolkit.Wpf.SharpDX.Assimp.Importer.MeshInfo,HelixToolkit.Wpf.SharpDX.Assimp.Importer.HelixInternalScene,SharpDX.Matrix)">
+            <summary>
+                To the hx mesh nodes.
+            </summary>
+            <param name="mesh">The mesh.</param>
+            <param name="scene">The scene.</param>
+            <param name="transform"></param>
+            <returns></returns>
+            <exception cref="T:System.NotSupportedException">Mesh Type {mesh.Type}</exception>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Importer.OnCreateHelixMesh(Assimp.Mesh)">
+            <summary>
+                To the helix mesh.
+            </summary>
+            <param name="mesh">The mesh.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Importer.OnCreateHelixMeshWithBones(Assimp.Mesh)">
+            <summary>
+            To the helix mesh with bones.
+            </summary>
+            <param name="mesh">The mesh.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Importer.OnCreateHelixPoint(Assimp.Mesh)">
+            <summary>
+                To the helix point.
+            </summary>
+            <param name="mesh">The mesh.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Importer.OnCreateHelixLine(Assimp.Mesh)">
+            <summary>
+                To the helix line.
+            </summary>
+            <param name="mesh">The mesh.</param>
+            <returns></returns>
+        </member>
+        <member name="T:HelixToolkit.Wpf.SharpDX.Assimp.Importer.MeshInfo">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.Importer.MeshInfo.AssimpMesh">
+            <summary>
+                The Assimp mesh
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.Importer.MeshInfo.MaterialIndex">
+            <summary>
+                The material index
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.Importer.MeshInfo.Mesh">
+            <summary>
+                The Helix mesh
+            </summary>
+        </member>
+        <member name="F:HelixToolkit.Wpf.SharpDX.Assimp.Importer.MeshInfo.Type">
+            <summary>
+                The mesh type
+            </summary>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Importer.MeshInfo.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:HelixToolkit.Wpf.SharpDX.Assimp.Importer.MeshInfo" /> class.
+            </summary>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Importer.MeshInfo.#ctor(Assimp.PrimitiveType,Assimp.Mesh,HelixToolkit.Wpf.SharpDX.Geometry3D,System.Int32)">
+            <summary>
+                Initializes a new instance of the <see cref="T:HelixToolkit.Wpf.SharpDX.Assimp.Importer.MeshInfo" /> class.
+            </summary>
+            <param name="type">The type.</param>
+            <param name="assimpMesh">The assimp mesh.</param>
+            <param name="mesh">The mesh.</param>
+            <param name="materialIndex">Index of the material.</param>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Importer.OnCreatePhongMaterial(Assimp.Material)">
+            <summary>
+                To the phong material.
+            </summary>
+            <param name="material">The material.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Importer.OnCreatePBRMaterial(Assimp.Material)">
+            <summary>
+                To the PBR material.
+            </summary>
+            <param name="material">The material.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.Assimp.Importer.OnCreateHelixMaterial(Assimp.Material)">
+            <summary>
+                To the helix material.
+            </summary>
+            <param name="material">The material.</param>
+            <returns></returns>
+            <exception cref="T:System.NotSupportedException">Shading Mode {material.ShadingMode}</exception>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.DefaultTexturePathResolver.OnLoadTexture(System.String,System.String)">
+            <summary>
+                Called when [load texture].
+            </summary>
+            <param name="modelPath">The model path</param>
+            <param name="texturePath">The path.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.DefaultTexturePathResolver.HandleTexturePathNotFound(System.String,System.String)">
+            <summary>
+            Handles the texture path not found. Override to provide your own handling
+            </summary>
+            <param name="dir">The dir.</param>
+            <param name="texturePath">The texture path.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.DefaultTexturePathResolver.Log``1(HelixToolkit.Logger.LogLevel,``0,System.String,System.Int32)">
+            <summary>
+            Logs the specified level.
+            </summary>
+            <typeparam name="Type">The type of the ype.</typeparam>
+            <param name="level">The level.</param>
+            <param name="msg">The MSG.</param>
+            <param name="caller">The caller.</param>
+            <param name="sourceLineNumber">The source line number.</param>
+        </member>
+        <member name="T:HelixToolkit.Wpf.SharpDX.ITexturePathResolver">
+            <summary>
+            Custom Texture loading IO interface.
+            </summary>
+        </member>
+        <member name="M:HelixToolkit.Wpf.SharpDX.ITexturePathResolver.Resolve(System.String,System.String,HelixToolkit.Logger.ILogger)">
+            <summary>
+            Resolves the texture path.
+            </summary>
+            <param name="modelPath">The model path.</param>
+            <param name="texturePath">The texture path.</param>
+            <param name="logger">The logger.</param>
+            <returns>Absolute file path for the texture</returns>
+        </member>
+    </members>
+</doc>

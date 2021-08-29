@@ -5,8 +5,8 @@ namespace PrintCostCalculator3d.Controls
 {
     public class DragablzInterTabClient : IInterTabClient
     {
-        //private readonly ApplicationName _applicationName;
-        private readonly string _applicationName;
+        //readonly ApplicationName _applicationName;
+        readonly string _applicationName;
 
         public DragablzInterTabClient(string applicationName)
         {

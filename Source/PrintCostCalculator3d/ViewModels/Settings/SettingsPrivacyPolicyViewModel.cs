@@ -1,23 +1,15 @@
-﻿using log4net;
-using MahApps.Metro.Controls.Dialogs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
+﻿using MahApps.Metro.Controls.Dialogs;
 using PrintCostCalculator3d.Models.Settings;
 using PrintCostCalculator3d.Resources.Localization;
 using PrintCostCalculator3d.Utilities;
+using System.Windows.Input;
 
 namespace PrintCostCalculator3d.ViewModels
 {
     class SettingsPrivacyPolicyViewModel : ViewModelBase
     {
         #region Variables
-        private readonly IDialogCoordinator _dialogCoordinator;
-        private readonly bool _isLoading;
-        private static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        readonly IDialogCoordinator _dialogCoordinator;
         #endregion
 
         #region Properties
@@ -51,19 +43,19 @@ namespace PrintCostCalculator3d.ViewModels
         #region Constructor, Load Settings
         public SettingsPrivacyPolicyViewModel(IDialogCoordinator instance)
         {
-            _isLoading = true;
-
             _dialogCoordinator = instance;
+
+            IsLoading = true;
             LoadSettings();
-            _isLoading = false;
+            IsLoading = false;
         }
-        private void LoadSettings()
+        void LoadSettings()
         {
             //SettingsManager.Current.RepetierServerPro = new RepetierServerPro();
         }
         #endregion
 
-        #region Private Methods
+        #region Methods
 
         #endregion
 
@@ -77,7 +69,7 @@ namespace PrintCostCalculator3d.ViewModels
             get { return new RelayCommand(p => BrowseFileAction()); }
         }
 
-        private void BrowseFileAction()
+        void BrowseFileAction()
         {
             var openFileDialog = new System.Windows.Forms.OpenFileDialog
             {

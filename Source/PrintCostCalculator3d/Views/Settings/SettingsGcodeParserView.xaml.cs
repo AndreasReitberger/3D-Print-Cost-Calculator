@@ -21,7 +21,7 @@ namespace PrintCostCalculator3d.Views
     /// </summary>
     public partial class SettingsGcodeParserView : UserControl
     {
-        private readonly SettingsGcodeParserViewModel _viewModel = new SettingsGcodeParserViewModel();
+        readonly SettingsGcodeParserViewModel _viewModel = new SettingsGcodeParserViewModel();
 
         public SettingsGcodeParserView()
         {

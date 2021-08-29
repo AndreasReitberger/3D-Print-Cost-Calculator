@@ -58,10 +58,10 @@ namespace PrintCostCalculator3d.Utilities
         }
 
         [DllImport("user32.dll", EntryPoint = "SetWindowLong")]
-        private static extern int SetWindowLong32(IntPtr hWnd, int nIndex, IntPtr dwNewLong);
+        static extern int SetWindowLong32(IntPtr hWnd, int nIndex, IntPtr dwNewLong);
 
         [DllImport("user32.dll", EntryPoint = "SetWindowLongPtr")]
-        private static extern IntPtr SetWindowLongPtr64(IntPtr hWnd, int nIndex, IntPtr dwNewLong);
+        static extern IntPtr SetWindowLongPtr64(IntPtr hWnd, int nIndex, IntPtr dwNewLong);
 
         [DllImport("user32.dll", EntryPoint = "SetWindowPos")]
         public static extern IntPtr SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int x, int Y, int cx, int cy, int wFlags);

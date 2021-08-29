@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:mahAppsControls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                    
                     xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks">
     <Style x:Key="ExpanderDownHeader" BasedOn="{StaticResource MahApps.Styles.ToggleButton.ExpanderHeader.Down}" TargetType="{x:Type ToggleButton}">
         <Setter Property="Template">
@@ -227,5 +228,107 @@
                 <Setter Property="mahAppsControls:ExpanderHelper.HeaderDownStyle" Value="{DynamicResource RightExpanderOpen}" />
             </Trigger>
         </Style.Triggers>
+    </Style>
+
+    <Style x:Key="SettingsToggleButton" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ExpanderDownHeader}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border Padding="{TemplateBinding Padding}"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid Background="Transparent" SnapsToDevicePixels="False">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Rectangle Grid.Column="0" x:Name="Chevron" Width="24" Height="24" Fill="{DynamicResource MahApps.Brushes.Gray3}" VerticalAlignment="Center">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=CogOutline}" />
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <mahAppsControls:ContentControlEx Grid.Column="1" 
+                                                       Margin="10,0,0,0" 
+                                                       HorizontalAlignment="Stretch"
+                                                       Padding="{TemplateBinding Padding}" 
+                                                       HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                       VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                       Content="{TemplateBinding Content}"
+                                                       ContentCharacterCasing="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(mahAppsControls:ControlsHelper.ContentCharacterCasing)}"
+                                                       ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                                                       ContentTemplate="{TemplateBinding ContentTemplate}"
+                                                       ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
+                                                       RecognizesAccessKey="True"
+                                                       SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                            </mahAppsControls:ContentControlEx>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="Chevron" Property="OpacityMask">
+                                <Setter.Value>
+                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=CogOffOutline}" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Chevron" Property="Fill" Value="{DynamicResource MahApps.Brushes.Gray5}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="EditToggleButton" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ExpanderDownHeader}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border Padding="{TemplateBinding Padding}"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid Background="Transparent" SnapsToDevicePixels="False">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Rectangle Grid.Column="0" x:Name="Chevron" Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" VerticalAlignment="Center">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=SquareEditOutline}" />
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <mahAppsControls:ContentControlEx Grid.Column="1" 
+                                                       Margin="10,0,0,0" 
+                                                       HorizontalAlignment="Stretch"
+                                                       Padding="{TemplateBinding Padding}" 
+                                                       HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                       VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                       Content="{TemplateBinding Content}"
+                                                       ContentCharacterCasing="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(mahAppsControls:ControlsHelper.ContentCharacterCasing)}"
+                                                       ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                                                       ContentTemplate="{TemplateBinding ContentTemplate}"
+                                                       ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
+                                                       RecognizesAccessKey="True"
+                                                       SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                            </mahAppsControls:ContentControlEx>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="Chevron" Property="OpacityMask">
+                                <Setter.Value>
+                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=ContentSave}" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Chevron" Property="Fill" Value="{DynamicResource MahApps.Brushes.Gray5}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 </ResourceDictionary>

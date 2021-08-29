@@ -1,25 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Collections.Specialized;
-using System.ComponentModel;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
-using AndreasReitberger;
+﻿using AndreasReitberger;
+using AndreasReitberger.Enums;
 using AndreasReitberger.Models;
 using AndreasReitberger.Models.CalculationAdditions;
 using AndreasReitberger.Models.MaterialAdditions;
 using AndreasReitberger.Models.WorkstepAdditions;
-using PrintCostCalculator3d.Models._3dprinting;
+using PrintCostCalculator3d.Enums;
 using PrintCostCalculator3d.Models.Exporter;
 using PrintCostCalculator3d.Models.Slicer;
+using System;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
+using System.Runtime.CompilerServices;
+using System.Xml.Serialization;
 
 //ADDITIONAL
-using PrintCostCalculator3d.Utilities;
 
 namespace PrintCostCalculator3d.Models.Settings
 {
@@ -38,15 +34,7 @@ namespace PrintCostCalculator3d.Models.Settings
         #region Variables
         [XmlIgnore] public bool SettingsChanged { get; set; }
 
-        [XmlIgnore] public bool isLicensed
-        {
-            get
-            {
-                return false;
-            }
-        }
-
-        private string _settingsVersion = "0.0.0.0";
+        string _settingsVersion = "0.0.0.0";
         public string SettingsVersion
         {
             get => _settingsVersion;
@@ -61,7 +49,7 @@ namespace PrintCostCalculator3d.Models.Settings
         }
 
         #region License
-        private bool _lic_IsFirstStart = true;
+        bool _lic_IsFirstStart = true;
         public bool License_IsFirstStart
         {
             get => _lic_IsFirstStart;
@@ -78,7 +66,7 @@ namespace PrintCostCalculator3d.Models.Settings
         #endregion
 
         #region EULA
-        private bool _showEULAOnStartup = true;
+        bool _showEULAOnStartup = true;
         public bool ShowEULAOnStartup
         {
             get => _showEULAOnStartup;
@@ -91,7 +79,7 @@ namespace PrintCostCalculator3d.Models.Settings
                 SettingsChanged = true;
             }
         }
-        private bool _agreedEULA = false;
+        bool _agreedEULA = false;
         public bool AgreedEULA
         {
             get => _agreedEULA;
@@ -105,7 +93,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
         
-        private DateTime _agreedEULAOn;
+        DateTime _agreedEULAOn;
         public DateTime AgreedEULAOn
         {
             get => _agreedEULAOn;
@@ -121,495 +109,64 @@ namespace PrintCostCalculator3d.Models.Settings
 
         #endregion
 
-        #region ThirdParty
+        #region Dashboard
 
-        #region OctoPrint
-        private bool _octoPrint_FirstStart = true;
-        public bool OctoPrint_FirstStart
+        #region Tabs
+        ObservableCollection<DashboardTabContentType> _tabs = new ObservableCollection<DashboardTabContentType>();
+        public ObservableCollection<DashboardTabContentType> Tabs
         {
-            get => _octoPrint_FirstStart;
+            get => _tabs;
             set
             {
-                if (value == _octoPrint_FirstStart)
+                if (value == _tabs)
                     return;
 
-                _octoPrint_FirstStart = value;
+                _tabs = value;
                 OnPropertyChanged();
                 SettingsChanged = true;
             }
         }
-
-        private bool _octoPrint_ShowNote = true;
-        public bool OctoPrint_ShowNote
-        {
-            get => _octoPrint_ShowNote;
-            set
-            {
-                if (value == _octoPrint_ShowNote)
-                    return;
-
-                _octoPrint_ShowNote = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-
-        private string _octoPrint_Address = string.Empty;
-        public string OctoPrint_Address
-        {
-            get => _octoPrint_Address;
-            set
-            {
-                if (value == _octoPrint_Address)
-                    return;
-
-                _octoPrint_Address = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-        
-        private string _octoPrint_API = string.Empty;
-        public string OctoPrint_API
-        {
-            get => _octoPrint_API;
-            set
-            {
-                if (value == _octoPrint_API)
-                    return;
-
-                _octoPrint_API = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-
-        private string _octoPrint_LastUsedPrinter = string.Empty;
-        public string OctoPrint_LastUsedPrinter
-        {
-            get => _octoPrint_LastUsedPrinter;
-            set
-            {
-                if (value == _octoPrint_LastUsedPrinter)
-                    return;
-
-                _octoPrint_LastUsedPrinter = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-
-        private bool _octoPrint_enableLogging = false;
-        public bool OctoPrint_EnableLogging
-        {
-            get => _octoPrint_enableLogging;
-            set
-            {
-                if (value == _octoPrint_enableLogging)
-                    return;
-
-                _octoPrint_enableLogging = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-
-        private bool _octoPrint_EnableSecureConnection = false;
-        public bool OctoPrint_EnableSecureConnection
-        {
-            get => _octoPrint_EnableSecureConnection;
-            set
-            {
-                if (value == _octoPrint_EnableSecureConnection)
-                    return;
-
-                _octoPrint_EnableSecureConnection = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-
-        private bool _octoPrint_ExpandView = true;
-        public bool OctoPrint_ExpandView
-        {
-            get => _octoPrint_ExpandView;
-            set
-            {
-                if (value == _octoPrint_ExpandView) return;
-
-                _octoPrint_ExpandView = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-
-        private double _octoPrint_ProfileWidth = GlobalStaticConfiguration.OctoPrint_DefaultWidthExpanded;
-        public double OctoPrint_ProfileWidth
-        {
-            get => _octoPrint_ProfileWidth;
-            set
-            {
-
-                if (Math.Abs(value - _octoPrint_ProfileWidth) < GlobalStaticConfiguration.FloatPointFix)
-                    return;
-
-                _octoPrint_ProfileWidth = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-        
-        private bool _octoPrint_Panel_ExpandView = true;
-        public bool OctoPrint_Panel_ExpandView
-        {
-            get => _octoPrint_Panel_ExpandView;
-            set
-            {
-                if (value == _octoPrint_Panel_ExpandView) return;
-
-                _octoPrint_Panel_ExpandView = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-        
-        private bool _octoPrint_ShowFunctions = GlobalStaticConfiguration.OctoPrint_Default_ShowFunctions;
-        public bool OctoPrint_ShowFunctions
-        {
-            get => _octoPrint_ShowFunctions;
-            set
-            {
-                if (value == _octoPrint_ShowFunctions) return;
-
-                _octoPrint_ShowFunctions = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-
-        private double _octoPrint_Panel_ProfileWidth = GlobalStaticConfiguration.OctoPrint_Panel_DefaultWidthExpanded;
-        public double OctoPrint_Panel_ProfileWidth
-        {
-            get => _octoPrint_Panel_ProfileWidth;
-            set
-            {
-
-                if (Math.Abs(value - _octoPrint_Panel_ProfileWidth) < GlobalStaticConfiguration.FloatPointFix)
-                    return;
-
-                _octoPrint_Panel_ProfileWidth = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-
-        private bool _octoPrint_saveSettingsOnServer = true;
-        public bool OctoPrint_SaveSettingsOnServer
-        {
-            get => _octoPrint_saveSettingsOnServer;
-            set
-            {
-                if (value == _octoPrint_saveSettingsOnServer)
-                    return;
-
-                _octoPrint_saveSettingsOnServer = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-
-        private bool _octoPrint_AutoConnectOnStartup = true;
-        public bool OctoPrint_AutoConnectOnStartup
-        {
-            get => _octoPrint_AutoConnectOnStartup;
-            set
-            {
-                if (value == _octoPrint_AutoConnectOnStartup)
-                    return;
-
-                _octoPrint_AutoConnectOnStartup = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-
-        private int _octoPrint_UpdateInterval = GlobalStaticConfiguration.OctoPrint_DefaultUpdateInterval;
-        public int OctoPrint_UpdateInterval
-        {
-            get => _octoPrint_UpdateInterval;
-            set
-            {
-                if (value == _octoPrint_UpdateInterval)
-                    return;
-
-                _octoPrint_UpdateInterval = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
+        #endregion
 
         #endregion
 
-        #region RepetierServerPro
-        private bool _repetierServerPro_FirstStart = true;
-        public bool RepetierServerPro_FirstStart
+        #region ThirdParty
+
+        #region HelixViewer
+        bool _helix_showCameraInfo = GlobalStaticConfiguration.Helix_ShowCameraInfo;
+        public bool Helix_ShowCameraInfo
         {
-            get => _repetierServerPro_FirstStart;
+            get => _helix_showCameraInfo;
             set
             {
-                if (value == _repetierServerPro_FirstStart)
-                    return;
-
-                _repetierServerPro_FirstStart = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
+                if (_helix_showCameraInfo != value)
+                {
+                    _helix_showCameraInfo = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
             }
         }
 
-        private bool _repetierServerPro_ShowNote = true;
-        public bool RepetierServerPro_ShowNote
+        bool _helix_RotateAroundMouseDownPoint = GlobalStaticConfiguration.Helix_RotateArountMouseDownPoint;
+        public bool Helix_RotateAroundMouseDownPoint
         {
-            get => _repetierServerPro_ShowNote;
+            get => _helix_RotateAroundMouseDownPoint;
             set
             {
-                if (value == _repetierServerPro_ShowNote)
-                    return;
-
-                _repetierServerPro_ShowNote = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-
-        private string _repetierServerPro_ip = string.Empty;
-        public string RepetierServerPro_Ip
-        {
-            get => _repetierServerPro_ip;
-            set
-            {
-                if (value == _repetierServerPro_ip)
-                    return;
-
-                _repetierServerPro_ip = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-
-        private int _repetierServerPro_port = 3344;
-        public int RepetierServerPro_Port
-        {
-            get => _repetierServerPro_port;
-            set
-            {
-                if (value == _repetierServerPro_port)
-                    return;
-
-                _repetierServerPro_port = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-
-        private int _repetierServerPro_Interval = 2;
-        public int RepetierServerPro_Interval
-        {
-            get => _repetierServerPro_Interval;
-            set
-            {
-                if (value == _repetierServerPro_Interval)
-                    return;
-
-                _repetierServerPro_Interval = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-
-        private string _repetierServerPro_api = string.Empty;
-        public string RepetierServerPro_API
-        {
-            get => _repetierServerPro_api;
-            set
-            {
-                if (value == _repetierServerPro_api)
-                    return;
-
-                _repetierServerPro_api = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-        
-        private string _repetierServerPro_lastPrinterSlug = string.Empty;
-        public string RepetierServerPro_LastPrinterSlug
-        {
-            get => _repetierServerPro_lastPrinterSlug;
-            set
-            {
-                if (value == _repetierServerPro_lastPrinterSlug)
-                    return;
-
-                _repetierServerPro_lastPrinterSlug = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-
-        private bool _repetierServerPro_enableLogging = false;
-        public bool RepetierServerPro_EnableLogging
-        {
-            get => _repetierServerPro_enableLogging;
-            set
-            {
-                if (value == _repetierServerPro_enableLogging)
-                    return;
-
-                _repetierServerPro_enableLogging = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-        
-        private bool _repetierServerPro_EnableSecureConnection = false;
-        public bool RepetierServerPro_EnableSecureConnection
-        {
-            get => _repetierServerPro_EnableSecureConnection;
-            set
-            {
-                if (value == _repetierServerPro_EnableSecureConnection)
-                    return;
-
-                _repetierServerPro_EnableSecureConnection = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-
-        private bool _repetierServerPro_ShowCurrentConnectionInfos = true;
-        public bool RepetierServerPro_ShowCurrentConnectionInfos
-        {
-            get => _repetierServerPro_ShowCurrentConnectionInfos;
-            set
-            {
-                if (value == _repetierServerPro_ShowCurrentConnectionInfos)
-                    return;
-
-                _repetierServerPro_ShowCurrentConnectionInfos = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-        
-        private bool _repetierServerPro_ShowCurrentPrintInfos = true;
-        public bool RepetierServerPro_ShowCurrentPrintInfos
-        {
-            get => _repetierServerPro_ShowCurrentPrintInfos;
-            set
-            {
-                if (value == _repetierServerPro_ShowCurrentPrintInfos)
-                    return;
-
-                _repetierServerPro_ShowCurrentPrintInfos = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-        
-        private bool _repetierServerPro_ShowWebCam = true;
-        public bool RepetierServerPro_ShowWebCam
-        {
-            get => _repetierServerPro_ShowWebCam;
-            set
-            {
-                if (value == _repetierServerPro_ShowWebCam)
-                    return;
-
-                _repetierServerPro_ShowWebCam = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-
-        private bool _RepetierServerPro_ShowFunctions = GlobalStaticConfiguration.RepetierServerPro_Default_ShowFunctions;
-        public bool RepetierServerPro_ShowFunctions
-        {
-            get => _RepetierServerPro_ShowFunctions;
-            set
-            {
-                if (value == _RepetierServerPro_ShowFunctions)
-                    return;
-
-                _RepetierServerPro_ShowFunctions = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-
-        private bool _Repetier_ExpandView = true;
-        public bool Repetier_ExpandView
-        {
-            get => _Repetier_ExpandView;
-            set
-            {
-                if (value == _Repetier_ExpandView)
-                    return;
-
-                _Repetier_ExpandView = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-
-        private double _Repetier_ProfileWidth = GlobalStaticConfiguration.Repetier_DefaultWidthExpanded;
-        public double Repetier_ProfileWidth
-        {
-            get => _Repetier_ProfileWidth;
-            set
-            {
-                if (Math.Abs(value - _Repetier_ProfileWidth) < GlobalStaticConfiguration.FloatPointFix)
-                    return;
-
-                _Repetier_ProfileWidth = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-
-        private bool _RepetierServerPro_Panel_ExpandView = true;
-        public bool RepetierServerPro_Panel_ExpandView
-        {
-            get => _RepetierServerPro_Panel_ExpandView;
-            set
-            {
-                if (value == _RepetierServerPro_Panel_ExpandView) return;
-
-                _RepetierServerPro_Panel_ExpandView = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-
-        private double _RepetierServerPro_Panel_ProfileWidth = GlobalStaticConfiguration.RepetierServerPro_Panel_DefaultWidthExpanded;
-        public double RepetierServerPro_Panel_ProfileWidth
-        {
-            get => _RepetierServerPro_Panel_ProfileWidth;
-            set
-            {
-
-                if (Math.Abs(value - _RepetierServerPro_Panel_ProfileWidth) < GlobalStaticConfiguration.FloatPointFix)
-                    return;
-
-                _RepetierServerPro_Panel_ProfileWidth = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
+                if (_helix_RotateAroundMouseDownPoint != value)
+                {
+                    _helix_RotateAroundMouseDownPoint = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
             }
         }
         #endregion
 
         #region Gcode
 
-        private bool _GcodeParser_PreferValuesInCommentsFromKnownSlicers = true;
+        bool _GcodeParser_PreferValuesInCommentsFromKnownSlicers = true;
         public bool GcodeParser_PreferValuesInCommentsFromKnownSlicers
         {
             get => _GcodeParser_PreferValuesInCommentsFromKnownSlicers;
@@ -624,7 +181,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private bool _GcodeViewer_ExpandProfileView = true;
+        bool _GcodeViewer_ExpandProfileView = true;
         public bool GcodeViewer_ExpandProfileView
         {
             get => _GcodeViewer_ExpandProfileView;
@@ -639,7 +196,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private double _GcodeViewer_ProfileWidth = GlobalStaticConfiguration.GcodeInfo_DefaultWidthExpanded;
+        double _GcodeViewer_ProfileWidth = GlobalStaticConfiguration.GcodeInfo_DefaultWidthExpanded;
         public double GcodeViewer_ProfileWidth
         {
             get => _GcodeViewer_ProfileWidth;
@@ -654,7 +211,37 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private bool _gcodeMultiParse_ExpandProfileView = true;
+        bool _GcodeInfo_ExpandView = true;
+        public bool GcodeInfo_ExpandView
+        {
+            get => _GcodeInfo_ExpandView;
+            set
+            {
+                if (value == _GcodeInfo_ExpandView)
+                    return;
+
+                _GcodeInfo_ExpandView = value;
+                OnPropertyChanged();
+                SettingsChanged = true;
+            }
+        }
+
+        double _GcodeInfo_ProfileWidth = GlobalStaticConfiguration.GcodeInfo_DefaultWidthExpanded;
+        public double GcodeInfo_ProfileWidth
+        {
+            get => _GcodeInfo_ProfileWidth;
+            set
+            {
+                if (Math.Abs(value - _GcodeInfo_ProfileWidth) < GlobalStaticConfiguration.FloatPointFix)
+                    return;
+
+                _GcodeInfo_ProfileWidth = value;
+                OnPropertyChanged();
+                SettingsChanged = true;
+            }
+        }
+
+        bool _gcodeMultiParse_ExpandProfileView = true;
         public bool GcodeMultiParse_ExpandView
         {
             get => _gcodeMultiParse_ExpandProfileView;
@@ -669,7 +256,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private double _gcodeMultiParse_ProfileWidth = GlobalStaticConfiguration.GcodeMultiParser_DefaultWidthExpanded;
+        double _gcodeMultiParse_ProfileWidth = GlobalStaticConfiguration.GcodeMultiParser_DefaultWidthExpanded;
         public double GcodeMultiParse_ProfileWidth
         {
             get => _gcodeMultiParse_ProfileWidth;
@@ -684,7 +271,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private bool _AdvancedViewer_ExpandView = true;
+        bool _AdvancedViewer_ExpandView = true;
         public bool AdvancedViewer_ExpandView
         {
             get => _AdvancedViewer_ExpandView;
@@ -699,7 +286,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private double _AdvancedViewer_ProfileWidth = GlobalStaticConfiguration.CalculationView_DefaultWidthExpanded;
+        double _AdvancedViewer_ProfileWidth = GlobalStaticConfiguration.CalculationView_DefaultWidthExpanded;
         public double AdvancedViewer_ProfileWidth
         {
             get => _AdvancedViewer_ProfileWidth;
@@ -716,7 +303,7 @@ namespace PrintCostCalculator3d.Models.Settings
         #endregion
 
         #region Slicer
-        private ObservableCollection<Models.Slicer.Slicer> _slicers = new ObservableCollection<Models.Slicer.Slicer>();
+        ObservableCollection<Models.Slicer.Slicer> _slicers = new ObservableCollection<Models.Slicer.Slicer>();
         public ObservableCollection<Models.Slicer.Slicer> Slicers
         {
             get => _slicers;
@@ -731,7 +318,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
         
-        private Models.Slicer.Slicer _slicerLastUsed;
+        Models.Slicer.Slicer _slicerLastUsed;
         public Models.Slicer.Slicer Slicer_LastUsed
         {
             get => _slicerLastUsed;
@@ -746,7 +333,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
         
-        private ObservableCollection<SlicerCommand> _slicerCommands = new ObservableCollection<SlicerCommand>();
+        ObservableCollection<SlicerCommand> _slicerCommands = new ObservableCollection<SlicerCommand>();
         public ObservableCollection<SlicerCommand> SlicerCommands
         {
             get => _slicerCommands;
@@ -768,7 +355,7 @@ namespace PrintCostCalculator3d.Models.Settings
         #region Printing3dLibrary
 
         #region Printers
-        private ObservableCollection<Printer3d> _printers = new ObservableCollection<Printer3d>();
+        ObservableCollection<Printer3d> _printers = new ObservableCollection<Printer3d>();
         public ObservableCollection<Printer3d> Printers
         {
             get => _printers;
@@ -786,7 +373,7 @@ namespace PrintCostCalculator3d.Models.Settings
 
         #region Materials
 
-        private ObservableCollection<Material3d> _materials = new ObservableCollection<Material3d>();
+        ObservableCollection<Material3d> _materials = new ObservableCollection<Material3d>();
         public ObservableCollection<Material3d> PrinterMaterials
         {
             get => _materials;
@@ -801,7 +388,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private ObservableCollection<Material3dType> _materialTypes = new ObservableCollection<Material3dType>();
+        ObservableCollection<Material3dType> _materialTypes = new ObservableCollection<Material3dType>();
         public ObservableCollection<Material3dType> MaterialTypes
         {
             get => _materialTypes;
@@ -820,7 +407,7 @@ namespace PrintCostCalculator3d.Models.Settings
         
         #region HourlyMachineRates
 
-        private ObservableCollection<HourlyMachineRate> _hourlyMachineRates = new ObservableCollection<HourlyMachineRate>();
+        ObservableCollection<HourlyMachineRate> _hourlyMachineRates = new ObservableCollection<HourlyMachineRate>();
         public ObservableCollection<HourlyMachineRate> HourlyMachineRates
         {
             get => _hourlyMachineRates;
@@ -838,7 +425,7 @@ namespace PrintCostCalculator3d.Models.Settings
         #endregion
 
         #region Worksteps
-        private ObservableCollection<Workstep> _worksteps = new ObservableCollection<Workstep>();
+        ObservableCollection<Workstep> _worksteps = new ObservableCollection<Workstep>();
         public ObservableCollection<Workstep> Worksteps
         {
             get => _worksteps;
@@ -853,7 +440,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
         
-        private ObservableCollection<WorkstepCategory> _workstepCategories = new ObservableCollection<WorkstepCategory>();
+        ObservableCollection<WorkstepCategory> _workstepCategories = new ObservableCollection<WorkstepCategory>();
         public ObservableCollection<WorkstepCategory> WorkstepCategories
         {
             get => _workstepCategories;
@@ -872,7 +459,7 @@ namespace PrintCostCalculator3d.Models.Settings
 
         #region Suppliers and Manufacturers
 
-        private ObservableCollection<Manufacturer> _manufacturers = new ObservableCollection<Manufacturer>();
+        ObservableCollection<Manufacturer> _manufacturers = new ObservableCollection<Manufacturer>();
         public ObservableCollection<Manufacturer> Manufacturers
         {
             get => _manufacturers;
@@ -887,7 +474,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private ObservableCollection<Supplier> _suppliers = new ObservableCollection<Supplier>();
+        ObservableCollection<Supplier> _suppliers = new ObservableCollection<Supplier>();
         public ObservableCollection<Supplier> Suppliers
         {
             get => _suppliers;
@@ -905,7 +492,7 @@ namespace PrintCostCalculator3d.Models.Settings
         #endregion
 
         #region CustomAttributes
-        private ObservableCollection<string> _materialAttributes = new ObservableCollection<string>();
+        ObservableCollection<string> _materialAttributes = new ObservableCollection<string>();
         public ObservableCollection<string> MaterialAttributes
         {
             get => _materialAttributes;
@@ -922,7 +509,7 @@ namespace PrintCostCalculator3d.Models.Settings
         #endregion
 
         #region Defaults
-        private ObservableCollection<Printer3d> _calculation_DefaultPrintersLib = new ObservableCollection<Printer3d>();
+        ObservableCollection<Printer3d> _calculation_DefaultPrintersLib = new ObservableCollection<Printer3d>();
         public ObservableCollection<Printer3d> Calculation_DefaultPrintersLib
         {
             get => _calculation_DefaultPrintersLib;
@@ -937,7 +524,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private ObservableCollection<Material3d> _calculation_DefaultMaterialsLib = new ObservableCollection<Material3d>();
+        ObservableCollection<Material3d> _calculation_DefaultMaterialsLib = new ObservableCollection<Material3d>();
         public ObservableCollection<Material3d> Calculation_DefaultMaterialsLib
         {
             get => _calculation_DefaultMaterialsLib;
@@ -952,7 +539,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private ObservableCollection<Workstep> _calculation_DefaultWorkstepsLib = new ObservableCollection<Workstep>();
+        ObservableCollection<Workstep> _calculation_DefaultWorkstepsLib = new ObservableCollection<Workstep>();
         public ObservableCollection<Workstep> Calculation_DefaultWorkstepsLib
         {
             get => _calculation_DefaultWorkstepsLib;
@@ -972,65 +559,23 @@ namespace PrintCostCalculator3d.Models.Settings
         #endregion
 
         #region 3dPrinting DELETE COLLECTIONS LATER
-        private ObservableCollection<_3dPrinterMaterial> _3dMaterials = new ObservableCollection<_3dPrinterMaterial>();
-        public ObservableCollection<_3dPrinterMaterial> _3dPrinterMaterials
+
+        ObservableCollection<MachineHourRate> _machineHourRateCalculations = new ObservableCollection<MachineHourRate>();
+        public ObservableCollection<MachineHourRate> MachineHourRateCalculations
         {
-            get => _3dMaterials;
-            set {
-                if (value == _3dMaterials)
-                    return;
-
-                _3dMaterials = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-
-        private ObservableCollection<_3dPrinterMaterialTypes> _3dMaterialTypes = new ObservableCollection<_3dPrinterMaterialTypes>();
-        public ObservableCollection<_3dPrinterMaterialTypes> _3dPrinterMaterialTypes
-        {
-            get => _3dMaterialTypes;
-            set {
-                if (value == _3dMaterialTypes)
-                    return;
-
-                _3dMaterialTypes = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-
-        private ObservableCollection<_3dPrinterModel> _3dprinters = new ObservableCollection<_3dPrinterModel>();
-        public ObservableCollection<_3dPrinterModel> _3dPrinters
-        {
-            get => _3dprinters;
+            get => _machineHourRateCalculations;
             set
             {
-                if (value == _3dprinters)
+                if (value == _machineHourRateCalculations)
                     return;
 
-                _3dprinters = value;
+                _machineHourRateCalculations = value;
                 OnPropertyChanged();
                 SettingsChanged = true;
             }
         }
-
-        private ObservableCollection<_3dPrinterWorkstep> _3dworksteps = new ObservableCollection<_3dPrinterWorkstep>();
-        public ObservableCollection<_3dPrinterWorkstep> _3dWorksteps
-        {
-            get => _3dworksteps;
-            set
-            {
-                if (value == _3dworksteps)
-                    return;
-
-                _3dworksteps = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
-            }
-        }
-
-        private double _energyCosts = 0.25f;
+        
+        double _energyCosts = 0.25f;
         public double EnergyCosts
         {
             get => _energyCosts;
@@ -1045,7 +590,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private double _handlingFee = 5.00f;
+        double _handlingFee = 5.00f;
         public double HandlingFee
         {
             get => _handlingFee;
@@ -1060,22 +605,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private bool _showCameraInfo = false;
-        public bool ShowCameraInfo
-        {
-            get => _showCameraInfo;
-            set
-            {
-                if (_showCameraInfo != value)
-                {
-                    _showCameraInfo = value;
-                    OnPropertyChanged();
-                    SettingsChanged = true;
-                }
-            }
-        }
-
-        private bool _applyTaxRate = true;
+        bool _applyTaxRate = true;
         public bool ApplyTaxRate
         {
             get => _applyTaxRate;
@@ -1089,7 +619,8 @@ namespace PrintCostCalculator3d.Models.Settings
                 }
             }
         }
-        private bool _applyEnergyCosts = true;
+        
+        bool _applyEnergyCosts = true;
         public bool ApplyEnergyCosts
         {
             get => _applyEnergyCosts;
@@ -1104,7 +635,22 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private int _powerLevel = 50;
+        bool _applyProcedureSpecificAdditions = true;
+        public bool ApplyProcedureSpecificAdditions
+        {
+            get => _applyProcedureSpecificAdditions;
+            set
+            {
+                if (_applyProcedureSpecificAdditions != value)
+                {
+                    _applyProcedureSpecificAdditions = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+
+        int _powerLevel = 50;
         public int PowerLevel
         {
             get => _powerLevel;
@@ -1119,7 +665,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private double _taxRate = 19;
+        double _taxRate = 19;
         public double TaxRate
         {
             get => _taxRate;
@@ -1136,7 +682,7 @@ namespace PrintCostCalculator3d.Models.Settings
         #endregion
 
         #region Calculation
-        private bool _Calculation_ApplyCustomAdditions = false;
+        bool _Calculation_ApplyCustomAdditions = false;
         public bool Calculation_ApplyCustomAdditions
         {
             get => _Calculation_ApplyCustomAdditions;
@@ -1151,7 +697,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
         
-        private bool _Calculation_ReloadCalculationsOnStartup = false;
+        bool _Calculation_ReloadCalculationsOnStartup = false;
         public bool Calculation_ReloadCalculationsOnStartup
         {
             get => _Calculation_ReloadCalculationsOnStartup;
@@ -1166,7 +712,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private int _Calculation_SelectedInfoTab = 0;
+        int _Calculation_SelectedInfoTab = 0;
         public int Calculation_SelectedInfoTab
         {
             get => _Calculation_SelectedInfoTab;
@@ -1181,7 +727,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private double _Calculation_Margin = 30;
+        double _Calculation_Margin = 30;
         public double Calculation_Margin
         {
             get => _Calculation_Margin;
@@ -1195,8 +741,68 @@ namespace PrintCostCalculator3d.Models.Settings
                 }
             }
         }
+
+        bool _ApplyEnhancedMarginSettings = false;
+        public bool ApplyEnhancedMarginSettings
+        {
+            get => _ApplyEnhancedMarginSettings;
+            set
+            {
+                if (_ApplyEnhancedMarginSettings != value)
+                {
+                    _ApplyEnhancedMarginSettings = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+
+        bool _ExcludeWorkstepsFromMarginCalculation = false;
+        public bool ExcludeWorkstepsFromMarginCalculation
+        {
+            get => _ExcludeWorkstepsFromMarginCalculation;
+            set
+            {
+                if (_ExcludeWorkstepsFromMarginCalculation != value)
+                {
+                    _ExcludeWorkstepsFromMarginCalculation = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+
+        bool _ExcludePrinterCostsFromMarginCalculation = false;
+        public bool ExcludePrinterCostsFromMarginCalculation
+        {
+            get => _ExcludePrinterCostsFromMarginCalculation;
+            set
+            {
+                if (_ExcludePrinterCostsFromMarginCalculation != value)
+                {
+                    _ExcludePrinterCostsFromMarginCalculation = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+
+        bool _ExcludeMaterialCostsFromMarginCalculation = false;
+        public bool ExcludeMaterialCostsFromMarginCalculation
+        {
+            get => _ExcludeMaterialCostsFromMarginCalculation;
+            set
+            {
+                if (_ExcludeMaterialCostsFromMarginCalculation != value)
+                {
+                    _ExcludeMaterialCostsFromMarginCalculation = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
            
-        private double _Calculation_FailRate = 5;
+        double _Calculation_FailRate = 5;
         public double Calculation_FailRate
         {
             get => _Calculation_FailRate;
@@ -1224,7 +830,7 @@ namespace PrintCostCalculator3d.Models.Settings
                 }
             }
         }
-        private bool _Calculation_ShowGcodeInfos = true;
+        bool _Calculation_ShowGcodeInfos = true;
 
         public bool Calculation_ShowGcodeGrid
         {
@@ -1239,7 +845,7 @@ namespace PrintCostCalculator3d.Models.Settings
                 }
             }
         }
-        private bool _Calculation_ShowGcodeGrid = false;
+        bool _Calculation_ShowGcodeGrid = false;
         
         public bool Calculation_UseVolumeForCalculation
         {
@@ -1254,9 +860,9 @@ namespace PrintCostCalculator3d.Models.Settings
                 }
             }
         }
-        private bool _Calculation_UseVolumeForCalculation = GlobalStaticConfiguration.CalculationView_UseVolumeForCalculation;
+        bool _Calculation_UseVolumeForCalculation = GlobalStaticConfiguration.CalculationView_UseVolumeForCalculation;
 
-        private ObservableCollection<CustomAddition> _Calculation_CustomAdditions = new ObservableCollection<CustomAddition>();
+        ObservableCollection<CustomAddition> _Calculation_CustomAdditions = new ObservableCollection<CustomAddition>();
         public ObservableCollection<CustomAddition> Calculation_CustomAdditions
         {
             get => _Calculation_CustomAdditions;
@@ -1271,74 +877,366 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        public ObservableCollection<_3dPrinterModel> Calculation_DefaultPrinters
-        {
-            get => _Calculation_DefaultPrinters;
-            set
-            {
-                if (_Calculation_DefaultPrinters != value)
-                {
-                    _Calculation_DefaultPrinters = value;
-                    OnPropertyChanged();
-                    SettingsChanged = true;
-                }
-            }
-        }
-        private ObservableCollection<_3dPrinterModel> _Calculation_DefaultPrinters = new ObservableCollection<_3dPrinterModel>();
-        
-        public ObservableCollection<_3dPrinterMaterial> Calculation_DefaultMaterials
-        {
-            get => _Calculation_DefaultMaterials;
-            set
-            {
-                if (_Calculation_DefaultMaterials != value)
-                {
-                    _Calculation_DefaultMaterials = value;
-                    OnPropertyChanged();
-                    SettingsChanged = true;
-                }
-            }
-        }
-        private ObservableCollection<_3dPrinterMaterial> _Calculation_DefaultMaterials = new ObservableCollection<_3dPrinterMaterial>();
-        
-        public ObservableCollection<_3dPrinterWorkstep> Calculation_DefaultWorksteps
-        {
-            get => _Calculation_DefaultWorksteps;
-            set
-            {
-                if (_Calculation_DefaultWorksteps != value)
-                {
-                    _Calculation_DefaultWorksteps = value;
-                    OnPropertyChanged();
-                    SettingsChanged = true;
-                }
-            }
-        }
-        private ObservableCollection<_3dPrinterWorkstep> _Calculation_DefaultWorksteps = new ObservableCollection<_3dPrinterWorkstep>();
-        
         #endregion
 
-        #region Stock
-        private ObservableCollection<MaterialStockItem> _materialstockItems = new ObservableCollection<MaterialStockItem>();
-        public ObservableCollection<MaterialStockItem> MaterialStockItems
+        #region Procedure Additions
+
+        Material3dFamily _calculation_LastProcedure = Material3dFamily.Filament;
+        public Material3dFamily Calculation_LastProcedure
         {
-            get => _materialstockItems;
+            get => _calculation_LastProcedure;
             set
             {
-                if (value == _materialstockItems)
-                    return;
-
-                _materialstockItems = value;
-                OnPropertyChanged();
-                SettingsChanged = true;
+                if (_calculation_LastProcedure != value)
+                {
+                    _calculation_LastProcedure = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
             }
         }
+
+        #region Filament
+        bool _calculation_Filament_ApplyNozzleWearCosts = false;
+        public bool Calculation_Filament_ApplyNozzleWearCosts
+        {
+            get => _calculation_Filament_ApplyNozzleWearCosts;
+            set
+            {
+                if (_calculation_Filament_ApplyNozzleWearCosts != value)
+                {
+                    _calculation_Filament_ApplyNozzleWearCosts = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+
+        double _calculation_Filament_NozzleReplacementCosts = 20;
+        public double Calculation_Filament_NozzleReplacementCosts
+        {
+            get => _calculation_Filament_NozzleReplacementCosts;
+            set
+            {
+                if (_calculation_Filament_NozzleReplacementCosts != value)
+                {
+                    _calculation_Filament_NozzleReplacementCosts = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+
+        double _calculation_Filament_NozzleWearFactorPerPrintJob = 1;
+        public double Calculation_Filament_NozzleWearFactorPerPrintJob
+        {
+            get => _calculation_Filament_NozzleWearFactorPerPrintJob;
+            set
+            {
+                if (_calculation_Filament_NozzleWearFactorPerPrintJob != value)
+                {
+                    _calculation_Filament_NozzleWearFactorPerPrintJob = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+       
+        bool _calculation_Filament_ApplyPrintSheetWearCosts = false;
+        public bool Calculation_Filament_ApplyPrintSheetWearCosts
+        {
+            get => _calculation_Filament_ApplyPrintSheetWearCosts;
+            set
+            {
+                if (_calculation_Filament_ApplyPrintSheetWearCosts != value)
+                {
+                    _calculation_Filament_ApplyPrintSheetWearCosts = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+
+        double _calculation_Filament_PrintSheetReplacementCosts = 40;
+        public double Calculation_Filament_PrintSheetReplacementCosts
+        {
+            get => _calculation_Filament_PrintSheetReplacementCosts;
+            set
+            {
+                if (_calculation_Filament_PrintSheetReplacementCosts != value)
+                {
+                    _calculation_Filament_PrintSheetReplacementCosts = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+
+        double _calculation_Filament_PrintSheetWearFactorPerPrintJob = 1;
+        public double Calculation_Filament_PrintSheetWearFactorPerPrintJob
+        {
+            get => _calculation_Filament_PrintSheetWearFactorPerPrintJob;
+            set
+            {
+                if (_calculation_Filament_PrintSheetWearFactorPerPrintJob != value)
+                {
+                    _calculation_Filament_PrintSheetWearFactorPerPrintJob = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+        #endregion
+
+        #region Resin
+        bool _calculation_Resin_ApplyGlovesCosts = false;
+        public bool Calculation_Resin_ApplyGlovesCosts
+        {
+            get => _calculation_Resin_ApplyGlovesCosts;
+            set
+            {
+                if (_calculation_Resin_ApplyGlovesCosts != value)
+                {
+                    _calculation_Resin_ApplyGlovesCosts = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+
+        int _calculation_Resin_GlovesPerPrintJob = 2;
+        public int Calculation_Resin_GlovesPerPrintJob
+        {
+            get => _calculation_Resin_GlovesPerPrintJob;
+            set
+            {
+                if (_calculation_Resin_GlovesPerPrintJob != value)
+                {
+                    _calculation_Resin_GlovesPerPrintJob = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+
+        int _calculation_Resin_GlovesInPackage = 100;
+        public int Calculation_Resin_GlovesInPackage
+        {
+            get => _calculation_Resin_GlovesInPackage;
+            set
+            {
+                if (_calculation_Resin_GlovesInPackage != value)
+                {
+                    _calculation_Resin_GlovesInPackage = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+
+        double _calculation_Resin_GlovesPackagePrice = 30f;
+        public double Calculation_Resin_GlovesPackagePrice
+        {
+            get => _calculation_Resin_GlovesPackagePrice;
+            set
+            {
+                if (_calculation_Resin_GlovesPackagePrice != value)
+                {
+                    _calculation_Resin_GlovesPackagePrice = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+
+        bool _calculation_Resin_ApplyFilterCosts = false;
+        public bool Calculation_Resin_ApplyFilterCosts
+        {
+            get => _calculation_Resin_ApplyFilterCosts;
+            set
+            {
+                if (_calculation_Resin_ApplyFilterCosts != value)
+                {
+                    _calculation_Resin_ApplyFilterCosts = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+
+        double _calculation_Resin_FiltersPerPrintJob = 0.25f;
+        public double Calculation_Resin_FiltersPerPrintJob
+        {
+            get => _calculation_Resin_FiltersPerPrintJob;
+            set
+            {
+                if (_calculation_Resin_FiltersPerPrintJob != value)
+                {
+                    _calculation_Resin_FiltersPerPrintJob = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+
+        int _calculation_ResinFiltersInPackage = 150;
+        public int Calculation_Resin_FiltersInPackage
+        {
+            get => _calculation_ResinFiltersInPackage;
+            set
+            {
+                if (_calculation_ResinFiltersInPackage != value)
+                {
+                    _calculation_ResinFiltersInPackage = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+
+        double _calculation_Resin_FiltersPackagePrice = 30f;
+        public double Calculation_Resin_FiltersPackagePrice
+        {
+            get => _calculation_Resin_FiltersPackagePrice;
+            set
+            {
+                if (_calculation_Resin_FiltersPackagePrice != value)
+                {
+                    _calculation_Resin_FiltersPackagePrice = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+
+        bool _calculation_Resin_ApplyWashingCosts = false;
+        public bool Calculation_Resin_ApplyWashingCosts
+        {
+            get => _calculation_Resin_ApplyWashingCosts;
+            set
+            {
+                if (_calculation_Resin_ApplyWashingCosts != value)
+                {
+                    _calculation_Resin_ApplyWashingCosts = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+
+        double _calculation_Resin_IsopropanolContainerContent = 5f;
+        public double Calculation_Resin_IsopropanolContainerContent
+        {
+            get => _calculation_Resin_IsopropanolContainerContent;
+            set
+            {
+                if (_calculation_Resin_IsopropanolContainerContent != value)
+                {
+                    _calculation_Resin_IsopropanolContainerContent = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+
+        double _calculation_Resin_IsopropanolContainerPrice = 30f;
+        public double Calculation_Resin_IsopropanolContainerPrice
+        {
+            get => _calculation_Resin_IsopropanolContainerPrice;
+            set
+            {
+                if (_calculation_Resin_IsopropanolContainerPrice != value)
+                {
+                    _calculation_Resin_IsopropanolContainerPrice = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+
+        double _calculation_Resin_IsopropanolPerPrintJob = 0.25f;
+        public double Calculation_Resin_IsopropanolPerPrintJob
+        {
+            get => _calculation_Resin_IsopropanolPerPrintJob;
+            set
+            {
+                if (_calculation_Resin_IsopropanolPerPrintJob != value)
+                {
+                    _calculation_Resin_IsopropanolPerPrintJob = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+
+        bool _calculation_Resin_ApplyCuringCosts = false;
+        public bool Calculation_Resin_ApplyCuringCosts
+        {
+            get => _calculation_Resin_ApplyCuringCosts;
+            set
+            {
+                if (_calculation_Resin_ApplyCuringCosts != value)
+                {
+                    _calculation_Resin_ApplyCuringCosts = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+
+        double _calculation_Resin_CuringDurationInMinutes = 5f;
+        public double Calculation_Resin_CuringDurationInMinutes
+        {
+            get => _calculation_Resin_CuringDurationInMinutes;
+            set
+            {
+                if (_calculation_Resin_CuringDurationInMinutes != value)
+                {
+                    _calculation_Resin_CuringDurationInMinutes = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+
+        double _calculation_Resin_CuringCostsPerHour = 1f;
+        public double Calculation_Resin_CuringCostsPerHour
+        {
+            get => _calculation_Resin_CuringCostsPerHour;
+            set
+            {
+                if (_calculation_Resin_CuringCostsPerHour != value)
+                {
+                    _calculation_Resin_CuringCostsPerHour = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+        #endregion
+
+        #region Powder
+        bool _calculation_SLS_ApplyRefreshing = false;
+        public bool Calculation_SLS_ApplyRefreshing
+        {
+            get => _calculation_SLS_ApplyRefreshing;
+            set
+            {
+                if (_calculation_SLS_ApplyRefreshing != value)
+                {
+                    _calculation_SLS_ApplyRefreshing = value;
+                    OnPropertyChanged();
+                    SettingsChanged = true;
+                }
+            }
+        }
+        #endregion
 
         #endregion
 
         #region EventLogger
         // Overall Logging
-        private bool _EventLogger_enableLogging = true;
+        bool _EventLogger_enableLogging = true;
         public bool EventLogger_EnableLogging
         {
             get => _EventLogger_enableLogging;
@@ -1354,7 +1252,7 @@ namespace PrintCostCalculator3d.Models.Settings
         }
 
         // Saved logs
-        private int _EventLogger_savedLogs = 150;
+        int _EventLogger_savedLogs = 150;
         public int EventLogger_AmountSavedLogs
         {
             get => _EventLogger_savedLogs;
@@ -1372,7 +1270,7 @@ namespace PrintCostCalculator3d.Models.Settings
 
         #region General 
 
-        private ApplicationName _general_DefaultApplicationViewName = GlobalStaticConfiguration.General_DefaultApplicationViewName;
+        ApplicationName _general_DefaultApplicationViewName = GlobalStaticConfiguration.General_DefaultApplicationViewName;
         public ApplicationName General_DefaultApplicationViewName
         {
             get => _general_DefaultApplicationViewName;
@@ -1387,7 +1285,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private int _general_BackgroundJobInterval = GlobalStaticConfiguration.General_BackgroundJobInterval;
+        int _general_BackgroundJobInterval = GlobalStaticConfiguration.General_BackgroundJobInterval;
         public int General_BackgroundJobInterval
         {
             get => _general_BackgroundJobInterval;
@@ -1402,7 +1300,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private int _general_HistoryListEntries = GlobalStaticConfiguration.General_HistoryListEntries;
+        int _general_HistoryListEntries = GlobalStaticConfiguration.General_HistoryListEntries;
         public int General_HistoryListEntries
         {
             get => _general_HistoryListEntries;
@@ -1417,7 +1315,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private bool _general_OpenCalculationResultView = true;
+        bool _general_OpenCalculationResultView = true;
         public bool General_OpenCalculationResultView
         {
             get => _general_OpenCalculationResultView;
@@ -1432,7 +1330,37 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private bool _general_overwriteCurrencySymbol = false;
+        bool _general_SetLoadedCalculationAsSelected = true;
+        public bool General_SetLoadedCalculationAsSelected
+        {
+            get => _general_SetLoadedCalculationAsSelected;
+            set
+            {
+                if (value == _general_SetLoadedCalculationAsSelected)
+                    return;
+
+                _general_SetLoadedCalculationAsSelected = value;
+                OnPropertyChanged();
+                SettingsChanged = true;
+            }
+        }
+
+        bool _general_NewCalculationWhenCalculate = false;
+        public bool General_NewCalculationWhenCalculate
+        {
+            get => _general_NewCalculationWhenCalculate;
+            set
+            {
+                if (value == _general_NewCalculationWhenCalculate)
+                    return;
+
+                _general_NewCalculationWhenCalculate = value;
+                OnPropertyChanged();
+                SettingsChanged = true;
+            }
+        }
+
+        bool _general_overwriteCurrencySymbol = false;
         public bool General_OverwriteCurrencySymbol
         {
             get => _general_overwriteCurrencySymbol;
@@ -1447,7 +1375,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private bool _general_overwriteNumberFormats = false;
+        bool _general_overwriteNumberFormats = false;
         public bool General_OverwriteNumberFormats
         {
             get => _general_overwriteNumberFormats;
@@ -1462,7 +1390,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private string _general_CurrencySymbol = string.Empty;
+        string _general_CurrencySymbol = string.Empty;
         public string General_CurrencySymbol
         {
             get => _general_CurrencySymbol;
@@ -1477,7 +1405,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private string _general_OverwriteCultureCode = string.Empty;
+        string _general_OverwriteCultureCode = string.Empty;
         public string General_OverwriteCultureCode
         {
             get => _general_OverwriteCultureCode;
@@ -1492,7 +1420,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private ObservableCollection<ApplicationViewInfo> _general_ApplicationList = new ObservableCollection<ApplicationViewInfo>();
+        ObservableCollection<ApplicationViewInfo> _general_ApplicationList = new ObservableCollection<ApplicationViewInfo>();
         public ObservableCollection<ApplicationViewInfo> General_ApplicationList
         {
             get => _general_ApplicationList;
@@ -1508,7 +1436,7 @@ namespace PrintCostCalculator3d.Models.Settings
         }
 
         //SvnRepositiories
-        private ObservableCollection<object> _repos = new ObservableCollection<object>();
+        ObservableCollection<object> _repos = new ObservableCollection<object>();
         public ObservableCollection<object> Repos
         {
             get => _repos;
@@ -1524,7 +1452,7 @@ namespace PrintCostCalculator3d.Models.Settings
         }
 
         // Window
-        private bool _window_ConfirmClose;
+        bool _window_ConfirmClose;
         public bool Window_ConfirmClose
         {
             get => _window_ConfirmClose;
@@ -1539,7 +1467,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private bool _window_MinimizeInsteadOfTerminating;
+        bool _window_MinimizeInsteadOfTerminating;
         public bool Window_MinimizeInsteadOfTerminating
         {
             get => _window_MinimizeInsteadOfTerminating;
@@ -1554,7 +1482,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private bool _window_MultipleInstances;
+        bool _window_MultipleInstances;
         public bool Window_MultipleInstances
         {
             get => _window_MultipleInstances;
@@ -1569,7 +1497,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private bool _window_MinimizeToTrayInsteadOfTaskbar;
+        bool _window_MinimizeToTrayInsteadOfTaskbar;
         public bool Window_MinimizeToTrayInsteadOfTaskbar
         {
             get => _window_MinimizeToTrayInsteadOfTaskbar;
@@ -1585,7 +1513,7 @@ namespace PrintCostCalculator3d.Models.Settings
         }
 
         // TrayIcon
-        private bool _trayIcon_AlwaysShowIcon;
+        bool _trayIcon_AlwaysShowIcon;
         public bool TrayIcon_AlwaysShowIcon
         {
             get => _trayIcon_AlwaysShowIcon;
@@ -1602,7 +1530,7 @@ namespace PrintCostCalculator3d.Models.Settings
 
         // Appearance
         #region Appearance
-        private string _appearance_AppTheme;
+        string _appearance_AppTheme;
         public string Appearance_AppTheme
         {
             get => _appearance_AppTheme;
@@ -1617,7 +1545,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private string _appearance_Accent;
+        string _appearance_Accent;
         public string Appearance_Accent
         {
             get => _appearance_Accent;
@@ -1632,7 +1560,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private bool _appearance_EnableTransparency;
+        bool _appearance_EnableTransparency;
         public bool Appearance_EnableTransparency
         {
             get => _appearance_EnableTransparency;
@@ -1647,7 +1575,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private double _appearance_Opacity = GlobalStaticConfiguration.Appearance_Opacity;
+        double _appearance_Opacity = GlobalStaticConfiguration.Appearance_Opacity;
         public double Appearance_Opacity
         {
             get => _appearance_Opacity;
@@ -1665,7 +1593,7 @@ namespace PrintCostCalculator3d.Models.Settings
 
         // Localization
         #region Localization
-        private string _localization_CultureCode;
+        string _localization_CultureCode;
         public string Localization_CultureCode
         {
             get => _localization_CultureCode;
@@ -1682,7 +1610,7 @@ namespace PrintCostCalculator3d.Models.Settings
         #endregion
 
         // Autostart
-        private bool _autostart_StartMinimizedInTray;
+        bool _autostart_StartMinimizedInTray;
         public bool Autostart_StartMinimizedInTray
         {
             get => _autostart_StartMinimizedInTray;
@@ -1699,7 +1627,7 @@ namespace PrintCostCalculator3d.Models.Settings
 
 
         // Update
-        private bool _update_CheckForUpdatesAtStartup = true;
+        bool _update_CheckForUpdatesAtStartup = true;
         public bool Update_CheckForUpdatesAtStartup
         {
             get => _update_CheckForUpdatesAtStartup;
@@ -1713,11 +1641,56 @@ namespace PrintCostCalculator3d.Models.Settings
                 SettingsChanged = true;
             }
         }
+
+        bool _update_UseNewUpdater = GlobalStaticConfiguration.Update_UseNewUpdater;
+        public bool Update_UseNewUpdater
+        {
+            get => _update_UseNewUpdater;
+            set
+            {
+                if (value == _update_UseNewUpdater)
+                    return;
+
+                _update_UseNewUpdater = value;
+                OnPropertyChanged();
+                SettingsChanged = true;
+            }
+        }
+
+        bool _update_IncludeBetaVersions = true;
+        public bool Update_IncludeBetaVersions
+        {
+            get => _update_IncludeBetaVersions;
+            set
+            {
+                if (value == _update_IncludeBetaVersions)
+                    return;
+
+                _update_IncludeBetaVersions = value;
+                OnPropertyChanged();
+                SettingsChanged = true;
+            }
+        }
+
+        bool _update_IncludeAlphaVersions = true;
+        public bool Update_IncludeAlphaVersions
+        {
+            get => _update_IncludeAlphaVersions;
+            set
+            {
+                if (value == _update_IncludeAlphaVersions)
+                    return;
+
+                _update_IncludeAlphaVersions = value;
+                OnPropertyChanged();
+                SettingsChanged = true;
+            }
+        }
         #endregion
 
         #region Exporters
-        private ObservableCollection<ExporterTemplate> _exporterTemplates = new ObservableCollection<ExporterTemplate>();
-        //private ObservableCollection<ExporterTemplate> _exporterTemplates = GlobalStaticConfiguration.defaultTemplates;
+        ObservableCollection<ExporterTemplate> _exporterTemplates = new ObservableCollection<ExporterTemplate>();
+        //ObservableCollection<ExporterTemplate> _exporterTemplates = GlobalStaticConfiguration.defaultTemplates;
         public ObservableCollection<ExporterTemplate> ExporterExcel_Templates
         {
             get => _exporterTemplates;
@@ -1732,7 +1705,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private string _exporterExcel_TemplatePath = "export_template.xlsx";
+        string _exporterExcel_TemplatePath = "export_template.xlsx";
         public string ExporterExcel_TemplatePath
         {
             get => _exporterExcel_TemplatePath;
@@ -1747,7 +1720,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
         
-        private string _exporterExcel_LastExportPath;
+        string _exporterExcel_LastExportPath;
         public string ExporterExcel_LastExportPath
         {
             get => _exporterExcel_LastExportPath;
@@ -1762,7 +1735,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private string _exporterExcel_StartColumn;
+        string _exporterExcel_StartColumn;
         public string ExporterExcel_StartColumn
         {
             get => _exporterExcel_StartColumn;
@@ -1777,7 +1750,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
         
-        private string _exporterExcel_StartRow;
+        string _exporterExcel_StartRow;
         public string ExporterExcel_StartRow
         {
             get => _exporterExcel_StartRow;
@@ -1792,7 +1765,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private bool _exporterExcel_WriteToTemplate;
+        bool _exporterExcel_WriteToTemplate;
         public bool ExporterExcel_WriteToTemplate
         {
             get => _exporterExcel_WriteToTemplate;
@@ -1807,7 +1780,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
         
-        private bool _exporterExcel_LastExportAsPdf = false;
+        bool _exporterExcel_LastExportAsPdf = false;
         public bool ExporterExcel_LastExportAsPdf
         {
             get => _exporterExcel_LastExportAsPdf;
@@ -1824,7 +1797,7 @@ namespace PrintCostCalculator3d.Models.Settings
         #endregion
 
         #region GcodeParser
-        private SlicerPrinterConfiguration _gcodeParser_PrinterConfig;
+        SlicerPrinterConfiguration _gcodeParser_PrinterConfig;
         public SlicerPrinterConfiguration GcodeParser_PrinterConfig
         {
             get => _gcodeParser_PrinterConfig;
@@ -1838,7 +1811,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private ObservableCollection<SlicerPrinterConfiguration> _gcodeParser_PrinterConfigs;
+        ObservableCollection<SlicerPrinterConfiguration> _gcodeParser_PrinterConfigs = new ObservableCollection<SlicerPrinterConfiguration>();
         public ObservableCollection<SlicerPrinterConfiguration> GcodeParser_PrinterConfigs
         {
             get => _gcodeParser_PrinterConfigs;
@@ -1855,7 +1828,7 @@ namespace PrintCostCalculator3d.Models.Settings
 
         #region Others
         // Application view       
-        private bool _expandApplicationView;
+        bool _expandApplicationView;
         public bool ExpandApplicationView
         {
             get => _expandApplicationView;
@@ -1880,7 +1853,7 @@ namespace PrintCostCalculator3d.Models.Settings
             General_ApplicationList.CollectionChanged += CollectionChanged;
         }
 
-        private void CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        void CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
             SettingsChanged = true;
         }

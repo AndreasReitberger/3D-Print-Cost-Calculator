@@ -3,13 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
-             xmlns:Models="clr-namespace:PrintCostCalculator3d.Models._3dprinting"
+             xmlns:Models="clr-namespace:AndreasReitberger.Models;assembly=3dPrintCalculatorLibrary"
              xmlns:localization="clr-namespace:PrintCostCalculator3d.Resources.Localization"
              
              Width="400"
              mc:Ignorable="d" 
-             d:DataContext="{d:DesignInstance Models:_3dPrinterModel}"
+             d:DataContext="{d:DesignInstance Models:Material3d}"
              d:DesignHeight="350" d:DesignWidth="450">
     
     <Border BorderThickness="2" CornerRadius="10">
@@ -168,9 +169,13 @@
                         </TextBlock.Style>
                     </TextBlock>
                     <!-- Machine Houre Rate -->
-                    <TextBlock Text="{Binding Printer.HourlyMachineRate, StringFormat={}{0:C}}" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock 
+                        Text="{Binding Printer.HourlyMachineRate.CalcMachineHourRate, StringFormat={}{0:C2}}" 
+                        Margin="5" 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Center">
                         <TextBlock.Style>
-                            <Style TargetType="{x:Type TextBlock}">
+                            <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockItemTemplate}">
                                 <Setter Property="Foreground" Value="{DynamicResource MahApps.Brushes.AccentBase}" />
                                 <Setter Property="Margin" Value="0,0,10,0" />
                                 <Setter Property="VerticalAlignment" Value="Center" />

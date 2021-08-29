@@ -1,44 +1,39 @@
-﻿using PrintCostCalculator3d.Utilities;
+﻿using IWshRuntimeLibrary;
 using MahApps.Metro.Controls.Dialogs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections.ObjectModel;
-using PrintCostCalculator3d.Models.Slicer;
-using PrintCostCalculator3d.Models.Settings;
-using System.ComponentModel;
-using System.Collections;
-using System.Windows.Data;
-using System.Windows.Controls;
 using MahApps.Metro.IconPacks;
-using System.Windows.Input;
-using PrintCostCalculator3d.Resources.Localization;
 using MahApps.Metro.SimpleChildWindow;
-using System.Windows;
-using System.Windows.Media;
+using PrintCostCalculator3d.Models.Settings;
+using PrintCostCalculator3d.Models.Slicer;
+using PrintCostCalculator3d.Resources.Localization;
+using PrintCostCalculator3d.Utilities;
 using PrintCostCalculator3d.ViewModels.Slicer;
-using log4net;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
-using IWshRuntimeLibrary;
-using PrintCostCalculator3d.Converters;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Input;
+using System.Windows.Media;
 
 namespace PrintCostCalculator3d.ViewModels
 {
     class SettingsSlicerViewModel : ViewModelBase
     {
         #region Variables
-        private readonly IDialogCoordinator _dialogCoordinator;
-        private static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        private readonly bool _isLoading = false;
+        readonly IDialogCoordinator _dialogCoordinator;
         #endregion
 
         #region Properties
 
         #region Slicers
-        private ObservableCollection<Models.Slicer.Slicer> _slicers = new ObservableCollection<Models.Slicer.Slicer>();
+        ObservableCollection<Models.Slicer.Slicer> _slicers = new ObservableCollection<Models.Slicer.Slicer>();
         public ObservableCollection<Models.Slicer.Slicer> Slicers
         {
             get => _slicers;
@@ -46,7 +41,7 @@ namespace PrintCostCalculator3d.ViewModels
             {
                 if (_slicers == value) return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.Slicers = value;
 
                 _slicers = value;
@@ -55,11 +50,11 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private ICollectionView _SlicerViews;
+        ICollectionView _SlicerViews;
         public ICollectionView SlicerViews
         {
             get => _SlicerViews;
-            private set
+            set
             {
                 if (_SlicerViews != value)
                 {
@@ -70,7 +65,7 @@ namespace PrintCostCalculator3d.ViewModels
         }
         
 
-        private SlicerViewInfo _selectedSlicerView;
+        SlicerViewInfo _selectedSlicerView;
         public SlicerViewInfo SelectedSlicerView
         {
             get => _selectedSlicerView;
@@ -84,7 +79,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private IList _selectedSlicersView = new ArrayList();
+        IList _selectedSlicersView = new ArrayList();
         public IList SelectedSlicersView
         {
             get => _selectedSlicersView;
@@ -100,15 +95,15 @@ namespace PrintCostCalculator3d.ViewModels
         #endregion
 
         #region Commands
-        private ObservableCollection<SlicerCommand> _slicerCommands;
+        ObservableCollection<SlicerCommand> _slicerCommands;
         public ObservableCollection<SlicerCommand> SlicerCommands
         {
             get => _slicerCommands;
-            private set
+            set
             {
                 if (_slicerCommands == value) return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.SlicerCommands = value;
 
                 _slicerCommands = value;
@@ -117,11 +112,11 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private ICollectionView _SlicerCommandViews;
+        ICollectionView _SlicerCommandViews;
         public ICollectionView SlicerCommandViews
         {
             get => _SlicerCommandViews;
-            private set
+            set
             {
                 if (_SlicerCommandViews == value) return;
                 
@@ -132,7 +127,7 @@ namespace PrintCostCalculator3d.ViewModels
         }
 
 
-        private SlicerCommand _selectedSlicerCommandView;
+        SlicerCommand _selectedSlicerCommandView;
         public SlicerCommand SelectedSlicerCommandView
         {
             get => _selectedSlicerCommandView;
@@ -146,7 +141,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private IList _selectedSlicerCommandsView = new ArrayList();
+        IList _selectedSlicerCommandsView = new ArrayList();
         public IList SelectedSlicerCommandsView
         {
             get => _selectedSlicerCommandsView;
@@ -164,7 +159,7 @@ namespace PrintCostCalculator3d.ViewModels
         #endregion
 
         #region Search
-        private string _searchSlicer = string.Empty;
+        string _searchSlicer = string.Empty;
         public string SearchSlicer
         {
             get => _searchSlicer;
@@ -188,7 +183,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private string _searchSlicerCommand = string.Empty;
+        string _searchSlicerCommand = string.Empty;
         public string SearchSlicerCommand
         {
             get => _searchSlicerCommand;
@@ -230,32 +225,32 @@ namespace PrintCostCalculator3d.ViewModels
         #region Constructor
         public SettingsSlicerViewModel(IDialogCoordinator instance)
         {
-            _isLoading = true;
+            IsLoading = true;
             LoadSettings();
-            _isLoading = false;
+            IsLoading = false;
 
             _dialogCoordinator = instance;
             Slicers.CollectionChanged += Slicers_CollectionChanged;
             SlicerCommands.CollectionChanged += SlicerCommands_CollectionChanged; 
-            createSlicerViewInfos();
-            createSlicerCommandViewInfos();
+            CreateSlicerViewInfos();
+            CreateSlicerCommandViewInfos();
         }
 
-        private void SlicerCommands_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        void SlicerCommands_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
-            createSlicerCommandViewInfos();
+            CreateSlicerCommandViewInfos();
             SettingsManager.Save();
         }
 
-        private void LoadSettings()
+        void LoadSettings()
         {
             SlicerCommands = SettingsManager.Current.SlicerCommands;
             Slicers = SettingsManager.Current.Slicers;
         }
 
-        private void Slicers_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        void Slicers_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
-            createSlicerViewInfos();
+            CreateSlicerViewInfos();
             SettingsManager.Save();
         }
         #endregion
@@ -265,9 +260,9 @@ namespace PrintCostCalculator3d.ViewModels
         #region Slicer
         public ICommand OnDropLnkFileCommand
         {
-            get => new RelayCommand(p => OnDropLnkFileAction(p));
+            get => new RelayCommand(async(p) => await OnDropLnkFileAction(p));
         }
-        private async void OnDropLnkFileAction(object p)
+        async Task OnDropLnkFileAction(object p)
         {
             try
             {
@@ -285,7 +280,7 @@ namespace PrintCostCalculator3d.ViewModels
                                 string ext = Path.GetExtension(file);
                                 if (ext.ToLower() != ".lnk")
                                 {
-                                    await _dialogCoordinator.ShowMessageAsync(this,
+                                    _ = await _dialogCoordinator.ShowMessageAsync(this,
                                         Strings.DialogFileTypeNotSupportedHeadline,
                                         string.Format(Strings.DialogFileTypeNotSupportedFormatedContent, ext, file)
                                         );
@@ -298,8 +293,8 @@ namespace PrintCostCalculator3d.ViewModels
                                         WshShell shell = new WshShell(); //Create a new WshShell Interface
                                         IWshShortcut link = (IWshShortcut)shell.CreateShortcut(file);
 
-                                        var _dialog = new CustomDialog() { Title = Strings.AddSlicer };
-                                        var newSlicerViewModel = new NewSlicerViewModel(async instance =>
+                                        CustomDialog _dialog = new() { Title = Strings.AddSlicer };
+                                        NewSlicerViewModel newSlicerViewModel = new(async instance =>
                                         {
                                             await _dialogCoordinator.HideMetroDialogAsync(this, _dialog);
                                             Slicers.Add(new Models.Slicer.Slicer()
@@ -329,10 +324,6 @@ namespace PrintCostCalculator3d.ViewModels
                                     catch (Exception exc)
                                     {
                                         logger.Error(string.Format(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message));
-                                        await _dialogCoordinator.ShowMessageAsync(this,
-                                            Strings.DialogExceptionHeadline,
-                                            string.Format(Strings.DialogExceptionFormatedContent, exc.Message)
-                                            );
                                     }
                                 }
                             }
@@ -348,14 +339,14 @@ namespace PrintCostCalculator3d.ViewModels
 
         public ICommand AddNewSlicerCommand
         {
-            get { return new RelayCommand(p => AddNewSlicerAction()); }
+            get { return new RelayCommand(async(p) => await AddNewSlicerAction()); }
         }
-        private async void AddNewSlicerAction()
+        async Task AddNewSlicerAction()
         {
             try
             {
-                var _dialog = new CustomDialog() { Title = Strings.AddSlicer };
-                var newSlicerViewModel = new NewSlicerViewModel(async instance =>
+                CustomDialog _dialog = new() { Title = Strings.AddSlicer };
+                NewSlicerViewModel newSlicerViewModel = new(async instance =>
                 {
                     await _dialogCoordinator.HideMetroDialogAsync(this, _dialog);
                     Slicers.Add(new Models.Slicer.Slicer()
@@ -364,8 +355,7 @@ namespace PrintCostCalculator3d.ViewModels
                         SlicerName = instance.SlicerName,
                         Group = instance.SlicerGroup,
                         InstallationPath = instance.SlicerPath,
-                        DownloadUri = instance.SlicerPath,
-
+                        DownloadUri = instance.SlicerPath
                     });
                     logger.Info(string.Format(Strings.EventAddedItemFormated, Slicers[Slicers.Count - 1].SlicerName));
                 }, instance =>
@@ -384,23 +374,18 @@ namespace PrintCostCalculator3d.ViewModels
             catch (Exception exc)
             {
                 logger.Error(string.Format(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message));
-                await _dialogCoordinator.ShowMessageAsync(this,
-                    Strings.DialogExceptionHeadline,
-                    string.Format(Strings.DialogExceptionFormatedContent, exc.Message)
-                    );
             }
         }
 
         public ICommand AddNewSlicerChildWindowCommand
         {
-            get { return new RelayCommand(p => AddNewSlicerChildWindowAction()); }
+            get { return new RelayCommand(async(p) => await AddNewSlicerChildWindowAction()); }
         }
-        private async void AddNewSlicerChildWindowAction()
+        async Task AddNewSlicerChildWindowAction()
         {
             try
             {
-
-                var _childWindow = new ChildWindow()
+                ChildWindow _childWindow = new()
                 {
                     Title = Strings.AddSlicer,
                     AllowMove = true,
@@ -410,7 +395,7 @@ namespace PrintCostCalculator3d.ViewModels
                     OverlayBrush = new SolidColorBrush() { Opacity = 0.7, Color = (Color)Application.Current.Resources["Gray2"] },
                     Padding = new Thickness(50),
                 };
-                var newSlicerViewModel = new NewSlicerViewModel(async instance =>
+                NewSlicerViewModel newSlicerViewModel = new(instance =>
                 {
                     _childWindow.Close();
                     Slicers.Add(new Models.Slicer.Slicer()
@@ -426,7 +411,7 @@ namespace PrintCostCalculator3d.ViewModels
                 {
                     _childWindow.Close();
                 },
-                    this._dialogCoordinator
+                    _dialogCoordinator
                 );
 
                 _childWindow.Content = new Views.SlicerViews.NewSlicerDialog()
@@ -438,26 +423,21 @@ namespace PrintCostCalculator3d.ViewModels
             catch (Exception exc)
             {
                 logger.Error(string.Format(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message));
-                await _dialogCoordinator.ShowMessageAsync(this,
-                        Strings.DialogExceptionHeadline,
-                        string.Format(Strings.DialogExceptionFormatedContent, exc.Message)
-                        );
             }
         }
 
         public ICommand DeleteSlicerCommand
         {
-            get => new RelayCommand(p => DeleteSlicerAction(p));
+            get => new RelayCommand(async(p) => await DeleteSlicerAction(p));
         }
-        private async void DeleteSlicerAction(object p)
+        async Task DeleteSlicerAction(object p)
         {
             try
             {
-                Models.Slicer.Slicer slicer = p as Models.Slicer.Slicer;
-                if (slicer != null)
+                if (p is Models.Slicer.Slicer slicer)
                 {
-                    var res = await _dialogCoordinator.ShowMessageAsync(this,
-                        Strings.DialogDeleteSlicerHeadline, 
+                    MessageDialogResult res = await _dialogCoordinator.ShowMessageAsync(this,
+                        Strings.DialogDeleteSlicerHeadline,
                         string.Format(Strings.DialogDeleteSlicerFormatedContent, slicer.SlicerName),
                         MessageDialogStyle.AffirmativeAndNegative
                         );
@@ -476,17 +456,16 @@ namespace PrintCostCalculator3d.ViewModels
 
         public ICommand DeleteSlicersCommand
         {
-            get => new RelayCommand(p => DeleteSlicersAction(p));
+            get => new RelayCommand(async(p) => await DeleteSlicersAction(p));
         }
-        private async void DeleteSlicersAction(object items)
+        async Task DeleteSlicersAction(object items)
         {
             try
             {
                 //var type = items.GetType();
-                var slicers = items as IList<Models.Slicer.Slicer>;
-                if (slicers != null)
+                if (items is IList<Models.Slicer.Slicer> slicers)
                 {
-                    var res = await _dialogCoordinator.ShowMessageAsync(this,
+                    MessageDialogResult res = await _dialogCoordinator.ShowMessageAsync(this,
                         Strings.DialogDeleteSlicersHeadline,
                         Strings.DialogDeleteSlicersContent,
                         MessageDialogStyle.AffirmativeAndNegative
@@ -495,7 +474,7 @@ namespace PrintCostCalculator3d.ViewModels
                     {
                         for (int i = 0; i < slicers.Count; i++)
                         {
-                            Models.Slicer.Slicer slicer = slicers[i] as Models.Slicer.Slicer;
+                            Models.Slicer.Slicer slicer = slicers[i];
                             logger.Info(string.Format(Strings.EventDeletedItemFormated, slicer.SlicerName));
                             Slicers.Remove(slicer);
                         }
@@ -510,13 +489,13 @@ namespace PrintCostCalculator3d.ViewModels
 
         public ICommand DeleteSelectedSlicersCommand
         {
-            get => new RelayCommand(p => DeleteSelectedSlicersAction());
+            get => new RelayCommand(async(p) => await DeleteSelectedSlicersAction());
         }
-        private async void DeleteSelectedSlicersAction()
+        async Task DeleteSelectedSlicersAction()
         {
             try
             {
-                var res = await _dialogCoordinator.ShowMessageAsync(this,
+                MessageDialogResult res = await _dialogCoordinator.ShowMessageAsync(this,
                        Strings.DialogDeleteSlicersHeadline, Strings.DialogDeleteSlicersContent,
                        MessageDialogStyle.AffirmativeAndNegative
                        );
@@ -525,8 +504,7 @@ namespace PrintCostCalculator3d.ViewModels
                     IList collection = new ArrayList(SelectedSlicersView);
                     for (int i = 0; i < collection.Count; i++)
                     {
-                        var obj = collection[i] as SlicerViewInfo;
-                        if (obj == null)
+                        if (collection[i] is not SlicerViewInfo obj)
                             continue;
                         logger.Info(string.Format(Strings.EventDeletedItemFormated, obj.Name));
                         Slicers.Remove(obj.Slicer);
@@ -542,15 +520,15 @@ namespace PrintCostCalculator3d.ViewModels
 
         public ICommand EditSelectedSlicerCommand
         {
-            get => new RelayCommand(p => EditSelectedSlicerAction());
+            get => new RelayCommand(async(p) => await EditSelectedSlicerAction());
         }
-        private async void EditSelectedSlicerAction()
+        async Task EditSelectedSlicerAction()
         {
             try
             {
-                var selectedSlicer = SelectedSlicerView.Slicer;
-                var _dialog = new CustomDialog() { Title = Strings.EditPrinter };
-                var newSlicerViewModel = new NewSlicerViewModel(async instance =>
+                Models.Slicer.Slicer selectedSlicer = SelectedSlicerView.Slicer;
+                CustomDialog _dialog = new() { Title = Strings.EditPrinter };
+                NewSlicerViewModel newSlicerViewModel = new(async instance =>
                 {
                     await _dialogCoordinator.HideMetroDialogAsync(this, _dialog);
                     Slicers.Remove(selectedSlicer);
@@ -580,29 +558,24 @@ namespace PrintCostCalculator3d.ViewModels
             catch (Exception exc)
             {
                 logger.Error(string.Format(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message));
-                await _dialogCoordinator.ShowMessageAsync(this,
-                    Strings.DialogExceptionHeadline,
-                    string.Format(Strings.DialogExceptionFormatedContent, exc.Message)
-                    );
             }
         }
 
         // Edit Action from Template
         public ICommand EditSlicerCommand
         {
-            get => new RelayCommand(p => EditSlicerAction(p));
+            get => new RelayCommand(async(p) => await EditSlicerAction(p));
         }
-        private async void EditSlicerAction(object slicer)
+        async Task EditSlicerAction(object slicer)
         {
             try
             {
-                var selectedSlicer = slicer as Models.Slicer.Slicer;
-                if (selectedSlicer == null)
+                if (slicer is not Models.Slicer.Slicer selectedSlicer)
                 {
                     return;
                 }
-                var _dialog = new CustomDialog() { Title = Strings.EditSlicer };
-                var newSlicerViewModel = new NewSlicerViewModel(async instance =>
+                CustomDialog _dialog = new() { Title = Strings.EditSlicer };
+                NewSlicerViewModel newSlicerViewModel = new(async instance =>
                 {
                     await _dialogCoordinator.HideMetroDialogAsync(this, _dialog);
                     Slicers.Remove(selectedSlicer);
@@ -612,8 +585,7 @@ namespace PrintCostCalculator3d.ViewModels
                         SlicerName = instance.SlicerName,
                         Group = instance.SlicerGroup,
                         InstallationPath = instance.SlicerPath,
-                        DownloadUri = instance.DownloadUri,
-
+                        DownloadUri = instance.DownloadUri
                     });
                     logger.Info(string.Format(Strings.EventAddedItemFormated, Slicers[Slicers.Count - 1].SlicerName));
                 }, instance =>
@@ -633,23 +605,18 @@ namespace PrintCostCalculator3d.ViewModels
             catch (Exception exc)
             {
                 logger.Error(string.Format(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message));
-                await _dialogCoordinator.ShowMessageAsync(this,
-                    Strings.DialogExceptionHeadline,
-                    string.Format(Strings.DialogExceptionFormatedContent, exc.Message)
-                    );
             }
         }
         
         public ICommand RunSlicerFromTemplateCommand
         {
-            get => new RelayCommand(p => RunSlicerFromTemplateAction(p));
+            get => new RelayCommand((p) => RunSlicerFromTemplateAction(p));
         }
-        private async void RunSlicerFromTemplateAction(object slicer)
+        void RunSlicerFromTemplateAction(object slicer)
         {
             try
             {
-                var selectedSlicer = slicer as Models.Slicer.Slicer;
-                if (selectedSlicer == null)
+                if (slicer is not Models.Slicer.Slicer selectedSlicer)
                 {
                     return;
                 }
@@ -658,28 +625,23 @@ namespace PrintCostCalculator3d.ViewModels
             catch (Exception exc)
             {
                 logger.Error(string.Format(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message));
-                await _dialogCoordinator.ShowMessageAsync(this,
-                    Strings.DialogExceptionHeadline,
-                    string.Format(Strings.DialogExceptionFormatedContent, exc.Message)
-                    );
             }
         }
         public ICommand DeleteSlicerFromTemplateCommand
         {
-            get => new RelayCommand(p => DeleteSlicerFromTemplateAction(p));
+            get => new RelayCommand(async(p) => await DeleteSlicerFromTemplateAction(p));
         }
-        private async void DeleteSlicerFromTemplateAction(object obj)
+        async Task DeleteSlicerFromTemplateAction(object obj)
         {
             try
             {
-                var res = await _dialogCoordinator.ShowMessageAsync(this,
+                MessageDialogResult res = await _dialogCoordinator.ShowMessageAsync(this,
                        Strings.DialogDeleteSlicersHeadline, Strings.DialogDeleteSlicersContent,
                        MessageDialogStyle.AffirmativeAndNegative
                        );
                 if (res == MessageDialogResult.Affirmative)
                 {
-                    Models.Slicer.Slicer slicer = obj as Models.Slicer.Slicer;
-                    if(slicer != null)
+                    if (obj is Models.Slicer.Slicer slicer)
                     {
                         logger.Info(string.Format(Strings.EventDeletedItemFormated, slicer.SlicerName));
                         Slicers.Remove(slicer);
@@ -690,10 +652,6 @@ namespace PrintCostCalculator3d.ViewModels
             catch (Exception exc)
             {
                 logger.Error(string.Format(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message));
-                await _dialogCoordinator.ShowMessageAsync(this,
-                    Strings.DialogExceptionHeadline,
-                    string.Format(Strings.DialogExceptionFormatedContent, exc.Message)
-                    );
             }
         }
 
@@ -702,23 +660,23 @@ namespace PrintCostCalculator3d.ViewModels
         #region SlicerCommands
         public ICommand AddNewSlicerCommandCommand
         {
-            get { return new RelayCommand(p => AddNewSlicerCommandAction()); }
+            get { return new RelayCommand(async(p) => await AddNewSlicerCommandAction()); }
         }
-        private async void AddNewSlicerCommandAction()
+        async Task AddNewSlicerCommandAction()
         {
             try
             {
-                var _dialog = new CustomDialog() { Title = Strings.AddSlicerCommand };
-                var newViewModel = new NewSlicerCommandDialogViewModel(async instance =>
+                CustomDialog _dialog = new() { Title = Strings.AddSlicerCommand };
+                NewSlicerCommandDialogViewModel newViewModel = new(async instance =>
                 {
                     await _dialogCoordinator.HideMetroDialogAsync(this, _dialog);
-                    SlicerCommands.Add(new Models.Slicer.SlicerCommand()
+                    SlicerCommands.Add(new SlicerCommand()
                     {
                         Name = instance.Name,
                         Slicer = instance.SlicerName,
                         Command = instance.SlicerCommand,
                         AutoAddFilePath = instance.AutoAddFilePath,
-                        OutputFilePatternString = instance.OutputFileFormat,
+                        OutputFilePatternString = instance.OutputFileFormat
                     });
                     logger.Info(string.Format(Strings.EventAddedItemFormated, Slicers[Slicers.Count - 1].SlicerName));
                 }, instance =>
@@ -737,22 +695,18 @@ namespace PrintCostCalculator3d.ViewModels
             catch (Exception exc)
             {
                 logger.Error(string.Format(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message));
-                await _dialogCoordinator.ShowMessageAsync(this,
-                    Strings.DialogExceptionHeadline,
-                    string.Format(Strings.DialogExceptionFormatedContent, exc.Message)
-                    );
             }
         }
 
         public ICommand AddNewSlicerCommandChildWindowCommand
         {
-            get { return new RelayCommand(p => AddNewSlicerCommandChildWindowAction()); }
+            get { return new RelayCommand(async(p) => await AddNewSlicerCommandChildWindowAction()); }
         }
-        private async void AddNewSlicerCommandChildWindowAction()
+        async Task AddNewSlicerCommandChildWindowAction()
         {
             try
             {
-                var _childWindow = new ChildWindow()
+                ChildWindow _childWindow = new()
                 {
                     Title = Strings.AddSlicerCommand,
                     AllowMove = true,
@@ -762,10 +716,10 @@ namespace PrintCostCalculator3d.ViewModels
                     OverlayBrush = new SolidColorBrush() { Opacity = 0.7, Color = (Color)Application.Current.Resources["Gray2"] },
                     Padding = new Thickness(50),
                 };
-                var newViewModel = new NewSlicerCommandDialogViewModel(async instance =>
+                NewSlicerCommandDialogViewModel newViewModel = new(instance =>
                 {
                     _childWindow.Close();
-                    SlicerCommands.Add(new Models.Slicer.SlicerCommand()
+                    SlicerCommands.Add(new SlicerCommand()
                     {
                         Name = instance.Name,
                         Slicer = instance.SlicerName,
@@ -778,7 +732,7 @@ namespace PrintCostCalculator3d.ViewModels
                 {
                     _childWindow.Close();
                 },
-                    this._dialogCoordinator
+                    _dialogCoordinator
                 );
 
                 _childWindow.Content = new Views.SlicerViews.NewSlicerCommandDialogView()
@@ -790,7 +744,7 @@ namespace PrintCostCalculator3d.ViewModels
             catch (Exception exc)
             {
                 logger.Error(string.Format(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message));
-                await _dialogCoordinator.ShowMessageAsync(this,
+                _ = await _dialogCoordinator.ShowMessageAsync(this,
                         Strings.DialogExceptionHeadline,
                         string.Format(Strings.DialogExceptionFormatedContent, exc.Message)
                         );
@@ -799,16 +753,15 @@ namespace PrintCostCalculator3d.ViewModels
 
         public ICommand DeleteSlicerCommandCommand
         {
-            get => new RelayCommand(p => DeleteSlicerCommandAction(p));
+            get => new RelayCommand(async(p) => await DeleteSlicerCommandAction(p));
         }
-        private async void DeleteSlicerCommandAction(object p)
+        async Task DeleteSlicerCommandAction(object p)
         {
             try
             {
-                SlicerCommand scmd = p as SlicerCommand;
-                if (scmd != null)
+                if (p is SlicerCommand scmd)
                 {
-                    var res = await _dialogCoordinator.ShowMessageAsync(this,
+                    MessageDialogResult res = await _dialogCoordinator.ShowMessageAsync(this,
                         Strings.DialogDeleteSlicerHeadline,
                         string.Format(Strings.DialogDeleteSlicerFormatedContent, scmd.Name),
                         MessageDialogStyle.AffirmativeAndNegative
@@ -828,17 +781,16 @@ namespace PrintCostCalculator3d.ViewModels
 
         public ICommand DeleteSlicerCommandsCommand
         {
-            get => new RelayCommand(p => DeleteSlicerCommandsAction(p));
+            get => new RelayCommand(async(p) => await DeleteSlicerCommandsAction(p));
         }
-        private async void DeleteSlicerCommandsAction(object items)
+        async Task DeleteSlicerCommandsAction(object items)
         {
             try
             {
                 //var type = items.GetType();
-                var scmds = items as IList<SlicerCommand>;
-                if (scmds != null)
+                if (items is IList<SlicerCommand> scmds)
                 {
-                    var res = await _dialogCoordinator.ShowMessageAsync(this,
+                    MessageDialogResult res = await _dialogCoordinator.ShowMessageAsync(this,
                         Strings.DialogDeleteSlicersHeadline,
                         Strings.DialogDeleteSlicersContent,
                         MessageDialogStyle.AffirmativeAndNegative
@@ -847,7 +799,7 @@ namespace PrintCostCalculator3d.ViewModels
                     {
                         for (int i = 0; i < scmds.Count; i++)
                         {
-                            SlicerCommand scmd = scmds[i] as SlicerCommand;
+                            SlicerCommand scmd = scmds[i];
                             logger.Info(string.Format(Strings.EventDeletedItemFormated, scmd.Name));
                             SlicerCommands.Remove(scmd);
                         }
@@ -862,13 +814,13 @@ namespace PrintCostCalculator3d.ViewModels
 
         public ICommand DeleteSelectedSlicerCommandsCommand
         {
-            get => new RelayCommand(p => DeleteSelectedSlicerCommandsAction());
+            get => new RelayCommand(async(p) => await DeleteSelectedSlicerCommandsAction());
         }
-        private async void DeleteSelectedSlicerCommandsAction()
+        async Task DeleteSelectedSlicerCommandsAction()
         {
             try
             {
-                var res = await _dialogCoordinator.ShowMessageAsync(this,
+                MessageDialogResult res = await _dialogCoordinator.ShowMessageAsync(this,
                        Strings.DialogDeleteSlicersHeadline, Strings.DialogDeleteSlicersContent,
                        MessageDialogStyle.AffirmativeAndNegative
                        );
@@ -877,9 +829,10 @@ namespace PrintCostCalculator3d.ViewModels
                     IList collection = new ArrayList(SelectedSlicerCommandsView);
                     for (int i = 0; i < collection.Count; i++)
                     {
-                        var obj = collection[i] as SlicerCommand;
-                        if (obj == null)
+                        if (collection[i] is not SlicerCommand obj)
+                        {
                             continue;
+                        }
                         logger.Info(string.Format(Strings.EventDeletedItemFormated, obj.Name));
                         SlicerCommands.Remove(obj);
                     }
@@ -894,15 +847,15 @@ namespace PrintCostCalculator3d.ViewModels
 
         public ICommand EditSelectedSlicerCommandCommand
         {
-            get => new RelayCommand(p => EditSelectedSlicerCommandAction());
+            get => new RelayCommand(async(p) => await EditSelectedSlicerCommandAction());
         }
-        private async void EditSelectedSlicerCommandAction()
+        async Task EditSelectedSlicerCommandAction()
         {
             try
             {
-                var selectedSlicerCommand = SelectedSlicerCommandView;
-                var _dialog = new CustomDialog() { Title = Strings.EditSlicerCommand };
-                var newViewModel = new NewSlicerCommandDialogViewModel(async instance =>
+                SlicerCommand selectedSlicerCommand = SelectedSlicerCommandView;
+                CustomDialog _dialog = new() { Title = Strings.EditSlicerCommand };
+                NewSlicerCommandDialogViewModel newViewModel = new(async instance =>
                 {
                     await _dialogCoordinator.HideMetroDialogAsync(this, _dialog);
                     SlicerCommands.Remove(selectedSlicerCommand);
@@ -932,29 +885,24 @@ namespace PrintCostCalculator3d.ViewModels
             catch (Exception exc)
             {
                 logger.Error(string.Format(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message));
-                await _dialogCoordinator.ShowMessageAsync(this,
-                    Strings.DialogExceptionHeadline,
-                    string.Format(Strings.DialogExceptionFormatedContent, exc.Message)
-                    );
             }
         }
 
         // Edit Action from Template
         public ICommand EditSlicerCommandCommand
         {
-            get => new RelayCommand(p => EditSlicerCommandAction(p));
+            get => new RelayCommand(async(p) => await EditSlicerCommandAction(p));
         }
-        private async void EditSlicerCommandAction(object slicerCommand)
+        async Task EditSlicerCommandAction(object slicerCommand)
         {
             try
             {
-                var selectedSlicerCommand = slicerCommand as SlicerCommand;
-                if (selectedSlicerCommand == null)
+                if (slicerCommand is not SlicerCommand selectedSlicerCommand)
                 {
                     return;
                 }
-                var _dialog = new CustomDialog() { Title = Strings.EditSlicerCommand };
-                var newViewModel = new NewSlicerCommandDialogViewModel(async instance =>
+                CustomDialog _dialog = new() { Title = Strings.EditSlicerCommand };
+                NewSlicerCommandDialogViewModel newViewModel = new(async instance =>
                 {
                     await _dialogCoordinator.HideMetroDialogAsync(this, _dialog);
                     SlicerCommands.Remove(selectedSlicerCommand);
@@ -964,8 +912,7 @@ namespace PrintCostCalculator3d.ViewModels
                         Slicer = instance.SlicerName,
                         Command = instance.SlicerCommand,
                         AutoAddFilePath = instance.AutoAddFilePath,
-                        OutputFilePatternString = instance.OutputFileFormat,
-
+                        OutputFilePatternString = instance.OutputFileFormat
                     });
                     logger.Info(string.Format(Strings.EventAddedItemFormated, SlicerCommands[SlicerCommands.Count - 1].Name));
                 }, instance =>
@@ -985,29 +932,24 @@ namespace PrintCostCalculator3d.ViewModels
             catch (Exception exc)
             {
                 logger.Error(string.Format(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message));
-                await _dialogCoordinator.ShowMessageAsync(this,
-                    Strings.DialogExceptionHeadline,
-                    string.Format(Strings.DialogExceptionFormatedContent, exc.Message)
-                    );
             }
         }
 
         public ICommand DeleteSlicerCommandFromTemplateCommand
         {
-            get => new RelayCommand(p => DeleteSlicerCommandFromTemplateAction(p));
+            get => new RelayCommand(async(p) => await DeleteSlicerCommandFromTemplateAction(p));
         }
-        private async void DeleteSlicerCommandFromTemplateAction(object obj)
+        async Task DeleteSlicerCommandFromTemplateAction(object obj)
         {
             try
             {
-                var res = await _dialogCoordinator.ShowMessageAsync(this,
+                MessageDialogResult res = await _dialogCoordinator.ShowMessageAsync(this,
                        Strings.DialogDeleteSlicersHeadline, Strings.DialogDeleteSlicersContent,
                        MessageDialogStyle.AffirmativeAndNegative
                        );
                 if (res == MessageDialogResult.Affirmative)
                 {
-                    SlicerCommand scmd = obj as SlicerCommand;
-                    if (scmd != null)
+                    if (obj is SlicerCommand scmd)
                     {
                         logger.Info(string.Format(Strings.EventDeletedItemFormated, scmd.Name));
                         SlicerCommands.Remove(scmd);
@@ -1018,10 +960,6 @@ namespace PrintCostCalculator3d.ViewModels
             catch (Exception exc)
             {
                 logger.Error(string.Format(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message));
-                await _dialogCoordinator.ShowMessageAsync(this,
-                    Strings.DialogExceptionHeadline,
-                    string.Format(Strings.DialogExceptionFormatedContent, exc.Message)
-                    );
             }
         }
         #endregion
@@ -1029,32 +967,38 @@ namespace PrintCostCalculator3d.ViewModels
         #endregion
 
         #region Methods
-        private void createSlicerViewInfos()
+        void CreateSlicerViewInfos()
         {
-            Canvas c = new Canvas();
-            c.Children.Add(new PackIconMaterial { Kind = PackIconMaterialKind.Printer3d });
-            SlicerViews = new CollectionViewSource
+            Application.Current.Dispatcher.Invoke(() =>
             {
-                Source = (Slicers.Select(p => new SlicerViewInfo()
+                Canvas c = new Canvas();
+                c.Children.Add(new PackIconMaterial { Kind = PackIconMaterialKind.Printer3d });
+                SlicerViews = new CollectionViewSource
                 {
-                    Name = p.SlicerName.ToString(),
-                    Slicer = p,
-                    Icon = c,
-                    Group = p.Group,
-                })).ToList()
-            }.View;
-            SlicerViews.SortDescriptions.Add(new SortDescription(nameof(SlicerViewManager.Group), ListSortDirection.Ascending));
-            SlicerViews.GroupDescriptions.Add(new PropertyGroupDescription(nameof(SlicerViewManager.Group)));
+                    Source = (Slicers.Select(p => new SlicerViewInfo()
+                    {
+                        Name = p.SlicerName.ToString(),
+                        Slicer = p,
+                        Icon = c,
+                        Group = p.Group,
+                    })).ToList()
+                }.View;
+                SlicerViews.SortDescriptions.Add(new SortDescription(nameof(SlicerViewManager.Group), ListSortDirection.Ascending));
+                SlicerViews.GroupDescriptions.Add(new PropertyGroupDescription(nameof(SlicerViewManager.Group)));
+            });
         }
         
-        private void createSlicerCommandViewInfos()
+        void CreateSlicerCommandViewInfos()
         {
-            SlicerCommandViews = new CollectionViewSource
+            Application.Current.Dispatcher.Invoke(() =>
             {
-                Source = (SlicerCommands.Select(p => p)).ToList()
-            }.View;
-            SlicerCommandViews.SortDescriptions.Add(new SortDescription(nameof(SlicerCommand.Name), ListSortDirection.Ascending));
-            SlicerCommandViews.GroupDescriptions.Add(new PropertyGroupDescription(nameof(SlicerCommand.Slicer)));
+                SlicerCommandViews = new CollectionViewSource
+                {
+                    Source = (SlicerCommands.Select(p => p)).ToList()
+                }.View;
+                SlicerCommandViews.SortDescriptions.Add(new SortDescription(nameof(SlicerCommand.Name), ListSortDirection.Ascending));
+                SlicerCommandViews.GroupDescriptions.Add(new PropertyGroupDescription(nameof(SlicerCommand.Slicer)));
+            });
         }
 
 

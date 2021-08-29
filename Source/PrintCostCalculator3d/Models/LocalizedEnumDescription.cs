@@ -8,8 +8,8 @@ namespace PrintCostCalculator3d.Models
 {
     public class LocalizedDescriptionAttribute : DescriptionAttribute
     {
-        private readonly string _resourceKey;
-        private readonly ResourceManager _resource;
+        readonly string _resourceKey;
+        readonly ResourceManager _resource;
         public LocalizedDescriptionAttribute(string resourceKey, Type resourceType)
         {
             _resource = new ResourceManager(resourceType);

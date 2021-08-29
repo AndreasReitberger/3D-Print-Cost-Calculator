@@ -21,9 +21,9 @@ namespace PrintCostCalculator3d.Models
     /// </summary>
     public class LogWatcher
     {
-        private string logContent;
+        string logContent;
         
-        private MemoryAppenderWithEvents memoryAppender;
+        MemoryAppenderWithEvents memoryAppender;
 
         /// <summary>
         /// Represents the method that will handle new logevents
@@ -45,10 +45,10 @@ namespace PrintCostCalculator3d.Models
         {
             // Get the memory appender
             memoryAppender = (MemoryAppenderWithEvents)Array.Find(LogManager.GetRepository().GetAppenders(), GetMemoryAppender);
-            var repos = LogManager.GetRepository().GetAppenders();
+            IAppender[] repos = LogManager.GetRepository().GetAppenders();
 
             // Read in the log content
-            this.logContent = GetEvents(memoryAppender);
+            logContent = GetEvents(memoryAppender);
 
             // Add an event handler to handle updates from the MemoryAppender
             memoryAppender.Updated += HandleUpdate;
@@ -61,28 +61,16 @@ namespace PrintCostCalculator3d.Models
         /// <param name="e"></param>
         public void HandleUpdate(object sender, EventArgs e)
         {
-            this.logContent = GetEvents(memoryAppender);
-
+            logContent = GetEvents(memoryAppender);
             // Then alert the Updated event that the LogWatcher has been updated
-            var handler = Updated;
-            if (handler != null)
-            {
-                handler(this, new EventArgs());
-            }
+            Updated?.Invoke(this, new EventArgs());
         }
 
 
-        private static bool GetMemoryAppender(IAppender appender)
+        static bool GetMemoryAppender(IAppender appender)
         {
             // Returns the IAppender named MemoryAppender in the Log4Net.config file
-            if (appender.Name.Equals("MemoryAppender"))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return appender.Name.Equals("MemoryAppender");
         }
 
         /// <summary>
@@ -92,7 +80,7 @@ namespace PrintCostCalculator3d.Models
         /// <returns></returns>
         public string GetEvents(MemoryAppenderWithEvents memoryAppender)
         {
-            StringBuilder output = new StringBuilder();
+            StringBuilder output = new();
 
             // Get any events that may have occurred
             LoggingEvent[] events = memoryAppender.GetEvents();
@@ -111,7 +99,7 @@ namespace PrintCostCalculator3d.Models
                     string line = ev.TimeStamp.ToString("yyyy-MM-dd HH:mm:ss") + "||" + ev.Level + "||" + ev.RenderedMessage;
 
                     // Append to the StringBuilder
-                    output.Append(line);
+                    _ = output.Append(line);
                 }
             }
 
@@ -132,7 +120,7 @@ namespace PrintCostCalculator3d.Models
         #endregion
 
         #region Variables
-        LogWatcher logWatcher = new LogWatcher();
+        LogWatcher logWatcher = new();
         //ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         public virtual Dispatcher DispatcherObject 
         { 
@@ -140,26 +128,46 @@ namespace PrintCostCalculator3d.Models
             protected set; 
         }
 
-        private static Logger _instance;
+        static Logger _instance;
         public static Logger Instance
         {
             get
             {
                 if (_instance == null)
+                {
                     _instance = new Logger();
+                }
                 return _instance;
             }
         }
         #endregion
 
         #region Properties
-        private bool _writeToFile = false;
+        bool _writeToFile = false;
         public bool WriteToFile
         {
             get => _writeToFile;
+            set
+            {
+                if (_writeToFile == value) return;
+                _writeToFile = value;
+                OnPropertyChanged();
+            }
         }
 
-        private ObservableCollection<Event> _events = new ObservableCollection<Event>();
+        string _debugLogFile = "";
+        public string DebugLogFile
+        {
+            get => _debugLogFile;
+            set
+            {
+                if (_debugLogFile == value) return;
+                _debugLogFile = value;
+                OnPropertyChanged();
+            }
+        }
+
+        ObservableCollection<Event> _events = new();
         public ObservableCollection<Event> Events
         {
             get => _events;
@@ -178,45 +186,50 @@ namespace PrintCostCalculator3d.Models
         public Logger()
         {
             DispatcherObject = Dispatcher.CurrentDispatcher;
+            logWatcher.Updated += LogWatcher_Updated;
 
-            logWatcher.Updated += logWatcher_Updated;
+            WriteToFile = true;
+
+            CreateLogDir();
+            DeleteLogFile();
         }
         #endregion
 
-        #region Private Methods
-        private void logWatcher_Updated(object sender, EventArgs e)
+        #region Methods
+        void LogWatcher_Updated(object sender, EventArgs e)
         {
             if (!SettingsManager.Current.EventLogger_EnableLogging)
+            {
                 return;
-
+            }
             if (string.IsNullOrEmpty(logWatcher.LogContent))
+            {
                 return;
+            }
+
             string[] log = logWatcher.LogContent.Split(new string[] { "||" }, StringSplitOptions.RemoveEmptyEntries);
             if (log.Count() == 0)
+            {
                 return;
-            Event tempEvent = new Event();
+            }
+
+            Event tempEvent = new();
             tempEvent.FullMessage = (log.Count() >= 3) ? log[2] : "";
             tempEvent.Error = log[1].ToLower().Contains("error");
-            switch(log[1].ToLower())
+            tempEvent.Category = log[1].ToLower() switch
             {
-                case "info":
-                    tempEvent.Category = Strings.Info;
-                    break;
-                case "warning":
-                    tempEvent.Category = Strings.Warning;
-                    break;
-                case "error":
-                    tempEvent.Category = Strings.Error;
-                    break;
-                default:
-                    tempEvent.Category = log[1];
-                    break;
-            }
+                "info" => Strings.Info,
+                "warning" => Strings.Warning,
+                "error" => Strings.Error,
+                _ => log[1],
+            };
             if (DispatcherObject.Thread != Thread.CurrentThread)
             {
                 DispatcherObject.Invoke(new Action(() => Events.Add(tempEvent)));
                 if (WriteToFile)
-                    DispatcherObject.Invoke(new Action(() => writeToFile(tempEvent)));
+                {
+                    DispatcherObject.Invoke(new Action(() => WriteEventToFile(tempEvent)));
+                }
                 if (Events.Count >= SettingsManager.Current.EventLogger_AmountSavedLogs)
                 {
                     DispatcherObject.Invoke(new Action(() => Events.RemoveAt(0)));
@@ -226,7 +239,9 @@ namespace PrintCostCalculator3d.Models
             {
                 Events.Insert(0, tempEvent);
                 if (WriteToFile)
-                    writeToFile(tempEvent);
+                {
+                    WriteEventToFile(tempEvent);
+                }
                 if (Events.Count >= SettingsManager.Current.EventLogger_AmountSavedLogs)
                 {
                     Events.RemoveAt(0);
@@ -240,18 +255,50 @@ namespace PrintCostCalculator3d.Models
             }
         }
 
-        private void writeToFile(Event curEvent)
+        void DeleteLogFile()
         {
             try
             {
-                string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                using (StreamWriter sw = new StreamWriter(Path.Combine(path, "debug.log"), true))
+                if (File.Exists(DebugLogFile))
                 {
-                    sw.WriteLine(string.Format("{0}: {1}", curEvent.Category, curEvent.FullMessage));
+                    File.Delete(DebugLogFile);
                 }
+            }
+            catch (Exception)
+            {
 
             }
-            catch (Exception exc)
+        }
+
+        void CreateLogDir()
+        {
+            try
+            {
+                string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), @"3dPrintCostCalculator\Log");
+                if (!Directory.Exists(path))
+                {
+                    _ = Directory.CreateDirectory(path);
+                }
+                DebugLogFile = Path.Combine(path, "debug.log");
+            }
+            catch(Exception)
+            {
+
+            }
+        }
+
+        void WriteEventToFile(Event curEvent)
+        {
+            try
+            {
+                //if (File.Exists(file))
+                //    File.Delete(file);
+                //using FileStream fs = new(DebugLogFile, FileMode.OpenOrCreate, FileAccess.Write);
+                using StreamWriter sw = new(DebugLogFile, true);
+                sw.WriteLine($"{DateTime.Now}: {curEvent.Category} - {curEvent.FullMessage}");
+
+            }
+            catch (Exception)
             {
                 //Events.Add(new Event() { Category = "Error", FullMessage = exc.Message});
             }
@@ -273,23 +320,18 @@ namespace PrintCostCalculator3d.Models
         /// 
         /// </summary>
         /// <param name="loggingEvent"></param>
-        protected override void Append(log4net.Core.LoggingEvent loggingEvent)
+        protected override void Append(LoggingEvent loggingEvent)
         {
             // Append the event as usual
             base.Append(loggingEvent);
-
             // Then alert the Updated event that an event has occurred
-            var handler = Updated;
-            if (handler != null)
-            {
-                handler(this, new EventArgs());
-            }
+            Updated?.Invoke(this, new EventArgs());
         }
     }
 
     public class Event
     {
-        private string message;
+        string message;
         /// <summary>
         /// The Message contains the textinformation for the UI. This can be errormessages or activity informations.
         /// </summary>
@@ -314,7 +356,7 @@ namespace PrintCostCalculator3d.Models
             }
         }
 
-        private string timeStamp;
+        string timeStamp;
         /// <summary>
         /// The TimeStamp contains the time when the message appeared. The format of is "dd.MM.yyyy HH:mm:ss"
         /// </summary>
@@ -323,7 +365,7 @@ namespace PrintCostCalculator3d.Models
             get { return timeStamp; }
         }
 
-        private bool error;
+        bool error;
         /// <summary>
         /// The Error contains true if the message has the category error.
         /// </summary>
@@ -336,7 +378,7 @@ namespace PrintCostCalculator3d.Models
             }
         }
 
-        private string category;
+        string category;
         /// <summary>
         /// The Category contains the kind of message e.g Error, Debug
         /// </summary>

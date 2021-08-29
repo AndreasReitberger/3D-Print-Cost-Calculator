@@ -11,7 +11,7 @@ namespace PrintCostCalculator3d.ViewModels
 
         public ICommand CancelCommand { get; }
 
-        private SecureString _password = new SecureString();
+        SecureString _password = new SecureString();
         public SecureString Password
         {
             get => _password;
@@ -28,7 +28,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _isPasswordEmpty;
+        bool _isPasswordEmpty;
         public bool IsPasswordEmpty
         {
             get => _isPasswordEmpty;
@@ -48,7 +48,7 @@ namespace PrintCostCalculator3d.ViewModels
             CancelCommand = new RelayCommand(p => cancelHandler(this));
         }
 
-        private void ValidatePassword()
+        void ValidatePassword()
         {
             IsPasswordEmpty = (Password == null || Password.Length == 0);
         }

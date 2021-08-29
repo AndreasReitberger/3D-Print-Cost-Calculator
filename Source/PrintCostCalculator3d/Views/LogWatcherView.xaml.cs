@@ -10,7 +10,7 @@ namespace PrintCostCalculator3d.Views
     public partial class LogWatcherView : UserControl
     {
         #region ViewModel
-        private readonly LogWatcherViewModel _viewModel = new LogWatcherViewModel(DialogCoordinator.Instance);
+        readonly LogWatcherViewModel _viewModel = new LogWatcherViewModel(DialogCoordinator.Instance);
         #endregion
 
         public LogWatcherView()

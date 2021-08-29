@@ -1,6 +1,9 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls">
+                    xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                    
+                    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+                    >
     <Style x:Key="DefaultToggleSwitch" TargetType="{x:Type mah:ToggleSwitch}" BasedOn="{StaticResource MahApps.Styles.ToggleSwitch}" >
         <Setter Property="FontSize" Value="14" />
         <!-- Mahapps 1.6
@@ -13,5 +16,39 @@
         </Style.Resources>
     </Style>
 
+    <Style x:Key="CogToggleSwitch" TargetType="{x:Type mah:ToggleSwitch}" BasedOn="{StaticResource DefaultToggleSwitch}" >
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="OffContent" Value="Off" />
+        <Setter Property="OnContent" Value="On" />
+        <Setter Property="Content" Value="{iconPacks:Material Kind=Close}"/>
+        <!---->
+            <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="True">
+                <Setter Property="Content" Value="{iconPacks:Material Kind=CogOutline}" />
+            </Trigger>
+        </Style.Triggers>
+        
+        <Style.Resources>
+            <SolidColorBrush x:Key="MahApps.Metro.Brushes.ToggleSwitchButton.OffBorderBrush.Win10" Color="{DynamicResource MahApps.Colors.Gray8}" />
+        </Style.Resources>
+    </Style>
+    
+    <Style x:Key="EditToggleSwitch" TargetType="{x:Type mah:ToggleSwitch}" BasedOn="{StaticResource DefaultToggleSwitch}" >
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="OffContent" Value="Off" />
+        <Setter Property="OnContent" Value="On" />
+        <Setter Property="Content" Value="{iconPacks:Material Kind=Close}"/>
+        <!---->
+            <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="True">
+                <Setter Property="Content" Value="{iconPacks:Material Kind=BookEdit}" />
+            </Trigger>
+        </Style.Triggers>
+        
+        <Style.Resources>
+            <SolidColorBrush x:Key="MahApps.Metro.Brushes.ToggleSwitchButton.OffBorderBrush.Win10" Color="{DynamicResource MahApps.Colors.Gray8}" />
+        </Style.Resources>
+    </Style>
+    
     <Style TargetType="{x:Type mah:ToggleSwitch}" BasedOn="{StaticResource DefaultToggleSwitch}" />
 </ResourceDictionary>

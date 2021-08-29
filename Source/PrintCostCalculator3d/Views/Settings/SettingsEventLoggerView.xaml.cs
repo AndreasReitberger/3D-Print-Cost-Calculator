@@ -9,7 +9,7 @@ namespace PrintCostCalculator3d.Views
     /// </summary>
     public partial class SettingsEventLoggerView : UserControl
     {
-        private readonly SettingsEventLoggerViewModel _viewModel = new SettingsEventLoggerViewModel(DialogCoordinator.Instance);
+        readonly SettingsEventLoggerViewModel _viewModel = new SettingsEventLoggerViewModel(DialogCoordinator.Instance);
         public SettingsEventLoggerView()
         {
             InitializeComponent();

@@ -16,6 +16,8 @@ namespace PrintCostCalculator3d.Converters
             try
             {
                 TimeSpan ts = TimeSpan.FromHours(System.Convert.ToDouble(value));
+                // remove ms for displaying
+                ts  = ts.Subtract(new TimeSpan(0, 0, 0, 0, ts.Milliseconds));
                 return ts;
             }
             catch (Exception)

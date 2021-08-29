@@ -9,7 +9,7 @@ namespace PrintCostCalculator3d.Views
     /// </summary>
     public partial class SettingsSlicerView : UserControl
     {
-        private readonly SettingsSlicerViewModel _viewModel = new SettingsSlicerViewModel(DialogCoordinator.Instance);
+        readonly SettingsSlicerViewModel _viewModel = new SettingsSlicerViewModel(DialogCoordinator.Instance);
 
         public SettingsSlicerView()
         {

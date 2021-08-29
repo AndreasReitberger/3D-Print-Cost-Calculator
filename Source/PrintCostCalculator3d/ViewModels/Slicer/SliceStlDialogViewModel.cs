@@ -1,38 +1,34 @@
-﻿using log4net;
-using MahApps.Metro.Controls.Dialogs;
+﻿using MahApps.Metro.Controls.Dialogs;
+using PrintCostCalculator3d.Models;
+using PrintCostCalculator3d.Models.Documentation;
+using PrintCostCalculator3d.Models.Settings;
+using PrintCostCalculator3d.Models.Slicer;
+using PrintCostCalculator3d.Resources.Localization;
+using PrintCostCalculator3d.Utilities;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using PrintCostCalculator3d.Utilities;
-using PrintCostCalculator3d.Models.Slicer;
-using PrintCostCalculator3d.Models;
-using System.Collections.ObjectModel;
-using PrintCostCalculator3d.Models.Settings;
-using PrintCostCalculator3d.Resources.Localization;
-using System.Windows.Input;
-using System.IO;
-using System.Diagnostics;
-using System.Windows.Controls;
-using System.ComponentModel;
-using System.Collections;
-using System.Windows.Data;
 using System.Text.RegularExpressions;
-using PrintCostCalculator3d.Models.Documentation;
+using System.Threading.Tasks;
+using System.Windows.Data;
+using System.Windows.Input;
 
 namespace PrintCostCalculator3d.ViewModels.Slicer
 {
     class SliceStlDialogViewModel : ViewModelBase
     {
         #region Variables
-        private readonly IDialogCoordinator _dialogCoordinator;
-        private static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        private readonly bool _isLoading;
+        readonly IDialogCoordinator _dialogCoordinator;
         #endregion
 
         #region Properties
-        private Models.Slicer.Slicer _slicerName;
+        Models.Slicer.Slicer _slicerName;
         public Models.Slicer.Slicer SlicerName
         {
             get => _slicerName;
@@ -40,7 +36,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             {
                 if (_slicerName == value) return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.Slicer_LastUsed = value;
 
                 _slicerName = value;
@@ -56,14 +52,14 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
         #region Commands 
         
 
-        private ObservableCollection<SlicerCommand> _commands = new ObservableCollection<SlicerCommand>();
+        ObservableCollection<SlicerCommand> _commands = new ObservableCollection<SlicerCommand>();
         public ObservableCollection<SlicerCommand> Commands
         {
             get => _commands;
             set
             {
                 if (_commands == value) return;
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.SlicerCommands = value;
 
                 _commands = value;
@@ -75,7 +71,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
         public ICollectionView CommandsView
         {
             get => _commandsView;
-            private set
+            set
             {
                 if (_commandsView != value)
                 {
@@ -84,9 +80,9 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
                 }
             }
         }
-        private ICollectionView _commandsView;
+        ICollectionView _commandsView;
 
-        private SlicerCommand _selectedSlicerCommand;
+        SlicerCommand _selectedSlicerCommand;
         public SlicerCommand SelectedSlicerCommand
         {
             get => _selectedSlicerCommand;
@@ -100,7 +96,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             }
         }
 
-        private IList _SelectedSlicerCommands = new ArrayList();
+        IList _SelectedSlicerCommands = new ArrayList();
         public IList SelectedSlicerCommands
         {
             get => _SelectedSlicerCommands;
@@ -115,7 +111,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
         }
         #endregion
 
-        private string _slicerCommand = string.Empty;
+        string _slicerCommand = string.Empty;
         public string SlicerCommand
         {
             get => _slicerCommand;
@@ -131,7 +127,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             }
         }
 
-        private string _outputFileFormat = "([filename])+([A-Za-z0-9-_.])+(.gcode|.gco|.gc)$";
+        string _outputFileFormat = "([filename])+([A-Za-z0-9-_.])+(.gcode|.gco|.gc)$";
         public string OutputFileFormat
         {
             get => _outputFileFormat;
@@ -145,7 +141,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             }
         }
 
-        private bool _isWorking = false;
+        bool _isWorking = false;
         public bool IsWorking
         {
             get => _isWorking;
@@ -159,7 +155,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             }
         }
 
-        private bool _importGcode = true;
+        bool _importGcode = true;
         public bool ImportGcode
         {
             get => _importGcode;
@@ -173,7 +169,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             }
         }
 
-        private bool _includeFilePathAutomatically = true;
+        bool _includeFilePathAutomatically = true;
         public bool IncludeFilePathAutomatically
         {
             get => _includeFilePathAutomatically;
@@ -188,7 +184,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             }
         }
         
-        private bool _multipleInstances = true;
+        bool _multipleInstances = true;
         public bool MultipleInstances
         {
             get => _multipleInstances;
@@ -202,7 +198,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             }
         }
 
-        private string _executionString;
+        string _executionString;
         public string ExecutionString
         {
             get => _executionString;
@@ -215,7 +211,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             }
         }
 
-        private string _console = string.Empty;
+        string _console = string.Empty;
         public string Console
         {
             get => _console;
@@ -229,7 +225,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             }
         }
 
-        private ObservableCollection<string> _filesForImport = new ObservableCollection<string>();
+        ObservableCollection<string> _filesForImport = new ObservableCollection<string>();
         public ObservableCollection<string> FilesForImport
         {
             get => _filesForImport;
@@ -243,7 +239,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             }
         }
 
-        private ObservableCollection<Stl> _stlFiles = new ObservableCollection<Stl>();
+        ObservableCollection<Stl> _stlFiles = new ObservableCollection<Stl>();
         public ObservableCollection<Stl> StlFiles
         {
             get => _stlFiles;
@@ -259,7 +255,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
         #endregion
 
         #region Settings
-        private ObservableCollection<Models.Slicer.Slicer> _slicers = new ObservableCollection<Models.Slicer.Slicer>();
+        ObservableCollection<Models.Slicer.Slicer> _slicers = new ObservableCollection<Models.Slicer.Slicer>();
         public ObservableCollection<Models.Slicer.Slicer> Slicers
         {
             get => _slicers;
@@ -279,11 +275,14 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
 
             SaveCommand = new RelayCommand(p => saveCommand(this));
             CancelCommand = new RelayCommand(p => cancelHandler(this));
+
+            IsLicenseValid = false;
+
             try
             {
-                _isLoading = true;
+                IsLoading = true;
                 LoadSettings();
-                _isLoading = false;
+                IsLoading = false;
 
                 StlFiles = stlFiles;
                 StlFiles.CollectionChanged += StlFiles_CollectionChanged;
@@ -301,17 +300,19 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
 
         public SliceStlDialogViewModel(Action<SliceStlDialogViewModel> saveCommand, Action<SliceStlDialogViewModel> cancelHandler, IDialogCoordinator dialogCoordinator, ObservableCollection<Stl> stlFiles)
         {
-            this._dialogCoordinator = dialogCoordinator;
+            _dialogCoordinator = dialogCoordinator;
 
             Commands.CollectionChanged += Commands_CollectionChanged;
+
+            IsLicenseValid = false;
 
             SaveCommand = new RelayCommand(p => saveCommand(this));
             CancelCommand = new RelayCommand(p => cancelHandler(this));
             try
             {
-                _isLoading = true;
+                IsLoading = true;
                 LoadSettings();
-                _isLoading = false;
+                IsLoading = false;
 
                 StlFiles = stlFiles;
                 StlFiles.CollectionChanged += StlFiles_CollectionChanged;
@@ -325,14 +326,14 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             }
         }
 
-        private void Commands_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        void Commands_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
             createSlicerCommandViewInfos();            
             //OnPropertyChanged(nameof(Commands));
             SettingsManager.Save();
         }
 
-        private void LoadSettings()
+        void LoadSettings()
         {
             Slicers = SettingsManager.Current.Slicers;
             Commands = SettingsManager.Current.SlicerCommands;
@@ -363,7 +364,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
         #endregion
 
         #region Methods
-        private void updateExecutionString()
+        void updateExecutionString()
         {
             try
             {
@@ -376,7 +377,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
                 logger.Error(string.Format(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message));
             }
         }
-        private void createSlicerCommandViewInfos()
+        void createSlicerCommandViewInfos()
         {
             CommandsView = new CollectionViewSource
             {
@@ -387,7 +388,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             filterModelView();
         }
 
-        private void filterModelView()
+        void filterModelView()
         {
             CommandsView.Refresh();
 
@@ -399,15 +400,15 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
                 return cmd.Slicer.Equals(SlicerName);              
             };
         }
-        
+
         #endregion
 
         #region Events
-        private void StlFiles_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        void StlFiles_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
             OnPropertyChanged(nameof(StlFiles));
         }
-        private void FilesForImport_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        void FilesForImport_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
             OnPropertyChanged(nameof(FilesForImport));
         }
@@ -419,15 +420,15 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             get { return new RelayCommand(p => OpenDocumentationAction()); }
         }
 
-        private void OpenDocumentationAction()
+        void OpenDocumentationAction()
         {
             DocumentationManager.OpenDocumentation(DocumentationIdentifier.SlicerDialog);
         }
         public ICommand SliceCommand
         {
-            get => new RelayCommand(p => SliceAction());
+            get => new RelayCommand(async(p) => await SliceAction());
         }
-        private async Task SliceAction()
+        async Task SliceAction()
         {
             try
             {
@@ -575,7 +576,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             get => new RelayCommand(p => ClearConsoleAction());
 
         }
-        private void ClearConsoleAction()
+        void ClearConsoleAction()
         {
             try
             {
@@ -593,7 +594,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             get => new RelayCommand(p => SelectedCommandChangedAction(p));
 
         }
-        private void SelectedCommandChangedAction(object obj)
+        void SelectedCommandChangedAction(object obj)
         {
             try
             {
@@ -615,7 +616,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             get => new RelayCommand(p => SelectedSlicerChangedAction(p));
 
         }
-        private void SelectedSlicerChangedAction(object obj)
+        void SelectedSlicerChangedAction(object obj)
         {
             try
             {
@@ -633,7 +634,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             get => new RelayCommand(p => SaveSlicerCommandStringAction(p));
 
         }
-        private async void SaveSlicerCommandStringAction(object obj)
+        async void SaveSlicerCommandStringAction(object obj)
         {
             try
             {

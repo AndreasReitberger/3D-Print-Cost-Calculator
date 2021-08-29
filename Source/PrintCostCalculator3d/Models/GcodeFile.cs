@@ -17,7 +17,7 @@ namespace PrintCostCalculator3d.Models
     public class GcodeFile_DeleteClass
     {
         #region Variables
-        private static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         #endregion
 
         #region Properties
@@ -27,7 +27,7 @@ namespace PrintCostCalculator3d.Models
 
         public SlicerName SlicerName
         {
-            get; private set;
+            get; set;
         }
         public bool IsValid
         {
@@ -35,33 +35,33 @@ namespace PrintCostCalculator3d.Models
         }
         public decimal NozzleDiameter
         {
-            get; private set;
+            get; set;
         }
 
         public decimal Diameter
         {
-            get; private set;
+            get; set;
         }
         public decimal Volume
         {
-            get; private set;
+            get; set;
             //get => Convert.ToDecimal(getVolume(), new CultureInfo("en-US"));
         }
         public decimal PrintTime
         {
-            get; private set;
+            get; set;
         }
         public decimal PrintTimeSilent
         {
-            get; private set;
+            get; set;
         }
         public string FilamentType
         {
-            get; private set;
+            get; set;
         }
         public decimal FilamentDensity
         {
-            get; private set;
+            get; set;
         }
         public string FilePath
         {
@@ -163,7 +163,7 @@ namespace PrintCostCalculator3d.Models
                 return null;
             }
         }
-        private string getGcodeValue(string name)
+        string getGcodeValue(string name)
         {
             string value = string.Empty;
             var line = GCode.AllLines().FirstOrDefault(l => l.orig_string != null && l.orig_string.Contains(name));
@@ -176,7 +176,7 @@ namespace PrintCostCalculator3d.Models
             }
             return value;
         }
-        private SlicerName getSlicerName()
+        SlicerName getSlicerName()
         {
             try
             {
@@ -218,7 +218,7 @@ namespace PrintCostCalculator3d.Models
                 return SlicerName.Unkown;
             }
         }
-        private string getParameterFromSlicer(SlicerParameter Parameter)
+        string getParameterFromSlicer(SlicerParameter Parameter)
         {
             try
             {
@@ -393,7 +393,7 @@ namespace PrintCostCalculator3d.Models
 
         }
 
-        private decimal convertPrintTimeToDec(string printTime)
+        decimal convertPrintTimeToDec(string printTime)
         {
             try
             {

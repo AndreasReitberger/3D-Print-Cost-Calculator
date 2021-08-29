@@ -1,27 +1,28 @@
-﻿using PrintCostCalculator3d.Models.Settings;
-using PrintCostCalculator3d.Utilities;
-using PrintCostCalculator3d.Views;
+﻿using AndreasReitberger;
+using AndreasReitberger.Utilities;
+using HelixToolkit.Wpf.SharpDX.Utilities;
+using log4net;
 using MahApps.Metro.Controls.Dialogs;
+using PrintCostCalculator3d.Models;
+using PrintCostCalculator3d.Models.Documentation;
+using PrintCostCalculator3d.Models.Settings;
+using PrintCostCalculator3d.Models.Update;
+using PrintCostCalculator3d.Resources.Localization;
+using PrintCostCalculator3d.Utilities;
+using PrintCostCalculator3d.ViewModels;
+using PrintCostCalculator3d.Views;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
 using System.Windows.Input;
-using PrintCostCalculator3d.Resources.Localization;
-using PrintCostCalculator3d.ViewModels;
-using log4net;
-using PrintCostCalculator3d.Models;
-using PrintCostCalculator3d.Models.Update;
-using GalaSoft.MvvmLight.Messaging;
-using System.Threading.Tasks;
-using PrintCostCalculator3d.Models.Documentation;
-using PrintCostCalculator3d.Models.nUpdate;
-using HelixToolkit.Wpf.SharpDX.Utilities;
 
 namespace PrintCostCalculator3d
 {
@@ -41,23 +42,36 @@ namespace PrintCostCalculator3d
         #endregion
 
         #region Variables
-        private Logger Logger = Logger.Instance;
-        private static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        static NVOptimusEnabler nvEnabler = new NVOptimusEnabler();
+        //Needed to log events
+        readonly Logger Logger = Logger.Instance;
+        static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        static readonly NVOptimusEnabler nvEnabler = new();
         #endregion
 
         #region Properties
-        private readonly bool _isLoading;
-        private bool _isInTray;
-        private bool _closeApplication;
+        readonly bool _isLoading;
+        //bool _isInTray;
+        bool _closeApplication;
+
+        bool _isLicenseValid = false;
+        public bool IsLicenseValid
+        {
+            get => _isLicenseValid;
+            set
+            {
+                if (_isLicenseValid == value) return;
+                _isLicenseValid = value;
+                OnPropertyChanged();
+            }
+        }
 
         // Indicates a restart message, when settings changed
-        private string _cultureCode;
+        string _cultureCode;
 
-        private bool _overwriteCurrency = false;
+        bool _overwriteCurrency = false;
 
-        private ObservableCollection<ApplicationViewInfo> _Applications;
-        public ICollectionView Applications { get; private set; }
+        ObservableCollection<ApplicationViewInfo> _Applications;
+        public ICollectionView Applications { get; set; }
 
         public bool IsCheckingLicenseInfo
         {
@@ -70,7 +84,7 @@ namespace PrintCostCalculator3d
                 OnPropertyChanged();
             }
         }
-        private bool _isCheckingLicenseInfo = false;
+        bool _isCheckingLicenseInfo = true;
         public bool ExpandApplicationView
         {
             get => _expandApplicationView;
@@ -89,9 +103,9 @@ namespace PrintCostCalculator3d
                 OnPropertyChanged();
             }
         }
-        private bool _expandApplicationView;
+        bool _expandApplicationView;
 
-        private bool _isApplicationListOpen;
+        bool _isApplicationListOpen;
         public bool IsApplicationListOpen
         {
             get => _isApplicationListOpen;
@@ -108,7 +122,7 @@ namespace PrintCostCalculator3d
             }
         }
 
-        private bool _isTextBoxSearchFocused;
+        bool _isTextBoxSearchFocused;
         public bool IsTextBoxSearchFocused
         {
             get => _isTextBoxSearchFocused;
@@ -125,7 +139,7 @@ namespace PrintCostCalculator3d
             }
         }
 
-        private bool _isMouseOverApplicationList;
+        bool _isMouseOverApplicationList;
         public bool IsMouseOverApplicationList
         {
             get => _isMouseOverApplicationList;
@@ -142,7 +156,7 @@ namespace PrintCostCalculator3d
             }
         }
 
-        private ApplicationViewInfo _selectedApplication;
+        ApplicationViewInfo _selectedApplication;
         public ApplicationViewInfo SelectedApplication
         {
             get => _selectedApplication;
@@ -159,10 +173,10 @@ namespace PrintCostCalculator3d
             }
         }
 
-        private ApplicationName _filterLastViewName;
-        private int? _filterLastCount;
+        ApplicationName _filterLastViewName;
+        int? _filterLastCount;
 
-        private string _search = string.Empty;
+        string _search = string.Empty;
         public string Search
         {
             get => _search;
@@ -198,7 +212,7 @@ namespace PrintCostCalculator3d
             }
         }
 
-        private bool _searchNothingFound;
+        bool _searchNothingFound;
         public bool SearchNothingFound
         {
             get => _searchNothingFound;
@@ -212,7 +226,7 @@ namespace PrintCostCalculator3d
             }
         }
 
-        private bool _isUpdateAvailable;
+        bool _isUpdateAvailable;
         public bool IsUpdateAvailable
         {
             get => _isUpdateAvailable;
@@ -226,7 +240,21 @@ namespace PrintCostCalculator3d
             }
         }
 
-        private string _updateText;
+        bool _useNewUpdateManager;
+        public bool UseNewUpdateManager
+        {
+            get => _useNewUpdateManager;
+            set
+            {
+                if (value == _useNewUpdateManager)
+                    return;
+
+                _useNewUpdateManager = value;
+                OnPropertyChanged();
+            }
+        }
+
+        string _updateText;
         public string UpdateText
         {
             get => _updateText;
@@ -242,50 +270,89 @@ namespace PrintCostCalculator3d
 
         #endregion
 
+        #region Updater
+        bool _includeAlphaVersions = false;
+        public bool IncludeAlphaVersions
+        {
+            get => _includeAlphaVersions;
+            set
+            {
+                if (value == _includeAlphaVersions)
+                    return;
+                _includeAlphaVersions = value;
+                OnPropertyChanged();
+            }
+        }
+
+        bool _includeBetaVersions = true;
+        public bool IncludeBetaVersions
+        {
+            get => _includeBetaVersions;
+            set
+            {
+                if (value == _includeBetaVersions)
+                    return;
+                _includeBetaVersions = value;
+                OnPropertyChanged();
+            }
+        }
+        #endregion
+
         #region Constructor, window load and close events
         public MainWindow()
         {
-            _isLoading = true;
-
-            InitializeComponent();
-
-            DataContext = this;
-
-            // Load appearance
-            AppearanceManager.Load();
-
-            // Transparency
-            if (SettingsManager.Current.Appearance_EnableTransparency)
+            try
             {
-                AllowsTransparency = true;
-                Opacity = SettingsManager.Current.Appearance_Opacity;
+                _isLoading = true;
 
-                Models.Settings.ConfigurationManager.Current.IsTransparencyEnabled = true;
+                InitializeComponent();
+
+                DataContext = this;
+
+                // Load appearance
+                AppearanceManager.Load();
+
+                // Transparency
+                if (SettingsManager.Current.Appearance_EnableTransparency)
+                {
+                    AllowsTransparency = true;
+                    Opacity = SettingsManager.Current.Appearance_Opacity;
+
+                    ConfigurationManager.Current.IsTransparencyEnabled = true;
+                }
+
+                LoadApplicationList();
+
+                // Load settings
+                ExpandApplicationView = SettingsManager.Current.ExpandApplicationView;
+
+                // Register some events
+                EventSystem.RedirectToApplicationEvent += EventSystem_RedirectToApplicationEvent;
+                EventSystem.RedirectToSettingsEvent += EventSystem_RedirectToSettingsEvent;
+                SettingsManager.Current.PropertyChanged += SettingsManager_PropertyChanged;
+
+                // Load settings
+                ExpandApplicationView = SettingsManager.Current.ExpandApplicationView;
+                UseNewUpdateManager = SettingsManager.Current.Update_UseNewUpdater;
+                IncludeAlphaVersions = SettingsManager.Current.Update_IncludeAlphaVersions;
+                IncludeBetaVersions = SettingsManager.Current.Update_IncludeBetaVersions;
+                //ChangeApplicationView(ApplicationViewManager.Name.PrintJobs, true);
+                //ChangeApplicationView(ApplicationViewManager.Name.MassSearchAndReplace, true);
+
+                // Set windows title if admin
+                if (ConfigurationManager.Current.IsAdmin)
+                {
+                    Title = $"[{"Administrator"}] {Title}";
+                    logger.Debug(string.Format(Strings.EventUserIsAdministratorFormated, Environment.UserName));
+                }
+                _isLoading = false;
+
+                logger.Info(Strings.EventApplicationStartup);
             }
-
-            LoadApplicationList();
-
-            // Load settings
-            ExpandApplicationView = SettingsManager.Current.ExpandApplicationView;
-
-            // Register some events
-            EventSystem.RedirectToApplicationEvent += EventSystem_RedirectToApplicationEvent;
-            EventSystem.RedirectToSettingsEvent += EventSystem_RedirectToSettingsEvent;
-            SettingsManager.Current.PropertyChanged += SettingsManager_PropertyChanged;
-
-            // Load settings
-            ExpandApplicationView = SettingsManager.Current.ExpandApplicationView;
-            //ChangeApplicationView(ApplicationViewManager.Name.PrintJobs, true);
-            //ChangeApplicationView(ApplicationViewManager.Name.MassSearchAndReplace, true);
-
-            // Set windows title if admin
-            if (ConfigurationManager.Current.IsAdmin)
+            catch (Exception exc)
             {
-                Title = $"[{"Administrator"}] {Title}";
-                logger.Debug(string.Format(Strings.EventUserIsAdministratorFormated, Environment.UserName));
+                logger.ErrorFormat(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message);
             }
-            _isLoading = false;
-            logger.Info(Strings.EventApplicationStartup);
         }
 
         // Hide window after it shows up... not nice, but otherwise the hotkeys do not work
@@ -293,57 +360,67 @@ namespace PrintCostCalculator3d
         {
             base.OnContentRendered(e);
 
-            if (ConfigurationManager.Current.ShowSettingsResetNoteOnStartup)
+            try
             {
-                var settings = AppearanceManager.MetroDialog;
-                settings.AffirmativeButtonText = Strings.OK;
 
-                ConfigurationManager.Current.FixAirspace = true;
+                if (ConfigurationManager.Current.ShowSettingsResetNoteOnStartup)
+                {
+                    var settings = AppearanceManager.MetroDialog;
+                    settings.AffirmativeButtonText = Strings.OK;
 
-                await this.ShowMessageAsync(Strings.SettingsReseted, Strings.SettingsFileNotFoundOrCorrupted, MessageDialogStyle.Affirmative, settings);
+                    ConfigurationManager.Current.FixAirspace = true;
 
-                ConfigurationManager.Current.FixAirspace = false;
+                    await this.ShowMessageAsync(Strings.SettingsReseted, Strings.SettingsFileNotFoundOrCorrupted, MessageDialogStyle.Affirmative, settings);
+
+                    ConfigurationManager.Current.FixAirspace = false;
+                }
+                // Search for updates...
+                if (SettingsManager.Current.Update_CheckForUpdatesAtStartup)
+                {
+                    List<Task> tasks = new()
+                    {
+                        CheckForUpdates(),
+                        CheckForNewConfig(),
+                    };
+                    await Task.WhenAll(tasks);
+                }
+
+                IsLicenseValid = false;
+                Title = IsLicenseValid ? StaticStrings.ProductNamePro : StaticStrings.ProductName;
+                ChangeApplicationView(SelectedApplication.Name, true);
             }
-
-
-            // Search for updates...
-            if (SettingsManager.Current.Update_CheckForUpdatesAtStartup)
+            catch (Exception exc)
             {
-                CheckForUpdates();
+                logger.ErrorFormat(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message);
             }
-            ChangeApplicationView(SelectedApplication.Name, true);
-
         }
-        private void BringWindowToFront()
+
+        void BringWindowToFront()
         {
             if (WindowState == WindowState.Minimized)
                 WindowState = WindowState.Normal;
 
             Activate();
         }
-
         #endregion
 
         #region Update check
 
-        private void CheckForUpdates()
+        async Task CheckForUpdates()
         {
             var updater = new Updater();
-
-            //var nUpdater = new nUpdateManager();
-            //nUpdater.ShowUpdateUi();
             updater.UpdateAvailable += Updater_UpdateAvailable;
             updater.Error += Updater_Error;
             updater.Check();
         }
 
-        private static void Updater_Error(object sender, EventArgs e)
+        static void Updater_Error(object sender, EventArgs e)
         {
             //logger.ErrorFormat(Strings.EventUpdateErrorFormated, e.ToString());
             //  Log
         }
 
-        private void Updater_UpdateAvailable(object sender, UpdateAvailableArgs e)
+        void Updater_UpdateAvailable(object sender, UpdateAvailableArgs e)
         {
             UpdateText = string.Format(Strings.VersionxxIsAvailable, e.Version);
             IsUpdateAvailable = true;
@@ -351,10 +428,34 @@ namespace PrintCostCalculator3d
 
         #endregion
 
+        #region Config check
+        async Task CheckForNewConfig()
+        {
+            await Task.Delay(1);
+            return;
+            //FirebaseHandler = FirebaseHandler.Instance ?? new FirebaseHandler(GlobalStaticConfiguration.Firebase_AuthKey);
+            //await FirebaseHandler.CheckForNewConfig();
+        }
+        #endregion
+
         #region ICommands & Actions
+        public ICommand ViewNewUpdateCommand => new RelayCommand(ViewNewUpdateAction);
+
+        void ViewNewUpdateAction(object url)
+        {
+            try
+            {
+                Process.Start((string)url);
+                logger.InfoFormat(Strings.EventOpenUri, (string)url);             
+            }
+            catch(Exception exc)
+            {
+                logger.ErrorFormat(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message);
+            }
+        }
         public ICommand OpenWebsiteCommand => new RelayCommand(OpenWebsiteAction);
 
-        private static void OpenWebsiteAction(object url)
+        static void OpenWebsiteAction(object url)
         {
             try
             {
@@ -371,13 +472,13 @@ namespace PrintCostCalculator3d
             get { return new RelayCommand(p => CloseApplicationAction()); }
         }
 
-        private void CloseApplicationAction()
+        void CloseApplicationAction()
         {
             _closeApplication = true;
             Close();
         }
 
-        private void RestartApplication(bool closeApplication = true)
+        void RestartApplication(bool closeApplication = true)
         {
             try
             {
@@ -407,7 +508,7 @@ namespace PrintCostCalculator3d
             get { return new RelayCommand(p => ApplicationListMouseEnterAction()); }
         }
 
-        private void ApplicationListMouseEnterAction()
+        void ApplicationListMouseEnterAction()
         {
             IsMouseOverApplicationList = true;
         }
@@ -417,7 +518,7 @@ namespace PrintCostCalculator3d
             get { return new RelayCommand(p => ApplicationListMouseLeaveAction()); }
         }
 
-        private void ApplicationListMouseLeaveAction()
+        void ApplicationListMouseLeaveAction()
         {
             // Don't minmize the list, if the user has accidently moved the mouse while searching
             if (!IsTextBoxSearchFocused)
@@ -429,7 +530,7 @@ namespace PrintCostCalculator3d
         {
             get => new RelayCommand(p => OpenDocsAction());
         }
-        private void OpenDocsAction()
+        void OpenDocsAction()
         {
             try
             {
@@ -446,17 +547,15 @@ namespace PrintCostCalculator3d
             get { return new RelayCommand(p => OpenDocumentationAction()); }
         }
 
-        private void OpenDocumentationAction()
+        void OpenDocumentationAction()
         {
             DocumentationManager.OpenDocumentation(ShowSettingsView ? DocumentationIdentifier.Default : DocumentationManager.GetIdentifierByAppliactionName(SelectedApplication.Name));
         }
-       
-
         public ICommand OpenApplicationListCommand
         {
             get { return new RelayCommand(p => OpenApplicationListAction()); }
         }
-        private void OpenApplicationListAction()
+        void OpenApplicationListAction()
         {
             IsApplicationListOpen = true;
             TextBoxSearch.Focus();
@@ -466,7 +565,7 @@ namespace PrintCostCalculator3d
         {
             get { return new RelayCommand(p => OpenSettingsAction()); }
         }
-        private void OpenSettingsAction()
+        void OpenSettingsAction()
         {
             OpenSettings();
         }
@@ -475,7 +574,7 @@ namespace PrintCostCalculator3d
         {
             get { return new RelayCommand(p => CloseSettingsAction()); }
         }
-        private void CloseSettingsAction()
+        void CloseSettingsAction()
         {
             CloseSettings();
         }
@@ -485,7 +584,7 @@ namespace PrintCostCalculator3d
             get { return new RelayCommand(p => TextBoxSearchGotKeyboardFocusAction()); }
         }
 
-        private void TextBoxSearchGotKeyboardFocusAction()
+        void TextBoxSearchGotKeyboardFocusAction()
         {
             IsTextBoxSearchFocused = true;
         }
@@ -495,7 +594,7 @@ namespace PrintCostCalculator3d
             get { return new RelayCommand(p => TextBoxSearchLostKeyboardFocusAction()); }
         }
 
-        private void TextBoxSearchLostKeyboardFocusAction()
+        void TextBoxSearchLostKeyboardFocusAction()
         {
             if (!IsMouseOverApplicationList)
                 IsApplicationListOpen = false;
@@ -507,7 +606,7 @@ namespace PrintCostCalculator3d
         {
             get { return new RelayCommand(p => ClearSearchAction()); }
         }
-        private void ClearSearchAction()
+        void ClearSearchAction()
         {
             Search = string.Empty;
         }
@@ -515,7 +614,7 @@ namespace PrintCostCalculator3d
         {
             get { return new RelayCommand(p => ShowWindowAction()); }
         }
-        private void ShowWindowAction()
+        void ShowWindowAction()
         {
             if (!IsActive)
                 BringWindowToFront();
@@ -523,11 +622,11 @@ namespace PrintCostCalculator3d
         #endregion
 
         #region Events
-        private void SettingsManager_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        void SettingsManager_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
 
         }
-        private void LoadApplicationList()
+        void LoadApplicationList()
         {
             // Need to add items here... if in SettingsInfo/Constructor --> same item will appear multiple times...
             
@@ -542,7 +641,7 @@ namespace PrintCostCalculator3d
             Applications.SortDescriptions.Add(new SortDescription(nameof(ApplicationViewInfo.Name), ListSortDirection.Ascending)); // Always have the same order, even if it is translated...
             Applications.Filter = o =>
             {
-                if (!(o is ApplicationViewInfo info))
+                if (o is not ApplicationViewInfo info)
                     return false;
 
                 if (string.IsNullOrEmpty(Search))
@@ -561,13 +660,22 @@ namespace PrintCostCalculator3d
             SettingsManager.Current.General_ApplicationList.CollectionChanged += (sender, args) => Applications.Refresh();
 
             // Get application from settings
-            SelectedApplication = Applications.SourceCollection.Cast<ApplicationViewInfo>().FirstOrDefault(x => x.Name == SettingsManager.Current.General_DefaultApplicationViewName);
+            SelectedApplication = Applications.SourceCollection
+                .Cast<ApplicationViewInfo>()
+                .FirstOrDefault(x => x.Name == SettingsManager.Current.General_DefaultApplicationViewName);
+                
 
             // Scroll into view
-            if (SelectedApplication != null)
-                ListViewApplication.ScrollIntoView(SelectedApplication);
+            if (SelectedApplication == null)
+            {
+                SelectedApplication = Applications.SourceCollection
+                    .Cast<ApplicationViewInfo>()
+                    .FirstOrDefault(x => x.Name == GlobalStaticConfiguration.General_DefaultApplicationViewName);
+                SettingsManager.Current.General_DefaultApplicationViewName = SelectedApplication.Name;
+            }
+            ListViewApplication.ScrollIntoView(SelectedApplication);
         }
-        private async void MetroWindowMain_Closing(object sender, CancelEventArgs e)
+        async void MetroWindowMain_Closing(object sender, CancelEventArgs e)
         {
             // Force restart (if user has reset the settings or import them)
             if (SettingsManager.ForceRestart)
@@ -624,7 +732,7 @@ namespace PrintCostCalculator3d
             //_notifyIcon?.Dispose();
         }
 
-        private void MetroWindowMain_StateChanged(object sender, EventArgs e)
+        void MetroWindowMain_StateChanged(object sender, EventArgs e)
         {
             if (WindowState != WindowState.Minimized)
                 return;
@@ -633,7 +741,7 @@ namespace PrintCostCalculator3d
                 HideWindowToTray();
                 */
         }
-        private void ClearSearchOnApplicationListMinimize()
+        void ClearSearchOnApplicationListMinimize()
         {
             if (ExpandApplicationView)
                 return;
@@ -653,9 +761,9 @@ namespace PrintCostCalculator3d
         #endregion
 
         #region Settings View
-        private SettingsView _settingsView;
+        SettingsView _settingsView;
 
-        private bool _showSettingsView;
+        bool _showSettingsView;
         public bool ShowSettingsView
         {
             get => _showSettingsView;
@@ -673,26 +781,29 @@ namespace PrintCostCalculator3d
         #endregion
 
         #region Application Views
-        private Views._3dPrinting._3dPrintingMaterialView _materialView;
-        private Views._3dPrinting._3dPrintingPrinterView _printerView;
-        private Views._3dPrinting._3dPrintingCalculationView _printCalcView;
-        private LogWatcherView _logWatcherView;
+        DashboardHostView _dashboardView;
+        Views._3dPrinting._3dPrintingMaterialView _materialView;
+        Views._3dPrinting._3dPrintingPrinterView _printerView;
+        LogWatcherView _logWatcherView;
 
-        private ApplicationName? _currentApplicationViewName;
+        ApplicationName? _currentApplicationViewName;
 
-        private void ChangeApplicationView(ApplicationName name, bool refresh = false)
+        void ChangeApplicationView(ApplicationName name, bool refresh = false)
         {
             if (!refresh && _currentApplicationViewName == name)
                 return;
 
-            switch (_currentApplicationViewName)
-            {
-                
-            }
-
             // Create new view / start some functions
             switch (name)
             {
+                case ApplicationName.Dashboard:
+                    if (_dashboardView == null)
+                        _dashboardView = new DashboardHostView();
+                    else
+                        _dashboardView.OnViewVisible();
+
+                    ContentControlApplication.Content = _dashboardView;
+                    break;
                 case ApplicationName._3dPrintingMaterial:
                     if (_materialView == null)
                         _materialView = new Views._3dPrinting._3dPrintingMaterialView();
@@ -708,14 +819,6 @@ namespace PrintCostCalculator3d
                         _printerView.OnViewVisible();
 
                     ContentControlApplication.Content = _printerView;
-                    break;
-                case ApplicationName._3dPrintingCalcualtion:
-                    if (_printCalcView == null)
-                        _printCalcView = new Views._3dPrinting._3dPrintingCalculationView();
-                    else
-                        _printCalcView.OnViewVisible();
-
-                    ContentControlApplication.Content = _printCalcView;
                     break;
                 case ApplicationName.EventLog:
                     if (_logWatcherView == null)
@@ -741,14 +844,14 @@ namespace PrintCostCalculator3d
         #endregion
 
         #region Bugfixes
-        private void ScrollViewer_ManipulationBoundaryFeedback(object sender, ManipulationBoundaryFeedbackEventArgs e)
+        void ScrollViewer_ManipulationBoundaryFeedback(object sender, ManipulationBoundaryFeedbackEventArgs e)
         {
             e.Handled = true;
         }
         #endregion
 
         #region Settings
-        private void OpenSettings()
+        void OpenSettings()
         {
             // Save current language code
             if (string.IsNullOrEmpty(_cultureCode))
@@ -773,7 +876,7 @@ namespace PrintCostCalculator3d
             ShowWindowAction();
 
         }
-        private void OpenSettings(SettingsViewName name)
+        void OpenSettings(SettingsViewName name)
         {
             // Save current language code
             if (string.IsNullOrEmpty(_cultureCode))
@@ -799,9 +902,9 @@ namespace PrintCostCalculator3d
 
         }
 
-        private void EventSystem_RedirectToApplicationEvent(object sender, EventArgs e)
+        void EventSystem_RedirectToApplicationEvent(object sender, EventArgs e)
         {
-            if (!(e is EventSystemRedirectApplicationArgs data))
+            if (e is not EventSystemRedirectApplicationArgs data)
                 return;
 
             // Change view
@@ -810,12 +913,9 @@ namespace PrintCostCalculator3d
             // Crate a new tab / perform action
             switch (data.Application)
             {
-                /*
-                case ApplicationViewManager.Name.IPScanner:
-                    _ipScannerHostView.AddTab(data.Args);
-                    break;
-                    */
                 case ApplicationName.EventLog:
+                    break;
+                case ApplicationName.Dashboard:
                     break;
                 case ApplicationName._3dPrintingCalcualtion:
                     break;
@@ -829,15 +929,15 @@ namespace PrintCostCalculator3d
                     throw new ArgumentOutOfRangeException();
             }
         }
-        private void EventSystem_RedirectToSettingsEvent(object sender, EventArgs e)
+        void EventSystem_RedirectToSettingsEvent(object sender, EventArgs e)
         {
-            if (!(e is EventSystemRedirectSettingsArgs data))
+            if (e is not EventSystemRedirectSettingsArgs data)
                 OpenSettings();
             else
                 OpenSettings(data.Setting);
         }
 
-        private async void CloseSettings()
+        async void CloseSettings()
         {
             ShowSettingsView = false;
 
@@ -856,7 +956,7 @@ namespace PrintCostCalculator3d
                 settings.NegativeButtonText = Strings.RestartLater;
                 settings.DefaultButtonFocus = MessageDialogResult.Affirmative;
 
-                Models.Settings.ConfigurationManager.Current.FixAirspace = true;
+                ConfigurationManager.Current.FixAirspace = true;
 
                 if (await this.ShowMessageAsync(Strings.DialogRestartRequiredHeadline, 
                     Strings.DialogRestartRequiredContent, MessageDialogStyle.AffirmativeAndNegative, settings) == MessageDialogResult.Affirmative)
@@ -865,7 +965,7 @@ namespace PrintCostCalculator3d
                     return;
                 }
 
-                Models.Settings.ConfigurationManager.Current.FixAirspace = false;
+                ConfigurationManager.Current.FixAirspace = false;
             }
 
             // Change the transparency
@@ -888,7 +988,7 @@ namespace PrintCostCalculator3d
 
         #region Window helper
         // Move the window when the user hold the title...
-        private void HeaderBorder_MouseDown(object sender, MouseButtonEventArgs e)
+        void HeaderBorder_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
                 DragMove();

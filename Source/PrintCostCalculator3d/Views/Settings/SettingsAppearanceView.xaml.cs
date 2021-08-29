@@ -7,7 +7,7 @@ namespace PrintCostCalculator3d.Views
     /// </summary>
     public partial class SettingsAppearanceView
     {
-        private readonly SettingsAppearanceViewModel _viewModel = new SettingsAppearanceViewModel();
+        readonly SettingsAppearanceViewModel _viewModel = new SettingsAppearanceViewModel();
         public SettingsAppearanceView()
         {
             InitializeComponent();

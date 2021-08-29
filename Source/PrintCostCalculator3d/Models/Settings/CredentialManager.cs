@@ -10,6 +10,7 @@ using System.Security;
 using System.Security.Cryptography;
 using System.Text;
 using System.Xml.Serialization;
+using AndreasReitberger.Utilities;
 
 namespace PrintCostCalculator3d.Models.Settings
 {
@@ -34,9 +35,9 @@ namespace PrintCostCalculator3d.Models.Settings
 
         public static bool CredentialsChanged { get; set; }
 
-        public static bool IsLoaded { get; private set; }
+        public static bool IsLoaded { get; set; }
 
-        private static SecureString _masterPassword;
+        static SecureString _masterPassword;
 
         public static bool VerifyMasterPasword(SecureString password)
         {
@@ -86,7 +87,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private static void DeserializeFromByteArray(byte[] xml)
+        static void DeserializeFromByteArray(byte[] xml)
         {
             var xmlSerializer = new XmlSerializer(typeof(List<CredentialInfoSerializable>));
 
@@ -110,7 +111,7 @@ namespace PrintCostCalculator3d.Models.Settings
             CredentialsChanged = false;
         }
 
-        private static byte[] SerializeToByteArray()
+        static byte[] SerializeToByteArray()
         {
             // Convert CredentialInfo to CredentialInfoSerializable
             var list = new List<CredentialInfoSerializable>();
@@ -132,7 +133,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private static void Credentials_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        static void Credentials_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
             CredentialsChanged = true;
         }
@@ -153,10 +154,10 @@ namespace PrintCostCalculator3d.Models.Settings
         }
 
         #region Encryption / Decryption
-        private const int KeySize = 256;
-        private const int Iterations = 100000;
+        const int KeySize = 256;
+        const int Iterations = 100000;
 
-        private static byte[] Encrypt(byte[] text, string password)
+        static byte[] Encrypt(byte[] text, string password)
         {
             var salt = Generate256BitsOfRandomEntropy();
             var iv = Generate256BitsOfRandomEntropy();
@@ -195,7 +196,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private static byte[] Decrypt(byte[] cipherWithSaltAndIv, string password)
+        static byte[] Decrypt(byte[] cipherWithSaltAndIv, string password)
         {
             var salt = cipherWithSaltAndIv.Take(KeySize / 8).ToArray(); // 256 bits / 8 bits = 32 bytes
             var iv = cipherWithSaltAndIv.Skip(KeySize / 8).Take(KeySize / 8).ToArray(); // Skip 32 bytes, take 32 Bytes iv
@@ -231,7 +232,7 @@ namespace PrintCostCalculator3d.Models.Settings
             }
         }
 
-        private static byte[] Generate256BitsOfRandomEntropy()
+        static byte[] Generate256BitsOfRandomEntropy()
         {
             var randomBytes = new byte[32]; // 32 * 8 = 256 Bits.
 

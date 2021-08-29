@@ -1,4 +1,5 @@
-﻿using PrintCostCalculator3d.Models.Settings;
+﻿using AndreasReitberger.Utilities;
+using PrintCostCalculator3d.Models.Settings;
 using PrintCostCalculator3d.Utilities;
 using System;
 using System.Security;
@@ -8,13 +9,13 @@ namespace PrintCostCalculator3d.ViewModels
 {
     public class CredentialViewModel : ViewModelBase
     {
-        private readonly bool _isLoading;
+        //readonly bool _isLoading;
 
         public ICommand SaveCommand { get; }
 
         public ICommand CancelCommand { get; }
 
-        private Guid _id;
+        Guid _id;
         public Guid Id
         {
             get => _id;
@@ -28,7 +29,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private string _name;
+        string _name;
         public string Name
         {
             get => _name;
@@ -39,14 +40,14 @@ namespace PrintCostCalculator3d.ViewModels
 
                 _name = value;
 
-                if (!_isLoading)
+                if (!IsLoading)
                     HasCredentialInfoChanged();
 
                 OnPropertyChanged();
             }
         }
 
-        private string _username;
+        string _username;
         public string Username
         {
             get => _username;
@@ -57,14 +58,14 @@ namespace PrintCostCalculator3d.ViewModels
 
                 _username = value;
 
-                if (!_isLoading)
+                if (!IsLoading)
                     HasCredentialInfoChanged();
 
                 OnPropertyChanged();
             }
         }
 
-        private SecureString _password = new SecureString();
+        SecureString _password = new SecureString();
         public SecureString Password
         {
             get => _password;
@@ -75,7 +76,7 @@ namespace PrintCostCalculator3d.ViewModels
 
                 _password = value;
 
-                if (!_isLoading)
+                if (!IsLoading)
                 {
                     HasCredentialInfoChanged();
                     ValidatePassword();
@@ -85,9 +86,9 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private readonly CredentialInfo _credentialInfo;
+        readonly CredentialInfo _credentialInfo;
 
-        private bool _credentialInfoChanged;
+        bool _credentialInfoChanged;
         public bool CredentialInfoChanged
         {
             get => _credentialInfoChanged;
@@ -101,7 +102,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _passwordIsEmpty;
+        bool _passwordIsEmpty;
         public bool PasswordIsEmpty
         {
             get => _passwordIsEmpty;
@@ -115,7 +116,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _isEdited;
+        bool _isEdited;
         public bool IsEdited
         {
             get => _isEdited;
@@ -131,7 +132,7 @@ namespace PrintCostCalculator3d.ViewModels
 
         public CredentialViewModel(Action<CredentialViewModel> saveCommand, Action<CredentialViewModel> cancelHandler, bool isEdited = false, CredentialInfo credentialInfo = null)
         {
-            _isLoading = true;
+            IsLoading = true;
 
             SaveCommand = new RelayCommand(p => saveCommand(this));
             CancelCommand = new RelayCommand(p => cancelHandler(this));
@@ -145,7 +146,7 @@ namespace PrintCostCalculator3d.ViewModels
             Username = _credentialInfo.Username;
             Password = _credentialInfo.Password;
 
-            _isLoading = false;
+            IsLoading = false;
         }
 
         public void HasCredentialInfoChanged()
@@ -153,7 +154,7 @@ namespace PrintCostCalculator3d.ViewModels
             CredentialInfoChanged = (_credentialInfo.Name != Name) || (_credentialInfo.Username != Username) || (SecureStringHelper.ConvertToString(_credentialInfo.Password) != SecureStringHelper.ConvertToString(Password));
         }
 
-        private void ValidatePassword()
+        void ValidatePassword()
         {
             PasswordIsEmpty = (Password == null || Password.Length == 0);
         }

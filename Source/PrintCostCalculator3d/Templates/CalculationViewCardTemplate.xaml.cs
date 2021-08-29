@@ -26,7 +26,7 @@ namespace PrintCostCalculator3d.Templates
         }
 
         #region Events
-        private void ContextMenu_Opened(object sender, System.Windows.RoutedEventArgs e)
+        void ContextMenu_Opened(object sender, System.Windows.RoutedEventArgs e)
         {
             /*
             if (sender is ContextMenu menu)

@@ -1,23 +1,12 @@
-﻿using log4net;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PrintCostCalculator3d.Models.Settings;
+﻿using PrintCostCalculator3d.Models.Settings;
 using PrintCostCalculator3d.Utilities;
 
 namespace PrintCostCalculator3d.ViewModels
 {
     public class SettingsUpdateViewModel : ViewModelBase
     {
-        #region Variables
-        private readonly bool _isLoading;
-        private static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        #endregion
-
         #region Properties
-        private bool _checkForUpdatesAtStartup;
+        bool _checkForUpdatesAtStartup;
         public bool CheckForUpdatesAtStartup
         {
             get => _checkForUpdatesAtStartup;
@@ -26,10 +15,61 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _checkForUpdatesAtStartup)
                     return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.Update_CheckForUpdatesAtStartup = value;
 
                 _checkForUpdatesAtStartup = value;
+                OnPropertyChanged();
+            }
+        }
+
+        bool _useNewUpdater = true;
+        public bool UseNewUpdater
+        {
+            get => _useNewUpdater;
+            set
+            {
+                if (value == _useNewUpdater)
+                    return;
+
+                if (!IsLoading)
+                    SettingsManager.Current.Update_UseNewUpdater = value;
+
+                _useNewUpdater = value;
+                OnPropertyChanged();
+            }
+        }
+
+        bool _includeAlphaVersions = false;
+        public bool IncludeAlphaVersions
+        {
+            get => _includeAlphaVersions;
+            set
+            {
+                if (value == _includeAlphaVersions)
+                    return;
+
+                if (!IsLoading)
+                    SettingsManager.Current.Update_IncludeBetaVersions = value;
+
+                _includeAlphaVersions = value;
+                OnPropertyChanged();
+            }
+        }
+
+        bool _includeBetaVersions = true;
+        public bool IncludeBetaVersions
+        {
+            get => _includeBetaVersions;
+            set
+            {
+                if (value == _includeBetaVersions)
+                    return;
+
+                if (!IsLoading)
+                    SettingsManager.Current.Update_IncludeBetaVersions = value;
+
+                _includeBetaVersions = value;
                 OnPropertyChanged();
             }
         }
@@ -38,16 +78,17 @@ namespace PrintCostCalculator3d.ViewModels
         #region Constructor, LoadSettings
         public SettingsUpdateViewModel()
         {
-            _isLoading = true;
-
+            IsLoading = true;
             LoadSettings();
-
-            _isLoading = false;
+            IsLoading = false;
         }
 
-        private void LoadSettings()
+        void LoadSettings()
         {
             CheckForUpdatesAtStartup = SettingsManager.Current.Update_CheckForUpdatesAtStartup;
+            UseNewUpdater = SettingsManager.Current.Update_UseNewUpdater;
+            IncludeAlphaVersions = SettingsManager.Current.Update_IncludeAlphaVersions;
+            IncludeBetaVersions = SettingsManager.Current.Update_IncludeBetaVersions;
         }
         #endregion
     }

@@ -1,32 +1,28 @@
-﻿using PrintCostCalculator3d.Models;
+﻿using MahApps.Metro.Controls.Dialogs;
 using PrintCostCalculator3d.Models.Settings;
 using PrintCostCalculator3d.Utilities;
-using MahApps.Metro.Controls.Dialogs;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows.Input;
-using System.Globalization;
 
 namespace PrintCostCalculator3d.ViewModels
 {
     class SettingsGeneralViewModel : ViewModelBase
     {
         #region Variables
-        private readonly IDialogCoordinator _dialogCoordinator;
-        private readonly bool _isLoading;
+        readonly IDialogCoordinator _dialogCoordinator;
+        //readonly bool _isLoading;
         #endregion
 
         #region Properties
         //public ObservableCollection<ApplicationViewInfo> ApplicationViewCollection { get; set; }
-        public ICollectionView Applications { get; private set; }
+        public ICollectionView Applications { get; set; }
 
-        private ApplicationViewInfo _defaultApplicationSelectedItem;
+        ApplicationViewInfo _defaultApplicationSelectedItem;
         public ApplicationViewInfo DefaultApplicationSelectedItem
         {
             get => _defaultApplicationSelectedItem;
@@ -35,7 +31,7 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _defaultApplicationSelectedItem)
                     return;
 
-                if (value != null && !_isLoading)
+                if (value != null && !IsLoading)
                     SettingsManager.Current.General_DefaultApplicationViewName = value.Name;
 
                 _defaultApplicationSelectedItem = value;
@@ -43,9 +39,9 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        public ICollectionView ApplicationsVisible { get; private set; }
+        public ICollectionView ApplicationsVisible { get; set; }
 
-        private ApplicationViewInfo _visibleApplicationSelectedItem;
+        ApplicationViewInfo _visibleApplicationSelectedItem;
         public ApplicationViewInfo VisibleApplicationSelectedItem
         {
             get => _visibleApplicationSelectedItem;
@@ -62,7 +58,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _isVisibleToHideApplicationEnabled;
+        bool _isVisibleToHideApplicationEnabled;
         public bool IsVisibleToHideApplicationEnabled
         {
             get => _isVisibleToHideApplicationEnabled;
@@ -76,9 +72,9 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        public ICollectionView ApplicationsHidden { get; private set; }
+        public ICollectionView ApplicationsHidden { get; set; }
 
-        private ApplicationViewInfo _hiddenApplicationSelectedItem;
+        ApplicationViewInfo _hiddenApplicationSelectedItem;
         public ApplicationViewInfo HiddenApplicationSelectedItem
         {
             get => _hiddenApplicationSelectedItem;
@@ -95,7 +91,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _isHideToVisibleApplicationEnabled;
+        bool _isHideToVisibleApplicationEnabled;
         public bool IsHideToVisibleApplicationEnabled
         {
             get => _isHideToVisibleApplicationEnabled;
@@ -109,7 +105,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private int _backgroundJobInterval;
+        int _backgroundJobInterval;
         public int BackgroundJobInterval
         {
             get => _backgroundJobInterval;
@@ -118,7 +114,7 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _backgroundJobInterval)
                     return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.General_BackgroundJobInterval = value;
 
                 _backgroundJobInterval = value;
@@ -126,7 +122,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private int _historyListEntries;
+        int _historyListEntries;
         public int HistoryListEntries
         {
             get => _historyListEntries;
@@ -135,7 +131,7 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _historyListEntries)
                     return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.General_HistoryListEntries = value;
 
                 _historyListEntries = value;
@@ -143,7 +139,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
         
-        private bool _overwriteCurrencySymbol;
+        bool _overwriteCurrencySymbol;
         public bool OverwriteCurrencySymbol
         {
             get => _overwriteCurrencySymbol;
@@ -152,7 +148,7 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _overwriteCurrencySymbol)
                     return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                 {
                     SettingsManager.Current.General_OverwriteCurrencySymbol = value;
                     RestartRequired = (value != _overwriteCurrencySymbol);
@@ -163,7 +159,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
         
-        private bool _overwriteNumberFormats;
+        bool _overwriteNumberFormats;
         public bool OverwriteNumberFormats
         {
             get => _overwriteNumberFormats;
@@ -172,7 +168,7 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _overwriteNumberFormats)
                     return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                 {
                     SettingsManager.Current.General_OverwriteNumberFormats = value;
                     RestartRequired = (value != _overwriteNumberFormats);
@@ -182,7 +178,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
         
-        private string _CurrencySymbol;
+        string _CurrencySymbol;
         public string CurrencySymbol
         {
             get => _CurrencySymbol;
@@ -191,7 +187,7 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _CurrencySymbol)
                     return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.General_CurrencySymbol = value;
 
                 _CurrencySymbol = value;
@@ -199,7 +195,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
         
-        private string _OverwriteCultureCode;
+        string _OverwriteCultureCode;
         public string OverwriteCultureCode
         {
             get => _OverwriteCultureCode;
@@ -208,7 +204,7 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _OverwriteCultureCode)
                     return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                 {
                     SettingsManager.Current.General_OverwriteCultureCode = value;
                     RestartRequired = (value != _OverwriteCultureCode);
@@ -218,7 +214,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _restartRequired;
+        bool _restartRequired;
         public bool RestartRequired
         {
             get => _restartRequired;
@@ -233,7 +229,7 @@ namespace PrintCostCalculator3d.ViewModels
         }
         
 
-        private double _exampleValue = 5;
+        double _exampleValue = 5;
         public double ExampleValue
         {
             get => _exampleValue;
@@ -247,7 +243,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private DateTime _exampleDateTime = DateTime.Now;
+        DateTime _exampleDateTime = DateTime.Now;
         public DateTime ExampleDateTime
         {
             get => _exampleDateTime;
@@ -261,7 +257,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
         
-        private CultureInfo _currentCulture = LocalizationManager.GetInstance().Culture;
+        CultureInfo _currentCulture = LocalizationManager.GetInstance().Culture;
         public CultureInfo CurrentCulture
         {
             get => _currentCulture;
@@ -275,7 +271,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
         
-        private CultureInfo _selectedCulture = LocalizationManager.GetInstance().Culture;
+        CultureInfo _selectedCulture = LocalizationManager.GetInstance().Culture;
         public CultureInfo SelectedCulture
         {
             get => _selectedCulture;
@@ -295,7 +291,7 @@ namespace PrintCostCalculator3d.ViewModels
         }
 
         #region Culture
-        private ObservableCollection<CultureInfo> _cultures = new ObservableCollection<CultureInfo>();
+        ObservableCollection<CultureInfo> _cultures = new ObservableCollection<CultureInfo>();
         public ObservableCollection<CultureInfo> Cultures
         {
             get => _cultures;
@@ -314,32 +310,33 @@ namespace PrintCostCalculator3d.ViewModels
         public SettingsGeneralViewModel()
         {
             Cultures = new ObservableCollection<CultureInfo>(CultureInfo.GetCultures(CultureTypes.AllCultures).Where(c => !c.IsNeutralCulture).ToList());
-            _isLoading = true;           
+            IsLoading = true;           
             LoadSettings();
-            SettingsManager.Current.General_ApplicationList.CollectionChanged += General_ApplicationList_CollectionChanged;
+            IsLoading = false;
 
-            _isLoading = false;
+            SettingsManager.Current.General_ApplicationList.CollectionChanged += General_ApplicationList_CollectionChanged;
 
             
         }
         public SettingsGeneralViewModel(IDialogCoordinator instance)
         {
             _dialogCoordinator = instance;
-            _isLoading = true;
 
+            IsLoading = true;
             LoadSettings();
+            IsLoading = false;
 
             SettingsManager.Current.General_ApplicationList.CollectionChanged += General_ApplicationList_CollectionChanged;
 
-            _isLoading = false;
+            
         }
-        private void General_ApplicationList_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        void General_ApplicationList_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
             ApplicationsVisible.Refresh();
             ApplicationsHidden.Refresh();
         }
 
-        private void LoadSettings()
+        void LoadSettings()
         {
             //ApplicationViewCollection = new ObservableCollection<ApplicationViewInfo>(SettingsManager.Current.General_ApplicationList);
             Applications = new CollectionViewSource { Source = SettingsManager.Current.General_ApplicationList }.View;
@@ -385,7 +382,7 @@ namespace PrintCostCalculator3d.ViewModels
             get { return new RelayCommand(p => VisibleToHideApplicationAction()); }
         }
 
-        private void VisibleToHideApplicationAction()
+        void VisibleToHideApplicationAction()
         {
             var index = 0;
 
@@ -420,7 +417,7 @@ namespace PrintCostCalculator3d.ViewModels
             get { return new RelayCommand(p => HideToVisibleApplicationAction()); }
         }
 
-        private void HideToVisibleApplicationAction()
+        void HideToVisibleApplicationAction()
         {
             var index = 0;
 
@@ -446,7 +443,7 @@ namespace PrintCostCalculator3d.ViewModels
         #endregion
 
         #region Methods
-        private void ValidateHideVisibleApplications()
+        void ValidateHideVisibleApplications()
         {
             IsVisibleToHideApplicationEnabled = ApplicationsVisible.Cast<ApplicationViewInfo>().Count() > 1 && VisibleApplicationSelectedItem != null;
             IsHideToVisibleApplicationEnabled = ApplicationsHidden.Cast<ApplicationViewInfo>().Any() && HiddenApplicationSelectedItem != null;

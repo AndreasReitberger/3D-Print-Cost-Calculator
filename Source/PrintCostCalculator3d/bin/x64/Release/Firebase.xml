@@ -1,0 +1,1444 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Firebase</name>
+    </assembly>
+    <members>
+        <member name="T:Firebase.Database.ExceptionEventArgs`1">
+            <summary>
+            Event args holding the <see cref="F:Firebase.Database.ExceptionEventArgs`1.Exception"/> object.
+            </summary>
+        </member>
+        <member name="M:Firebase.Database.ExceptionEventArgs`1.#ctor(`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Firebase.Database.ExceptionEventArgs"/> class.
+            </summary>
+            <param name="exception"> The exception. </param>
+        </member>
+        <member name="P:Firebase.Database.ContinueExceptionEventArgs`1.IgnoreAndContinue">
+            <summary>
+             Specifies whether operation in progress should ignore the exception and just continue.
+            </summary>
+        </member>
+        <member name="M:Firebase.Database.Extensions.ObservableExtensions.RetryAfterDelay``2(System.IObservable{``0},System.TimeSpan,System.Func{``1,System.Boolean},System.Nullable{System.Int32})">
+            <summary>
+            Returns a cold observable which retries (re-subscribes to) the source observable on error until it successfully terminates. 
+            </summary>
+            <param name="source">The source observable.</param>
+            <param name="dueTime">How long to wait between attempts.</param>
+            <param name="retryOnError">A predicate determining for which exceptions to retry. Defaults to all</param>
+            <param name="retryCount">The number of attempts of running the source observable before failing.</param>
+            <returns>
+            A cold observable which retries (re-subscribes to) the source observable on error up to the 
+            specified number of times or until it successfully terminates.
+            </returns>
+        </member>
+        <member name="M:Firebase.Database.Extensions.TaskExtensions.WithAggregateException(System.Threading.Tasks.Task)">
+            <summary>
+            Instead of unwrapping <see cref="T:System.AggregateException"/> it throws it as it is.
+            </summary>
+        </member>
+        <member name="T:Firebase.Database.FirebaseClient">
+            <summary>
+            Firebase client which acts as an entry point to the online database.
+            </summary>
+        </member>
+        <member name="M:Firebase.Database.FirebaseClient.#ctor(System.String,Firebase.Database.FirebaseOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Firebase.Database.FirebaseClient"/> class.
+            </summary>
+            <param name="baseUrl"> The base url. </param>
+            <param name="options"> The Firebase options. </param>  
+        </member>
+        <member name="M:Firebase.Database.FirebaseClient.Child(System.String)">
+            <summary>
+            Queries for a child of the data root.
+            </summary>
+            <param name="resourceName"> Name of the child. </param>
+            <returns> <see cref="T:Firebase.Database.Query.ChildQuery"/>. </returns>
+        </member>
+        <member name="P:Firebase.Database.FirebaseException.RequestData">
+            <summary>
+            Post data passed to the authentication service.
+            </summary>
+        </member>
+        <member name="P:Firebase.Database.FirebaseException.RequestUrl">
+            <summary>
+            Original url of the request.
+            </summary>
+        </member>
+        <member name="P:Firebase.Database.FirebaseException.ResponseData">
+            <summary>
+            Response from the authentication service.
+            </summary>
+        </member>
+        <member name="P:Firebase.Database.FirebaseException.StatusCode">
+            <summary>
+            Status code of the response.
+            </summary>
+        </member>
+        <member name="T:Firebase.Database.FirebaseKeyGenerator">
+            <summary>
+            Offline key generator which mimics the official Firebase generators. 
+            Credit: https://github.com/bubbafat/FirebaseSharp/blob/master/src/FirebaseSharp.Portable/FireBasePushIdGenerator.cs
+            </summary>
+        </member>
+        <member name="M:Firebase.Database.FirebaseKeyGenerator.Next">
+            <summary>
+            Returns next firebase key based on current time.  
+            </summary>
+            <returns>
+            The <see cref="T:System.String"/>. </returns>
+        </member>
+        <member name="T:Firebase.Database.FirebaseObject`1">
+            <summary>
+            Holds the object of type <typeparamref name="T" /> along with its key. 
+            </summary>
+            <typeparam name="T"> Type of the underlying object. </typeparam> 
+        </member>
+        <member name="P:Firebase.Database.FirebaseObject`1.Key">
+            <summary>
+            Gets the key of <see cref="P:Firebase.Database.FirebaseObject`1.Object"/>.
+            </summary>
+        </member>
+        <member name="P:Firebase.Database.FirebaseObject`1.Object">
+            <summary>
+            Gets the underlying object.
+            </summary>
+        </member>
+        <member name="P:Firebase.Database.FirebaseOptions.OfflineDatabaseFactory">
+            <summary>
+            Gets or sets the factory for Firebase offline database. Default is in-memory dictionary.
+            </summary>
+        </member>
+        <member name="P:Firebase.Database.FirebaseOptions.AuthTokenAsyncFactory">
+            <summary>
+            Gets or sets the method for retrieving auth tokens. Default is null.
+            </summary>
+        </member>
+        <member name="P:Firebase.Database.FirebaseOptions.SubscriptionStreamReaderFactory">
+            <summary>
+            Gets or sets the factory for <see cref="T:System.IO.TextReader"/> used for reading online streams. Default is <see cref="T:System.IO.StreamReader"/>.
+            </summary>
+        </member>
+        <member name="P:Firebase.Database.FirebaseOptions.JsonSerializerSettings">
+            <summary>
+            Gets or sets the json serializer settings.
+            </summary>
+        </member>
+        <member name="P:Firebase.Database.FirebaseOptions.SyncPeriod">
+            <summary>
+            Gets or sets the time between synchronization attempts for pulling and pushing offline entities. Default is 10 seconds.
+            </summary>
+        </member>
+        <member name="P:Firebase.Database.FirebaseOptions.AsAccessToken">
+            <summary>
+            Specify if token returned by factory will be used as "auth" url parameter or "access_token". 
+            </summary>
+        </member>
+        <member name="P:Firebase.Database.FirebaseOptions.HttpClientFactory">
+            <summary>
+            Specify HttpClient factory to manage <see cref="T:System.Net.Http.HttpClient" /> lifecycle.
+            </summary>
+        </member>
+        <member name="T:Firebase.Database.Http.HttpClientExtensions">
+            <summary>
+            The http client extensions for object deserializations.
+            </summary>
+        </member>
+        <member name="M:Firebase.Database.Http.HttpClientExtensions.GetObjectCollectionAsync``1(System.Net.Http.HttpClient,System.String,Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            The get object collection async.
+            </summary>
+            <param name="client"> The client. </param>
+            <param name="requestUri"> The request uri. </param>  
+            <param name="jsonSerializerSettings"> The specific JSON Serializer Settings. </param>  
+            <typeparam name="T"> The type of entities the collection should contain. </typeparam>
+            <returns> The <see cref="T:System.Threading.Tasks.Task"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Http.HttpClientExtensions.GetObjectCollection(System.String,System.Type)">
+            <summary>
+            The get object collection async.
+            </summary>
+            <param name="data"> The json data. </param>
+            <param name="elementType"> The type of entities the collection should contain. </param>
+            <returns> The <see cref="T:System.Threading.Tasks.Task"/>.  </returns>
+        </member>
+        <member name="T:Firebase.Database.Http.PostResult">
+            <summary>
+            Represents data returned after a successful POST to firebase server.
+            </summary>
+        </member>
+        <member name="P:Firebase.Database.Http.PostResult.Name">
+            <summary>
+            Gets or sets the generated key after a successful post. 
+            </summary>
+        </member>
+        <member name="T:Firebase.Database.ObservableExtensions">
+            <summary>
+            Extensions for <see cref="T:System.IObservable`1"/>.
+            </summary>
+        </member>
+        <member name="M:Firebase.Database.ObservableExtensions.AsObservableCollection``1(System.IObservable{Firebase.Database.Streaming.FirebaseEvent{``0}})">
+            <summary>
+            Starts observing on given firebase observable and propagates event into an <see cref="T:System.Collections.ObjectModel.ObservableCollection`1"/>.
+            </summary>
+            <param name="observable"> The observable. </param>
+            <typeparam name="T"> Type of entity. </typeparam>
+            <returns> The <see cref="T:System.Collections.ObjectModel.ObservableCollection`1"/>. </returns> 
+        </member>
+        <member name="T:Firebase.Database.Offline.ConcurrentOfflineDatabase">
+            <summary>
+            The offline database.
+            </summary>
+        </member>
+        <member name="M:Firebase.Database.Offline.ConcurrentOfflineDatabase.#ctor(System.Type,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Firebase.Database.Offline.OfflineDatabase"/> class.
+            </summary>
+            <param name="itemType"> The item type which is used to determine the database file name.  </param>
+            <param name="filenameModifier"> Custom string which will get appended to the file name. </param>
+        </member>
+        <member name="P:Firebase.Database.Offline.ConcurrentOfflineDatabase.Count">
+            <summary>
+            Gets the number of elements contained in the <see cref="T:System.Collections.Generic.ICollection`1"/>.
+            </summary>
+            <returns> The number of elements contained in the <see cref="T:System.Collections.Generic.ICollection`1"/>. </returns>
+        </member>
+        <member name="P:Firebase.Database.Offline.ConcurrentOfflineDatabase.IsReadOnly">
+            <summary>
+            Gets a value indicating whether this is a read-only collection.
+            </summary>
+        </member>
+        <member name="P:Firebase.Database.Offline.ConcurrentOfflineDatabase.Keys">
+            <summary>
+            Gets an <see cref="T:System.Collections.Generic.ICollection`1"/> containing the keys of the <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            </summary>
+            <returns> An <see cref="T:System.Collections.Generic.ICollection`1"/> containing the keys of the object that implements <see cref="T:System.Collections.Generic.IDictionary`2"/>. </returns>
+        </member>
+        <member name="P:Firebase.Database.Offline.ConcurrentOfflineDatabase.Values">
+            <summary>
+            Gets an <see cref="T:System.Collections.Generic.ICollection`1"/> containing the values in the <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            </summary>
+            <returns> An <see cref="T:System.Collections.Generic.ICollection`1"/> containing the values in the object that implements <see cref="T:System.Collections.Generic.IDictionary`2"/>. </returns>
+        </member>
+        <member name="P:Firebase.Database.Offline.ConcurrentOfflineDatabase.Item(System.String)">
+            <summary>
+            Gets or sets the element with the specified key.
+            </summary>
+            <param name="key">The key of the element to get or set.</param>
+            <returns> The element with the specified key. </returns>   
+        </member>
+        <member name="M:Firebase.Database.Offline.ConcurrentOfflineDatabase.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns> An enumerator that can be used to iterate through the collection. </returns>
+        </member>
+        <member name="M:Firebase.Database.Offline.ConcurrentOfflineDatabase.Add(System.Collections.Generic.KeyValuePair{System.String,Firebase.Database.Offline.OfflineEntry})">
+            <summary>
+            Adds an item to the <see cref="T:System.Collections.Generic.ICollection`1"/>.
+            </summary>
+            <param name="item">The object to add to the <see cref="T:System.Collections.Generic.ICollection`1"/>.</param>
+        </member>
+        <member name="M:Firebase.Database.Offline.ConcurrentOfflineDatabase.Clear">
+            <summary>
+            Removes all items from the <see cref="T:System.Collections.Generic.ICollection`1"/>.
+            </summary> 
+        </member>
+        <member name="M:Firebase.Database.Offline.ConcurrentOfflineDatabase.Contains(System.Collections.Generic.KeyValuePair{System.String,Firebase.Database.Offline.OfflineEntry})">
+            <summary>
+            Determines whether the <see cref="T:System.Collections.Generic.ICollection`1"/> contains a specific value.
+            </summary>
+            <param name="item">The object to locate in the <see cref="T:System.Collections.Generic.ICollection`1"/>.</param> 
+            <returns> True if <paramref name="item"/> is found in the <see cref="T:System.Collections.Generic.ICollection`1"/>; otherwise, false. </returns>
+        </member>
+        <member name="M:Firebase.Database.Offline.ConcurrentOfflineDatabase.CopyTo(System.Collections.Generic.KeyValuePair{System.String,Firebase.Database.Offline.OfflineEntry}[],System.Int32)">
+            <summary>
+            Copies the elements of the <see cref="T:System.Collections.Generic.ICollection`1"/> to an <see cref="T:System.Array"/>, starting at a particular <see cref="T:System.Array"/> index.
+            </summary>
+            <param name="array">The one-dimensional <see cref="T:System.Array"/> that is the destination of the elements copied from <see cref="T:System.Collections.Generic.ICollection`1"/>. The <see cref="T:System.Array"/> must have zero-based indexing.</param>
+            <param name="arrayIndex">The zero-based index in <paramref name="array"/> at which copying begins.</param>
+        </member>
+        <member name="M:Firebase.Database.Offline.ConcurrentOfflineDatabase.Remove(System.Collections.Generic.KeyValuePair{System.String,Firebase.Database.Offline.OfflineEntry})">
+            <summary>
+            Removes the first occurrence of a specific object from the <see cref="T:System.Collections.Generic.ICollection`1"/>.
+            </summary>
+            <param name="item">The object to remove from the <see cref="T:System.Collections.Generic.ICollection`1"/>.</param>
+            <returns> True if <paramref name="item"/> was successfully removed from the <see cref="T:System.Collections.Generic.ICollection`1"/>; otherwise, false. This method also returns false if <paramref name="item"/> is not found in the original <see cref="T:System.Collections.Generic.ICollection`1"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Offline.ConcurrentOfflineDatabase.ContainsKey(System.String)">
+            <summary>
+            Determines whether the <see cref="T:System.Collections.Generic.IDictionary`2"/> contains an element with the specified key.
+            </summary>
+            <param name="key">The key to locate in the <see cref="T:System.Collections.Generic.IDictionary`2"/>.</param>
+            <returns> True if the <see cref="T:System.Collections.Generic.IDictionary`2"/> contains an element with the key; otherwise, false. </returns>
+        </member>
+        <member name="M:Firebase.Database.Offline.ConcurrentOfflineDatabase.Add(System.String,Firebase.Database.Offline.OfflineEntry)">
+            <summary>
+            Adds an element with the provided key and value to the <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            </summary>
+            <param name="key">The object to use as the key of the element to add.</param>
+            <param name="value">The object to use as the value of the element to add.</param>
+        </member>
+        <member name="M:Firebase.Database.Offline.ConcurrentOfflineDatabase.Remove(System.String)">
+            <summary>
+            Removes the element with the specified key from the <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            </summary>
+            <param name="key">The key of the element to remove.</param>
+            <returns> True if the element is successfully removed; otherwise, false.  This method also returns false if <paramref name="key"/> was not found in the original <see cref="T:System.Collections.Generic.IDictionary`2"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Offline.ConcurrentOfflineDatabase.TryGetValue(System.String,Firebase.Database.Offline.OfflineEntry@)">
+            <summary>
+            Gets the value associated with the specified key.
+            </summary> 
+            <param name="key">The key whose value to get.</param><param name="value">When this method returns, the value associated with the specified key, if the key is found; otherwise, the default value for the type of the <paramref name="value"/> parameter. This parameter is passed uninitialized.</param>
+            <returns> True if the object that implements <see cref="T:System.Collections.Generic.IDictionary`2"/> contains an element with the specified key; otherwise, false. </returns>
+        </member>
+        <member name="M:Firebase.Database.Offline.DatabaseExtensions.AsRealtimeDatabase``1(Firebase.Database.Query.ChildQuery,System.String,System.String,Firebase.Database.Offline.StreamingOptions,Firebase.Database.Offline.InitialPullStrategy,System.Boolean)">
+            <summary>
+            Create new instances of the <see cref="T:Firebase.Database.Offline.RealtimeDatabase`1"/>.
+            </summary>
+            <typeparam name="T"> Type of elements. </typeparam>
+            <param name="query"> The child query. </param>
+            <param name="filenameModifier"> Custom string which will get appended to the file name. </param>
+            <param name="elementRoot"> Optional custom root element of received json items. </param>
+            <param name="streamingOptions"> Realtime streaming options. </param> 
+            <param name="initialPullStrategy"> Specifies what strategy should be used for initial pulling of server data. </param>
+            <param name="pushChanges"> Specifies whether changed items should actually be pushed to the server. It this is false, then Put / Post / Delete will not affect server data. </param>
+            <returns> The <see cref="T:Firebase.Database.Offline.RealtimeDatabase`1"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Offline.DatabaseExtensions.AsRealtimeDatabase``2(Firebase.Database.Query.ChildQuery,System.String,System.String,Firebase.Database.Offline.StreamingOptions,Firebase.Database.Offline.InitialPullStrategy,System.Boolean)">
+            <summary>
+            Create new instances of the <see cref="T:Firebase.Database.Offline.RealtimeDatabase`1"/>.
+            </summary>
+            <typeparam name="T"> Type of elements. </typeparam>
+            <typeparam name="TSetHandler"> Type of the custom <see cref="T:Firebase.Database.Offline.ISetHandler`1"/> to use. </typeparam>
+            <param name="query"> The child query. </param>
+            <param name="filenameModifier"> Custom string which will get appended to the file name. </param>
+            <param name="elementRoot"> Optional custom root element of received json items. </param>
+            <param name="streamingOptions"> Realtime streaming options. </param> 
+            <param name="initialPullStrategy"> Specifies what strategy should be used for initial pulling of server data. </param>
+            <param name="pushChanges"> Specifies whether changed items should actually be pushed to the server. It this is false, then Put / Post / Delete will not affect server data. </param>
+            <returns> The <see cref="T:Firebase.Database.Offline.RealtimeDatabase`1"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Offline.DatabaseExtensions.Patch``1(Firebase.Database.Offline.RealtimeDatabase{``0},System.String,``0,System.Boolean,System.Int32)">
+            <summary>
+            Overwrites existing object with given key leaving any missing properties intact in firebase.
+            </summary>
+            <param name="db"> Database instance. </param>
+            <param name="key"> The key. </param>
+            <param name="obj"> The object to set. </param>
+            <param name="syncOnline"> Indicates whether the item should be synced online. </param>
+            <param name="priority"> The priority. Objects with higher priority will be synced first. Higher number indicates higher priority. </param>
+        </member>
+        <member name="M:Firebase.Database.Offline.DatabaseExtensions.Put``1(Firebase.Database.Offline.RealtimeDatabase{``0},System.String,``0,System.Boolean,System.Int32)">
+            <summary>
+            Overwrites existing object with given key.
+            </summary>
+            <param name="db"> Database instance. </param>
+            <param name="key"> The key. </param>
+            <param name="obj"> The object to set. </param>
+            <param name="syncOnline"> Indicates whether the item should be synced online. </param>
+            <param name="priority"> The priority. Objects with higher priority will be synced first. Higher number indicates higher priority. </param>
+        </member>
+        <member name="M:Firebase.Database.Offline.DatabaseExtensions.Post``1(Firebase.Database.Offline.RealtimeDatabase{``0},``0,System.Boolean,System.Int32)">
+            <summary>
+            Adds a new entity to the Database.
+            </summary>
+            <param name="db"> Database instance. </param>
+            <param name="obj"> The object to add.  </param>
+            <param name="syncOnline"> Indicates whether the item should be synced online. </param>
+            <param name="priority"> The priority. Objects with higher priority will be synced first. Higher number indicates higher priority. </param>
+            <returns> The generated key for this object. </returns>
+        </member>
+        <member name="M:Firebase.Database.Offline.DatabaseExtensions.Delete``1(Firebase.Database.Offline.RealtimeDatabase{``0},System.String,System.Boolean,System.Int32)">
+            <summary>
+            Deletes the entity with the given key.
+            </summary>
+            <param name="db"> Database instance. </param>
+            <param name="key"> The key. </param>
+            <param name="syncOnline"> Indicates whether the item should be synced online. </param>
+            <param name="priority"> The priority. Objects with higher priority will be synced first. Higher number indicates higher priority. </param> 
+        </member>
+        <member name="M:Firebase.Database.Offline.DatabaseExtensions.Put``2(Firebase.Database.Offline.RealtimeDatabase{``0},System.String,System.Linq.Expressions.Expression{System.Func{``0,``1}},``1,System.Boolean,System.Int32)">
+            <summary>
+            Do a Put for a nested property specified by <paramref name="propertyExpression"/> of an object with key <paramref name="key"/>.
+            </summary>
+            <typeparam name="T"> Type of the root elements. </typeparam>
+            <typeparam name="TProperty"> Type of the property being modified</typeparam>
+            <param name="db"> Database instance. </param>
+            <param name="key"> Key of the root element to modify. </param>
+            <param name="propertyExpression"> Expression on the root element leading to target value to modify. </param>
+            <param name="value"> Value to put. </param>
+            <param name="syncOnline"> Indicates whether the item should be synced online. </param>
+            <param name="priority"> The priority. Objects with higher priority will be synced first. Higher number indicates higher priority. </param> 
+        </member>
+        <member name="M:Firebase.Database.Offline.DatabaseExtensions.Patch``2(Firebase.Database.Offline.RealtimeDatabase{``0},System.String,System.Linq.Expressions.Expression{System.Func{``0,``1}},``1,System.Boolean,System.Int32)">
+            <summary>
+            Do a Patch for a nested property specified by <paramref name="propertyExpression"/> of an object with key <paramref name="key"/>.
+            </summary>
+            <typeparam name="T"> Type of the root elements. </typeparam>
+            <typeparam name="TProperty"> Type of the property being modified</typeparam>
+            <param name="db"> Database instance. </param>
+            <param name="key"> Key of the root element to modify. </param>
+            <param name="propertyExpression"> Expression on the root element leading to target value to modify. </param>
+            <param name="value"> Value to patch. </param>
+            <param name="syncOnline"> Indicates whether the item should be synced online. </param>
+            <param name="priority"> The priority. Objects with higher priority will be synced first. Higher number indicates higher priority. </param> 
+        </member>
+        <member name="M:Firebase.Database.Offline.DatabaseExtensions.Delete``2(Firebase.Database.Offline.RealtimeDatabase{``0},System.String,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Boolean,System.Int32)">
+            <summary>
+            Delete a nested property specified by <paramref name="propertyExpression"/> of an object with key <paramref name="key"/>. This basically does a Put with null value.
+            </summary>
+            <typeparam name="T"> Type of the root elements. </typeparam>
+            <typeparam name="TProperty"> Type of the property being modified</typeparam>
+            <param name="db"> Database instance. </param>
+            <param name="key"> Key of the root element to modify. </param>
+            <param name="propertyExpression"> Expression on the root element leading to target value to modify. </param>
+            <param name="syncOnline"> Indicates whether the item should be synced online. </param>
+            <param name="priority"> The priority. Objects with higher priority will be synced first. Higher number indicates higher priority. </param> 
+        </member>
+        <member name="M:Firebase.Database.Offline.DatabaseExtensions.Post``3(Firebase.Database.Offline.RealtimeDatabase{``0},System.String,System.Linq.Expressions.Expression{System.Func{``0,``1}},``2,System.Boolean,System.Int32)">
+            <summary>
+            Post a new entity into the nested dictionary specified by <paramref name="propertyExpression"/> of an object with key <paramref name="key"/>. 
+            The key of the new entity is automatically generated.
+            </summary>
+            <typeparam name="T"> Type of the root elements. </typeparam>
+            <typeparam name="TSelector"> Type of the dictionary being modified</typeparam>
+            <typeparam name="TProperty"> Type of the value within the dictionary being modified</typeparam>
+            <param name="db"> Database instance. </param>
+            <param name="key"> Key of the root element to modify. </param>
+            <param name="propertyExpression"> Expression on the root element leading to target value to modify. </param>
+            <param name="value"> Value to put. </param>
+            <param name="syncOnline"> Indicates whether the item should be synced online. </param>
+            <param name="priority"> The priority. Objects with higher priority will be synced first. Higher number indicates higher priority. </param> 
+        </member>
+        <member name="M:Firebase.Database.Offline.DatabaseExtensions.Delete``2(Firebase.Database.Offline.RealtimeDatabase{``0},System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Collections.Generic.IDictionary{System.String,``1}}},System.String,System.Boolean,System.Int32)">
+            <summary>
+            Delete an entity with key <paramref name="dictionaryKey"/> in the nested dictionary specified by <paramref name="propertyExpression"/> of an object with key <paramref name="key"/>. 
+            The key of the new entity is automatically generated.
+            </summary>
+            <typeparam name="T"> Type of the root elements. </typeparam>
+            <typeparam name="TProperty"> Type of the value within the dictionary being modified</typeparam>
+            <param name="db"> Database instance. </param>
+            <param name="key"> Key of the root element to modify. </param>
+            <param name="propertyExpression"> Expression on the root element leading to target value to modify. </param>
+            <param name="dictionaryKey"> Key within the nested dictionary to delete. </param>
+            <param name="syncOnline"> Indicates whether the item should be synced online. </param>
+            <param name="priority"> The priority. Objects with higher priority will be synced first. Higher number indicates higher priority. </param> 
+        </member>
+        <member name="T:Firebase.Database.Offline.InitialPullStrategy">
+            <summary>
+            Specifies the strategy for initial pull of server data.
+            </summary>
+        </member>
+        <member name="F:Firebase.Database.Offline.InitialPullStrategy.None">
+            <summary>
+            Don't pull anything.
+            </summary>
+        </member>
+        <member name="F:Firebase.Database.Offline.InitialPullStrategy.MissingOnly">
+            <summary>
+            Pull only what isn't already stored offline.
+            </summary>
+        </member>
+        <member name="F:Firebase.Database.Offline.InitialPullStrategy.Everything">
+            <summary>
+            Pull everything that exists on the server.
+            </summary>
+        </member>
+        <member name="T:Firebase.Database.Offline.OfflineDatabase">
+            <summary>
+            The offline database.
+            </summary>
+        </member>
+        <member name="M:Firebase.Database.Offline.OfflineDatabase.#ctor(System.Type,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Firebase.Database.Offline.OfflineDatabase"/> class.
+            </summary>
+            <param name="itemType"> The item type which is used to determine the database file name.  </param>
+            <param name="filenameModifier"> Custom string which will get appended to the file name. </param>
+        </member>
+        <member name="P:Firebase.Database.Offline.OfflineDatabase.Count">
+            <summary>
+            Gets the number of elements contained in the <see cref="T:System.Collections.Generic.ICollection`1"/>.
+            </summary>
+            <returns> The number of elements contained in the <see cref="T:System.Collections.Generic.ICollection`1"/>. </returns>
+        </member>
+        <member name="P:Firebase.Database.Offline.OfflineDatabase.IsReadOnly">
+            <summary>
+            Gets a value indicating whether this is a read-only collection.
+            </summary>
+        </member>
+        <member name="P:Firebase.Database.Offline.OfflineDatabase.Keys">
+            <summary>
+            Gets an <see cref="T:System.Collections.Generic.ICollection`1"/> containing the keys of the <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            </summary>
+            <returns> An <see cref="T:System.Collections.Generic.ICollection`1"/> containing the keys of the object that implements <see cref="T:System.Collections.Generic.IDictionary`2"/>. </returns>
+        </member>
+        <member name="P:Firebase.Database.Offline.OfflineDatabase.Values">
+            <summary>
+            Gets an <see cref="T:System.Collections.Generic.ICollection`1"/> containing the values in the <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            </summary>
+            <returns> An <see cref="T:System.Collections.Generic.ICollection`1"/> containing the values in the object that implements <see cref="T:System.Collections.Generic.IDictionary`2"/>. </returns>
+        </member>
+        <member name="P:Firebase.Database.Offline.OfflineDatabase.Item(System.String)">
+            <summary>
+            Gets or sets the element with the specified key.
+            </summary>
+            <param name="key">The key of the element to get or set.</param>
+            <returns> The element with the specified key. </returns>   
+        </member>
+        <member name="M:Firebase.Database.Offline.OfflineDatabase.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns> An enumerator that can be used to iterate through the collection. </returns>
+        </member>
+        <member name="M:Firebase.Database.Offline.OfflineDatabase.Add(System.Collections.Generic.KeyValuePair{System.String,Firebase.Database.Offline.OfflineEntry})">
+            <summary>
+            Adds an item to the <see cref="T:System.Collections.Generic.ICollection`1"/>.
+            </summary>
+            <param name="item">The object to add to the <see cref="T:System.Collections.Generic.ICollection`1"/>.</param>
+        </member>
+        <member name="M:Firebase.Database.Offline.OfflineDatabase.Clear">
+            <summary>
+            Removes all items from the <see cref="T:System.Collections.Generic.ICollection`1"/>.
+            </summary> 
+        </member>
+        <member name="M:Firebase.Database.Offline.OfflineDatabase.Contains(System.Collections.Generic.KeyValuePair{System.String,Firebase.Database.Offline.OfflineEntry})">
+            <summary>
+            Determines whether the <see cref="T:System.Collections.Generic.ICollection`1"/> contains a specific value.
+            </summary>
+            <param name="item">The object to locate in the <see cref="T:System.Collections.Generic.ICollection`1"/>.</param> 
+            <returns> True if <paramref name="item"/> is found in the <see cref="T:System.Collections.Generic.ICollection`1"/>; otherwise, false. </returns>
+        </member>
+        <member name="M:Firebase.Database.Offline.OfflineDatabase.CopyTo(System.Collections.Generic.KeyValuePair{System.String,Firebase.Database.Offline.OfflineEntry}[],System.Int32)">
+            <summary>
+            Copies the elements of the <see cref="T:System.Collections.Generic.ICollection`1"/> to an <see cref="T:System.Array"/>, starting at a particular <see cref="T:System.Array"/> index.
+            </summary>
+            <param name="array">The one-dimensional <see cref="T:System.Array"/> that is the destination of the elements copied from <see cref="T:System.Collections.Generic.ICollection`1"/>. The <see cref="T:System.Array"/> must have zero-based indexing.</param>
+            <param name="arrayIndex">The zero-based index in <paramref name="array"/> at which copying begins.</param>
+        </member>
+        <member name="M:Firebase.Database.Offline.OfflineDatabase.Remove(System.Collections.Generic.KeyValuePair{System.String,Firebase.Database.Offline.OfflineEntry})">
+            <summary>
+            Removes the first occurrence of a specific object from the <see cref="T:System.Collections.Generic.ICollection`1"/>.
+            </summary>
+            <param name="item">The object to remove from the <see cref="T:System.Collections.Generic.ICollection`1"/>.</param>
+            <returns> True if <paramref name="item"/> was successfully removed from the <see cref="T:System.Collections.Generic.ICollection`1"/>; otherwise, false. This method also returns false if <paramref name="item"/> is not found in the original <see cref="T:System.Collections.Generic.ICollection`1"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Offline.OfflineDatabase.ContainsKey(System.String)">
+            <summary>
+            Determines whether the <see cref="T:System.Collections.Generic.IDictionary`2"/> contains an element with the specified key.
+            </summary>
+            <param name="key">The key to locate in the <see cref="T:System.Collections.Generic.IDictionary`2"/>.</param>
+            <returns> True if the <see cref="T:System.Collections.Generic.IDictionary`2"/> contains an element with the key; otherwise, false. </returns>
+        </member>
+        <member name="M:Firebase.Database.Offline.OfflineDatabase.Add(System.String,Firebase.Database.Offline.OfflineEntry)">
+            <summary>
+            Adds an element with the provided key and value to the <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            </summary>
+            <param name="key">The object to use as the key of the element to add.</param>
+            <param name="value">The object to use as the value of the element to add.</param>
+        </member>
+        <member name="M:Firebase.Database.Offline.OfflineDatabase.Remove(System.String)">
+            <summary>
+            Removes the element with the specified key from the <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            </summary>
+            <param name="key">The key of the element to remove.</param>
+            <returns> True if the element is successfully removed; otherwise, false.  This method also returns false if <paramref name="key"/> was not found in the original <see cref="T:System.Collections.Generic.IDictionary`2"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Offline.OfflineDatabase.TryGetValue(System.String,Firebase.Database.Offline.OfflineEntry@)">
+            <summary>
+            Gets the value associated with the specified key.
+            </summary> 
+            <param name="key">The key whose value to get.</param><param name="value">When this method returns, the value associated with the specified key, if the key is found; otherwise, the default value for the type of the <paramref name="value"/> parameter. This parameter is passed uninitialized.</param>
+            <returns> True if the object that implements <see cref="T:System.Collections.Generic.IDictionary`2"/> contains an element with the specified key; otherwise, false. </returns>
+        </member>
+        <member name="T:Firebase.Database.Offline.OfflineEntry">
+            <summary>
+            Represents an object stored in offline storage.
+            </summary>
+        </member>
+        <member name="M:Firebase.Database.Offline.OfflineEntry.#ctor(System.String,System.Object,System.String,System.Int32,Firebase.Database.Offline.SyncOptions,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Firebase.Database.Offline.OfflineEntry"/> class with an already serialized object.
+            </summary>
+            <param name="key"> The key. </param>
+            <param name="obj"> The object. </param>
+            <param name="data"> The json data. </param>
+            <param name="priority"> The priority. Objects with higher priority will be synced first. Higher number indicates higher priority. </param>
+            <param name="syncOptions"> The sync options. </param>
+            <param name="isPartial"> A value indicating whether this is only a partial object. </param>
+        </member>
+        <member name="M:Firebase.Database.Offline.OfflineEntry.#ctor(System.String,System.Object,System.Int32,Firebase.Database.Offline.SyncOptions,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Firebase.Database.Offline.OfflineEntry"/> class.
+            </summary>
+            <param name="key"> The key. </param>
+            <param name="obj"> The object. </param>
+            <param name="priority"> The priority. Objects with higher priority will be synced first. Higher number indicates higher priority. </param>  
+            <param name="syncOptions"> The sync options. </param>
+            <param name="isPartial"> A value indicating whether this is only a partial object. </param>
+        </member>
+        <member name="M:Firebase.Database.Offline.OfflineEntry.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Firebase.Database.Offline.OfflineEntry"/> class.
+            </summary>
+        </member>
+        <member name="P:Firebase.Database.Offline.OfflineEntry.Key">
+            <summary>
+            Gets or sets the key of this entry.
+            </summary>
+        </member>
+        <member name="P:Firebase.Database.Offline.OfflineEntry.Priority">
+            <summary>
+            Gets or sets the priority. Objects with higher priority will be synced first. Higher number indicates higher priority. 
+            </summary>
+        </member>
+        <member name="P:Firebase.Database.Offline.OfflineEntry.Timestamp">
+            <summary>
+            Gets or sets the timestamp when this entry was last touched.
+            </summary>
+        </member>
+        <member name="P:Firebase.Database.Offline.OfflineEntry.SyncOptions">
+            <summary>
+            Gets or sets the <see cref="P:Firebase.Database.Offline.OfflineEntry.SyncOptions"/> which define what sync state this entry is in.
+            </summary>
+        </member>
+        <member name="P:Firebase.Database.Offline.OfflineEntry.Data">
+            <summary>
+            Gets or sets serialized JSON data. 
+            </summary>
+        </member>
+        <member name="P:Firebase.Database.Offline.OfflineEntry.IsPartial">
+            <summary>
+            Specifies whether this is only a partial object.
+            </summary>
+        </member>
+        <member name="M:Firebase.Database.Offline.OfflineEntry.Deserialize``1">
+            <summary>
+            Deserializes <see cref="P:Firebase.Database.Offline.OfflineEntry.Data"/> into <typeparamref name="T"/>. The result is cached.
+            </summary>
+            <typeparam name="T"> Type of object to deserialize into. </typeparam>
+            <returns> Instance of <typeparamref name="T"/>. </returns>
+        </member>
+        <member name="T:Firebase.Database.Offline.RealtimeDatabase`1">
+            <summary>
+            The real-time Database which synchronizes online and offline data. 
+            </summary>
+            <typeparam name="T"> Type of entities. </typeparam>
+        </member>
+        <member name="M:Firebase.Database.Offline.RealtimeDatabase`1.#ctor(Firebase.Database.Query.ChildQuery,System.String,System.Func{System.Type,System.String,System.Collections.Generic.IDictionary{System.String,Firebase.Database.Offline.OfflineEntry}},System.String,Firebase.Database.Offline.StreamingOptions,Firebase.Database.Offline.InitialPullStrategy,System.Boolean,Firebase.Database.Offline.ISetHandler{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Firebase.Database.Offline.RealtimeDatabase`1"/> class.
+            </summary>
+            <param name="childQuery"> The child query.  </param>
+            <param name="elementRoot"> The element Root. </param>
+            <param name="offlineDatabaseFactory"> The offline database factory.  </param>
+            <param name="filenameModifier"> Custom string which will get appended to the file name.  </param>
+            <param name="streamingOptions"> Specifies condition for which items get streamed. </param>
+            <param name="initialPullStrategy"> Specifies the strategy for initial pull of server data. </param>
+            <param name="pushChanges"> Specifies whether changed items should actually be pushed to the server. If this is false, then Put / Post / Delete will not affect server data. </param>
+            <param name="setHandler"></param>
+        </member>
+        <member name="E:Firebase.Database.Offline.RealtimeDatabase`1.SyncExceptionThrown">
+            <summary>
+            Event raised whenever an exception is thrown in the synchronization thread. Exception thrown in there are swallowed, so this event is the only way to get to them. 
+            </summary>
+        </member>
+        <member name="E:Firebase.Database.Offline.RealtimeDatabase`1.StreamingExceptionThrown">
+            <summary>
+            Event raised when an exception is thrown inside <see cref="F:Firebase.Database.Offline.RealtimeDatabase`1.firebaseSubscription"/>. Whether they are swalled or not is up to the handler.
+            </summary>
+        </member>
+        <member name="P:Firebase.Database.Offline.RealtimeDatabase`1.Database">
+            <summary>
+            Gets the backing Database.
+            </summary>
+        </member>
+        <member name="M:Firebase.Database.Offline.RealtimeDatabase`1.Set(System.String,`0,Firebase.Database.Offline.SyncOptions,System.Int32)">
+            <summary>
+            Overwrites existing object with given key.
+            </summary>
+            <param name="key"> The key. </param>
+            <param name="obj"> The object to set. </param>
+            <param name="syncOptions"> Specifies type of sync requested for given data. </param>
+            <param name="priority"> The priority. Objects with higher priority will be synced first. Higher number indicates higher priority. </param>
+        </member>
+        <member name="M:Firebase.Database.Offline.RealtimeDatabase`1.Pull(System.String,System.Int32)">
+            <summary>
+            Fetches an object with the given key and adds it to the Database.
+            </summary>
+            <param name="key"> The key. </param>
+            <param name="priority"> The priority. Objects with higher priority will be synced first. Higher number indicates higher priority. </param>
+        </member>
+        <member name="M:Firebase.Database.Offline.RealtimeDatabase`1.PullAsync(System.Nullable{System.Int32})">
+            <summary>
+            Fetches everything from the remote database.
+            </summary>
+            <param name="retryCount">
+            The number of attempts of running the source observable before failing.
+            null means infinite retries, 0 means it won't execute at all, and 1 means it will only try once.
+            </param>
+        </member>
+        <member name="M:Firebase.Database.Offline.RealtimeDatabase`1.Once">
+            <summary>
+            Retrieves all offline items currently stored in local database.
+            </summary>
+        </member>
+        <member name="M:Firebase.Database.Offline.RealtimeDatabase`1.AsObservable">
+            <summary> 
+            Starts observing the real-time Database. Events will be fired both when change is done locally and remotely.
+            </summary> 
+            <returns> Stream of <see cref="T:Firebase.Database.Streaming.FirebaseEvent`1"/>. </returns>
+        </member>
+        <member name="F:Firebase.Database.Offline.StreamingOptions.None">
+            <summary>
+            No realtime streaming.
+            </summary>
+        </member>
+        <member name="F:Firebase.Database.Offline.StreamingOptions.LatestOnly">
+            <summary>
+            Streaming of only new items - not the existing ones.
+            </summary>
+        </member>
+        <member name="F:Firebase.Database.Offline.StreamingOptions.Everything">
+            <summary>
+            Streaming of all items. This will also pull all existing items on start, so be mindful about the number of items in your DB. 
+            When used, consider not setting the <see cref="T:Firebase.Database.Offline.InitialPullStrategy"/> to <see cref="F:Firebase.Database.Offline.InitialPullStrategy.Everything"/> because you would pointlessly pull everything twice.
+            </summary>
+        </member>
+        <member name="T:Firebase.Database.Offline.SyncOptions">
+            <summary>
+            Specifies type of sync requested for given data.
+            </summary>
+        </member>
+        <member name="F:Firebase.Database.Offline.SyncOptions.None">
+            <summary>
+            No sync needed for given data. 
+            </summary>
+        </member>
+        <member name="F:Firebase.Database.Offline.SyncOptions.Pull">
+            <summary>
+            Data should be pulled from firebase.
+            </summary>
+        </member>
+        <member name="F:Firebase.Database.Offline.SyncOptions.Put">
+            <summary>
+            Data should be put to firebase.
+            </summary>
+        </member>
+        <member name="F:Firebase.Database.Offline.SyncOptions.Patch">
+            <summary>
+            Data should be patched in firebase.
+            </summary>
+        </member>
+        <member name="T:Firebase.Database.Query.AuthQuery">
+            <summary>
+            Represents an auth parameter in firebase query, e.g. "?auth=xyz".
+            </summary>
+        </member>
+        <member name="M:Firebase.Database.Query.AuthQuery.#ctor(Firebase.Database.Query.FirebaseQuery,System.Func{System.String},Firebase.Database.FirebaseClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Firebase.Database.Query.AuthQuery"/> class.
+            </summary>
+            <param name="parent"> The parent.  </param>  
+            <param name="tokenFactory"> The authentication token factory. </param>
+            <param name="client"> The owner. </param>
+        </member>
+        <member name="M:Firebase.Database.Query.AuthQuery.BuildUrlParameter(Firebase.Database.Query.FirebaseQuery)">
+            <summary>
+            Build the url parameter value of this child. 
+            </summary>
+            <param name="child"> The child of this child. </param>
+            <returns> The <see cref="T:System.String"/>. </returns>
+        </member>
+        <member name="T:Firebase.Database.Query.ChildQuery">
+            <summary>
+            Firebase query which references the child of current node.
+            </summary>
+        </member>
+        <member name="M:Firebase.Database.Query.ChildQuery.#ctor(Firebase.Database.Query.FirebaseQuery,System.Func{System.String},Firebase.Database.FirebaseClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Firebase.Database.Query.ChildQuery"/> class.
+            </summary>
+            <param name="parent"> The parent.  </param>
+            <param name="pathFactory"> The path to the child node.  </param>
+            <param name="client"> The owner. </param>
+        </member>
+        <member name="M:Firebase.Database.Query.ChildQuery.#ctor(Firebase.Database.FirebaseClient,System.Func{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Firebase.Database.Query.ChildQuery"/> class.
+            </summary>
+            <param name="client"> The client. </param>
+            <param name="pathFactory"> The path to the child node.  </param>
+        </member>
+        <member name="M:Firebase.Database.Query.ChildQuery.BuildUrlSegment(Firebase.Database.Query.FirebaseQuery)">
+            <summary>
+            Build the url segment of this child.
+            </summary>
+            <param name="child"> The child of this child. </param>
+            <returns> The <see cref="T:System.String"/>. </returns>
+        </member>
+        <member name="T:Firebase.Database.Query.FilterQuery">
+            <summary>
+            Represents a firebase filtering query, e.g. "?LimitToLast=10".
+            </summary>
+        </member>
+        <member name="M:Firebase.Database.Query.FilterQuery.#ctor(Firebase.Database.Query.FirebaseQuery,System.Func{System.String},System.Func{System.String},Firebase.Database.FirebaseClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Firebase.Database.Query.FilterQuery"/> class.
+            </summary>
+            <param name="parent"> The parent. </param>
+            <param name="filterFactory"> The filter. </param>
+            <param name="valueFactory"> The value for filter. </param>
+            <param name="client"> The owning client. </param>  
+        </member>
+        <member name="M:Firebase.Database.Query.FilterQuery.#ctor(Firebase.Database.Query.FirebaseQuery,System.Func{System.String},System.Func{System.Double},Firebase.Database.FirebaseClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Firebase.Database.Query.FilterQuery"/> class.
+            </summary>
+            <param name="parent"> The parent. </param>
+            <param name="filterFactory"> The filter. </param>
+            <param name="valueFactory"> The value for filter. </param>
+            <param name="client"> The owning client. </param>
+        </member>
+        <member name="M:Firebase.Database.Query.FilterQuery.#ctor(Firebase.Database.Query.FirebaseQuery,System.Func{System.String},System.Func{System.Int64},Firebase.Database.FirebaseClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Firebase.Database.Query.FilterQuery"/> class.
+            </summary>
+            <param name="parent"> The parent. </param>
+            <param name="filterFactory"> The filter. </param>
+            <param name="valueFactory"> The value for filter. </param>
+            <param name="client"> The owning client. </param>
+        </member>
+        <member name="M:Firebase.Database.Query.FilterQuery.#ctor(Firebase.Database.Query.FirebaseQuery,System.Func{System.String},System.Func{System.Boolean},Firebase.Database.FirebaseClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Firebase.Database.Query.FilterQuery"/> class.
+            </summary>
+            <param name="parent"> The parent. </param>
+            <param name="filterFactory"> The filter. </param>
+            <param name="valueFactory"> The value for filter. </param>
+            <param name="client"> The owning client. </param>
+        </member>
+        <member name="M:Firebase.Database.Query.FilterQuery.BuildUrlParameter(Firebase.Database.Query.FirebaseQuery)">
+            <summary>
+            The build url parameter.
+            </summary>
+            <param name="child"> The child. </param> 
+            <returns> Url parameter part of the resulting path. </returns> 
+        </member>
+        <member name="T:Firebase.Database.Query.FirebaseQuery">
+            <summary>
+            Represents a firebase query. 
+            </summary>
+        </member>
+        <member name="M:Firebase.Database.Query.FirebaseQuery.#ctor(Firebase.Database.Query.FirebaseQuery,Firebase.Database.FirebaseClient)">
+            <summary> 
+            Initializes a new instance of the <see cref="T:Firebase.Database.Query.FirebaseQuery"/> class.
+            </summary>
+            <param name="parent"> The parent of this query. </param>
+            <param name="client"> The owning client. </param>
+        </member>
+        <member name="P:Firebase.Database.Query.FirebaseQuery.Client">
+            <summary>
+            Gets the client.
+            </summary>
+        </member>
+        <member name="M:Firebase.Database.Query.FirebaseQuery.OnceAsync``1(System.Nullable{System.TimeSpan})">
+            <summary>
+            Queries the firebase server once returning collection of items.
+            </summary>
+            <param name="timeout"> Optional timeout value. </param>
+            <typeparam name="T"> Type of elements. </typeparam>
+            <returns> Collection of <see cref="T:Firebase.Database.FirebaseObject`1"/> holding the entities returned by server. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.FirebaseQuery.OnceSingleAsync``1(System.Nullable{System.TimeSpan})">
+            <summary>
+            Assumes given query is pointing to a single object of type <typeparamref name="T"/> and retrieves it.
+            </summary>
+            <param name="timeout"> Optional timeout value. </param>
+            <typeparam name="T"> Type of elements. </typeparam>
+            <returns> Single object of type <typeparamref name="T"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.FirebaseQuery.AsObservable``1(System.EventHandler{Firebase.Database.ContinueExceptionEventArgs{Firebase.Database.FirebaseException}},System.String)">
+            <summary>
+            Starts observing this query watching for changes real time sent by the server.
+            </summary>
+            <typeparam name="T"> Type of elements. </typeparam>
+            <param name="exceptionHandler"> Optional exception handler for the stream subscription. </param>
+            <param name="elementRoot"> Optional custom root element of received json items. </param>
+            <returns> Observable stream of <see cref="T:Firebase.Database.Streaming.FirebaseEvent`1"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.FirebaseQuery.BuildUrlAsync">
+            <summary>
+            Builds the actual URL of this query.
+            </summary>
+            <returns> The <see cref="T:System.String"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.FirebaseQuery.PostAsync(System.String,System.Boolean,System.Nullable{System.TimeSpan})">
+            <summary>
+            Posts given object to repository.
+            </summary>
+            <param name="data"> The json data. </param>
+            <param name="generateKeyOffline"> Specifies whether the key should be generated offline instead of online. </param>
+            <param name="timeout"> Optional timeout value. </param>
+            <returns> Resulting firebase object with populated key. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.FirebaseQuery.PatchAsync(System.String,System.Nullable{System.TimeSpan})">
+            <summary>
+            Patches data at given location instead of overwriting them.
+            </summary> 
+            <param name="data"> The json data. </param>
+            <param name="timeout"> Optional timeout value. </param>
+            <returns> The <see cref="T:System.Threading.Tasks.Task"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.FirebaseQuery.PutAsync(System.String,System.Nullable{System.TimeSpan})">
+            <summary>
+            Sets or overwrites data at given location.
+            </summary> 
+            <param name="data"> The json data. </param>
+            <param name="timeout"> Optional timeout value. </param>
+            <returns> The <see cref="T:System.Threading.Tasks.Task"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.FirebaseQuery.DeleteAsync(System.Nullable{System.TimeSpan})">
+            <summary>
+            Deletes data from given location.
+            </summary>
+            <param name="timeout"> Optional timeout value. </param>
+            <returns> The <see cref="T:System.Threading.Tasks.Task"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.FirebaseQuery.Dispose">
+            <summary>
+            Disposes this instance.  
+            </summary>
+        </member>
+        <member name="M:Firebase.Database.Query.FirebaseQuery.BuildUrlSegment(Firebase.Database.Query.FirebaseQuery)">
+            <summary>
+            Build the url segment of this child.
+            </summary>
+            <param name="child"> The child of this query. </param>
+            <returns> The <see cref="T:System.String"/>. </returns>
+        </member>
+        <member name="T:Firebase.Database.Query.IFirebaseQuery">
+            <summary>
+            The FirebaseQuery interface.
+            </summary>
+        </member>
+        <member name="P:Firebase.Database.Query.IFirebaseQuery.Client">
+            <summary>
+            Gets the owning client of this query.
+            </summary>
+        </member>
+        <member name="M:Firebase.Database.Query.IFirebaseQuery.OnceAsync``1(System.Nullable{System.TimeSpan})">
+            <summary>
+            Retrieves items which exist on the location specified by this query instance.
+            </summary>
+            <param name="timeout"> Optional timeout value. </param>
+            <typeparam name="T"> Type of the items. </typeparam>
+            <returns> Collection of <see cref="T:Firebase.Database.FirebaseObject`1"/>. </returns> 
+        </member>
+        <member name="M:Firebase.Database.Query.IFirebaseQuery.AsObservable``1(System.EventHandler{Firebase.Database.ContinueExceptionEventArgs{Firebase.Database.FirebaseException}},System.String)">
+            <summary>
+            Returns current location as an observable which allows to real-time listening to events from the firebase server. 
+            </summary>
+            <typeparam name="T"> Type of the items. </typeparam>
+            <returns> Cold observable of <see cref="T:Firebase.Database.Streaming.FirebaseEvent`1"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.IFirebaseQuery.BuildUrlAsync">
+            <summary>
+            Builds the actual url of this query.
+            </summary>
+            <returns> The <see cref="T:System.String"/>. </returns>
+        </member>
+        <member name="T:Firebase.Database.Query.OrderQuery">
+            <summary>
+            Represents a firebase ordering query, e.g. "?OrderBy=Foo".
+            </summary>
+        </member>
+        <member name="M:Firebase.Database.Query.OrderQuery.#ctor(Firebase.Database.Query.ChildQuery,System.Func{System.String},Firebase.Database.FirebaseClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Firebase.Database.Query.OrderQuery"/> class.
+            </summary>
+            <param name="parent"> The query parent. </param>
+            <param name="propertyNameFactory"> The property name. </param>
+            <param name="client"> The owning client. </param>
+        </member>
+        <member name="M:Firebase.Database.Query.OrderQuery.BuildUrlParameter(Firebase.Database.Query.FirebaseQuery)">
+            <summary>
+            The build url parameter.
+            </summary>
+            <param name="child"> The child. </param>
+            <returns> The <see cref="T:System.String"/>. </returns>
+        </member>
+        <member name="T:Firebase.Database.Query.ParameterQuery">
+            <summary>
+            Represents a parameter in firebase query, e.g. "?data=foo".
+            </summary>
+        </member>
+        <member name="M:Firebase.Database.Query.ParameterQuery.#ctor(Firebase.Database.Query.FirebaseQuery,System.Func{System.String},Firebase.Database.FirebaseClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Firebase.Database.Query.ParameterQuery"/> class.
+            </summary>
+            <param name="parent"> The parent of this query. </param>
+            <param name="parameterFactory"> The parameter. </param>
+            <param name="client"> The owning client. </param>
+        </member>
+        <member name="M:Firebase.Database.Query.ParameterQuery.BuildUrlSegment(Firebase.Database.Query.FirebaseQuery)">
+            <summary>
+            Build the url segment represented by this query. 
+            </summary> 
+            <param name="child"> The child. </param>
+            <returns> The <see cref="T:System.String"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.ParameterQuery.BuildUrlParameter(Firebase.Database.Query.FirebaseQuery)">
+            <summary>
+            The build url parameter.
+            </summary>
+            <param name="child"> The child. </param>
+            <returns> The <see cref="T:System.String"/>. </returns>
+        </member>
+        <member name="T:Firebase.Database.Query.QueryExtensions">
+            <summary>
+            Query extensions providing linq like syntax for firebase server methods.
+            </summary>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryExtensions.WithAuth(Firebase.Database.Query.FirebaseQuery,System.String)">
+            <summary>
+            Adds an auth parameter to the query.
+            </summary>
+            <param name="node"> The child. </param>
+            <param name="token"> The auth token. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.AuthQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryExtensions.Silent(Firebase.Database.Query.FirebaseQuery)">
+            <summary>
+            Appends print=silent to save bandwidth.
+            </summary>
+            <param name="node"> The child. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.SilentQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryExtensions.Shallow(Firebase.Database.Query.ChildQuery)">
+            <summary>
+            Appends shallow=true to the url parameters. This cannot be used with any other filtering parameters.
+            See https://firebase.google.com/docs/database/rest/retrieve-data
+            </summary>
+            <param name="node"> The child. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.ShallowQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryExtensions.Child(Firebase.Database.Query.ChildQuery,System.String)">
+            <summary>
+            References a sub child of the existing node.
+            </summary>
+            <param name="node"> The child. </param>
+            <param name="path"> The path of sub child. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.ChildQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryExtensions.OrderBy(Firebase.Database.Query.ChildQuery,System.String)">
+            <summary>
+            Order data by given <paramref name="propertyName"/>. Note that this is used mainly for following filtering queries and due to firebase implementation
+            the data may actually not be ordered.
+            </summary>
+            <param name="child"> The child. </param>
+            <param name="propertyName"> The property name. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.OrderQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryExtensions.StartAt(Firebase.Database.Query.ParameterQuery,System.String)">
+            <summary>
+            Instructs firebase to send data greater or equal to the <paramref name="value"/>. This must be preceded by an OrderBy query.
+            </summary>
+            <param name="child"> Current node. </param>
+            <param name="value"> Value to start at. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryExtensions.EndAt(Firebase.Database.Query.ParameterQuery,System.String)">
+            <summary>
+            Instructs firebase to send data lower or equal to the <paramref name="value"/>. This must be preceded by an OrderBy query.
+            </summary>
+            <param name="child"> Current node. </param>
+            <param name="value"> Value to start at. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryExtensions.EqualTo(Firebase.Database.Query.ParameterQuery,System.String)">
+            <summary>
+            Instructs firebase to send data equal to the <paramref name="value"/>. This must be preceded by an OrderBy query.
+            </summary>
+            <param name="child"> Current node. </param>
+            <param name="value"> Value to start at. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryExtensions.StartAt(Firebase.Database.Query.ParameterQuery,System.Double)">
+            <summary>
+            Instructs firebase to send data greater or equal to the <paramref name="value"/>. This must be preceded by an OrderBy query.
+            </summary>
+            <param name="child"> Current node. </param>
+            <param name="value"> Value to start at. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryExtensions.EndAt(Firebase.Database.Query.ParameterQuery,System.Double)">
+            <summary>
+            Instructs firebase to send data lower or equal to the <paramref name="value"/>. This must be preceded by an OrderBy query.
+            </summary>
+            <param name="child"> Current node. </param>
+            <param name="value"> Value to start at. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryExtensions.EqualTo(Firebase.Database.Query.ParameterQuery,System.Double)">
+            <summary>
+            Instructs firebase to send data equal to the <paramref name="value"/>. This must be preceded by an OrderBy query.
+            </summary>
+            <param name="child"> Current node. </param>
+            <param name="value"> Value to start at. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryExtensions.StartAt(Firebase.Database.Query.ParameterQuery,System.Int64)">
+            <summary>
+            Instructs firebase to send data greater or equal to the <paramref name="value"/>. This must be preceded by an OrderBy query.
+            </summary>
+            <param name="child"> Current node. </param>
+            <param name="value"> Value to start at. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryExtensions.EndAt(Firebase.Database.Query.ParameterQuery,System.Int64)">
+            <summary>
+            Instructs firebase to send data lower or equal to the <paramref name="value"/>. This must be preceded by an OrderBy query.
+            </summary>
+            <param name="child"> Current node. </param>
+            <param name="value"> Value to start at. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryExtensions.EqualTo(Firebase.Database.Query.ParameterQuery,System.Int64)">
+            <summary>
+            Instructs firebase to send data equal to the <paramref name="value"/>. This must be preceded by an OrderBy query.
+            </summary>
+            <param name="child"> Current node. </param>
+            <param name="value"> Value to start at. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryExtensions.EqualTo(Firebase.Database.Query.ParameterQuery,System.Boolean)">
+            <summary>
+            Instructs firebase to send data equal to the <paramref name="value"/>. This must be preceded by an OrderBy query.
+            </summary>
+            <param name="child"> Current node. </param>
+            <param name="value"> Value to start at. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryExtensions.EqualTo(Firebase.Database.Query.ParameterQuery)">
+            <summary>
+            Instructs firebase to send data equal to null. This must be preceded by an OrderBy query.
+            </summary>
+            <param name="child"> Current node. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryExtensions.LimitToFirst(Firebase.Database.Query.ParameterQuery,System.Int32)">
+            <summary>
+            Limits the result to first <paramref name="count"/> items.
+            </summary>
+            <param name="child"> Current node. </param>
+            <param name="count"> Number of elements. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryExtensions.LimitToLast(Firebase.Database.Query.ParameterQuery,System.Int32)">
+            <summary>
+            Limits the result to last <paramref name="count"/> items.
+            </summary>
+            <param name="child"> Current node. </param>
+            <param name="count"> Number of elements. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryExtensions.FanOut``1(Firebase.Database.Query.ChildQuery,``0,System.String[])">
+            <summary>
+            Fan out given item to multiple locations at once. See https://firebase.googleblog.com/2015/10/client-side-fan-out-for-data-consistency_73.html for details.
+            </summary>
+            <typeparam name="T"> Type of object to fan out. </typeparam>
+            <param name="query"> Current node. </param>
+            <param name="item"> Object to fan out. </param>
+            <param name="relativePaths"> Locations where to store the item. </param>
+        </member>
+        <member name="T:Firebase.Database.Query.QueryFactoryExtensions">
+            <summary>
+            Query extensions providing linq like syntax for firebase server methods.
+            </summary>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryFactoryExtensions.WithAuth(Firebase.Database.Query.FirebaseQuery,System.Func{System.String})">
+            <summary>
+            Adds an auth parameter to the query.
+            </summary>
+            <param name="node"> The child. </param>
+            <param name="tokenFactory"> The auth token. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.AuthQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryFactoryExtensions.Child(Firebase.Database.Query.ChildQuery,System.Func{System.String})">
+            <summary>
+            References a sub child of the existing node.
+            </summary>
+            <param name="node"> The child. </param>
+            <param name="pathFactory"> The path of sub child. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.ChildQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryFactoryExtensions.OrderBy(Firebase.Database.Query.ChildQuery,System.Func{System.String})">
+            <summary>
+            Order data by given <paramref name="propertyNameFactory"/>. Note that this is used mainly for following filtering queries and due to firebase implementation
+            the data may actually not be ordered.
+            </summary>
+            <param name="child"> The child. </param>
+            <param name="propertyNameFactory"> The property name. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.OrderQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryFactoryExtensions.OrderByKey(Firebase.Database.Query.ChildQuery)">
+            <summary>
+            Order data by $key. Note that this is used mainly for following filtering queries and due to firebase implementation
+            the data may actually not be ordered.
+            </summary>
+            <param name="child"> The child. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.OrderQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryFactoryExtensions.OrderByValue(Firebase.Database.Query.ChildQuery)">
+            <summary>
+            Order data by $value. Note that this is used mainly for following filtering queries and due to firebase implementation
+            the data may actually not be ordered.
+            </summary>
+            <param name="child"> The child. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.OrderQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryFactoryExtensions.OrderByPriority(Firebase.Database.Query.ChildQuery)">
+            <summary>
+            Order data by $priority. Note that this is used mainly for following filtering queries and due to firebase implementation
+            the data may actually not be ordered.
+            </summary>
+            <param name="child"> The child. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.OrderQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryFactoryExtensions.StartAt(Firebase.Database.Query.ParameterQuery,System.Func{System.String})">
+            <summary>
+            Instructs firebase to send data greater or equal to the <paramref name="valueFactory"/>. This must be preceded by an OrderBy query.
+            </summary>
+            <param name="child"> Current node. </param>
+            <param name="valueFactory"> Value to start at. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryFactoryExtensions.EndAt(Firebase.Database.Query.ParameterQuery,System.Func{System.String})">
+            <summary>
+            Instructs firebase to send data lower or equal to the <paramref name="valueFactory"/>. This must be preceded by an OrderBy query.
+            </summary>
+            <param name="child"> Current node. </param>
+            <param name="valueFactory"> Value to start at. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryFactoryExtensions.EqualTo(Firebase.Database.Query.ParameterQuery,System.Func{System.String})">
+            <summary>
+            Instructs firebase to send data equal to the <paramref name="valueFactory"/>. This must be preceded by an OrderBy query.
+            </summary>
+            <param name="child"> Current node. </param>
+            <param name="valueFactory"> Value to start at. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryFactoryExtensions.StartAt(Firebase.Database.Query.ParameterQuery,System.Func{System.Double})">
+            <summary>
+            Instructs firebase to send data greater or equal to the <paramref name="valueFactory"/>. This must be preceded by an OrderBy query.
+            </summary>
+            <param name="child"> Current node. </param>
+            <param name="valueFactory"> Value to start at. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryFactoryExtensions.EndAt(Firebase.Database.Query.ParameterQuery,System.Func{System.Double})">
+            <summary>
+            Instructs firebase to send data lower or equal to the <paramref name="valueFactory"/>. This must be preceded by an OrderBy query.
+            </summary>
+            <param name="child"> Current node. </param>
+            <param name="valueFactory"> Value to start at. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryFactoryExtensions.EqualTo(Firebase.Database.Query.ParameterQuery,System.Func{System.Double})">
+            <summary>
+            Instructs firebase to send data equal to the <paramref name="valueFactory"/>. This must be preceded by an OrderBy query.
+            </summary>
+            <param name="child"> Current node. </param>
+            <param name="valueFactory"> Value to start at. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryFactoryExtensions.StartAt(Firebase.Database.Query.ParameterQuery,System.Func{System.Int64})">
+            <summary>
+            Instructs firebase to send data greater or equal to the <paramref name="valueFactory"/>. This must be preceded by an OrderBy query.
+            </summary>
+            <param name="child"> Current node. </param>
+            <param name="valueFactory"> Value to start at. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryFactoryExtensions.EndAt(Firebase.Database.Query.ParameterQuery,System.Func{System.Int64})">
+            <summary>
+            Instructs firebase to send data lower or equal to the <paramref name="valueFactory"/>. This must be preceded by an OrderBy query.
+            </summary>
+            <param name="child"> Current node. </param>
+            <param name="valueFactory"> Value to start at. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryFactoryExtensions.EqualTo(Firebase.Database.Query.ParameterQuery,System.Func{System.Int64})">
+            <summary>
+            Instructs firebase to send data equal to the <paramref name="valueFactory"/>. This must be preceded by an OrderBy query.
+            </summary>
+            <param name="child"> Current node. </param>
+            <param name="valueFactory"> Value to start at. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryFactoryExtensions.EqualTo(Firebase.Database.Query.ParameterQuery,System.Func{System.Boolean})">
+            <summary>
+            Instructs firebase to send data equal to the <paramref name="valueFactory"/>. This must be preceded by an OrderBy query.
+            </summary>
+            <param name="child"> Current node. </param>
+            <param name="valueFactory"> Value to start at. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryFactoryExtensions.LimitToFirst(Firebase.Database.Query.ParameterQuery,System.Func{System.Int32})">
+            <summary>
+            Limits the result to first <paramref name="countFactory"/> items.
+            </summary>
+            <param name="child"> Current node. </param>
+            <param name="countFactory"> Number of elements. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="M:Firebase.Database.Query.QueryFactoryExtensions.LimitToLast(Firebase.Database.Query.ParameterQuery,System.Func{System.Int32})">
+            <summary>
+            Limits the result to last <paramref name="countFactory"/> items.
+            </summary>
+            <param name="child"> Current node. </param>
+            <param name="countFactory"> Number of elements. </param>
+            <returns> The <see cref="T:Firebase.Database.Query.FilterQuery"/>. </returns>
+        </member>
+        <member name="T:Firebase.Database.Query.ShallowQuery">
+            <summary>
+            Appends shallow=true to the url.
+            </summary>
+        </member>
+        <member name="T:Firebase.Database.Query.SilentQuery">
+            <summary>
+            Appends print=silent to the url.
+            </summary>
+        </member>
+        <member name="T:Firebase.Database.Streaming.FirebaseCache`1">
+            <summary>
+            The firebase cache.
+            </summary>
+            <typeparam name="T"> Type of top-level entities in the cache. </typeparam>
+        </member>
+        <member name="M:Firebase.Database.Streaming.FirebaseCache`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Firebase.Database.Streaming.FirebaseCache`1"/> class.
+            </summary>
+        </member>
+        <member name="M:Firebase.Database.Streaming.FirebaseCache`1.#ctor(System.Collections.Generic.IDictionary{System.String,`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Firebase.Database.Streaming.FirebaseCache`1"/> class and populates it with existing data.
+            </summary>
+            <param name="existingItems"> The existing items. </param>
+        </member>
+        <member name="M:Firebase.Database.Streaming.FirebaseCache`1.PushData(System.String,System.String,System.Boolean)">
+            <summary>
+            The push data.
+            </summary>
+            <param name="path"> The path of incoming data, separated by slash. </param>  
+            <param name="data"> The data in json format as returned by firebase. </param>
+            <param name="removeEmptyEntries"> A value indicating whether empty entries should be removed. </param>  
+            <returns> Collection of top-level entities which were affected by the push. </returns>
+        </member>
+        <member name="T:Firebase.Database.Streaming.FirebaseEvent`1">
+            <summary>
+            Firebase event which hold <see cref="P:Firebase.Database.Streaming.FirebaseEvent`1.EventType"/> and the object affected by the event.
+            </summary>
+            <typeparam name="T"> Type of object affected by the event. </typeparam>
+        </member>
+        <member name="M:Firebase.Database.Streaming.FirebaseEvent`1.#ctor(System.String,`0,Firebase.Database.Streaming.FirebaseEventType,Firebase.Database.Streaming.FirebaseEventSource)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Firebase.Database.Streaming.FirebaseEvent`1"/> class.
+            </summary>
+            <param name="key"> The key of the object. </param>
+            <param name="obj"> The object. </param>
+            <param name="eventType"> The event type. </param>
+            <param name="eventSource"> The origin of this event. </param>
+        </member>
+        <member name="P:Firebase.Database.Streaming.FirebaseEvent`1.EventSource">
+            <summary>
+            Gets the source of the event.
+            </summary>
+        </member>
+        <member name="P:Firebase.Database.Streaming.FirebaseEvent`1.EventType">
+            <summary>
+            Gets the event type.
+            </summary>
+        </member>
+        <member name="T:Firebase.Database.Streaming.FirebaseEventSource">
+            <summary>
+            Specifies the origin of given <see cref="T:Firebase.Database.Streaming.FirebaseEvent`1"/>
+            </summary>
+        </member>
+        <member name="F:Firebase.Database.Streaming.FirebaseEventSource.Offline">
+            <summary>
+            Event comes from an offline source.
+            </summary>
+        </member>
+        <member name="F:Firebase.Database.Streaming.FirebaseEventSource.OnlineInitial">
+            <summary>
+            Event comes from online source fetched during initial pull (valid only for RealtimeDatabase).
+            </summary>
+        </member>
+        <member name="F:Firebase.Database.Streaming.FirebaseEventSource.OnlineStream">
+            <summary>
+            Event comes from online source received thru active stream.
+            </summary>
+        </member>
+        <member name="F:Firebase.Database.Streaming.FirebaseEventSource.OnlinePull">
+            <summary>
+            Event comes from online source being fetched manually.
+            </summary>
+        </member>
+        <member name="F:Firebase.Database.Streaming.FirebaseEventSource.OnlinePush">
+            <summary>
+            Event raised after successful online push (valid only for RealtimeDatabase which isn't streaming).
+            </summary>
+        </member>
+        <member name="F:Firebase.Database.Streaming.FirebaseEventSource.Online">
+            <summary>
+            Event comes from an online source.
+            </summary>
+        </member>
+        <member name="T:Firebase.Database.Streaming.FirebaseEventType">
+            <summary>
+            The type of event. 
+            </summary>
+        </member>
+        <member name="F:Firebase.Database.Streaming.FirebaseEventType.InsertOrUpdate">
+            <summary>
+            Item was inserted or updated.
+            </summary>
+        </member>
+        <member name="F:Firebase.Database.Streaming.FirebaseEventType.Delete">
+            <summary>
+            Item was deleted.
+            </summary>
+        </member>
+        <member name="T:Firebase.Database.Streaming.FirebaseSubscription`1">
+            <summary>
+            The firebase subscription.
+            </summary>
+            <typeparam name="T"> Type of object to be streaming back to the called. </typeparam>
+        </member>
+        <member name="M:Firebase.Database.Streaming.FirebaseSubscription`1.#ctor(System.IObserver{Firebase.Database.Streaming.FirebaseEvent{`0}},Firebase.Database.Query.IFirebaseQuery,System.String,Firebase.Database.Streaming.FirebaseCache{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Firebase.Database.Streaming.FirebaseSubscription`1"/> class.
+            </summary>
+            <param name="observer"> The observer.  </param>
+            <param name="query"> The query.  </param>
+            <param name="elementRoot"> Optional custom root element of received json items. </param>
+            <param name="cache"> The cache. </param>
+        </member>
+        <member name="T:Firebase.Database.Streaming.NonBlockingStreamReader">
+            <summary>
+            When a regular <see cref="T:System.IO.StreamReader"/> is used in a UWP app its <see cref="M:System.IO.StreamReader.ReadLine"/> method tends to take a long 
+            time for data larger then 2 KB. This extremly simple implementation of <see cref="T:System.IO.TextReader"/> can be used instead to boost performance
+            in your UWP app. Use <see cref="T:Firebase.Database.FirebaseOptions"/> to inject an instance of this class into your <see cref="T:Firebase.Database.FirebaseClient"/>.
+            </summary>
+        </member>
+    </members>
+</doc>

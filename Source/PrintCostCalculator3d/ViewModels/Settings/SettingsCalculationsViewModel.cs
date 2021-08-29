@@ -17,16 +17,16 @@ namespace PrintCostCalculator3d.ViewModels
     class SettingsCalculationsViewModel : ViewModelBase
     {
         #region Variables
-        private readonly IDialogCoordinator _dialogCoordinator;
-        private readonly bool _isLoading;
+        readonly IDialogCoordinator _dialogCoordinator;
+        //readonly bool _isLoading;
         #endregion
 
         #region Properties
-        private ObservableCollection<Printer3d> _printers = new ObservableCollection<Printer3d>();
+        ObservableCollection<Printer3d> _printers = new ObservableCollection<Printer3d>();
         public ObservableCollection<Printer3d> Printers
         {
             get => _printers;
-            private set
+            set
             {
                 if (value == _printers)
                     return;
@@ -36,7 +36,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private Printer3d _SelectedPrinter;
+        Printer3d _SelectedPrinter;
         public Printer3d SelectedPrinter
         {
             get => _SelectedPrinter;
@@ -50,7 +50,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private IList _SelectedPrinters = new ArrayList();
+        IList _SelectedPrinters = new ArrayList();
         public IList SelectedPrinters
         {
             get => _SelectedPrinters;
@@ -59,7 +59,7 @@ namespace PrintCostCalculator3d.ViewModels
                 //if (_SelectedPrinters.Equals(value))
                 //   return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                 {
                     ObservableCollection<Printer3d> _prints =
                         new ObservableCollection<Printer3d>(value.Cast<Printer3d>().ToList());
@@ -72,11 +72,11 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
         
-        private ObservableCollection<Material3d> _materials = new ObservableCollection<Material3d>();
+        ObservableCollection<Material3d> _materials = new ObservableCollection<Material3d>();
         public ObservableCollection<Material3d> Materials
         {
             get => _materials;
-            private set
+            set
             {
                 if (value == _materials)
                     return;
@@ -86,7 +86,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private Material3d _SelectedMaterial;
+        Material3d _SelectedMaterial;
         public Material3d SelectedMaterial
         {
             get => _SelectedMaterial;
@@ -100,7 +100,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private IList _SelectedMaterials = new ArrayList();
+        IList _SelectedMaterials = new ArrayList();
         public IList SelectedMaterials
         {
             get => _SelectedMaterials;
@@ -109,7 +109,7 @@ namespace PrintCostCalculator3d.ViewModels
                 //if (_SelectedMaterials.Equals(value))
                 //    return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                 {
                     ObservableCollection<Material3d> _mats = 
                         new ObservableCollection<Material3d>(value.Cast<Material3d>().ToList());
@@ -122,11 +122,11 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }     
         
-        private ObservableCollection<Workstep> _worksteps = new ObservableCollection<Workstep>();
+        ObservableCollection<Workstep> _worksteps = new ObservableCollection<Workstep>();
         public ObservableCollection<Workstep> Worksteps
         {
             get => _worksteps;
-            private set
+            set
             {
                 if (value == _worksteps)
                     return;
@@ -136,7 +136,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private Workstep _SelectedWorkstep;
+        Workstep _SelectedWorkstep;
         public Workstep SelectedWorkstep
         {
             get => _SelectedWorkstep;
@@ -150,7 +150,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private IList _SelectedWorksteps = new ArrayList();
+        IList _SelectedWorksteps = new ArrayList();
         public IList SelectedWorksteps
         {
             get => _SelectedWorksteps;
@@ -159,7 +159,7 @@ namespace PrintCostCalculator3d.ViewModels
                 //if (_SelectedWorksteps.Equals(value))
                 //    return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                 {
                     ObservableCollection<Workstep> _ws = 
                         new ObservableCollection<Workstep>(value.Cast<Workstep>().ToList());
@@ -172,7 +172,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }     
 
-        private bool _openCalculationResultView;
+        bool _openCalculationResultView;
         public bool OpenCalculationResultView
         {
             get => _openCalculationResultView;
@@ -181,14 +181,14 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _openCalculationResultView)
                     return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.General_OpenCalculationResultView = value;
 
                 _openCalculationResultView = value;
                 OnPropertyChanged();
             }
         }
-        private bool _useVolumeForCalculation = true;
+        bool _useVolumeForCalculation = true;
         public bool UseVolumeForCalculation
         {
             get => _useVolumeForCalculation;
@@ -197,7 +197,7 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _useVolumeForCalculation)
                     return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.Calculation_UseVolumeForCalculation = value;
 
                 _useVolumeForCalculation = value;
@@ -205,7 +205,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _restartRequired;
+        bool _restartRequired;
         public bool RestartRequired
         {
             get => _restartRequired;
@@ -223,23 +223,20 @@ namespace PrintCostCalculator3d.ViewModels
         #region Constructor, LoadSettings
         public SettingsCalculationsViewModel()
         {
-            _isLoading = true;
-
+            IsLoading = true;
             LoadSettings();
-
-            _isLoading = false;
+            IsLoading = false;
         }
         public SettingsCalculationsViewModel(IDialogCoordinator instance)
         {
             _dialogCoordinator = instance;
-            _isLoading = true;
 
+            IsLoading = true;
             LoadSettings();
-
-            _isLoading = false;
+            IsLoading = false;
         }
 
-        private void LoadSettings()
+        void LoadSettings()
         {
             Printers = SettingsManager.Current.Printers;
             SelectedPrinters = SettingsManager.Current.Calculation_DefaultPrintersLib;
@@ -256,13 +253,13 @@ namespace PrintCostCalculator3d.ViewModels
             UseVolumeForCalculation = SettingsManager.Current.Calculation_UseVolumeForCalculation;
         }
 
-        private void SelectedMaterials_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        void SelectedMaterials_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
             OnPropertyChanged(nameof(SelectedMaterials));
             SettingsManager.Save();
         }
 
-        private void SelectedPrinters_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        void SelectedPrinters_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
             OnPropertyChanged(nameof(SelectedPrinters));
             SettingsManager.Save();
@@ -275,7 +272,7 @@ namespace PrintCostCalculator3d.ViewModels
             get { return new RelayCommand(p => VisibleToHideApplicationAction()); }
         }
 
-        private void VisibleToHideApplicationAction()
+        void VisibleToHideApplicationAction()
         {
            
         }

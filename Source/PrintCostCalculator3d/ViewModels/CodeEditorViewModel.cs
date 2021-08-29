@@ -1,28 +1,22 @@
-﻿using ICSharpCode.AvalonEdit.Document;
+﻿using AndreasReitberger.Models;
+using ICSharpCode.AvalonEdit.Document;
 using ICSharpCode.AvalonEdit.Highlighting;
-using log4net;
-using System;
-using System.IO;
-using System.Reflection;
-using System.Text;
-using System.Xml;
-using PrintCostCalculator3d.Models.GCode;
-using PrintCostCalculator3d.Models.SyntaxHighlighting;
 using ICSharpCode.AvalonEdit.Utils;
+using PrintCostCalculator3d.Models.Settings;
+using PrintCostCalculator3d.Models.SyntaxHighlighting;
 using PrintCostCalculator3d.Resources.Localization;
-using PrintCostCalculator3d.Models.GCode.Helper;
+using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Text;
 
 namespace PrintCostCalculator3d.ViewModels
 {
     class CodeEditorViewModel : PaneViewModel
     {
-        #region Variables
-        private static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        #endregion
 
         #region Properties
-        private bool _isEdit;
+        bool _isEdit;
         public bool IsEdit
         {
             get => _isEdit;
@@ -35,12 +29,22 @@ namespace PrintCostCalculator3d.ViewModels
                 OnPropertyChanged();
             }
         }
-        public bool isLicenseValid
+
+        int _tabId = 0;
+        public int TabId
         {
-            get => false;
+            get => _tabId;
+            set
+            {
+                if (value == _tabId)
+                    return;
+
+                _tabId = value;
+                OnPropertyChanged();
+            }
         }
 
-        private Guid _id = Guid.NewGuid();
+        Guid _id = Guid.NewGuid();
         public Guid Id
         {
             get => _id;
@@ -54,9 +58,8 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-
-        private GCode _gcode;
-        public GCode Gcode
+        Gcode _gcode;
+        public Gcode Gcode
         {
             get => _gcode;
             set
@@ -69,8 +72,8 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private List<GCodeCommand> _selectedLine = new List<GCodeCommand>();
-        public List<GCodeCommand> SelectedLine
+        List<GcodeCommandLine> _selectedLine = new List<GcodeCommandLine>();
+        public List<GcodeCommandLine> SelectedLine
         {
             get => _selectedLine;
             set
@@ -83,7 +86,7 @@ namespace PrintCostCalculator3d.ViewModels
         }
 
         #region SyntaxHighlighter
-        private string _filePath = string.Empty;
+        string _filePath = string.Empty;
         public string FilePath
         {
             get => _filePath;
@@ -99,7 +102,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private string _fileName = string.Empty;
+        string _fileName = string.Empty;
         public string FileName
         {
             get
@@ -110,7 +113,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private TextDocument _document = new TextDocument();
+        TextDocument _document = new TextDocument();
         public TextDocument Document
         {
             get => _document;
@@ -124,7 +127,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private IHighlightingDefinition _highlightdef = null;
+        IHighlightingDefinition _highlightdef = null;
         public IHighlightingDefinition HighlightDef
         {
             get => _highlightdef;
@@ -138,7 +141,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        public string Title
+        public new string Title
         {
             get
             {
@@ -151,7 +154,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _isDirty = false;
+        bool _isDirty = false;
         public bool IsDirty
         {
             get { return _isDirty; }
@@ -167,7 +170,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _isReadOnly = false;
+        bool _isReadOnly = false;
         public bool IsReadOnly
         {
             get => _isReadOnly;
@@ -181,7 +184,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private string _IsReadOnlyReason = string.Empty;
+        string _IsReadOnlyReason = string.Empty;
         public string IsReadOnlyReason
         {
             get => _IsReadOnlyReason;
@@ -195,7 +198,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _WordWrap = false;
+        bool _WordWrap = false;
         public bool WordWrap
         {
             get => _WordWrap;
@@ -209,7 +212,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _ShowLineNumbers = false;
+        bool _ShowLineNumbers = false;
         public bool ShowLineNumbers
         {
             get => _ShowLineNumbers;
@@ -223,7 +226,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private ICSharpCode.AvalonEdit.TextEditorOptions _TextOptions = new ICSharpCode.AvalonEdit.TextEditorOptions()
+        ICSharpCode.AvalonEdit.TextEditorOptions _TextOptions = new ICSharpCode.AvalonEdit.TextEditorOptions()
         {
             ConvertTabsToSpaces = false,
             IndentationSize = 2
@@ -250,9 +253,12 @@ namespace PrintCostCalculator3d.ViewModels
         #endregion
 
         #region Constructor
-        public CodeEditorViewModel(int tabId, GCode file = null)
+        public CodeEditorViewModel(int tabId, Gcode file = null)
         {
-            this.Gcode = file;
+            TabId = tabId;
+            IsLicenseValid = false;
+
+            Gcode = file;
             if(Gcode != null)
             {
                 readFile(Gcode.FilePath);
@@ -262,7 +268,7 @@ namespace PrintCostCalculator3d.ViewModels
 
         #region Methods
 
-        private void readFile(string filePath)
+        void readFile(string filePath)
         {
             if (File.Exists(filePath))
             {

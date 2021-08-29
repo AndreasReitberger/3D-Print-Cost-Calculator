@@ -1,5 +1,4 @@
 ﻿using HelixToolkit.Wpf;
-using IxMilia.Stl;
 using log4net;
 using System;
 using System.Collections.Generic;
@@ -25,10 +24,24 @@ namespace PrintCostCalculator3d.Models
         #endregion
 
         #region Variables
-        private static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         #endregion
 
         #region Properties
+        Guid _id = Guid.Empty;
+        public Guid Id
+        {
+            get => _id;
+            set
+            {
+                if (_id != value)
+                {
+                    _id = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
         public string FileName
         {
             get
@@ -37,7 +50,7 @@ namespace PrintCostCalculator3d.Models
             }
         }
 
-        private string _stlFilePath = string.Empty;
+        string _stlFilePath = string.Empty;
         public string StlFilePath
         {
             get => _stlFilePath;
@@ -52,32 +65,7 @@ namespace PrintCostCalculator3d.Models
             }
         }
 
-        private StlFile _stlFile;
-        [XmlIgnore]
-        public StlFile StlFile
-        {
-            get
-            {
-                if (_stlFile == null && StlFilePath != null)
-                {
-                    this._stlFile = readStlFile(StlFilePath);
-                }
-                return _stlFile; 
-            }
-            /*
-            set
-            {
-                if (!value.Equals(_stlFile))
-                {
-                    _stlFile = value;
-                    _stlFile.Save(StlFileStream);
-                    StlFileStream.Position = 0;
-                }
-            }
-            */
-        }
-
-        private Model3DGroup _model;
+        Model3DGroup _model;
         public Model3DGroup Model
         {
             get => _model;
@@ -91,12 +79,12 @@ namespace PrintCostCalculator3d.Models
             }
         }
 
-        private double _volume = 0;
+        double _volume = 0;
         public double Volume
         {
             //get { return calculateVolume(); }
             get => _volume;
-            private set
+            set
             {
                 if (_volume != value)
                 {
@@ -108,38 +96,20 @@ namespace PrintCostCalculator3d.Models
         #endregion
 
         /// <summary>Initializes a new instance of the <see cref="Stl"/> class.</summary>
-        public Stl() { 
-            
+        public Stl() 
+        {
+            Id = Guid.NewGuid();
         }
         /// <summary>Initializes a new instance of the <see cref="Stl"/> class.</summary>
         /// <param name="path">The path to the stl file</param>
         public Stl(string path)
         {
+            Id = Guid.NewGuid();
             StlFilePath = path;
-            Volume = calculateVolume();
-            Model = Load(StlFilePath);
-        }
-        /// <summary>Reads in a STL file.</summary>
-        /// <param name="path">The path.</param>
-        /// <returns>The stl file</returns>
-        public StlFile readStlFile(string path)
-        {
-            try
-            {
-                using (FileStream fs = new FileStream(@path, FileMode.Open))
-                {
-                    StlFile stl = StlFile.Load(fs);
-                    stl.SolidName = path.Substring(path.LastIndexOf("\\") + 1);
-                    return stl;
-                }
-            }
-            catch(Exception)
-            {
-                return null;
-            }
+            //Model = Load(StlFilePath);
         }
 
-        public ModelVisual3D get3dVisual()
+        public ModelVisual3D Get3dVisual()
         {
             ModelVisual3D mod = new ModelVisual3D();
             try
@@ -156,47 +126,7 @@ namespace PrintCostCalculator3d.Models
             }
         }
 
-        public bool downloadStlFile(string dir)
-        {
-            try
-            {
-                string path = dir;
-                if (dir[dir.Length - 1] != '\\')
-                    path += @"\";
-                path += StlFile.SolidName;
-                using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
-                {
-                    this.StlFile.Save(fs);
-                    return true;
-                }
-            }
-            catch (Exception exc)
-            {
-                return false;
-            }
-        }
-        /// <summary>Writes the STL file to the specified path.</summary>
-        /// <param name="file">The stl file to be written.</param>
-        /// <param name="dir">The path of the directory.</param>
-        /// <param name="fileName">Name of the file.</param>
-        /// <returns></returns>
-        public bool writeStlFile(StlFile file ,string dir, string fileName)
-        {
-            try
-            {
-                using (FileStream fs = new FileStream(string.Format("{0}" + (dir[dir.Length - 1].ToString() != "\\" ? "\\{1}" : "{1}"), dir, fileName), FileMode.Open))
-                {
-                    file.Save(fs);
-                    return true;
-                }
-            }
-            catch(Exception)
-            {
-                return false;
-            }
-        }
-
-        public static string copyStlFile(string source, string requester)
+        public static string CopyStlFile(string source, string requester)
         {
             string targetFolder = "Uploads\\" + requester;
             string appFolder = System.AppDomain.CurrentDomain.BaseDirectory;
@@ -208,32 +138,7 @@ namespace PrintCostCalculator3d.Models
             return targetFolder;
         }
 
-        /// <summary>Calculates the volume of the stl file.</summary>
-        /// <returns>The volume in mm³</returns>
-        private double calculateVolume()
-        {
-            List<StlTriangle> triangles = StlFile.Triangles;
-            var vols = from t in StlFile.Triangles
-                       select SignedVolumeOfTriangle(t.Vertex1, t.Vertex2, t.Vertex3);
-            return Math.Abs(vols.Sum());
-        }
-
-        /// <summary>  Gets the volume of a triangle.</summary>
-        /// <param name="p1">The p1.</param>
-        /// <param name="p2">The p2.</param>
-        /// <param name="p3">The p3.</param>
-        /// <returns></returns>
-        private float SignedVolumeOfTriangle(StlVertex p1, StlVertex p2, StlVertex p3)
-        {
-            var v321 = p3.X * p2.Y * p1.Z;
-            var v231 = p2.X * p3.Y * p1.Z;
-            var v312 = p3.X * p1.Y * p2.Z;
-            var v132 = p1.X * p3.Y * p2.Z;
-            var v213 = p2.X * p1.Y * p3.Z;
-            var v123 = p1.X * p2.Y * p3.Z;
-            return (1.0f / 6.0f) * (-v321 + v231 + v312 - v132 - v213 + v123);
-        }
-        private static Model3DGroup Load(string path)
+        static Model3DGroup Load(string path)
         {
             if (path == null)
             {
@@ -293,17 +198,18 @@ namespace PrintCostCalculator3d.Models
 
             return model;
         }
-        private void createStlModel(string StlFilePath)
+        void CreateStlModel(string StlFilePath)
         {
             try
             {
-                Model = Load(StlFilePath);
+                //Model = Load(StlFilePath);
             }
             catch (Exception exc)
             {
                 logger.ErrorFormat(string.Format(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message));
             }
         }
+
         #region Override
         public override string ToString()
         {
@@ -313,7 +219,7 @@ namespace PrintCostCalculator3d.Models
     }
     public class XmlMemoryStream
     {
-        private MemoryStream m_value = new MemoryStream();
+        MemoryStream m_value = new MemoryStream();
 
         public XmlMemoryStream() { }
         public XmlMemoryStream(MemoryStream source) { m_value = source; }

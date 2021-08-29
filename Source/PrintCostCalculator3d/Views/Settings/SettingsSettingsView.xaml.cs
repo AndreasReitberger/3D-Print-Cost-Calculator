@@ -10,13 +10,13 @@ namespace PrintCostCalculator3d.Views
     /// </summary>
     public partial class SettingsSettingsView : UserControl
     {
-        private readonly SettingsSettingsViewModel _viewModel = new SettingsSettingsViewModel(DialogCoordinator.Instance);
+        readonly SettingsSettingsViewModel _viewModel = new SettingsSettingsViewModel(DialogCoordinator.Instance);
         public SettingsSettingsView()
         {
             InitializeComponent();
             DataContext = _viewModel;
         }
-        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             if (_viewModel.CloseAction != null)
                 return;
@@ -32,7 +32,7 @@ namespace PrintCostCalculator3d.Views
             _viewModel.SaveAndCheckSettings();
         }
 
-        private void TextBoxLocation_Drop(object sender, DragEventArgs e)
+        void TextBoxLocation_Drop(object sender, DragEventArgs e)
         {
             if (!e.Data.GetDataPresent(DataFormats.FileDrop))
                 return;
@@ -43,7 +43,7 @@ namespace PrintCostCalculator3d.Views
                 _viewModel.SetLocationPathFromDragDrop(files[0]);
         }
 
-        private void TextBoxLocation_PreviewDragOver(object sender, DragEventArgs e)
+        void TextBoxLocation_PreviewDragOver(object sender, DragEventArgs e)
         {
             e.Effects = DragDropEffects.Copy;
             e.Handled = true;

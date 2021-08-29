@@ -1,31 +1,26 @@
-﻿using log4net;
-using MahApps.Metro.Controls.Dialogs;
+﻿using MahApps.Metro.Controls.Dialogs;
+using PrintCostCalculator3d.Models.Settings;
+using PrintCostCalculator3d.Resources.Localization;
+using PrintCostCalculator3d.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using PrintCostCalculator3d.Models.Settings;
-using PrintCostCalculator3d.Resources.Localization;
-using PrintCostCalculator3d.Utilities;
 
 namespace PrintCostCalculator3d.ViewModels
 {
     public class SettingsSettingsViewModel : ViewModelBase
     {
         #region Variables
-        private readonly IDialogCoordinator _dialogCoordinator;
-        private static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        private readonly bool _isLoading;
+        readonly IDialogCoordinator _dialogCoordinator;
         #endregion
 
         #region Properties
         public Action CloseAction { get; set; }
 
-        private string _locationSelectedPath;
+        string _locationSelectedPath;
         public string LocationSelectedPath
         {
             get => _locationSelectedPath;
@@ -39,7 +34,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _movingFiles;
+        bool _movingFiles;
         public bool MovingFiles
         {
             get => _movingFiles;
@@ -53,7 +48,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _isPortable;
+        bool _isPortable;
         public bool IsPortable
         {
             get => _isPortable;
@@ -62,7 +57,7 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _isPortable)
                     return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                     MakePortable(value);
 
                 _isPortable = value;
@@ -70,7 +65,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _makingPortable;
+        bool _makingPortable;
         public bool MakingPortable
         {
             get => _makingPortable;
@@ -84,7 +79,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _resetEverything;
+        bool _resetEverything;
         public bool ResetEverything
         {
             get => _resetEverything;
@@ -98,7 +93,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _settingsExists;
+        bool _settingsExists;
         public bool SettingsExists
         {
             get => _settingsExists;
@@ -112,7 +107,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _resetSettings;
+        bool _resetSettings;
         public bool ResetSettings
         {
             get => _resetSettings;
@@ -126,7 +121,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _profilesExists;
+        bool _profilesExists;
         public bool ProfilesExists
         {
             get => _profilesExists;
@@ -140,7 +135,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _resetProfiles;
+        bool _resetProfiles;
         public bool ResetProfiles
         {
             get => _resetProfiles;
@@ -158,16 +153,14 @@ namespace PrintCostCalculator3d.ViewModels
         #region Constructor, LoadSettings
         public SettingsSettingsViewModel(IDialogCoordinator instance)
         {
-            _isLoading = true;
-
             _dialogCoordinator = instance;
 
+            IsLoading = true;
             LoadSettings();
-
-            _isLoading = false;
+            IsLoading = false;
         }
 
-        private void LoadSettings()
+        void LoadSettings()
         {
             LocationSelectedPath = SettingsManager.GetSettingsLocationNotPortable();
             IsPortable = SettingsManager.GetIsPortable();
@@ -180,7 +173,7 @@ namespace PrintCostCalculator3d.ViewModels
             get { return new RelayCommand(p => BrowseFolderAction()); }
         }
 
-        private void BrowseFolderAction()
+        void BrowseFolderAction()
         {
             var dialog = new System.Windows.Forms.FolderBrowserDialog();
 
@@ -198,7 +191,7 @@ namespace PrintCostCalculator3d.ViewModels
             get { return new RelayCommand(p => OpenLocationAction()); }
         }
 
-        private static void OpenLocationAction()
+        static void OpenLocationAction()
         {
             Process.Start("explorer.exe", SettingsManager.GetSettingsLocation());
         }
@@ -209,7 +202,7 @@ namespace PrintCostCalculator3d.ViewModels
         }
 
         // Check if a file(name) is a settings file
-        private static bool FilesContainsSettingsFiles(IEnumerable<string> files)
+        static bool FilesContainsSettingsFiles(IEnumerable<string> files)
         {
             foreach (var file in files)
             {
@@ -226,7 +219,7 @@ namespace PrintCostCalculator3d.ViewModels
             return false;
         }
 
-        private async void ChangeSettingsAction()
+        async void ChangeSettingsAction()
         {
             MovingFiles = true;
             var overwrite = false;
@@ -299,7 +292,7 @@ namespace PrintCostCalculator3d.ViewModels
             get { return new RelayCommand(p => RestoreDefaultSettingsLocationAction()); }
         }
 
-        private void RestoreDefaultSettingsLocationAction()
+        void RestoreDefaultSettingsLocationAction()
         {
             LocationSelectedPath = SettingsManager.GetDefaultSettingsLocation();
         }
@@ -361,7 +354,7 @@ namespace PrintCostCalculator3d.ViewModels
         #endregion
 
         #region Methods
-        private async void MakePortable(bool isPortable)
+        async void MakePortable(bool isPortable)
         {
             MakingPortable = true;
 

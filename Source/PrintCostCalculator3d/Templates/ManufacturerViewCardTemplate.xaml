@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
-             xmlns:Models="clr-namespace:PrintCostCalculator3d.Models._3dprinting"
+             xmlns:Models="clr-namespace:AndreasReitberger.Models;assembly=3dPrintCalculatorLibrary"
              xmlns:converters="clr-namespace:PrintCostCalculator3d.Converters"
              xmlns:localization="clr-namespace:PrintCostCalculator3d.Resources.Localization"
              

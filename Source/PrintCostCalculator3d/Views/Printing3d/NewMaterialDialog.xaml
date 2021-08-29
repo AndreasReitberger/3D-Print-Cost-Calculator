@@ -1,0 +1,587 @@
+﻿<UserControl x:Class="PrintCostCalculator3d.Views._3dPrinting.NewMaterialDialog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:viewModels="clr-namespace:PrintCostCalculator3d.ViewModels._3dPrinting"
+             xmlns:converters="clr-namespace:PrintCostCalculator3d.Converters"
+             xmlns:validators="clr-namespace:PrintCostCalculator3d.Validators"
+             xmlns:localization="clr-namespace:PrintCostCalculator3d.Resources.Localization"
+             xmlns:dialogs="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+             xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:CustomControls="clr-namespace:PrintCostCalculator3d.Controls"
+             
+             MinWidth="840"
+             dialogs:DialogParticipation.Register="{Binding}"
+             mc:Ignorable="d"  d:DataContext="{d:DesignInstance viewModels:NewMaterialViewModel}"
+             d:DesignHeight="900" d:DesignWidth="800">
+    <UserControl.Resources>
+        <converters:ColorToStringConverter x:Key="ColorToStringConverter" />
+        <converters:StringToColorConverter x:Key="StringToColorConverter" />
+        <converters:BooleanToVisibilityCollapsedConverter x:Key="BooleanToVisibilityCollapsedConverter" />
+        <converters:BooleanToVisibilityCollapsedReverseConverter x:Key="BooleanToVisibilityCollapsedReverseConverter" />
+        <converters:BooleanToValidInvalidConverter x:Key="BooleanToValidInvalidConverter" />
+        <converters:EnumDescriptionConverter x:Key="EnumDescriptionConverter" />
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="55"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="180"/>
+        </Grid.ColumnDefinitions>
+
+        <TabControl 
+            Style="{StaticResource DefaultTabControl}"
+            >
+            <TabItem Header="{x:Static localization:Strings.General}">
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+                    <StackPanel>
+                        <!-- Guid -->
+                        <DockPanel Visibility="Collapsed">
+                            <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Key}" />
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <Label Content="{x:Static localization:Strings.LabelGuidReadOnly}" VerticalAlignment="Center" MinWidth="200" Margin="5"/>
+                            <TextBlock Text="{Binding Id}" Style="{StaticResource AccentTextBlock}" Margin="5" VerticalAlignment="Center"/>
+                        </DockPanel>
+                        <!-- Material Kind -->
+                        <DockPanel>
+                            <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Factory}" />
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <Label Content="{x:Static localization:Strings.LabelMaterialKindMandatory}" VerticalAlignment="Center" MinWidth="200" Margin="5"/>
+                            <!-- SelectedIndex="{Binding DefaultAttributesTabIndex}" -->
+                            <ComboBox 
+                                x:Name="cbMaterialKind" 
+                                ItemsSource="{Binding MaterialFamilies}" 
+                                SelectedItem="{Binding MaterialFamily, Mode=TwoWay}" 
+                                
+                                Margin="5" Height="38">
+                                <!-- Mahapps 2.x -->
+                                <behaviors:Interaction.Triggers>
+                                    <behaviors:EventTrigger EventName="SelectionChanged" >
+                                        <behaviors:InvokeCommandAction Command="{Binding SelectedMaterialTypeChangedCommand}" 
+                                                               CommandParameter="{Binding Path=SelectedItem, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ComboBox}}"/>
+                                    </behaviors:EventTrigger>
+                                </behaviors:Interaction.Triggers>
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Converter={StaticResource EnumDescriptionConverter}}"/>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+                        </DockPanel>
+                        <!-- Material Type -->
+                        <DockPanel>
+                            <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Select}" />
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <Label Content="{x:Static localization:Strings.LabelMaterialTypeMandatory}" VerticalAlignment="Center" MinWidth="200" Margin="5"/>
+                            <ComboBox 
+                                x:Name="cbMaterialTypes" 
+                                SelectedItem="{Binding TypeOfMaterial, Mode=TwoWay}" 
+                                ItemsSource="{Binding MaterialTypeViews}" Height="38" Margin="5"/>
+                        </DockPanel>
+                        <!-- Name -->
+                        <DockPanel>
+                            <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=RenameBox}" />
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <Label Content="{x:Static localization:Strings.LabelNameMandatory}" VerticalAlignment="Center" MinWidth="200" Margin="5"/>
+                            <TextBox x:Name="tbName" Height="38" Margin="5"  Controls:TextBoxHelper.Watermark="Prusament PETG Jet Black..."
+                     >
+                                <TextBox.Text>
+                                    <Binding Path="Name" Mode="TwoWay" UpdateSourceTrigger="LostFocus">
+                                        <Binding.ValidationRules>
+                                            <validators:EmptyValidator ValidatesOnTargetUpdated="True" />
+                                        </Binding.ValidationRules>
+                                    </Binding>
+                                </TextBox.Text>
+                            </TextBox>
+                        </DockPanel>
+                        <!-- SKU -->
+                        <DockPanel>
+                            <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Numeric}" />
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <Label Content="{x:Static localization:Strings.LabelSKU}" VerticalAlignment="Center" Margin="5" MinWidth="200"/>
+                            <TextBox x:Name="tbSKU" Height="38" Margin="5"  Controls:TextBoxHelper.Watermark="PRM-PETG-JET-1000..."
+                     >
+                                <TextBox.Text>
+                                    <Binding Path="SKU" Mode="TwoWay" UpdateSourceTrigger="LostFocus">
+                                        <Binding.ValidationRules>
+                                            <validators:EmptyValidator ValidatesOnTargetUpdated="False" />
+                                        </Binding.ValidationRules>
+                                    </Binding>
+                                </TextBox.Text>
+                            </TextBox>
+                        </DockPanel>
+                        <!-- Density -->
+                        <DockPanel>
+                            <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Weight}" />
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <Label Content="{x:Static localization:Strings.LabelDensityMandatory}" VerticalAlignment="Center" MinWidth="200" Margin="5"/>
+                            <DockPanel LastChildFill="True" Margin="5">
+                                <Label Content="g/cm³" DockPanel.Dock="Right" VerticalContentAlignment="Center"/>
+                                <!-- Mahapps 1.6 HasDecimals="True" -->
+                                <Controls:NumericUpDown x:Name="nudDensity" HorizontalAlignment="Stretch" Margin="0,5,5,5" Width="Auto">
+                                    <Controls:NumericUpDown.Value>
+                                        <Binding Path="Density" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                            <Binding.ValidationRules>
+                                                <validators:GreaterThanZeroValidator ValidatesOnTargetUpdated="True" />
+                                            </Binding.ValidationRules>
+                                        </Binding>
+                                    </Controls:NumericUpDown.Value>
+                                </Controls:NumericUpDown>
+                            </DockPanel>
+                        </DockPanel>
+                        <!-- Refresh Rate -->
+                        <DockPanel>
+                            <DockPanel.Style>
+                                <Style TargetType="DockPanel">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding MaterialFamily}" Value="Powder">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </DockPanel.Style>
+                            <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=RecycleVariant}" />
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <Label Content="{x:Static localization:Strings.LabelRefreshRateMandatory}" VerticalAlignment="Center" MinWidth="200" Margin="5"/>
+                            <DockPanel LastChildFill="True" Margin="5">
+                                <Label Content="%" DockPanel.Dock="Right"/>
+                                <!-- Mahapps 1.6 HasDecimals="True" -->
+                                <Controls:NumericUpDown 
+                                    x:Name="nudRefreshingRate" 
+                                    HorizontalAlignment="Stretch" Margin="0,5,5,5" Width="Auto"
+                                    Minimum="0">
+                                    <Controls:NumericUpDown.Value>
+                                        <Binding Path="RefreshingRate" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                            <Binding.ValidationRules>
+                                                <validators:GreaterThanZeroValidator ValidatesOnTargetUpdated="True" />
+                                            </Binding.ValidationRules>
+                                        </Binding>
+                                    </Controls:NumericUpDown.Value>
+                                </Controls:NumericUpDown>
+                            </DockPanel>
+                        </DockPanel>
+                        <!-- Package Size -->
+                        <DockPanel>
+                            <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Package}" />
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <Label Content="{x:Static localization:Strings.LabelPackageMandatory}" VerticalAlignment="Center" MinWidth="200" Margin="5"/>
+                            <DockPanel LastChildFill="True" Margin="5">
+                                <ComboBox DockPanel.Dock="Right" ItemsSource="{Binding Units}" 
+                                          Height="38" MinWidth="64" SelectedItem="{Binding Unit}"/>
+                                <!-- Mahapps 1.6  HasDecimals="True" -->
+                                <Controls:NumericUpDown x:Name="nudSize" HorizontalAlignment="Stretch" Margin="0,5,5,5" Width="Auto">
+                                    <Controls:NumericUpDown.Value>
+                                        <Binding Path="PackageSize" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                            <Binding.ValidationRules>
+                                                <validators:GreaterThanZeroValidator ValidatesOnTargetUpdated="True" />
+                                            </Binding.ValidationRules>
+                                        </Binding>
+                                    </Controls:NumericUpDown.Value>
+                                </Controls:NumericUpDown>
+                            </DockPanel>
+                        </DockPanel>
+                        <!-- Factor Liter to kg -->
+                        <DockPanel>
+                            <DockPanel.Style>
+                                <Style TargetType="DockPanel">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding MaterialFamily}" Value="Powder">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Unit}" Value="l">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Unit}" Value="ml">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </DockPanel.Style>
+                            <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=RecycleVariant}" />
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <!-- Info -->
+                            <Rectangle DockPanel.Dock="Right" Width="24" Height="24" ToolTip="{x:Static localization:Strings.InfoFactorToCalculateWeightOutOfLiterOrMililiter}" 
+                                            Style="{StaticResource HelpImageRectangle}" Margin="10,5">
+                                <Rectangle.Resources>
+                                    <Style TargetType="{x:Type ToolTip}" BasedOn="{StaticResource HelpToolTip}" />
+                                </Rectangle.Resources>
+                            </Rectangle>
+                            <Label Content="{x:Static localization:Strings.LabelFactorLiterToKgMandatory}" VerticalAlignment="Center" MinWidth="200" Margin="5"/>
+                            <DockPanel LastChildFill="True" Margin="5">
+                                <Label Content="l/kg" DockPanel.Dock="Right" 
+                                       VerticalContentAlignment="Center"/>
+                                <!-- Mahapps 1.6 HasDecimals="True" -->
+                                <Controls:NumericUpDown 
+                                    x:Name="nudFactorLiterToKg" 
+                                    HorizontalAlignment="Stretch" Margin="0,5,5,5" Width="Auto"
+                                    Minimum="0">
+                                    <Controls:NumericUpDown.Value>
+                                        <Binding Path="FactorLiterToKg" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                            <Binding.ValidationRules>
+                                                <validators:GreaterThanZeroValidator ValidatesOnTargetUpdated="True" />
+                                            </Binding.ValidationRules>
+                                        </Binding>
+                                    </Controls:NumericUpDown.Value>
+                                </Controls:NumericUpDown>
+                            </DockPanel>
+                        </DockPanel>
+                        <!-- Unit Price -->
+                        <DockPanel>
+                            <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Tag}" />
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <Label Content="{x:Static localization:Strings.LabelPriceMandatory}" VerticalAlignment="Center" MinWidth="200" Margin="5"/>
+                            <!-- Mahapps 1.6 HasDecimals="True" -->
+                            <Controls:NumericUpDown x:Name="nudPrice" StringFormat="C2" HorizontalAlignment="Stretch" Margin="5" Width="Auto">
+                                <Controls:NumericUpDown.Value>
+                                    <Binding Path="Price" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                        <Binding.ValidationRules>
+                                            <validators:GreaterThanZeroValidator ValidatesOnTargetUpdated="True" />
+                                        </Binding.ValidationRules>
+                                    </Binding>
+                                </Controls:NumericUpDown.Value>
+                            </Controls:NumericUpDown>
+                        </DockPanel>
+                        <!-- Manufacturer -->
+                        <DockPanel>
+                            <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Factory}" />
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <Label Content="{x:Static localization:Strings.LabelManufacturer}" VerticalAlignment="Center" MinWidth="200" Margin="5"/>
+                            <DockPanel>
+                                <Button Margin="5" VerticalAlignment="Top" Height="38" Command="{Binding NewManufacturerCommand}" DockPanel.Dock="Right" 
+                    >
+                                    <Button.Content>
+                                        <Grid Margin="5,0">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5" HorizontalAlignment="Left">
+                                                <Rectangle.OpacityMask>
+                                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:MaterialLight Kind=Plus}" />
+                                                </Rectangle.OpacityMask>
+                                            </Rectangle>
+                                            <TextBlock Grid.Column="1" Text="{x:Static localization:Strings.New}" TextAlignment="Center" Margin="10,5" />
+                                        </Grid>
+                                    </Button.Content>
+                                    <Button.Style>
+                                        <Style TargetType="{x:Type Button}" BasedOn="{StaticResource ImageButton}">
+
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
+                                <ComboBox SelectedItem="{Binding Manufacturer, Mode=TwoWay}" ItemsSource="{Binding Manufacturers}" Margin="5" Height="38"/>
+                            </DockPanel>
+                        </DockPanel>
+                        <!-- Vendor 
+                <DockPanel>
+                    <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=PointOfSale}" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                    <Label Content="{x:Static localization:Strings.LabelVendor}" VerticalAlignment="Center" MinWidth="200" Margin="5"/>
+                    <DockPanel>
+                        <Button Margin="5" VerticalAlignment="Top" Height="38" Command="{Binding NewSupplierCommand}" DockPanel.Dock="Right" 
+                    >
+                            <Button.Content>
+                                <Grid Margin="5,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5" HorizontalAlignment="Left">
+                                        <Rectangle.OpacityMask>
+                                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:MaterialLight Kind=Plus}" />
+                                        </Rectangle.OpacityMask>
+                                    </Rectangle>
+                                    <TextBlock Grid.Column="1" Text="{x:Static localization:Strings.New}" TextAlignment="Center" Margin="10,5" />
+                                </Grid>
+                            </Button.Content>
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}" BasedOn="{StaticResource ImageButton}">
+
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <ComboBox SelectedItem="{Binding Supplier, Mode=TwoWay}" ItemsSource="{Binding Suppliers}" Margin="5" Height="38"/>
+                    </DockPanel>
+                </DockPanel>-->
+                        <!-- Shop Link -->
+                        <DockPanel>
+                            <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5">
+                                <Rectangle.OpacityMask>
+                                    <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Shopping}" />
+                                </Rectangle.OpacityMask>
+                            </Rectangle>
+                            <Label Content="{x:Static localization:Strings.LabelShopUri}" VerticalAlignment="Center" MinWidth="200" Margin="5"/>
+                            <TextBox x:Name="tbReorderUri" Height="38" Margin="5"  Controls:TextBoxHelper.Watermark="https://..."
+                     >
+                                <TextBox.Text>
+                                    <Binding Path="LinkToReorder" Mode="TwoWay" UpdateSourceTrigger="LostFocus">
+                                        <Binding.ValidationRules>
+                                            <validators:IsLinkOrEmptyValidator ValidatesOnTargetUpdated="True" />
+                                        </Binding.ValidationRules>
+                                    </Binding>
+                                </TextBox.Text>
+                            </TextBox>
+                        </DockPanel>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="{x:Static localization:Strings.Attributes}">
+                <DockPanel MinHeight="400">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        
+                        <!-- Additional Attributes depending on material family -->
+                        <StackPanel>
+                            <!-- Attributes -->
+                            <DockPanel>
+                                <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5">
+                                    <Rectangle.OpacityMask>
+                                        <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Factory}" />
+                                    </Rectangle.OpacityMask>
+                                </Rectangle>
+                                <Label Content="{x:Static localization:Strings.LabelAttributeMandatory}" VerticalAlignment="Center" MinWidth="200" Margin="5"/>
+                                <!-- Default attributes -->
+                                <DockPanel>
+                                    <Button 
+                                        Margin="5" 
+                                        VerticalAlignment="Top" 
+                                        Height="38" 
+                                        Command="{Binding NewAttributeCommand}" DockPanel.Dock="Right" 
+                                        >
+                                        <Button.Content>
+                                            <Grid Margin="5,0">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5" HorizontalAlignment="Left">
+                                                    <Rectangle.OpacityMask>
+                                                        <VisualBrush Stretch="Uniform" Visual="{iconPacks:MaterialLight Kind=Plus}" />
+                                                    </Rectangle.OpacityMask>
+                                                </Rectangle>
+                                                <TextBlock Grid.Column="1" Text="{x:Static localization:Strings.New}" TextAlignment="Center" Margin="10,5" />
+                                            </Grid>
+                                        </Button.Content>
+                                        <Button.Style>
+                                            <Style TargetType="{x:Type Button}" BasedOn="{StaticResource ImageButton}">
+
+                                            </Style>
+                                        </Button.Style>
+                                    </Button>
+                                    <ComboBox 
+                                        x:Name="cbAttributes" 
+                                        SelectedItem="{Binding AttributeName, Mode=TwoWay}" 
+                                        ItemsSource="{Binding DefaultAttributes}" 
+                                        Height="42" 
+                                        Margin="5"/>
+                                </DockPanel>
+
+                            </DockPanel>
+                            <!-- Value -->
+                            <DockPanel>
+                                <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5">
+                                    <Rectangle.OpacityMask>
+                                        <VisualBrush Stretch="Uniform" Visual="{iconPacks:Material Kind=Factory}" />
+                                    </Rectangle.OpacityMask>
+                                </Rectangle>
+                                <Label Content="{x:Static localization:Strings.LabelValueMandatory}" VerticalAlignment="Center" MinWidth="200" Margin="5"/>
+                                <!-- Default attributes -->
+                                <DockPanel>
+                                    <!-- Value -->
+                                    <Controls:NumericUpDown 
+                                        x:Name="nudAttributeValue"
+                                        Grid.Column="1"
+                                        HorizontalAlignment="Stretch" 
+                                        Margin="5" 
+                                        Width="Auto">
+                                        <Controls:NumericUpDown.Value>
+                                            <Binding Path="AttributeValue" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                                                <Binding.ValidationRules>
+                                                    <validators:GreaterThanZeroValidator ValidatesOnTargetUpdated="True" />
+                                                </Binding.ValidationRules>
+                                            </Binding>
+                                        </Controls:NumericUpDown.Value>
+                                    </Controls:NumericUpDown>
+                                </DockPanel>
+                            </DockPanel>
+
+                            <!-- Add button -->
+                            <Button 
+                                Margin="5" DockPanel.Dock="Right"
+                                VerticalAlignment="Top" 
+                                Height="42"
+                                Command="{Binding AddAttributeToListCommand}" 
+                                Grid.Column="2"
+                                >
+                                <Button.Content>
+                                    <Grid Margin="5,0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5" HorizontalAlignment="Left">
+                                            <Rectangle.OpacityMask>
+                                                <VisualBrush Stretch="Uniform" Visual="{iconPacks:MaterialLight Kind=Plus}" />
+                                            </Rectangle.OpacityMask>
+                                        </Rectangle>
+                                        <!-- Add Dialog -->
+                                        <TextBlock 
+                                            Grid.Column="1" 
+                                            Text="{x:Static localization:Strings.Add}" 
+                                            TextAlignment="Center" Margin="10,5"
+                                            />
+
+                                    </Grid>
+                                </Button.Content>
+                                <Button.Style>
+                                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource ImageButton}">
+                                        <Setter Property="IsEnabled" Value="True" />
+                                        <Style.Triggers>
+                                            <!-- Check if both fields are filled -->
+                                            <MultiDataTrigger>
+                                                <MultiDataTrigger.Conditions>
+                                                    <Condition Binding="{Binding ElementName=cbAttributes, Path=SelectedItem}" 
+                                                                Value="{x:Null}"/>
+                                                </MultiDataTrigger.Conditions>
+                                                <Setter Property="IsEnabled" Value="False" />
+                                            </MultiDataTrigger>
+                                            <MultiDataTrigger>
+                                                <MultiDataTrigger.Conditions>
+                                                    <Condition Binding="{Binding ElementName=nudAttributeValue, Path=(Validation.HasError)}" 
+                                                                Value="True" />
+                                                </MultiDataTrigger.Conditions>
+                                                <Setter Property="IsEnabled" Value="False" />
+                                            </MultiDataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                        </StackPanel>
+                        <!-- Attributes list -->
+                        <CustomControls:MultiSelectDataGrid 
+                            Style="{StaticResource DefaultDataGrid}"
+                            Margin="4" Grid.Row="1" 
+                            ItemsSource="{Binding Attributes}" 
+                            SelectedItem="{Binding SelectedAttribute, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                            SelectedItemsList="{Binding SelectedAttributes,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                            SelectionMode="Extended"
+                            CanUserDeleteRows="True"
+                            IsReadOnly="False"
+                            >
+                            <CustomControls:MultiSelectDataGrid.Columns>
+                                <DataGridTextColumn 
+                                    Header="{x:Static localization:Strings.Attribute}" 
+                                    Binding="{Binding Attribute}"
+                                    Width="Auto"
+                                    />
+                                <Controls:DataGridNumericUpDownColumn 
+                                    Header="{x:Static localization:Strings.Value}" 
+                                    Binding="{Binding Value}"
+                                    />
+                            </CustomControls:MultiSelectDataGrid.Columns>
+                        </CustomControls:MultiSelectDataGrid>
+
+                    </Grid>
+                </DockPanel>
+            </TabItem>
+            
+        </TabControl>
+        
+        <!-- Confirm Button -->
+        <Button x:Name="btnSave" Margin="5" VerticalAlignment="Top" Height="42"
+                Command="{Binding SaveCommand}" Grid.Row="1"
+                >
+            <Button.Content>
+                <Grid Margin="5,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Rectangle Width="20" Height="20" Fill="{DynamicResource MahApps.Brushes.Gray3}" Margin="10,5,0,5" HorizontalAlignment="Left">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Stretch="Uniform" Visual="{iconPacks:MaterialLight Kind=ContentDuplicate}" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                    <!-- Add Dialog -->
+                    <TextBlock Grid.Column="1" Text="{x:Static localization:Strings.AddMaterial}" TextAlignment="Center" Margin="10,5"
+                               Visibility="{Binding IsEdit, Converter={StaticResource BooleanToVisibilityCollapsedReverseConverter}}"
+                               />
+                    <!-- Save Dialog -->
+                    <TextBlock Grid.Column="1" Text="{x:Static localization:Strings.SaveChanges}" TextAlignment="Center" Margin="10,5"
+                               Visibility="{Binding IsEdit, Converter={StaticResource BooleanToVisibilityCollapsedConverter}}"
+                               />
+                </Grid>
+            </Button.Content>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}" BasedOn="{StaticResource ImageButton}">
+                    <Setter Property="IsEnabled" Value="False" />
+                    <Style.Triggers>
+                        <!-- Check if all data are valid -->
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding ElementName=tbName, Path=(Validation.HasError)}" Value="False" />
+                                <Condition Binding="{Binding ElementName=nudDensity, Path=(Validation.HasError)}" Value="False" />
+                                <Condition Binding="{Binding ElementName=nudSize, Path=(Validation.HasError)}" Value="False" />
+                                <Condition Binding="{Binding ElementName=nudPrice, Path=(Validation.HasError)}" Value="False" />
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="IsEnabled" Value="True" />
+                        </MultiDataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <!-- Cancel Button -->
+        <Button x:Name="btnCancel" Content="{x:Static localization:Strings.Cancel}" Margin="5" VerticalAlignment="Top" Height="42"
+                Command="{Binding CancelCommand}" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1"
+                />
+        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Margin="5,15,5,5" TextWrapping="Wrap" Text="{x:Static localization:Strings.MarkedFiledsMandatory}" VerticalAlignment="Top"/>
+    </Grid>
+</UserControl>

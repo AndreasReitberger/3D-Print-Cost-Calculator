@@ -1,4 +1,5 @@
-﻿using PrintCostCalculator3d.Utilities;
+﻿using AndreasReitberger.Utilities;
+using PrintCostCalculator3d.Utilities;
 using System;
 using System.Security;
 using System.Windows.Input;
@@ -10,7 +11,7 @@ namespace PrintCostCalculator3d.ViewModels
 
         public ICommand CancelCommand { get; }
 
-        private SecureString _password = new SecureString();
+        SecureString _password = new SecureString();
         public SecureString Password
         {
             get => _password;
@@ -27,7 +28,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private SecureString _passwordRepeat = new SecureString();
+        SecureString _passwordRepeat = new SecureString();
         public SecureString PasswordRepeat
         {
             get => _passwordRepeat;
@@ -44,7 +45,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _isPasswordEmpty = true;
+        bool _isPasswordEmpty = true;
         public bool IsPasswordIsEmpty
         {
             get => _isPasswordEmpty;
@@ -58,7 +59,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _isRepeatPasswordsEqual;
+        bool _isRepeatPasswordsEqual;
         public bool IsRepeatPasswordsEqual
         {
             get => _isRepeatPasswordsEqual;
@@ -72,7 +73,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private void ValidatePassword()
+        void ValidatePassword()
         {
             IsPasswordIsEmpty = ((Password == null || Password.Length == 0) || (PasswordRepeat == null || PasswordRepeat.Length == 0));
 

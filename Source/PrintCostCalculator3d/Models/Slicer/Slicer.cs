@@ -1,10 +1,6 @@
-﻿using System;
+﻿using PrintCostCalculator3d.Resources.Localization;
+using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PrintCostCalculator3d.Resources.Localization;
 
 namespace PrintCostCalculator3d.Models.Slicer
 {
@@ -49,6 +45,9 @@ namespace PrintCostCalculator3d.Models.Slicer
             new Slicer() { SlicerName = SlicerName.PrusaSlicer },
             new Slicer() { SlicerName = SlicerName.Simplify3D },
             new Slicer() { SlicerName = SlicerName.Voxelizer2 },
+            new Slicer() { SlicerName = SlicerName.CraftWare },
+            new Slicer() { SlicerName = SlicerName.ideaMaker },
+            new Slicer() { SlicerName = SlicerName.Cura },
         };
 
         #endregion
@@ -116,5 +115,7 @@ namespace PrintCostCalculator3d.Models.Slicer
         ideaMaker,
         [LocalizedDescription("Voxelizer2", typeof(Strings))]
         Voxelizer2,
+        [LocalizedDescription("CraftWare", typeof(Strings))]
+        CraftWare,
     }
 }

@@ -1,7 +1,4 @@
-﻿//using nUpdate.Core;
-using System.Reflection;
-using System.Resources;
-using System.Runtime.CompilerServices;
+﻿using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Windows;
 
@@ -13,7 +10,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Andreas Reitberger Kleinunternehmen")]
 [assembly: AssemblyProduct("3D Print Cost Calculator 2.0")]
-[assembly: AssemblyCopyright("Copyright © Andreas Reitberger  2020")]
+[assembly: AssemblyCopyright("Copyright © Andreas Reitberger 2019-2021")]
 [assembly: AssemblyTrademark("Andreas Reitberger")]
 [assembly: AssemblyCulture("")]
 
@@ -53,8 +50,7 @@ using System.Windows;
 // übernehmen, indem Sie "*" eingeben:
 // [assembly: AssemblyVersion("1.0.*")]
 // Update all versions!
-//[assembly: nUpdateVersion("1.1.4.0")]
-[assembly: AssemblyVersion("1.1.6.0")]
-[assembly: AssemblyFileVersion("1.1.6.0")]
+[assembly: AssemblyVersion("1.2.6.0")]
+[assembly: AssemblyFileVersion("1.2.6.0")]
 
 [assembly: log4net.Config.XmlConfigurator(ConfigFile = "log4net.config", Watch = true)]

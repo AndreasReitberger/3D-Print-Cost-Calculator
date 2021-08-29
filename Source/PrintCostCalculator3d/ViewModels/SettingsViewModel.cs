@@ -1,29 +1,24 @@
-﻿using PrintCostCalculator3d.Utilities;
+﻿using PrintCostCalculator3d.Models.Settings;
+using PrintCostCalculator3d.Resources.Localization;
+using PrintCostCalculator3d.Utilities;
 using PrintCostCalculator3d.Views;
 using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
-using System.Diagnostics;
-using PrintCostCalculator3d.Models.Settings;
-using log4net;
-using PrintCostCalculator3d.Resources.Localization;
 
 namespace PrintCostCalculator3d.ViewModels
 {
     class SettingsViewModel : ViewModelBase
     {
-        #region Variables
-        private static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        #endregion
-
         #region Properties
-        public ICollectionView SettingsViews { get; private set; }
+        public ICollectionView SettingsViews { get; set; }
 
-        private string _search;
+        string _search;
         public string Search
         {
             get => _search;
@@ -43,7 +38,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _searchNothingFound;
+        bool _searchNothingFound;
         public bool SearchNothingFound
         {
             get => _searchNothingFound;
@@ -57,7 +52,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private UserControl _settingsContent;
+        UserControl _settingsContent;
         public UserControl SettingsContent
         {
             get => _settingsContent;
@@ -71,7 +66,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private SettingsViewInfo _selectedSettingsView;
+        SettingsViewInfo _selectedSettingsView;
         public SettingsViewInfo SelectedSettingsView
         {
             get => _selectedSettingsView;
@@ -90,20 +85,19 @@ namespace PrintCostCalculator3d.ViewModels
         #endregion
 
         #region Views
-        private SettingsGeneralView _settingsGerneralView;
-        private SettingsWindowView _settingsWindowView;
-        private SettingsAppearanceView _settingsApperanceView;
-        private SettingsLanguageView _settingsLanguageView;
-        private SettingsUpdateView _settingsUpdateView;
-        private SettingsSettingsView _settingsSettingsView;
-        private SettingsCalculationView _settingsCalculationsView;
-        private SettingsPrintersView _settingsPrintersView;
-        private SettingsSlicerView _settingsSlicer;
-        private SettingsExcelExporterView _settingsExporterExcel;
-        private SettingsGcodeParserView _settingsGcode;
-        private SettingsEULAView _settingsEULA;
-        private SettingsEventLoggerView _settingsEventLogger;
-        private SettingsPrivacyPolicyView _settingsPrivacy;
+        SettingsGeneralView _settingsGerneralView;
+        SettingsWindowView _settingsWindowView;
+        SettingsAppearanceView _settingsApperanceView;
+        SettingsLanguageView _settingsLanguageView;
+        SettingsUpdateView _settingsUpdateView;
+        SettingsSettingsView _settingsSettingsView;
+        SettingsCalculationView _settingsCalculationsView;
+        SettingsPrintersView _settingsPrintersView;
+        SettingsSlicerView _settingsSlicer;
+        SettingsGcodeParserView _settingsGcode;
+        SettingsEULAView _settingsEULA;
+        SettingsEventLoggerView _settingsEventLogger;
+        SettingsPrivacyPolicyView _settingsPrivacy;
         #endregion
 
         #region Contructor, load settings
@@ -111,18 +105,26 @@ namespace PrintCostCalculator3d.ViewModels
         { }
         public SettingsViewModel(ApplicationName applicationName)
         {
+            IsLoading = true;
             LoadSettings();
+            IsLoading = false;
+
+            IsLicenseValid = false;
 
             ChangeSettingsView(applicationName);
         }
         public SettingsViewModel(SettingsViewName settingsName)
         {
+            IsLoading = true;
             LoadSettings();
+            IsLoading = false;
+
+            IsLicenseValid = false;
 
             ChangeSettingsView(settingsName);
         }
 
-        private void LoadSettings()
+        void LoadSettings()
         {
             SettingsViews = new CollectionViewSource { Source = SettingsViewManager.List }.View;
             SettingsViews.GroupDescriptions.Add(new PropertyGroupDescription(nameof(SettingsViewInfo.TranslatedGroup)));
@@ -151,7 +153,7 @@ namespace PrintCostCalculator3d.ViewModels
             get { return new RelayCommand(p => ClearSearchAction()); }
         }
 
-        private void ClearSearchAction()
+        void ClearSearchAction()
         {
             Search = string.Empty;
         }
@@ -160,7 +162,7 @@ namespace PrintCostCalculator3d.ViewModels
             get { return new RelayCommand(p => OpenSettingsLocationAction()); }
         }
 
-        private void OpenSettingsLocationAction()
+        void OpenSettingsLocationAction()
         {
             try
             {
@@ -174,7 +176,7 @@ namespace PrintCostCalculator3d.ViewModels
         }
         #endregion
 
-        #region Private Methods
+        #region Methods
         public void ChangeSettingsView(ApplicationName applicationName)
         {
             // Don't change the view, if the user has filtered the settings...
@@ -198,7 +200,7 @@ namespace PrintCostCalculator3d.ViewModels
                 SelectedSettingsView = SettingsViews.SourceCollection.Cast<SettingsViewInfo>().FirstOrDefault(x => x.Name == SettingsViewName.General);
         }
 
-        private void ChangeSettingsContent(SettingsViewInfo settingsViewInfo)
+        void ChangeSettingsContent(SettingsViewInfo settingsViewInfo)
         {
             switch (settingsViewInfo.Name)
             {
@@ -254,6 +256,8 @@ namespace PrintCostCalculator3d.ViewModels
 
                     SettingsContent = _settingsPrintersView;
                     break;
+                    
+                
                 case SettingsViewName.Slicer:
                     if (_settingsSlicer == null)
                         _settingsSlicer = new SettingsSlicerView();
@@ -265,12 +269,6 @@ namespace PrintCostCalculator3d.ViewModels
                         _settingsGcode = new SettingsGcodeParserView();
 
                     SettingsContent = _settingsGcode;
-                    break;
-                case SettingsViewName.ExcelExporter:
-                    if (_settingsExporterExcel == null)
-                        _settingsExporterExcel = new SettingsExcelExporterView();
-
-                    SettingsContent = _settingsExporterExcel;
                     break;
                 case SettingsViewName.EULA:
                     if (_settingsEULA == null)

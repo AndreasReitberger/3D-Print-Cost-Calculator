@@ -22,7 +22,7 @@ namespace PrintCostCalculator3d.Views
     /// </summary>
     public partial class SettingsPrintersView : UserControl
     {
-        private readonly SettingsPrintersViewModel _viewModel = new SettingsPrintersViewModel(DialogCoordinator.Instance);
+        readonly SettingsPrintersViewModel _viewModel = new SettingsPrintersViewModel(DialogCoordinator.Instance);
 
         public SettingsPrintersView()
         {

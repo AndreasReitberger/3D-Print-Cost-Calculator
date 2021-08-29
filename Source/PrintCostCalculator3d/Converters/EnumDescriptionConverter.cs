@@ -8,7 +8,7 @@ namespace PrintCostCalculator3d.Converters
 {
     public class EnumDescriptionConverter : IValueConverter
     {
-        private string GetEnumDescription(Enum enumObj)
+        string GetEnumDescription(Enum enumObj)
         {
             FieldInfo fieldInfo = enumObj.GetType().GetField(enumObj.ToString());
 

@@ -10,19 +10,19 @@ namespace PrintCostCalculator3d.Views
     /// </summary>
     public partial class AboutView : UserControl
     {
-        private readonly AboutViewModel _viewModel = new AboutViewModel(DialogCoordinator.Instance);
+        readonly AboutViewModel _viewModel = new AboutViewModel(DialogCoordinator.Instance);
         public AboutView()
         {
             InitializeComponent();
             DataContext = _viewModel;
         }
-        private void ContextMenu_Opened(object sender, System.Windows.RoutedEventArgs e)
+        void ContextMenu_Opened(object sender, System.Windows.RoutedEventArgs e)
         {
             if (sender is ContextMenu menu) menu.DataContext = _viewModel;
         }
 
         // Fix mouse wheel when using DataGrid (https://stackoverflow.com/a/16235785/4986782)
-        private void ScrollViewer_PreviewMouseWheel(object sender, System.Windows.Input.MouseWheelEventArgs e)
+        void ScrollViewer_PreviewMouseWheel(object sender, System.Windows.Input.MouseWheelEventArgs e)
         {
             var scv = (ScrollViewer)sender;
 

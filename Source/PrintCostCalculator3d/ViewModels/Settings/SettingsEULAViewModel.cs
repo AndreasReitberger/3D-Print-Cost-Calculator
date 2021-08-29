@@ -19,8 +19,8 @@ namespace PrintCostCalculator3d.ViewModels
     class SettingsEULAViewModel : ViewModelBase
     {
         #region Variables
-        private readonly IDialogCoordinator _dialogCoordinator;
-        private readonly bool _isLoading;
+        readonly IDialogCoordinator _dialogCoordinator;
+        //readonly bool _isLoading;
 
         #endregion
 
@@ -44,7 +44,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private string _eulaContent = string.Empty;
+        string _eulaContent = string.Empty;
         public string EULAContent
         {
             get => _eulaContent;
@@ -60,18 +60,16 @@ namespace PrintCostCalculator3d.ViewModels
         #region Constructor, Load Settings
         public SettingsEULAViewModel(IDialogCoordinator instance)
         {
-            _isLoading = true;
-
             _dialogCoordinator = instance;
-            LoadSettings();
 
-            _isLoading = false;
+            IsLoading = true;
+            LoadSettings();
+            IsLoading = false;
         }
-        private void LoadSettings()
+        void LoadSettings()
         {
             try
             {
-
                 EULAContent = File.ReadAllText(
                     Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), GlobalStaticConfiguration.eulaLocalPath)
                     );
@@ -94,7 +92,7 @@ namespace PrintCostCalculator3d.ViewModels
             get { return new RelayCommand(p => ShowEULAOnlineAction()); }
         }
 
-        private void ShowEULAOnlineAction()
+        void ShowEULAOnlineAction()
         {
             try
             {
@@ -111,7 +109,7 @@ namespace PrintCostCalculator3d.ViewModels
             get { return new RelayCommand(p => ShowEULAOnlineAction()); }
         }
 
-        private void ShowEULAAction()
+        void ShowEULAAction()
         {
             try
             {

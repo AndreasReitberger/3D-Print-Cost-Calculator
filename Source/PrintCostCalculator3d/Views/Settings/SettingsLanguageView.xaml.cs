@@ -9,7 +9,7 @@ namespace PrintCostCalculator3d.Views
     /// </summary>
     public partial class SettingsLanguageView : UserControl
     {
-        private readonly SettingsLanguageViewModel _viewModel = new SettingsLanguageViewModel();
+        readonly SettingsLanguageViewModel _viewModel = new SettingsLanguageViewModel();
         public SettingsLanguageView()
         {
             InitializeComponent();

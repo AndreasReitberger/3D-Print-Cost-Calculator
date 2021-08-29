@@ -20,11 +20,11 @@ namespace PrintCostCalculator3d.Models.Update
         #endregion
 
         #region Variables
-        private static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         #endregion
 
         #region Properties
-        private bool _checksForUpdates = false;
+        bool _checksForUpdates = false;
         public bool ChecksForUpdates
         {
             get => _checksForUpdates;
@@ -72,34 +72,31 @@ namespace PrintCostCalculator3d.Models.Update
         #region Methods
         public void Check()
         {
-            Task.Run(() =>
-            {
-                try
-                {
-                    // Fetch latest version from server here
-                    var version = "1.0.0.0";
-                    Version latestVersion = new Version(version);
+            _ = Task.Run(() =>
+              {
+                  try
+                  {
+                      string version = "1.0.0"; //Fetch latest version here
+                      Version latestVersion = new(version);
 
-                    if (ConfigurationManager.Current.OSVersion < new Version(10, 0) && latestVersion >= new Version(2, 0))
-                    {
-                        OnClientIncompatibleWithNewVersion();
-                        logger.WarnFormat(Strings.EventOSIncompatibleWithNewVersionFormatedEvent, ConfigurationManager.Current.OSVersion);
-                        return;
-                    }
+                      if (ConfigurationManager.Current.OSVersion < new Version(10, 0) && latestVersion >= new Version(2, 0))
+                      {
+                          OnClientIncompatibleWithNewVersion();
+                          logger.WarnFormat(Strings.EventOSIncompatibleWithNewVersionFormatedEvent, ConfigurationManager.Current.OSVersion);
+                          return;
+                      }
 
-                    // Compare versions (tag=v1.4.2.0, version=1.4.2.0)
                     if (latestVersion > AssemblyManager.Current.Version)
-                        OnUpdateAvailable(new UpdateAvailableArgs(latestVersion));
-                    else
-                        OnNoUpdateAvailable();
-                   
-                }
-                catch(Exception exc)
-                {
-                    //logger.ErrorFormat(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message);
+                          OnUpdateAvailable(new UpdateAvailableArgs(latestVersion));
+                      else
+                          OnNoUpdateAvailable();
+
+                  }
+                  catch (Exception)
+                  {
                     OnError();
-                }
-            });
+                  }
+              });
         }
         #endregion
     }

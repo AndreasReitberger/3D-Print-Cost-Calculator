@@ -5,7 +5,7 @@ namespace PrintCostCalculator3d.Controls
 {
     public class DragablzTabItem : ViewModelBase
     {
-        private string _header;
+        string _header;
         public string Header
         {
             get => _header;

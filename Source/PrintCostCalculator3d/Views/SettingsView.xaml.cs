@@ -21,7 +21,7 @@ namespace PrintCostCalculator3d.Views
     /// </summary>
     public partial class SettingsView : UserControl
     {
-        private readonly SettingsViewModel _viewModel = new SettingsViewModel();
+        readonly SettingsViewModel _viewModel = new SettingsViewModel();
 
         public SettingsView(ApplicationName applicationName)
         {
@@ -36,7 +36,7 @@ namespace PrintCostCalculator3d.Views
             DataContext = _viewModel;
         }
 
-        private void ScrollViewer_ManipulationBoundaryFeedback(object sender, System.Windows.Input.ManipulationBoundaryFeedbackEventArgs e)
+        void ScrollViewer_ManipulationBoundaryFeedback(object sender, System.Windows.Input.ManipulationBoundaryFeedbackEventArgs e)
         {
             e.Handled = true;
         }

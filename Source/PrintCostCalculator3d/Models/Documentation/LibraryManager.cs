@@ -7,7 +7,7 @@ namespace PrintCostCalculator3d.Models.Documentation
 {
     public static class LibraryManager
     {
-        private const string LicenseFolderName = "Licenses";
+        const string LicenseFolderName = "Licenses";
 
         public static string GetLicenseLocation()
         {

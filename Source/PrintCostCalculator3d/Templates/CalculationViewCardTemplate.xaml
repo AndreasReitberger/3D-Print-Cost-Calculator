@@ -4,13 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              
-             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
-             xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
-             xmlns:CSMSControls="clr-namespace:PrintCostCalculator3d.Controls"
-             xmlns:Models="clr-namespace:PrintCostCalculator3d.Models._3dprinting"
              xmlns:converters="clr-namespace:PrintCostCalculator3d.Converters"
-             xmlns:validators="clr-namespace:PrintCostCalculator3d.Validators"
              xmlns:localization="clr-namespace:PrintCostCalculator3d.Resources.Localization"
              xmlns:calculator="clr-namespace:AndreasReitberger.Models;assembly=3dPrintCalculatorLibrary"
              
@@ -105,7 +100,7 @@
                                             <Style.Triggers>
                                                 <MultiDataTrigger>
                                                     <MultiDataTrigger.Conditions>
-                                                        <Condition Binding="{Binding DataContext.isLicenseValid, RelativeSource={RelativeSource FindAncestor, AncestorLevel=2, AncestorType={x:Type UserControl}}}" Value="True" />
+                                                        <Condition Binding="{Binding DataContext.IsLicenseValid, RelativeSource={RelativeSource FindAncestor, AncestorLevel=2, AncestorType={x:Type UserControl}}}" Value="True" />
                                                     </MultiDataTrigger.Conditions>
                                                     <Setter Property="IsEnabled" Value="True" />
                                                 </MultiDataTrigger>
@@ -133,7 +128,7 @@
                                             <Style.Triggers>
                                                 <MultiDataTrigger>
                                                     <MultiDataTrigger.Conditions>
-                                                        <Condition Binding="{Binding DataContext.isLicenseValid, RelativeSource={RelativeSource FindAncestor, AncestorLevel=2, AncestorType={x:Type UserControl}}}" Value="True" />
+                                                        <Condition Binding="{Binding DataContext.IsLicenseValid, RelativeSource={RelativeSource FindAncestor, AncestorLevel=2, AncestorType={x:Type UserControl}}}" Value="True" />
                                                     </MultiDataTrigger.Conditions>
                                                     <Setter Property="IsEnabled" Value="True" />
                                                 </MultiDataTrigger>
@@ -161,7 +156,7 @@
                                             <Style.Triggers>
                                                 <MultiDataTrigger>
                                                     <MultiDataTrigger.Conditions>
-                                                        <Condition Binding="{Binding DataContext.isLicenseValid, RelativeSource={RelativeSource FindAncestor, AncestorLevel=2, AncestorType={x:Type UserControl}}}" Value="True" />
+                                                        <Condition Binding="{Binding DataContext.IsLicenseValid, RelativeSource={RelativeSource FindAncestor, AncestorLevel=2, AncestorType={x:Type UserControl}}}" Value="True" />
                                                     </MultiDataTrigger.Conditions>
                                                     <Setter Property="IsEnabled" Value="True" />
                                                 </MultiDataTrigger>
@@ -173,7 +168,7 @@
                         </Menu>
                     </Border>
                     <!-- Name -->
-                    <TextBlock Grid.Column="1" Grid.ColumnSpan="1" Text="{Binding Name}" Margin="40,5,15,5" VerticalAlignment="Center" HorizontalAlignment="Left">
+                    <TextBlock Grid.Column="1" Grid.ColumnSpan="1" Text="{Binding Calculation.Name}" Margin="40,5,15,5" VerticalAlignment="Center" HorizontalAlignment="Left">
                         <TextBlock.Style>
                             <Style TargetType="{x:Type TextBlock}">
                                 <Setter Property="Foreground" Value="{DynamicResource MahApps.Brushes.Gray3}" />

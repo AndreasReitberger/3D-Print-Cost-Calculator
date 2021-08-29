@@ -11,7 +11,7 @@ namespace PrintCostCalculator3d.Controls
             SelectionChanged += DataGridMultiItemSelect_SelectionChanged;
         }
 
-        private void DataGridMultiItemSelect_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        void DataGridMultiItemSelect_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             SelectedItemsList = SelectedItems;
         }

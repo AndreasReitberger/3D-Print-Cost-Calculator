@@ -10,13 +10,13 @@ namespace PrintCostCalculator3d.Models.Settings
     public class LocalizationManager
     {
 
-        private const string _defaultCultureCode = "en-US";
+        const string _defaultCultureCode = "en-US";
 
-        //private const string _baseFlagImageUri = @"pack://application:,,,/WpfFramework;component/Resources/Localization/Flags/";
-        private const string _baseFlagImageUri = @"/Resources/Localization/Flags/";
+        //const string _baseFlagImageUri = @"pack://application:,,,/WpfFramework;component/Resources/Localization/Flags/";
+        const string _baseFlagImageUri = @"/Resources/Localization/Flags/";
 
 
-        private static LocalizationManager _instance = null;
+        static LocalizationManager _instance = null;
 
 
         public static LocalizationManager GetInstance(string cultureCode = _defaultCultureCode)
@@ -57,11 +57,11 @@ namespace PrintCostCalculator3d.Models.Settings
         };
 
 
-        public LocalizationInfo Current { get; private set; } = new LocalizationInfo();
+        public LocalizationInfo Current { get; set; } = new LocalizationInfo();
 
-        public CultureInfo Culture { get; private set; }
+        public CultureInfo Culture { get; set; }
 
-        private LocalizationManager(string cultureCode = _defaultCultureCode)
+        LocalizationManager(string cultureCode = _defaultCultureCode)
         {
             if (string.IsNullOrEmpty(cultureCode))
                 cultureCode = CultureInfo.CurrentCulture.Name;

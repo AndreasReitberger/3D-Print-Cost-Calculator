@@ -21,7 +21,7 @@ namespace PrintCostCalculator3d.WpfHelper
 
         public static readonly DependencyProperty PasswordProperty = DependencyProperty.Register("Password", typeof(SecureString), typeof(PasswordBoxBindingBehavior), new PropertyMetadata(null));
 
-        private void OnPasswordBoxValueChanged(object sender, RoutedEventArgs e)
+        void OnPasswordBoxValueChanged(object sender, RoutedEventArgs e)
         {
             var binding = BindingOperations.GetBindingExpression(this, PasswordProperty);
 

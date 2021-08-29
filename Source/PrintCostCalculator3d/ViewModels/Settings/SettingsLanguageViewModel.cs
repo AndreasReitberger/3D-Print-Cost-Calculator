@@ -15,13 +15,15 @@ namespace PrintCostCalculator3d.ViewModels
     public class SettingsLanguageViewModel : ViewModelBase
     {
         #region Variables
-        private readonly bool _isLoading;
+        //readonly bool _isLoading;
+        #endregion
 
+        #region Properties
         public ICollectionView Languages { get; }
 
-        private string _cultureCode = string.Empty;
+        string _cultureCode = string.Empty;
 
-        private LocalizationInfo _selectedLanguage;
+        LocalizationInfo _selectedLanguage;
         public LocalizationInfo SelectedLangauge
         {
             get => _selectedLanguage;
@@ -30,7 +32,7 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _selectedLanguage)
                     return;
 
-                if (!_isLoading && value != null) // Don't change if the value is null (can happen when a user searchs for a language....)
+                if (!IsLoading && value != null) // Don't change if the value is null (can happen when a user searchs for a language....)
                 {
                     LocalizationManager.GetInstance().Change(value);
 
@@ -44,7 +46,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private string _search;
+        string _search;
         public string Search
         {
             get => _search;
@@ -61,7 +63,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _restartRequired;
+        bool _restartRequired;
         public bool RestartRequired
         {
             get => _restartRequired;
@@ -79,7 +81,7 @@ namespace PrintCostCalculator3d.ViewModels
         #region Construtor, LoadSettings
         public SettingsLanguageViewModel()
         {
-            _isLoading = true;
+            IsLoading = true;
 
             Languages = CollectionViewSource.GetDefaultView(LocalizationManager.List);
             Languages.SortDescriptions.Add(new SortDescription(nameof(LocalizationInfo.IsOfficial), ListSortDirection.Descending));
@@ -104,10 +106,10 @@ namespace PrintCostCalculator3d.ViewModels
 
             LoadSettings();
 
-            _isLoading = false;
+            IsLoading = false;
         }
 
-        private void LoadSettings()
+        void LoadSettings()
         {
             _cultureCode = SettingsManager.Current.Localization_CultureCode;
         }
@@ -119,14 +121,14 @@ namespace PrintCostCalculator3d.ViewModels
             get { return new RelayCommand(p => ClearSearchAction()); }
         }
 
-        private void ClearSearchAction()
+        void ClearSearchAction()
         {
             Search = string.Empty;
         }
 
         public ICommand OpenWebsiteCommand => new RelayCommand(OpenWebsiteAction);
 
-        private static void OpenWebsiteAction(object url)
+        static void OpenWebsiteAction(object url)
         {
             Process.Start((string)url);
         }

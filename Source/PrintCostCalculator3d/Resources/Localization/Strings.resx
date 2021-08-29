@@ -119,1230 +119,1615 @@
   </resheader>
   <data name="About" xml:space="preserve">
     <value>About</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Accent" xml:space="preserve">
     <value>Accent</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Add" xml:space="preserve">
     <value>Add</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="AddManufacturer" xml:space="preserve">
     <value>Add Manufacturer</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="AddMaterial" xml:space="preserve">
     <value>Add Material</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="AddPrinter" xml:space="preserve">
     <value>Add Printer</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="AddSupplier" xml:space="preserve">
     <value>Add Supplier</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="AssignMachineHourRateCalculation" xml:space="preserve">
     <value>Assign Machine-Hour-Rating</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Back" xml:space="preserve">
     <value>Back</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Calculate" xml:space="preserve">
     <value>Calculate</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Clear" xml:space="preserve">
     <value>Clear</value>
-  </data>
-  <data name="CreateCopies" xml:space="preserve">
-    <value>Create Copies</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="HeaderFixCostsPerYear" xml:space="preserve">
     <value>Fix costs / year</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="HeaderVariableCostsPerYear" xml:space="preserve">
     <value>Variable costs / year</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="IsCaseSensitiv" xml:space="preserve">
     <value>Is case-sensitive</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="LabelAdditionalCosts" xml:space="preserve">
     <value>Any additional costs:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelCalcDepreciation" xml:space="preserve">
     <value>Calculated depreciation:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelDebitorNumber" xml:space="preserve">
     <value>Debitor number:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelEnergyCosts" xml:space="preserve">
     <value>Energy costs:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelHasHeatbed" xml:space="preserve">
     <value>Has a heatbed:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelHeatbed" xml:space="preserve">
     <value>Heatbed:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelHeatbedTempMandatory" xml:space="preserve">
     <value>Heatbed temp.*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelInterestMandatory" xml:space="preserve">
     <value>Interest*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelIsAvtiveMandatory" xml:space="preserve">
     <value>Is active*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelIsManufacturerActive" xml:space="preserve">
     <value>The manufacturer is active for purchases</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelIsSupplierActive" xml:space="preserve">
     <value>The supplier is active for purchases</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelIsSupplierActiveMandatory" xml:space="preserve">
     <value>Is active*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelLocationCosts" xml:space="preserve">
     <value>Location costs:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelMachineHourRate" xml:space="preserve">
     <value>Machine-Hour Rate:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelMachineHoursPerYearMandatory" xml:space="preserve">
     <value>Machine-Hours per year*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelMainenanceAndRepair" xml:space="preserve">
     <value>Maintenance &amp; repair costs:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelManufacturer" xml:space="preserve">
     <value>Manufacturer:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelManufacturerNameMandatory" xml:space="preserve">
     <value>Name of manufacturer*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelMaterialKindMandatory" xml:space="preserve">
     <value>Material kind*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelMaterialTypeMandatory" xml:space="preserve">
     <value>Material type*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelNozzle" xml:space="preserve">
     <value>Nozzle:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelPackageMandatory" xml:space="preserve">
     <value>Package*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelPackageSize" xml:space="preserve">
     <value>Package size:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelPriceMandatory" xml:space="preserve">
     <value>Price*:</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="LabelPrinterModelMandatory" xml:space="preserve">
     <value>Printer model*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelPrinterTypeMandatory" xml:space="preserve">
     <value>Printer type*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelReplacemenCostsManadatory" xml:space="preserve">
     <value>Replacement costs*:</value>
-  </data>
-  <data name="LabelReplaceWith" xml:space="preserve">
-    <value>Replace with:</value>
-  </data>
-  <data name="LabelSearchFor" xml:space="preserve">
-    <value>Search for:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelSelectedFiles" xml:space="preserve">
     <value>Selected File(s):</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="LabelSelectPrinter" xml:space="preserve">
     <value>Select your printer:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelShopUri" xml:space="preserve">
     <value>Shop Uri:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelSupplierNameMandatory" xml:space="preserve">
     <value>Supplier name*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelTemeratureMandatory" xml:space="preserve">
     <value>Temperature*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelUsefulLifeYearsMandatory" xml:space="preserve">
     <value>Useful Life in years*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelVendor" xml:space="preserve">
     <value>Vendor:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="MarkedFiledsMandatory" xml:space="preserve">
     <value>All fields marked with '*' are mandatory.</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="New" xml:space="preserve">
     <value>New</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Reorder" xml:space="preserve">
     <value>Reorder</value>
-  </data>
-  <data name="RunChecker" xml:space="preserve">
-    <value>Run Checker</value>
-  </data>
-  <data name="RunSearchAndReplace" xml:space="preserve">
-    <value>Run Search and Replace</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="SaveCalculation" xml:space="preserve">
     <value>Save Calculation</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Search" xml:space="preserve">
     <value>Search</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="SearchDots" xml:space="preserve">
     <value>...</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="SearchedApplicationNotFound" xml:space="preserve">
     <value>Searched application could not be found</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="SelectFiles" xml:space="preserve">
     <value>Select File(s)</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="SelectFolder" xml:space="preserve">
     <value>Select Folder(s)</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Settings</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="TabHeaderCalculate" xml:space="preserve">
     <value>Calculate</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="TabHeaderCalculations" xml:space="preserve">
     <value>Calculations</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="TooltipCreateCopies" xml:space="preserve">
     <value>If checked, the results will be written in new files. Originals stay untouched.</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="TooltipTextToReplaceWith" xml:space="preserve">
     <value>Enter the text you want to replace the results with...</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="TooltipTextToSearchFor" xml:space="preserve">
     <value>Enter the text you want to search for...</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Years" xml:space="preserve">
     <value>Years</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="ClearFilter" xml:space="preserve">
     <value>Clear filter</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Language" xml:space="preserve">
     <value>Language</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="RestartTheApplicationSoThatAllChangesAreApplied" xml:space="preserve">
     <value>In order to update the language, the application needs to be restarted.</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="SearchedLanguageNotFound" xml:space="preserve">
     <value>The searched language couldn't be found</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="CheckForUpdates" xml:space="preserve">
     <value>Check for Updates</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Description" xml:space="preserve">
     <value>Description</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="ErrorCheckingApiGithubComVerifyYourNetworkConnection" xml:space="preserve">
     <value>There was an error contacting Github API. Please check your internet connection.</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="GitHub" xml:space="preserve">
     <value>GitHub</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Libraries" xml:space="preserve">
     <value>Libraries</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="LibraryUrl" xml:space="preserve">
     <value>URL to library</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="License" xml:space="preserve">
     <value>License</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Name</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="NoUpdateAvailable" xml:space="preserve">
     <value>No update is available at the moment</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="OpenLicense" xml:space="preserve">
     <value>Open License</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="OpenProject" xml:space="preserve">
     <value>Open Project</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="OpenWebsite" xml:space="preserve">
     <value>Open Website</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="ProductName" xml:space="preserve">
     <value>Product name</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Resources" xml:space="preserve">
     <value>Resources</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="ShowLocalLicenses" xml:space="preserve">
     <value>Show local Licenses</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Slogan" xml:space="preserve">
     <value>A software tool to calculate the most accurate price for your next 3D print job!</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Update" xml:space="preserve">
     <value>Update</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Version" xml:space="preserve">
     <value>Version</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="VersionxxIsAvailable" xml:space="preserve">
     <value>A newer version {0} is available!</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="YourSystemOSIsIncompatibleWithTheLatestRelease" xml:space="preserve">
     <value>Your system OS is not compatible with the latest version!</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="OpenStlFile" xml:space="preserve">
     <value>Select or drop .stl file</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="SetZoomFitPage" xml:space="preserve">
     <value>Zoom to fit page</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="View3dInstructions" xml:space="preserve">
     <value>Please, use the right mouse button to rotate and the mouse wheel to move the object.</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Additional" xml:space="preserve">
     <value>Additional</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="ApplyTaxRateToResult" xml:space="preserve">
     <value>Do you want to add a tax rate to your calculated price?</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="General" xml:space="preserve">
     <value>General</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="LabelEnergyCostsMandatory" xml:space="preserve">
     <value>Energy costs*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelTaxRate" xml:space="preserve">
     <value>Tax rate:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Materials" xml:space="preserve">
     <value>Materials</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Printers" xml:space="preserve">
     <value>3D Printers</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Save</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Close" xml:space="preserve">
     <value>Close</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Delete" xml:space="preserve">
     <value>Delete</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DonateViaPayPal" xml:space="preserve">
     <value>Donate via PayPal</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="LabelCustomAmount" xml:space="preserve">
     <value>Please enter a custom amount for your tip!</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelDonationInfo" xml:space="preserve">
     <value>The donation is hanled by PayPal later. You will be redirected to PayPal.me if you click the 'Donate with PayPal' button. &gt; The donation is handled by PayPal later. You will be redirected to PayPal.me if you click the 'Donate with PayPal' button.</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="LabelDonationThankYou" xml:space="preserve">
     <value>Thank you for considering a donation! It's highly appreciated.</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="LabelOrUsePreDefinedAmoutns" xml:space="preserve">
     <value>or use one of the pre-defined amounts below.</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelPreDefinedAmounts" xml:space="preserve">
     <value>Pre-Defined amounts</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelSelectMaterialMandatory" xml:space="preserve">
     <value>Select the material*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelNameMandatory" xml:space="preserve">
     <value>Name*:</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="LabelSKU" xml:space="preserve">
     <value>SKU:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Or" xml:space="preserve">
     <value> or </value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="SelectOrDropGcodeFile" xml:space="preserve">
     <value>Select or drop .gcode file</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="And" xml:space="preserve">
     <value>and</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="AppName3dPrintCostCalculator" xml:space="preserve">
     <value>3D Print Cost Calculator</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="AppName3dPrinterMaterialOverview" xml:space="preserve">
     <value>3D Printer Materials</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="AppName3dPrinterOverview" xml:space="preserve">
     <value>3D Printers</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="AppNameMachineHourRateCalculator" xml:space="preserve">
     <value>Machine Hour Rate Calculator</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="AppNameMassSearchAndReplace" xml:space="preserve">
     <value>Mass Search &amp; Replace</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="AppNameNotFound" xml:space="preserve">
     <value>This app doesn't exist!</value>
-  </data>
-  <data name="AppNameSubversionServer" xml:space="preserve">
-    <value>SVN</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="GcodeParserNote" xml:space="preserve">
     <value>If you import a gcode file and information are missing here, please send us your gcode file and we will update our parser.</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelFilamentDensity" xml:space="preserve">
     <value>Filament density:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelFilamentType" xml:space="preserve">
     <value>Filament type:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelPrintingTime" xml:space="preserve">
     <value>Est. printing time:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelSlicer" xml:space="preserve">
     <value>Slicer:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelVolume" xml:space="preserve">
     <value>Volume:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="SettingsGroupApps" xml:space="preserve">
     <value>App Settings</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="SettingsGroupGeneral" xml:space="preserve">
     <value>General Settings</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="SettingsGroupNotFound" xml:space="preserve">
     <value>This group doesn't exist!</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="SettingsNameAppearance" xml:space="preserve">
     <value>Appearance</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="SettingsNameGeneral" xml:space="preserve">
     <value>General</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="SettingsNameLanguage" xml:space="preserve">
     <value>Language</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="SettingsNameNotFound" xml:space="preserve">
     <value>This setting page doesn't exist!</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="SettingsNameRepetierServer" xml:space="preserve">
     <value>Repetier Server Pro</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="SettingsNameSlicer" xml:space="preserve">
     <value>Slicer</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="SettingsNameWindow" xml:space="preserve">
     <value>Window</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="LabelColor" xml:space="preserve">
     <value>Color:</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="LabelDensityMandatory" xml:space="preserve">
     <value>Density:*</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelFailRate" xml:space="preserve">
     <value>Fail-Rate:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelMargin" xml:space="preserve">
     <value>Margin:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelPieces" xml:space="preserve">
     <value>Quantity</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="TooltipApplyTaxRate" xml:space="preserve">
     <value>Tick this to apply a tax rate.</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="TooltipEnergyCosts" xml:space="preserve">
     <value>The costs for one kW/h in cents.</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="TooltipFailRate" xml:space="preserve">
     <value>Use this slider to set a calculated fail rate.</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="TooltipMargin" xml:space="preserve">
     <value>Use this slider to set your wished margin.</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="TooltipPieces" xml:space="preserve">
     <value>The pieces for this print job.</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="TooltipTaxRate" xml:space="preserve">
     <value>The tax rate to be applied.</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="AddCategory" xml:space="preserve">
     <value>Add Category</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="AddWorkstep" xml:space="preserve">
     <value>Add Workstep</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Amount" xml:space="preserve">
     <value>Amount</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="AppName3dPrinterWorkstep" xml:space="preserve">
     <value>Additional Worksteps</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="BJ" xml:space="preserve">
     <value>BJ (Binder Jetting)®</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="CalculationType" xml:space="preserve">
     <value>Calculation Type</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Category" xml:space="preserve">
     <value>Category</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="CDLP" xml:space="preserve">
     <value>cDLP (continuous Digital Light Processing)®</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DLP" xml:space="preserve">
     <value>DLP (Digital Ligh Processing)®</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DMLS" xml:space="preserve">
     <value>DMLS (Direct Metal Laser Sintering)®</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DOD" xml:space="preserve">
     <value>DOD (Drop on Demand)®</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Duration" xml:space="preserve">
     <value>Duration</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="EBAM" xml:space="preserve">
     <value>EBAM (Electron-Beam Additive Manufacturing)®</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="EBM" xml:space="preserve">
     <value>EBM (Electro Beam Melting)®</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="FDM" xml:space="preserve">
     <value>FDM (Fused Deposition Modeling)®</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelWorkstepCalculationTypeMandatory" xml:space="preserve">
     <value>Calculation type*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelWorkstepDurationMandatory" xml:space="preserve">
     <value>Duration for this workstep*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelWorkstepNameMandatory" xml:space="preserve">
     <value>Workstep name*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelWorkstepPriceMandatory" xml:space="preserve">
     <value>Price for the workstep*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelWorkstepTypeMandatory" xml:space="preserve">
     <value>Workstep type*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LENS" xml:space="preserve">
     <value>LENS (Laser Engineered Net Shaping)®</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Misc" xml:space="preserve">
     <value>Miscellaneous</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="MJ" xml:space="preserve">
     <value>MJ (Material Jetting)®</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="MJF" xml:space="preserve">
     <value>MJF (Multi Jet Fusion)®</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="NewCategory" xml:space="preserve">
     <value>New Category</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="NPJ" xml:space="preserve">
     <value>NPJ (NanoParticle Jetting)®</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Post" xml:space="preserve">
     <value>Post-Processing</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Pre" xml:space="preserve">
     <value>Pre-Processing</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Price" xml:space="preserve">
     <value>Price</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="SLA" xml:space="preserve">
     <value>SLA (Stereolithography)®</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="SLM" xml:space="preserve">
     <value>SLM (Selective Laser Melting)®</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="SLS" xml:space="preserve">
     <value>SLS (Selective Laser Sintering)®</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="TooltipWorkstepPrice" xml:space="preserve">
     <value>Applied depending on the selected calc. type</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Type" xml:space="preserve">
     <value>Type</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="WokrstepCalculationNote" xml:space="preserve">
     <value>Depending on what calculation type you select, the price either will be calculated once per piece, once per job or for the given time.</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="AddWorkstepCategory" xml:space="preserve">
     <value>Add Workstep Category</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogDeleteMaterialContent" xml:space="preserve">
     <value>Are you sure that you you want to delete this material? This cannot be undone!</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogDeleteMaterialHeadline" xml:space="preserve">
     <value>Delete this material?</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogDeletePrinterContent" xml:space="preserve">
     <value>Are you sure that you you want to delete this printer? This cannot be undone!</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogDeletePrinterHeadline" xml:space="preserve">
     <value>Delete this printer?</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogDeleteWorkstepContent" xml:space="preserve">
     <value>Are you sure that you you want to delete this workstep? This cannot be undone!</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogDeleteWorkstepHeadline" xml:space="preserve">
     <value>Delete this workstep?</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelQuantityMandatory" xml:space="preserve">
     <value>Quantity*:</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="LabelWorkstepCategoryMandatory" xml:space="preserve">
     <value>Workstep category*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelWorkstepCategoryNameMandatory" xml:space="preserve">
     <value>The name for the category*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelWorkstepDuration" xml:space="preserve">
     <value>Duration (only for per_hour):</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelWorkstepDurationUnit" xml:space="preserve">
     <value>Hour(s)</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="TooltipWorkstepDuration" xml:space="preserve">
     <value>The duration for this workstep.</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="ValidatorSelectionIsMandatory" xml:space="preserve">
     <value>Please select an item first!</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="CardView" xml:space="preserve">
     <value>View as Card</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Color" xml:space="preserve">
     <value>Color</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DatagridView" xml:space="preserve">
     <value>View as Datagrid</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DeleteAll" xml:space="preserve">
     <value>Delete All</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DeleteSelected" xml:space="preserve">
     <value>Delete Selection</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Density" xml:space="preserve">
     <value>Density</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="HasHeatbed" xml:space="preserve">
     <value>Has a heatbed?</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Heatbed" xml:space="preserve">
     <value>Heatbed</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Kind" xml:space="preserve">
     <value>Kind</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="LabelBuildVolume" xml:space="preserve">
     <value>BuildVolume:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelHeatbedTemp" xml:space="preserve">
     <value>Heatbed Temperature:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelNozzleTemp" xml:space="preserve">
     <value>Nozzle Temperature:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelPrice" xml:space="preserve">
     <value>Price:</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="MachineHourRate" xml:space="preserve">
     <value>Machine Hour Rate</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Manufacturer" xml:space="preserve">
     <value>Manufacturer</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="MaxTempHeatbed" xml:space="preserve">
     <value>Max. Headbed temp.</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Model" xml:space="preserve">
     <value>Model</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Nozzle" xml:space="preserve">
     <value>Nozzle</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="PackageSize" xml:space="preserve">
     <value>Package Size</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="PrinterHasHeatbed" xml:space="preserve">
     <value>Printer has a heatbed</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="SKU" xml:space="preserve">
     <value>SKU</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Unit" xml:space="preserve">
     <value>Unit</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Vendor" xml:space="preserve">
     <value>Vendor</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="BuildVolume" xml:space="preserve">
     <value>Build Volume</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogSaveMachineHourRateContent" xml:space="preserve">
     <value>Are you sure that you want to save the current Machine Hour Rate Calculation for this Printer? This will override the original MHR for this printer. Proceed?</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogSaveMachineHourRateHeadline" xml:space="preserve">
     <value>Save current Machine Hour Rate Calculation?</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelAdditional" xml:space="preserve">
     <value>Additional:</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="LabelEnergy" xml:space="preserve">
     <value>Energy:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelHours" xml:space="preserve">
     <value>Hours:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelLocation" xml:space="preserve">
     <value>Location:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelMaintenance" xml:space="preserve">
     <value>Maintenance:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="NewPrinter" xml:space="preserve">
     <value>New Printer</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="PerYear" xml:space="preserve">
     <value>/ Year</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="AssignMHR" xml:space="preserve">
     <value>Assign Machine Hour Rate</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="AssignSelectedMHR" xml:space="preserve">
     <value>Assign selected Machine Hour Rate</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="NewManufacturer" xml:space="preserve">
     <value>New Manufacturer</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelHandlingFee" xml:space="preserve">
     <value>Handling Fee:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="NewMaterial" xml:space="preserve">
     <value>New Material</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="NewSupplier" xml:space="preserve">
     <value>New Supplier</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="TooltipHandlingFee" xml:space="preserve">
     <value>This fee will be applied for each piece</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="AllInformationPerMonth" xml:space="preserve">
     <value>Calculate as per month:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="FixCosts" xml:space="preserve">
     <value>Fix costs</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelPrintDurationMandatory" xml:space="preserve">
     <value>Print duration*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="PerMonth" xml:space="preserve">
     <value>/ Month</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="ProvidedInformationArePerYear" xml:space="preserve">
     <value>The provided information are per year</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="TooltipMHRProvidedInformationTimeBase" xml:space="preserve">
     <value>Tick if the information are per year</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="VariableCosts" xml:space="preserve">
     <value>Variable costs</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="CalculationResult" xml:space="preserve">
     <value>Calculation Result(s)</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="FinalRecomendedPrice" xml:space="preserve">
     <value>Final recommended price:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelMaxPowerConsumptionMandatory" xml:space="preserve">
     <value>Max. power consumption*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelSelectCurrentCalculationMandatory" xml:space="preserve">
     <value>Select the calculation*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelSelectCurrentMaterialMandatory" xml:space="preserve">
     <value>Select the material*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelSelectCurrentPrinterMandatory" xml:space="preserve">
     <value>Select the printer*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelUsedAmountOfMaterial" xml:space="preserve">
     <value>Used amount of material*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelIncludedTax" xml:space="preserve">
     <value>Included tax:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelPriceWithoutTax" xml:space="preserve">
     <value>Without tax:</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="EstimatedPrintTime" xml:space="preserve">
     <value>Estimated print time</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="HeaderPriceConsistsOf" xml:space="preserve">
     <value>- Price consists of -</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelMaterialCosts" xml:space="preserve">
     <value>Material costs:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelMaxPowerConsumption" xml:space="preserve">
     <value>Max. power consumption:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelVolumeMandatory" xml:space="preserve">
     <value>Volume*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogFileLoadedContent" xml:space="preserve">
     <value>The file was loaded successfully. The parameter were set to the calculation form.</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DialogFileLoadedHeadline" xml:space="preserve">
     <value>File loaded successfully</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="LabelMachineCosts" xml:space="preserve">
     <value>Machine costs:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogGcodeSlicerInvalidContentFormated" xml:space="preserve">
     <value>It seems that the file is a valid gcode file, however the slicer you are using isn't supported yet. To get it supported, please send us a gcode file for validation to {0}</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogGcodeSlicerInvalidHeadline" xml:space="preserve">
     <value>Unsupported Slicer</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="HeaderPrintTimeConsistsOf" xml:space="preserve">
     <value>Print Time consists of</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelAdditionalWorkstepCosts" xml:space="preserve">
     <value>Additional worksteps:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelQuantity" xml:space="preserve">
     <value>Quantity:</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="LabelSingleFailPrintDuration" xml:space="preserve">
     <value>Single fail time:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelSinglePrintDuration" xml:space="preserve">
     <value>Single print time:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="TooltipSingleFailTime" xml:space="preserve">
     <value>Calculated additional time depending on set fail rate</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogCalculationSaveSuccessContent" xml:space="preserve">
     <value>The calculation was saved successfully.</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogCalculationSaveSuccessHeadline" xml:space="preserve">
     <value>Saving succeeded</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogRunCalculationFirstContent" xml:space="preserve">
     <value>In order to save the calculation, click the "Calculate" button first or load an existing calculation.</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogRunCalculationFirstHeadline" xml:space="preserve">
     <value>No calculation loaded or performed</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Load" xml:space="preserve">
     <value>Load</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DialogConfirmCloseContent" xml:space="preserve">
     <value>Are you sure that you want to close the application now?</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DialogConfirmCloseHeadline" xml:space="preserve">
     <value>Close Application</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DialogOpenExternalUriFormatedContent" xml:space="preserve">
     <value>This will open the external link '{0}'. We cannot affect the content provided on the external page. Proceed?</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DialogOpenExternalUriHeadline" xml:space="preserve">
     <value>Open external link</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="LabelGuidReadOnly" xml:space="preserve">
     <value>GUID (read-only):</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="ActivateLicense" xml:space="preserve">
     <value>Activate license</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="AddLicense" xml:space="preserve">
     <value>Add License</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="AlwaysShowIconInTray" xml:space="preserve">
     <value>Always show icon in tray</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="AtLeastOneApplicationMustBeVisible" xml:space="preserve">
     <value>At Least One Application Must Be Visible</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Calculations" xml:space="preserve">
     <value>Calculations</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="ConfirmClose" xml:space="preserve">
     <value>Confirm on close</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="CredentialWithThisNameAlreadyExists" xml:space="preserve">
     <value>Credential with this name already exists</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="HiddenApplications" xml:space="preserve">
     <value>Hidden Applications</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Hide" xml:space="preserve">
     <value>Hide</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="MinimizeInsteadOfTerminating" xml:space="preserve">
     <value>On close, minimize instead of terminating</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="MinimizeToTrayInsteadOfTaskbar" xml:space="preserve">
     <value>Minimize to tray instead of taskbar</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="MultipleInstances" xml:space="preserve">
     <value>Multiple instances</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="NotChanged" xml:space="preserve">
     <value>Not changed</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="OK" xml:space="preserve">
     <value>OK</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="OpenCalculationViewOnFileLoaded" xml:space="preserve">
     <value>Open the calculation result view after a calculation was loaded</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="PasswordRepeat" xml:space="preserve">
     <value>Repeat password</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="PasswordsDoNotMatch" xml:space="preserve">
     <value>Passwords do not match!</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Repeat" xml:space="preserve">
     <value>Repeat</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="SettingsFileNotFoundOrCorrupted" xml:space="preserve">
     <value>The setting file could not be found or was corrupted.</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="SettingsReseted" xml:space="preserve">
     <value>Settings have been reset</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Show" xml:space="preserve">
     <value>Show</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="ShowFollowingApplicationOnStartup" xml:space="preserve">
     <value>Show the following application on startup</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="SkipAndUsePersonalVersion" xml:space="preserve">
     <value>Skip, I will use the personal version</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="StartupApplication" xml:space="preserve">
     <value>Startup Application</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Tray" xml:space="preserve">
     <value>Tray</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Username" xml:space="preserve">
     <value>Username</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="VisibleApplications" xml:space="preserve">
     <value>Visible Applications</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="VisibleApplicationsInTheBar" xml:space="preserve">
     <value>Visible Applications In The Bar</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Window" xml:space="preserve">
     <value>Window</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DeactivateLicense" xml:space="preserve">
     <value>Deactivate license</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DeleteLicense" xml:space="preserve">
     <value>Delete license</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DeleteLicenseMessage" xml:space="preserve">
     <value>Are you absolutely sure that you want to remove the current license from this instance? You need to re-activate it again to get the Pro features back. Proceed?</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DeleteLicenses" xml:space="preserve">
     <value>Delete licenses</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DialogDeleteLicenseFailedContent" xml:space="preserve">
     <value>Your license couldn't be removed. Please try again or contact our support.</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DialogDeleteLicenseFailedHeadline" xml:space="preserve">
     <value>License removal failed</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DialogLicenseActivationFailedContent" xml:space="preserve">
     <value>Your license key is either invalid or the activation server is offline. If you have problems to activate your license, please contact our support!</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DialogLicenseActivationFailedHeadline" xml:space="preserve">
     <value>License activation failed</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DialogLicenseActivationSucceededContent" xml:space="preserve">
     <value>Your license key is valid and activated for this instance.</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DialogLicenseActivationSucceededHeadline" xml:space="preserve">
     <value>License activated successfully</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DialogLicenseFormatInvalidFormatedContent" xml:space="preserve">
     <value>The provided license format is invalid! Either enter a license from {0} or a purchase code from {1}!</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DialogLicenseFormatInvalidHeadline" xml:space="preserve">
     <value>Invalid license format</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="GoPro" xml:space="preserve">
     <value>Go Pro now!</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Invalid" xml:space="preserve">
     <value>Invalid</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="LastLicenseCheck" xml:space="preserve">
     <value>Last license check:</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="LicenseState" xml:space="preserve">
     <value>License state:</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="MasterPassword" xml:space="preserve">
     <value>Master password</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="NoLicenseActivatedYet" xml:space="preserve">
     <value>No license set for this instance. Please click the button below to activate your pro version now!</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="ProOnlyFunction" xml:space="preserve">
     <value>This is a pro-only function. Upgrade to the pro version now to unlock this feature!</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="ResetLicensesMessage" xml:space="preserve">
     <value>Reset license?</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="SearchedSettingsNotFound" xml:space="preserve">
     <value>Searched settings not found</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="SetMasterPassword" xml:space="preserve">
     <value>Set the master password</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="SettingsGroupLicense" xml:space="preserve">
     <value>License</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="SettingsNameLicense" xml:space="preserve">
     <value>License</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Valid" xml:space="preserve">
     <value>Valid</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="WrongPassword" xml:space="preserve">
     <value>Wrong password</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="WrongPasswordDecryptionFailedMessage" xml:space="preserve">
     <value>The decryption failed due to a wrong password.</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="YourLicenseInformation" xml:space="preserve">
     <value>Your license information</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DialogGcodeFileSentFailedFormatedContent" xml:space="preserve">
     <value>The gcode file '{0}' couldn't be sent to your Repetier Server Pro! Please check your Repetier Server Pro settings and try again or contact our support.</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogGcodeFileSentFailedHeadline" xml:space="preserve">
     <value>Gcode sending failed</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogGcodeFileSentSuccessfullyFormatedContent" xml:space="preserve">
     <value>The gcode file '{0}' was sent successfully to your Repetier Server Pro!</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogGcodeFileSentSuccessfullyHeadline" xml:space="preserve">
     <value>Gcode was sent successfully</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogGoProContent" xml:space="preserve">
     <value>We will re-direct you to our store... Thank you for considering an upgrade!</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DialogGoProHeadline" xml:space="preserve">
     <value>Go Pro now!</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="EnterValidIPAddress" xml:space="preserve">
     <value>Enter a valid formated IP address!</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="EnterValidRepetierApiKey" xml:space="preserve">
     <value>Enter a valid formated Repetier Server Pro API key!</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="LabelAPIKeyRepetierMandatory" xml:space="preserve">
     <value>Your API key*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelIPAdressMandatory" xml:space="preserve">
     <value>IP address*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelPrinterNameMandatory" xml:space="preserve">
     <value>Printer name*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="NoteRepetierServerPrinterName" xml:space="preserve">
     <value>Provide the name as it is shown in your Dashboard. The tool will automatically replace the whitespaces with underscores.</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="SelectGcodeFile" xml:space="preserve">
     <value>Select a .gcode file...</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="SendGcodeToRepetierServerPro" xml:space="preserve">
     <value>Send to your Repetier Server Pro</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="SendTestFile" xml:space="preserve">
     <value>Send test file</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="TooltipApiKeyRepetier" xml:space="preserve">
     <value>The api key...</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="TooltipIPAdressRepetier" xml:space="preserve">
     <value>IP address of your repetier server...</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="TooltipPrinterNameRepetier" xml:space="preserve">
     <value>The name of the printer...</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="ProOnly" xml:space="preserve">
     <value>Locked - Pro Feature</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DialogLicenseDeactivatedRemoteConfirm" xml:space="preserve">
     <value>Yes, activate now</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DialogLicenseDeactivatedRemoteContent" xml:space="preserve">
     <value>Your license was deactivated from your account. Do you want to re-activate it now?</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DialogLicenseDeactivatedRemoteDecline" xml:space="preserve">
     <value>No, enter new license</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DialogLicenseDeactivatedRemoteHeadline" xml:space="preserve">
     <value>License deactivated remotely</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Documentation" xml:space="preserve">
     <value>Documentation</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Agreed" xml:space="preserve">
     <value>Agreed</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="AgreeToEULA" xml:space="preserve">
     <value>I agree</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="Declined" xml:space="preserve">
     <value>Declined</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="EULA" xml:space="preserve">
     <value>End User License Agreement (EULA)</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="LabelDateOfEULAAgreement" xml:space="preserve">
     <value>Date of agreement:</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="SettingsNameEULA" xml:space="preserve">
     <value>EULA</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="ShowEULA" xml:space="preserve">
     <value>Show EULA</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="UserAgreedToEULA" xml:space="preserve">
     <value>The user has agreed to the End User License Agreement (EULA)</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="UserAgreedToEULAFormated" xml:space="preserve">
     <value>The user has agreed to the End User License Agreement (EULA) on {0}</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="ViewOnline" xml:space="preserve">
     <value>View Online</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DialogLoadCalculationFailedContent" xml:space="preserve">
     <value>Sadly the loading of your selected calculation file failed. Please try again or contact our support for further assistance!</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogLoadCalculationFailedHeadline" xml:space="preserve">
     <value>Loading failed</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogSaveCalculationFailedContent" xml:space="preserve">
     <value>Sadly the saving of your calculation file failed. Please try again or contact our support for further assistance!</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogSaveCalculationFailedHeadline" xml:space="preserve">
     <value>Saving failed</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Edit" xml:space="preserve">
     <value>Edit</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="CheckLicense" xml:space="preserve">
     <value>Check license</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="EditPrinter" xml:space="preserve">
     <value>Edit printer</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="SaveChanges" xml:space="preserve">
     <value>Save changes</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DialogDeleteSelectedMaterialsContent" xml:space="preserve">
     <value>Are you sure that you want to delete the selected material(s)? This cannot be undone!</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogDeleteSelectedMaterialsHeadline" xml:space="preserve">
     <value>Delete selected material(s)</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogDeleteSelectedPrintersContent" xml:space="preserve">
     <value>Are you sure that you want to delete the selected printer(s)? This cannot be undone!</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogDeleteSelectedPrintersHeadline" xml:space="preserve">
     <value>Delete selected printer(s)</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogDeleteSelectedWorkstepsContent" xml:space="preserve">
     <value>Are you sure that you want to delete the selected workstep(s)? This cannot be undone!</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogDeleteSelectedWorkstepsHeadline" xml:space="preserve">
     <value>Delete selected workstep(s)</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="EditMaterial" xml:space="preserve">
     <value>Edit material</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="EditWorkstep" xml:space="preserve">
     <value>Edit workstep</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogDeleteSelectedMHRsContent" xml:space="preserve">
     <value>Are you sure that you want to delete the selected Machine-Hour-Rating(s)? This cannot be undone!</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogDeleteSelectedMHRsHeadline" xml:space="preserve">
     <value>Delete selected Machine-Hour-Rating(s)</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogMHRSavedSuccessfullyContent" xml:space="preserve">
     <value>The Machine-Hour-Rating was saved successfully. You can now assign it for your printers.</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogMHRSavedSuccessfullyHeadline" xml:space="preserve">
     <value>Machine-Hour-Rating saved successfully</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="EditMHR" xml:space="preserve">
     <value>Edit Machine-Hour-Rate</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelCalculationTimebaseMandatory" xml:space="preserve">
     <value>Calculation timebase*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LabelMachineHoursPerMonthMandatory" xml:space="preserve">
     <value>Machine-Hours per month*:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogLicenseCheckFailedContent" xml:space="preserve">
     <value>Your license key is deactivated or expired for this instance. Pro functions will be deactivated.</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DialogLicenseCheckFailedHeadline" xml:space="preserve">
     <value>License check failed</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DialogLicenseCheckSucceededContent" xml:space="preserve">
     <value>Your license key is valid and active for this instance.</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="DialogLicenseCheckSucceededHeadline" xml:space="preserve">
     <value>License check succeeded</value>
+    <comment>AppBaseTemplate</comment>
   </data>
   <data name="EnergyCosts" xml:space="preserve">
     <value>Energy Costs</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="InterestRate" xml:space="preserve">
     <value>Interest Rate</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="LocationCosts" xml:space="preserve">
     <value>Location Costs</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="MachineHours" xml:space="preserve">
     <value>Machine Hours</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="MaintainanceAndRepairCosts" xml:space="preserve">
     <value>Maintainance &amp; Repair Costs</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="ReplacementCosts" xml:space="preserve">
     <value>Replacement Costs</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="DialogGcodeReadErrorFormatedContent" xml:space="preserve">
     <value>An unexpected error has occurred while reading your gcode file. If the error persists, please contact our support and send your gcode file to '{0}'</value>
@@ -1538,6 +1923,7 @@
   </data>
   <data name="AccumulatedPriceLabel" xml:space="preserve">
     <value>Accumulated Price:</value>
+    <comment>0.0.1-beta</comment>
   </data>
   <data name="Chamber" xml:space="preserve">
     <value>Chamber</value>
@@ -3839,9 +4225,6 @@
     <value>Voxelizer 2</value>
     <comment>0.0.9-beta</comment>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value />
-  </data>
   <data name="LabelDefaultWorkstepsForCalculation" xml:space="preserve">
     <value>Default worksteps for calculations:</value>
     <comment>0.0.9-beta</comment>
@@ -4849,5 +5232,381 @@
   <data name="LabelPrintTimeCorrectionValue" xml:space="preserve">
     <value>Print time correction factor:</value>
     <comment>1.1.5-beta</comment>
+  </data>
+  <data name="CraftWare" xml:space="preserve">
+    <value>CraftWare</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="HandlingFee" xml:space="preserve">
+    <value>Handling fee</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="Margin" xml:space="preserve">
+    <value>Margin</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="Tax" xml:space="preserve">
+    <value>Tax</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="ApplyProcedureSpecificAdditions" xml:space="preserve">
+    <value>Apply procedure specific additions?</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="InfoProcedureSpecificAdditions" xml:space="preserve">
+    <value>Some procedures have specific methods needed to be taken into account for the calculation. For instance in SLS there is a material refreshing. In this section you can set those special additions (if available).</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="LabelSelectTargetProcedure" xml:space="preserve">
+    <value>Select procedure:</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="Procedure" xml:space="preserve">
+    <value>Procedure</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="ProcedureSpecific" xml:space="preserve">
+    <value>Procedure specific</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="TakeRefreshIntoAccount" xml:space="preserve">
+    <value>Take refreshing into account?</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="DialogProcedureSpecificCalculationIsMissingDataFormatedContent" xml:space="preserve">
+    <value>You selected procedure specific additions for the material family '{0}', however you have not selected a printer and / or a material specified with this material family. Please select a matching printer / material or deactivate the procedure specific additions in the 'Procedure' tab.</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="DialogProcedureSpecificCalculationIsMissingDataHeadline" xml:space="preserve">
+    <value>Procedure specific additions are missing data</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="Fill" xml:space="preserve">
+    <value>Fill</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="InfoFactorToCalculateWeightOutOfLiterOrMililiter" xml:space="preserve">
+    <value>This factor is needed if you add liter / milliliter instead of g or kg. The tool needs to know how much liter a kg has. For instance your powder is 2kg and the volume in liter is 4l, enter 2 (1kg = 2l)</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="LabelFactorLiterToKgMandatory" xml:space="preserve">
+    <value>Factor liter to kg:*</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="LabelMinPowderInBuildAreaMandatory" xml:space="preserve">
+    <value>Powder in build area:*</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="LabelRefreshedMaterial" xml:space="preserve">
+    <value>Refreshed material:</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="LabelRefreshRateMandatory" xml:space="preserve">
+    <value>Refresh rate:*</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="NoAdditionsAvailableYetForThisProcedureDots" xml:space="preserve">
+    <value>No special additions available for this procedure...</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="RefreshRateIsTakenFromMaterial" xml:space="preserve">
+    <value>The refresh rate will be taken from the corresponding material, if specified.</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="ToolTip_EnterMinimumPowderNeededInBuildArea" xml:space="preserve">
+    <value>Enter the min. powder needed here (liter)</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="InfoPowderRefreshing" xml:space="preserve">
+    <value>This takes the powder needed for refreshing, additionally to the powder needed for the object to print, into account. Add the minimum needed powder for the print job. The tool will calculate the refreshed material like: (min. powder in printer - powder for object) * refresh rate set for the material used.</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="Gloves" xml:space="preserve">
+    <value>Gloves</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelAmountOfGlovesInPackage" xml:space="preserve">
+    <value>Gloves in package:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelCalculatedPricePerGlove" xml:space="preserve">
+    <value>Price per glove:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelCalculatedPricePerLiterIsopropanol" xml:space="preserve">
+    <value>Price per liter:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelConentOfIsopropanolInContainer" xml:space="preserve">
+    <value>Content in container:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelContainerPrice" xml:space="preserve">
+    <value>Container price</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelCuringDuration" xml:space="preserve">
+    <value>Curing duration:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelGlovesPackagePrice" xml:space="preserve">
+    <value>Price of gloves package:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelGlovesPerJob" xml:space="preserve">
+    <value>Gloves needed per job:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelIsopropanolContainerPrice" xml:space="preserve">
+    <value>Prive of isopropanol container:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelPackagePrice" xml:space="preserve">
+    <value>Package price:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelPricePerMinute" xml:space="preserve">
+    <value>Price per minute:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelUsedIsopropanol" xml:space="preserve">
+    <value>Used isopropanol:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="TakeCuringCostsIntoAccount" xml:space="preserve">
+    <value>Take the costs for curing into account?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="TakeGlovesCostIntoAccount" xml:space="preserve">
+    <value>Take the costs of the gloves into account?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="TakeWashingIntoAccount" xml:space="preserve">
+    <value>Take the costs for washing into account?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Liter" xml:space="preserve">
+    <value>Liter</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Milliliter" xml:space="preserve">
+    <value>Milliliter</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="DialogStlFileFaildToBeDisplayedFormatedContent" xml:space="preserve">
+    <value>The stl file '{0}' is too big or has to many details to be displayed in the viewer. This is a limitation of the used thirdparty library.</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="DialogStlFileFailedToBeDisplayedHeadline" xml:space="preserve">
+    <value>Stl file has to many details</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Filters" xml:space="preserve">
+    <value>Filters</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelAmountOfFiltersInPackage" xml:space="preserve">
+    <value>Filters in package:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelFiltersPackagePrice" xml:space="preserve">
+    <value>Price of filter package:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelFiltersPerJob" xml:space="preserve">
+    <value>Filters per job:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="TakeFilterCostIntoAccount" xml:space="preserve">
+    <value>Take the costs for filter (resin, isporpanol) into accont?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="CreateNewCalculationWhenClickingCalculateButton" xml:space="preserve">
+    <value>Create a new calculation when clicking the calculate button?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Calculator" xml:space="preserve">
+    <value>Calculator</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="CuringCosts" xml:space="preserve">
+    <value>Curing costs</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="FilterCosts" xml:space="preserve">
+    <value>Filter costs</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="GloveCosts" xml:space="preserve">
+    <value>Glove costs</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Procedures" xml:space="preserve">
+    <value>Procedures</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="WashingCosts" xml:space="preserve">
+    <value>Washing costs</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Copy</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Cut" xml:space="preserve">
+    <value>Cut</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="ExportDots" xml:space="preserve">
+    <value>Export...</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Paste" xml:space="preserve">
+    <value>Paste</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="AppNameDashboard" xml:space="preserve">
+    <value>Dashboard</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="EventOctoPrintServerInit" xml:space="preserve">
+    <value>OctoPrint server init: {0}</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelWearFactorPerPrintJob" xml:space="preserve">
+    <value>Wear factor per print job:</value>
+    <comment>1.1.18-beta</comment>
+  </data>
+  <data name="TakeNozzleWearCoststIntoAccount" xml:space="preserve">
+    <value>Take the costs of the nozzle wear into account?</value>
+    <comment>1.1.18-beta</comment>
+  </data>
+  <data name="TakePrintSheetWearCostsIntoAccount" xml:space="preserve">
+    <value>Take the costs of the print sheet wear into account?</value>
+    <comment>1.1.18-beta</comment>
+  </data>
+  <data name="Gcodes" xml:space="preserve">
+    <value>Gcodes</value>
+    <comment>1.1.18-beta</comment>
+  </data>
+  <data name="NozzleWearCosts" xml:space="preserve">
+    <value>Nozzle (Wear)</value>
+    <comment>1.1.18-beta</comment>
+  </data>
+  <data name="PrintSheetWearCosts" xml:space="preserve">
+    <value>Print sheet (Wear)</value>
+    <comment>1.1.18-beta</comment>
+  </data>
+  <data name="MaterialCosts" xml:space="preserve">
+    <value>Material costs</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="ModelViewers" xml:space="preserve">
+    <value>Model viewers</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="PrintCosts" xml:space="preserve">
+    <value>Print costs</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="SelectTabContent" xml:space="preserve">
+    <value>Select tab content</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="TabContent" xml:space="preserve">
+    <value>Tab content</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="GcodeViewer" xml:space="preserve">
+    <value>Gcode Viewer</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Rotate3dModelAroundMouseDownPoint" xml:space="preserve">
+    <value>Rotate 3d model arrount mouse down point?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelSelectFilesFromList" xml:space="preserve">
+    <value>Select file(s) from the list</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="SelectGcodesToGetStartedDots" xml:space="preserve">
+    <value>Select gcode to get started...</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="UseSelection" xml:space="preserve">
+    <value>Use selection</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="IncludeAlphaVersions" xml:space="preserve">
+    <value>Include alpha versions?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="IncludeBetaVersions" xml:space="preserve">
+    <value>Included beta versions?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="UseNewUpdateManager" xml:space="preserve">
+    <value>Use new update manager?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="SlicerConfig" xml:space="preserve">
+    <value>Slicer config</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="ToolTip_AddGcodeFromList" xml:space="preserve">
+    <value>Add gcode from list</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="ToolTip_AddSelectedGcodesToCalculation" xml:space="preserve">
+    <value>Add selection to calculation</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="WeightInGramm" xml:space="preserve">
+    <value>Weight in gramm</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="DialogActionNotAllowedHereContent" xml:space="preserve">
+    <value>The action you performed is not allowed or supported here.</value>
+    <comment>v1.2.1</comment>
+  </data>
+  <data name="DialogActionNotAllowedHereHeadline" xml:space="preserve">
+    <value>Action not allowed here</value>
+    <comment>v1.2.1</comment>
+  </data>
+  <data name="ApplyEnhancedMarginCalculationSettings" xml:space="preserve">
+    <value>Apply enhanced margin calculation settings</value>
+    <comment>v1.2.3</comment>
+  </data>
+  <data name="EnhancedMarginCalculationSettings" xml:space="preserve">
+    <value>Enhanced margin calculation settings</value>
+    <comment>v1.2.3</comment>
+  </data>
+  <data name="ExcludeFromMarginCalculation" xml:space="preserve">
+    <value>Exclude from margin calculation</value>
+    <comment>v1.2.3</comment>
+  </data>
+  <data name="ExcludeMaterialCostsFromMarginCalculation" xml:space="preserve">
+    <value>Exclude material costs from margin calculation?</value>
+    <comment>v1.2.3</comment>
+  </data>
+  <data name="ExcludePrinterCostsFromMarginCalculation" xml:space="preserve">
+    <value>Exclude printer costs from margin calculation?</value>
+    <comment>v1.2.3</comment>
+  </data>
+  <data name="ExcludeWorkstepsFromMarginCalculation" xml:space="preserve">
+    <value>Exclude worksteps from margin calculation?</value>
+    <comment>v1.2.3</comment>
+  </data>
+  <data name="TooltipApplyEnhancedMarginCalculationSettings" xml:space="preserve">
+    <value>Here you can adjust the margin calculation and exclude parts from it.</value>
+    <comment>v1.2.3</comment>
+  </data>
+  <data name="FormatNotSupportedAnyMore" xml:space="preserve">
+    <value>The file format '{0}' is deprecated!</value>
+    <comment>v1.2.4</comment>
   </data>
 </root>

@@ -48,19 +48,19 @@ namespace PrintCostCalculator3d.Models
         }
         #endregion
 
-        #region Private Properties
-        private FileState _state = FileState.Fresh;
+        #region Properties
+        FileState _state = FileState.Fresh;
 
-        private int _matches
+        int _matches
         { get; set; }
 
-        private MaterialDesignExtension _iconNew = new MaterialDesignExtension(PackIconMaterialDesignKind.NewReleases)
+        MaterialDesignExtension _iconNew = new MaterialDesignExtension(PackIconMaterialDesignKind.NewReleases)
         {
             Height = 32,
             Width = 32,
         };
-        private MaterialDesignExtension _iconCheckCompleted = new MaterialDesignExtension(PackIconMaterialDesignKind.Check);
-        private MaterialDesignExtension _iconRunCompleted = new MaterialDesignExtension(PackIconMaterialDesignKind.DoneAll);
+        MaterialDesignExtension _iconCheckCompleted = new MaterialDesignExtension(PackIconMaterialDesignKind.Check);
+        MaterialDesignExtension _iconRunCompleted = new MaterialDesignExtension(PackIconMaterialDesignKind.DoneAll);
         #endregion
 
         #region Constructor

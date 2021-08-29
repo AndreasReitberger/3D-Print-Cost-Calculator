@@ -1,25 +1,23 @@
-﻿using log4net;
-using MahApps.Metro.Controls.Dialogs;
-using System;
-using System.Collections.ObjectModel;
-using System.Windows.Input;
+﻿using MahApps.Metro.Controls.Dialogs;
 using PrintCostCalculator3d.Models.Settings;
+using PrintCostCalculator3d.Models.Slicer;
 using PrintCostCalculator3d.Resources.Localization;
 using PrintCostCalculator3d.Utilities;
-using PrintCostCalculator3d.Models.Slicer;
+using System;
+using System.Collections.ObjectModel;
 using System.IO;
+using System.Windows.Input;
 
 namespace PrintCostCalculator3d.ViewModels.Slicer
 {
     class NewSlicerViewModel : ViewModelBase
     {
         #region Variables
-        private readonly IDialogCoordinator _dialogCoordinator;
-        private static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        readonly IDialogCoordinator _dialogCoordinator;
         #endregion
 
         #region Properties
-        private bool _isEdit;
+        bool _isEdit;
         public bool IsEdit
         {
             get => _isEdit;
@@ -32,12 +30,8 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
                 OnPropertyChanged();
             }
         }
-        public bool isLicenseValid
-        {
-            get => false;
-        }
 
-        private Guid _id = Guid.NewGuid();
+        Guid _id = Guid.NewGuid();
         public Guid Id
         {
             get => _id;
@@ -51,7 +45,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             }
         }
 
-        private SlicerName _slicerName = SlicerName.Unkown;
+        SlicerName _slicerName = SlicerName.Unkown;
         public SlicerName SlicerName
         {
             get => _slicerName;
@@ -65,7 +59,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             }
         }
         
-        private SlicerViewManager.Group _slicergroup = SlicerViewManager.Group.GUI;
+        SlicerViewManager.Group _slicergroup = SlicerViewManager.Group.GUI;
         public SlicerViewManager.Group SlicerGroup
         {
             get => _slicergroup;
@@ -79,7 +73,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             }
         }
 
-        private string _slicerPath = string.Empty;
+        string _slicerPath = string.Empty;
         public string SlicerPath
         {
             get => _slicerPath;
@@ -92,7 +86,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
                 }
             }
         }
-        private string _downloadUri = string.Empty;
+        string _downloadUri = string.Empty;
         public string DownloadUri
         {
             get => _downloadUri;
@@ -129,6 +123,8 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             SaveCommand = new RelayCommand(p => saveCommand(this));
             CancelCommand = new RelayCommand(p => cancelHandler(this));
 
+            IsLicenseValid = false;
+
             Slicers.CollectionChanged += Slicers_CollectionChanged;
 
             IsEdit = slicer != null;
@@ -157,7 +153,9 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
         {
             SaveCommand = new RelayCommand(p => saveCommand(this));
             CancelCommand = new RelayCommand(p => cancelHandler(this));
-            this._dialogCoordinator = dialogCoordinator;
+            _dialogCoordinator = dialogCoordinator;
+
+            IsLicenseValid = false;
 
             Slicers.CollectionChanged += Slicers_CollectionChanged;
 
@@ -201,12 +199,10 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
             }
         }
 
-        
-
         #endregion
 
         #region Events
-        private void Slicers_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        void Slicers_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
             SettingsManager.Save();
             OnPropertyChanged(nameof(Slicers));
@@ -218,7 +214,7 @@ namespace PrintCostCalculator3d.ViewModels.Slicer
         {
             get => new RelayCommand(p => BrowseSlicerAppAction());
         }
-        private async void BrowseSlicerAppAction()
+        async void BrowseSlicerAppAction()
         {
             try
             {

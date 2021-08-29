@@ -6,7 +6,6 @@
 
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
              xmlns:Models="clr-namespace:PrintCostCalculator3d.Models.Slicer"
-             xmlns:converters="clr-namespace:PrintCostCalculator3d.Converters"
              xmlns:localization="clr-namespace:PrintCostCalculator3d.Resources.Localization"
              
              mc:Ignorable="d" 

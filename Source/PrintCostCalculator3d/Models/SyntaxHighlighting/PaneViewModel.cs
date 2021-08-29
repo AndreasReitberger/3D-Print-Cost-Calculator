@@ -5,7 +5,7 @@ using PrintCostCalculator3d.Utilities;
 
 namespace PrintCostCalculator3d.Models.SyntaxHighlighting
 {
-    class PaneViewModel : ViewModelBase
+    public class PaneViewModel : ViewModelBase
     {
         public PaneViewModel()
         { }
@@ -13,7 +13,7 @@ namespace PrintCostCalculator3d.Models.SyntaxHighlighting
 
         #region Title
 
-        private string _title = null;
+        string _title = null;
         public string Title
         {
             get { return _title; }
@@ -37,7 +37,7 @@ namespace PrintCostCalculator3d.Models.SyntaxHighlighting
 
         #region ContentId
 
-        private string _contentId = null;
+        string _contentId = null;
         public string ContentId
         {
             get { return _contentId; }
@@ -55,7 +55,7 @@ namespace PrintCostCalculator3d.Models.SyntaxHighlighting
 
         #region IsSelected
 
-        private bool _isSelected = false;
+        bool _isSelected = false;
         public bool IsSelected
         {
             get { return _isSelected; }
@@ -73,7 +73,7 @@ namespace PrintCostCalculator3d.Models.SyntaxHighlighting
 
         #region IsActive
 
-        private bool _isActive = false;
+        bool _isActive = false;
         public bool IsActive
         {
             get { return _isActive; }

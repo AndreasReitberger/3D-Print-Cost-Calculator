@@ -1,12 +1,11 @@
-﻿using PrintCostCalculator3d.Models.Settings;
+﻿using MahApps.Metro.Controls.Dialogs;
+using PrintCostCalculator3d.Models.Settings;
+using PrintCostCalculator3d.Resources.Localization;
 using PrintCostCalculator3d.Utilities;
-using MahApps.Metro.Controls.Dialogs;
 using System;
 using System.IO;
 using System.Reflection;
 using System.Windows.Input;
-using log4net;
-using PrintCostCalculator3d.Resources.Localization;
 
 namespace PrintCostCalculator3d.ViewModels
 {
@@ -14,12 +13,11 @@ namespace PrintCostCalculator3d.ViewModels
     class AgreeEulaDialogViewModel : ViewModelBase
     {
         #region Variables
-        private readonly IDialogCoordinator _dialogCoordinator;
-        private static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        readonly IDialogCoordinator _dialogCoordinator;
         #endregion
 
         #region Properties
-        private Guid _id = Guid.NewGuid();
+        Guid _id = Guid.NewGuid();
         public Guid Id
         {
             get => _id;
@@ -33,35 +31,35 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _eula;
+        bool _eula;
         public bool EULA
         {
-            get => SettingsManager.Current.AgreedEULA;
+            get => _eula;
             set
             {
-                if (SettingsManager.Current.AgreedEULA != value)
-                {
+                if (_eula == value) return;
+                if (!IsLoading)
                     SettingsManager.Current.AgreedEULA = value;
-                    OnPropertyChanged();
-                }
+                _eula = value;
+                OnPropertyChanged();              
             }
         }
 
-        private DateTime _eulaDate;
+        DateTime _eulaDate = DateTime.Now;
         public DateTime EULADate
         {
-            get => SettingsManager.Current.AgreedEULAOn;
+            get => _eulaDate;
             set
             {
-                if (SettingsManager.Current.AgreedEULAOn != value)
-                {
+                if (_eulaDate == value) return;
+                if(!IsLoading!)
                     SettingsManager.Current.AgreedEULAOn = value;
-                    OnPropertyChanged();
-                }
+                _eulaDate = value;
+                OnPropertyChanged();
             }
         }
 
-        private string _eulaContent = string.Empty;
+        string _eulaContent = string.Empty;
         public string EULAContent
         {
             get => _eulaContent;
@@ -74,32 +72,38 @@ namespace PrintCostCalculator3d.ViewModels
 
         #endregion
 
-        #region Constructor
+        #region Constructor, LoadSettings
         public AgreeEulaDialogViewModel(Action<AgreeEulaDialogViewModel> saveCommand, Action<AgreeEulaDialogViewModel> cancelHandler)
         {
             SaveCommand = new RelayCommand(p => saveCommand(this));
             CancelCommand = new RelayCommand(p => cancelHandler(this));
 
+            IsLoading = true;
             LoadSettings();
+            IsLoading = false;
+
             logger.Info(string.Format(Strings.EventViewInitFormated, this.GetType().Name));
         }
         public AgreeEulaDialogViewModel(Action<AgreeEulaDialogViewModel> saveCommand, Action<AgreeEulaDialogViewModel> cancelHandler, IDialogCoordinator dialogCoordinator)
         {
             SaveCommand = new RelayCommand(p => saveCommand(this));
             CancelCommand = new RelayCommand(p => cancelHandler(this));
-            this._dialogCoordinator = dialogCoordinator;
+            _dialogCoordinator = dialogCoordinator;
 
+            IsLoading = true;
             LoadSettings();
+            IsLoading = false;
+
             logger.Info(string.Format(Strings.EventViewInitFormated, this.GetType().Name));
         }
 
-        private void LoadSettings()
+        void LoadSettings()
         {
             try
             {
-                EULAContent = File.ReadAllText(
-                    Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), GlobalStaticConfiguration.eulaLocalPath)
-                    );
+                EULA = SettingsManager.Current.AgreedEULA;
+                EULADate = SettingsManager.Current.AgreedEULAOn;
+                EULAContent = File.ReadAllText(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), GlobalStaticConfiguration.eulaLocalPath));
             }
             catch (Exception)
             {

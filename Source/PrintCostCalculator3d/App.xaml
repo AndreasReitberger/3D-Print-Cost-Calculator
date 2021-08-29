@@ -22,6 +22,9 @@
                 <!-- Dragablz -->
                 <ResourceDictionary Source="pack://application:,,,/Dragablz;component/Themes/MahApps.xaml" />
 
+                <!-- Context menu (import berfore styles)-->
+                <ResourceDictionary Source="/Resources/ContextMenu/ContextMenu.xaml" />
+                
                 <!-- Control templates (import before styles) -->
                 <ResourceDictionary Source="/Resources/Templates/ValidationErrorTemplates.xaml" />
 

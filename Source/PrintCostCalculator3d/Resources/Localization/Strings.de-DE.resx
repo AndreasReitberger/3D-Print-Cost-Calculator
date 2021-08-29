@@ -165,10 +165,6 @@
     <value>Leeren</value>
     <comment>0.0.1-beta</comment>
   </data>
-  <data name="CreateCopies" xml:space="preserve">
-    <value>Kopien erstellen</value>
-    <comment>0.0.1-beta</comment>
-  </data>
   <data name="HeaderFixCostsPerYear" xml:space="preserve">
     <value>Fixkosten / Jahr</value>
     <comment>0.0.1-beta</comment>
@@ -262,12 +258,6 @@
   <data name="LabelReplacemenCostsManadatory" xml:space="preserve">
     <value>Wiederanschaffungskosten*:</value>
   </data>
-  <data name="LabelReplaceWith" xml:space="preserve">
-    <value>Ersetzen mit:</value>
-  </data>
-  <data name="LabelSearchFor" xml:space="preserve">
-    <value>Suche nach:</value>
-  </data>
   <data name="LabelSelectedFiles" xml:space="preserve">
     <value>Ausgewählte Datei(en):</value>
   </data>
@@ -297,12 +287,6 @@
   </data>
   <data name="Reorder" xml:space="preserve">
     <value>Nachbestellen</value>
-  </data>
-  <data name="RunChecker" xml:space="preserve">
-    <value>Vorabprüfung starten</value>
-  </data>
-  <data name="RunSearchAndReplace" xml:space="preserve">
-    <value>Suchen und Ersetzen starten</value>
   </data>
   <data name="SaveCalculation" xml:space="preserve">
     <value>Kalkulation speichern</value>
@@ -527,10 +511,6 @@
   </data>
   <data name="AppNameNotFound" xml:space="preserve">
     <value>Diese App exisitiert nicht!</value>
-    <comment>0.0.1-beta</comment>
-  </data>
-  <data name="AppNameSubversionServer" xml:space="preserve">
-    <value>SVN</value>
     <comment>0.0.1-beta</comment>
   </data>
   <data name="GcodeParserNote" xml:space="preserve">
@@ -4136,5 +4116,381 @@
   <data name="LabelPrintTimeCorrectionValue" xml:space="preserve">
     <value>Druckzeit-Korrekturfaktor:</value>
     <comment>1.1.5-beta</comment>
+  </data>
+  <data name="CraftWare" xml:space="preserve">
+    <value>CraftWare</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="HandlingFee" xml:space="preserve">
+    <value>Handlungspauschale</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="Margin" xml:space="preserve">
+    <value>Gewinn</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="Tax" xml:space="preserve">
+    <value>Steuer</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="ApplyProcedureSpecificAdditions" xml:space="preserve">
+    <value>Verfahrensspezifische Zusätze anwenden?</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="DialogProcedureSpecificCalculationIsMissingDataFormatedContent" xml:space="preserve">
+    <value>Du hast die verfahrensspezifischen Zusätze für die Materialfamiliy '{0}' aktiviert, jedoch keinen Drucker und / oder Material ausgewählt, welcher dieser Materialfamilie zugeordnet ist. Bitte wähle einen passenden Drucker / passendes Material aus oder deaktiviere die verfahrensspezifischen Zusätze unter dem 'Verfahren'-Tab.</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="DialogProcedureSpecificCalculationIsMissingDataHeadline" xml:space="preserve">
+    <value>Verfahrensspezifische Zusätze fehlt es an Daten</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="Fill" xml:space="preserve">
+    <value>Vollfüllen</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="InfoFactorToCalculateWeightOutOfLiterOrMililiter" xml:space="preserve">
+    <value>Dieser Faktor ist nötig, wenn du Liter / Milliliter anstatt von Gramm oder Kilogramm wählst. Die Software muss wissen, wie viel Liter einem Kilogramm entsprechen. Zum Beispiel, wenn das Pulver 2kg wiegt und 4l Volumen hat, dann gibst du 2 ein (1kg = 2l)</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="InfoProcedureSpecificAdditions" xml:space="preserve">
+    <value>Einige Verfahren benötigen bestimmte Maßnahmen, welche in der Berechnung des Preises berücksichtigt werden müssen. Zum Beispiel beim SLS-Verfahren. Hier gibt es die Materialauffrischung. In diesem Bereich kannst du diese speziellen Zusätze aktivieren (falls verfügbar).</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="LabelFactorLiterToKgMandatory" xml:space="preserve">
+    <value>Umrechnung Liter zu kg:*</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="LabelMinPowderInBuildAreaMandatory" xml:space="preserve">
+    <value>Pulver in Bauraum:*</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="LabelRefreshedMaterial" xml:space="preserve">
+    <value>Aufgefrischtes Material:</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="LabelRefreshRateMandatory" xml:space="preserve">
+    <value>Auffrischungsrate:*</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="LabelSelectTargetProcedure" xml:space="preserve">
+    <value>Verfahren wählen:</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="NoAdditionsAvailableYetForThisProcedureDots" xml:space="preserve">
+    <value>Bis jetzt keine speziellen Zusätze für dieses Verfahren verfügbar...</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="Procedure" xml:space="preserve">
+    <value>Verfahren</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="ProcedureSpecific" xml:space="preserve">
+    <value>Verfahrensspezifisch</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="RefreshRateIsTakenFromMaterial" xml:space="preserve">
+    <value>Die Auffrischungsrate wird vom ausgewählten Material genommen, sofern angegeben.</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="TakeRefreshIntoAccount" xml:space="preserve">
+    <value>Auffrischung berücksichtigen?</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="ToolTip_EnterMinimumPowderNeededInBuildArea" xml:space="preserve">
+    <value>Gib die Mindestmenge an Pulver hier ein (Liter)</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="InfoPowderRefreshing" xml:space="preserve">
+    <value>Dies berücksichtigt das zum Auffrischen benötigte Pulver zusätzlich zu dem Pulver, das zum Drucken des Objekts benötigt wird. Gib das für den Druckauftrag mindestens benötigte Pulver an. Das Tool berechnet das aufgefrischte Material wie folgt: (Min. Pulver im Drucker - Pulver für Objekt) * Aktualisierungsrate für das verwendete Material eingestellt.</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="AppNameDashboard" xml:space="preserve">
+    <value>Dashboard</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Calculator" xml:space="preserve">
+    <value>Rechner</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Kopieren</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="CreateNewCalculationWhenClickingCalculateButton" xml:space="preserve">
+    <value>Erstelle eine neue Kalkulation, wenn der Berechnen-Button gedrückt wird?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="CuringCosts" xml:space="preserve">
+    <value>Belichtungskosten</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Cut" xml:space="preserve">
+    <value>Ausschneiden</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="DialogStlFileFaildToBeDisplayedFormatedContent" xml:space="preserve">
+    <value>Die Stl-Datei '{0}' ist zu groß oder hat zu viele Details für den Viewer. Das ist eine Begrenzung der verwendeten Drittanbieter-Softwarelösung.</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="DialogStlFileFailedToBeDisplayedHeadline" xml:space="preserve">
+    <value>Stl-Datei hat zu viele Details</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="EventOctoPrintServerInit" xml:space="preserve">
+    <value>OctoPrint Server initialisiert: {0}</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="ExportDots" xml:space="preserve">
+    <value>Exportieren...</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="FilterCosts" xml:space="preserve">
+    <value>Filterkosten</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Filters" xml:space="preserve">
+    <value>Filter</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Gcodes" xml:space="preserve">
+    <value>Gcodes</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="GcodeViewer" xml:space="preserve">
+    <value>Gcode-Viewer</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="GloveCosts" xml:space="preserve">
+    <value>Handschukosten</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Gloves" xml:space="preserve">
+    <value>Handschuhe</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="IncludeAlphaVersions" xml:space="preserve">
+    <value>Alpha-Versionen inkludieren?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="IncludeBetaVersions" xml:space="preserve">
+    <value>Beta-Versionen inkludieren?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelAmountOfFiltersInPackage" xml:space="preserve">
+    <value>Filter in Packung:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelAmountOfGlovesInPackage" xml:space="preserve">
+    <value>Handschuhe im Packung:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelCalculatedPricePerGlove" xml:space="preserve">
+    <value>Preis pro Handschuh:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelCalculatedPricePerLiterIsopropanol" xml:space="preserve">
+    <value>Preis pro Liter:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelConentOfIsopropanolInContainer" xml:space="preserve">
+    <value>Inhalt in Behältnis:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelContainerPrice" xml:space="preserve">
+    <value>Behähltniskosten:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelCuringDuration" xml:space="preserve">
+    <value>Aushärtedauer:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelFiltersPackagePrice" xml:space="preserve">
+    <value>Kosten für Filterpackung:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelFiltersPerJob" xml:space="preserve">
+    <value>Filters pro Auftrag:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelGlovesPackagePrice" xml:space="preserve">
+    <value>Preis für Handschuh-Packung:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelGlovesPerJob" xml:space="preserve">
+    <value>Handschuhe pro Auftrag:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelIsopropanolContainerPrice" xml:space="preserve">
+    <value>Kosten für Isopropanolbehältnis:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelPackagePrice" xml:space="preserve">
+    <value>Packungspreis:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelPricePerMinute" xml:space="preserve">
+    <value>Preis pro Minute:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelSelectFilesFromList" xml:space="preserve">
+    <value>Datei(en) aus der Liste wählen</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelUsedIsopropanol" xml:space="preserve">
+    <value>Verbauchtes Isopropanol:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelWearFactorPerPrintJob" xml:space="preserve">
+    <value>Abnutzungsfaktor pro Druckauftrag:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Liter" xml:space="preserve">
+    <value>Liter</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="MaterialCosts" xml:space="preserve">
+    <value>Materialkosten</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Milliliter" xml:space="preserve">
+    <value>Milliliter</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="ModelViewers" xml:space="preserve">
+    <value>Modell-Viewers</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="NozzleWearCosts" xml:space="preserve">
+    <value>Düse (Abnutzung)</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Paste" xml:space="preserve">
+    <value>Einfügen</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="PrintCosts" xml:space="preserve">
+    <value>Druckkosten</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="PrintSheetWearCosts" xml:space="preserve">
+    <value>Druckbett (Abnutzung)</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Procedures" xml:space="preserve">
+    <value>Verfahren</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Rotate3dModelAroundMouseDownPoint" xml:space="preserve">
+    <value>3D-Modell um gehaltene Maustaste herum drehen?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="SelectGcodesToGetStartedDots" xml:space="preserve">
+    <value>Wähle einen Gcode um zu beginnen...</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="SelectTabContent" xml:space="preserve">
+    <value>Tab-Inhalt auswählen</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="SetLoadedCalculationAutomaticallyAsSelected" xml:space="preserve">
+    <value>Geladene Kalkulationen automatisch als aktive Kalkulation setzen?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="SlicerConfig" xml:space="preserve">
+    <value>Slicer-Konfig</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="TabContent" xml:space="preserve">
+    <value>Tab-Inhalt</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="TakeCuringCostsIntoAccount" xml:space="preserve">
+    <value>Kosten für Aushärten mit berücksichtigen?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="TakeFilterCostIntoAccount" xml:space="preserve">
+    <value>Kosten für Filter (Resin, Isopropanol) mit berücksichtigen?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="TakeGlovesCostIntoAccount" xml:space="preserve">
+    <value>Kosten für Handschuhe mit berücksichtigen?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="TakeNozzleWearCoststIntoAccount" xml:space="preserve">
+    <value>Kosten für Düsenabnutzung mit berücksichtigen?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="TakePrintSheetWearCostsIntoAccount" xml:space="preserve">
+    <value>Kosten für Druckplattenabnutzung mit berücksichtigen?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="TakeWashingIntoAccount" xml:space="preserve">
+    <value>Kosten für Waschen mit berücksichtigen?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Gesamt</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="UseNewUpdateManager" xml:space="preserve">
+    <value>Neuen Update-Manager verwenden?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="UseSelection" xml:space="preserve">
+    <value>Auswahl verwenden</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="WashingCosts" xml:space="preserve">
+    <value>Waschkosten</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="ToolTip_AddGcodeFromList" xml:space="preserve">
+    <value>Gcode von Liste hinzufügen</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="ToolTip_AddSelectedGcodesToCalculation" xml:space="preserve">
+    <value>Auswahl zur Kalkulation hinzufügen</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="WeightInGramm" xml:space="preserve">
+    <value>Gewicht in Gramm</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="ApplyEnhancedMarginCalculationSettings" xml:space="preserve">
+    <value>Erweiterete Gewinnberechnungs-Einstellungen anwenden</value>
+    <comment>v1.2.3</comment>
+  </data>
+  <data name="DialogActionNotAllowedHereContent" xml:space="preserve">
+    <value>Die Aktion, die du ausgeführt hast, ist hier nicht erlaubt oder unterstützt.</value>
+    <comment>v1.2.1</comment>
+  </data>
+  <data name="DialogActionNotAllowedHereHeadline" xml:space="preserve">
+    <value>Aktion hier nicht erlaubt</value>
+    <comment>v1.2.1</comment>
+  </data>
+  <data name="EnhancedMarginCalculationSettings" xml:space="preserve">
+    <value>Erweiterete Gewinnberechnungs-Einstellungen</value>
+    <comment>v1.2.3</comment>
+  </data>
+  <data name="ExcludeFromMarginCalculation" xml:space="preserve">
+    <value>Aus Gewinnberechnung ausnehmen?</value>
+    <comment>v1.2.3</comment>
+  </data>
+  <data name="ExcludeMaterialCostsFromMarginCalculation" xml:space="preserve">
+    <value>Materialkosten aus der Gewinnberechnung ausnehmen?</value>
+    <comment>v1.2.3</comment>
+  </data>
+  <data name="ExcludePrinterCostsFromMarginCalculation" xml:space="preserve">
+    <value>Druckerkosten aus der Gewinnberechnung ausnehmen?</value>
+    <comment>v1.2.3</comment>
+  </data>
+  <data name="ExcludeWorkstepsFromMarginCalculation" xml:space="preserve">
+    <value>Arbeitsschritte aus der Gewinnberechnung ausnehmen?</value>
+    <comment>v1.2.3</comment>
+  </data>
+  <data name="TooltipApplyEnhancedMarginCalculationSettings" xml:space="preserve">
+    <value>Hier kannst du die Gewinnberechnung anpassen und Elemente ausnehmen.</value>
+    <comment>v1.2.3</comment>
   </data>
 </root>

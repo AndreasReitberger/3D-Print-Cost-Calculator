@@ -221,6 +221,10 @@
     <value>Slicer hinzufügen</value>
     <comment>0.0.7-beta</comment>
   </data>
+  <data name="AddSlicerCommand" xml:space="preserve">
+    <value>Slicer-Befehl hinzufügen</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="AddSupplier" xml:space="preserve">
     <value>Lieferant hinzufügen</value>
     <comment>0.0.1-beta</comment>
@@ -248,6 +252,10 @@
   <data name="AgreeToEULA" xml:space="preserve">
     <value>Ich stimme zu</value>
     <comment>0.0.1-beta</comment>
+  </data>
+  <data name="AllAxis" xml:space="preserve">
+    <value>Alle Achsen</value>
+    <comment>0.1.1-beta</comment>
   </data>
   <data name="AllInformationPerMonth" xml:space="preserve">
     <value>Berechne als pro Monat</value>
@@ -281,9 +289,17 @@
     <value>Energiekosten für Berechnung anwenden?</value>
     <comment>0.0.7-beta</comment>
   </data>
+  <data name="ApplyEnhancedMarginCalculationSettings" xml:space="preserve">
+    <value>Erweiterete Gewinnberechnungs-Einstellungen anwenden</value>
+    <comment>v1.2.3</comment>
+  </data>
   <data name="ApplyManualPrintInformation" xml:space="preserve">
     <value>Manuelle Druck-Informationen anwenden</value>
     <comment>1.1.4-beta</comment>
+  </data>
+  <data name="ApplyProcedureSpecificAdditions" xml:space="preserve">
+    <value>Verfahrensspezifische Zusätze anwenden?</value>
+    <comment>1.1.7-beta</comment>
   </data>
   <data name="ApplyTaxRateToResult" xml:space="preserve">
     <value>Möchtest du einen Steuersatz zu deiner Berechnung hinzufügen?</value>
@@ -313,6 +329,10 @@
     <value>Zusätzliche Arbeitsschritte</value>
     <comment>0.0.1-beta</comment>
   </data>
+  <data name="AppNameDashboard" xml:space="preserve">
+    <value>Dashboard</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="AppNameEventLog" xml:space="preserve">
     <value>Ereignis-Logger</value>
     <comment>0.0.3-beta</comment>
@@ -329,13 +349,13 @@
     <value>Diese App exisitiert nicht!</value>
     <comment>0.0.1-beta</comment>
   </data>
+  <data name="AppNameOctoPrintDashboard" xml:space="preserve">
+    <value>OctoPrint</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="AppNameRepetierServerProDashboard" xml:space="preserve">
     <value>Repetier Server Pro Dashboard</value>
     <comment>0.0.3-beta</comment>
-  </data>
-  <data name="AppNameSubversionServer" xml:space="preserve">
-    <value>SVN</value>
-    <comment>0.0.1-beta</comment>
   </data>
   <data name="AreYouSure" xml:space="preserve">
     <value>Bist du dir sicher?</value>
@@ -364,6 +384,10 @@
   <data name="Attributes" xml:space="preserve">
     <value>Eigenschaften</value>
     <comment>1.1.4-beta</comment>
+  </data>
+  <data name="AutoconnectOnStart" xml:space="preserve">
+    <value>Automatisch bei Serverstart verbinden</value>
+    <comment>0.1.1-beta</comment>
   </data>
   <data name="Back" xml:space="preserve">
     <value>Zurück</value>
@@ -461,6 +485,10 @@
     <value>Kalkulationstyp</value>
     <comment>0.0.1-beta</comment>
   </data>
+  <data name="Calculator" xml:space="preserve">
+    <value>Rechner</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="Cancel" xml:space="preserve">
     <value>Abbrechen</value>
     <comment>0.0.1-beta</comment>
@@ -517,6 +545,10 @@
     <value>Schließen</value>
     <comment>0.0.1-beta</comment>
   </data>
+  <data name="Closed" xml:space="preserve">
+    <value>Geschlossen</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="Color" xml:space="preserve">
     <value>Farbe</value>
     <comment>0.0.1-beta</comment>
@@ -549,6 +581,26 @@
     <value>Verbunden</value>
     <comment>0.0.8-beta</comment>
   </data>
+  <data name="Connecting" xml:space="preserve">
+    <value>Verbindet</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="ConnectingToPrinterDots" xml:space="preserve">
+    <value>Verbinde Drucker...</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="ConnectionInformation" xml:space="preserve">
+    <value>Verbindungsinformation</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="ConnectionSettings" xml:space="preserve">
+    <value>Verbindungseinstellungen</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="ConnectPrinter" xml:space="preserve">
+    <value>Drucker verbinden</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="Continue" xml:space="preserve">
     <value>Fortfahren</value>
     <comment>0.0.7-beta</comment>
@@ -561,13 +613,21 @@
     <value>Startkoordinaten für die Excel-Vorlage</value>
     <comment>0.0.9-beta</comment>
   </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Kopieren</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="CopyEventInformationToClipboard" xml:space="preserve">
     <value>In Zwischenablage kopieren</value>
     <comment>0.0.3-beta</comment>
   </data>
-  <data name="CreateCopies" xml:space="preserve">
-    <value>Kopien erstellen</value>
-    <comment>0.0.1-beta</comment>
+  <data name="CraftWare" xml:space="preserve">
+    <value>CraftWare</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="CreateNewCalculationWhenClickingCalculateButton" xml:space="preserve">
+    <value>Erstelle eine neue Kalkulation, wenn der Berechnen-Button gedrückt wird?</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="CredentialWithThisNameAlreadyExists" xml:space="preserve">
     <value>Zugangsdaten mit diesem Namen existieren bereits!</value>
@@ -576,6 +636,10 @@
   <data name="Cura" xml:space="preserve">
     <value>Ultimaker Cura</value>
     <comment>0.0.7-beta</comment>
+  </data>
+  <data name="CuringCosts" xml:space="preserve">
+    <value>Belichtungskosten</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="CurrencySymbol" xml:space="preserve">
     <value>Währungssymbol</value>
@@ -620,6 +684,10 @@
   <data name="CustomerLastName" xml:space="preserve">
     <value>Kunde - Nachname</value>
     <comment>0.0.9-beta</comment>
+  </data>
+  <data name="Cut" xml:space="preserve">
+    <value>Ausschneiden</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="DatagridView" xml:space="preserve">
     <value>Als DataGrid anzeigen</value>
@@ -693,6 +761,14 @@
     <value>Beschreibung</value>
     <comment>0.0.1-beta</comment>
   </data>
+  <data name="DialogActionNotAllowedHereContent" xml:space="preserve">
+    <value>Die Aktion, die du ausgeführt hast, ist hier nicht erlaubt oder unterstützt.</value>
+    <comment>v1.2.1</comment>
+  </data>
+  <data name="DialogActionNotAllowedHereHeadline" xml:space="preserve">
+    <value>Aktion hier nicht erlaubt</value>
+    <comment>v1.2.1</comment>
+  </data>
   <data name="DialogAddNewAttributeContent" xml:space="preserve">
     <value>Bitte gib den Namen für die neue Eigenschaft unten an.</value>
     <comment>1.1.4-beta</comment>
@@ -709,6 +785,14 @@
     <value>Speichern erfolgreich</value>
     <comment>0.0.1-beta</comment>
   </data>
+  <data name="DialogCancelPrintConent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du den aktuellen Druck abbrechen möchtset? Dies kann nicht rückgängig gemacht werden und dein Druck ist verloren!</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogCancelPrintHeadline" xml:space="preserve">
+    <value>Druck abbrechen</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="DialogCommandCannotBeEmptyOrMissingTheFilepathTagContent" xml:space="preserve">
     <value>Der Befehl darf nicht leer sein und der Dateipfad darf nicht fehlen. Füge mindestens den '[filepath]'-Ausdruck hinzu. Bitte prüfe deinen Befehl und versuche es erneut.</value>
     <comment>0.1.1-beta</comment>
@@ -724,6 +808,14 @@
   <data name="DialogConfirmCloseHeadline" xml:space="preserve">
     <value>Applikation schließen</value>
     <comment>0.0.1-beta</comment>
+  </data>
+  <data name="DialogConnectionFailedFormatContent" xml:space="preserve">
+    <value>Die Verbindung zum Drucker '{0}' ist fehlgeschlagen oder es ist eine Zeitüberschreitung aufgetreten. Bitte überprüfe, ob dein Drucker eingeschaltet und mit dem Server korrekt verbunden ist.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogConnectionFailedHeadline" xml:space="preserve">
+    <value>Verbindung fehlgeschlagen</value>
+    <comment>0.1.1-beta</comment>
   </data>
   <data name="DialogDeleteCalculationContent" xml:space="preserve">
     <value>Bist du dir sicher, dass du diese Kalkulation aus der Liste löschen möchtest?</value>
@@ -885,6 +977,14 @@
     <value>Andere Version herunterladen</value>
     <comment>0.0.8_1-beta</comment>
   </data>
+  <data name="DialogEnterNewFolderNameContent" xml:space="preserve">
+    <value>Gib unten den Namen für den neuen Ordner ein.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogEnterNewFolderNameHeadline" xml:space="preserve">
+    <value>Neuer Ordner</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="DialogErrorWhileExportingContent" xml:space="preserve">
     <value>Es ist ein Fehler beim Verarbeiten der Daten für den Export aufgetreten. Bitte versuche es erneut oder kontaktiere unseren Support.</value>
     <comment>0.0.9-beta</comment>
@@ -933,6 +1033,22 @@
     <value>Dateityp nicht unterstützt</value>
     <comment>0.0.3-beta</comment>
   </data>
+  <data name="DialogFolderNameCannotBeEmptyContent" xml:space="preserve">
+    <value>Der Ordnername darf nicht leer sein.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogFolderNameCannotBeEmptyHeadline" xml:space="preserve">
+    <value>Ungültiger Ordnername</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogGcodeCannotBeSentFormatContent" xml:space="preserve">
+    <value>Der aktuell ausgewählte Gcode '{0}' kann nicht gesendet werden, da dies nur eine OctoPrint-Gcode-Analyse ist und sich die Datei bereits auf dem Server befindet.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogGcodeCannotBeSentHeadline" xml:space="preserve">
+    <value>Gcode kann nicht gesendet werden</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="DialogGcodeFileSentFailedFormatedContent" xml:space="preserve">
     <value>Die GCode-Datei '{0}' konnte nicht an den Repetier Server Pro gesendet werden! Bitte prüfe deine Einstellungen für den Repetier Server Pro und versuche es erneut. Sollte der Fehler bestehen, kontaktiere den Support.</value>
     <comment>0.0.1-beta</comment>
@@ -980,6 +1096,14 @@
   <data name="DialogImportedSlicedGcodeFilesHeadline" xml:space="preserve">
     <value>Gcode-Dateien importieren?</value>
     <comment>0.0.9-beta</comment>
+  </data>
+  <data name="DialogInvalidFileTypeSelectedFormatContent" xml:space="preserve">
+    <value>Du hast einen ungültigen Dateityp '{0}' ausgewählt. Bitte wähle nur eine Datei mit folgenden Dateierweiterungen aus: {1}</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogInvalidFileTypeSelectedHeadline" xml:space="preserve">
+    <value>Ungültiger Dateityp ausgewählt</value>
+    <comment>0.1.1-beta</comment>
   </data>
   <data name="DialogLicenseActivationFailedContent" xml:space="preserve">
     <value>Dein Lizenzschlüssel ist entweder ungültig oder der Aktivierungs-Server ist offline. Wenn du Probleme beim Aktivieren deiner Lizenz hast, kontaktiere bitte unseren Support!</value>
@@ -1069,6 +1193,22 @@
     <value>Kein Druckerprofil gefunden</value>
     <comment>0.1.2-RC</comment>
   </data>
+  <data name="DialogOctoPrintServerNotConfiguredContent" xml:space="preserve">
+    <value>Anscheinend hast du noch keine Informationen für deinen OctoPrint-Server eingegeben. Bitte gehe zur Einstellungsseite und tu dies.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogOctoPrintServerNotConfiguredHeadline" xml:space="preserve">
+    <value>OctoPrint-Server ist nicht konfiguriert</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogOctoPrintServerOfflineContent" xml:space="preserve">
+    <value>Es scheint, dass deine Einstellungen für deinen OctoPrint-Server gültig sind, der Server reagiert jedoch nicht. Bitte überprüfe, ob dein Server läuft und ob die eingegebene IP-Adresse korrekt ist!</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogOctoPrintServerOfflineHeadline" xml:space="preserve">
+    <value>OctoPrint-Server ist offline</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="DialogOpenExternalUriFormatedContent" xml:space="preserve">
     <value>Dies wird den externen Link '{0}' öffnen. Wir haben keinen Einfluss auf den Inhalt dieser Website. Fortfahren?</value>
     <comment>0.0.1-beta</comment>
@@ -1100,6 +1240,22 @@
   <data name="DialogOverwriteSlicerCommandOrSaveAsNewHeadline" xml:space="preserve">
     <value>Slicer-Befehl überschreiben?</value>
     <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogPausePrintContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du den aktuellen Druck pausieren möchtest? Beachte, dass diese Aktion nicht unbeaufsichtigt erfolgen sollte!</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogPausePrintHeadline" xml:space="preserve">
+    <value>Druck pausieren</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogProcedureSpecificCalculationIsMissingDataFormatedContent" xml:space="preserve">
+    <value>Du hast die verfahrensspezifischen Zusätze für die Materialfamiliy '{0}' aktiviert, jedoch keinen Drucker und / oder Material ausgewählt, welcher dieser Materialfamilie zugeordnet ist. Bitte wähle einen passenden Drucker / passendes Material aus oder deaktiviere die verfahrensspezifischen Zusätze unter dem 'Verfahren'-Tab.</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="DialogProcedureSpecificCalculationIsMissingDataHeadline" xml:space="preserve">
+    <value>Verfahrensspezifische Zusätze fehlt es an Daten</value>
+    <comment>1.1.7-beta</comment>
   </data>
   <data name="DialogRemoteControlPrintersFormatContent" xml:space="preserve">
     <value>Willkommen im {0} Kontrollzentrum. Bitte überprüfe immer, ob dein Drucker frei und einsatzbereit ist, wenn du Druckaufträge aus der Ferne startest. Beachte auch, wenn du deine Druckerachse bewegst, dass dies ohne Beschädigung des Druckers möglich ist. Wir und unsere Software haften nicht für Schäden, die durch unbeaufsichtigte Kontrolle verursacht werden!</value>
@@ -1189,6 +1345,14 @@
     <value>Neustart erforderlich</value>
     <comment>0.0.2-beta</comment>
   </data>
+  <data name="DialogResumePrintContent" xml:space="preserve">
+    <value>Bist du dir sicher, dass du den aktuellen Druck fortfahren möchtest? Beachte, dass diese Aktion nicht unbeaufsichtigt erfolgen sollte!</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="DialogResumePrintHeadline" xml:space="preserve">
+    <value>Druck fortfahren</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="DialogRunCalculationFirstContent" xml:space="preserve">
     <value>Um die Kalkulation speichern zu können, klicke zuerst auf dein "Berechnen"-Button oder lade eine vorhandene Kalkulation.</value>
     <comment>0.0.1-beta</comment>
@@ -1253,6 +1417,14 @@
     <value>Slicer-Druckerkonfiguration fehlt</value>
     <comment>1.1.4-beta</comment>
   </data>
+  <data name="DialogStlFileFaildToBeDisplayedFormatedContent" xml:space="preserve">
+    <value>Die Stl-Datei '{0}' ist zu groß oder hat zu viele Details für den Viewer. Das ist eine Begrenzung der verwendeten Drittanbieter-Softwarelösung.</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="DialogStlFileFailedToBeDisplayedHeadline" xml:space="preserve">
+    <value>Stl-Datei hat zu viele Details</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="DialogUpdateMachineHourRateToPrintersFormatedContent" xml:space="preserve">
     <value>Dieser Maschinenstundensatz '{0}' ist mit mindestens einen Drucker verlinkt. Möchtest du die verlinkten Stundensätze ebenfalls aktualisieren?</value>
     <comment>0.1.2-RC</comment>
@@ -1264,6 +1436,10 @@
   <data name="Disconnected" xml:space="preserve">
     <value>Getrennt</value>
     <comment>0.0.8-beta</comment>
+  </data>
+  <data name="DisconnectPrinter" xml:space="preserve">
+    <value>Drucker trennen</value>
+    <comment>0.1.1-beta</comment>
   </data>
   <data name="DLP" xml:space="preserve">
     <value>DLP (Digital Ligh Processing)®</value>
@@ -1357,6 +1533,10 @@
     <value>Slicer bearbeiten</value>
     <comment>0.0.7-beta</comment>
   </data>
+  <data name="EditSlicerCommand" xml:space="preserve">
+    <value>Slicer-Befehl bearbeiten</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="EditSupplier" xml:space="preserve">
     <value>Lieferant bearbeiten</value>
     <comment>0.1.0-beta</comment>
@@ -1384,6 +1564,14 @@
   <data name="EnergyCosts" xml:space="preserve">
     <value>Energiekosten</value>
     <comment>0.0.1-beta</comment>
+  </data>
+  <data name="EnhancedControl" xml:space="preserve">
+    <value>Erweiterte Kontrolle</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="EnhancedMarginCalculationSettings" xml:space="preserve">
+    <value>Erweiterete Gewinnberechnungs-Einstellungen</value>
+    <comment>v1.2.3</comment>
   </data>
   <data name="EnterANameForTheSlicerCommand" xml:space="preserve">
     <value>Bitte gib einen Namen für deinen Slicer-Befehl ein, um diesen später zu identifizieren.</value>
@@ -1529,6 +1717,10 @@
     <value>Der Maschinenstundensatz '{0}' wurde zugeordnet zu: {1}</value>
     <comment>0.0.3-beta</comment>
   </data>
+  <data name="EventOctoPrintServerInit" xml:space="preserve">
+    <value>OctoPrint Server initialisiert: {0}</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="EventOpenFolderFormated" xml:space="preserve">
     <value>Ordner geöffnet: {0}</value>
     <comment>0.0.3-beta</comment>
@@ -1560,6 +1752,10 @@
   <data name="EventUnknownGcodeFoundFormated" xml:space="preserve">
     <value>Unbekannter GCode beim Lesen der Datei entdeckt: {0}</value>
     <comment>0.0.3-beta</comment>
+  </data>
+  <data name="EventUnknownPrintServerFormated" xml:space="preserve">
+    <value>Unbekannter Druckserver zum Hochladen einer Gcode-Datei ausgewählt: {0}</value>
+    <comment>0.1.1-beta</comment>
   </data>
   <data name="EventUnknownSlicerFormated" xml:space="preserve">
     <value>Unbekannter Slicer für den verwendeten GCode: {0}</value>
@@ -1613,6 +1809,22 @@
     <value>Du kannst den Koordinaten in deiner Excel-Vorlage Eigenschaften aus unserem Kalkulationsobjekt zuweisen. Der Exporter schreibt dann die entsprechenden Daten in die bereitgestellte Excel-Vorlagendatei.</value>
     <comment>0.0.9-beta</comment>
   </data>
+  <data name="ExcludeFromMarginCalculation" xml:space="preserve">
+    <value>Aus Gewinnberechnung ausnehmen?</value>
+    <comment>v1.2.3</comment>
+  </data>
+  <data name="ExcludeMaterialCostsFromMarginCalculation" xml:space="preserve">
+    <value>Materialkosten aus der Gewinnberechnung ausnehmen?</value>
+    <comment>v1.2.3</comment>
+  </data>
+  <data name="ExcludePrinterCostsFromMarginCalculation" xml:space="preserve">
+    <value>Druckerkosten aus der Gewinnberechnung ausnehmen?</value>
+    <comment>v1.2.3</comment>
+  </data>
+  <data name="ExcludeWorkstepsFromMarginCalculation" xml:space="preserve">
+    <value>Arbeitsschritte aus der Gewinnberechnung ausnehmen?</value>
+    <comment>v1.2.3</comment>
+  </data>
   <data name="ExecuteCommand" xml:space="preserve">
     <value>Befehl ausführen</value>
     <comment>0.1.1-beta</comment>
@@ -1624,6 +1836,10 @@
   <data name="ExportAsPdf" xml:space="preserve">
     <value>Als PDF-Datei exportieren</value>
     <comment>0.0.9-beta</comment>
+  </data>
+  <data name="ExportDots" xml:space="preserve">
+    <value>Exportieren...</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="ExportExcel" xml:space="preserve">
     <value>Als Excel-Datei exportieren</value>
@@ -1693,9 +1909,21 @@
     <value>Dateityp</value>
     <comment>0.0.3-beta</comment>
   </data>
+  <data name="Fill" xml:space="preserve">
+    <value>Vollfüllen</value>
+    <comment>1.1.7-beta</comment>
+  </data>
   <data name="FilterApplicationFile" xml:space="preserve">
     <value>Applikation (*.exe)|*.exe</value>
     <comment>0.0.7-beta</comment>
+  </data>
+  <data name="FilterCosts" xml:space="preserve">
+    <value>Filterkosten</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Filters" xml:space="preserve">
+    <value>Filter</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="FinalRecomendedPrice" xml:space="preserve">
     <value>Finale Preisempfehlung:</value>
@@ -1757,6 +1985,14 @@
     <value>Druckzeitberechnung</value>
     <comment>1.1.4-beta</comment>
   </data>
+  <data name="Gcodes" xml:space="preserve">
+    <value>Gcodes</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="GcodeViewer" xml:space="preserve">
+    <value>Gcode-Viewer</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="General" xml:space="preserve">
     <value>Allgemein</value>
     <comment>0.0.1-beta</comment>
@@ -1765,9 +2001,25 @@
     <value>GitHub</value>
     <comment>0.0.1-beta</comment>
   </data>
+  <data name="GloveCosts" xml:space="preserve">
+    <value>Handschukosten</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Gloves" xml:space="preserve">
+    <value>Handschuhe</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="GoOneDirectoryBack" xml:space="preserve">
+    <value>Ein Verzeichnis zurück</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="GoPro" xml:space="preserve">
     <value>Jetzt Pro-Version holen</value>
     <comment>0.0.1-beta</comment>
+  </data>
+  <data name="GoToOctoPrintInBrowser" xml:space="preserve">
+    <value>OctoPrint öffnen</value>
+    <comment>0.1.1-beta</comment>
   </data>
   <data name="GoToRepetierServerProInBrowser" xml:space="preserve">
     <value>Repetier Server Pro öffnen</value>
@@ -1780,6 +2032,10 @@
   <data name="GUI" xml:space="preserve">
     <value>GUI (Grafische Benutzeroberfläche)</value>
     <comment>0.0.7-beta</comment>
+  </data>
+  <data name="HandlingFee" xml:space="preserve">
+    <value>Handlungspauschale</value>
+    <comment>1.1.7-beta</comment>
   </data>
   <data name="HasHeatbed" xml:space="preserve">
     <value>Hat ein Heizbett?</value>
@@ -1845,6 +2101,10 @@
     <value>* Halte die 'Strg'-Taste gedrückt und klicke auf die Elemente in der Liste um mehrere auszuwählen.</value>
     <comment>1.1.3-beta</comment>
   </data>
+  <data name="HomeAxis" xml:space="preserve">
+    <value>Achesn in Ausgangsposition</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="HourRate" xml:space="preserve">
     <value>Stundensatz</value>
     <comment>0.0.9-beta</comment>
@@ -1861,13 +2121,37 @@
     <value>Gcode automatisch nach dem Slicen automatisch importieren (nur CLI)</value>
     <comment>0.0.7-beta</comment>
   </data>
+  <data name="IncludeAlphaVersions" xml:space="preserve">
+    <value>Alpha-Versionen inkludieren?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="IncludeBetaVersions" xml:space="preserve">
+    <value>Beta-Versionen inkludieren?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="IncludeFilePathAutomaticallyAtEndOfCommand" xml:space="preserve">
+    <value>Füge den Dateipfad '[filepath]' automatisch am Ende des Befehles ein</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="Info" xml:space="preserve">
     <value>Info</value>
     <comment>0.0.7-beta</comment>
   </data>
+  <data name="InfoFactorToCalculateWeightOutOfLiterOrMililiter" xml:space="preserve">
+    <value>Dieser Faktor ist nötig, wenn du Liter / Milliliter anstatt von Gramm oder Kilogramm wählst. Die Software muss wissen, wie viel Liter einem Kilogramm entsprechen. Zum Beispiel, wenn das Pulver 2kg wiegt und 4l Volumen hat, dann gibst du 2 ein (1kg = 2l)</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="InfoPowderRefreshing" xml:space="preserve">
+    <value>Dies berücksichtigt das zum Auffrischen benötigte Pulver zusätzlich zu dem Pulver, das zum Drucken des Objekts benötigt wird. Gib das für den Druckauftrag mindestens benötigte Pulver an. Das Tool berechnet das aufgefrischte Material wie folgt: (Min. Pulver im Drucker - Pulver für Objekt) * Aktualisierungsrate für das verwendete Material eingestellt.</value>
+    <comment>1.1.7-beta</comment>
+  </data>
   <data name="InfoPrivacyPolicy" xml:space="preserve">
     <value>Deine Privatsphäre ist uns wichtig! Daher sammeln und teilen wir keine deiner wertvollen Informationen! Das Tool arbeitet komplett offline. Nur wenn du ein Pro-Benutzer bist, überprüft die Anwendung deine Lizenz gelegentlich.</value>
     <comment>0.0.6-beta</comment>
+  </data>
+  <data name="InfoProcedureSpecificAdditions" xml:space="preserve">
+    <value>Einige Verfahren benötigen bestimmte Maßnahmen, welche in der Berechnung des Preises berücksichtigt werden müssen. Zum Beispiel beim SLS-Verfahren. Hier gibt es die Materialauffrischung. In diesem Bereich kannst du diese speziellen Zusätze aktivieren (falls verfügbar).</value>
+    <comment>1.1.7-beta</comment>
   </data>
   <data name="InterestRate" xml:space="preserve">
     <value>Zinssatz</value>
@@ -1910,18 +2194,42 @@
   <data name="LabelAdditionalWorkstepCosts" xml:space="preserve">
     <value>Zusätzliche Arbeitsschritte:</value>
   </data>
+  <data name="LabelAmountOfFiltersInPackage" xml:space="preserve">
+    <value>Filter in Packung:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelAmountOfGlovesInPackage" xml:space="preserve">
+    <value>Handschuhe im Packung:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="LabelAPIKeyRepetierMandatory" xml:space="preserve">
     <value>Dein API-Schlüssel*:</value>
+  </data>
+  <data name="LabelApiVersion" xml:space="preserve">
+    <value>API-Version:</value>
+    <comment>0.1.1-beta</comment>
   </data>
   <data name="LabelAttributeMandatory" xml:space="preserve">
     <value>Eigenschaft:*</value>
     <comment>1.1.4-beta</comment>
+  </data>
+  <data name="LabelBaudrate" xml:space="preserve">
+    <value>Baudrate:</value>
+    <comment>0.1.1-beta</comment>
   </data>
   <data name="LabelBuildVolume" xml:space="preserve">
     <value>Bauraum:</value>
   </data>
   <data name="LabelCalcDepreciation" xml:space="preserve">
     <value>Berechnete Abschreibung:</value>
+  </data>
+  <data name="LabelCalculatedPricePerGlove" xml:space="preserve">
+    <value>Preis pro Handschuh:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelCalculatedPricePerLiterIsopropanol" xml:space="preserve">
+    <value>Preis pro Liter:</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="LabelCalculationTimebaseMandatory" xml:space="preserve">
     <value>Berechungs-Zeitbasis*:</value>
@@ -1933,13 +2241,29 @@
   <data name="LabelColor" xml:space="preserve">
     <value>Farbe:</value>
   </data>
+  <data name="LabelConentOfIsopropanolInContainer" xml:space="preserve">
+    <value>Inhalt in Behältnis:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="LabelConsoleOutput" xml:space="preserve">
     <value>Konsolenausgabe:</value>
     <comment>0.0.7-beta</comment>
   </data>
+  <data name="LabelContainerPrice" xml:space="preserve">
+    <value>Behähltniskosten:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="LabelCreatingGcodeLayerModel" xml:space="preserve">
     <value>Erstelle GCode-Schichtenmodell:</value>
     <comment>0.0.8-beta</comment>
+  </data>
+  <data name="LabelCuringDuration" xml:space="preserve">
+    <value>Aushärtedauer:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelCurrentPath" xml:space="preserve">
+    <value>Aktueller Pfad:</value>
+    <comment>0.1.1-beta</comment>
   </data>
   <data name="LabelCustomAdditions" xml:space="preserve">
     <value>Wähle eine oder mehrere benutzerdefinierte Zuschläge, welche dem Preis später aufgerechnet werden.</value>
@@ -2021,6 +2345,10 @@
     <value>Zeile:*</value>
     <comment>0.0.9-beta</comment>
   </data>
+  <data name="LabelFactorLiterToKgMandatory" xml:space="preserve">
+    <value>Umrechnung Liter zu kg:*</value>
+    <comment>1.1.7-beta</comment>
+  </data>
   <data name="LabelFailRate" xml:space="preserve">
     <value>Fehlerrate:</value>
   </data>
@@ -2046,9 +2374,21 @@
     <value>Dateiname:*</value>
     <comment>1.1.4-beta</comment>
   </data>
+  <data name="LabelFiltersPackagePrice" xml:space="preserve">
+    <value>Kosten für Filterpackung:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelFiltersPerJob" xml:space="preserve">
+    <value>Filters pro Auftrag:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="LabelFixedPrice" xml:space="preserve">
     <value>Fester Maschinenstundensatz:</value>
     <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LabelFolder" xml:space="preserve">
+    <value>Ordner:</value>
+    <comment>0.1.1-beta</comment>
   </data>
   <data name="LabelGcode" xml:space="preserve">
     <value>Gcode:</value>
@@ -2057,6 +2397,14 @@
   <data name="LabelGcodeOrPrintInformation" xml:space="preserve">
     <value>Gcode- / Druckinformationen:</value>
     <comment>1.1.4-beta</comment>
+  </data>
+  <data name="LabelGlovesPackagePrice" xml:space="preserve">
+    <value>Preis für Handschuh-Packung:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="LabelGlovesPerJob" xml:space="preserve">
+    <value>Handschuhe pro Auftrag:</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="LabelGuidReadOnly" xml:space="preserve">
     <value>GUID (nur lesen):</value>
@@ -2097,6 +2445,10 @@
   </data>
   <data name="LabelIsManufacturerActive" xml:space="preserve">
     <value>Der Hersteller ist für Bestellungen freigegeben</value>
+  </data>
+  <data name="LabelIsopropanolContainerPrice" xml:space="preserve">
+    <value>Kosten für Isopropanolbehältnis:</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="LabelIsSupplierActive" xml:space="preserve">
     <value>Der Lieferant ist für Bestellungen freigegeben</value>
@@ -2160,6 +2512,10 @@
   <data name="LabelMaxPowerConsumptionMandatory" xml:space="preserve">
     <value>Max. Leistung*:</value>
   </data>
+  <data name="LabelMinPowderInBuildAreaMandatory" xml:space="preserve">
+    <value>Pulver in Bauraum:*</value>
+    <comment>1.1.7-beta</comment>
+  </data>
   <data name="LabelNameMandatory" xml:space="preserve">
     <value>Name*:</value>
   </data>
@@ -2187,6 +2543,10 @@
   <data name="LabelPackageMandatory" xml:space="preserve">
     <value>Paket*:</value>
   </data>
+  <data name="LabelPackagePrice" xml:space="preserve">
+    <value>Packungspreis:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="LabelPackageSize" xml:space="preserve">
     <value>Paketinhalt:</value>
   </data>
@@ -2205,6 +2565,10 @@
     <value>Ping-Zähler:</value>
     <comment>0.0.9-beta</comment>
   </data>
+  <data name="LabelPort" xml:space="preserve">
+    <value>Schnittstelle:</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="LabelPortMandatory" xml:space="preserve">
     <value>Port:*</value>
     <comment>1.1.4-beta</comment>
@@ -2222,6 +2586,10 @@
   <data name="LabelPriceMandatory" xml:space="preserve">
     <value>Preis*:</value>
   </data>
+  <data name="LabelPricePerMinute" xml:space="preserve">
+    <value>Preis pro Minute:</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="LabelPriceWithoutTax" xml:space="preserve">
     <value>Ohne Steuern:</value>
   </data>
@@ -2234,9 +2602,17 @@
   <data name="LabelPrinterNameMandatory" xml:space="preserve">
     <value>Druckername*:</value>
   </data>
+  <data name="LabelPrinterProfile" xml:space="preserve">
+    <value>Drucker-Profil:</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="LabelPrinterSlug" xml:space="preserve">
     <value>Drucker-Titelform:</value>
     <comment>0.0.5-beta</comment>
+  </data>
+  <data name="LabelPrinterState" xml:space="preserve">
+    <value>Printerstatus:</value>
+    <comment>0.1.1-beta</comment>
   </data>
   <data name="LabelPrinterTypeMandatory" xml:space="preserve">
     <value>Druckertyp*:</value>
@@ -2270,18 +2646,20 @@
     <value>Empfohlener Preis:</value>
     <comment>1.1.4-beta</comment>
   </data>
+  <data name="LabelRefreshedMaterial" xml:space="preserve">
+    <value>Aufgefrischtes Material:</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="LabelRefreshRateMandatory" xml:space="preserve">
+    <value>Auffrischungsrate:*</value>
+    <comment>1.1.7-beta</comment>
+  </data>
   <data name="LabelRepetierServerAddressMandatory" xml:space="preserve">
     <value>IP-Adresse / Domänename:*</value>
     <comment>0.0.9-beta</comment>
   </data>
   <data name="LabelReplacemenCostsManadatory" xml:space="preserve">
     <value>Wiederanschaffungskosten*:</value>
-  </data>
-  <data name="LabelReplaceWith" xml:space="preserve">
-    <value>Ersetzen mit:</value>
-  </data>
-  <data name="LabelSearchFor" xml:space="preserve">
-    <value>Suche nach:</value>
   </data>
   <data name="LabelSelectCurrentCalculationMandatory" xml:space="preserve">
     <value>Wähle die Kalkulation*:</value>
@@ -2299,6 +2677,10 @@
   <data name="LabelSelectedFiles" xml:space="preserve">
     <value>Ausgewählte Datei(en):</value>
   </data>
+  <data name="LabelSelectFilesFromList" xml:space="preserve">
+    <value>Datei(en) aus der Liste wählen</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="LabelSelectFromList" xml:space="preserve">
     <value>Von Liste wählen:</value>
     <comment>0.1.0-beta</comment>
@@ -2313,9 +2695,17 @@
     <value>Drucker aus Liste wählen</value>
     <comment>0.1.0-beta</comment>
   </data>
+  <data name="LabelSelectTargetProcedure" xml:space="preserve">
+    <value>Verfahren wählen:</value>
+    <comment>1.1.7-beta</comment>
+  </data>
   <data name="LabelSelectTheSettingsYouWantToReset" xml:space="preserve">
     <value>Wähle die Einstellungen, welche du zurücksetzen möchtest:</value>
     <comment>0.0.7-beta</comment>
+  </data>
+  <data name="LabelSerialPort" xml:space="preserve">
+    <value>Serielle Schnittstelle:</value>
+    <comment>0.1.1-beta</comment>
   </data>
   <data name="LabelServerMandatory" xml:space="preserve">
     <value>Server:*</value>
@@ -2381,8 +2771,16 @@
   <data name="LabelTemeratureMandatory" xml:space="preserve">
     <value>Temperatur*:</value>
   </data>
+  <data name="LabelUpdateIntervalInSecondsMandatory" xml:space="preserve">
+    <value>Aktualisierungsinterval (Sek.):*</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="LabelUsedAmountOfMaterial" xml:space="preserve">
     <value>Menge an benötigten Material*:</value>
+  </data>
+  <data name="LabelUsedIsopropanol" xml:space="preserve">
+    <value>Verbauchtes Isopropanol:</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="LabelUsefulLifeYearsMandatory" xml:space="preserve">
     <value>Nutzungsdauer in Jahren*:</value>
@@ -2403,6 +2801,10 @@
   </data>
   <data name="LabelVolumeMandatory" xml:space="preserve">
     <value>Volumen*:</value>
+  </data>
+  <data name="LabelWearFactorPerPrintJob" xml:space="preserve">
+    <value>Abnutzungsfaktor pro Druckauftrag:</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="LabelWebCam" xml:space="preserve">
     <value>WebCam:</value>
@@ -2504,6 +2906,10 @@
     <value>Liste</value>
     <comment>0.0.9-beta</comment>
   </data>
+  <data name="Liter" xml:space="preserve">
+    <value>Liter</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="Load" xml:space="preserve">
     <value>Öffnen</value>
   </data>
@@ -2514,6 +2920,10 @@
   <data name="LoadFromSupplier" xml:space="preserve">
     <value>Von Lieferant laden</value>
     <comment>0.1.0-beta</comment>
+  </data>
+  <data name="LoadGcodeAnalysisFromServer" xml:space="preserve">
+    <value>Lade Gcode-Analyse vom Server</value>
+    <comment>0.1.1-beta</comment>
   </data>
   <data name="LoadInformationFromPrinter" xml:space="preserve">
     <value>Von Drucker laden</value>
@@ -2570,6 +2980,10 @@
     <value>Hersteller</value>
     <comment>0.1.0-beta</comment>
   </data>
+  <data name="Margin" xml:space="preserve">
+    <value>Gewinn</value>
+    <comment>1.1.7-beta</comment>
+  </data>
   <data name="MarkedFiledsMandatory" xml:space="preserve">
     <value>Alle Felder markiert mit '*' sind Pflichtfelder.</value>
   </data>
@@ -2579,6 +2993,10 @@
   <data name="Material" xml:space="preserve">
     <value>Material</value>
     <comment>0.0.9-beta</comment>
+  </data>
+  <data name="MaterialCosts" xml:space="preserve">
+    <value>Materialkosten</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="MaterialIsSealed" xml:space="preserve">
     <value>Material ist verschlossen</value>
@@ -2622,6 +3040,10 @@
     <value>Nachrichten</value>
     <comment>0.0.8-beta</comment>
   </data>
+  <data name="Milliliter" xml:space="preserve">
+    <value>Milliliter</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="MinimizeInsteadOfTerminating" xml:space="preserve">
     <value>Beim Schließen minimieren statt zu beenden</value>
   </data>
@@ -2639,6 +3061,10 @@
   </data>
   <data name="Model" xml:space="preserve">
     <value>Model</value>
+  </data>
+  <data name="ModelViewers" xml:space="preserve">
+    <value>Modell-Viewers</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="MoveAndRestart" xml:space="preserve">
     <value>Verschieben und Neustarten</value>
@@ -2708,9 +3134,21 @@
     <value>Neuer Arbeitsschritt (neues Fenster)</value>
     <comment>0.0.4-beta</comment>
   </data>
+  <data name="NoAdditionsAvailableYetForThisProcedureDots" xml:space="preserve">
+    <value>Bis jetzt keine speziellen Zusätze für dieses Verfahren verfügbar...</value>
+    <comment>1.1.7-beta</comment>
+  </data>
   <data name="NoFileAddedPleaseAddOneFirst" xml:space="preserve">
     <value>Es wurde noch keine Datei für diese Kalkulation hinzugefügt. Bitte wähle eine oder gib die Informationen manuell ein.</value>
     <comment>1.1.4-beta</comment>
+  </data>
+  <data name="NoFilesOrFolderInThisDirectoryFound" xml:space="preserve">
+    <value>In diesem Verzeichnis / Speicherort wurden keine Dateien oder Ordner gefunden.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="NoGcodeSelectedDots" xml:space="preserve">
+    <value>Kein GCode gewählt...</value>
+    <comment>0.1.1-beta</comment>
   </data>
   <data name="NoLicenseActivatedYet" xml:space="preserve">
     <value>Keine Lizenz für diese Installation angegeben. Bitte klicke auf den Button unten um deine Pro-Version jetzt zu aktivieren!</value>
@@ -2750,6 +3188,10 @@
     <value>Gib den Namen so an, wie er dir im Dashboard angezeigt wird. Das Tool ersetzt automatisch Leerzeichen mit einem Unterstrich.</value>
     <comment>0.0.1-beta</comment>
   </data>
+  <data name="Note_OctoPrintShowFunctions" xml:space="preserve">
+    <value>Wenn du alle für OctoPrint relevanten Funktionen in der Software ausblenden möchtest, entferne einfach den Haken im Kontrollkästchen.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="Note_OutputFileFormat" xml:space="preserve">
     <value>Abhängig vom verwendeten Slicer kann es sein, dass dem Namen der STL-Datei ein Präfix oder Suffix hinzugefügt wird. Hier kannst du das Format angeben, damit das Tool die Gcode-Datei später finden und importieren kann.</value>
     <comment>0.1.1-beta</comment>
@@ -2762,6 +3204,10 @@
     <value>Bitte fülle alle Werte so genau wie möglich aus. Diese sind entscheident bei der Berechnung der Druckzeit von deinem Gcode.</value>
     <comment>1.1.4-beta</comment>
   </data>
+  <data name="Note_UpdateInterval" xml:space="preserve">
+    <value>Dies ist das Zeitintervall in Sekunden, in dem das Tool die aktuellen Informationen von deinem Druckserver abruft.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="NoUpdateAvailable" xml:space="preserve">
     <value>Aktuell ist kein Update verfügbar.</value>
   </data>
@@ -2772,6 +3218,10 @@
   <data name="Nozzle" xml:space="preserve">
     <value>Düse</value>
   </data>
+  <data name="NozzleWearCosts" xml:space="preserve">
+    <value>Düse (Abnutzung)</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="NPJ" xml:space="preserve">
     <value>NPJ (NanoParticle Jetting)®</value>
   </data>
@@ -2779,8 +3229,16 @@
     <value>OctoPrint</value>
     <comment>0.1.0-beta</comment>
   </data>
+  <data name="OctoPrintServerIsOffline" xml:space="preserve">
+    <value>Dein OctoPrint-Server scheint offline zu sein. Bitte überprüfe deinen Server und versuche unten, die Verbindung wiederherzustellen.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="OctoPrintServerOfflineWithoutReconnect" xml:space="preserve">
     <value>Dein OctoPrint-Server scheint offline zu sein. Bitte überprüfe deinen Server und versuche es erneut.</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="OctoPrintServerProIsNotConfigured" xml:space="preserve">
+    <value>Es scheint, dass dein OctoPrint-Server in deinen Einstellungen nicht konfiguriert ist. Bitte gehe zur Einstellungsseite und richte zuerst deinen Server ein!</value>
     <comment>0.1.1-beta</comment>
   </data>
   <data name="Off" xml:space="preserve">
@@ -2845,6 +3303,10 @@
     <value>Ordner öffnen</value>
     <comment>0.0.9-beta</comment>
   </data>
+  <data name="OpenGcodeFromOctoPrint" xml:space="preserve">
+    <value>Öffne Gcode von OctoPrint</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="OpenGcodeorStlFile" xml:space="preserve">
     <value>Öffne STL oder Gcode</value>
     <comment>0.0.3-beta</comment>
@@ -2888,6 +3350,10 @@
   </data>
   <data name="OpenWebsite" xml:space="preserve">
     <value>Website öffnen</value>
+  </data>
+  <data name="Operational" xml:space="preserve">
+    <value>Bereit</value>
+    <comment>0.1.1-beta</comment>
   </data>
   <data name="Or" xml:space="preserve">
     <value> oder </value>
@@ -2935,6 +3401,14 @@
   </data>
   <data name="PasswordsDoNotMatch" xml:space="preserve">
     <value>Passwörter stimmen nicht überein!</value>
+  </data>
+  <data name="Paste" xml:space="preserve">
+    <value>Einfügen</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>Pause</value>
+    <comment>0.1.1-beta</comment>
   </data>
   <data name="Percent" xml:space="preserve">
     <value>Prozent</value>
@@ -2991,6 +3465,14 @@
     <value>Preis pro</value>
     <comment>0.0.9-beta</comment>
   </data>
+  <data name="Print" xml:space="preserve">
+    <value>Drucken</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="PrintCosts" xml:space="preserve">
+    <value>Druckkosten</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="Printer" xml:space="preserve">
     <value>Drucker</value>
     <comment>0.0.9-beta</comment>
@@ -3005,9 +3487,17 @@
   <data name="Printers" xml:space="preserve">
     <value>3D Drucker</value>
   </data>
+  <data name="Printing" xml:space="preserve">
+    <value>Druckt</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="PrintOffer" xml:space="preserve">
     <value>Angebot drucken</value>
     <comment>0.0.3-beta</comment>
+  </data>
+  <data name="PrintSheetWearCosts" xml:space="preserve">
+    <value>Druckbett (Abnutzung)</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="PrintTime" xml:space="preserve">
     <value>Druckzeit</value>
@@ -3020,6 +3510,18 @@
   <data name="PrivacyCheckNoDataCollection" xml:space="preserve">
     <value>Wir sammeln keine deiner Daten, niemals!</value>
     <comment>0.0.6-beta</comment>
+  </data>
+  <data name="Procedure" xml:space="preserve">
+    <value>Verfahren</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="Procedures" xml:space="preserve">
+    <value>Verfahren</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="ProcedureSpecific" xml:space="preserve">
+    <value>Verfahrensspezifisch</value>
+    <comment>1.1.7-beta</comment>
   </data>
   <data name="ProductName" xml:space="preserve">
     <value>Produktname</value>
@@ -3056,6 +3558,10 @@
   <data name="Refresh" xml:space="preserve">
     <value>Aktualisieren</value>
     <comment>1.1.4-beta</comment>
+  </data>
+  <data name="RefreshRateIsTakenFromMaterial" xml:space="preserve">
+    <value>Die Auffrischungsrate wird vom ausgewählten Material genommen, sofern angegeben.</value>
+    <comment>1.1.7-beta</comment>
   </data>
   <data name="RemainingContent" xml:space="preserve">
     <value>Verbleibender Inhalt</value>
@@ -3123,15 +3629,21 @@
   <data name="RestartTheApplicationSoThatAllChangesAreApplied" xml:space="preserve">
     <value>Damit die neue Sprache gesetzt und aktualisiert werden kann muss die Anwendung neu gestartet werden!</value>
   </data>
+  <data name="RestartTheApplicationToChangeTheLanguage" xml:space="preserve">
+    <value>Starte die Anwendung neu um die Sprache auf die ausgewählte zu ändern!</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Resume" xml:space="preserve">
+    <value>Weiter</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="Rotate3dModelAroundMouseDownPoint" xml:space="preserve">
+    <value>3D-Modell um gehaltene Maustaste herum drehen?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="Row" xml:space="preserve">
     <value>Zeile</value>
     <comment>0.0.9-beta</comment>
-  </data>
-  <data name="RunChecker" xml:space="preserve">
-    <value>Vorabprüfung starten</value>
-  </data>
-  <data name="RunSearchAndReplace" xml:space="preserve">
-    <value>Suchen und Ersetzen starten</value>
   </data>
   <data name="RunSlicer" xml:space="preserve">
     <value>Slicer starten</value>
@@ -3145,6 +3657,10 @@
   </data>
   <data name="SaveChanges" xml:space="preserve">
     <value>Änderungen speichern</value>
+  </data>
+  <data name="SaveConnectionInformation" xml:space="preserve">
+    <value>Verbindungseinstellungen speichern</value>
+    <comment>0.1.1-beta</comment>
   </data>
   <data name="SaveSettingsInApplicationFolder" xml:space="preserve">
     <value>Einstellungen im Applikations-Ordner speichern</value>
@@ -3177,6 +3693,10 @@
     <value>Wähle einen Server um das Dashboard zu starten</value>
     <comment>1.1.4-beta</comment>
   </data>
+  <data name="SelectedGcode" xml:space="preserve">
+    <value>Gewählter Gcode</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="SelectedSettingsAreReset" xml:space="preserve">
     <value>Ausgewählte Einstellungen sind zurückgesetzt</value>
     <comment>0.0.7-beta</comment>
@@ -3194,8 +3714,16 @@
     <value>Wähle Gcode-Dateien...</value>
     <comment>1.1.4-beta</comment>
   </data>
+  <data name="SelectGcodesToGetStartedDots" xml:space="preserve">
+    <value>Wähle einen Gcode um zu beginnen...</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="SelectOrDropGcodeFile" xml:space="preserve">
     <value>Wähle oder ziehe .gcode Datei</value>
+  </data>
+  <data name="SelectPrinterToStartOctoPrintDashboard" xml:space="preserve">
+    <value>Wähle einen Drucker um das OctoPrint-Dashboard zu starten</value>
+    <comment>0.1.1-beta</comment>
   </data>
   <data name="SelectPrinterToStartRepetierDashboard" xml:space="preserve">
     <value>Drucker auswählen um das Reptier Server Dashboard zu starten</value>
@@ -3205,9 +3733,17 @@
     <value>Wähle den Slicer-Installationspfad...</value>
     <comment>0.0.7-beta</comment>
   </data>
+  <data name="SelectTabContent" xml:space="preserve">
+    <value>Tab-Inhalt auswählen</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="SelectYourDefaultPrintServer" xml:space="preserve">
     <value>Wähle deinen Standard-Druckserver unten.</value>
     <comment>0.1.0-beta</comment>
+  </data>
+  <data name="SendGcode" xml:space="preserve">
+    <value>Gcode senden</value>
+    <comment>0.1.1-beta</comment>
   </data>
   <data name="SendGcodeToRepetierServerPro" xml:space="preserve">
     <value>An Repetier Server Pro senden</value>
@@ -3242,6 +3778,10 @@
   <data name="SetFlow" xml:space="preserve">
     <value>Setze Fluss</value>
     <comment>0.0.3-beta</comment>
+  </data>
+  <data name="SetLoadedCalculationAutomaticallyAsSelected" xml:space="preserve">
+    <value>Geladene Kalkulationen automatisch als aktive Kalkulation setzen?</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="SetMasterPassword" xml:space="preserve">
     <value>Setze das Master-Passwort</value>
@@ -3381,6 +3921,10 @@
   <data name="ShowLocalLicenses" xml:space="preserve">
     <value>Zeige lokale Lizenzadateien</value>
   </data>
+  <data name="ShowOctoPrintFeaturesInTool" xml:space="preserve">
+    <value>Zeige OctoPrint-Funktionen in der Software</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="Shutdown" xml:space="preserve">
     <value>Herunterfahren</value>
     <comment>0.0.5-beta</comment>
@@ -3418,9 +3962,17 @@
     <value>Slicer</value>
     <comment>0.0.7-beta</comment>
   </data>
+  <data name="SlicerCommands" xml:space="preserve">
+    <value>Slicer-Befehle</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="SlicerCommandsNote" xml:space="preserve">
     <value>Wenn keine Befehle übergeben werden, wird nur die GUI des Slicers geöffnet und die STL-Datei (en) werden geladen. Bitte überprüfe die Befehle für deinen bevorzugten Slicer in der Slicer-Dokumentation (falls unterstützt).</value>
     <comment>0.0.7-beta</comment>
+  </data>
+  <data name="SlicerConfig" xml:space="preserve">
+    <value>Slicer-Konfig</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="SlicerMultipleInstancesNote" xml:space="preserve">
     <value>Wenn du diese Option aktivierst, wird für jede Datei ein Slicer geöffnet. Andernfalls werden alle Dateien im selben Slicer geöffnet.</value>
@@ -3429,6 +3981,10 @@
   <data name="SlicerPrinterConfigurationNameLabel" xml:space="preserve">
     <value>Drucker-Konfigurationsname:</value>
     <comment>1.1.4-beta</comment>
+  </data>
+  <data name="Slicers" xml:space="preserve">
+    <value>Slicers</value>
+    <comment>0.1.1-beta</comment>
   </data>
   <data name="SLM" xml:space="preserve">
     <value>SLM (Selective Laser Melting)®</value>
@@ -3471,11 +4027,47 @@
     <value>Lieferanten</value>
     <comment>0.1.0-beta</comment>
   </data>
+  <data name="TabContent" xml:space="preserve">
+    <value>Tab-Inhalt</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="TabHeaderCalculate" xml:space="preserve">
     <value>Kalkuliere</value>
   </data>
   <data name="TabHeaderCalculations" xml:space="preserve">
     <value>Kalkulationen</value>
+  </data>
+  <data name="TakeCuringCostsIntoAccount" xml:space="preserve">
+    <value>Kosten für Aushärten mit berücksichtigen?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="TakeFilterCostIntoAccount" xml:space="preserve">
+    <value>Kosten für Filter (Resin, Isopropanol) mit berücksichtigen?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="TakeGlovesCostIntoAccount" xml:space="preserve">
+    <value>Kosten für Handschuhe mit berücksichtigen?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="TakeNozzleWearCoststIntoAccount" xml:space="preserve">
+    <value>Kosten für Düsenabnutzung mit berücksichtigen?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="TakePrintSheetWearCostsIntoAccount" xml:space="preserve">
+    <value>Kosten für Druckplattenabnutzung mit berücksichtigen?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="TakeRefreshIntoAccount" xml:space="preserve">
+    <value>Auffrischung berücksichtigen?</value>
+    <comment>1.1.7-beta</comment>
+  </data>
+  <data name="TakeWashingIntoAccount" xml:space="preserve">
+    <value>Kosten für Waschen mit berücksichtigen?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="Tax" xml:space="preserve">
+    <value>Steuer</value>
+    <comment>1.1.7-beta</comment>
   </data>
   <data name="Temperature" xml:space="preserve">
     <value>Temperatur</value>
@@ -3511,6 +4103,10 @@
   </data>
   <data name="TooltipApiKeyRepetier" xml:space="preserve">
     <value>Der API-Schlüssel...</value>
+  </data>
+  <data name="TooltipApplyEnhancedMarginCalculationSettings" xml:space="preserve">
+    <value>Hier kannst du die Gewinnberechnung anpassen und Elemente ausnehmen.</value>
+    <comment>v1.2.3</comment>
   </data>
   <data name="TooltipApplyTaxRate" xml:space="preserve">
     <value>Wähle dies um den Steuersatz zu aktivieren</value>
@@ -3579,13 +4175,29 @@
   <data name="TooltipWorkstepPrice" xml:space="preserve">
     <value>Berechnung abhängig des gew. Kalkulationstypen.</value>
   </data>
+  <data name="ToolTip_AddGcodeFromList" xml:space="preserve">
+    <value>Gcode von Liste hinzufügen</value>
+    <comment>1.1.8-beta</comment>
+  </data>
+  <data name="ToolTip_AddSelectedGcodesToCalculation" xml:space="preserve">
+    <value>Auswahl zur Kalkulation hinzufügen</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="ToolTip_DeleteFiles" xml:space="preserve">
     <value>Lösche Datei(en)</value>
     <comment>0.0.8-beta</comment>
   </data>
+  <data name="ToolTip_EnterMinimumPowderNeededInBuildArea" xml:space="preserve">
+    <value>Gib die Mindestmenge an Pulver hier ein (Liter)</value>
+    <comment>1.1.7-beta</comment>
+  </data>
   <data name="ToolTip_FixedValueForMachineHourRate" xml:space="preserve">
     <value>Wenn diese Option aktiviert ist, kannst du einen festen Wert für deinen Maschinenstundensatz eingeben, z. B. wenn du deinen Maschinenstundensatz bereits in einem anderen Tool / Excel-Blatt berechnet hast.</value>
     <comment>0.1.0-beta</comment>
+  </data>
+  <data name="ToolTip_LoadGcodeAnalysisFromOctoPrint" xml:space="preserve">
+    <value>Lade Gcode-Analyse von OctoPrint</value>
+    <comment>0.1.1-beta</comment>
   </data>
   <data name="ToolTip_New" xml:space="preserve">
     <value>Neu</value>
@@ -3614,6 +4226,10 @@
   <data name="ToolTip_TranslateProjectUrl" xml:space="preserve">
     <value>Hilf dieses Tool in deine Sprache zu übersetzen!</value>
     <comment>0.0.8-beta</comment>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Gesamt</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="Transparency" xml:space="preserve">
     <value>Transparenz</value>
@@ -3671,6 +4287,10 @@
     <value>Einen festen Wert für den Maschinenstundensatz verwenden?</value>
     <comment>0.1.0-beta</comment>
   </data>
+  <data name="UseNewUpdateManager" xml:space="preserve">
+    <value>Neuen Update-Manager verwenden?</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="UserAgreedToEULA" xml:space="preserve">
     <value>Der Benutzer hat der Endbenutzer-Lizenzvereinbarung (EULA) zugestimmt</value>
   </data>
@@ -3679,6 +4299,10 @@
   </data>
   <data name="Username" xml:space="preserve">
     <value>Benutzername</value>
+  </data>
+  <data name="UseSelectedGcode" xml:space="preserve">
+    <value>Verwende ausgewählten Gcode</value>
+    <comment>0.1.1-beta</comment>
   </data>
   <data name="UseSelectedManufacturer" xml:space="preserve">
     <value>Ausgewählten Hersteller verwenden</value>
@@ -3695,6 +4319,10 @@
   <data name="UseSelectedSupplier" xml:space="preserve">
     <value>Ausgewählten Lieferanten verwenden</value>
     <comment>0.1.0-beta</comment>
+  </data>
+  <data name="UseSelection" xml:space="preserve">
+    <value>Auswahl verwenden</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="UseVolumeInsteadOfWeightForCalculation" xml:space="preserve">
     <value>Verwende das Volumen anstatt des Gewichtes für die Kalkulation?</value>
@@ -3779,6 +4407,10 @@
     <value>Wähle diese Option nur, wenn deine Verbindung verschlüsselt ist (https://). Ansonsten kann dies zu Verbindungsproblemen führen!</value>
     <comment>0.0.8-beta</comment>
   </data>
+  <data name="WashingCosts" xml:space="preserve">
+    <value>Waschkosten</value>
+    <comment>1.1.8-beta</comment>
+  </data>
   <data name="Watermark_OctoPrintApiKey" xml:space="preserve">
     <value>Gib deinen API-Schlüssel ein...</value>
     <comment>0.1.0-beta</comment>
@@ -3794,6 +4426,10 @@
   <data name="Weight" xml:space="preserve">
     <value>Gewicht</value>
     <comment>1.1.4-beta</comment>
+  </data>
+  <data name="WeightInGramm" xml:space="preserve">
+    <value>Gewicht in Gramm</value>
+    <comment>1.1.8-beta</comment>
   </data>
   <data name="Window" xml:space="preserve">
     <value>Fenster</value>
@@ -3820,6 +4456,14 @@
   <data name="WrongPasswordDecryptionFailedMessage" xml:space="preserve">
     <value>Die Entschlüsselung ist auf Grund eines falschen Passwortes fehlgeschlagen.</value>
   </data>
+  <data name="XAxis" xml:space="preserve">
+    <value>X-Achse</value>
+    <comment>0.1.1-beta</comment>
+  </data>
+  <data name="YAxis" xml:space="preserve">
+    <value>Y-Achse</value>
+    <comment>0.1.1-beta</comment>
+  </data>
   <data name="Years" xml:space="preserve">
     <value>Jahre</value>
   </data>
@@ -3829,6 +4473,10 @@
   </data>
   <data name="YourLicenseInformation" xml:space="preserve">
     <value>Deine Lizenz-Informationen</value>
+  </data>
+  <data name="YourOctoPrintDashboard" xml:space="preserve">
+    <value>Dein OctoPrint-Dashboard</value>
+    <comment>0.1.1-beta</comment>
   </data>
   <data name="YourPrivacyMatters" xml:space="preserve">
     <value>Deine Privatsphäre ist uns wichtig!</value>
@@ -3840,5 +4488,9 @@
   </data>
   <data name="YourSystemOSIsIncompatibleWithTheLatestRelease" xml:space="preserve">
     <value>Dein Betriebssystem ist mit der neusten Version nicht kompatibel.</value>
+  </data>
+  <data name="ZAxis" xml:space="preserve">
+    <value>Z-Achse</value>
+    <comment>0.1.1-beta</comment>
   </data>
 </root>

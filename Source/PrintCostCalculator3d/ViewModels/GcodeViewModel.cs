@@ -1,44 +1,35 @@
-﻿using ICSharpCode.AvalonEdit.Document;
+﻿using AndreasReitberger.Models;
+using Dragablz;
+using ICSharpCode.AvalonEdit.Document;
 using ICSharpCode.AvalonEdit.Highlighting;
-using log4net;
+using ICSharpCode.AvalonEdit.Utils;
 using MahApps.Metro.Controls.Dialogs;
+using PrintCostCalculator3d.Controls;
+using PrintCostCalculator3d.Models.Settings;
+using PrintCostCalculator3d.Models.SyntaxHighlighting;
+using PrintCostCalculator3d.Resources.Localization;
+using PrintCostCalculator3d.Templates;
+using PrintCostCalculator3d.Utilities;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 using System.Xml;
-using PrintCostCalculator3d.Models;
-using PrintCostCalculator3d.Models.GCode;
-using PrintCostCalculator3d.Models.Settings;
-using PrintCostCalculator3d.Utilities;
-using System.Windows;
-using ICSharpCode.AvalonEdit.CodeCompletion;
-using PrintCostCalculator3d.Models.SyntaxHighlighting;
-using ICSharpCode.AvalonEdit.Utils;
-using PrintCostCalculator3d.Resources.Localization;
-using Dragablz;
-using System.Collections.ObjectModel;
-using PrintCostCalculator3d.Controls;
-using PrintCostCalculator3d.Templates;
-using PrintCostCalculator3d.Models.GCode.Helper;
 
 namespace PrintCostCalculator3d.ViewModels
 {
     class GcodeViewModel : PaneViewModel
     {
         #region Variables
-        private readonly IDialogCoordinator _dialogCoordinator;
-        private static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        
-
+        readonly IDialogCoordinator _dialogCoordinator;
         #endregion
 
         #region Properties
-        private bool _isEdit;
+        bool _isEdit;
         public bool IsEdit
         {
             get => _isEdit;
@@ -51,12 +42,8 @@ namespace PrintCostCalculator3d.ViewModels
                 OnPropertyChanged();
             }
         }
-        public bool isLicenseValid
-        {
-            get => false;
-        }
 
-        private Guid _id = Guid.NewGuid();
+        Guid _id = Guid.NewGuid();
         public Guid Id
         {
             get => _id;
@@ -70,8 +57,8 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private ObservableCollection<GCode> _gcodes = new ObservableCollection<GCode>();
-        public ObservableCollection<GCode> Gcodes
+        ObservableCollection<Gcode> _gcodes = new ObservableCollection<Gcode>();
+        public ObservableCollection<Gcode> Gcodes
         {
             get => _gcodes;
             set
@@ -83,8 +70,8 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private GCode _gcode;
-        public GCode Gcode
+        Gcode _gcode;
+        public Gcode Gcode
         {
             get => _gcode;
             set
@@ -98,7 +85,7 @@ namespace PrintCostCalculator3d.ViewModels
         }
 
         #region SyntaxHighlighter
-        private string _filePath = string.Empty;
+        string _filePath = string.Empty;
         public string FilePath
         {
             get => _filePath;
@@ -114,7 +101,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private string _fileName = string.Empty;
+        string _fileName = string.Empty;
         public string FileName
         {
             get
@@ -125,7 +112,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private TextDocument _document = new TextDocument();
+        TextDocument _document = new TextDocument();
         public TextDocument Document
         {
             get => _document;
@@ -139,7 +126,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private IHighlightingDefinition _highlightdef = null;
+        IHighlightingDefinition _highlightdef = null;
         public IHighlightingDefinition HighlightDef
         {
             get => _highlightdef; 
@@ -153,20 +140,16 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        public string Title
+        public new string Title
         {
-            get
-            {
-                return Path.GetFileName(this.FilePath) + (IsDirty ? "*" : string.Empty);
-            }
-
+            get => Path.GetFileName(this.FilePath) + (IsDirty ? "*" : string.Empty);
             set
             {
                 base.Title = value;
             }
         }
 
-        private bool _isDirty = false;
+        bool _isDirty = false;
         public bool IsDirty
         {
             get { return _isDirty; }
@@ -182,7 +165,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _isReadOnly = false;
+        bool _isReadOnly = false;
         public bool IsReadOnly
         {
             get => _isReadOnly;
@@ -196,7 +179,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private string _IsReadOnlyReason = string.Empty;
+        string _IsReadOnlyReason = string.Empty;
         public string IsReadOnlyReason
         {
             get => _IsReadOnlyReason;
@@ -210,7 +193,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _WordWrap = false;
+        bool _WordWrap = false;
         public bool WordWrap
         {
             get => _WordWrap;
@@ -224,7 +207,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private bool _ShowLineNumbers = false;
+        bool _ShowLineNumbers = false;
         public bool ShowLineNumbers
         {
             get => _ShowLineNumbers;
@@ -238,7 +221,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private ICSharpCode.AvalonEdit.TextEditorOptions _TextOptions  = new ICSharpCode.AvalonEdit.TextEditorOptions()
+        ICSharpCode.AvalonEdit.TextEditorOptions _TextOptions  = new ICSharpCode.AvalonEdit.TextEditorOptions()
         {
             ConvertTabsToSpaces = false,
             IndentationSize = 2
@@ -262,11 +245,9 @@ namespace PrintCostCalculator3d.ViewModels
         public IInterTabClient InterTabClient { get; }
         public ObservableCollection<DragablzTabItem> TabItems { get; }
 
-        private readonly bool _isLoading;
+        int _tabId;
 
-        private int _tabId;
-
-        private int _selectedTabIndex;
+        int _selectedTabIndex;
         public int SelectedTabIndex
         {
             get => _selectedTabIndex;
@@ -283,7 +264,7 @@ namespace PrintCostCalculator3d.ViewModels
         #endregion
 
         #region Expander
-        private bool _expandProfileView;
+        bool _expandProfileView;
         public bool ExpandProfileView
         {
             get => _expandProfileView;
@@ -292,7 +273,7 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _expandProfileView)
                     return;
 
-                if (!_isLoading)
+                if (!IsLoading)
                     SettingsManager.Current.GcodeViewer_ExpandProfileView = value;
 
                 _expandProfileView = value;
@@ -305,7 +286,7 @@ namespace PrintCostCalculator3d.ViewModels
             }
         }
 
-        private GridLength _profileWidth;
+        GridLength _profileWidth;
         public GridLength ProfileWidth
         {
             get => _profileWidth;
@@ -314,7 +295,7 @@ namespace PrintCostCalculator3d.ViewModels
                 if (value == _profileWidth)
                     return;
 
-                if (!_isLoading && Math.Abs(value.Value - GlobalStaticConfiguration.GcodeInfo_WidthCollapsed) > GlobalStaticConfiguration.FloatPointFix) // Do not save the size when collapsed
+                if (!IsLoading && Math.Abs(value.Value - GlobalStaticConfiguration.GcodeInfo_WidthCollapsed) > GlobalStaticConfiguration.FloatPointFix) // Do not save the size when collapsed
                     SettingsManager.Current.GcodeViewer_ProfileWidth = value.Value;
 
                 _profileWidth = value;
@@ -335,18 +316,20 @@ namespace PrintCostCalculator3d.ViewModels
         #endregion
 
         #region Constructor
-        public GcodeViewModel(IDialogCoordinator dialogCoordinator,  IList<GCode> files = null)
+        public GcodeViewModel(IDialogCoordinator dialogCoordinator, IList<Gcode> files = null)
         {
             try
             {
-                Gcodes = new ObservableCollection<GCode>(files);
-                this._dialogCoordinator = dialogCoordinator;
+                IsLicenseValid = false;
+
+                Gcodes = new ObservableCollection<Gcode>(files);
+                _dialogCoordinator = dialogCoordinator;
                 getHighlightingDefinitions();
-                InterTabClient = new DragablzInterTabClient(ApplicationName._3dPrintingCalcualtion);
+                InterTabClient = new DragablzInterTabClient(ApplicationName.Dashboard);
                 if (files != null)
                 {
                     TabItems = new ObservableCollection<DragablzTabItem>();
-                    foreach (GCode file in files)
+                    foreach (Gcode file in files)
                     {
                         TabItems.Add(new DragablzTabItem(file.FileName, new CodeEditorViewTemplate(_tabId, file), _tabId));
                         _tabId++;
@@ -366,7 +349,7 @@ namespace PrintCostCalculator3d.ViewModels
                 logger.ErrorFormat(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message);
             }
         }
-        public GcodeViewModel(Action<GcodeViewModel> saveCommand, Action<GcodeViewModel> cancelHandler, GCode gcode = null)
+        public GcodeViewModel(Action<GcodeViewModel> saveCommand, Action<GcodeViewModel> cancelHandler, Gcode gcode = null)
         {
             SaveCommand = new RelayCommand(p => saveCommand(this));
             CancelCommand = new RelayCommand(p => cancelHandler(this));
@@ -383,7 +366,7 @@ namespace PrintCostCalculator3d.ViewModels
                 }
             }
         }
-        public GcodeViewModel(Action<GcodeViewModel> saveCommand, Action<GcodeViewModel> cancelHandler, IDialogCoordinator dialogCoordinator, GCode gcode = null)
+        public GcodeViewModel(Action<GcodeViewModel> saveCommand, Action<GcodeViewModel> cancelHandler, IDialogCoordinator dialogCoordinator, Gcode gcode = null)
         {
             SaveCommand = new RelayCommand(p => saveCommand(this));
             CancelCommand = new RelayCommand(p => cancelHandler(this));
@@ -399,14 +382,13 @@ namespace PrintCostCalculator3d.ViewModels
                     logger.ErrorFormat(Strings.EventExceptionOccurredFormated, exc.TargetSite, exc.Message);
                 }
             }
-
-            this._dialogCoordinator = dialogCoordinator;
+            _dialogCoordinator = dialogCoordinator;
         }
 
         #endregion
 
         #region Methods
-        private void getHighlightingDefinitions()
+        void getHighlightingDefinitions()
         {
             // Load our custom highlighting definition
             IHighlightingDefinition customHighlighting;
@@ -426,7 +408,7 @@ namespace PrintCostCalculator3d.ViewModels
 
         }
 
-        private void readFile(string filePath)
+        void readFile(string filePath)
         {
             try
             {
@@ -484,17 +466,13 @@ namespace PrintCostCalculator3d.ViewModels
         }
         #endregion  
 
-        #region Events
-
-        #endregion
-
         #region iCommands & Actions
         public ICommand AddTabCommand
         {
             get { return new RelayCommand(p => AddTabAction()); }
         }
 
-        private void AddTabAction()
+        void AddTabAction()
         {
             _tabId++;
 
@@ -505,7 +483,7 @@ namespace PrintCostCalculator3d.ViewModels
 
         public ItemActionCallback CloseItemCommand => CloseItemAction;
 
-        private static void CloseItemAction(ItemActionCallbackArgs<TabablzControl> args)
+        static void CloseItemAction(ItemActionCallbackArgs<TabablzControl> args)
         {
             ((args.DragablzItem.Content as DragablzTabItem)?.View as CodeEditorViewTemplate)?.CloseTab();
         }

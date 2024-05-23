@@ -4,6 +4,16 @@ Just load your stl or gcode file directly into the calculator and start calculat
 
 <img alt="3D Print Cost Calculator" src="https://andreas-reitberger.de/wp-content/uploads/2019/11/3dpcc_en_calc_result_view.png"/>
 
+# Support me
+If you want to support me, you can order over following affilate links (I'll get a small share from your purchase from the corresponding store).
+
+- Prusa: http://www.prusa3d.com/#a_aid=AndreasReitberger *
+- Jake3D: https://tidd.ly/3x9JOBp * 
+- Amazon: https://amzn.to/2Z8PrDu *
+
+(*) Affiliate link
+Thank you very much for supporting me!
+
 <h2>Download latest version</h2>
 
 You can download the latest version [here](https://shatter-box.com/download/3d-print-cost-calculator-2-0?wpdmdl=51061&masterkey=5d983187cab4d).
